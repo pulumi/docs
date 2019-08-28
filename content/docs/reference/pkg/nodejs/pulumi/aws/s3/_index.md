@@ -87,7 +87,9 @@ title: Module s3
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L28" >}}">class <b>AccountPublicAccessBlock</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages S3 account-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html).
@@ -115,10 +117,12 @@ const example = new aws.s3.AccountPublicAccessBlock("example", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L79" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AccountPublicAccessBlock(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#AccountPublicAccessBlockArgs'>AccountPublicAccessBlockArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a AccountPublicAccessBlock resource with the given unique name, arguments, and options.
 
@@ -132,10 +136,12 @@ Create a AccountPublicAccessBlock resource with the given unique name, arguments
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AccountPublicAccessBlockState'>AccountPublicAccessBlockState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AccountPublicAccessBlock'>AccountPublicAccessBlock</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing AccountPublicAccessBlock resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -143,23 +149,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPublicAccessBlock-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPublicAccessBlock-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of AccountPublicAccessBlock.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -170,7 +180,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L58" >}}">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID to configure. Defaults to automatically determined account ID of the this provider AWS provider.
@@ -181,7 +193,9 @@ AWS account ID to configure. Defaults to automatically determined account ID of 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L64" >}}">property <b>blockPublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>blockPublicAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
@@ -194,7 +208,9 @@ Whether Amazon S3 should block public ACLs for buckets in this account. Defaults
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L69" >}}">property <b>blockPublicPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>blockPublicPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to `false`. Enabling this setting does not affect existing bucket policies. When set to `true` causes Amazon S3 to:
@@ -203,10 +219,12 @@ Whether Amazon S3 should block public bucket policies for buckets in this accoun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPublicAccessBlock-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -218,7 +236,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L74" >}}">property <b>ignorePublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ignorePublicAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
@@ -230,7 +250,9 @@ Whether Amazon S3 should ignore public ACLs for buckets in this account. Default
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L79" >}}">property <b>restrictPublicBuckets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restrictPublicBuckets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to `false`. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
@@ -239,10 +261,12 @@ Whether Amazon S3 should restrict public bucket policies for buckets in this acc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountPublicAccessBlock-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -252,10 +276,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Bucket">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L200" >}}">class <b>Bucket</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L202" >}}">class <b>Bucket</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a S3 bucket resource.
@@ -448,13 +474,15 @@ const mybucket = new aws.s3.Bucket("mybucket", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Bucket-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L322" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L324" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Bucket(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#BucketArgs'>BucketArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Bucket resource with the given unique name, arguments, and options.
 
@@ -465,13 +493,15 @@ Create a Bucket resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L209" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L211" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BucketState'>BucketState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): Bucket</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Bucket resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -479,23 +509,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L202" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L220" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L222" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Bucket.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -506,10 +540,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L242" >}}">method <b>onEvent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args: <a href='#BucketEventSubscriptionArgs'>BucketEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a new subscription to events fired from this Bucket to the handler provided,
 along with options to control the behavior of the subscription.  This function should be
@@ -522,10 +558,12 @@ onObjectCreated/onObjectRemoved) are not sufficient.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L223" >}}">method <b>onObjectCreated</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onObjectCreated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args?: <a href='#ObjectCreatedSubscriptionArgs'>ObjectCreatedSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a new subscription to events fired from this Bucket to the handler provided,
 along with options to control the behavior of the subscription.  The handler will be
@@ -537,10 +575,12 @@ called whenever a matching [s3.Object] is created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L232" >}}">method <b>onObjectRemoved</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onObjectRemoved(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args?: <a href='#ObjectRemovedSubscriptionArgs'>ObjectRemovedSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#BucketEventSubscription'>BucketEventSubscription</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a new subscription to events fired from this Bucket to the handler provided,
 along with options to control the behavior of the subscription.  The handler will be
@@ -549,10 +589,12 @@ called whenever an matching [s3.Object] is removed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-accelerationStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L230" >}}">property <b>accelerationStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L232" >}}">property <b>accelerationStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accelerationStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
@@ -560,10 +602,12 @@ Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Su
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L234" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L236" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>acl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
@@ -571,10 +615,12 @@ The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.ht
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L238" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L240" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
@@ -582,10 +628,12 @@ The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L242" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L244" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
@@ -593,10 +641,12 @@ The ARN of the S3 bucket where you want Amazon S3 to store replicas of the objec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-bucketDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L246" >}}">property <b>bucketDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L248" >}}">property <b>bucketDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucketDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
@@ -604,10 +654,12 @@ The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-bucketPrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L250" >}}">property <b>bucketPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L252" >}}">property <b>bucketPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucketPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
@@ -615,10 +667,12 @@ Creates a unique bucket name beginning with the specified prefix. Conflicts with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-bucketRegionalDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L254" >}}">property <b>bucketRegionalDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L256" >}}">property <b>bucketRegionalDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucketRegionalDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
@@ -626,16 +680,12 @@ The bucket region-specific domain name. The bucket domain name including the reg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-corsRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L258" >}}">property <b>corsRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L260" >}}">property <b>corsRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>corsRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    allowedHeaders: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    allowedMethods: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    allowedOrigins: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    exposeHeaders: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    maxAgeSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>corsRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketCorsRule'>outputs.s3.BucketCorsRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
@@ -643,10 +693,12 @@ A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/l
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L262" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L264" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
@@ -654,10 +706,12 @@ A boolean that indicates all objects should be deleted from the bucket so that t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-hostedZoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L266" >}}">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L268" >}}">property <b>hostedZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hostedZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
@@ -665,10 +719,12 @@ The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rand
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L202" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -677,33 +733,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-lifecycleRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L270" >}}">property <b>lifecycleRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L272" >}}">property <b>lifecycleRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>lifecycleRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    abortIncompleteMultipartUploadDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    expiration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        date: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        expiredObjectDeleteMarker: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    };
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    noncurrentVersionExpiration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    };
-    noncurrentVersionTransitions: {
-        days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        storageClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-    transitions: {
-        date: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        storageClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>lifecycleRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRule'>outputs.s3.BucketLifecycleRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
@@ -711,13 +746,12 @@ A configuration of [object lifecycle management](http://docs.aws.amazon.com/Amaz
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-loggings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L274" >}}">property <b>loggings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L276" >}}">property <b>loggings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>loggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    targetBucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    targetPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>loggings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLogging'>outputs.s3.BucketLogging</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
@@ -725,19 +759,12 @@ A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/Ma
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-objectLockConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L278" >}}">property <b>objectLockConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L280" >}}">property <b>objectLockConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>objectLockConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    objectLockEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    rule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        defaultRetention: {
-            days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            mode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            years: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        };
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>objectLockConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketObjectLockConfiguration'>outputs.s3.BucketObjectLockConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
@@ -745,10 +772,12 @@ A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/late
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L282" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L284" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), this provider may view the policy as constantly changing in a deployment. In this case, please make sure you use the verbose/specific version of the policy.
@@ -756,10 +785,12 @@ A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L286" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L288" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.
@@ -767,36 +798,12 @@ If specified, the AWS region this bucket should reside in. Otherwise, the region
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-replicationConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L290" >}}">property <b>replicationConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L292" >}}">property <b>replicationConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>replicationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    rules: {
-        destination: {
-            accessControlTranslation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-                owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            };
-            accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            replicaKmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            storageClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-        filter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-        };
-        id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        sourceSelectionCriteria: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            sseKmsEncryptedObjects: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-                enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-            };
-        };
-        status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>replicationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfiguration'>outputs.s3.BucketReplicationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
@@ -804,10 +811,12 @@ A configuration of [replication configuration](http://docs.aws.amazon.com/Amazon
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-requestPayer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L297" >}}">property <b>requestPayer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L299" >}}">property <b>requestPayer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requestPayer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies who should bear the cost of Amazon S3 data transfer.
@@ -818,17 +827,12 @@ developer guide for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-serverSideEncryptionConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L301" >}}">property <b>serverSideEncryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L303" >}}">property <b>serverSideEncryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>serverSideEncryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    rule: {
-        applyServerSideEncryptionByDefault: {
-            kmsMasterKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            sseAlgorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>serverSideEncryptionConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketServerSideEncryptionConfiguration'>outputs.s3.BucketServerSideEncryptionConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
@@ -836,10 +840,12 @@ A configuration of [server-side encryption configuration](http://docs.aws.amazon
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L306" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L308" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags that identifies subset of objects to which the rule applies.
@@ -848,10 +854,12 @@ The rule applies only to objects having all the tags in its tagset.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L202" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -860,13 +868,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-versioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L310" >}}">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L312" >}}">property <b>versioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>versioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    mfaDelete: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>versioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketVersioning'>outputs.s3.BucketVersioning</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
@@ -874,15 +881,12 @@ A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioni
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-website">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L314" >}}">property <b>website</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L316" >}}">property <b>website</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>website: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    errorDocument: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    indexDocument: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    redirectAllRequestsTo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    routingRules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>website: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketWebsite'>outputs.s3.BucketWebsite</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A website object (documented below).
@@ -890,10 +894,12 @@ A website object (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-websiteDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L318" >}}">property <b>websiteDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L320" >}}">property <b>websiteDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>websiteDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
@@ -901,10 +907,12 @@ The domain of the website endpoint, if the bucket is configured with a website. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Bucket-websiteEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L322" >}}">property <b>websiteEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L324" >}}">property <b>websiteEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>websiteEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
@@ -916,7 +924,9 @@ The website endpoint, if the bucket is configured with a website. If not, this w
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L128" >}}">class <b>BucketEventSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A component corresponding to a single underlying aws.s3.BucketNotification created for a bucket.
@@ -929,30 +939,36 @@ completion and all subscriptions have been heard about.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L129" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span><span class='kd'>new</span> BucketEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bucket: Bucket, handler: <a href='#BucketEventHandler'>BucketEventHandler</a>, args: <a href='#BucketEventSubscriptionArgs'>BucketEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketEventSubscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L128" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketEventSubscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L128" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -960,20 +976,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L128" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketEventSubscription-bucket">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L129" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: Bucket;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -981,7 +1001,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="lambda/lambdaMixins.ts#L227" >}}">property <b>func</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>func: LambdaFunction;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -989,15 +1011,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="lambda/lambdaMixins.ts#L226" >}}">property <b>permission</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>permission: permission.Permission;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketEventSubscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L128" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1007,10 +1033,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketMetric">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L45" >}}">class <b>BucketMetric</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L47" >}}">class <b>BucketMetric</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html) resource.
@@ -1052,13 +1080,15 @@ const exampleFiltered = new aws.s3.BucketMetric("example-filtered", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketMetric-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L83" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L85" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BucketMetric(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BucketMetricArgs'>BucketMetricArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a BucketMetric resource with the given unique name, arguments, and options.
 
@@ -1069,13 +1099,15 @@ Create a BucketMetric resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BucketMetricState'>BucketMetricState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BucketMetric'>BucketMetric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing BucketMetric resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1083,23 +1115,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L47" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of BucketMetric.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1107,10 +1143,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L75" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L77" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put metric configuration.
@@ -1118,13 +1156,12 @@ The name of the bucket to put metric configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L79" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L81" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketMetricFilter'>outputs.s3.BucketMetricFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
@@ -1132,10 +1169,12 @@ The name of the bucket to put metric configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L47" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1144,10 +1183,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L83" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L85" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unique identifier of the metrics configuration for the bucket.
@@ -1155,10 +1196,12 @@ Unique identifier of the metrics configuration for the bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetric-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L47" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1168,10 +1211,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketNotification">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L234" >}}">class <b>BucketNotification</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L236" >}}">class <b>BucketNotification</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a S3 Bucket Notification Configuration. For additional information, see the [Configuring S3 Event Notifications section in the Amazon S3 Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html).
@@ -1402,13 +1447,15 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketNotification-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L276" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L278" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BucketNotification(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BucketNotificationArgs'>BucketNotificationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a BucketNotification resource with the given unique name, arguments, and options.
 
@@ -1419,13 +1466,15 @@ Create a BucketNotification resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L243" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L245" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BucketNotificationState'>BucketNotificationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BucketNotification'>BucketNotification</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing BucketNotification resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1433,23 +1482,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L236" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L254" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L256" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of BucketNotification.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1457,10 +1510,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L264" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L266" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put notification configuration.
@@ -1468,10 +1523,12 @@ The name of the bucket to put notification configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L236" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1480,16 +1537,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-lambdaFunctions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L268" >}}">property <b>lambdaFunctions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L270" >}}">property <b>lambdaFunctions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>lambdaFunctions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    events: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    filterPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    filterSuffix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lambdaFunctionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>lambdaFunctions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketNotificationLambdaFunction'>outputs.s3.BucketNotificationLambdaFunction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to configure notifications to a Lambda Function (documented below).
@@ -1497,16 +1550,12 @@ Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-queues">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L272" >}}">property <b>queues</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L274" >}}">property <b>queues</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>queues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    events: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    filterPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    filterSuffix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    queueArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>queues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketNotificationQueue'>outputs.s3.BucketNotificationQueue</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The notification configuration to SQS Queue (documented below).
@@ -1514,16 +1563,12 @@ The notification configuration to SQS Queue (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-topics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L276" >}}">property <b>topics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L278" >}}">property <b>topics</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>topics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    events: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    filterPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    filterSuffix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    topicArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>topics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketNotificationTopic'>outputs.s3.BucketNotificationTopic</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The notification configuration to SNS Topic (documented below).
@@ -1531,10 +1576,12 @@ The notification configuration to SNS Topic (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotification-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L236" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1544,35 +1591,17 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketObject">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L91" >}}">class <b>BucketObject</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L73" >}}">class <b>BucketObject</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a S3 bucket object resource.
 
 ## Example Usage
-
-### Uploading a file to a bucket
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const object = new aws.s3.BucketObject("object", {
-    bucket: "yourBucketName",
-    // The filemd5() function is available in this provider 0.11.12 and later
-    // For this provider 0.11.11 and earlier, use the md5() function and the file() function:
-    // etag = "${md5(file("path/to/file"))}"
-    etag: (() => {
-        throw "tf2pulumi error: NYI: call to filemd5";
-        return (() => { throw "NYI: call to filemd5"; })();
-    })(),
-    key: "newObjectKey",
-    source: new pulumi.asset.FileAsset("path/to/file"),
-});
-```
 
 ### Encrypting with KMS Key
 
@@ -1633,13 +1662,15 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketObject-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L199" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L181" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BucketObject(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BucketObjectArgs'>BucketObjectArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a BucketObject resource with the given unique name, arguments, and options.
 
@@ -1650,13 +1681,15 @@ Create a BucketObject resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L100" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L82" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BucketObjectState'>BucketObjectState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BucketObject'>BucketObject</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing BucketObject resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1664,23 +1697,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L73" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L111" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L93" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of BucketObject.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1688,10 +1725,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L121" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L103" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>acl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
@@ -1699,10 +1738,12 @@ The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.ht
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L125" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L107" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put the file in.
@@ -1710,10 +1751,12 @@ The name of the bucket to put the file in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-cacheControl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L129" >}}">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L111" >}}">property <b>cacheControl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cacheControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies caching behavior along the request/reply chain Read [w3c cacheControl](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
@@ -1721,10 +1764,12 @@ Specifies caching behavior along the request/reply chain Read [w3c cacheControl]
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L133" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L115" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
@@ -1732,10 +1777,12 @@ Literal string value to use as the object content, which will be uploaded as UTF
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-contentBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L137" >}}">property <b>contentBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L119" >}}">property <b>contentBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>contentBase64: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
@@ -1743,10 +1790,12 @@ Base64-encoded data that will be decoded and uploaded as raw bytes for the objec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-contentDisposition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L141" >}}">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L123" >}}">property <b>contentDisposition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>contentDisposition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies presentational information for the object. Read [w3c contentDisposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
@@ -1754,10 +1803,12 @@ Specifies presentational information for the object. Read [w3c contentDispositio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-contentEncoding">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L145" >}}">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L127" >}}">property <b>contentEncoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>contentEncoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
@@ -1765,10 +1816,12 @@ Specifies what content encodings have been applied to the object and thus what d
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-contentLanguage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L149" >}}">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L131" >}}">property <b>contentLanguage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>contentLanguage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The language the content is in e.g. en-US or en-GB.
@@ -1776,10 +1829,12 @@ The language the content is in e.g. en-US or en-GB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L153" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L135" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
@@ -1787,10 +1842,12 @@ A standard MIME type describing the format of the object data, e.g. application/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L158" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L140" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
@@ -1799,10 +1856,12 @@ This attribute is not compatible with KMS encryption, `kmsKeyId` or `serverSideE
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L73" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1811,10 +1870,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L162" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L144" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the object once it is in the bucket.
@@ -1822,10 +1883,12 @@ The name of the object once it is in the bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L169" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L151" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the AWS KMS Key ARN to use for object encryption.
@@ -1836,10 +1899,12 @@ use the exported `arn` attribute:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L173" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L155" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
@@ -1847,10 +1912,12 @@ A mapping of keys/values to provision metadata (will be automatically prefixed b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-serverSideEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L177" >}}">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L159" >}}">property <b>serverSideEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>serverSideEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
@@ -1858,10 +1925,12 @@ Specifies server-side encryption of the object in S3. Valid values are "`AES256`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L181" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L163" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to a file that will be read and uploaded as raw bytes for the object content.
@@ -1869,10 +1938,12 @@ The path to a file that will be read and uploaded as raw bytes for the object co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-storageClass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L186" >}}">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L168" >}}">property <b>storageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
@@ -1881,10 +1952,12 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L190" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L172" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -1892,10 +1965,12 @@ A mapping of tags to assign to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L73" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1904,10 +1979,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-versionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L195" >}}">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L177" >}}">property <b>versionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>versionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique version ID value for the object, if bucket versioning
@@ -1916,10 +1993,12 @@ is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObject-websiteRedirect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L199" >}}">property <b>websiteRedirect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L181" >}}">property <b>websiteRedirect</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>websiteRedirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
@@ -1928,10 +2007,12 @@ Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L45" >}}">class <b>BucketPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L47" >}}">class <b>BucketPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Attaches a policy to an S3 bucket resource.
@@ -1971,13 +2052,15 @@ const bucketPolicy = new aws.s3.BucketPolicy("b", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L79" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L81" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BucketPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BucketPolicyArgs'>BucketPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a BucketPolicy resource with the given unique name, arguments, and options.
 
@@ -1988,13 +2071,15 @@ Create a BucketPolicy resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BucketPolicyState'>BucketPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BucketPolicy'>BucketPolicy</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing BucketPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2002,23 +2087,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L47" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of BucketPolicy.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2026,10 +2115,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L75" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L77" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to which to apply the policy.
@@ -2037,10 +2128,12 @@ The name of the bucket to which to apply the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L47" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2049,10 +2142,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L79" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L81" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The text of the policy.
@@ -2060,10 +2155,12 @@ The text of the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L47" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2073,10 +2170,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketPublicAccessBlock">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L26" >}}">class <b>BucketPublicAccessBlock</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L28" >}}">class <b>BucketPublicAccessBlock</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html).
@@ -2099,13 +2198,15 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L77" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L79" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BucketPublicAccessBlock(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BucketPublicAccessBlockArgs'>BucketPublicAccessBlockArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a BucketPublicAccessBlock resource with the given unique name, arguments, and options.
 
@@ -2116,13 +2217,15 @@ Create a BucketPublicAccessBlock resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L35" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BucketPublicAccessBlockState'>BucketPublicAccessBlockState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BucketPublicAccessBlock'>BucketPublicAccessBlock</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing BucketPublicAccessBlock resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2130,23 +2233,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L46" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of BucketPublicAccessBlock.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2154,10 +2261,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-blockPublicAcls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L58" >}}">property <b>blockPublicAcls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L60" >}}">property <b>blockPublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>blockPublicAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
@@ -2167,10 +2276,12 @@ Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-blockPublicPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L63" >}}">property <b>blockPublicPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L65" >}}">property <b>blockPublicPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>blockPublicPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
@@ -2179,10 +2290,12 @@ Whether Amazon S3 should block public bucket policies for this bucket. Defaults 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L67" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L69" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 S3 Bucket to which this Public Access Block configuration should be applied.
@@ -2190,10 +2303,12 @@ S3 Bucket to which this Public Access Block configuration should be applied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2202,10 +2317,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-ignorePublicAcls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L72" >}}">property <b>ignorePublicAcls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L74" >}}">property <b>ignorePublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ignorePublicAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
@@ -2214,10 +2331,12 @@ Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-restrictPublicBuckets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L77" >}}">property <b>restrictPublicBuckets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L79" >}}">property <b>restrictPublicBuckets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restrictPublicBuckets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
@@ -2226,10 +2345,12 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlock-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2239,10 +2360,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Inventory">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L64" >}}">class <b>Inventory</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L66" >}}">class <b>Inventory</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) resource.
@@ -2303,13 +2426,15 @@ const testPrefix = new aws.s3.Inventory("test-prefix", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Inventory-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L122" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L124" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Inventory(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#InventoryArgs'>InventoryArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Inventory resource with the given unique name, arguments, and options.
 
@@ -2320,13 +2445,15 @@ Create a Inventory resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L73" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L75" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#InventoryState'>InventoryState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Inventory'>Inventory</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Inventory resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2334,23 +2461,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L66" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L84" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L86" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Inventory.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2358,10 +2489,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L94" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L96" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The S3 bucket configuration where inventory results are published (documented below).
@@ -2369,23 +2502,12 @@ The S3 bucket configuration where inventory results are published (documented be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L98" >}}">property <b>destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L100" >}}">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    bucket: {
-        accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        bucketArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        encryption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            sseKms: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-                keyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            };
-            sseS3: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | { };
-        };
-        format: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestination'>outputs.s3.InventoryDestination</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Destination bucket where inventory list files are written (documented below).
@@ -2393,10 +2515,12 @@ Destination bucket where inventory list files are written (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L102" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L104" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the inventory is enabled or disabled.
@@ -2404,12 +2528,12 @@ Specifies whether the inventory is enabled or disabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L106" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L108" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryFilter'>outputs.s3.InventoryFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Object filtering that accepts a prefix (documented below).
@@ -2417,10 +2541,12 @@ Object filtering that accepts a prefix (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L66" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2429,10 +2555,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-includedObjectVersions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L110" >}}">property <b>includedObjectVersions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L112" >}}">property <b>includedObjectVersions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>includedObjectVersions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Object filtering that accepts a prefix (documented below). Can be `All` or `Current`.
@@ -2440,10 +2568,12 @@ Object filtering that accepts a prefix (documented below). Can be `All` or `Curr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L114" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L116" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unique identifier of the inventory configuration for the bucket.
@@ -2451,10 +2581,12 @@ Unique identifier of the inventory configuration for the bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-optionalFields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L118" >}}">property <b>optionalFields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L120" >}}">property <b>optionalFields</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>optionalFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains the optional fields that are included in the inventory results.
@@ -2462,12 +2594,12 @@ Contains the optional fields that are included in the inventory results.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L122" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L124" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    frequency: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventorySchedule'>outputs.s3.InventorySchedule</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains the frequency for generating inventory results (documented below).
@@ -2475,10 +2607,12 @@ Contains the frequency for generating inventory results (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Inventory-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L66" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2488,13 +2622,15 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getBucket">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L56" >}}">function <b>getBucket</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L58" >}}">function <b>getBucket</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getBucket(args: <a href='#GetBucketArgs'>GetBucketArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetBucketResult'>GetBucketResult</a>&gt; &amp; <a href='#GetBucketResult'>GetBucketResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Provides details about a specific S3 bucket.
 
@@ -2547,13 +2683,15 @@ const test = new aws.cloudfront.Distribution("test", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getBucketObject">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L58" >}}">function <b>getBucketObject</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L60" >}}">function <b>getBucketObject</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getBucketObject(args: <a href='#GetBucketObjectArgs'>GetBucketObjectArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetBucketObjectResult'>GetBucketObjectResult</a>&gt; &amp; <a href='#GetBucketObjectResult'>GetBucketObjectResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The S3 object data source allows access to the metadata and
 _optionally_ (see below) content of an object stored inside S3 bucket.
@@ -2608,13 +2746,15 @@ const testLambda = new aws.lambda.Function("testLambda", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getBucketObjects">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L10" >}}">function <b>getBucketObjects</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L12" >}}">function <b>getBucketObjects</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getBucketObjects(args: <a href='#GetBucketObjectsArgs'>GetBucketObjectsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetBucketObjectsResult'>GetBucketObjectsResult</a>&gt; &amp; <a href='#GetBucketObjectsResult'>GetBucketObjectsResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_objects.html.markdown.
 
@@ -2633,7 +2773,9 @@ The set of arguments for constructing a AccountPublicAccessBlock resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L155" >}}">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID to configure. Defaults to automatically determined account ID of the this provider AWS provider.
@@ -2644,7 +2786,9 @@ AWS account ID to configure. Defaults to automatically determined account ID of 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L161" >}}">property <b>blockPublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockPublicAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
@@ -2657,7 +2801,9 @@ Whether Amazon S3 should block public ACLs for buckets in this account. Defaults
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L166" >}}">property <b>blockPublicPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockPublicPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to `false`. Enabling this setting does not affect existing bucket policies. When set to `true` causes Amazon S3 to:
@@ -2669,7 +2815,9 @@ Whether Amazon S3 should block public bucket policies for buckets in this accoun
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L171" >}}">property <b>ignorePublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ignorePublicAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
@@ -2681,7 +2829,9 @@ Whether Amazon S3 should ignore public ACLs for buckets in this account. Default
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L176" >}}">property <b>restrictPublicBuckets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restrictPublicBuckets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to `false`. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
@@ -2703,7 +2853,9 @@ Input properties used for looking up and filtering AccountPublicAccessBlock reso
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L124" >}}">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID to configure. Defaults to automatically determined account ID of the this provider AWS provider.
@@ -2714,7 +2866,9 @@ AWS account ID to configure. Defaults to automatically determined account ID of 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L130" >}}">property <b>blockPublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockPublicAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
@@ -2727,7 +2881,9 @@ Whether Amazon S3 should block public ACLs for buckets in this account. Defaults
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L135" >}}">property <b>blockPublicPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockPublicPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to `false`. Enabling this setting does not affect existing bucket policies. When set to `true` causes Amazon S3 to:
@@ -2739,7 +2895,9 @@ Whether Amazon S3 should block public bucket policies for buckets in this accoun
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L140" >}}">property <b>ignorePublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ignorePublicAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
@@ -2751,7 +2909,9 @@ Whether Amazon S3 should ignore public ACLs for buckets in this account. Default
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/accountPublicAccessBlock.ts#L145" >}}">property <b>restrictPublicBuckets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restrictPublicBuckets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to `false`. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
@@ -2761,7 +2921,7 @@ Whether Amazon S3 should restrict public bucket policies for buckets in this acc
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L501" >}}">interface <b>BucketArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L503" >}}">interface <b>BucketArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2770,10 +2930,12 @@ The set of arguments for constructing a Bucket resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketArgs-accelerationStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L505" >}}">property <b>accelerationStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L507" >}}">property <b>accelerationStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accelerationStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
@@ -2781,10 +2943,12 @@ Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Su
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L509" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L511" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>acl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#CannedAcl'>CannedAcl</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
@@ -2792,10 +2956,12 @@ The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.ht
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L513" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L515" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
@@ -2803,10 +2969,12 @@ The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L517" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L519" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
@@ -2814,10 +2982,12 @@ The ARN of the S3 bucket where you want Amazon S3 to store replicas of the objec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-bucketPrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L521" >}}">property <b>bucketPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L523" >}}">property <b>bucketPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucketPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
@@ -2825,16 +2995,12 @@ Creates a unique bucket name beginning with the specified prefix. Conflicts with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-corsRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L525" >}}">property <b>corsRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L527" >}}">property <b>corsRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    allowedHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    allowedMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    allowedOrigins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    exposeHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    maxAgeSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketCorsRule'>inputs.s3.BucketCorsRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
@@ -2842,10 +3008,12 @@ A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/l
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L529" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L531" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
@@ -2853,10 +3021,12 @@ A boolean that indicates all objects should be deleted from the bucket so that t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-hostedZoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L533" >}}">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L535" >}}">property <b>hostedZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostedZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
@@ -2864,33 +3034,12 @@ The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rand
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-lifecycleRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L537" >}}">property <b>lifecycleRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L539" >}}">property <b>lifecycleRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    abortIncompleteMultipartUploadDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    expiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        date: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        expiredObjectDeleteMarker: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    noncurrentVersionExpiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;;
-    noncurrentVersionTransitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    transitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        date: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleRule'>inputs.s3.BucketLifecycleRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
@@ -2898,13 +3047,12 @@ A configuration of [object lifecycle management](http://docs.aws.amazon.com/Amaz
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-loggings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L541" >}}">property <b>loggings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L543" >}}">property <b>loggings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>loggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    targetBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    targetPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>loggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLogging'>inputs.s3.BucketLogging</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
@@ -2912,19 +3060,12 @@ A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/Ma
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-objectLockConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L545" >}}">property <b>objectLockConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L547" >}}">property <b>objectLockConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>objectLockConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    objectLockEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        defaultRetention: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            years: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>objectLockConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketObjectLockConfiguration'>inputs.s3.BucketObjectLockConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
@@ -2932,10 +3073,12 @@ A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/late
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L549" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L551" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), this provider may view the policy as constantly changing in a deployment. In this case, please make sure you use the verbose/specific version of the policy.
@@ -2943,10 +3086,12 @@ A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L553" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L555" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.
@@ -2954,36 +3099,12 @@ If specified, the AWS region this bucket should reside in. Otherwise, the region
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-replicationConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L557" >}}">property <b>replicationConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L559" >}}">property <b>replicationConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>replicationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            accessControlTranslation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            }&gt;;
-            accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            replicaKmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        }&gt;;
-        id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        sourceSelectionCriteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            sseKmsEncryptedObjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-            }&gt;;
-        }&gt;;
-        status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>replicationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfiguration'>inputs.s3.BucketReplicationConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
@@ -2991,10 +3112,12 @@ A configuration of [replication configuration](http://docs.aws.amazon.com/Amazon
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-requestPayer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L564" >}}">property <b>requestPayer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L566" >}}">property <b>requestPayer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestPayer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies who should bear the cost of Amazon S3 data transfer.
@@ -3005,17 +3128,12 @@ developer guide for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-serverSideEncryptionConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L568" >}}">property <b>serverSideEncryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L570" >}}">property <b>serverSideEncryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>serverSideEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        applyServerSideEncryptionByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            kmsMasterKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            sseAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>serverSideEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketServerSideEncryptionConfiguration'>inputs.s3.BucketServerSideEncryptionConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
@@ -3023,10 +3141,12 @@ A configuration of [server-side encryption configuration](http://docs.aws.amazon
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L573" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L575" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags that identifies subset of objects to which the rule applies.
@@ -3035,13 +3155,12 @@ The rule applies only to objects having all the tags in its tagset.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-versioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L577" >}}">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L579" >}}">property <b>versioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    mfaDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketVersioning'>inputs.s3.BucketVersioning</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
@@ -3049,15 +3168,12 @@ A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioni
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-website">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L581" >}}">property <b>website</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L583" >}}">property <b>website</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    errorDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    indexDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    redirectAllRequestsTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    routingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#RoutingRule'>RoutingRule</a>[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketWebsite'>inputs.s3.BucketWebsite</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A website object (documented below).
@@ -3065,10 +3181,12 @@ A website object (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-websiteDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L585" >}}">property <b>websiteDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L587" >}}">property <b>websiteDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
@@ -3076,10 +3194,12 @@ The domain of the website endpoint, if the bucket is configured with a website. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketArgs-websiteEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L589" >}}">property <b>websiteEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L591" >}}">property <b>websiteEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
@@ -3095,7 +3215,9 @@ The website endpoint, if the bucket is configured with a website. If not, this w
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L68" >}}">property <b>Records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>Records?: <a href='#BucketRecord'>BucketRecord</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -3104,12 +3226,16 @@ The website endpoint, if the bucket is configured with a website. If not, this w
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L39" >}}">interface <b>BucketEventSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CommonBucketSubscriptionArgs'>CommonBucketSubscriptionArgs</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="BucketEventSubscriptionArgs-events">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L43" >}}">property <b>events</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>events: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Events to subscribe to. For example: "[s3:ObjectCreated:*]".  Cannot be empty.
@@ -3120,7 +3246,9 @@ Events to subscribe to. For example: "[s3:ObjectCreated:*]".  Cannot be empty.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L30" >}}">property <b>filterPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional prefix to filter down notifications.  See
@@ -3132,7 +3260,9 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L36" >}}">property <b>filterSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterSuffix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional suffix to filter down notifications.  See
@@ -3142,7 +3272,7 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketMetricArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L141" >}}">interface <b>BucketMetricArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L143" >}}">interface <b>BucketMetricArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3151,10 +3281,12 @@ The set of arguments for constructing a BucketMetric resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketMetricArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L145" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L147" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put metric configuration.
@@ -3162,13 +3294,12 @@ The name of the bucket to put metric configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetricArgs-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L149" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L151" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketMetricFilter'>inputs.s3.BucketMetricFilter</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
@@ -3176,10 +3307,12 @@ The name of the bucket to put metric configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetricArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L153" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L155" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unique identifier of the metrics configuration for the bucket.
@@ -3188,7 +3321,7 @@ Unique identifier of the metrics configuration for the bucket.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketMetricState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L123" >}}">interface <b>BucketMetricState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L125" >}}">interface <b>BucketMetricState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3197,10 +3330,12 @@ Input properties used for looking up and filtering BucketMetric resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketMetricState-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L127" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L129" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put metric configuration.
@@ -3208,13 +3343,12 @@ The name of the bucket to put metric configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetricState-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L131" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L133" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketMetricFilter'>inputs.s3.BucketMetricFilter</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
@@ -3222,10 +3356,12 @@ The name of the bucket to put metric configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketMetricState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L135" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketMetric.ts#L137" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unique identifier of the metrics configuration for the bucket.
@@ -3234,7 +3370,7 @@ Unique identifier of the metrics configuration for the bucket.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketNotificationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L340" >}}">interface <b>BucketNotificationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L342" >}}">interface <b>BucketNotificationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3243,10 +3379,12 @@ The set of arguments for constructing a BucketNotification resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketNotificationArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L344" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L346" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put notification configuration.
@@ -3254,16 +3392,12 @@ The name of the bucket to put notification configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotificationArgs-lambdaFunctions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L348" >}}">property <b>lambdaFunctions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L350" >}}">property <b>lambdaFunctions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lambdaFunctions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    filterPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    filterSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    lambdaFunctionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lambdaFunctions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationLambdaFunction'>inputs.s3.BucketNotificationLambdaFunction</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to configure notifications to a Lambda Function (documented below).
@@ -3271,16 +3405,12 @@ Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotificationArgs-queues">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L352" >}}">property <b>queues</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L354" >}}">property <b>queues</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>queues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    filterPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    filterSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    queueArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>queues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationQueue'>inputs.s3.BucketNotificationQueue</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The notification configuration to SQS Queue (documented below).
@@ -3288,16 +3418,12 @@ The notification configuration to SQS Queue (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotificationArgs-topics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L356" >}}">property <b>topics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L358" >}}">property <b>topics</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>topics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    filterPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    filterSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    topicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>topics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationTopic'>inputs.s3.BucketNotificationTopic</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The notification configuration to SNS Topic (documented below).
@@ -3306,7 +3432,7 @@ The notification configuration to SNS Topic (documented below).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketNotificationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L318" >}}">interface <b>BucketNotificationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L320" >}}">interface <b>BucketNotificationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3315,10 +3441,12 @@ Input properties used for looking up and filtering BucketNotification resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketNotificationState-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L322" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L324" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put notification configuration.
@@ -3326,16 +3454,12 @@ The name of the bucket to put notification configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotificationState-lambdaFunctions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L326" >}}">property <b>lambdaFunctions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L328" >}}">property <b>lambdaFunctions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lambdaFunctions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    filterPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    filterSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    lambdaFunctionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lambdaFunctions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationLambdaFunction'>inputs.s3.BucketNotificationLambdaFunction</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to configure notifications to a Lambda Function (documented below).
@@ -3343,16 +3467,12 @@ Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotificationState-queues">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L330" >}}">property <b>queues</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L332" >}}">property <b>queues</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>queues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    filterPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    filterSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    queueArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>queues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationQueue'>inputs.s3.BucketNotificationQueue</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The notification configuration to SQS Queue (documented below).
@@ -3360,16 +3480,12 @@ The notification configuration to SQS Queue (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketNotificationState-topics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L334" >}}">property <b>topics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketNotification.ts#L336" >}}">property <b>topics</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>topics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    filterPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    filterSuffix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    topicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>topics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationTopic'>inputs.s3.BucketNotificationTopic</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The notification configuration to SNS Topic (documented below).
@@ -3378,7 +3494,7 @@ The notification configuration to SNS Topic (documented below).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketObjectArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L359" >}}">interface <b>BucketObjectArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L341" >}}">interface <b>BucketObjectArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3387,10 +3503,12 @@ The set of arguments for constructing a BucketObject resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketObjectArgs-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L363" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L345" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>acl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
@@ -3398,10 +3516,12 @@ The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.ht
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L367" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L349" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Bucket&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put the file in.
@@ -3409,10 +3529,12 @@ The name of the bucket to put the file in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-cacheControl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L371" >}}">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L353" >}}">property <b>cacheControl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies caching behavior along the request/reply chain Read [w3c cacheControl](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
@@ -3420,10 +3542,12 @@ Specifies caching behavior along the request/reply chain Read [w3c cacheControl]
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L375" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L357" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
@@ -3431,10 +3555,12 @@ Literal string value to use as the object content, which will be uploaded as UTF
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-contentBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L379" >}}">property <b>contentBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L361" >}}">property <b>contentBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentBase64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
@@ -3442,10 +3568,12 @@ Base64-encoded data that will be decoded and uploaded as raw bytes for the objec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-contentDisposition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L383" >}}">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L365" >}}">property <b>contentDisposition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentDisposition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies presentational information for the object. Read [w3c contentDisposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
@@ -3453,10 +3581,12 @@ Specifies presentational information for the object. Read [w3c contentDispositio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-contentEncoding">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L387" >}}">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L369" >}}">property <b>contentEncoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentEncoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
@@ -3464,10 +3594,12 @@ Specifies what content encodings have been applied to the object and thus what d
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-contentLanguage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L391" >}}">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L373" >}}">property <b>contentLanguage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentLanguage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The language the content is in e.g. en-US or en-GB.
@@ -3475,10 +3607,12 @@ The language the content is in e.g. en-US or en-GB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L395" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L377" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
@@ -3486,10 +3620,12 @@ A standard MIME type describing the format of the object data, e.g. application/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L400" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L382" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
@@ -3498,10 +3634,12 @@ This attribute is not compatible with KMS encryption, `kmsKeyId` or `serverSideE
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L404" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L386" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the object once it is in the bucket.
@@ -3509,10 +3647,12 @@ The name of the object once it is in the bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L411" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L393" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the AWS KMS Key ARN to use for object encryption.
@@ -3523,10 +3663,12 @@ use the exported `arn` attribute:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L415" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L397" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
@@ -3534,10 +3676,12 @@ A mapping of keys/values to provision metadata (will be automatically prefixed b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-serverSideEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L419" >}}">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L401" >}}">property <b>serverSideEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
@@ -3545,10 +3689,12 @@ Specifies server-side encryption of the object in S3. Valid values are "`AES256`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L423" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L405" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to a file that will be read and uploaded as raw bytes for the object content.
@@ -3556,10 +3702,12 @@ The path to a file that will be read and uploaded as raw bytes for the object co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-storageClass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L428" >}}">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L410" >}}">property <b>storageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
@@ -3568,10 +3716,12 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L432" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L414" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -3579,10 +3729,12 @@ A mapping of tags to assign to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectArgs-websiteRedirect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L436" >}}">property <b>websiteRedirect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L418" >}}">property <b>websiteRedirect</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteRedirect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
@@ -3591,7 +3743,7 @@ Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketObjectState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L271" >}}">interface <b>BucketObjectState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L253" >}}">interface <b>BucketObjectState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3600,10 +3752,12 @@ Input properties used for looking up and filtering BucketObject resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketObjectState-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L275" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L257" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>acl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
@@ -3611,10 +3765,12 @@ The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.ht
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L279" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L261" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Bucket&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to put the file in.
@@ -3622,10 +3778,12 @@ The name of the bucket to put the file in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-cacheControl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L283" >}}">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L265" >}}">property <b>cacheControl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies caching behavior along the request/reply chain Read [w3c cacheControl](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
@@ -3633,10 +3791,12 @@ Specifies caching behavior along the request/reply chain Read [w3c cacheControl]
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L287" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L269" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
@@ -3644,10 +3804,12 @@ Literal string value to use as the object content, which will be uploaded as UTF
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-contentBase64">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L291" >}}">property <b>contentBase64</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L273" >}}">property <b>contentBase64</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentBase64?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
@@ -3655,10 +3817,12 @@ Base64-encoded data that will be decoded and uploaded as raw bytes for the objec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-contentDisposition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L295" >}}">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L277" >}}">property <b>contentDisposition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentDisposition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies presentational information for the object. Read [w3c contentDisposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
@@ -3666,10 +3830,12 @@ Specifies presentational information for the object. Read [w3c contentDispositio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-contentEncoding">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L299" >}}">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L281" >}}">property <b>contentEncoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentEncoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
@@ -3677,10 +3843,12 @@ Specifies what content encodings have been applied to the object and thus what d
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-contentLanguage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L303" >}}">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L285" >}}">property <b>contentLanguage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentLanguage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The language the content is in e.g. en-US or en-GB.
@@ -3688,10 +3856,12 @@ The language the content is in e.g. en-US or en-GB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L307" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L289" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
@@ -3699,10 +3869,12 @@ A standard MIME type describing the format of the object data, e.g. application/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L312" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L294" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
@@ -3711,10 +3883,12 @@ This attribute is not compatible with KMS encryption, `kmsKeyId` or `serverSideE
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L316" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L298" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the object once it is in the bucket.
@@ -3722,10 +3896,12 @@ The name of the object once it is in the bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L323" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L305" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the AWS KMS Key ARN to use for object encryption.
@@ -3736,10 +3912,12 @@ use the exported `arn` attribute:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L327" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L309" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
@@ -3747,10 +3925,12 @@ A mapping of keys/values to provision metadata (will be automatically prefixed b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-serverSideEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L331" >}}">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L313" >}}">property <b>serverSideEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverSideEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
@@ -3758,10 +3938,12 @@ Specifies server-side encryption of the object in S3. Valid values are "`AES256`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-source">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L335" >}}">property <b>source</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L317" >}}">property <b>source</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Asset'>pulumi.asset.Asset</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to a file that will be read and uploaded as raw bytes for the object content.
@@ -3769,10 +3951,12 @@ The path to a file that will be read and uploaded as raw bytes for the object co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-storageClass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L340" >}}">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L322" >}}">property <b>storageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
@@ -3781,10 +3965,12 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L344" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L326" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -3792,10 +3978,12 @@ A mapping of tags to assign to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-versionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L349" >}}">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L331" >}}">property <b>versionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>versionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique version ID value for the object, if bucket versioning
@@ -3804,10 +3992,12 @@ is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketObjectState-websiteRedirect">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L353" >}}">property <b>websiteRedirect</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketObject.ts#L335" >}}">property <b>websiteRedirect</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteRedirect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
@@ -3816,7 +4006,7 @@ Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L134" >}}">interface <b>BucketPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L136" >}}">interface <b>BucketPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3825,10 +4015,12 @@ The set of arguments for constructing a BucketPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketPolicyArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L138" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L140" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to which to apply the policy.
@@ -3836,10 +4028,12 @@ The name of the bucket to which to apply the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicyArgs-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L142" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L144" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The text of the policy.
@@ -3848,7 +4042,7 @@ The text of the policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L120" >}}">interface <b>BucketPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L122" >}}">interface <b>BucketPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3857,10 +4051,12 @@ Input properties used for looking up and filtering BucketPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketPolicyState-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L124" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L126" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to which to apply the policy.
@@ -3868,10 +4064,12 @@ The name of the bucket to which to apply the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPolicyState-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L128" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPolicy.ts#L130" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The text of the policy.
@@ -3880,7 +4078,7 @@ The text of the policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketPublicAccessBlockArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L152" >}}">interface <b>BucketPublicAccessBlockArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L154" >}}">interface <b>BucketPublicAccessBlockArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3889,10 +4087,12 @@ The set of arguments for constructing a BucketPublicAccessBlock resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockArgs-blockPublicAcls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L158" >}}">property <b>blockPublicAcls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L160" >}}">property <b>blockPublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockPublicAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
@@ -3902,10 +4102,12 @@ Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockArgs-blockPublicPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L163" >}}">property <b>blockPublicPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L165" >}}">property <b>blockPublicPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockPublicPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
@@ -3914,10 +4116,12 @@ Whether Amazon S3 should block public bucket policies for this bucket. Defaults 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L167" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L169" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 S3 Bucket to which this Public Access Block configuration should be applied.
@@ -3925,10 +4129,12 @@ S3 Bucket to which this Public Access Block configuration should be applied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockArgs-ignorePublicAcls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L172" >}}">property <b>ignorePublicAcls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L174" >}}">property <b>ignorePublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ignorePublicAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
@@ -3937,10 +4143,12 @@ Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockArgs-restrictPublicBuckets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L177" >}}">property <b>restrictPublicBuckets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L179" >}}">property <b>restrictPublicBuckets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restrictPublicBuckets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
@@ -3950,7 +4158,7 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketPublicAccessBlockState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L121" >}}">interface <b>BucketPublicAccessBlockState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L123" >}}">interface <b>BucketPublicAccessBlockState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3959,10 +4167,12 @@ Input properties used for looking up and filtering BucketPublicAccessBlock resou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockState-blockPublicAcls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L127" >}}">property <b>blockPublicAcls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L129" >}}">property <b>blockPublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockPublicAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
@@ -3972,10 +4182,12 @@ Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockState-blockPublicPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L132" >}}">property <b>blockPublicPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L134" >}}">property <b>blockPublicPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockPublicPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
@@ -3984,10 +4196,12 @@ Whether Amazon S3 should block public bucket policies for this bucket. Defaults 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockState-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L136" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L138" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 S3 Bucket to which this Public Access Block configuration should be applied.
@@ -3995,10 +4209,12 @@ S3 Bucket to which this Public Access Block configuration should be applied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockState-ignorePublicAcls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L141" >}}">property <b>ignorePublicAcls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L143" >}}">property <b>ignorePublicAcls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ignorePublicAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
@@ -4007,10 +4223,12 @@ Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketPublicAccessBlockState-restrictPublicBuckets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L146" >}}">property <b>restrictPublicBuckets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucketPublicAccessBlock.ts#L148" >}}">property <b>restrictPublicBuckets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restrictPublicBuckets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
@@ -4027,7 +4245,9 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L74" >}}">property <b>awsRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsRegion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4035,7 +4255,9 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L76" >}}">property <b>eventName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4043,7 +4265,9 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L73" >}}">property <b>eventSource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventSource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4051,7 +4275,9 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L75" >}}">property <b>eventTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4059,7 +4285,9 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L72" >}}">property <b>eventVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4067,9 +4295,11 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L80" >}}">property <b>requestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestParameters: {
     sourceIPAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4077,10 +4307,12 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L83" >}}">property <b>responseElements</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseElements: {
     x-amz-id-2: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     x-amz-request-id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4088,6 +4320,7 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L87" >}}">property <b>s3</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3: {
     bucket: {
         arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -4106,6 +4339,7 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
     };
     s3SchemaVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4113,15 +4347,17 @@ Whether Amazon S3 should restrict public bucket policies for this bucket. Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L77" >}}">property <b>userIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userIdentity: {
     principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BucketState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L399" >}}">interface <b>BucketState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L401" >}}">interface <b>BucketState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4130,10 +4366,12 @@ Input properties used for looking up and filtering Bucket resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BucketState-accelerationStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L403" >}}">property <b>accelerationStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L405" >}}">property <b>accelerationStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accelerationStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
@@ -4141,10 +4379,12 @@ Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Su
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L407" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L409" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>acl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#CannedAcl'>CannedAcl</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
@@ -4152,10 +4392,12 @@ The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.ht
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L411" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L413" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
@@ -4163,10 +4405,12 @@ The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L415" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L417" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
@@ -4174,10 +4418,12 @@ The ARN of the S3 bucket where you want Amazon S3 to store replicas of the objec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-bucketDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L419" >}}">property <b>bucketDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L421" >}}">property <b>bucketDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucketDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
@@ -4185,10 +4431,12 @@ The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-bucketPrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L423" >}}">property <b>bucketPrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L425" >}}">property <b>bucketPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucketPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
@@ -4196,10 +4444,12 @@ Creates a unique bucket name beginning with the specified prefix. Conflicts with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-bucketRegionalDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L427" >}}">property <b>bucketRegionalDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L429" >}}">property <b>bucketRegionalDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucketRegionalDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
@@ -4207,16 +4457,12 @@ The bucket region-specific domain name. The bucket domain name including the reg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-corsRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L431" >}}">property <b>corsRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L433" >}}">property <b>corsRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    allowedHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    allowedMethods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    allowedOrigins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    exposeHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    maxAgeSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>corsRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketCorsRule'>inputs.s3.BucketCorsRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
@@ -4224,10 +4470,12 @@ A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/l
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L435" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L437" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean that indicates all objects should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
@@ -4235,10 +4483,12 @@ A boolean that indicates all objects should be deleted from the bucket so that t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-hostedZoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L439" >}}">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L441" >}}">property <b>hostedZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostedZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
@@ -4246,33 +4496,12 @@ The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rand
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-lifecycleRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L443" >}}">property <b>lifecycleRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L445" >}}">property <b>lifecycleRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    abortIncompleteMultipartUploadDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    expiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        date: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        expiredObjectDeleteMarker: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    noncurrentVersionExpiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;;
-    noncurrentVersionTransitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    transitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        date: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lifecycleRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleRule'>inputs.s3.BucketLifecycleRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
@@ -4280,13 +4509,12 @@ A configuration of [object lifecycle management](http://docs.aws.amazon.com/Amaz
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-loggings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L447" >}}">property <b>loggings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L449" >}}">property <b>loggings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>loggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    targetBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    targetPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>loggings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLogging'>inputs.s3.BucketLogging</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
@@ -4294,19 +4522,12 @@ A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/Ma
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-objectLockConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L451" >}}">property <b>objectLockConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L453" >}}">property <b>objectLockConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>objectLockConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    objectLockEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        defaultRetention: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            years: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>objectLockConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketObjectLockConfiguration'>inputs.s3.BucketObjectLockConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
@@ -4314,10 +4535,12 @@ A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/late
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L455" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L457" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PolicyDocument'>PolicyDocument</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), this provider may view the policy as constantly changing in a deployment. In this case, please make sure you use the verbose/specific version of the policy.
@@ -4325,10 +4548,12 @@ A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L459" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L461" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If specified, the AWS region this bucket should reside in. Otherwise, the region used by the callee.
@@ -4336,36 +4561,12 @@ If specified, the AWS region this bucket should reside in. Otherwise, the region
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-replicationConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L463" >}}">property <b>replicationConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L465" >}}">property <b>replicationConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>replicationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            accessControlTranslation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            }&gt;;
-            accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            replicaKmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            storageClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        }&gt;;
-        id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        sourceSelectionCriteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            sseKmsEncryptedObjects: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-            }&gt;;
-        }&gt;;
-        status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>replicationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfiguration'>inputs.s3.BucketReplicationConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
@@ -4373,10 +4574,12 @@ A configuration of [replication configuration](http://docs.aws.amazon.com/Amazon
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-requestPayer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L470" >}}">property <b>requestPayer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L472" >}}">property <b>requestPayer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestPayer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies who should bear the cost of Amazon S3 data transfer.
@@ -4387,17 +4590,12 @@ developer guide for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-serverSideEncryptionConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L474" >}}">property <b>serverSideEncryptionConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L476" >}}">property <b>serverSideEncryptionConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>serverSideEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    rule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        applyServerSideEncryptionByDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            kmsMasterKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            sseAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>serverSideEncryptionConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketServerSideEncryptionConfiguration'>inputs.s3.BucketServerSideEncryptionConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
@@ -4405,10 +4603,12 @@ A configuration of [server-side encryption configuration](http://docs.aws.amazon
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L479" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L481" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags that identifies subset of objects to which the rule applies.
@@ -4417,13 +4617,12 @@ The rule applies only to objects having all the tags in its tagset.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-versioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L483" >}}">property <b>versioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L485" >}}">property <b>versioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    mfaDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>versioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketVersioning'>inputs.s3.BucketVersioning</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
@@ -4431,15 +4630,12 @@ A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioni
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-website">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L487" >}}">property <b>website</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L489" >}}">property <b>website</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    errorDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    indexDocument: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    redirectAllRequestsTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    routingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#RoutingRule'>RoutingRule</a>[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>website?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketWebsite'>inputs.s3.BucketWebsite</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A website object (documented below).
@@ -4447,10 +4643,12 @@ A website object (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-websiteDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L491" >}}">property <b>websiteDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L493" >}}">property <b>websiteDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
@@ -4458,10 +4656,12 @@ The domain of the website endpoint, if the bucket is configured with a website. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BucketState-websiteEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L495" >}}">property <b>websiteEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/bucket.ts#L497" >}}">property <b>websiteEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
@@ -4482,7 +4682,9 @@ Arguments to help customize a notification subscription for a bucket.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L30" >}}">property <b>filterPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional prefix to filter down notifications.  See
@@ -4494,7 +4696,9 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L36" >}}">property <b>filterSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterSuffix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional suffix to filter down notifications.  See
@@ -4516,7 +4720,9 @@ A condition that must be met for the specified redirect to be applied.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L47" >}}">property <b>HttpErrorCodeReturnedEquals</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>HttpErrorCodeReturnedEquals?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP error code that must match for the redirect to apply. If an error occurs, and if the error code meets
@@ -4531,7 +4737,9 @@ this value, then the specified redirect applies.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L55" >}}">property <b>KeyPrefixEquals</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>KeyPrefixEquals?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The prefix of the object key name from which requests are redirected.
@@ -4543,7 +4751,7 @@ The prefix of the object key name from which requests are redirected.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBucketArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L74" >}}">interface <b>GetBucketArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L76" >}}">interface <b>GetBucketArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4552,10 +4760,12 @@ A collection of arguments for invoking getBucket.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBucketArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L78" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L80" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket
@@ -4564,7 +4774,7 @@ The name of the bucket
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBucketObjectArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L80" >}}">interface <b>GetBucketObjectArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L82" >}}">interface <b>GetBucketObjectArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4573,10 +4783,12 @@ A collection of arguments for invoking getBucketObject.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBucketObjectArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L84" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L86" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket to read the object from
@@ -4584,10 +4796,12 @@ The name of the bucket to read the object from
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectArgs-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L88" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L90" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full path to the object inside the bucket
@@ -4595,26 +4809,32 @@ The full path to the object inside the bucket
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectArgs-range">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L89" >}}">property <b>range</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L91" >}}">property <b>range</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>range?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L90" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L92" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectArgs-versionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L94" >}}">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L96" >}}">property <b>versionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>versionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specific version ID of the object returned (defaults to latest version)
@@ -4623,7 +4843,7 @@ Specific version ID of the object returned (defaults to latest version)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBucketObjectResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L100" >}}">interface <b>GetBucketObjectResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L102" >}}">interface <b>GetBucketObjectResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4632,10 +4852,12 @@ A collection of values returned by getBucketObject.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-body">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L104" >}}">property <b>body</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L106" >}}">property <b>body</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>body: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Object data (see **limitations above** to understand cases in which this field is actually available)
@@ -4643,18 +4865,22 @@ Object data (see **limitations above** to understand cases in which this field i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L105" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L107" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-cacheControl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L109" >}}">property <b>cacheControl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L111" >}}">property <b>cacheControl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheControl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies caching behavior along the request/reply chain.
@@ -4662,10 +4888,12 @@ Specifies caching behavior along the request/reply chain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-contentDisposition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L113" >}}">property <b>contentDisposition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L115" >}}">property <b>contentDisposition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentDisposition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies presentational information for the object.
@@ -4673,10 +4901,12 @@ Specifies presentational information for the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-contentEncoding">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L117" >}}">property <b>contentEncoding</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L119" >}}">property <b>contentEncoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentEncoding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
@@ -4684,10 +4914,12 @@ Specifies what content encodings have been applied to the object and thus what d
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-contentLanguage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L121" >}}">property <b>contentLanguage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L123" >}}">property <b>contentLanguage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentLanguage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The language the content is in.
@@ -4695,10 +4927,12 @@ The language the content is in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-contentLength">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L125" >}}">property <b>contentLength</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L127" >}}">property <b>contentLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentLength: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Size of the body in bytes.
@@ -4706,10 +4940,12 @@ Size of the body in bytes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L129" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L131" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A standard MIME type describing the format of the object data.
@@ -4717,10 +4953,12 @@ A standard MIME type describing the format of the object data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L133" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L135" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it's not encrypted)
@@ -4728,10 +4966,12 @@ A standard MIME type describing the format of the object data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-expiration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L137" >}}">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L139" >}}">property <b>expiration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expiration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
@@ -4739,10 +4979,12 @@ If the object expiration is configured (see [object lifecycle management](http:/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-expires">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L141" >}}">property <b>expires</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L143" >}}">property <b>expires</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expires: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time at which the object is no longer cacheable.
@@ -4750,10 +4992,12 @@ The date and time at which the object is no longer cacheable.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L179" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L181" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -4761,18 +5005,22 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L142" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L144" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-lastModified">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L146" >}}">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L148" >}}">property <b>lastModified</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lastModified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Last modified date of the object in RFC1123 format (e.g. `Mon, 02 Jan 2006 15:04:05 MST`)
@@ -4780,10 +5028,12 @@ Last modified date of the object in RFC1123 format (e.g. `Mon, 02 Jan 2006 15:04
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L150" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L152" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of metadata stored with the object in S3
@@ -4791,18 +5041,22 @@ A map of metadata stored with the object in S3
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-range">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L151" >}}">property <b>range</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L153" >}}">property <b>range</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>range?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-serverSideEncryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L155" >}}">property <b>serverSideEncryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L157" >}}">property <b>serverSideEncryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverSideEncryption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
@@ -4810,10 +5064,12 @@ If the object is stored using server-side encryption (KMS or Amazon S3-managed e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-sseKmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L159" >}}">property <b>sseKmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L161" >}}">property <b>sseKmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sseKmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
@@ -4821,10 +5077,12 @@ If present, specifies the ID of the Key Management Service (KMS) master encrypti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-storageClass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L163" >}}">property <b>storageClass</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L165" >}}">property <b>storageClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageClass: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
@@ -4832,10 +5090,12 @@ If present, specifies the ID of the Key Management Service (KMS) master encrypti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L167" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L169" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags assigned to the object.
@@ -4843,10 +5103,12 @@ A mapping of tags assigned to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-versionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L171" >}}">property <b>versionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L173" >}}">property <b>versionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>versionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The latest version ID of the object returned.
@@ -4854,10 +5116,12 @@ The latest version ID of the object returned.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectResult-websiteRedirectLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L175" >}}">property <b>websiteRedirectLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObject.ts#L177" >}}">property <b>websiteRedirectLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteRedirectLocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
@@ -4866,7 +5130,7 @@ If the bucket is configured as a website, redirects requests for this object to 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBucketObjectsArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L34" >}}">interface <b>GetBucketObjectsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L36" >}}">interface <b>GetBucketObjectsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4875,10 +5139,12 @@ A collection of arguments for invoking getBucketObjects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBucketObjectsArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L38" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L40" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Lists object keys in this S3 bucket
@@ -4886,10 +5152,12 @@ Lists object keys in this S3 bucket
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsArgs-delimiter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L42" >}}">property <b>delimiter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L44" >}}">property <b>delimiter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>delimiter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A character used to group keys (Default: none)
@@ -4897,10 +5165,12 @@ A character used to group keys (Default: none)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsArgs-encodingType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L46" >}}">property <b>encodingType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L48" >}}">property <b>encodingType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encodingType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Encodes keys using this method (Default: none; besides none, only "url" can be used)
@@ -4908,10 +5178,12 @@ Encodes keys using this method (Default: none; besides none, only "url" can be u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsArgs-fetchOwner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L50" >}}">property <b>fetchOwner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L52" >}}">property <b>fetchOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fetchOwner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean specifying whether to populate the owner list (Default: false)
@@ -4919,10 +5191,12 @@ Boolean specifying whether to populate the owner list (Default: false)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsArgs-maxKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L54" >}}">property <b>maxKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L56" >}}">property <b>maxKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Maximum object keys to return (Default: 1000)
@@ -4930,10 +5204,12 @@ Maximum object keys to return (Default: 1000)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsArgs-prefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L58" >}}">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L60" >}}">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Limits results to object keys with this prefix (Default: none)
@@ -4941,10 +5217,12 @@ Limits results to object keys with this prefix (Default: none)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsArgs-startAfter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L62" >}}">property <b>startAfter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L64" >}}">property <b>startAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Returns key names lexicographically after a specific object key in your bucket (Default: none; S3 lists object keys in UTF-8 character encoding in lexicographical order)
@@ -4953,7 +5231,7 @@ Returns key names lexicographically after a specific object key in your bucket (
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBucketObjectsResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L68" >}}">interface <b>GetBucketObjectsResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L70" >}}">interface <b>GetBucketObjectsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4962,18 +5240,22 @@ A collection of values returned by getBucketObjects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L69" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L71" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-commonPrefixes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L73" >}}">property <b>commonPrefixes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L75" >}}">property <b>commonPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>commonPrefixes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of any keys between `prefix` and the next occurrence of `delimiter` (i.e., similar to subdirectories of the `prefix` "directory"); the list is only returned when you specify `delimiter`
@@ -4981,34 +5263,42 @@ List of any keys between `prefix` and the next occurrence of `delimiter` (i.e., 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-delimiter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L74" >}}">property <b>delimiter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L76" >}}">property <b>delimiter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>delimiter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-encodingType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L75" >}}">property <b>encodingType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L77" >}}">property <b>encodingType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encodingType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-fetchOwner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L76" >}}">property <b>fetchOwner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L78" >}}">property <b>fetchOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fetchOwner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L91" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L93" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -5016,10 +5306,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-keys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L80" >}}">property <b>keys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L82" >}}">property <b>keys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keys: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of strings representing object keys
@@ -5027,18 +5319,22 @@ List of strings representing object keys
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-maxKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L81" >}}">property <b>maxKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L83" >}}">property <b>maxKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-owners">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L85" >}}">property <b>owners</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L87" >}}">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of strings representing object owner IDs (see `fetchOwner` above)
@@ -5046,24 +5342,28 @@ List of strings representing object owner IDs (see `fetchOwner` above)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-prefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L86" >}}">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L88" >}}">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketObjectsResult-startAfter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L87" >}}">property <b>startAfter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucketObjects.ts#L89" >}}">property <b>startAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startAfter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBucketResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L84" >}}">interface <b>GetBucketResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L86" >}}">interface <b>GetBucketResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5072,10 +5372,12 @@ A collection of values returned by getBucket.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBucketResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L88" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L90" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
@@ -5083,18 +5385,22 @@ The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketResult-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L89" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L91" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketResult-bucketDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L93" >}}">property <b>bucketDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L95" >}}">property <b>bucketDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucketDomainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
@@ -5102,10 +5408,12 @@ The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketResult-bucketRegionalDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L97" >}}">property <b>bucketRegionalDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L99" >}}">property <b>bucketRegionalDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucketRegionalDomainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
@@ -5113,10 +5421,12 @@ The bucket region-specific domain name. The bucket domain name including the reg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketResult-hostedZoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L101" >}}">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L103" >}}">property <b>hostedZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostedZoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
@@ -5124,10 +5434,12 @@ The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rand
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L117" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L119" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -5135,10 +5447,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L105" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L107" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS region this bucket resides in.
@@ -5146,10 +5460,12 @@ The AWS region this bucket resides in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketResult-websiteDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L109" >}}">property <b>websiteDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L111" >}}">property <b>websiteDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteDomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
@@ -5157,10 +5473,12 @@ The domain of the website endpoint, if the bucket is configured with a website. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBucketResult-websiteEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L113" >}}">property <b>websiteEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/getBucket.ts#L115" >}}">property <b>websiteEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
@@ -5169,7 +5487,7 @@ The website endpoint, if the bucket is configured with a website. If not, this w
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InventoryArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L219" >}}">interface <b>InventoryArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L221" >}}">interface <b>InventoryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5178,10 +5496,12 @@ The set of arguments for constructing a Inventory resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InventoryArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L223" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L225" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The S3 bucket configuration where inventory results are published (documented below).
@@ -5189,23 +5509,12 @@ The S3 bucket configuration where inventory results are published (documented be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryArgs-destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L227" >}}">property <b>destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L229" >}}">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        bucketArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        encryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            sseKms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            }&gt;;
-            sseS3: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{ }&gt;;
-        }&gt;;
-        format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryDestination'>inputs.s3.InventoryDestination</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Destination bucket where inventory list files are written (documented below).
@@ -5213,10 +5522,12 @@ Destination bucket where inventory list files are written (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L231" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L233" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the inventory is enabled or disabled.
@@ -5224,12 +5535,12 @@ Specifies whether the inventory is enabled or disabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryArgs-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L235" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L237" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryFilter'>inputs.s3.InventoryFilter</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Object filtering that accepts a prefix (documented below).
@@ -5237,10 +5548,12 @@ Object filtering that accepts a prefix (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryArgs-includedObjectVersions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L239" >}}">property <b>includedObjectVersions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L241" >}}">property <b>includedObjectVersions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>includedObjectVersions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Object filtering that accepts a prefix (documented below). Can be `All` or `Current`.
@@ -5248,10 +5561,12 @@ Object filtering that accepts a prefix (documented below). Can be `All` or `Curr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L243" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L245" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unique identifier of the inventory configuration for the bucket.
@@ -5259,10 +5574,12 @@ Unique identifier of the inventory configuration for the bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryArgs-optionalFields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L247" >}}">property <b>optionalFields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L249" >}}">property <b>optionalFields</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>optionalFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains the optional fields that are included in the inventory results.
@@ -5270,12 +5587,12 @@ Contains the optional fields that are included in the inventory results.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryArgs-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L251" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L253" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventorySchedule'>inputs.s3.InventorySchedule</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains the frequency for generating inventory results (documented below).
@@ -5284,7 +5601,7 @@ Contains the frequency for generating inventory results (documented below).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InventoryState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L181" >}}">interface <b>InventoryState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L183" >}}">interface <b>InventoryState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5293,10 +5610,12 @@ Input properties used for looking up and filtering Inventory resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InventoryState-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L185" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L187" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The S3 bucket configuration where inventory results are published (documented below).
@@ -5304,23 +5623,12 @@ The S3 bucket configuration where inventory results are published (documented be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryState-destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L189" >}}">property <b>destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L191" >}}">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        bucketArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        encryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            sseKms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-                keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            }&gt;;
-            sseS3: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{ }&gt;;
-        }&gt;;
-        format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryDestination'>inputs.s3.InventoryDestination</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Destination bucket where inventory list files are written (documented below).
@@ -5328,10 +5636,12 @@ Destination bucket where inventory list files are written (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L193" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L195" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the inventory is enabled or disabled.
@@ -5339,12 +5649,12 @@ Specifies whether the inventory is enabled or disabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryState-filter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L197" >}}">property <b>filter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L199" >}}">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>filter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryFilter'>inputs.s3.InventoryFilter</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Object filtering that accepts a prefix (documented below).
@@ -5352,10 +5662,12 @@ Object filtering that accepts a prefix (documented below).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryState-includedObjectVersions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L201" >}}">property <b>includedObjectVersions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L203" >}}">property <b>includedObjectVersions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>includedObjectVersions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Object filtering that accepts a prefix (documented below). Can be `All` or `Current`.
@@ -5363,10 +5675,12 @@ Object filtering that accepts a prefix (documented below). Can be `All` or `Curr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L205" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L207" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unique identifier of the inventory configuration for the bucket.
@@ -5374,10 +5688,12 @@ Unique identifier of the inventory configuration for the bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryState-optionalFields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L209" >}}">property <b>optionalFields</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L211" >}}">property <b>optionalFields</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>optionalFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains the optional fields that are included in the inventory results.
@@ -5385,12 +5701,12 @@ Contains the optional fields that are included in the inventory results.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InventoryState-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L213" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/inventory.ts#L215" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventorySchedule'>inputs.s3.InventorySchedule</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains the frequency for generating inventory results (documented below).
@@ -5402,7 +5718,9 @@ Contains the frequency for generating inventory results (documented below).
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L51" >}}">interface <b>ObjectCreatedSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CommonBucketSubscriptionArgs'>CommonBucketSubscriptionArgs</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Arguments to specifically control a subscription to 'ObjectCreated' notifications on a bucket.If
@@ -5414,7 +5732,9 @@ instead.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L53" >}}">property <b>event</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>event?: <span class='s2'>"*"</span> | <span class='s2'>"Put"</span> | <span class='s2'>"Post"</span> | <span class='s2'>"Copy"</span> | <span class='s2'>"CompleteMultipartUpload"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5422,7 +5742,9 @@ instead.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L30" >}}">property <b>filterPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional prefix to filter down notifications.  See
@@ -5434,7 +5756,9 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L36" >}}">property <b>filterSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterSuffix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional suffix to filter down notifications.  See
@@ -5447,7 +5771,9 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L61" >}}">interface <b>ObjectRemovedSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CommonBucketSubscriptionArgs'>CommonBucketSubscriptionArgs</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Arguments to specifically control a subscription to 'ObjectRemoved' notifications on a bucket. If
@@ -5459,7 +5785,9 @@ instead.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L63" >}}">property <b>event</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>event?: <span class='s2'>"*"</span> | <span class='s2'>"Delete"</span> | <span class='s2'>"DeleteMarkerCreated"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5467,7 +5795,9 @@ instead.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L30" >}}">property <b>filterPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterPrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional prefix to filter down notifications.  See
@@ -5479,7 +5809,9 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L36" >}}">property <b>filterSuffix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterSuffix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional suffix to filter down notifications.  See
@@ -5502,7 +5834,9 @@ can specify another protocol to use. At least one property must be set.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L68" >}}">property <b>HostName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>HostName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The hostname to be used in the Location header that is returned in the response.
@@ -5515,7 +5849,9 @@ If another property is set, `HostName` is not required.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L75" >}}">property <b>HttpRedirectCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>HttpRedirectCode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP redirect code to be used in the Location header that is returned in the response.
@@ -5528,7 +5864,9 @@ If another property is set, `HttpRedirectCode` is not required.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L82" >}}">property <b>Protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>Protocol?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol, http or https, to be used in the Location header that is returned in the response.
@@ -5541,7 +5879,9 @@ If another property is set, `Protocol` is not required.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L90" >}}">property <b>ReplaceKeyPrefixWith</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ReplaceKeyPrefixWith?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The prefix of the object key name that replaces the value of `KeyPrefixEquals` in the redirect request.
@@ -5555,7 +5895,9 @@ It can be set only if `ReplaceKeyWith` is not set.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L98" >}}">property <b>ReplaceKeyWith</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ReplaceKeyWith?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The object key to be used in the Location header that is returned in the response.
@@ -5583,7 +5925,9 @@ https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html#advanc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L27" >}}">property <b>Condition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>Condition?: <a href='#Condition'>Condition</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A condition that must be met for the specified redirect to be applied.
@@ -5595,7 +5939,9 @@ If not included, the rule is applied to all requests.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="s3/routingRules.ts#L33" >}}">property <b>Redirect</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>Redirect: <a href='#Redirect'>Redirect</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides instructions for redirecting the request. You can redirect requests to another host or another page,
@@ -5608,59 +5954,79 @@ or you can specify another protocol to use.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L26" >}}">let <b>AuthenticatedReadAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> AuthenticatedReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;authenticated-read&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="AwsExecReadAcl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L25" >}}">let <b>AwsExecReadAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> AwsExecReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;aws-exec-read&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="BucketOwnerFullControlAcl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L28" >}}">let <b>BucketOwnerFullControlAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> BucketOwnerFullControlAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;bucket-owner-full-control&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="BucketOwnerReadAcl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L27" >}}">let <b>BucketOwnerReadAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> BucketOwnerReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;bucket-owner-read&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="LogDeliveryWriteAcl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L29" >}}">let <b>LogDeliveryWriteAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> LogDeliveryWriteAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;log-delivery-write&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="PrivateAcl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L22" >}}">let <b>PrivateAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> PrivateAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;private&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="PublicReadAcl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L23" >}}">let <b>PublicReadAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> PublicReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;public-read&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="PublicReadWriteAcl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L24" >}}">let <b>PublicReadWriteAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> PublicReadWriteAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;public-read-write&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="BucketEventHandler">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/s3Mixins.ts#L107" >}}">type <b>BucketEventHandler</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> BucketEventHandler = lambda.EventHandler&lt;<a href='#BucketEvent'>BucketEvent</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="CannedAcl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="s3/cannedAcl.ts#L32" >}}">type <b>CannedAcl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> CannedAcl = <span class='s2'>"private"</span> | <span class='s2'>"public-read"</span> | <span class='s2'>"public-read-write"</span> | <span class='s2'>"aws-exec-read"</span> | <span class='s2'>"authenticated-read"</span> | <span class='s2'>"bucket-owner-read"</span> | <span class='s2'>"bucket-owner-full-control"</span> | <span class='s2'>"log-delivery-write"</span>;</pre>
+{{< /md-disable >}}
 </div>

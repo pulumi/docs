@@ -72,7 +72,9 @@ title: Module autoscaling
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L43" >}}">class <b>Attachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an AutoScaling Attachment resource.
@@ -115,10 +117,12 @@ const asgAttachmentBar = new aws.autoscaling.Attachment("asgAttachmentBar", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L81" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Attachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AttachmentArgs'>AttachmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Attachment resource with the given unique name, arguments, and options.
 
@@ -132,10 +136,12 @@ Create a Attachment resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AttachmentState'>AttachmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Attachment'>Attachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Attachment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -143,23 +149,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attachment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L43" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attachment-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Attachment.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -170,7 +180,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L73" >}}">property <b>albTargetGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>albTargetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an ALB Target Group.
@@ -181,7 +193,9 @@ The ARN of an ALB Target Group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L77" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoscalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of ASG to associate with the ELB.
@@ -192,7 +206,9 @@ Name of ASG to associate with the ELB.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L81" >}}">property <b>elb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>elb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ELB.
@@ -200,10 +216,12 @@ The name of the ELB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attachment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L43" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -212,10 +230,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Attachment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L43" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -225,10 +245,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L233" >}}">class <b>Group</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L235" >}}">class <b>Group</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an AutoScaling Group resource.
@@ -454,13 +476,15 @@ for more information.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L406" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L408" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Group(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GroupArgs'>GroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Group resource with the given unique name, arguments, and options.
 
@@ -471,13 +495,15 @@ Create a Group resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L242" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L244" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#GroupState'>GroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Group'>Group</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Group resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -485,23 +511,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L235" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L253" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L255" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Group.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -509,10 +539,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L263" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L265" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for this AutoScaling Group
@@ -520,10 +552,12 @@ The ARN for this AutoScaling Group
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-availabilityZones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L267" >}}">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L269" >}}">property <b>availabilityZones</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>availabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of one or more availability zones for the group. This parameter should not be specified when using `vpcZoneIdentifier`.
@@ -531,10 +565,12 @@ A list of one or more availability zones for the group. This parameter should no
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-defaultCooldown">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L271" >}}">property <b>defaultCooldown</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L273" >}}">property <b>defaultCooldown</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultCooldown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
@@ -542,10 +578,12 @@ The amount of time, in seconds, after a scaling activity completes before anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-desiredCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L277" >}}">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L279" >}}">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>desiredCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of Amazon EC2 instances that
@@ -555,10 +593,12 @@ Capacity below.)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-enabledMetrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L286" >}}">property <b>enabledMetrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L288" >}}">property <b>enabledMetrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabledMetrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Metric'>Metric</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of metrics to collect. The allowed values are `GroupMinSize`, `GroupMaxSize`, `GroupDesiredCapacity`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupTerminatingInstances`, `GroupTotalInstances`.
@@ -571,10 +611,12 @@ this provider to skip all Capacity Waiting behavior.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-forceDelete">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L294" >}}">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L296" >}}">property <b>forceDelete</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>forceDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows deleting the autoscaling group without waiting
@@ -586,10 +628,12 @@ behavior and potentially leaves resources dangling.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-healthCheckGracePeriod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L298" >}}">property <b>healthCheckGracePeriod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L300" >}}">property <b>healthCheckGracePeriod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>healthCheckGracePeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Time (in seconds) after instance comes into service before checking health.
@@ -597,10 +641,12 @@ Time (in seconds) after instance comes into service before checking health.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-healthCheckType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L302" >}}">property <b>healthCheckType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L304" >}}">property <b>healthCheckType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>healthCheckType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 "EC2" or "ELB". Controls how health checking is done.
@@ -608,10 +654,12 @@ Time (in seconds) after instance comes into service before checking health.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L235" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -620,18 +668,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-initialLifecycleHooks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L312" >}}">property <b>initialLifecycleHooks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L314" >}}">property <b>initialLifecycleHooks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>initialLifecycleHooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    defaultResult: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    heartbeatTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    lifecycleTransition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    notificationMetadata: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    notificationTargetArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>initialLifecycleHooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupInitialLifecycleHook'>outputs.autoscaling.GroupInitialLifecycleHook</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more
@@ -645,10 +687,12 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-launchConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L316" >}}">property <b>launchConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L318" >}}">property <b>launchConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>launchConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the launch configuration to use.
@@ -656,14 +700,12 @@ The name of the launch configuration to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-launchTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L320" >}}">property <b>launchTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L322" >}}">property <b>launchTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>launchTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>launchTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupLaunchTemplate'>outputs.autoscaling.GroupLaunchTemplate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Nested argument containing launch template settings along with the overrides to specify multiple instance types. Defined below.
@@ -671,10 +713,12 @@ Nested argument containing launch template settings along with the overrides to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-loadBalancers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L325" >}}">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L327" >}}">property <b>loadBalancers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of elastic load balancer names to add to the autoscaling
@@ -683,10 +727,12 @@ group names. Only valid for classic load balancers. For ALBs, use `targetGroupAr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-maxSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L329" >}}">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L331" >}}">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum size of the auto scale group.
@@ -694,10 +740,12 @@ The maximum size of the auto scale group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-metricsGranularity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L333" >}}">property <b>metricsGranularity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L335" >}}">property <b>metricsGranularity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metricsGranularity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
@@ -705,10 +753,12 @@ The granularity to associate with the metrics to collect. The only valid value i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-minElbCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L340" >}}">property <b>minElbCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L342" >}}">property <b>minElbCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minElbCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Setting this causes this provider to wait for
@@ -719,10 +769,12 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-minSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L345" >}}">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L347" >}}">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size of the auto scale group.
@@ -731,29 +783,12 @@ The minimum size of the auto scale group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-mixedInstancesPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L349" >}}">property <b>mixedInstancesPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L351" >}}">property <b>mixedInstancesPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>mixedInstancesPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    instancesDistribution: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        onDemandAllocationStrategy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        onDemandBaseCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        onDemandPercentageAboveBaseCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        spotAllocationStrategy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        spotInstancePools: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        spotMaxPrice: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    launchTemplate: {
-        launchTemplateSpecification: {
-            launchTemplateId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            launchTemplateName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-        overrides: {
-            instanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        }[];
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>mixedInstancesPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupMixedInstancesPolicy'>outputs.autoscaling.GroupMixedInstancesPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
@@ -761,10 +796,12 @@ Configuration block containing settings to define launch targets for Auto Scalin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L353" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L355" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the auto scaling group. By default generated by this provider.
@@ -772,10 +809,12 @@ The name of the auto scaling group. By default generated by this provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-namePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L358" >}}">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L360" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a unique name beginning with the specified
@@ -784,10 +823,12 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-placementGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L362" >}}">property <b>placementGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L364" >}}">property <b>placementGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>placementGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the placement group into which you'll launch your instances, if any.
@@ -795,10 +836,12 @@ The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-protectFromScaleIn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L368" >}}">property <b>protectFromScaleIn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L370" >}}">property <b>protectFromScaleIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protectFromScaleIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows setting instance protection. The
@@ -808,10 +851,12 @@ during scale in events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-serviceLinkedRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L372" >}}">property <b>serviceLinkedRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L374" >}}">property <b>serviceLinkedRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>serviceLinkedRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the service-linked role that the ASG will use to call other AWS services
@@ -819,10 +864,12 @@ The ARN of the service-linked role that the ASG will use to call other AWS servi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-suspendedProcesses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L377" >}}">property <b>suspendedProcesses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L379" >}}">property <b>suspendedProcesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>suspendedProcesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
@@ -831,14 +878,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L381" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L383" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    propagateAtLaunch: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupTag'>outputs.autoscaling.GroupTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag blocks. Tags documented below.
@@ -846,10 +891,12 @@ A list of tag blocks. Tags documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-tagsCollection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L385" >}}">property <b>tagsCollection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L387" >}}">property <b>tagsCollection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tagsCollection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag blocks (maps). Tags documented below.
@@ -857,10 +904,12 @@ A list of tag blocks (maps). Tags documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-targetGroupArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L389" >}}">property <b>targetGroupArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L391" >}}">property <b>targetGroupArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetGroupArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
@@ -868,10 +917,12 @@ A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load B
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-terminationPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L393" >}}">property <b>terminationPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L395" >}}">property <b>terminationPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>terminationPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
@@ -879,10 +930,12 @@ A list of policies to decide how the instances in the auto scale group should be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L235" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -891,10 +944,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-vpcZoneIdentifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L397" >}}">property <b>vpcZoneIdentifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L399" >}}">property <b>vpcZoneIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpcZoneIdentifiers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of subnet IDs to launch resources in.
@@ -902,18 +957,22 @@ A list of subnet IDs to launch resources in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-waitForCapacityTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L398" >}}">property <b>waitForCapacityTimeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L400" >}}">property <b>waitForCapacityTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>waitForCapacityTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-waitForElbCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L406" >}}">property <b>waitForElbCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L408" >}}">property <b>waitForElbCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>waitForElbCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Setting this will cause this provider to wait
@@ -926,10 +985,12 @@ precedence over `minElbCapacity` behavior.)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LifecycleHook">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L54" >}}">class <b>LifecycleHook</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L56" >}}">class <b>LifecycleHook</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an AutoScaling Lifecycle Hook resource.
@@ -980,13 +1041,15 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LifecycleHook-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L112" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L114" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LifecycleHook(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LifecycleHookArgs'>LifecycleHookArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a LifecycleHook resource with the given unique name, arguments, and options.
 
@@ -997,13 +1060,15 @@ Create a LifecycleHook resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L63" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L65" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#LifecycleHookState'>LifecycleHookState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#LifecycleHook'>LifecycleHook</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing LifecycleHook resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1011,23 +1076,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L56" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L74" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L76" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of LifecycleHook.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1035,10 +1104,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L84" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L86" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoscalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Auto Scaling group to which you want to assign the lifecycle hook
@@ -1046,10 +1117,12 @@ The name of the Auto Scaling group to which you want to assign the lifecycle hoo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-defaultResult">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L88" >}}">property <b>defaultResult</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L90" >}}">property <b>defaultResult</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultResult: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
@@ -1057,10 +1130,12 @@ Defines the action the Auto Scaling group should take when the lifecycle hook ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-heartbeatTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L92" >}}">property <b>heartbeatTimeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L94" >}}">property <b>heartbeatTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>heartbeatTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
@@ -1068,10 +1143,12 @@ Defines the amount of time, in seconds, that can elapse before the lifecycle hoo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L56" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1080,10 +1157,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-lifecycleTransition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L96" >}}">property <b>lifecycleTransition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L98" >}}">property <b>lifecycleTransition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lifecycleTransition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
@@ -1091,10 +1170,12 @@ The instance state to which you want to attach the lifecycle hook. For a list of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L100" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L102" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the lifecycle hook.
@@ -1102,10 +1183,12 @@ The name of the lifecycle hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-notificationMetadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L104" >}}">property <b>notificationMetadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L106" >}}">property <b>notificationMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notificationMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
@@ -1113,10 +1196,12 @@ Contains additional information that you want to include any time Auto Scaling s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-notificationTargetArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L108" >}}">property <b>notificationTargetArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L110" >}}">property <b>notificationTargetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notificationTargetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
@@ -1124,10 +1209,12 @@ The ARN of the notification target that Auto Scaling will use to notify you when
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L112" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L114" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
@@ -1135,10 +1222,12 @@ The ARN of the IAM role that allows the Auto Scaling group to publish to the spe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHook-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L56" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1148,10 +1237,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Notification">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L42" >}}">class <b>Notification</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L44" >}}">class <b>Notification</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
@@ -1188,13 +1279,15 @@ const exampleNotifications = new aws.autoscaling.Notification("exampleNotificati
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Notification-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L81" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L83" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Notification(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NotificationArgs'>NotificationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Notification resource with the given unique name, arguments, and options.
 
@@ -1205,13 +1298,15 @@ Create a Notification resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Notification-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L51" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NotificationState'>NotificationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Notification'>Notification</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Notification resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1219,23 +1314,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Notification-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L44" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Notification-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L62" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Notification.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1243,10 +1342,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Notification-groupNames">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L72" >}}">property <b>groupNames</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L74" >}}">property <b>groupNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>groupNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of AutoScaling Group Names
@@ -1254,10 +1355,12 @@ A list of AutoScaling Group Names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Notification-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L44" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1266,10 +1369,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Notification-notifications">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L77" >}}">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L79" >}}">property <b>notifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#NotificationType'>NotificationType</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Notification Types that trigger
@@ -1278,10 +1383,12 @@ notifications. Acceptable values are documented [in the AWS documentation here][
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Notification-topicArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L81" >}}">property <b>topicArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L83" >}}">property <b>topicArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>topicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Topic ARN for notifications to be sent through
@@ -1289,10 +1396,12 @@ The Topic ARN for notifications to be sent through
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Notification-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L44" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1302,10 +1411,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L41" >}}">class <b>Policy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L43" >}}">class <b>Policy</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an AutoScaling Scaling Policy resource.
@@ -1343,13 +1454,15 @@ const bat = new aws.autoscaling.Policy("bat", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L111" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L113" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Policy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PolicyArgs'>PolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Policy resource with the given unique name, arguments, and options.
 
@@ -1360,13 +1473,15 @@ Create a Policy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L50" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PolicyState'>PolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Policy'>Policy</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Policy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1374,23 +1489,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L43" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L61" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1398,10 +1517,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-adjustmentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L71" >}}">property <b>adjustmentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L73" >}}">property <b>adjustmentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>adjustmentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
@@ -1409,10 +1530,12 @@ Specifies whether the adjustment is an absolute number or a percentage of the cu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L75" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L77" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN assigned by AWS to the scaling policy.
@@ -1420,10 +1543,12 @@ The ARN assigned by AWS to the scaling policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L79" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L81" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoscalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the autoscaling group.
@@ -1431,10 +1556,12 @@ The name of the autoscaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-cooldown">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L83" >}}">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L85" >}}">property <b>cooldown</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cooldown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
@@ -1442,10 +1569,12 @@ The amount of time, in seconds, after a scaling activity completes and before th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L87" >}}">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L89" >}}">property <b>estimatedInstanceWarmup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>estimatedInstanceWarmup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
@@ -1453,10 +1582,12 @@ The estimated time, in seconds, until a newly launched instance will contribute 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L43" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1465,10 +1596,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-metricAggregationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L91" >}}">property <b>metricAggregationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L93" >}}">property <b>metricAggregationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metricAggregationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
@@ -1476,18 +1609,22 @@ The aggregation type for the policy's metrics. Valid values are "Minimum", "Maxi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-minAdjustmentMagnitude">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L92" >}}">property <b>minAdjustmentMagnitude</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L94" >}}">property <b>minAdjustmentMagnitude</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minAdjustmentMagnitude: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L96" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L98" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the dimension.
@@ -1495,10 +1632,12 @@ The name of the dimension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L100" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L102" >}}">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
@@ -1506,10 +1645,12 @@ The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-scalingAdjustment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L106" >}}">property <b>scalingAdjustment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L108" >}}">property <b>scalingAdjustment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scalingAdjustment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of members by which to
@@ -1519,39 +1660,22 @@ up. A negative value scales down.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-stepAdjustments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L107" >}}">property <b>stepAdjustments</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L109" >}}">property <b>stepAdjustments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>stepAdjustments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    metricIntervalLowerBound: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    metricIntervalUpperBound: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    scalingAdjustment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>stepAdjustments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepAdjustment'>outputs.autoscaling.PolicyStepAdjustment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-targetTrackingConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L111" >}}">property <b>targetTrackingConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L113" >}}">property <b>targetTrackingConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>targetTrackingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    customizedMetricSpecification: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        metricDimensions: {
-            name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        }[];
-        metricName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        statistic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        unit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    disableScaleIn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    predefinedMetricSpecification: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        predefinedMetricType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        resourceLabel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    targetValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>targetTrackingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingConfiguration'>outputs.autoscaling.PolicyTargetTrackingConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A target tracking policy. These have the following structure:
@@ -1559,10 +1683,12 @@ A target tracking policy. These have the following structure:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L43" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1572,10 +1698,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Schedule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L38" >}}">class <b>Schedule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L40" >}}">class <b>Schedule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an AutoScaling Schedule resource.
@@ -1610,13 +1738,15 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Schedule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L104" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L106" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Schedule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ScheduleArgs'>ScheduleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Schedule resource with the given unique name, arguments, and options.
 
@@ -1627,13 +1757,15 @@ Create a Schedule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L47" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ScheduleState'>ScheduleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Schedule'>Schedule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Schedule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1641,23 +1773,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L40" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L58" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Schedule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1665,10 +1801,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L68" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L70" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN assigned by AWS to the autoscaling schedule.
@@ -1676,10 +1814,12 @@ The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L72" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L74" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoscalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or Amazon Resource Name (ARN) of the Auto Scaling group.
@@ -1687,10 +1827,12 @@ The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-desiredCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L76" >}}">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L78" >}}">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>desiredCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
@@ -1698,10 +1840,12 @@ The number of EC2 instances that should be running in the group. Default 0.  Set
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-endTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L81" >}}">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L83" >}}">property <b>endTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
@@ -1710,10 +1854,12 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L40" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1722,10 +1868,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-maxSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L86" >}}">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L88" >}}">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum size for the Auto Scaling group. Default 0.
@@ -1734,10 +1882,12 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-minSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L91" >}}">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L93" >}}">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size for the Auto Scaling group. Default 0.
@@ -1746,10 +1896,12 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-recurrence">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L95" >}}">property <b>recurrence</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L97" >}}">property <b>recurrence</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
@@ -1757,10 +1909,12 @@ The time when recurring future actions will start. Start time is specified by th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-scheduledActionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L99" >}}">property <b>scheduledActionName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L101" >}}">property <b>scheduledActionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scheduledActionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of this scaling action.
@@ -1768,10 +1922,12 @@ The name of this scaling action.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-startTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L104" >}}">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L106" >}}">property <b>startTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>startTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
@@ -1780,10 +1936,12 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schedule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L40" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1793,13 +1951,15 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L23" >}}">function <b>getGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L25" >}}">function <b>getGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getGroup(args: <a href='#GetGroupArgs'>GetGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetGroupResult'>GetGroupResult</a>&gt; &amp; <a href='#GetGroupResult'>GetGroupResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get information on an existing autoscaling group.
 
@@ -1831,7 +1991,9 @@ The set of arguments for constructing a Attachment resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L143" >}}">property <b>albTargetGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>albTargetGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an ALB Target Group.
@@ -1842,7 +2004,9 @@ The ARN of an ALB Target Group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L147" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of ASG to associate with the ELB.
@@ -1853,7 +2017,9 @@ Name of ASG to associate with the ELB.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L151" >}}">property <b>elb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>elb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ELB.
@@ -1874,7 +2040,9 @@ Input properties used for looking up and filtering Attachment resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L125" >}}">property <b>albTargetGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>albTargetGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an ALB Target Group.
@@ -1885,7 +2053,9 @@ The ARN of an ALB Target Group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L129" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of ASG to associate with the ELB.
@@ -1896,7 +2066,9 @@ Name of ASG to associate with the ELB.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/attachment.ts#L133" >}}">property <b>elb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>elb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ELB.
@@ -1905,7 +2077,7 @@ The name of the ELB.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L41" >}}">interface <b>GetGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L43" >}}">interface <b>GetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1914,10 +2086,12 @@ A collection of arguments for invoking getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L45" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L47" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify the exact name of the desired autoscaling group.
@@ -1926,7 +2100,7 @@ Specify the exact name of the desired autoscaling group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L51" >}}">interface <b>GetGroupResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L53" >}}">interface <b>GetGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1935,10 +2109,12 @@ A collection of values returned by getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L55" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L57" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of the Auto Scaling group.
@@ -1946,10 +2122,12 @@ The Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-availabilityZones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L59" >}}">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L61" >}}">property <b>availabilityZones</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more Availability Zones for the group.
@@ -1957,18 +2135,22 @@ One or more Availability Zones for the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-defaultCooldown">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L60" >}}">property <b>defaultCooldown</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L62" >}}">property <b>defaultCooldown</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultCooldown: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-desiredCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L64" >}}">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L66" >}}">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>desiredCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The desired size of the group.
@@ -1976,10 +2158,12 @@ The desired size of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-healthCheckGracePeriod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L68" >}}">property <b>healthCheckGracePeriod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L70" >}}">property <b>healthCheckGracePeriod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckGracePeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service.
@@ -1987,10 +2171,12 @@ The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checki
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-healthCheckType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L72" >}}">property <b>healthCheckType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L74" >}}">property <b>healthCheckType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The service to use for the health checks. The valid values are EC2 and ELB.
@@ -1998,10 +2184,12 @@ The service to use for the health checks. The valid values are EC2 and ELB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L121" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L123" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2009,10 +2197,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-launchConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L76" >}}">property <b>launchConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L78" >}}">property <b>launchConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>launchConfiguration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the associated launch configuration.
@@ -2020,10 +2210,12 @@ The name of the associated launch configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-loadBalancers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L80" >}}">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L82" >}}">property <b>loadBalancers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more load balancers associated with the group.
@@ -2031,10 +2223,12 @@ One or more load balancers associated with the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-maxSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L84" >}}">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L86" >}}">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum size of the group.
@@ -2042,10 +2236,12 @@ The maximum size of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-minSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L88" >}}">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L90" >}}">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size of the group.
@@ -2053,10 +2249,12 @@ The minimum size of the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L92" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L94" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Auto Scaling group.
@@ -2064,18 +2262,22 @@ The name of the Auto Scaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-newInstancesProtectedFromScaleIn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L93" >}}">property <b>newInstancesProtectedFromScaleIn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L95" >}}">property <b>newInstancesProtectedFromScaleIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>newInstancesProtectedFromScaleIn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-placementGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L97" >}}">property <b>placementGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L99" >}}">property <b>placementGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>placementGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the placement group into which to launch your instances, if any. For more information, see Placement Groups (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the Amazon Elastic Compute Cloud User Guide.
@@ -2083,10 +2285,12 @@ The name of the placement group into which to launch your instances, if any. For
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-serviceLinkedRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L101" >}}">property <b>serviceLinkedRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L103" >}}">property <b>serviceLinkedRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serviceLinkedRoleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf.
@@ -2094,10 +2298,12 @@ The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L105" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L107" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The current state of the group when DeleteAutoScalingGroup is in progress.
@@ -2105,10 +2311,12 @@ The current state of the group when DeleteAutoScalingGroup is in progress.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-targetGroupArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L109" >}}">property <b>targetGroupArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L111" >}}">property <b>targetGroupArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetGroupArns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Names (ARN) of the target groups for your load balancer.
@@ -2116,10 +2324,12 @@ The Amazon Resource Names (ARN) of the target groups for your load balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-terminationPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L113" >}}">property <b>terminationPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L115" >}}">property <b>terminationPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>terminationPolicies: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The termination policies for the group.
@@ -2127,10 +2337,12 @@ The termination policies for the group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-vpcZoneIdentifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L117" >}}">property <b>vpcZoneIdentifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/getGroup.ts#L119" >}}">property <b>vpcZoneIdentifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpcZoneIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC ID for the group.
@@ -2139,7 +2351,7 @@ VPC ID for the group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L656" >}}">interface <b>GroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L658" >}}">interface <b>GroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2148,10 +2360,12 @@ The set of arguments for constructing a Group resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupArgs-availabilityZones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L660" >}}">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L662" >}}">property <b>availabilityZones</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of one or more availability zones for the group. This parameter should not be specified when using `vpcZoneIdentifier`.
@@ -2159,10 +2373,12 @@ A list of one or more availability zones for the group. This parameter should no
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-defaultCooldown">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L664" >}}">property <b>defaultCooldown</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L666" >}}">property <b>defaultCooldown</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
@@ -2170,10 +2386,12 @@ The amount of time, in seconds, after a scaling activity completes before anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-desiredCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L670" >}}">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L672" >}}">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of Amazon EC2 instances that
@@ -2183,10 +2401,12 @@ Capacity below.)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-enabledMetrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L679" >}}">property <b>enabledMetrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L681" >}}">property <b>enabledMetrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabledMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Metric'>Metric</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of metrics to collect. The allowed values are `GroupMinSize`, `GroupMaxSize`, `GroupDesiredCapacity`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupTerminatingInstances`, `GroupTotalInstances`.
@@ -2199,10 +2419,12 @@ this provider to skip all Capacity Waiting behavior.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-forceDelete">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L687" >}}">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L689" >}}">property <b>forceDelete</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows deleting the autoscaling group without waiting
@@ -2214,10 +2436,12 @@ behavior and potentially leaves resources dangling.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-healthCheckGracePeriod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L691" >}}">property <b>healthCheckGracePeriod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L693" >}}">property <b>healthCheckGracePeriod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckGracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Time (in seconds) after instance comes into service before checking health.
@@ -2225,10 +2449,12 @@ Time (in seconds) after instance comes into service before checking health.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-healthCheckType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L695" >}}">property <b>healthCheckType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L697" >}}">property <b>healthCheckType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 "EC2" or "ELB". Controls how health checking is done.
@@ -2236,18 +2462,12 @@ Time (in seconds) after instance comes into service before checking health.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-initialLifecycleHooks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L705" >}}">property <b>initialLifecycleHooks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L707" >}}">property <b>initialLifecycleHooks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>initialLifecycleHooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    defaultResult: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    heartbeatTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    lifecycleTransition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    notificationMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    notificationTargetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>initialLifecycleHooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupInitialLifecycleHook'>inputs.autoscaling.GroupInitialLifecycleHook</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more
@@ -2261,10 +2481,12 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-launchConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L709" >}}">property <b>launchConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L711" >}}">property <b>launchConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>launchConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#LaunchConfiguration'>LaunchConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the launch configuration to use.
@@ -2272,14 +2494,12 @@ The name of the launch configuration to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-launchTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L713" >}}">property <b>launchTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L715" >}}">property <b>launchTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupLaunchTemplate'>inputs.autoscaling.GroupLaunchTemplate</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Nested argument containing launch template settings along with the overrides to specify multiple instance types. Defined below.
@@ -2287,10 +2507,12 @@ Nested argument containing launch template settings along with the overrides to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-loadBalancers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L718" >}}">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L720" >}}">property <b>loadBalancers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of elastic load balancer names to add to the autoscaling
@@ -2299,10 +2521,12 @@ group names. Only valid for classic load balancers. For ALBs, use `targetGroupAr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-maxSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L722" >}}">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L724" >}}">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum size of the auto scale group.
@@ -2310,10 +2534,12 @@ The maximum size of the auto scale group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-metricsGranularity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L726" >}}">property <b>metricsGranularity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L728" >}}">property <b>metricsGranularity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricsGranularity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#MetricsGranularity'>MetricsGranularity</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
@@ -2321,10 +2547,12 @@ The granularity to associate with the metrics to collect. The only valid value i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-minElbCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L733" >}}">property <b>minElbCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L735" >}}">property <b>minElbCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minElbCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Setting this causes this provider to wait for
@@ -2335,10 +2563,12 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-minSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L738" >}}">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L740" >}}">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size of the auto scale group.
@@ -2347,29 +2577,12 @@ The minimum size of the auto scale group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-mixedInstancesPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L742" >}}">property <b>mixedInstancesPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L744" >}}">property <b>mixedInstancesPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>mixedInstancesPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    instancesDistribution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        onDemandAllocationStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onDemandBaseCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        onDemandPercentageAboveBaseCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        spotAllocationStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        spotInstancePools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        spotMaxPrice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    launchTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        launchTemplateSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            launchTemplateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            launchTemplateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        overrides: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>mixedInstancesPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupMixedInstancesPolicy'>inputs.autoscaling.GroupMixedInstancesPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
@@ -2377,10 +2590,12 @@ Configuration block containing settings to define launch targets for Auto Scalin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L746" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L748" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the auto scaling group. By default generated by this provider.
@@ -2388,10 +2603,12 @@ The name of the auto scaling group. By default generated by this provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-namePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L751" >}}">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L753" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a unique name beginning with the specified
@@ -2400,10 +2617,12 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-placementGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L755" >}}">property <b>placementGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L757" >}}">property <b>placementGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>placementGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PlacementGroup'>PlacementGroup</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the placement group into which you'll launch your instances, if any.
@@ -2411,10 +2630,12 @@ The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-protectFromScaleIn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L761" >}}">property <b>protectFromScaleIn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L763" >}}">property <b>protectFromScaleIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protectFromScaleIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows setting instance protection. The
@@ -2424,10 +2645,12 @@ during scale in events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-serviceLinkedRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L765" >}}">property <b>serviceLinkedRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L767" >}}">property <b>serviceLinkedRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serviceLinkedRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the service-linked role that the ASG will use to call other AWS services
@@ -2435,10 +2658,12 @@ The ARN of the service-linked role that the ASG will use to call other AWS servi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-suspendedProcesses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L770" >}}">property <b>suspendedProcesses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L772" >}}">property <b>suspendedProcesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>suspendedProcesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
@@ -2447,14 +2672,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L774" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L776" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    propagateAtLaunch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupTag'>inputs.autoscaling.GroupTag</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag blocks. Tags documented below.
@@ -2462,10 +2685,12 @@ A list of tag blocks. Tags documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-tagsCollection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L778" >}}">property <b>tagsCollection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L780" >}}">property <b>tagsCollection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tagsCollection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag blocks (maps). Tags documented below.
@@ -2473,10 +2698,12 @@ A list of tag blocks (maps). Tags documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-targetGroupArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L782" >}}">property <b>targetGroupArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L784" >}}">property <b>targetGroupArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetGroupArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
@@ -2484,10 +2711,12 @@ A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load B
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-terminationPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L786" >}}">property <b>terminationPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L788" >}}">property <b>terminationPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>terminationPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
@@ -2495,10 +2724,12 @@ A list of policies to decide how the instances in the auto scale group should be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-vpcZoneIdentifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L790" >}}">property <b>vpcZoneIdentifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L792" >}}">property <b>vpcZoneIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpcZoneIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of subnet IDs to launch resources in.
@@ -2506,18 +2737,22 @@ A list of subnet IDs to launch resources in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-waitForCapacityTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L791" >}}">property <b>waitForCapacityTimeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L793" >}}">property <b>waitForCapacityTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>waitForCapacityTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-waitForElbCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L799" >}}">property <b>waitForElbCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L801" >}}">property <b>waitForElbCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>waitForElbCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Setting this will cause this provider to wait
@@ -2530,7 +2765,7 @@ precedence over `minElbCapacity` behavior.)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L503" >}}">interface <b>GroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L505" >}}">interface <b>GroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2539,10 +2774,12 @@ Input properties used for looking up and filtering Group resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L507" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L509" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for this AutoScaling Group
@@ -2550,10 +2787,12 @@ The ARN for this AutoScaling Group
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-availabilityZones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L511" >}}">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L513" >}}">property <b>availabilityZones</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of one or more availability zones for the group. This parameter should not be specified when using `vpcZoneIdentifier`.
@@ -2561,10 +2800,12 @@ A list of one or more availability zones for the group. This parameter should no
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-defaultCooldown">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L515" >}}">property <b>defaultCooldown</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L517" >}}">property <b>defaultCooldown</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
@@ -2572,10 +2813,12 @@ The amount of time, in seconds, after a scaling activity completes before anothe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-desiredCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L521" >}}">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L523" >}}">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of Amazon EC2 instances that
@@ -2585,10 +2828,12 @@ Capacity below.)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-enabledMetrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L530" >}}">property <b>enabledMetrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L532" >}}">property <b>enabledMetrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabledMetrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Metric'>Metric</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of metrics to collect. The allowed values are `GroupMinSize`, `GroupMaxSize`, `GroupDesiredCapacity`, `GroupInServiceInstances`, `GroupPendingInstances`, `GroupStandbyInstances`, `GroupTerminatingInstances`, `GroupTotalInstances`.
@@ -2601,10 +2846,12 @@ this provider to skip all Capacity Waiting behavior.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-forceDelete">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L538" >}}">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L540" >}}">property <b>forceDelete</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows deleting the autoscaling group without waiting
@@ -2616,10 +2863,12 @@ behavior and potentially leaves resources dangling.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-healthCheckGracePeriod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L542" >}}">property <b>healthCheckGracePeriod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L544" >}}">property <b>healthCheckGracePeriod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckGracePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Time (in seconds) after instance comes into service before checking health.
@@ -2627,10 +2876,12 @@ Time (in seconds) after instance comes into service before checking health.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-healthCheckType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L546" >}}">property <b>healthCheckType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L548" >}}">property <b>healthCheckType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 "EC2" or "ELB". Controls how health checking is done.
@@ -2638,18 +2889,12 @@ Time (in seconds) after instance comes into service before checking health.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-initialLifecycleHooks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L556" >}}">property <b>initialLifecycleHooks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L558" >}}">property <b>initialLifecycleHooks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>initialLifecycleHooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    defaultResult: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    heartbeatTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    lifecycleTransition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    notificationMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    notificationTargetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>initialLifecycleHooks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupInitialLifecycleHook'>inputs.autoscaling.GroupInitialLifecycleHook</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more
@@ -2663,10 +2908,12 @@ a new autoscaling group. For all other use-cases, please use `aws.autoscaling.Li
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-launchConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L560" >}}">property <b>launchConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L562" >}}">property <b>launchConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>launchConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#LaunchConfiguration'>LaunchConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the launch configuration to use.
@@ -2674,14 +2921,12 @@ The name of the launch configuration to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-launchTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L564" >}}">property <b>launchTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L566" >}}">property <b>launchTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>launchTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupLaunchTemplate'>inputs.autoscaling.GroupLaunchTemplate</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Nested argument containing launch template settings along with the overrides to specify multiple instance types. Defined below.
@@ -2689,10 +2934,12 @@ Nested argument containing launch template settings along with the overrides to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-loadBalancers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L569" >}}">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L571" >}}">property <b>loadBalancers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of elastic load balancer names to add to the autoscaling
@@ -2701,10 +2948,12 @@ group names. Only valid for classic load balancers. For ALBs, use `targetGroupAr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-maxSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L573" >}}">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L575" >}}">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum size of the auto scale group.
@@ -2712,10 +2961,12 @@ The maximum size of the auto scale group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-metricsGranularity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L577" >}}">property <b>metricsGranularity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L579" >}}">property <b>metricsGranularity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricsGranularity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#MetricsGranularity'>MetricsGranularity</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
@@ -2723,10 +2974,12 @@ The granularity to associate with the metrics to collect. The only valid value i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-minElbCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L584" >}}">property <b>minElbCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L586" >}}">property <b>minElbCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minElbCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Setting this causes this provider to wait for
@@ -2737,10 +2990,12 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-minSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L589" >}}">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L591" >}}">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size of the auto scale group.
@@ -2749,29 +3004,12 @@ The minimum size of the auto scale group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-mixedInstancesPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L593" >}}">property <b>mixedInstancesPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L595" >}}">property <b>mixedInstancesPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>mixedInstancesPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    instancesDistribution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        onDemandAllocationStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onDemandBaseCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        onDemandPercentageAboveBaseCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        spotAllocationStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        spotInstancePools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        spotMaxPrice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    launchTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        launchTemplateSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            launchTemplateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            launchTemplateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        overrides: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>mixedInstancesPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupMixedInstancesPolicy'>inputs.autoscaling.GroupMixedInstancesPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block containing settings to define launch targets for Auto Scaling groups. Defined below.
@@ -2779,10 +3017,12 @@ Configuration block containing settings to define launch targets for Auto Scalin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L597" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L599" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the auto scaling group. By default generated by this provider.
@@ -2790,10 +3030,12 @@ The name of the auto scaling group. By default generated by this provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-namePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L602" >}}">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L604" >}}">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a unique name beginning with the specified
@@ -2802,10 +3044,12 @@ prefix. Conflicts with `name`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-placementGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L606" >}}">property <b>placementGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L608" >}}">property <b>placementGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>placementGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='#PlacementGroup'>PlacementGroup</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the placement group into which you'll launch your instances, if any.
@@ -2813,10 +3057,12 @@ The name of the placement group into which you'll launch your instances, if any.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-protectFromScaleIn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L612" >}}">property <b>protectFromScaleIn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L614" >}}">property <b>protectFromScaleIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protectFromScaleIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows setting instance protection. The
@@ -2826,10 +3072,12 @@ during scale in events.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-serviceLinkedRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L616" >}}">property <b>serviceLinkedRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L618" >}}">property <b>serviceLinkedRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serviceLinkedRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the service-linked role that the ASG will use to call other AWS services
@@ -2837,10 +3085,12 @@ The ARN of the service-linked role that the ASG will use to call other AWS servi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-suspendedProcesses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L621" >}}">property <b>suspendedProcesses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L623" >}}">property <b>suspendedProcesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>suspendedProcesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
@@ -2849,14 +3099,12 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L625" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L627" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    propagateAtLaunch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupTag'>inputs.autoscaling.GroupTag</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag blocks. Tags documented below.
@@ -2864,10 +3112,12 @@ A list of tag blocks. Tags documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-tagsCollection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L629" >}}">property <b>tagsCollection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L631" >}}">property <b>tagsCollection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tagsCollection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag blocks (maps). Tags documented below.
@@ -2875,10 +3125,12 @@ A list of tag blocks (maps). Tags documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-targetGroupArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L633" >}}">property <b>targetGroupArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L635" >}}">property <b>targetGroupArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetGroupArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
@@ -2886,10 +3138,12 @@ A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load B
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-terminationPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L637" >}}">property <b>terminationPolicies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L639" >}}">property <b>terminationPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>terminationPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
@@ -2897,10 +3151,12 @@ A list of policies to decide how the instances in the auto scale group should be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-vpcZoneIdentifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L641" >}}">property <b>vpcZoneIdentifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L643" >}}">property <b>vpcZoneIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpcZoneIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of subnet IDs to launch resources in.
@@ -2908,18 +3164,22 @@ A list of subnet IDs to launch resources in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-waitForCapacityTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L642" >}}">property <b>waitForCapacityTimeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L644" >}}">property <b>waitForCapacityTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>waitForCapacityTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-waitForElbCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L650" >}}">property <b>waitForElbCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/group.ts#L652" >}}">property <b>waitForElbCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>waitForElbCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Setting this will cause this provider to wait
@@ -2932,7 +3192,7 @@ precedence over `minElbCapacity` behavior.)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LifecycleHookArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L203" >}}">interface <b>LifecycleHookArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L205" >}}">interface <b>LifecycleHookArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2941,10 +3201,12 @@ The set of arguments for constructing a LifecycleHook resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LifecycleHookArgs-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L207" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L209" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Auto Scaling group to which you want to assign the lifecycle hook
@@ -2952,10 +3214,12 @@ The name of the Auto Scaling group to which you want to assign the lifecycle hoo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookArgs-defaultResult">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L211" >}}">property <b>defaultResult</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L213" >}}">property <b>defaultResult</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultResult?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
@@ -2963,10 +3227,12 @@ Defines the action the Auto Scaling group should take when the lifecycle hook ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookArgs-heartbeatTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L215" >}}">property <b>heartbeatTimeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L217" >}}">property <b>heartbeatTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>heartbeatTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
@@ -2974,10 +3240,12 @@ Defines the amount of time, in seconds, that can elapse before the lifecycle hoo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookArgs-lifecycleTransition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L219" >}}">property <b>lifecycleTransition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L221" >}}">property <b>lifecycleTransition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lifecycleTransition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
@@ -2985,10 +3253,12 @@ The instance state to which you want to attach the lifecycle hook. For a list of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L223" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L225" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the lifecycle hook.
@@ -2996,10 +3266,12 @@ The name of the lifecycle hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookArgs-notificationMetadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L227" >}}">property <b>notificationMetadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L229" >}}">property <b>notificationMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
@@ -3007,10 +3279,12 @@ Contains additional information that you want to include any time Auto Scaling s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookArgs-notificationTargetArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L231" >}}">property <b>notificationTargetArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L233" >}}">property <b>notificationTargetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationTargetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
@@ -3018,10 +3292,12 @@ The ARN of the notification target that Auto Scaling will use to notify you when
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookArgs-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L235" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L237" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
@@ -3030,7 +3306,7 @@ The ARN of the IAM role that allows the Auto Scaling group to publish to the spe
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LifecycleHookState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L165" >}}">interface <b>LifecycleHookState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L167" >}}">interface <b>LifecycleHookState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3039,10 +3315,12 @@ Input properties used for looking up and filtering LifecycleHook resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LifecycleHookState-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L169" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L171" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Auto Scaling group to which you want to assign the lifecycle hook
@@ -3050,10 +3328,12 @@ The name of the Auto Scaling group to which you want to assign the lifecycle hoo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookState-defaultResult">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L173" >}}">property <b>defaultResult</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L175" >}}">property <b>defaultResult</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultResult?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
@@ -3061,10 +3341,12 @@ Defines the action the Auto Scaling group should take when the lifecycle hook ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookState-heartbeatTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L177" >}}">property <b>heartbeatTimeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L179" >}}">property <b>heartbeatTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>heartbeatTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
@@ -3072,10 +3354,12 @@ Defines the amount of time, in seconds, that can elapse before the lifecycle hoo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookState-lifecycleTransition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L181" >}}">property <b>lifecycleTransition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L183" >}}">property <b>lifecycleTransition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lifecycleTransition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
@@ -3083,10 +3367,12 @@ The instance state to which you want to attach the lifecycle hook. For a list of
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L185" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L187" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the lifecycle hook.
@@ -3094,10 +3380,12 @@ The name of the lifecycle hook.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookState-notificationMetadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L189" >}}">property <b>notificationMetadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L191" >}}">property <b>notificationMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
@@ -3105,10 +3393,12 @@ Contains additional information that you want to include any time Auto Scaling s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookState-notificationTargetArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L193" >}}">property <b>notificationTargetArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L195" >}}">property <b>notificationTargetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationTargetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
@@ -3116,10 +3406,12 @@ The ARN of the notification target that Auto Scaling will use to notify you when
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecycleHookState-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L197" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/lifecycleHook.ts#L199" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
@@ -3128,7 +3420,7 @@ The ARN of the IAM role that allows the Auto Scaling group to publish to the spe
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotificationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L146" >}}">interface <b>NotificationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L148" >}}">interface <b>NotificationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3137,10 +3429,12 @@ The set of arguments for constructing a Notification resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotificationArgs-groupNames">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L150" >}}">property <b>groupNames</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L152" >}}">property <b>groupNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of AutoScaling Group Names
@@ -3148,10 +3442,12 @@ A list of AutoScaling Group Names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationArgs-notifications">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L155" >}}">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L157" >}}">property <b>notifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NotificationType'>NotificationType</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Notification Types that trigger
@@ -3160,10 +3456,12 @@ notifications. Acceptable values are documented [in the AWS documentation here][
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationArgs-topicArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L159" >}}">property <b>topicArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L161" >}}">property <b>topicArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Topic ARN for notifications to be sent through
@@ -3172,7 +3470,7 @@ The Topic ARN for notifications to be sent through
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotificationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L127" >}}">interface <b>NotificationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L129" >}}">interface <b>NotificationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3181,10 +3479,12 @@ Input properties used for looking up and filtering Notification resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotificationState-groupNames">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L131" >}}">property <b>groupNames</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L133" >}}">property <b>groupNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of AutoScaling Group Names
@@ -3192,10 +3492,12 @@ A list of AutoScaling Group Names
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationState-notifications">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L136" >}}">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L138" >}}">property <b>notifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NotificationType'>NotificationType</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Notification Types that trigger
@@ -3204,10 +3506,12 @@ notifications. Acceptable values are documented [in the AWS documentation here][
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotificationState-topicArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L140" >}}">property <b>topicArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/notification.ts#L142" >}}">property <b>topicArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Topic ARN for notifications to be sent through
@@ -3216,7 +3520,7 @@ The Topic ARN for notifications to be sent through
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L219" >}}">interface <b>PolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L221" >}}">interface <b>PolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3225,10 +3529,12 @@ The set of arguments for constructing a Policy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyArgs-adjustmentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L223" >}}">property <b>adjustmentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L225" >}}">property <b>adjustmentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adjustmentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
@@ -3236,10 +3542,12 @@ Specifies whether the adjustment is an absolute number or a percentage of the cu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L227" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L229" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the autoscaling group.
@@ -3247,10 +3555,12 @@ The name of the autoscaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-cooldown">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L231" >}}">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L233" >}}">property <b>cooldown</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
@@ -3258,10 +3568,12 @@ The amount of time, in seconds, after a scaling activity completes and before th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L235" >}}">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L237" >}}">property <b>estimatedInstanceWarmup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>estimatedInstanceWarmup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
@@ -3269,10 +3581,12 @@ The estimated time, in seconds, until a newly launched instance will contribute 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-metricAggregationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L239" >}}">property <b>metricAggregationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L241" >}}">property <b>metricAggregationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricAggregationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
@@ -3280,18 +3594,22 @@ The aggregation type for the policy's metrics. Valid values are "Minimum", "Maxi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-minAdjustmentMagnitude">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L240" >}}">property <b>minAdjustmentMagnitude</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L242" >}}">property <b>minAdjustmentMagnitude</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minAdjustmentMagnitude?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L244" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L246" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the dimension.
@@ -3299,10 +3617,12 @@ The name of the dimension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L248" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L250" >}}">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
@@ -3310,10 +3630,12 @@ The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-scalingAdjustment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L254" >}}">property <b>scalingAdjustment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L256" >}}">property <b>scalingAdjustment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scalingAdjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of members by which to
@@ -3323,39 +3645,22 @@ up. A negative value scales down.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-stepAdjustments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L255" >}}">property <b>stepAdjustments</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L257" >}}">property <b>stepAdjustments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    metricIntervalLowerBound: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricIntervalUpperBound: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scalingAdjustment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepAdjustment'>inputs.autoscaling.PolicyStepAdjustment</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-targetTrackingConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L259" >}}">property <b>targetTrackingConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L261" >}}">property <b>targetTrackingConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targetTrackingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    customizedMetricSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        metricDimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    disableScaleIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    predefinedMetricSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        predefinedMetricType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        resourceLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>targetTrackingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingConfiguration'>inputs.autoscaling.PolicyTargetTrackingConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A target tracking policy. These have the following structure:
@@ -3364,7 +3669,7 @@ A target tracking policy. These have the following structure:
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L169" >}}">interface <b>PolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L171" >}}">interface <b>PolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3373,10 +3678,12 @@ Input properties used for looking up and filtering Policy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyState-adjustmentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L173" >}}">property <b>adjustmentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L175" >}}">property <b>adjustmentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adjustmentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
@@ -3384,10 +3691,12 @@ Specifies whether the adjustment is an absolute number or a percentage of the cu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L177" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L179" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN assigned by AWS to the scaling policy.
@@ -3395,10 +3704,12 @@ The ARN assigned by AWS to the scaling policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L181" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L183" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the autoscaling group.
@@ -3406,10 +3717,12 @@ The name of the autoscaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-cooldown">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L185" >}}">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L187" >}}">property <b>cooldown</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
@@ -3417,10 +3730,12 @@ The amount of time, in seconds, after a scaling activity completes and before th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L189" >}}">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L191" >}}">property <b>estimatedInstanceWarmup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>estimatedInstanceWarmup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
@@ -3428,10 +3743,12 @@ The estimated time, in seconds, until a newly launched instance will contribute 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-metricAggregationType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L193" >}}">property <b>metricAggregationType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L195" >}}">property <b>metricAggregationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricAggregationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
@@ -3439,18 +3756,22 @@ The aggregation type for the policy's metrics. Valid values are "Minimum", "Maxi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-minAdjustmentMagnitude">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L194" >}}">property <b>minAdjustmentMagnitude</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L196" >}}">property <b>minAdjustmentMagnitude</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minAdjustmentMagnitude?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L198" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L200" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the dimension.
@@ -3458,10 +3779,12 @@ The name of the dimension.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L202" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L204" >}}">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."
@@ -3469,10 +3792,12 @@ The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-scalingAdjustment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L208" >}}">property <b>scalingAdjustment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L210" >}}">property <b>scalingAdjustment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scalingAdjustment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of members by which to
@@ -3482,39 +3807,22 @@ up. A negative value scales down.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-stepAdjustments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L209" >}}">property <b>stepAdjustments</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L211" >}}">property <b>stepAdjustments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    metricIntervalLowerBound: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricIntervalUpperBound: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scalingAdjustment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepAdjustment'>inputs.autoscaling.PolicyStepAdjustment</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-targetTrackingConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L213" >}}">property <b>targetTrackingConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/policy.ts#L215" >}}">property <b>targetTrackingConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targetTrackingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    customizedMetricSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        metricDimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;[]&gt;;
-        metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    disableScaleIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    predefinedMetricSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        predefinedMetricType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        resourceLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>targetTrackingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingConfiguration'>inputs.autoscaling.PolicyTargetTrackingConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A target tracking policy. These have the following structure:
@@ -3523,7 +3831,7 @@ A target tracking policy. These have the following structure:
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScheduleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L205" >}}">interface <b>ScheduleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L207" >}}">interface <b>ScheduleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3532,10 +3840,12 @@ The set of arguments for constructing a Schedule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ScheduleArgs-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L209" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L211" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or Amazon Resource Name (ARN) of the Auto Scaling group.
@@ -3543,10 +3853,12 @@ The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-desiredCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L213" >}}">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L215" >}}">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
@@ -3554,10 +3866,12 @@ The number of EC2 instances that should be running in the group. Default 0.  Set
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-endTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L218" >}}">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L220" >}}">property <b>endTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
@@ -3566,10 +3880,12 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-maxSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L223" >}}">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L225" >}}">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum size for the Auto Scaling group. Default 0.
@@ -3578,10 +3894,12 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-minSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L228" >}}">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L230" >}}">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size for the Auto Scaling group. Default 0.
@@ -3590,10 +3908,12 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-recurrence">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L232" >}}">property <b>recurrence</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L234" >}}">property <b>recurrence</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
@@ -3601,10 +3921,12 @@ The time when recurring future actions will start. Start time is specified by th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-scheduledActionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L236" >}}">property <b>scheduledActionName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L238" >}}">property <b>scheduledActionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scheduledActionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of this scaling action.
@@ -3612,10 +3934,12 @@ The name of this scaling action.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleArgs-startTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L241" >}}">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L243" >}}">property <b>startTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
@@ -3625,7 +3949,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ScheduleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L159" >}}">interface <b>ScheduleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L161" >}}">interface <b>ScheduleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3634,10 +3958,12 @@ Input properties used for looking up and filtering Schedule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ScheduleState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L163" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L165" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN assigned by AWS to the autoscaling schedule.
@@ -3645,10 +3971,12 @@ The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleState-autoscalingGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L167" >}}">property <b>autoscalingGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L169" >}}">property <b>autoscalingGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or Amazon Resource Name (ARN) of the Auto Scaling group.
@@ -3656,10 +3984,12 @@ The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleState-desiredCapacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L171" >}}">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L173" >}}">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
@@ -3667,10 +3997,12 @@ The number of EC2 instances that should be running in the group. Default 0.  Set
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleState-endTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L176" >}}">property <b>endTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L178" >}}">property <b>endTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
@@ -3679,10 +4011,12 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleState-maxSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L181" >}}">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L183" >}}">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum size for the Auto Scaling group. Default 0.
@@ -3691,10 +4025,12 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleState-minSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L186" >}}">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L188" >}}">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size for the Auto Scaling group. Default 0.
@@ -3703,10 +4039,12 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleState-recurrence">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L190" >}}">property <b>recurrence</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L192" >}}">property <b>recurrence</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
@@ -3714,10 +4052,12 @@ The time when recurring future actions will start. Start time is specified by th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleState-scheduledActionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L194" >}}">property <b>scheduledActionName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L196" >}}">property <b>scheduledActionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scheduledActionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of this scaling action.
@@ -3725,10 +4065,12 @@ The name of this scaling action.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ScheduleState-startTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L199" >}}">property <b>startTime</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="autoscaling/schedule.ts#L201" >}}">property <b>startTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
@@ -3741,101 +4083,135 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L35" >}}">let <b>GroupDesiredCapacityMetric</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> GroupDesiredCapacityMetric: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupDesiredCapacity&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="GroupInServiceInstancesMetric">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L36" >}}">let <b>GroupInServiceInstancesMetric</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> GroupInServiceInstancesMetric: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupInServiceInstances&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="GroupMaxSizeMetric">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L34" >}}">let <b>GroupMaxSizeMetric</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> GroupMaxSizeMetric: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupMaxSize&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="GroupMinSizeMetric">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L33" >}}">let <b>GroupMinSizeMetric</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> GroupMinSizeMetric: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupMinSize&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="GroupPendingInstances">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L37" >}}">let <b>GroupPendingInstances</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> GroupPendingInstances: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupPendingInstances&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="GroupStandbyInstances">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L38" >}}">let <b>GroupStandbyInstances</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> GroupStandbyInstances: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupStandbyInstances&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="GroupTerminatingInstances">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L39" >}}">let <b>GroupTerminatingInstances</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> GroupTerminatingInstances: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupTerminatingInstances&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="GroupTotalInstances">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L40" >}}">let <b>GroupTotalInstances</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> GroupTotalInstances: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupTotalInstances&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="InstanceLaunchErrorNotification">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notificationType.ts#L24" >}}">let <b>InstanceLaunchErrorNotification</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> InstanceLaunchErrorNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="InstanceLaunchNotification">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notificationType.ts#L22" >}}">let <b>InstanceLaunchNotification</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> InstanceLaunchNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:EC2_INSTANCE_LAUNCH&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="InstanceTerminateErrorNotification">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notificationType.ts#L25" >}}">let <b>InstanceTerminateErrorNotification</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> InstanceTerminateErrorNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="InstanceTerminateNotification">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notificationType.ts#L23" >}}">let <b>InstanceTerminateNotification</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> InstanceTerminateNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:EC2_INSTANCE_TERMINATE&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="OneMinuteMetricsGranularity">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L27" >}}">let <b>OneMinuteMetricsGranularity</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> OneMinuteMetricsGranularity: <a href='#MetricsGranularity'>MetricsGranularity</a> = <span class='s2'>&#34;1Minute&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="TestNotification">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notificationType.ts#L26" >}}">let <b>TestNotification</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> TestNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:TEST_NOTIFICATION&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="Metric">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L43" >}}">type <b>Metric</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Metric = <span class='s2'>"GroupMinSize"</span> | <span class='s2'>"GroupMaxSize"</span> | <span class='s2'>"GroupDesiredCapacity"</span> | <span class='s2'>"GroupInServiceInstances"</span> | <span class='s2'>"GroupPendingInstances"</span> | <span class='s2'>"GroupStandbyInstances"</span> | <span class='s2'>"GroupTerminatingInstances"</span> | <span class='s2'>"GroupTotalInstances"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="MetricsGranularity">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/metrics.ts#L30" >}}">type <b>MetricsGranularity</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> MetricsGranularity = <span class='s2'>"1Minute"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="NotificationType">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="autoscaling/notificationType.ts#L29" >}}">type <b>NotificationType</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> NotificationType = <span class='s2'>"autoscaling:EC2_INSTANCE_LAUNCH"</span> | <span class='s2'>"autoscaling:EC2_INSTANCE_TERMINATE"</span> | <span class='s2'>"autoscaling:EC2_INSTANCE_LAUNCH_ERROR"</span> | <span class='s2'>"autoscaling:EC2_INSTANCE_TERMINATE_ERROR"</span> | <span class='s2'>"autoscaling:TEST_NOTIFICATION"</span>;</pre>
+{{< /md-disable >}}
 </div>

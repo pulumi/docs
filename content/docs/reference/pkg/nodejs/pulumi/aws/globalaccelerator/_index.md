@@ -40,10 +40,12 @@ title: Module globalaccelerator
 
 
 <h2 class="pdoc-module-header" id="Accelerator">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L29" >}}">class <b>Accelerator</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L31" >}}">class <b>Accelerator</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Global Accelerator accelerator.
@@ -69,13 +71,15 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Accelerator-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L75" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L77" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Accelerator(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#AcceleratorArgs'>AcceleratorArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Accelerator resource with the given unique name, arguments, and options.
 
@@ -86,13 +90,15 @@ Create a Accelerator resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L38" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AcceleratorState'>AcceleratorState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Accelerator'>Accelerator</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Accelerator resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -100,23 +106,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L31" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L49" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Accelerator.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -124,14 +134,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-attributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L59" >}}">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L61" >}}">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    flowLogsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    flowLogsS3Bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    flowLogsS3Prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorAttributes'>outputs.globalaccelerator.AcceleratorAttributes</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The attributes of the accelerator. Fields documented below.
@@ -139,10 +147,12 @@ The attributes of the accelerator. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L63" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L65" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
@@ -150,10 +160,12 @@ Indicates whether the accelerator is enabled. The value is true or false. The de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L31" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -162,10 +174,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-ipAddressType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L67" >}}">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L69" >}}">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipAddressType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value for the address type must be `IPV4`.
@@ -173,13 +187,12 @@ The value for the address type must be `IPV4`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-ipSets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L71" >}}">property <b>ipSets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L73" >}}">property <b>ipSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>ipSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    ipAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    ipFamily: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>ipSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorIpSet'>outputs.globalaccelerator.AcceleratorIpSet</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address set associated with the accelerator.
@@ -187,10 +200,12 @@ IP address set associated with the accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L75" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L77" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the accelerator.
@@ -198,10 +213,12 @@ The name of the accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Accelerator-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L31" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -211,10 +228,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L27" >}}">class <b>EndpointGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L29" >}}">class <b>EndpointGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Global Accelerator endpoint group.
@@ -238,13 +257,15 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L86" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L88" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EndpointGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EndpointGroupArgs'>EndpointGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a EndpointGroup resource with the given unique name, arguments, and options.
 
@@ -255,13 +276,15 @@ Create a EndpointGroup resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L36" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EndpointGroupState'>EndpointGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EndpointGroup'>EndpointGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing EndpointGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -269,23 +292,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L47" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of EndpointGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -293,13 +320,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-endpointConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L57" >}}">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L59" >}}">property <b>endpointConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>endpointConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    endpointId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>endpointConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointGroupEndpointConfiguration'>outputs.globalaccelerator.EndpointGroupEndpointConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of endpoint objects. Fields documented below.
@@ -307,18 +333,22 @@ The list of endpoint objects. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-endpointGroupRegion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L58" >}}">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L60" >}}">property <b>endpointGroupRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpointGroupRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L62" >}}">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L64" >}}">property <b>healthCheckIntervalSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>healthCheckIntervalSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
@@ -326,10 +356,12 @@ The time—10 seconds or 30 seconds—between each health check for an endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-healthCheckPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L66" >}}">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L68" >}}">property <b>healthCheckPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>healthCheckPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
@@ -337,10 +369,12 @@ If the protocol is HTTP/S, then this specifies the path that is the destination 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-healthCheckPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L70" >}}">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L72" >}}">property <b>healthCheckPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>healthCheckPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
@@ -348,10 +382,12 @@ The port that AWS Global Accelerator uses to check the health of endpoints that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-healthCheckProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L74" >}}">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L76" >}}">property <b>healthCheckProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>healthCheckProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
@@ -359,10 +395,12 @@ The protocol that AWS Global Accelerator uses to check the health of endpoints t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -371,10 +409,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-listenerArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L78" >}}">property <b>listenerArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L80" >}}">property <b>listenerArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listenerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of the listener.
@@ -382,10 +422,12 @@ The Amazon Resource Name (ARN) of the listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-thresholdCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L82" >}}">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L84" >}}">property <b>thresholdCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>thresholdCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
@@ -393,10 +435,12 @@ The number of consecutive health checks required to set the state of a healthy e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-trafficDialPercentage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L86" >}}">property <b>trafficDialPercentage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L88" >}}">property <b>trafficDialPercentage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>trafficDialPercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
@@ -404,10 +448,12 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -417,10 +463,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Listener">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L38" >}}">class <b>Listener</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L40" >}}">class <b>Listener</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Global Accelerator listener.
@@ -455,13 +503,15 @@ const exampleListener = new aws.globalaccelerator.Listener("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Listener-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L80" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Listener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ListenerArgs'>ListenerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Listener resource with the given unique name, arguments, and options.
 
@@ -472,13 +522,15 @@ Create a Listener resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L47" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ListenerState'>ListenerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Listener'>Listener</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Listener resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -486,23 +538,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L40" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L58" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Listener.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -510,10 +566,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-acceleratorArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L68" >}}">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L70" >}}">property <b>acceleratorArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>acceleratorArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of your accelerator.
@@ -521,10 +579,12 @@ The Amazon Resource Name (ARN) of your accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-clientAffinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L72" >}}">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L74" >}}">property <b>clientAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>clientAffinity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
@@ -532,10 +592,12 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L40" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -544,13 +606,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-portRanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L76" >}}">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L78" >}}">property <b>portRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    fromPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    toPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerPortRange'>outputs.globalaccelerator.ListenerPortRange</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
@@ -558,10 +619,12 @@ The list of port ranges for the connections from clients to the accelerator. Fie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L80" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L82" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
@@ -569,10 +632,12 @@ The protocol for the connections from clients to the accelerator. Valid values a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L40" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -582,7 +647,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AcceleratorArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L142" >}}">interface <b>AcceleratorArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L144" >}}">interface <b>AcceleratorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -591,14 +656,12 @@ The set of arguments for constructing a Accelerator resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AcceleratorArgs-attributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L146" >}}">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L148" >}}">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    flowLogsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    flowLogsS3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    flowLogsS3Prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes'>inputs.globalaccelerator.AcceleratorAttributes</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The attributes of the accelerator. Fields documented below.
@@ -606,10 +669,12 @@ The attributes of the accelerator. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L150" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L152" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
@@ -617,10 +682,12 @@ Indicates whether the accelerator is enabled. The value is true or false. The de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorArgs-ipAddressType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L154" >}}">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L156" >}}">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value for the address type must be `IPV4`.
@@ -628,10 +695,12 @@ The value for the address type must be `IPV4`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L158" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L160" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the accelerator.
@@ -640,7 +709,7 @@ The name of the accelerator.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AcceleratorState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L116" >}}">interface <b>AcceleratorState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L118" >}}">interface <b>AcceleratorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -649,14 +718,12 @@ Input properties used for looking up and filtering Accelerator resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AcceleratorState-attributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L120" >}}">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L122" >}}">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    flowLogsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    flowLogsS3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    flowLogsS3Prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes'>inputs.globalaccelerator.AcceleratorAttributes</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The attributes of the accelerator. Fields documented below.
@@ -664,10 +731,12 @@ The attributes of the accelerator. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L124" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L126" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
@@ -675,10 +744,12 @@ Indicates whether the accelerator is enabled. The value is true or false. The de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorState-ipAddressType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L128" >}}">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L130" >}}">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value for the address type must be `IPV4`.
@@ -686,13 +757,12 @@ The value for the address type must be `IPV4`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorState-ipSets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L132" >}}">property <b>ipSets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L134" >}}">property <b>ipSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>ipSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    ipFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>ipSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorIpSet'>inputs.globalaccelerator.AcceleratorIpSet</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address set associated with the accelerator.
@@ -700,10 +770,12 @@ IP address set associated with the accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcceleratorState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L136" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/accelerator.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the accelerator.
@@ -712,7 +784,7 @@ The name of the accelerator.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L177" >}}">interface <b>EndpointGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L179" >}}">interface <b>EndpointGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -721,13 +793,12 @@ The set of arguments for constructing a EndpointGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-endpointConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L181" >}}">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L183" >}}">property <b>endpointConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    endpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupEndpointConfiguration'>inputs.globalaccelerator.EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of endpoint objects. Fields documented below.
@@ -735,18 +806,22 @@ The list of endpoint objects. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-endpointGroupRegion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L182" >}}">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L184" >}}">property <b>endpointGroupRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointGroupRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L186" >}}">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L188" >}}">property <b>healthCheckIntervalSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckIntervalSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
@@ -754,10 +829,12 @@ The time—10 seconds or 30 seconds—between each health check for an endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L190" >}}">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L192" >}}">property <b>healthCheckPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
@@ -765,10 +842,12 @@ If the protocol is HTTP/S, then this specifies the path that is the destination 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L194" >}}">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L196" >}}">property <b>healthCheckPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
@@ -776,10 +855,12 @@ The port that AWS Global Accelerator uses to check the health of endpoints that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L198" >}}">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L200" >}}">property <b>healthCheckProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
@@ -787,10 +868,12 @@ The protocol that AWS Global Accelerator uses to check the health of endpoints t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-listenerArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L202" >}}">property <b>listenerArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L204" >}}">property <b>listenerArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listenerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of the listener.
@@ -798,10 +881,12 @@ The Amazon Resource Name (ARN) of the listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-thresholdCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L206" >}}">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L208" >}}">property <b>thresholdCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>thresholdCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
@@ -809,10 +894,12 @@ The number of consecutive health checks required to set the state of a healthy e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupArgs-trafficDialPercentage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L210" >}}">property <b>trafficDialPercentage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L212" >}}">property <b>trafficDialPercentage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>trafficDialPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
@@ -821,7 +908,7 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointGroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L138" >}}">interface <b>EndpointGroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L140" >}}">interface <b>EndpointGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -830,13 +917,12 @@ Input properties used for looking up and filtering EndpointGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointGroupState-endpointConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L142" >}}">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L144" >}}">property <b>endpointConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    endpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointGroupEndpointConfiguration'>inputs.globalaccelerator.EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of endpoint objects. Fields documented below.
@@ -844,18 +930,22 @@ The list of endpoint objects. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupState-endpointGroupRegion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L143" >}}">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L145" >}}">property <b>endpointGroupRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointGroupRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupState-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L147" >}}">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L149" >}}">property <b>healthCheckIntervalSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckIntervalSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
@@ -863,10 +953,12 @@ The time—10 seconds or 30 seconds—between each health check for an endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupState-healthCheckPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L151" >}}">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L153" >}}">property <b>healthCheckPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
@@ -874,10 +966,12 @@ If the protocol is HTTP/S, then this specifies the path that is the destination 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupState-healthCheckPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L155" >}}">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L157" >}}">property <b>healthCheckPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
@@ -885,10 +979,12 @@ The port that AWS Global Accelerator uses to check the health of endpoints that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupState-healthCheckProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L159" >}}">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L161" >}}">property <b>healthCheckProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheckProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
@@ -896,10 +992,12 @@ The protocol that AWS Global Accelerator uses to check the health of endpoints t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupState-listenerArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L163" >}}">property <b>listenerArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L165" >}}">property <b>listenerArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listenerArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of the listener.
@@ -907,10 +1005,12 @@ The Amazon Resource Name (ARN) of the listener.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupState-thresholdCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L167" >}}">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L169" >}}">property <b>thresholdCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>thresholdCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
@@ -918,10 +1018,12 @@ The number of consecutive health checks required to set the state of a healthy e
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointGroupState-trafficDialPercentage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L171" >}}">property <b>trafficDialPercentage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/endpointGroup.ts#L173" >}}">property <b>trafficDialPercentage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>trafficDialPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
@@ -930,7 +1032,7 @@ The percentage of traffic to send to an AWS Region. Additional traffic is distri
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L150" >}}">interface <b>ListenerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L152" >}}">interface <b>ListenerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -939,10 +1041,12 @@ The set of arguments for constructing a Listener resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ListenerArgs-acceleratorArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L154" >}}">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L156" >}}">property <b>acceleratorArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>acceleratorArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of your accelerator.
@@ -950,10 +1054,12 @@ The Amazon Resource Name (ARN) of your accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-clientAffinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L158" >}}">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L160" >}}">property <b>clientAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientAffinity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
@@ -961,13 +1067,12 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-portRanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L162" >}}">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L164" >}}">property <b>portRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    toPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerPortRange'>inputs.globalaccelerator.ListenerPortRange</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
@@ -975,10 +1080,12 @@ The list of port ranges for the connections from clients to the accelerator. Fie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L166" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L168" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
@@ -987,7 +1094,7 @@ The protocol for the connections from clients to the accelerator. Valid values a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L128" >}}">interface <b>ListenerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L130" >}}">interface <b>ListenerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -996,10 +1103,12 @@ Input properties used for looking up and filtering Listener resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ListenerState-acceleratorArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L132" >}}">property <b>acceleratorArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L134" >}}">property <b>acceleratorArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>acceleratorArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of your accelerator.
@@ -1007,10 +1116,12 @@ The Amazon Resource Name (ARN) of your accelerator.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-clientAffinity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L136" >}}">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L138" >}}">property <b>clientAffinity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientAffinity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
@@ -1018,13 +1129,12 @@ Direct all requests from a user to the same endpoint. Valid values are `NONE`, `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-portRanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L140" >}}">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L142" >}}">property <b>portRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>portRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    toPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>portRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerPortRange'>inputs.globalaccelerator.ListenerPortRange</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of port ranges for the connections from clients to the accelerator. Fields documented below.
@@ -1032,10 +1142,12 @@ The list of port ranges for the connections from clients to the accelerator. Fie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerState-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L144" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="globalaccelerator/listener.ts#L146" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.

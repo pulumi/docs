@@ -5,58 +5,56 @@ title: Module efs
 <div class="section" id="efs">
 <h1>efs<a class="headerlink" href="#efs" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
+<div><p>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws">Terraform Provider</a> distributed under
 <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
 <a class="reference external" href="https://github.com/pulumi/pulumi-aws/issues">pulumi/pulumi-aws repo</a>; however, if that doesn’t turn up
-anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</div></blockquote>
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
+</div></blockquote>
 <span class="target" id="module-pulumi_aws.efs"></span><dl class="class">
 <dt id="pulumi_aws.efs.AwaitableGetFileSystemResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.efs.</code><code class="descname">AwaitableGetFileSystemResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>creation_token=None</em>, <em>dns_name=None</em>, <em>encrypted=None</em>, <em>file_system_id=None</em>, <em>kms_key_id=None</em>, <em>performance_mode=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.AwaitableGetFileSystemResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">AwaitableGetFileSystemResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.AwaitableGetFileSystemResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.efs.AwaitableGetMountTargetResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.efs.</code><code class="descname">AwaitableGetMountTargetResult</code><span class="sig-paren">(</span><em>dns_name=None</em>, <em>file_system_arn=None</em>, <em>file_system_id=None</em>, <em>ip_address=None</em>, <em>mount_target_id=None</em>, <em>network_interface_id=None</em>, <em>security_groups=None</em>, <em>subnet_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.AwaitableGetMountTargetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">AwaitableGetMountTargetResult</code><span class="sig-paren">(</span><em class="sig-param">dns_name=None</em>, <em class="sig-param">file_system_arn=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">mount_target_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.AwaitableGetMountTargetResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.efs.FileSystem">
-<em class="property">class </em><code class="descclassname">pulumi_aws.efs.</code><code class="descname">FileSystem</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>creation_token=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>lifecycle_policy=None</em>, <em>performance_mode=None</em>, <em>provisioned_throughput_in_mibps=None</em>, <em>tags=None</em>, <em>throughput_mode=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">FileSystem</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">lifecycle_policy=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">provisioned_throughput_in_mibps=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throughput_mode=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic File System (EFS) resource.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>creation_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name (a maximum of 64 characters are allowed)
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>creation_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name (a maximum of 64 characters are allowed)
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
-(<a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/">http://docs.aws.amazon.com/efs/latest/ug/</a>) user guide for more information.</li>
-<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the disk will be encrypted.</li>
-<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</li>
-<li><strong>lifecycle_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A file system <a class="reference external" href="https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html">lifecycle policy</a> object (documented below).</li>
-<li><strong>performance_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The file system performance mode. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;maxIO&quot;</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code>).</li>
-<li><strong>provisioned_throughput_in_mibps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with <code class="docutils literal notranslate"><span class="pre">throughput_mode</span></code> set to <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>.</li>
-<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the file system.</li>
-<li><strong>throughput_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Throughput mode for the file system. Defaults to <code class="docutils literal notranslate"><span class="pre">bursting</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">bursting</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. When using <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, also set <code class="docutils literal notranslate"><span class="pre">provisioned_throughput_in_mibps</span></code>.</li>
+(<a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/">http://docs.aws.amazon.com/efs/latest/ug/</a>) user guide for more information.</p></li>
+<li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the disk will be encrypted.</p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</p></li>
+<li><p><strong>lifecycle_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A file system <a class="reference external" href="https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html">lifecycle policy</a> object (documented below).</p></li>
+<li><p><strong>performance_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The file system performance mode. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;maxIO&quot;</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code>).</p></li>
+<li><p><strong>provisioned_throughput_in_mibps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with <code class="docutils literal notranslate"><span class="pre">throughput_mode</span></code> set to <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the file system.</p></li>
+<li><p><strong>throughput_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Throughput mode for the file system. Defaults to <code class="docutils literal notranslate"><span class="pre">bursting</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">bursting</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. When using <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, also set <code class="docutils literal notranslate"><span class="pre">provisioned_throughput_in_mibps</span></code>.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown</a>.</div></blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.arn">
-<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name of the file system.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.creation_token">
-<code class="descname">creation_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.creation_token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">creation_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.creation_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name (a maximum of 64 characters are allowed)
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
@@ -65,55 +63,55 @@ system creation. By default generated by this provider. See [Elastic File System
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.dns_name">
-<code class="descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.dns_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.dns_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS name for the filesystem per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.encrypted">
-<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.encrypted" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.encrypted" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, the disk will be encrypted.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.kms_key_id">
-<code class="descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.kms_key_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.kms_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.lifecycle_policy">
-<code class="descname">lifecycle_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.lifecycle_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lifecycle_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.lifecycle_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A file system <a class="reference external" href="https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html">lifecycle policy</a> object (documented below).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.performance_mode">
-<code class="descname">performance_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.performance_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">performance_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.performance_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The file system performance mode. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;maxIO&quot;</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.provisioned_throughput_in_mibps">
-<code class="descname">provisioned_throughput_in_mibps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.provisioned_throughput_in_mibps" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">provisioned_throughput_in_mibps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.provisioned_throughput_in_mibps" title="Permalink to this definition">¶</a></dt>
 <dd><p>The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with <code class="docutils literal notranslate"><span class="pre">throughput_mode</span></code> set to <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.tags">
-<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the file system.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.FileSystem.throughput_mode">
-<code class="descname">throughput_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.throughput_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">throughput_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.FileSystem.throughput_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Throughput mode for the file system. Defaults to <code class="docutils literal notranslate"><span class="pre">bursting</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">bursting</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. When using <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, also set <code class="docutils literal notranslate"><span class="pre">provisioned_throughput_in_mibps</span></code>.</p>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="pulumi_aws.efs.FileSystem.get">
-<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>arn=None</em>, <em>creation_token=None</em>, <em>dns_name=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>lifecycle_policy=None</em>, <em>performance_mode=None</em>, <em>provisioned_throughput_in_mibps=None</em>, <em>tags=None</em>, <em>throughput_mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">lifecycle_policy=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">provisioned_throughput_in_mibps=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throughput_mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FileSystem resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.
 :param str resource_name: The unique name of the resulting resource.
@@ -122,116 +120,112 @@ properties used to qualify the lookup.
 :param pulumi.Input[str] arn: Amazon Resource Name of the file system.
 :param pulumi.Input[str] creation_token: A unique name (a maximum of 64 characters are allowed)</p>
 <blockquote>
-<div>used as reference when creating the Elastic File System to ensure idempotent file
+<div><p>used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
-(<a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/">http://docs.aws.amazon.com/efs/latest/ug/</a>) user guide for more information.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The DNS name for the filesystem per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
-</li>
-<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the disk will be encrypted.</li>
-<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</li>
-<li><strong>lifecycle_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A file system <a class="reference external" href="https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html">lifecycle policy</a> object (documented below).</p>
-</li>
-<li><strong>performance_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The file system performance mode. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;maxIO&quot;</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code>).</li>
-<li><strong>provisioned_throughput_in_mibps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with <code class="docutils literal notranslate"><span class="pre">throughput_mode</span></code> set to <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>.</li>
-<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the file system.</li>
-<li><strong>throughput_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Throughput mode for the file system. Defaults to <code class="docutils literal notranslate"><span class="pre">bursting</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">bursting</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. When using <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, also set <code class="docutils literal notranslate"><span class="pre">provisioned_throughput_in_mibps</span></code>.</li>
+(<a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/">http://docs.aws.amazon.com/efs/latest/ug/</a>) user guide for more information.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The DNS name for the filesystem per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
+</p></li>
+<li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the disk will be encrypted.</p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</p></li>
+<li><p><strong>lifecycle_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A file system <a class="reference external" href="https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html">lifecycle policy</a> object (documented below).</p>
+</p></li>
+<li><p><strong>performance_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The file system performance mode. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;maxIO&quot;</span></code> (Default: <code class="docutils literal notranslate"><span class="pre">&quot;generalPurpose&quot;</span></code>).</p></li>
+<li><p><strong>provisioned_throughput_in_mibps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with <code class="docutils literal notranslate"><span class="pre">throughput_mode</span></code> set to <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the file system.</p></li>
+<li><p><strong>throughput_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Throughput mode for the file system. Defaults to <code class="docutils literal notranslate"><span class="pre">bursting</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">bursting</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. When using <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, also set <code class="docutils literal notranslate"><span class="pre">provisioned_throughput_in_mibps</span></code>.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown</a>.</div></blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.efs.FileSystem.translate_output_property">
-<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.efs.FileSystem.translate_input_property">
-<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.efs.GetFileSystemResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.efs.</code><code class="descname">GetFileSystemResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>creation_token=None</em>, <em>dns_name=None</em>, <em>encrypted=None</em>, <em>file_system_id=None</em>, <em>kms_key_id=None</em>, <em>performance_mode=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">GetFileSystemResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFileSystem.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetFileSystemResult.arn">
-<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name of the file system.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetFileSystemResult.dns_name">
-<code class="descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.dns_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.dns_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS name for the filesystem per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetFileSystemResult.encrypted">
-<code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.encrypted" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.encrypted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether EFS is encrypted.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetFileSystemResult.kms_key_id">
-<code class="descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.kms_key_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.kms_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN for the KMS encryption key.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetFileSystemResult.performance_mode">
-<code class="descname">performance_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.performance_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">performance_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.performance_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The PerformanceMode of the file system.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetFileSystemResult.tags">
-<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.tags" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of tags assigned to the file system.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetFileSystemResult.id">
-<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetFileSystemResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -239,53 +233,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.efs.GetMountTargetResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.efs.</code><code class="descname">GetMountTargetResult</code><span class="sig-paren">(</span><em>dns_name=None</em>, <em>file_system_arn=None</em>, <em>file_system_id=None</em>, <em>ip_address=None</em>, <em>mount_target_id=None</em>, <em>network_interface_id=None</em>, <em>security_groups=None</em>, <em>subnet_id=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">GetMountTargetResult</code><span class="sig-paren">(</span><em class="sig-param">dns_name=None</em>, <em class="sig-param">file_system_arn=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">mount_target_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMountTarget.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.dns_name">
-<code class="descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.dns_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.dns_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS name for the given subnet/AZ per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.file_system_arn">
-<code class="descname">file_system_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.file_system_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">file_system_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.file_system_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name of the file system for which the mount target is intended.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.file_system_id">
-<code class="descname">file_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.file_system_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">file_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.file_system_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the file system for which the mount target is intended.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.ip_address">
-<code class="descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.ip_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Address at which the file system may be mounted via the mount target.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.network_interface_id">
-<code class="descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.network_interface_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.network_interface_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the network interface that Amazon EFS created when it created the mount target.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.security_groups">
-<code class="descname">security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.security_groups" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of VPC security group IDs attached to the mount target.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.subnet_id">
-<code class="descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.subnet_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.subnet_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>ID of the mount target’s subnet.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.GetMountTargetResult.id">
-<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.GetMountTargetResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -293,75 +287,72 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.efs.MountTarget">
-<em class="property">class </em><code class="descclassname">pulumi_aws.efs.</code><code class="descname">MountTarget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>file_system_id=None</em>, <em>ip_address=None</em>, <em>security_groups=None</em>, <em>subnet_id=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">MountTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic File System (EFS) mount target.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>file_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the file system for which the mount target is intended.</li>
-<li><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address (within the address range of the specified subnet) at
-which the file system may be mounted via the mount target.</li>
-<li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of up to 5 VPC security group IDs (that must
-be for the same VPC as subnet specified) in effect for the mount target.</li>
-<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet to add the mount target in.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>file_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the file system for which the mount target is intended.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address (within the address range of the specified subnet) at
+which the file system may be mounted via the mount target.</p></li>
+<li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of up to 5 VPC security group IDs (that must
+be for the same VPC as subnet specified) in effect for the mount target.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet to add the mount target in.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown</a>.</div></blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.efs.MountTarget.dns_name">
-<code class="descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.dns_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dns_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.dns_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS name for the given subnet/AZ per <a class="reference external" href="http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html">documented convention</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.MountTarget.file_system_arn">
-<code class="descname">file_system_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.file_system_arn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">file_system_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.file_system_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Resource Name of the file system.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.MountTarget.file_system_id">
-<code class="descname">file_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.file_system_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">file_system_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.file_system_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the file system for which the mount target is intended.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.MountTarget.ip_address">
-<code class="descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.ip_address" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.ip_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>The address (within the address range of the specified subnet) at
 which the file system may be mounted via the mount target.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.MountTarget.network_interface_id">
-<code class="descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.network_interface_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.network_interface_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the network interface that Amazon EFS created when it created the mount target.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.MountTarget.security_groups">
-<code class="descname">security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.security_groups" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of up to 5 VPC security group IDs (that must
 be for the same VPC as subnet specified) in effect for the mount target.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.efs.MountTarget.subnet_id">
-<code class="descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.subnet_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.efs.MountTarget.subnet_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the subnet to add the mount target in.</p>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="pulumi_aws.efs.MountTarget.get">
-<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>dns_name=None</em>, <em>file_system_arn=None</em>, <em>file_system_id=None</em>, <em>ip_address=None</em>, <em>network_interface_id=None</em>, <em>security_groups=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">file_system_arn=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MountTarget resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.
 :param str resource_name: The unique name of the resulting resource.
@@ -372,79 +363,77 @@ properties used to qualify the lookup.
 :param pulumi.Input[str] file_system_id: The ID of the file system for which the mount target is intended.
 :param pulumi.Input[str] ip_address: The address (within the address range of the specified subnet) at</p>
 <blockquote>
-<div>which the file system may be mounted via the mount target.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network interface that Amazon EFS created when it created the mount target.</li>
-<li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of up to 5 VPC security group IDs (that must
-be for the same VPC as subnet specified) in effect for the mount target.</li>
-<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet to add the mount target in.</li>
+<div><p>which the file system may be mounted via the mount target.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network interface that Amazon EFS created when it created the mount target.</p></li>
+<li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of up to 5 VPC security group IDs (that must
+be for the same VPC as subnet specified) in effect for the mount target.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet to add the mount target in.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown</a>.</div></blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.efs.MountTarget.translate_output_property">
-<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.efs.MountTarget.translate_input_property">
-<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.efs.get_file_system">
-<code class="descclassname">pulumi_aws.efs.</code><code class="descname">get_file_system</code><span class="sig-paren">(</span><em>creation_token=None</em>, <em>file_system_id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_file_system" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">get_file_system</code><span class="sig-paren">(</span><em class="sig-param">creation_token=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_file_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about an Elastic File System (EFS).</p>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown</a>.</div></blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.efs.get_mount_target">
-<code class="descclassname">pulumi_aws.efs.</code><code class="descname">get_mount_target</code><span class="sig-paren">(</span><em>mount_target_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_mount_target" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">get_mount_target</code><span class="sig-paren">(</span><em class="sig-param">mount_target_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_mount_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about an Elastic File System Mount Target (EFS).</p>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_mount_target.html.markdown</a>.</div></blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_mount_target.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

@@ -46,10 +46,12 @@ title: Module bigtable
 
 
 <h2 class="pdoc-module-header" id="Instance">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L47" >}}">class <b>Instance</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L49" >}}">class <b>Instance</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a Google Bigtable instance. For more information see
@@ -92,13 +94,15 @@ const developmentInstance = new gcp.bigtable.Instance("development-instance", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L94" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L96" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Instance(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#InstanceArgs'>InstanceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Instance resource with the given unique name, arguments, and options.
 
@@ -109,13 +113,15 @@ Create a Instance resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#InstanceState'>InstanceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Instance'>Instance</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -123,23 +129,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L49" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Instance.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -147,15 +157,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-clusters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L77" >}}">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L79" >}}">property <b>clusters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    clusterId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    numNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    storageType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceCluster'>outputs.bigtable.InstanceCluster</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
@@ -163,10 +170,12 @@ A block of cluster configuration options. This can be specified 1 or 2 times. Se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L81" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L83" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
@@ -174,10 +183,12 @@ The human-readable display name of the Bigtable instance. Defaults to the instan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L49" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -186,10 +197,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L85" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L87" >}}">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
@@ -197,10 +210,12 @@ The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L89" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L91" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
@@ -208,10 +223,12 @@ The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L94" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L96" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -220,10 +237,12 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L49" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -233,10 +252,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L65" >}}">class <b>InstanceIamBinding</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L67" >}}">class <b>InstanceIamBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:
@@ -298,13 +319,15 @@ const editor = new gcp.bigtable.InstanceIamMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L111" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L113" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> InstanceIamBinding(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#InstanceIamBindingArgs'>InstanceIamBindingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a InstanceIamBinding resource with the given unique name, arguments, and options.
 
@@ -315,13 +338,15 @@ Create a InstanceIamBinding resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L74" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L76" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#InstanceIamBindingState'>InstanceIamBindingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#InstanceIamBinding'>InstanceIamBinding</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing InstanceIamBinding resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -329,23 +354,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L67" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L85" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L87" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of InstanceIamBinding.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -353,10 +382,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L95" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L97" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the instances's IAM policy.
@@ -364,10 +395,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L67" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -376,10 +409,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L99" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L101" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -387,18 +422,22 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L100" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L102" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L105" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L107" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -407,10 +446,12 @@ is not provided, this provider will use the provider default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L111" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L113" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -420,10 +461,12 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBinding-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L67" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -433,10 +476,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L65" >}}">class <b>InstanceIamMember</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L67" >}}">class <b>InstanceIamMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:
@@ -498,13 +543,15 @@ const editor = new gcp.bigtable.InstanceIamMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L111" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L113" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> InstanceIamMember(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#InstanceIamMemberArgs'>InstanceIamMemberArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a InstanceIamMember resource with the given unique name, arguments, and options.
 
@@ -515,13 +562,15 @@ Create a InstanceIamMember resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L74" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L76" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#InstanceIamMemberState'>InstanceIamMemberState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#InstanceIamMember'>InstanceIamMember</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing InstanceIamMember resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -529,23 +578,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L67" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L85" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L87" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of InstanceIamMember.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -553,10 +606,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L95" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L97" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the instances's IAM policy.
@@ -564,10 +619,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L67" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -576,10 +633,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L99" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L101" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -587,18 +646,22 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L100" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L102" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L105" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L107" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -607,10 +670,12 @@ is not provided, this provider will use the provider default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L111" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L113" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -620,10 +685,12 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMember-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L67" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -633,10 +700,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L65" >}}">class <b>InstanceIamPolicy</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L67" >}}">class <b>InstanceIamPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:
@@ -698,13 +767,15 @@ const editor = new gcp.bigtable.InstanceIamMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L108" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L110" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> InstanceIamPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#InstanceIamPolicyArgs'>InstanceIamPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a InstanceIamPolicy resource with the given unique name, arguments, and options.
 
@@ -715,13 +786,15 @@ Create a InstanceIamPolicy resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L74" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L76" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#InstanceIamPolicyState'>InstanceIamPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#InstanceIamPolicy'>InstanceIamPolicy</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing InstanceIamPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -729,23 +802,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L67" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L85" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L87" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of InstanceIamPolicy.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -753,10 +830,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L95" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L97" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the instances's IAM policy.
@@ -764,10 +843,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L67" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -776,10 +857,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L99" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L101" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -787,10 +870,12 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L103" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L105" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by a `gcp.organizations.getIAMPolicy` data source.
@@ -798,10 +883,12 @@ The policy data generated by a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L108" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L110" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -810,10 +897,12 @@ is not provided, this provider will use the provider default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L67" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -823,10 +912,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Table">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L37" >}}">class <b>Table</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L39" >}}">class <b>Table</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a Google Cloud Bigtable table inside an instance. For more information see
@@ -859,13 +950,15 @@ const table = new gcp.bigtable.Table("table", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Table-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L84" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L86" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Table(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TableArgs'>TableArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Table resource with the given unique name, arguments, and options.
 
@@ -876,13 +969,15 @@ Create a Table resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L46" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L48" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TableState'>TableState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Table'>Table</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Table resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -890,23 +985,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L39" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L57" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L59" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Table.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -914,12 +1013,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-columnFamilies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L67" >}}">property <b>columnFamilies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L69" >}}">property <b>columnFamilies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>columnFamilies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    family: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>columnFamilies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableColumnFamily'>outputs.bigtable.TableColumnFamily</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
@@ -927,10 +1026,12 @@ A group of columns within a table which share a common configuration. This can b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L39" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -939,10 +1040,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-instanceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L71" >}}">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L73" >}}">property <b>instanceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Bigtable instance.
@@ -950,10 +1053,12 @@ The name of the Bigtable instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L75" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L77" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the table.
@@ -961,10 +1066,12 @@ The name of the table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L80" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L82" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -973,10 +1080,12 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-splitKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L84" >}}">property <b>splitKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L86" >}}">property <b>splitKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>splitKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of predefined keys to split the table on.
@@ -984,10 +1093,12 @@ A list of predefined keys to split the table on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L39" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -997,7 +1108,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L165" >}}">interface <b>InstanceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L167" >}}">interface <b>InstanceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1006,15 +1117,12 @@ The set of arguments for constructing a Instance resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceArgs-clusters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L169" >}}">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L171" >}}">property <b>clusters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    numNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceCluster'>inputs.bigtable.InstanceCluster</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
@@ -1022,10 +1130,12 @@ A block of cluster configuration options. This can be specified 1 or 2 times. Se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L173" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L175" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
@@ -1033,10 +1143,12 @@ The human-readable display name of the Bigtable instance. Defaults to the instan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L177" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L179" >}}">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
@@ -1044,10 +1156,12 @@ The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L181" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L183" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
@@ -1055,10 +1169,12 @@ The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L186" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L188" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -1068,7 +1184,7 @@ is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L187" >}}">interface <b>InstanceIamBindingArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L189" >}}">interface <b>InstanceIamBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1077,10 +1193,12 @@ The set of arguments for constructing a InstanceIamBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamBindingArgs-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L191" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L193" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -1088,18 +1206,22 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L192" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L194" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBindingArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L197" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L199" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -1108,10 +1230,12 @@ is not provided, this provider will use the provider default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L203" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L205" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1122,7 +1246,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L161" >}}">interface <b>InstanceIamBindingState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L163" >}}">interface <b>InstanceIamBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1131,10 +1255,12 @@ Input properties used for looking up and filtering InstanceIamBinding resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L165" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L167" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the instances's IAM policy.
@@ -1142,10 +1268,12 @@ Input properties used for looking up and filtering InstanceIamBinding resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBindingState-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L169" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L171" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -1153,18 +1281,22 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L170" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L172" >}}">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBindingState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L175" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L177" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -1173,10 +1305,12 @@ is not provided, this provider will use the provider default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L181" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamBinding.ts#L183" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1187,7 +1321,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L187" >}}">interface <b>InstanceIamMemberArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L189" >}}">interface <b>InstanceIamMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1196,10 +1330,12 @@ The set of arguments for constructing a InstanceIamMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamMemberArgs-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L191" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L193" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -1207,18 +1343,22 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L192" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L194" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMemberArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L197" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L199" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -1227,10 +1367,12 @@ is not provided, this provider will use the provider default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L203" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L205" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1241,7 +1383,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L161" >}}">interface <b>InstanceIamMemberState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L163" >}}">interface <b>InstanceIamMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1250,10 +1392,12 @@ Input properties used for looking up and filtering InstanceIamMember resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L165" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L167" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the instances's IAM policy.
@@ -1261,10 +1405,12 @@ Input properties used for looking up and filtering InstanceIamMember resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMemberState-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L169" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L171" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -1272,18 +1418,22 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L170" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L172" >}}">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMemberState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L175" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L177" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -1292,10 +1442,12 @@ is not provided, this provider will use the provider default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L181" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamMember.ts#L183" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1306,7 +1458,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L176" >}}">interface <b>InstanceIamPolicyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L178" >}}">interface <b>InstanceIamPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1315,10 +1467,12 @@ The set of arguments for constructing a InstanceIamPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamPolicyArgs-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L180" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L182" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -1326,10 +1480,12 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L184" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L186" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by a `gcp.organizations.getIAMPolicy` data source.
@@ -1337,10 +1493,12 @@ The policy data generated by a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicyArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L189" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L191" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -1350,7 +1508,7 @@ is not provided, this provider will use the provider default.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceIamPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L153" >}}">interface <b>InstanceIamPolicyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L155" >}}">interface <b>InstanceIamPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1359,10 +1517,12 @@ Input properties used for looking up and filtering InstanceIamPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceIamPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L157" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L159" >}}">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the instances's IAM policy.
@@ -1370,10 +1530,12 @@ Input properties used for looking up and filtering InstanceIamPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicyState-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L161" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L163" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name or relative resource id of the instance to manage IAM policies for.
@@ -1381,10 +1543,12 @@ The name or relative resource id of the instance to manage IAM policies for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L165" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L167" >}}">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by a `gcp.organizations.getIAMPolicy` data source.
@@ -1392,10 +1556,12 @@ The policy data generated by a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceIamPolicyState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L170" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instanceIamPolicy.ts#L172" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project in which the instance belongs. If it
@@ -1405,7 +1571,7 @@ is not provided, this provider will use the provider default.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L138" >}}">interface <b>InstanceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L140" >}}">interface <b>InstanceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1414,15 +1580,12 @@ Input properties used for looking up and filtering Instance resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceState-clusters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L142" >}}">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L144" >}}">property <b>clusters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clusters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    numNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    storageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    zone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>clusters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceCluster'>inputs.bigtable.InstanceCluster</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
@@ -1430,10 +1593,12 @@ A block of cluster configuration options. This can be specified 1 or 2 times. Se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L146" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L148" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
@@ -1441,10 +1606,12 @@ The human-readable display name of the Bigtable instance. Defaults to the instan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L150" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L152" >}}">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
@@ -1452,10 +1619,12 @@ The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L154" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L156" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
@@ -1463,10 +1632,12 @@ The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L159" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/instance.ts#L161" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -1476,7 +1647,7 @@ is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L155" >}}">interface <b>TableArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L157" >}}">interface <b>TableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1485,12 +1656,12 @@ The set of arguments for constructing a Table resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TableArgs-columnFamilies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L159" >}}">property <b>columnFamilies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L161" >}}">property <b>columnFamilies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>columnFamilies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>columnFamilies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableColumnFamily'>inputs.bigtable.TableColumnFamily</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
@@ -1498,10 +1669,12 @@ A group of columns within a table which share a common configuration. This can b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-instanceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L163" >}}">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L165" >}}">property <b>instanceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Bigtable instance.
@@ -1509,10 +1682,12 @@ The name of the Bigtable instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L167" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L169" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the table.
@@ -1520,10 +1695,12 @@ The name of the table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L172" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L174" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -1532,10 +1709,12 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-splitKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L176" >}}">property <b>splitKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L178" >}}">property <b>splitKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>splitKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of predefined keys to split the table on.
@@ -1544,7 +1723,7 @@ A list of predefined keys to split the table on.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L128" >}}">interface <b>TableState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L130" >}}">interface <b>TableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1553,12 +1732,12 @@ Input properties used for looking up and filtering Table resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TableState-columnFamilies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L132" >}}">property <b>columnFamilies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L134" >}}">property <b>columnFamilies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>columnFamilies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>columnFamilies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableColumnFamily'>inputs.bigtable.TableColumnFamily</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
@@ -1566,10 +1745,12 @@ A group of columns within a table which share a common configuration. This can b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-instanceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L136" >}}">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L138" >}}">property <b>instanceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Bigtable instance.
@@ -1577,10 +1758,12 @@ The name of the Bigtable instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L140" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L142" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the table.
@@ -1588,10 +1771,12 @@ The name of the table.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L145" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L147" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -1600,10 +1785,12 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-splitKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L149" >}}">property <b>splitKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="bigtable/table.ts#L151" >}}">property <b>splitKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>splitKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of predefined keys to split the table on.

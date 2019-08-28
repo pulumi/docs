@@ -112,10 +112,12 @@ title: Module apigateway
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L63" >}}">class <b>Account</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L65" >}}">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a settings of an API Gateway Account. Settings is applied region-wide per `provider` block.
@@ -175,13 +177,15 @@ const cloudwatchRolePolicy = new aws.iam.RolePolicy("cloudwatch", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L99" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L101" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Account(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#AccountArgs'>AccountArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Account resource with the given unique name, arguments, and options.
 
@@ -192,13 +196,15 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L72" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L74" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AccountState'>AccountState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Account'>Account</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Account resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -206,23 +212,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L65" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L83" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L85" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Account.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -230,10 +240,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-cloudwatchRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L95" >}}">property <b>cloudwatchRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L97" >}}">property <b>cloudwatchRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cloudwatchRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
@@ -243,10 +255,12 @@ Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L65" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -255,13 +269,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-throttleSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L99" >}}">property <b>throttleSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L101" >}}">property <b>throttleSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>throttleSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    burstLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    rateLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>throttleSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AccountThrottleSettings'>outputs.apigateway.AccountThrottleSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Account-Level throttle settings. See exported fields below.
@@ -269,10 +282,12 @@ Account-Level throttle settings. See exported fields below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L65" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -282,10 +297,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApiKey">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L25" >}}">class <b>ApiKey</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L27" >}}">class <b>ApiKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway API Key.
@@ -305,13 +322,15 @@ const myDemoApiKey = new aws.apigateway.ApiKey("MyDemoApiKey", {});
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApiKey-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L75" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L77" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ApiKey(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ApiKeyArgs'>ApiKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ApiKey resource with the given unique name, arguments, and options.
 
@@ -322,13 +341,15 @@ Create a ApiKey resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L34" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ApiKeyState'>ApiKeyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ApiKey'>ApiKey</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ApiKey resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -336,23 +357,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L45" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ApiKey.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -360,10 +385,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L55" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L57" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The creation date of the API key
@@ -371,10 +398,12 @@ The creation date of the API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L59" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L61" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API key description. Defaults to "Managed by Pulumi".
@@ -382,10 +411,12 @@ The API key description. Defaults to "Managed by Pulumi".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L63" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L65" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the API key can be used by callers. Defaults to `true`.
@@ -393,10 +424,12 @@ Specifies whether the API key can be used by callers. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -405,10 +438,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L67" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L69" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lastUpdatedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The last update date of the API key
@@ -416,10 +451,12 @@ The last update date of the API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the API key
@@ -427,10 +464,12 @@ The name of the API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -439,10 +478,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKey-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L75" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L77" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the API key. If not specified, it will be automatically generated by AWS on creation.
@@ -451,10 +492,12 @@ The value of the API key. If not specified, it will be automatically generated b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Authorizer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L80" >}}">class <b>Authorizer</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L82" >}}">class <b>Authorizer</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Authorizer.
@@ -529,13 +572,15 @@ const invocationPolicy = new aws.iam.RolePolicy("invocationPolicy", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Authorizer-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L152" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L154" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Authorizer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AuthorizerArgs'>AuthorizerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Authorizer resource with the given unique name, arguments, and options.
 
@@ -546,13 +591,15 @@ Create a Authorizer resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L89" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L91" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AuthorizerState'>AuthorizerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Authorizer'>Authorizer</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Authorizer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -560,23 +607,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L82" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L100" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L102" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Authorizer.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -584,10 +635,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-authorizerCredentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L111" >}}">property <b>authorizerCredentials</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L113" >}}">property <b>authorizerCredentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authorizerCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The credentials required for the authorizer.
@@ -596,10 +649,12 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-authorizerResultTtlInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L116" >}}">property <b>authorizerResultTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L118" >}}">property <b>authorizerResultTtlInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authorizerResultTtlInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of cached authorizer results in seconds.
@@ -608,10 +663,12 @@ Defaults to `300`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-authorizerUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L122" >}}">property <b>authorizerUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L124" >}}">property <b>authorizerUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authorizerUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorizer's Uniform Resource Identifier (URI).
@@ -621,10 +678,12 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L82" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -633,10 +692,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-identitySource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L127" >}}">property <b>identitySource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L129" >}}">property <b>identitySource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>identitySource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source of the identity in an incoming request.
@@ -645,10 +706,12 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-identityValidationExpression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L134" >}}">property <b>identityValidationExpression</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L136" >}}">property <b>identityValidationExpression</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>identityValidationExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A validation expression for the incoming identity.
@@ -659,10 +722,12 @@ the client receives a 401 Unauthorized response.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L140" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the authorizer
@@ -670,10 +735,12 @@ The name of the authorizer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-providerArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L143" >}}">property <b>providerArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L145" >}}">property <b>providerArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>providerArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the Amazon Cognito user pool ARNs.
@@ -682,10 +749,12 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L147" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L149" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -693,10 +762,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L152" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L154" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
@@ -705,10 +776,12 @@ Defaults to `TOKEN`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Authorizer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L82" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -718,10 +791,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BasePathMapping">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L42" >}}">class <b>BasePathMapping</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L44" >}}">class <b>BasePathMapping</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Connects a custom domain name registered via `aws.apigateway.DomainName`
@@ -758,13 +833,15 @@ const test = new aws.apigateway.BasePathMapping("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BasePathMapping-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L84" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L86" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BasePathMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BasePathMappingArgs'>BasePathMappingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a BasePathMapping resource with the given unique name, arguments, and options.
 
@@ -775,13 +852,15 @@ Create a BasePathMapping resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L51" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BasePathMappingState'>BasePathMappingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BasePathMapping'>BasePathMapping</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing BasePathMapping resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -789,23 +868,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L44" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L62" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of BasePathMapping.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -813,10 +896,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-basePath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L76" >}}">property <b>basePath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L78" >}}">property <b>basePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>basePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
@@ -824,10 +909,12 @@ Path segment that must be prepended to the path when accessing the API via this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L80" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L82" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The already-registered domain name to connect the API to.
@@ -835,10 +922,12 @@ The already-registered domain name to connect the API to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L44" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -847,10 +936,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L72" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L74" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the API to connect.
@@ -858,10 +949,12 @@ The id of the API to connect.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L84" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L86" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>stageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
@@ -869,10 +962,12 @@ The name of a specific deployment stage to expose at the given path. If omitted,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMapping-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L44" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -882,10 +977,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClientCertificate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L23" >}}">class <b>ClientCertificate</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L25" >}}">class <b>ClientCertificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Client Certificate.
@@ -905,13 +1002,15 @@ const demo = new aws.apigateway.ClientCertificate("demo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClientCertificate-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L65" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L67" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ClientCertificate(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ClientCertificateArgs'>ClientCertificateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ClientCertificate resource with the given unique name, arguments, and options.
 
@@ -922,13 +1021,15 @@ Create a ClientCertificate resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L32" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ClientCertificateState'>ClientCertificateState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ClientCertificate'>ClientCertificate</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ClientCertificate resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -936,23 +1037,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L25" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L43" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ClientCertificate.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -960,10 +1065,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L53" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L55" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date when the client certificate was created.
@@ -971,10 +1078,12 @@ The date when the client certificate was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L57" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L59" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the client certificate.
@@ -982,10 +1091,12 @@ The description of the client certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-expirationDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L61" >}}">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L63" >}}">property <b>expirationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>expirationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date when the client certificate will expire.
@@ -993,10 +1104,12 @@ The date when the client certificate will expire.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L25" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1005,10 +1118,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-pemEncodedCertificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L65" >}}">property <b>pemEncodedCertificate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L67" >}}">property <b>pemEncodedCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>pemEncodedCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PEM-encoded public key of the client certificate.
@@ -1016,10 +1131,12 @@ The PEM-encoded public key of the client certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificate-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L25" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1029,10 +1146,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Deployment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L52" >}}">class <b>Deployment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L54" >}}">class <b>Deployment</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Deployment.
@@ -1079,13 +1198,15 @@ const myDemoDeployment = new aws.apigateway.Deployment("MyDemoDeployment", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Deployment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L113" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L115" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Deployment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DeploymentArgs'>DeploymentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Deployment resource with the given unique name, arguments, and options.
 
@@ -1096,13 +1217,15 @@ Create a Deployment resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L61" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L63" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DeploymentState'>DeploymentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Deployment'>Deployment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Deployment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1110,23 +1233,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L54" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L72" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L74" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Deployment.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1134,10 +1261,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L82" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L84" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The creation date of the deployment
@@ -1145,10 +1274,12 @@ The creation date of the deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L86" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L88" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the deployment
@@ -1156,10 +1287,12 @@ The description of the deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-executionArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L92" >}}">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L94" >}}">property <b>executionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>executionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The execution ARN to be used in [`lambdaPermission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `sourceArn`
@@ -1169,10 +1302,12 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L54" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1181,10 +1316,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-invokeUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L97" >}}">property <b>invokeUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L99" >}}">property <b>invokeUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>invokeUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URL to invoke the API pointing to the stage,
@@ -1193,10 +1330,12 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L101" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L103" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -1204,10 +1343,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-stageDescription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L105" >}}">property <b>stageDescription</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L107" >}}">property <b>stageDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>stageDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the stage
@@ -1215,10 +1356,12 @@ The description of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L109" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L111" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>stageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.
@@ -1226,10 +1369,12 @@ The name of the stage. If the specified stage already exists, it will be updated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L54" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1238,10 +1383,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Deployment-variables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L113" >}}">property <b>variables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L115" >}}">property <b>variables</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map that defines variables for the stage
@@ -1250,10 +1397,12 @@ A map that defines variables for the stage
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DocumentationPart">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L30" >}}">class <b>DocumentationPart</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L32" >}}">class <b>DocumentationPart</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a settings of an API Gateway Documentation Part.
@@ -1280,13 +1429,15 @@ const exampleDocumentationPart = new aws.apigateway.DocumentationPart("example",
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DocumentationPart-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L68" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DocumentationPart(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DocumentationPartArgs'>DocumentationPartArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DocumentationPart resource with the given unique name, arguments, and options.
 
@@ -1297,13 +1448,15 @@ Create a DocumentationPart resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPart-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DocumentationPartState'>DocumentationPartState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DocumentationPart'>DocumentationPart</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DocumentationPart resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1311,23 +1464,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPart-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPart-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DocumentationPart.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1335,10 +1492,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPart-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1347,16 +1506,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPart-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L60" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L62" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    method: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    statusCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentationPartLocation'>outputs.apigateway.DocumentationPartLocation</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The location of the targeted API entity of the to-be-created documentation part. See below.
@@ -1364,10 +1519,12 @@ The location of the targeted API entity of the to-be-created documentation part.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPart-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L64" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L66" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
@@ -1375,10 +1532,12 @@ A content map of API-specific key-value pairs describing the targeted API entity
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPart-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L68" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L70" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -1386,10 +1545,12 @@ The ID of the associated Rest API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPart-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L32" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1399,10 +1560,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DocumentationVersion">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L33" >}}">class <b>DocumentationVersion</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L35" >}}">class <b>DocumentationVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to manage an API Gateway Documentation Version.
@@ -1432,13 +1595,15 @@ const exampleDocumentationVersion = new aws.apigateway.DocumentationVersion("exa
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DocumentationVersion-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DocumentationVersion(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DocumentationVersionArgs'>DocumentationVersionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DocumentationVersion resource with the given unique name, arguments, and options.
 
@@ -1449,13 +1614,15 @@ Create a DocumentationVersion resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersion-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DocumentationVersionState'>DocumentationVersionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DocumentationVersion'>DocumentationVersion</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DocumentationVersion resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1463,23 +1630,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersion-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersion-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DocumentationVersion.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1487,10 +1658,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersion-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L63" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L65" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the API documentation version.
@@ -1498,10 +1671,12 @@ The description of the API documentation version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersion-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1510,10 +1685,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersion-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L67" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L69" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -1521,10 +1698,12 @@ The ID of the associated Rest API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersion-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1533,10 +1712,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersion-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L71" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L73" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The version identifier of the API documentation snapshot.
@@ -1545,10 +1726,12 @@ The version identifier of the API documentation snapshot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainName">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L142" >}}">class <b>DomainName</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L144" >}}">class <b>DomainName</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Registers a custom domain name for use with AWS API Gateway. Additional information about this functionality
@@ -1687,13 +1870,15 @@ const exampleRecord = new aws.route53.Record("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainName-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L239" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L241" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DomainName(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DomainNameArgs'>DomainNameArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DomainName resource with the given unique name, arguments, and options.
 
@@ -1704,13 +1889,15 @@ Create a DomainName resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L151" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L153" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DomainNameState'>DomainNameState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DomainName'>DomainName</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DomainName resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1718,23 +1905,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L144" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L162" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L164" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DomainName.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1742,10 +1933,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-certificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L172" >}}">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L174" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificateName`, `certificateBody`, `certificateChain`, `certificatePrivateKey`, `regionalCertificateArn`, and `regionalCertificateName`.
@@ -1753,10 +1946,12 @@ The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-certificateBody">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L178" >}}">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L180" >}}">property <b>certificateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The certificate issued for the domain name
@@ -1766,10 +1961,12 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-certificateChain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L185" >}}">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L187" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificateChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The certificate for the CA that issued the
@@ -1780,10 +1977,12 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-certificateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L191" >}}">property <b>certificateName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L193" >}}">property <b>certificateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique name to use when registering this
@@ -1793,10 +1992,12 @@ certificate as an IAM server certificate. Conflicts with `certificateArn`, `regi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-certificatePrivateKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L196" >}}">property <b>certificatePrivateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L198" >}}">property <b>certificatePrivateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificatePrivateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The private key associated with the
@@ -1805,10 +2006,12 @@ domain certificate given in `certificateBody`. Only valid for `EDGE` endpoint co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-certificateUploadDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L200" >}}">property <b>certificateUploadDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L202" >}}">property <b>certificateUploadDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificateUploadDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The upload date associated with the domain certificate.
@@ -1816,10 +2019,12 @@ The upload date associated with the domain certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-cloudfrontDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L205" >}}">property <b>cloudfrontDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L207" >}}">property <b>cloudfrontDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cloudfrontDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The hostname created by Cloudfront to represent
@@ -1828,10 +2033,12 @@ the distribution that implements this domain name mapping.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-cloudfrontZoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L210" >}}">property <b>cloudfrontZoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L212" >}}">property <b>cloudfrontZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cloudfrontZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
@@ -1840,10 +2047,12 @@ that can be used to create a Route53 alias record for the distribution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L214" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L216" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully-qualified domain name to register
@@ -1851,12 +2060,12 @@ The fully-qualified domain name to register
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-endpointConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L218" >}}">property <b>endpointConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L220" >}}">property <b>endpointConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>endpointConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    types: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>endpointConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainNameEndpointConfiguration'>outputs.apigateway.DomainNameEndpointConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block defining API endpoint information including type. Defined below.
@@ -1864,10 +2073,12 @@ Configuration block defining API endpoint information including type. Defined be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L144" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1876,10 +2087,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-regionalCertificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L222" >}}">property <b>regionalCertificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L224" >}}">property <b>regionalCertificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>regionalCertificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificateArn`, `certificateName`, `certificateBody`, `certificateChain`, and `certificatePrivateKey`.
@@ -1887,10 +2100,12 @@ The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-regionalCertificateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L227" >}}">property <b>regionalCertificateName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L229" >}}">property <b>regionalCertificateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>regionalCertificateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificateArn`, `certificateName`, `certificateBody`, `certificateChain`, and
@@ -1899,10 +2114,12 @@ The user-friendly name of the certificate that will be used by regional endpoint
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-regionalDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L231" >}}">property <b>regionalDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L233" >}}">property <b>regionalDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>regionalDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The hostname for the custom domain's regional endpoint.
@@ -1910,10 +2127,12 @@ The hostname for the custom domain's regional endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-regionalZoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L235" >}}">property <b>regionalZoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L237" >}}">property <b>regionalZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>regionalZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
@@ -1921,10 +2140,12 @@ The hosted zone ID that can be used to create a Route53 alias record for the reg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-securityPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L239" >}}">property <b>securityPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L241" >}}">property <b>securityPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
@@ -1932,10 +2153,12 @@ The Transport Layer Security (TLS) version + cipher suite for this DomainName. T
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainName-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L144" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1945,10 +2168,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Integration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L175" >}}">class <b>Integration</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L177" >}}">class <b>Integration</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an HTTP Method Integration for an API Gateway Integration.
@@ -2118,13 +2343,15 @@ const testIntegration = new aws.apigateway.Integration("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L273" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L275" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Integration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#IntegrationArgs'>IntegrationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Integration resource with the given unique name, arguments, and options.
 
@@ -2135,13 +2362,15 @@ Create a Integration resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L184" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L186" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#IntegrationState'>IntegrationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Integration'>Integration</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Integration resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2149,23 +2378,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L177" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L195" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L197" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Integration.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2173,10 +2406,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-cacheKeyParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L205" >}}">property <b>cacheKeyParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L207" >}}">property <b>cacheKeyParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cacheKeyParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of cache key parameters for the integration.
@@ -2184,10 +2419,12 @@ A list of cache key parameters for the integration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-cacheNamespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L209" >}}">property <b>cacheNamespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L211" >}}">property <b>cacheNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cacheNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration's cache namespace.
@@ -2195,10 +2432,12 @@ The integration's cache namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-connectionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L213" >}}">property <b>connectionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L215" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the VpcLink used for the integration. **Required** if `connectionType` is `VPC_LINK`
@@ -2206,10 +2445,12 @@ The id of the VpcLink used for the integration. **Required** if `connectionType`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-connectionType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L217" >}}">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L219" >}}">property <b>connectionType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
@@ -2217,10 +2458,12 @@ The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-contentHandling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L221" >}}">property <b>contentHandling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L223" >}}">property <b>contentHandling</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>contentHandling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
@@ -2228,10 +2471,12 @@ Specifies how to handle request payload content type conversions. Supported valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-credentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L225" >}}">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L227" >}}">property <b>credentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
@@ -2239,10 +2484,12 @@ The credentials required for the integration. For `AWS` integrations, 2 options 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L230" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L232" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
@@ -2251,10 +2498,12 @@ when calling the associated resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L177" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2263,10 +2512,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-integrationHttpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L238" >}}">property <b>integrationHttpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L240" >}}">property <b>integrationHttpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>integrationHttpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration HTTP method
@@ -2278,10 +2529,12 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-passthroughBehavior">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L242" >}}">property <b>passthroughBehavior</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L244" >}}">property <b>passthroughBehavior</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>passthroughBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `requestTemplates` is used.
@@ -2289,10 +2542,12 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-requestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L247" >}}">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L249" >}}">property <b>requestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requestParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of request query string parameters and headers that should be passed to the backend responder.
@@ -2301,10 +2556,12 @@ For example: `requestParameters = { "integration.request.header.X-Some-Other-Hea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-requestTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L251" >}}">property <b>requestTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L253" >}}">property <b>requestTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requestTemplates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the integration's request templates.
@@ -2312,10 +2569,12 @@ A map of the integration's request templates.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L255" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L257" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID.
@@ -2323,10 +2582,12 @@ The API resource ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L259" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L261" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API.
@@ -2334,10 +2595,12 @@ The ID of the associated REST API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-timeoutMilliseconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L263" >}}">property <b>timeoutMilliseconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L265" >}}">property <b>timeoutMilliseconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>timeoutMilliseconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
@@ -2345,10 +2608,12 @@ Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 m
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L267" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L269" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connectionType` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
@@ -2356,10 +2621,12 @@ The integration input's [type](https://docs.aws.amazon.com/apigateway/api-refere
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-uri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L273" >}}">property <b>uri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L275" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
@@ -2369,10 +2636,12 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L177" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2382,10 +2651,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IntegrationResponse">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L66" >}}">class <b>IntegrationResponse</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L68" >}}">class <b>IntegrationResponse</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an HTTP Method Integration Response for an API Gateway Resource.
@@ -2446,13 +2717,15 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("MyDemo
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IntegrationResponse-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L128" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L130" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IntegrationResponse(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#IntegrationResponseArgs'>IntegrationResponseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a IntegrationResponse resource with the given unique name, arguments, and options.
 
@@ -2463,13 +2736,15 @@ Create a IntegrationResponse resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L75" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L77" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#IntegrationResponseState'>IntegrationResponseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IntegrationResponse'>IntegrationResponse</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing IntegrationResponse resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2477,23 +2752,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L68" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L86" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L88" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of IntegrationResponse.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2501,10 +2780,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-contentHandling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L96" >}}">property <b>contentHandling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L98" >}}">property <b>contentHandling</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>contentHandling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
@@ -2512,10 +2793,12 @@ Specifies how to handle request payload content type conversions. Supported valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L100" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L102" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -2523,10 +2806,12 @@ The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L68" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2535,10 +2820,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L104" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L106" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -2546,10 +2833,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L109" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L111" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>responseParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of response parameters that can be read from the backend response.
@@ -2558,10 +2847,12 @@ For example: `responseParameters = { "method.response.header.X-Some-Header" = "i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-responseTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L113" >}}">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L115" >}}">property <b>responseTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>responseTemplates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the templates used to transform the integration response body
@@ -2569,10 +2860,12 @@ A map specifying the templates used to transform the integration response body
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L117" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L119" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -2580,10 +2873,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-selectionPattern">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L124" >}}">property <b>selectionPattern</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L126" >}}">property <b>selectionPattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>selectionPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the regular expression pattern used to choose
@@ -2594,10 +2889,12 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L128" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L130" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code
@@ -2605,10 +2902,12 @@ The HTTP status code
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponse-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L68" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2618,10 +2917,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Method">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L71" >}}">class <b>Method</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L73" >}}">class <b>Method</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a HTTP Method for an API Gateway Resource.
@@ -2687,13 +2988,15 @@ const any = new aws.apigateway.Method("any", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Method-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L140" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L142" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Method(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MethodArgs'>MethodArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Method resource with the given unique name, arguments, and options.
 
@@ -2704,13 +3007,15 @@ Create a Method resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L80" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L82" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MethodState'>MethodState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Method'>Method</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Method resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2718,23 +3023,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L73" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L91" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L93" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Method.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2742,10 +3051,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-apiKeyRequired">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L101" >}}">property <b>apiKeyRequired</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L103" >}}">property <b>apiKeyRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>apiKeyRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify if the method requires an API key
@@ -2753,10 +3064,12 @@ Specify if the method requires an API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-authorization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L105" >}}">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L107" >}}">property <b>authorization</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
@@ -2764,10 +3077,12 @@ The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COG
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-authorizationScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L109" >}}">property <b>authorizationScopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L111" >}}">property <b>authorizationScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authorizationScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
@@ -2775,10 +3090,12 @@ The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-authorizerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L113" >}}">property <b>authorizerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L115" >}}">property <b>authorizerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authorizerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
@@ -2786,10 +3103,12 @@ The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L117" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L119" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -2797,10 +3116,12 @@ The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L73" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2809,10 +3130,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-requestModels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L123" >}}">property <b>requestModels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L125" >}}">property <b>requestModels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requestModels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the API models used for the request's content type
@@ -2822,10 +3145,12 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-requestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L128" >}}">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L130" >}}">property <b>requestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requestParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of request query string parameters and headers that should be passed to the integration.
@@ -2834,10 +3159,12 @@ For example: `requestParameters = {"method.request.header.X-Some-Header" = true 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-requestValidatorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L132" >}}">property <b>requestValidatorId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L134" >}}">property <b>requestValidatorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requestValidatorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of a `aws.apigateway.RequestValidator`
@@ -2845,10 +3172,12 @@ The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L136" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L138" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -2856,10 +3185,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L140" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L142" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -2867,10 +3198,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Method-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L73" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2880,10 +3213,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MethodResponse">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L48" >}}">class <b>MethodResponse</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L50" >}}">class <b>MethodResponse</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an HTTP Method Response for an API Gateway Resource.
@@ -2926,13 +3261,15 @@ const response200 = new aws.apigateway.MethodResponse("response200", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MethodResponse-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L100" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L102" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MethodResponse(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MethodResponseArgs'>MethodResponseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MethodResponse resource with the given unique name, arguments, and options.
 
@@ -2943,13 +3280,15 @@ Create a MethodResponse resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L57" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L59" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MethodResponseState'>MethodResponseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MethodResponse'>MethodResponse</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MethodResponse resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2957,23 +3296,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L50" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L70" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MethodResponse.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2981,10 +3324,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L78" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L80" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -2992,10 +3337,12 @@ The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L50" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3004,10 +3351,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L82" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L84" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -3015,10 +3364,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-responseModels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L86" >}}">property <b>responseModels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L88" >}}">property <b>responseModels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>responseModels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the API models used for the response's content type
@@ -3026,10 +3377,12 @@ A map of the API models used for the response's content type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L92" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L94" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>responseParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of response parameters that can be sent to the caller.
@@ -3039,10 +3392,12 @@ would define that the header `X-Some-Header` can be provided on the response.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L96" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L98" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -3050,10 +3405,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L100" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L102" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code
@@ -3061,10 +3418,12 @@ The HTTP status code
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponse-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L50" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3074,10 +3433,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MethodSettings">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L66" >}}">class <b>MethodSettings</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L68" >}}">class <b>MethodSettings</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Method Settings, e.g. logging or monitoring.
@@ -3138,13 +3499,15 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MethodSettings-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L108" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L110" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MethodSettings(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MethodSettingsArgs'>MethodSettingsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MethodSettings resource with the given unique name, arguments, and options.
 
@@ -3155,13 +3518,15 @@ Create a MethodSettings resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L75" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L77" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MethodSettingsState'>MethodSettingsState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MethodSettings'>MethodSettings</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MethodSettings resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3169,23 +3534,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L68" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L86" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L88" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MethodSettings.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3193,10 +3562,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L68" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3205,10 +3576,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-methodPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L96" >}}">property <b>methodPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L98" >}}">property <b>methodPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>methodPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*&#47;*` for overriding all methods in the stage.
@@ -3216,10 +3589,12 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L100" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L102" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the REST API
@@ -3227,21 +3602,12 @@ The ID of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L104" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L106" >}}">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    cacheDataEncrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    cacheTtlInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    cachingEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    dataTraceEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    loggingLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    metricsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    requireAuthorizationForCacheControl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    throttlingBurstLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    throttlingRateLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    unauthorizedCacheControlHeaderStrategy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MethodSettingsSettings'>outputs.apigateway.MethodSettingsSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The settings block, see below.
@@ -3249,10 +3615,12 @@ The settings block, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L108" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L110" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>stageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage
@@ -3260,10 +3628,12 @@ The name of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettings-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L68" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3273,10 +3643,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Model">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L34" >}}">class <b>Model</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L36" >}}">class <b>Model</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Model for a API Gateway.
@@ -3305,13 +3677,15 @@ const myDemoModel = new aws.apigateway.Model("MyDemoModel", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Model-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L80" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Model(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ModelArgs'>ModelArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Model resource with the given unique name, arguments, and options.
 
@@ -3322,13 +3696,15 @@ Create a Model resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ModelState'>ModelState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Model'>Model</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Model resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3336,23 +3712,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Model.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3360,10 +3740,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L64" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L66" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The content type of the model
@@ -3371,10 +3753,12 @@ The content type of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L68" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L70" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the model
@@ -3382,10 +3766,12 @@ The description of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3394,10 +3780,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L72" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L74" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the model
@@ -3405,10 +3793,12 @@ The name of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L76" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L78" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -3416,10 +3806,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-schema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L80" >}}">property <b>schema</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L82" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The schema of the model in a JSON form
@@ -3427,10 +3819,12 @@ The schema of the model in a JSON form
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3440,10 +3834,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RequestValidator">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L27" >}}">class <b>RequestValidator</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L29" >}}">class <b>RequestValidator</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages an API Gateway Request Validator.
@@ -3465,13 +3861,15 @@ const example = new aws.apigateway.RequestValidator("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RequestValidator-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L71" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RequestValidator(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RequestValidatorArgs'>RequestValidatorArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a RequestValidator resource with the given unique name, arguments, and options.
 
@@ -3482,13 +3880,15 @@ Create a RequestValidator resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L36" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RequestValidatorState'>RequestValidatorState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RequestValidator'>RequestValidator</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing RequestValidator resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3496,23 +3896,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L47" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of RequestValidator.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3520,10 +3924,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3532,10 +3938,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L57" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L59" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the request validator
@@ -3543,10 +3951,12 @@ The name of the request validator
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L61" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L63" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -3554,10 +3964,12 @@ The ID of the associated Rest API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3566,10 +3978,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-validateRequestBody">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L65" >}}">property <b>validateRequestBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L67" >}}">property <b>validateRequestBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>validateRequestBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to validate request body. Defaults to `false`.
@@ -3577,10 +3991,12 @@ Boolean whether to validate request body. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidator-validateRequestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L69" >}}">property <b>validateRequestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L71" >}}">property <b>validateRequestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>validateRequestParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to validate request parameters. Defaults to `false`.
@@ -3589,10 +4005,12 @@ Boolean whether to validate request parameters. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Resource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L30" >}}">class <b>Resource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L32" >}}">class <b>Resource</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Resource.
@@ -3617,13 +4035,15 @@ const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Resource-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L72" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L74" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Resource(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ResourceArgs'>ResourceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Resource resource with the given unique name, arguments, and options.
 
@@ -3634,13 +4054,15 @@ Create a Resource resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ResourceState'>ResourceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Resource'>Resource</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Resource resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3648,23 +4070,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Resource.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3672,10 +4098,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3684,10 +4112,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-parentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L60" >}}">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L62" >}}">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the parent API resource
@@ -3695,10 +4125,12 @@ The ID of the parent API resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L64" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L66" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The complete path for this API resource, including all parent paths.
@@ -3706,10 +4138,12 @@ The complete path for this API resource, including all parent paths.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-pathPart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L68" >}}">property <b>pathPart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L70" >}}">property <b>pathPart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>pathPart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The last path segment of this API resource.
@@ -3717,10 +4151,12 @@ The last path segment of this API resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L72" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L74" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -3728,10 +4164,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L32" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3741,10 +4179,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Response">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L32" >}}">class <b>Response</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L34" >}}">class <b>Response</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Gateway Response for a REST API Gateway.
@@ -3773,13 +4213,15 @@ const test = new aws.apigateway.Response("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Response-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L78" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L80" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Response(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ResponseArgs'>ResponseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Response resource with the given unique name, arguments, and options.
 
@@ -3790,13 +4232,15 @@ Create a Response resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L41" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ResponseState'>ResponseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Response'>Response</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Response resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3804,23 +4248,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L34" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L52" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Response.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3828,10 +4276,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L34" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3840,10 +4290,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L62" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L64" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>responseParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the templates used to transform the response body.
@@ -3851,10 +4303,12 @@ A map specifying the templates used to transform the response body.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-responseTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L66" >}}">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L68" >}}">property <b>responseTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>responseTemplates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
@@ -3862,10 +4316,12 @@ A map specifying the parameters (paths, query strings and headers) of the Gatewa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-responseType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L70" >}}">property <b>responseType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L72" >}}">property <b>responseType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>responseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The response type of the associated GatewayResponse.
@@ -3873,10 +4329,12 @@ The response type of the associated GatewayResponse.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L74" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L76" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The string identifier of the associated REST API.
@@ -3884,10 +4342,12 @@ The string identifier of the associated REST API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L78" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L80" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code of the Gateway Response.
@@ -3895,10 +4355,12 @@ The HTTP status code of the Gateway Response.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Response-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L34" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3908,10 +4370,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RestApi">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L38" >}}">class <b>RestApi</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L40" >}}">class <b>RestApi</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway REST API.
@@ -3946,13 +4410,15 @@ const example = new aws.apigateway.RestApi("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RestApi-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L110" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L112" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RestApi(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RestApiArgs'>RestApiArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a RestApi resource with the given unique name, arguments, and options.
 
@@ -3963,13 +4429,15 @@ Create a RestApi resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L47" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RestApiState'>RestApiState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RestApi'>RestApi</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing RestApi resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3977,23 +4445,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L40" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L58" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of RestApi.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4001,10 +4473,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-apiKeySource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L68" >}}">property <b>apiKeySource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L70" >}}">property <b>apiKeySource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>apiKeySource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source of the API key for requests. Valid values are HEADER (default) and AUTHORIZER.
@@ -4012,10 +4486,12 @@ The source of the API key for requests. Valid values are HEADER (default) and AU
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-binaryMediaTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L72" >}}">property <b>binaryMediaTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L74" >}}">property <b>binaryMediaTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>binaryMediaTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.
@@ -4023,10 +4499,12 @@ The list of binary media types supported by the RestApi. By default, the RestApi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-body">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L76" >}}">property <b>body</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L78" >}}">property <b>body</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An OpenAPI specification that defines the set of routes and integrations to create as part of the REST API.
@@ -4034,10 +4512,12 @@ An OpenAPI specification that defines the set of routes and integrations to crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L80" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L82" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The creation date of the REST API
@@ -4045,10 +4525,12 @@ The creation date of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L84" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L86" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the REST API
@@ -4056,12 +4538,12 @@ The description of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-endpointConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L88" >}}">property <b>endpointConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L90" >}}">property <b>endpointConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>endpointConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    types: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>endpointConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RestApiEndpointConfiguration'>outputs.apigateway.RestApiEndpointConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Nested argument defining API endpoint configuration including endpoint type. Defined below.
@@ -4069,10 +4551,12 @@ Nested argument defining API endpoint configuration including endpoint type. Def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-executionArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L94" >}}">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L96" >}}">property <b>executionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>executionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The execution ARN part to be used in [`lambdaPermission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `sourceArn`
@@ -4082,10 +4566,12 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L40" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4094,10 +4580,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-minimumCompressionSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L98" >}}">property <b>minimumCompressionSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L100" >}}">property <b>minimumCompressionSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minimumCompressionSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).
@@ -4105,10 +4593,12 @@ Minimum response size to compress for the REST API. Integer between -1 and 10485
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L102" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L104" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the REST API
@@ -4116,10 +4606,12 @@ The name of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L106" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L108" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 JSON formatted policy document that controls access to the API Gateway.
@@ -4127,10 +4619,12 @@ JSON formatted policy document that controls access to the API Gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-rootResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L110" >}}">property <b>rootResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L112" >}}">property <b>rootResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>rootResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource ID of the REST API's root
@@ -4138,10 +4632,12 @@ The resource ID of the REST API's root
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApi-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L40" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4151,10 +4647,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Stage">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L83" >}}">class <b>Stage</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L85" >}}">class <b>Stage</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Stage.
@@ -4231,13 +4729,15 @@ const exampleStage = new aws.apigateway.Stage("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Stage-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L169" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L171" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Stage(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StageArgs'>StageArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Stage resource with the given unique name, arguments, and options.
 
@@ -4248,13 +4748,15 @@ Create a Stage resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L92" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L94" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#StageState'>StageState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Stage'>Stage</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Stage resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4262,23 +4764,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L85" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L103" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L105" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Stage.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4286,13 +4792,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-accessLogSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L113" >}}">property <b>accessLogSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L115" >}}">property <b>accessLogSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>accessLogSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    destinationArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    format: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>accessLogSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StageAccessLogSettings'>outputs.apigateway.StageAccessLogSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables access logs for the API stage. Detailed below.
@@ -4300,10 +4805,12 @@ Enables access logs for the API stage. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-cacheClusterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L117" >}}">property <b>cacheClusterEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L119" >}}">property <b>cacheClusterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cacheClusterEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether a cache cluster is enabled for the stage
@@ -4311,10 +4818,12 @@ Specifies whether a cache cluster is enabled for the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-cacheClusterSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L122" >}}">property <b>cacheClusterSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L124" >}}">property <b>cacheClusterSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cacheClusterSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the cache cluster for the stage, if enabled.
@@ -4323,10 +4832,12 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-clientCertificateId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L126" >}}">property <b>clientCertificateId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L128" >}}">property <b>clientCertificateId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>clientCertificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The identifier of a client certificate for the stage.
@@ -4334,10 +4845,12 @@ The identifier of a client certificate for the stage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-deployment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L130" >}}">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L132" >}}">property <b>deployment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Deployment'>Deployment</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the deployment that the stage points to
@@ -4345,10 +4858,12 @@ The ID of the deployment that the stage points to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L134" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L136" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the stage
@@ -4356,10 +4871,12 @@ The description of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-documentationVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L138" >}}">property <b>documentationVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L140" >}}">property <b>documentationVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>documentationVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The version of the associated API documentation
@@ -4367,10 +4884,12 @@ The version of the associated API documentation
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-executionArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L144" >}}">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L146" >}}">property <b>executionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>executionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The execution ARN to be used in [`lambdaPermission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `sourceArn`
@@ -4380,10 +4899,12 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L85" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4392,10 +4913,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-invokeUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L149" >}}">property <b>invokeUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L151" >}}">property <b>invokeUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>invokeUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URL to invoke the API pointing to the stage,
@@ -4404,10 +4927,12 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L153" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L155" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -4415,10 +4940,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L157" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L159" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>stageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage
@@ -4426,10 +4953,12 @@ The name of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L161" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L163" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4437,10 +4966,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L85" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4449,10 +4980,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-variables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L165" >}}">property <b>variables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L167" >}}">property <b>variables</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>variables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map that defines the stage variables
@@ -4460,10 +4993,12 @@ A map that defines the stage variables
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Stage-xrayTracingEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L169" >}}">property <b>xrayTracingEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L171" >}}">property <b>xrayTracingEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>xrayTracingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether active tracing with X-ray is enabled. Defaults to `false`.
@@ -4472,10 +5007,12 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UsagePlan">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L52" >}}">class <b>UsagePlan</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L54" >}}">class <b>UsagePlan</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Usage Plan.
@@ -4524,13 +5061,15 @@ const myUsagePlan = new aws.apigateway.UsagePlan("MyUsagePlan", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UsagePlan-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L102" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L104" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> UsagePlan(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#UsagePlanArgs'>UsagePlanArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a UsagePlan resource with the given unique name, arguments, and options.
 
@@ -4541,13 +5080,15 @@ Create a UsagePlan resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L61" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L63" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UsagePlanState'>UsagePlanState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#UsagePlan'>UsagePlan</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing UsagePlan resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4555,23 +5096,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L54" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L72" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L74" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of UsagePlan.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4579,13 +5124,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-apiStages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L82" >}}">property <b>apiStages</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L84" >}}">property <b>apiStages</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>apiStages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    apiId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    stage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>apiStages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanApiStage'>outputs.apigateway.UsagePlanApiStage</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The associated API stages of the usage plan.
@@ -4593,10 +5137,12 @@ The associated API stages of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L86" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L88" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of a usage plan.
@@ -4604,10 +5150,12 @@ The description of a usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L54" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4616,10 +5164,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L90" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L92" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the usage plan.
@@ -4627,10 +5177,12 @@ The name of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-productCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L94" >}}">property <b>productCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L96" >}}">property <b>productCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>productCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
@@ -4638,14 +5190,12 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-quotaSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L98" >}}">property <b>quotaSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L100" >}}">property <b>quotaSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>quotaSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    limit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    offset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    period: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>quotaSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanQuotaSettings'>outputs.apigateway.UsagePlanQuotaSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The quota settings of the usage plan.
@@ -4653,13 +5203,12 @@ The quota settings of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-throttleSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L102" >}}">property <b>throttleSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L104" >}}">property <b>throttleSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>throttleSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    burstLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    rateLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>throttleSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanThrottleSettings'>outputs.apigateway.UsagePlanThrottleSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The throttling limits of the usage plan.
@@ -4667,10 +5216,12 @@ The throttling limits of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlan-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L54" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4680,10 +5231,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UsagePlanKey">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L33" >}}">class <b>UsagePlanKey</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L35" >}}">class <b>UsagePlanKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway Usage Plan Key.
@@ -4713,13 +5266,15 @@ const main = new aws.apigateway.UsagePlanKey("main", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UsagePlanKey-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L79" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L81" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> UsagePlanKey(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#UsagePlanKeyArgs'>UsagePlanKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a UsagePlanKey resource with the given unique name, arguments, and options.
 
@@ -4730,13 +5285,15 @@ Create a UsagePlanKey resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UsagePlanKeyState'>UsagePlanKeyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#UsagePlanKey'>UsagePlanKey</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing UsagePlanKey resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4744,23 +5301,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of UsagePlanKey.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4768,10 +5329,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4780,10 +5343,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-keyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L63" >}}">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L65" >}}">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The identifier of the API key resource.
@@ -4791,10 +5356,12 @@ The identifier of the API key resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-keyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L67" >}}">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L69" >}}">property <b>keyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the API key resource. Currently, the valid key type is API_KEY.
@@ -4802,10 +5369,12 @@ The type of the API key resource. Currently, the valid key type is API_KEY.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a usage plan key.
@@ -4813,10 +5382,12 @@ The name of a usage plan key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4825,10 +5396,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-usagePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L75" >}}">property <b>usagePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L77" >}}">property <b>usagePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>usagePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the usage plan resource representing to associate the key to.
@@ -4836,10 +5409,12 @@ The Id of the usage plan resource representing to associate the key to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKey-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L79" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L81" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of a usage plan key.
@@ -4848,10 +5423,12 @@ The value of a usage plan key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VpcLink">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L31" >}}">class <b>VpcLink</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L33" >}}">class <b>VpcLink</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an API Gateway VPC Link.
@@ -4879,13 +5456,15 @@ const exampleVpcLink = new aws.apigateway.VpcLink("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VpcLink-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L71" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VpcLink(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VpcLinkArgs'>VpcLinkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a VpcLink resource with the given unique name, arguments, and options.
 
@@ -4896,13 +5475,15 @@ Create a VpcLink resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLink-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L40" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L42" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VpcLinkState'>VpcLinkState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VpcLink'>VpcLink</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing VpcLink resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4910,23 +5491,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLink-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L33" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLink-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L51" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L53" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of VpcLink.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4934,10 +5519,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLink-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L61" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L63" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the VPC link.
@@ -4945,10 +5532,12 @@ The description of the VPC link.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLink-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L33" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4957,10 +5546,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLink-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L67" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name used to label and identify the VPC link.
@@ -4968,10 +5559,12 @@ The name used to label and identify the VPC link.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLink-targetArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L69" >}}">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L71" >}}">property <b>targetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.
@@ -4979,10 +5572,12 @@ The list of network load balancer arns in the VPC targeted by the VPC link. Curr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLink-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L33" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4992,13 +5587,15 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getKey">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L24" >}}">function <b>getKey</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L26" >}}">function <b>getKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getKey(args: <a href='#GetKeyArgs'>GetKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetKeyResult'>GetKeyResult</a>&gt; &amp; <a href='#GetKeyResult'>GetKeyResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the name and value of a pre-existing API Key, for
 example to supply credentials for a dependency microservice.
@@ -5019,13 +5616,15 @@ const myApiKey = aws.apigateway.getKey({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getResource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L28" >}}">function <b>getResource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L30" >}}">function <b>getResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getResource(args: <a href='#GetResourceArgs'>GetResourceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetResourceResult'>GetResourceResult</a>&gt; &amp; <a href='#GetResourceResult'>GetResourceResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the id of a Resource in API Gateway.
 To fetch the Resource, you must provide the REST API id as well as the full path.
@@ -5050,13 +5649,15 @@ const myResource = aws.apigateway.getResource({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRestApi">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L26" >}}">function <b>getRestApi</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L28" >}}">function <b>getRestApi</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getRestApi(args: <a href='#GetRestApiArgs'>GetRestApiArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetRestApiResult'>GetRestApiResult</a>&gt; &amp; <a href='#GetRestApiResult'>GetRestApiResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the id and rootResourceId of a REST API in
 API Gateway. To fetch the REST API you must provide a name to match against.
@@ -5079,13 +5680,15 @@ const myRestApi = aws.apigateway.getRestApi({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVpcLink">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L26" >}}">function <b>getVpcLink</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L28" >}}">function <b>getVpcLink</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getVpcLink(args: <a href='#GetVpcLinkArgs'>GetVpcLinkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetVpcLinkResult'>GetVpcLinkResult</a>&gt; &amp; <a href='#GetVpcLinkResult'>GetVpcLinkResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the id of a VPC Link in
 API Gateway. To fetch the VPC Link you must provide a name to match against.
@@ -5108,7 +5711,7 @@ const myApiGatewayVpcLink = aws.apigateway.getVpcLink({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L150" >}}">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L152" >}}">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5117,10 +5720,12 @@ The set of arguments for constructing a Account resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-cloudwatchRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L156" >}}">property <b>cloudwatchRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L158" >}}">property <b>cloudwatchRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cloudwatchRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
@@ -5131,7 +5736,7 @@ Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gate
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L134" >}}">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L136" >}}">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5140,10 +5745,12 @@ Input properties used for looking up and filtering Account resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-cloudwatchRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L140" >}}">property <b>cloudwatchRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L142" >}}">property <b>cloudwatchRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cloudwatchRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
@@ -5153,13 +5760,12 @@ Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gate
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-throttleSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L144" >}}">property <b>throttleSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/account.ts#L146" >}}">property <b>throttleSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    burstLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    rateLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AccountThrottleSettings'>inputs.apigateway.AccountThrottleSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Account-Level throttle settings. See exported fields below.
@@ -5168,7 +5774,7 @@ Account-Level throttle settings. See exported fields below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApiKeyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L148" >}}">interface <b>ApiKeyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L150" >}}">interface <b>ApiKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5177,10 +5783,12 @@ The set of arguments for constructing a ApiKey resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApiKeyArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L152" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L154" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API key description. Defaults to "Managed by Pulumi".
@@ -5188,10 +5796,12 @@ The API key description. Defaults to "Managed by Pulumi".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKeyArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L156" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L158" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the API key can be used by callers. Defaults to `true`.
@@ -5199,10 +5809,12 @@ Specifies whether the API key can be used by callers. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKeyArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L160" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L162" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the API key
@@ -5210,10 +5822,12 @@ The name of the API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKeyArgs-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L164" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L166" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the API key. If not specified, it will be automatically generated by AWS on creation.
@@ -5222,7 +5836,7 @@ The value of the API key. If not specified, it will be automatically generated b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApiKeyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L118" >}}">interface <b>ApiKeyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L120" >}}">interface <b>ApiKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5231,10 +5845,12 @@ Input properties used for looking up and filtering ApiKey resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApiKeyState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L122" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L124" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The creation date of the API key
@@ -5242,10 +5858,12 @@ The creation date of the API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKeyState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L126" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L128" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API key description. Defaults to "Managed by Pulumi".
@@ -5253,10 +5871,12 @@ The API key description. Defaults to "Managed by Pulumi".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKeyState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L130" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L132" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the API key can be used by callers. Defaults to `true`.
@@ -5264,10 +5884,12 @@ Specifies whether the API key can be used by callers. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKeyState-lastUpdatedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L134" >}}">property <b>lastUpdatedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L136" >}}">property <b>lastUpdatedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lastUpdatedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The last update date of the API key
@@ -5275,10 +5897,12 @@ The last update date of the API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKeyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L140" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the API key
@@ -5286,10 +5910,12 @@ The name of the API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApiKeyState-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L142" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/apiKey.ts#L144" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the API key. If not specified, it will be automatically generated by AWS on creation.
@@ -5298,7 +5924,7 @@ The value of the API key. If not specified, it will be automatically generated b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AuthorizerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L256" >}}">interface <b>AuthorizerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L258" >}}">interface <b>AuthorizerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5307,10 +5933,12 @@ The set of arguments for constructing a Authorizer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizerArgs-authorizerCredentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L261" >}}">property <b>authorizerCredentials</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L263" >}}">property <b>authorizerCredentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizerCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The credentials required for the authorizer.
@@ -5319,10 +5947,12 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerArgs-authorizerResultTtlInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L266" >}}">property <b>authorizerResultTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L268" >}}">property <b>authorizerResultTtlInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizerResultTtlInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of cached authorizer results in seconds.
@@ -5331,10 +5961,12 @@ Defaults to `300`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerArgs-authorizerUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L272" >}}">property <b>authorizerUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L274" >}}">property <b>authorizerUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizerUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorizer's Uniform Resource Identifier (URI).
@@ -5344,10 +5976,12 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerArgs-identitySource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L277" >}}">property <b>identitySource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L279" >}}">property <b>identitySource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identitySource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source of the identity in an incoming request.
@@ -5356,10 +5990,12 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerArgs-identityValidationExpression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L284" >}}">property <b>identityValidationExpression</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L286" >}}">property <b>identityValidationExpression</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identityValidationExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A validation expression for the incoming identity.
@@ -5370,10 +6006,12 @@ the client receives a 401 Unauthorized response.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L288" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L290" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the authorizer
@@ -5381,10 +6019,12 @@ The name of the authorizer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerArgs-providerArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L293" >}}">property <b>providerArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L295" >}}">property <b>providerArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providerArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the Amazon Cognito user pool ARNs.
@@ -5393,10 +6033,12 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L297" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L299" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -5404,10 +6046,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L302" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L304" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
@@ -5417,7 +6061,7 @@ Defaults to `TOKEN`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AuthorizerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L204" >}}">interface <b>AuthorizerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L206" >}}">interface <b>AuthorizerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5426,10 +6070,12 @@ Input properties used for looking up and filtering Authorizer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizerState-authorizerCredentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L209" >}}">property <b>authorizerCredentials</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L211" >}}">property <b>authorizerCredentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizerCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The credentials required for the authorizer.
@@ -5438,10 +6084,12 @@ To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerState-authorizerResultTtlInSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L214" >}}">property <b>authorizerResultTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L216" >}}">property <b>authorizerResultTtlInSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizerResultTtlInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of cached authorizer results in seconds.
@@ -5450,10 +6098,12 @@ Defaults to `300`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerState-authorizerUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L220" >}}">property <b>authorizerUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L222" >}}">property <b>authorizerUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizerUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorizer's Uniform Resource Identifier (URI).
@@ -5463,10 +6113,12 @@ e.g. `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lamb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerState-identitySource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L225" >}}">property <b>identitySource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L227" >}}">property <b>identitySource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identitySource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source of the identity in an incoming request.
@@ -5475,10 +6127,12 @@ Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerState-identityValidationExpression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L232" >}}">property <b>identityValidationExpression</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L234" >}}">property <b>identityValidationExpression</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identityValidationExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A validation expression for the incoming identity.
@@ -5489,10 +6143,12 @@ the client receives a 401 Unauthorized response.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L236" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L238" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the authorizer
@@ -5500,10 +6156,12 @@ The name of the authorizer
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerState-providerArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L241" >}}">property <b>providerArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L243" >}}">property <b>providerArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providerArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the Amazon Cognito user pool ARNs.
@@ -5512,10 +6170,12 @@ Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L245" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L247" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -5523,10 +6183,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizerState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L250" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/authorizer.ts#L252" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool.
@@ -5536,7 +6198,7 @@ Defaults to `TOKEN`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BasePathMappingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L151" >}}">interface <b>BasePathMappingArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L153" >}}">interface <b>BasePathMappingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5545,10 +6207,12 @@ The set of arguments for constructing a BasePathMapping resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BasePathMappingArgs-basePath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L159" >}}">property <b>basePath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L161" >}}">property <b>basePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>basePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
@@ -5556,10 +6220,12 @@ Path segment that must be prepended to the path when accessing the API via this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMappingArgs-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L163" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L165" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The already-registered domain name to connect the API to.
@@ -5567,10 +6233,12 @@ The already-registered domain name to connect the API to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMappingArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L155" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L157" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the API to connect.
@@ -5578,10 +6246,12 @@ The id of the API to connect.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMappingArgs-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L167" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L169" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
@@ -5590,7 +6260,7 @@ The name of a specific deployment stage to expose at the given path. If omitted,
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BasePathMappingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L129" >}}">interface <b>BasePathMappingState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L131" >}}">interface <b>BasePathMappingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5599,10 +6269,12 @@ Input properties used for looking up and filtering BasePathMapping resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BasePathMappingState-basePath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L137" >}}">property <b>basePath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L139" >}}">property <b>basePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>basePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
@@ -5610,10 +6282,12 @@ Path segment that must be prepended to the path when accessing the API via this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMappingState-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L141" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L143" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The already-registered domain name to connect the API to.
@@ -5621,10 +6295,12 @@ The already-registered domain name to connect the API to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMappingState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L133" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L135" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the API to connect.
@@ -5632,10 +6308,12 @@ The id of the API to connect.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BasePathMappingState-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L145" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/basePathMapping.ts#L147" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
@@ -5644,7 +6322,7 @@ The name of a specific deployment stage to expose at the given path. If omitted,
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClientCertificateArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L126" >}}">interface <b>ClientCertificateArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L128" >}}">interface <b>ClientCertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5653,10 +6331,12 @@ The set of arguments for constructing a ClientCertificate resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClientCertificateArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L130" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L132" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the client certificate.
@@ -5665,7 +6345,7 @@ The description of the client certificate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ClientCertificateState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L104" >}}">interface <b>ClientCertificateState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L106" >}}">interface <b>ClientCertificateState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5674,10 +6354,12 @@ Input properties used for looking up and filtering ClientCertificate resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ClientCertificateState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L108" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L110" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date when the client certificate was created.
@@ -5685,10 +6367,12 @@ The date when the client certificate was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificateState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L112" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L114" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the client certificate.
@@ -5696,10 +6380,12 @@ The description of the client certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificateState-expirationDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L116" >}}">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L118" >}}">property <b>expirationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date when the client certificate will expire.
@@ -5707,10 +6393,12 @@ The date when the client certificate will expire.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ClientCertificateState-pemEncodedCertificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L120" >}}">property <b>pemEncodedCertificate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/clientCertificate.ts#L122" >}}">property <b>pemEncodedCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pemEncodedCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PEM-encoded public key of the client certificate.
@@ -5719,7 +6407,7 @@ The PEM-encoded public key of the client certificate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L204" >}}">interface <b>DeploymentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L206" >}}">interface <b>DeploymentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5728,10 +6416,12 @@ The set of arguments for constructing a Deployment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L208" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L210" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the deployment
@@ -5739,10 +6429,12 @@ The description of the deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L212" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L214" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -5750,10 +6442,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentArgs-stageDescription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L216" >}}">property <b>stageDescription</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L218" >}}">property <b>stageDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the stage
@@ -5761,10 +6455,12 @@ The description of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentArgs-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L220" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L222" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.
@@ -5772,10 +6468,12 @@ The name of the stage. If the specified stage already exists, it will be updated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentArgs-variables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L224" >}}">property <b>variables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L226" >}}">property <b>variables</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map that defines variables for the stage
@@ -5784,7 +6482,7 @@ A map that defines variables for the stage
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DeploymentState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L163" >}}">interface <b>DeploymentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L165" >}}">interface <b>DeploymentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5793,10 +6491,12 @@ Input properties used for looking up and filtering Deployment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DeploymentState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L167" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L169" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The creation date of the deployment
@@ -5804,10 +6504,12 @@ The creation date of the deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L171" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L173" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the deployment
@@ -5815,10 +6517,12 @@ The description of the deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentState-executionArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L177" >}}">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L179" >}}">property <b>executionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>executionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The execution ARN to be used in [`lambdaPermission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `sourceArn`
@@ -5828,10 +6532,12 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentState-invokeUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L182" >}}">property <b>invokeUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L184" >}}">property <b>invokeUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invokeUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URL to invoke the API pointing to the stage,
@@ -5840,10 +6546,12 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L186" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L188" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -5851,10 +6559,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentState-stageDescription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L190" >}}">property <b>stageDescription</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L192" >}}">property <b>stageDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the stage
@@ -5862,10 +6572,12 @@ The description of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentState-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L194" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L196" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.
@@ -5873,10 +6585,12 @@ The name of the stage. If the specified stage already exists, it will be updated
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeploymentState-variables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L198" >}}">property <b>variables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/deployment.ts#L200" >}}">property <b>variables</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map that defines variables for the stage
@@ -5885,7 +6599,7 @@ A map that defines variables for the stage
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DocumentationPartArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L132" >}}">interface <b>DocumentationPartArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L134" >}}">interface <b>DocumentationPartArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5894,16 +6608,12 @@ The set of arguments for constructing a DocumentationPart resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DocumentationPartArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L136" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L138" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentationPartLocation'>inputs.apigateway.DocumentationPartLocation</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The location of the targeted API entity of the to-be-created documentation part. See below.
@@ -5911,10 +6621,12 @@ The location of the targeted API entity of the to-be-created documentation part.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPartArgs-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L140" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L142" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
@@ -5922,10 +6634,12 @@ A content map of API-specific key-value pairs describing the targeted API entity
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPartArgs-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L144" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L146" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -5934,7 +6648,7 @@ The ID of the associated Rest API
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DocumentationPartState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L114" >}}">interface <b>DocumentationPartState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L116" >}}">interface <b>DocumentationPartState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5943,16 +6657,12 @@ Input properties used for looking up and filtering DocumentationPart resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DocumentationPartState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L118" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L120" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    method: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentationPartLocation'>inputs.apigateway.DocumentationPartLocation</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The location of the targeted API entity of the to-be-created documentation part. See below.
@@ -5960,10 +6670,12 @@ The location of the targeted API entity of the to-be-created documentation part.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPartState-properties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L122" >}}">property <b>properties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L124" >}}">property <b>properties</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
@@ -5971,10 +6683,12 @@ A content map of API-specific key-value pairs describing the targeted API entity
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationPartState-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L126" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationPart.ts#L128" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -5983,7 +6697,7 @@ The ID of the associated Rest API
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DocumentationVersionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L132" >}}">interface <b>DocumentationVersionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L134" >}}">interface <b>DocumentationVersionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5992,10 +6706,12 @@ The set of arguments for constructing a DocumentationVersion resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DocumentationVersionArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L136" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L138" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the API documentation version.
@@ -6003,10 +6719,12 @@ The description of the API documentation version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersionArgs-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L140" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L142" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -6014,10 +6732,12 @@ The ID of the associated Rest API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersionArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L144" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L146" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The version identifier of the API documentation snapshot.
@@ -6026,7 +6746,7 @@ The version identifier of the API documentation snapshot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DocumentationVersionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L114" >}}">interface <b>DocumentationVersionState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L116" >}}">interface <b>DocumentationVersionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6035,10 +6755,12 @@ Input properties used for looking up and filtering DocumentationVersion resource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DocumentationVersionState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L118" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L120" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the API documentation version.
@@ -6046,10 +6768,12 @@ The description of the API documentation version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersionState-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L122" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L124" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -6057,10 +6781,12 @@ The ID of the associated Rest API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentationVersionState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L126" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/documentationVersion.ts#L128" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The version identifier of the API documentation snapshot.
@@ -6069,7 +6795,7 @@ The version identifier of the API documentation snapshot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainNameArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L380" >}}">interface <b>DomainNameArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L382" >}}">interface <b>DomainNameArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6078,10 +6804,12 @@ The set of arguments for constructing a DomainName resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainNameArgs-certificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L384" >}}">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L386" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificateName`, `certificateBody`, `certificateChain`, `certificatePrivateKey`, `regionalCertificateArn`, and `regionalCertificateName`.
@@ -6089,10 +6817,12 @@ The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-certificateBody">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L390" >}}">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L392" >}}">property <b>certificateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The certificate issued for the domain name
@@ -6102,10 +6832,12 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-certificateChain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L397" >}}">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L399" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The certificate for the CA that issued the
@@ -6116,10 +6848,12 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-certificateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L403" >}}">property <b>certificateName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L405" >}}">property <b>certificateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique name to use when registering this
@@ -6129,10 +6863,12 @@ certificate as an IAM server certificate. Conflicts with `certificateArn`, `regi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-certificatePrivateKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L408" >}}">property <b>certificatePrivateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L410" >}}">property <b>certificatePrivateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificatePrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The private key associated with the
@@ -6141,10 +6877,12 @@ domain certificate given in `certificateBody`. Only valid for `EDGE` endpoint co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L412" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L414" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully-qualified domain name to register
@@ -6152,12 +6890,12 @@ The fully-qualified domain name to register
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-endpointConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L416" >}}">property <b>endpointConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L418" >}}">property <b>endpointConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    types: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameEndpointConfiguration'>inputs.apigateway.DomainNameEndpointConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block defining API endpoint information including type. Defined below.
@@ -6165,10 +6903,12 @@ Configuration block defining API endpoint information including type. Defined be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-regionalCertificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L420" >}}">property <b>regionalCertificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L422" >}}">property <b>regionalCertificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regionalCertificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificateArn`, `certificateName`, `certificateBody`, `certificateChain`, and `certificatePrivateKey`.
@@ -6176,10 +6916,12 @@ The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-regionalCertificateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L425" >}}">property <b>regionalCertificateName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L427" >}}">property <b>regionalCertificateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regionalCertificateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificateArn`, `certificateName`, `certificateBody`, `certificateChain`, and
@@ -6188,10 +6930,12 @@ The user-friendly name of the certificate that will be used by regional endpoint
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameArgs-securityPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L429" >}}">property <b>securityPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L431" >}}">property <b>securityPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
@@ -6200,7 +6944,7 @@ The Transport Layer Security (TLS) version + cipher suite for this DomainName. T
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainNameState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L303" >}}">interface <b>DomainNameState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L305" >}}">interface <b>DomainNameState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6209,10 +6953,12 @@ Input properties used for looking up and filtering DomainName resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainNameState-certificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L307" >}}">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L309" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificateName`, `certificateBody`, `certificateChain`, `certificatePrivateKey`, `regionalCertificateArn`, and `regionalCertificateName`.
@@ -6220,10 +6966,12 @@ The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-certificateBody">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L313" >}}">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L315" >}}">property <b>certificateBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The certificate issued for the domain name
@@ -6233,10 +6981,12 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-certificateChain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L320" >}}">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L322" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The certificate for the CA that issued the
@@ -6247,10 +6997,12 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-certificateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L326" >}}">property <b>certificateName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L328" >}}">property <b>certificateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique name to use when registering this
@@ -6260,10 +7012,12 @@ certificate as an IAM server certificate. Conflicts with `certificateArn`, `regi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-certificatePrivateKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L331" >}}">property <b>certificatePrivateKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L333" >}}">property <b>certificatePrivateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificatePrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The private key associated with the
@@ -6272,10 +7026,12 @@ domain certificate given in `certificateBody`. Only valid for `EDGE` endpoint co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-certificateUploadDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L335" >}}">property <b>certificateUploadDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L337" >}}">property <b>certificateUploadDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateUploadDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The upload date associated with the domain certificate.
@@ -6283,10 +7039,12 @@ The upload date associated with the domain certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-cloudfrontDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L340" >}}">property <b>cloudfrontDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L342" >}}">property <b>cloudfrontDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cloudfrontDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The hostname created by Cloudfront to represent
@@ -6295,10 +7053,12 @@ the distribution that implements this domain name mapping.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-cloudfrontZoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L345" >}}">property <b>cloudfrontZoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L347" >}}">property <b>cloudfrontZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cloudfrontZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
@@ -6307,10 +7067,12 @@ that can be used to create a Route53 alias record for the distribution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-domainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L349" >}}">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L351" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully-qualified domain name to register
@@ -6318,12 +7080,12 @@ The fully-qualified domain name to register
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-endpointConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L353" >}}">property <b>endpointConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L355" >}}">property <b>endpointConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    types: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameEndpointConfiguration'>inputs.apigateway.DomainNameEndpointConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block defining API endpoint information including type. Defined below.
@@ -6331,10 +7093,12 @@ Configuration block defining API endpoint information including type. Defined be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-regionalCertificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L357" >}}">property <b>regionalCertificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L359" >}}">property <b>regionalCertificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regionalCertificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificateArn`, `certificateName`, `certificateBody`, `certificateChain`, and `certificatePrivateKey`.
@@ -6342,10 +7106,12 @@ The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-regionalCertificateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L362" >}}">property <b>regionalCertificateName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L364" >}}">property <b>regionalCertificateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regionalCertificateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificateArn`, `certificateName`, `certificateBody`, `certificateChain`, and
@@ -6354,10 +7120,12 @@ The user-friendly name of the certificate that will be used by regional endpoint
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-regionalDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L366" >}}">property <b>regionalDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L368" >}}">property <b>regionalDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regionalDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The hostname for the custom domain's regional endpoint.
@@ -6365,10 +7133,12 @@ The hostname for the custom domain's regional endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-regionalZoneId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L370" >}}">property <b>regionalZoneId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L372" >}}">property <b>regionalZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regionalZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
@@ -6376,10 +7146,12 @@ The hosted zone ID that can be used to create a Route53 alias record for the reg
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainNameState-securityPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L374" >}}">property <b>securityPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/domainName.ts#L376" >}}">property <b>securityPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
@@ -6388,7 +7160,7 @@ The Transport Layer Security (TLS) version + cipher suite for this DomainName. T
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetKeyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L42" >}}">interface <b>GetKeyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L44" >}}">interface <b>GetKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6397,10 +7169,12 @@ A collection of arguments for invoking getKey.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetKeyArgs-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L46" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L48" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the API Key to look up.
@@ -6409,7 +7183,7 @@ The ID of the API Key to look up.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetKeyResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L52" >}}">interface <b>GetKeyResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L54" >}}">interface <b>GetKeyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6418,10 +7192,12 @@ A collection of values returned by getKey.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetKeyResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L56" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L58" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to the ID of the API Key.
@@ -6429,10 +7205,12 @@ Set to the ID of the API Key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L60" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L62" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to the name of the API Key.
@@ -6440,10 +7218,12 @@ Set to the name of the API Key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKeyResult-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L64" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getKey.ts#L66" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to the value of the API Key.
@@ -6452,7 +7232,7 @@ Set to the value of the API Key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetResourceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L47" >}}">interface <b>GetResourceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L49" >}}">interface <b>GetResourceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6461,10 +7241,12 @@ A collection of arguments for invoking getResource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetResourceArgs-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L51" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L53" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full path of the resource.  If no path is found, an error will be returned.
@@ -6472,10 +7254,12 @@ The full path of the resource.  If no path is found, an error will be returned.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceArgs-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L55" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L57" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApiId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The REST API id that owns the resource. If no REST API is found, an error will be returned.
@@ -6484,7 +7268,7 @@ The REST API id that owns the resource. If no REST API is found, an error will b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetResourceResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L61" >}}">interface <b>GetResourceResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L63" >}}">interface <b>GetResourceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6493,10 +7277,12 @@ A collection of values returned by getResource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetResourceResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L75" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L77" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -6504,10 +7290,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceResult-parentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L65" >}}">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L67" >}}">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to the ID of the parent Resource.
@@ -6515,18 +7303,22 @@ Set to the ID of the parent Resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceResult-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L66" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L68" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceResult-pathPart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L70" >}}">property <b>pathPart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L72" >}}">property <b>pathPart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pathPart: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to the path relative to the parent Resource.
@@ -6534,16 +7326,18 @@ Set to the path relative to the parent Resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetResourceResult-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L71" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getResource.ts#L73" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApiId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRestApiArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L44" >}}">interface <b>GetRestApiArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L46" >}}">interface <b>GetRestApiArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6552,10 +7346,12 @@ A collection of arguments for invoking getRestApi.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRestApiArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the REST API to look up. If no REST API is found with this name, an error will be returned.
@@ -6565,7 +7361,7 @@ If multiple REST APIs are found with this name, an error will be returned.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRestApiResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L55" >}}">interface <b>GetRestApiResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L57" >}}">interface <b>GetRestApiResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6574,10 +7370,12 @@ A collection of values returned by getRestApi.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRestApiResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L64" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L66" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -6585,18 +7383,22 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRestApiResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L56" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L58" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRestApiResult-rootResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L60" >}}">property <b>rootResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getRestApi.ts#L62" >}}">property <b>rootResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rootResourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to the ID of the API Gateway Resource on the found REST API where the route matches '/'.
@@ -6605,7 +7407,7 @@ Set to the ID of the API Gateway Resource on the found REST API where the route 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpcLinkArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L44" >}}">interface <b>GetVpcLinkArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L46" >}}">interface <b>GetVpcLinkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6614,10 +7416,12 @@ A collection of arguments for invoking getVpcLink.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpcLinkArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the API Gateway VPC Link to look up. If no API Gateway VPC Link is found with this name, an error will be returned.
@@ -6627,7 +7431,7 @@ If multiple API Gateway VPC Links are found with this name, an error will be ret
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVpcLinkResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L55" >}}">interface <b>GetVpcLinkResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L57" >}}">interface <b>GetVpcLinkResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6636,10 +7440,12 @@ A collection of values returned by getVpcLink.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVpcLinkResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L59" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L61" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to the ID of the found API Gateway VPC Link.
@@ -6647,16 +7453,18 @@ Set to the ID of the found API Gateway VPC Link.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVpcLinkResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L60" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/getVpcLink.ts#L62" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IntegrationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L426" >}}">interface <b>IntegrationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L428" >}}">interface <b>IntegrationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6665,10 +7473,12 @@ The set of arguments for constructing a Integration resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IntegrationArgs-cacheKeyParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L430" >}}">property <b>cacheKeyParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L432" >}}">property <b>cacheKeyParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheKeyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of cache key parameters for the integration.
@@ -6676,10 +7486,12 @@ A list of cache key parameters for the integration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-cacheNamespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L434" >}}">property <b>cacheNamespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L436" >}}">property <b>cacheNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration's cache namespace.
@@ -6687,10 +7499,12 @@ The integration's cache namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-connectionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L438" >}}">property <b>connectionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L440" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the VpcLink used for the integration. **Required** if `connectionType` is `VPC_LINK`
@@ -6698,10 +7512,12 @@ The id of the VpcLink used for the integration. **Required** if `connectionType`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-connectionType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L442" >}}">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L444" >}}">property <b>connectionType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
@@ -6709,10 +7525,12 @@ The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-contentHandling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L446" >}}">property <b>contentHandling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L448" >}}">property <b>contentHandling</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentHandling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
@@ -6720,10 +7538,12 @@ Specifies how to handle request payload content type conversions. Supported valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-credentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L450" >}}">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L452" >}}">property <b>credentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
@@ -6731,10 +7551,12 @@ The credentials required for the integration. For `AWS` integrations, 2 options 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L455" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L457" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
@@ -6743,10 +7565,12 @@ when calling the associated resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-integrationHttpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L463" >}}">property <b>integrationHttpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L465" >}}">property <b>integrationHttpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>integrationHttpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration HTTP method
@@ -6758,10 +7582,12 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-passthroughBehavior">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L467" >}}">property <b>passthroughBehavior</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L469" >}}">property <b>passthroughBehavior</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>passthroughBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `requestTemplates` is used.
@@ -6769,10 +7595,12 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-requestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L472" >}}">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L474" >}}">property <b>requestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of request query string parameters and headers that should be passed to the backend responder.
@@ -6781,10 +7609,12 @@ For example: `requestParameters = { "integration.request.header.X-Some-Other-Hea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-requestTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L476" >}}">property <b>requestTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L478" >}}">property <b>requestTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the integration's request templates.
@@ -6792,10 +7622,12 @@ A map of the integration's request templates.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L480" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L482" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID.
@@ -6803,10 +7635,12 @@ The API resource ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L484" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L486" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API.
@@ -6814,10 +7648,12 @@ The ID of the associated REST API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-timeoutMilliseconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L488" >}}">property <b>timeoutMilliseconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L490" >}}">property <b>timeoutMilliseconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeoutMilliseconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
@@ -6825,10 +7661,12 @@ Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 m
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L492" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L494" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connectionType` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
@@ -6836,10 +7674,12 @@ The integration input's [type](https://docs.aws.amazon.com/apigateway/api-refere
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationArgs-uri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L498" >}}">property <b>uri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L500" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
@@ -6850,7 +7690,7 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IntegrationResponseArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L229" >}}">interface <b>IntegrationResponseArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L231" >}}">interface <b>IntegrationResponseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6859,10 +7699,12 @@ The set of arguments for constructing a IntegrationResponse resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IntegrationResponseArgs-contentHandling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L233" >}}">property <b>contentHandling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L235" >}}">property <b>contentHandling</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentHandling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
@@ -6870,10 +7712,12 @@ Specifies how to handle request payload content type conversions. Supported valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseArgs-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L237" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L239" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -6881,10 +7725,12 @@ The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseArgs-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L241" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L243" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -6892,10 +7738,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseArgs-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L246" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L248" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of response parameters that can be read from the backend response.
@@ -6904,10 +7752,12 @@ For example: `responseParameters = { "method.response.header.X-Some-Header" = "i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseArgs-responseTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L250" >}}">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L252" >}}">property <b>responseTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the templates used to transform the integration response body
@@ -6915,10 +7765,12 @@ A map specifying the templates used to transform the integration response body
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L254" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L256" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -6926,10 +7778,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseArgs-selectionPattern">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L261" >}}">property <b>selectionPattern</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L263" >}}">property <b>selectionPattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectionPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the regular expression pattern used to choose
@@ -6940,10 +7794,12 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseArgs-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L265" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L267" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code
@@ -6952,7 +7808,7 @@ The HTTP status code
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IntegrationResponseState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L187" >}}">interface <b>IntegrationResponseState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L189" >}}">interface <b>IntegrationResponseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6961,10 +7817,12 @@ Input properties used for looking up and filtering IntegrationResponse resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IntegrationResponseState-contentHandling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L191" >}}">property <b>contentHandling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L193" >}}">property <b>contentHandling</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentHandling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
@@ -6972,10 +7830,12 @@ Specifies how to handle request payload content type conversions. Supported valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseState-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L195" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L197" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -6983,10 +7843,12 @@ The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseState-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L199" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L201" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -6994,10 +7856,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseState-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L204" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L206" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of response parameters that can be read from the backend response.
@@ -7006,10 +7870,12 @@ For example: `responseParameters = { "method.response.header.X-Some-Header" = "i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseState-responseTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L208" >}}">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L210" >}}">property <b>responseTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the templates used to transform the integration response body
@@ -7017,10 +7883,12 @@ A map specifying the templates used to transform the integration response body
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L212" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L214" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -7028,10 +7896,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseState-selectionPattern">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L219" >}}">property <b>selectionPattern</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L221" >}}">property <b>selectionPattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectionPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the regular expression pattern used to choose
@@ -7042,10 +7912,12 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationResponseState-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L223" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integrationResponse.ts#L225" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code
@@ -7054,7 +7926,7 @@ The HTTP status code
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IntegrationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L348" >}}">interface <b>IntegrationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L350" >}}">interface <b>IntegrationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7063,10 +7935,12 @@ Input properties used for looking up and filtering Integration resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IntegrationState-cacheKeyParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L352" >}}">property <b>cacheKeyParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L354" >}}">property <b>cacheKeyParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheKeyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of cache key parameters for the integration.
@@ -7074,10 +7948,12 @@ A list of cache key parameters for the integration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-cacheNamespace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L356" >}}">property <b>cacheNamespace</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L358" >}}">property <b>cacheNamespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheNamespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration's cache namespace.
@@ -7085,10 +7961,12 @@ The integration's cache namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-connectionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L360" >}}">property <b>connectionId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L362" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the VpcLink used for the integration. **Required** if `connectionType` is `VPC_LINK`
@@ -7096,10 +7974,12 @@ The id of the VpcLink used for the integration. **Required** if `connectionType`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-connectionType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L364" >}}">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L366" >}}">property <b>connectionType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
@@ -7107,10 +7987,12 @@ The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-contentHandling">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L368" >}}">property <b>contentHandling</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L370" >}}">property <b>contentHandling</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentHandling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
@@ -7118,10 +8000,12 @@ Specifies how to handle request payload content type conversions. Supported valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-credentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L372" >}}">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L374" >}}">property <b>credentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
@@ -7129,10 +8013,12 @@ The credentials required for the integration. For `AWS` integrations, 2 options 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L377" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L379" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTION`, `ANY`)
@@ -7141,10 +8027,12 @@ when calling the associated resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-integrationHttpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L385" >}}">property <b>integrationHttpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L387" >}}">property <b>integrationHttpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>integrationHttpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration HTTP method
@@ -7156,10 +8044,12 @@ e.g. Lambda function [can only be invoked](https://github.com/awslabs/aws-apigat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-passthroughBehavior">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L389" >}}">property <b>passthroughBehavior</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L391" >}}">property <b>passthroughBehavior</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>passthroughBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `requestTemplates` is used.
@@ -7167,10 +8057,12 @@ The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEV
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-requestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L394" >}}">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L396" >}}">property <b>requestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of request query string parameters and headers that should be passed to the backend responder.
@@ -7179,10 +8071,12 @@ For example: `requestParameters = { "integration.request.header.X-Some-Other-Hea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-requestTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L398" >}}">property <b>requestTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L400" >}}">property <b>requestTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the integration's request templates.
@@ -7190,10 +8084,12 @@ A map of the integration's request templates.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L402" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L404" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID.
@@ -7201,10 +8097,12 @@ The API resource ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L406" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L408" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API.
@@ -7212,10 +8110,12 @@ The ID of the associated REST API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-timeoutMilliseconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L410" >}}">property <b>timeoutMilliseconds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L412" >}}">property <b>timeoutMilliseconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeoutMilliseconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
@@ -7223,10 +8123,12 @@ Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 m
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L414" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L416" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connectionType` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
@@ -7234,10 +8136,12 @@ The integration input's [type](https://docs.aws.amazon.com/apigateway/api-refere
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IntegrationState-uri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L420" >}}">property <b>uri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/integration.ts#L422" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The input's URI. **Required** if `type` is `AWS`, `AWS_PROXY`, `HTTP` or `HTTP_PROXY`.
@@ -7248,7 +8152,7 @@ e.g. `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lamb
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MethodArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L252" >}}">interface <b>MethodArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L254" >}}">interface <b>MethodArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7257,10 +8161,12 @@ The set of arguments for constructing a Method resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MethodArgs-apiKeyRequired">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L256" >}}">property <b>apiKeyRequired</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L258" >}}">property <b>apiKeyRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apiKeyRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify if the method requires an API key
@@ -7268,10 +8174,12 @@ Specify if the method requires an API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-authorization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L260" >}}">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L262" >}}">property <b>authorization</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
@@ -7279,10 +8187,12 @@ The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COG
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-authorizationScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L264" >}}">property <b>authorizationScopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L266" >}}">property <b>authorizationScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizationScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
@@ -7290,10 +8200,12 @@ The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-authorizerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L268" >}}">property <b>authorizerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L270" >}}">property <b>authorizerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
@@ -7301,10 +8213,12 @@ The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L272" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L274" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -7312,10 +8226,12 @@ The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-requestModels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L278" >}}">property <b>requestModels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L280" >}}">property <b>requestModels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestModels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the API models used for the request's content type
@@ -7325,10 +8241,12 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-requestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L283" >}}">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L285" >}}">property <b>requestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of request query string parameters and headers that should be passed to the integration.
@@ -7337,10 +8255,12 @@ For example: `requestParameters = {"method.request.header.X-Some-Header" = true 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-requestValidatorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L287" >}}">property <b>requestValidatorId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L289" >}}">property <b>requestValidatorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestValidatorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of a `aws.apigateway.RequestValidator`
@@ -7348,10 +8268,12 @@ The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L291" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L293" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -7359,10 +8281,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L295" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L297" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -7371,7 +8295,7 @@ The ID of the associated REST API
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MethodResponseArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L187" >}}">interface <b>MethodResponseArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L189" >}}">interface <b>MethodResponseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7380,10 +8304,12 @@ The set of arguments for constructing a MethodResponse resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MethodResponseArgs-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L191" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L193" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -7391,10 +8317,12 @@ The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseArgs-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L195" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L197" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -7402,10 +8330,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseArgs-responseModels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L199" >}}">property <b>responseModels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L201" >}}">property <b>responseModels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseModels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the API models used for the response's content type
@@ -7413,10 +8343,12 @@ A map of the API models used for the response's content type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseArgs-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L205" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L207" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of response parameters that can be sent to the caller.
@@ -7426,10 +8358,12 @@ would define that the header `X-Some-Header` can be provided on the response.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L209" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L211" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -7437,10 +8371,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseArgs-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L213" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L215" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code
@@ -7449,7 +8385,7 @@ The HTTP status code
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MethodResponseState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L155" >}}">interface <b>MethodResponseState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L157" >}}">interface <b>MethodResponseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7458,10 +8394,12 @@ Input properties used for looking up and filtering MethodResponse resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MethodResponseState-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L159" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L161" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -7469,10 +8407,12 @@ The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseState-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L163" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L165" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -7480,10 +8420,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseState-responseModels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L167" >}}">property <b>responseModels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L169" >}}">property <b>responseModels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseModels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the API models used for the response's content type
@@ -7491,10 +8433,12 @@ A map of the API models used for the response's content type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseState-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L173" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L175" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of response parameters that can be sent to the caller.
@@ -7504,10 +8448,12 @@ would define that the header `X-Some-Header` can be provided on the response.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L177" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L179" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -7515,10 +8461,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodResponseState-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L181" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodResponse.ts#L183" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code
@@ -7527,7 +8475,7 @@ The HTTP status code
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MethodSettingsArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L181" >}}">interface <b>MethodSettingsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L183" >}}">interface <b>MethodSettingsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7536,10 +8484,12 @@ The set of arguments for constructing a MethodSettings resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MethodSettingsArgs-methodPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L185" >}}">property <b>methodPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L187" >}}">property <b>methodPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>methodPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*&#47;*` for overriding all methods in the stage.
@@ -7547,10 +8497,12 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettingsArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L189" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L191" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the REST API
@@ -7558,21 +8510,12 @@ The ID of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettingsArgs-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L193" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L195" >}}">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cacheDataEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    cacheTtlInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    cachingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    dataTraceEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    loggingLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    requireAuthorizationForCacheControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    throttlingBurstLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    throttlingRateLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    unauthorizedCacheControlHeaderStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MethodSettingsSettings'>inputs.apigateway.MethodSettingsSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The settings block, see below.
@@ -7580,10 +8523,12 @@ The settings block, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettingsArgs-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L197" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L199" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage
@@ -7592,7 +8537,7 @@ The name of the stage
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MethodSettingsState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L159" >}}">interface <b>MethodSettingsState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L161" >}}">interface <b>MethodSettingsState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7601,10 +8546,12 @@ Input properties used for looking up and filtering MethodSettings resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MethodSettingsState-methodPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L163" >}}">property <b>methodPath</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L165" >}}">property <b>methodPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>methodPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*&#47;*` for overriding all methods in the stage.
@@ -7612,10 +8559,12 @@ Method path defined as `{resource_path}/{http_method}` for an individual method 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettingsState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L167" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L169" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the REST API
@@ -7623,21 +8572,12 @@ The ID of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettingsState-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L171" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L173" >}}">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cacheDataEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    cacheTtlInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    cachingEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    dataTraceEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    loggingLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    requireAuthorizationForCacheControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    throttlingBurstLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    throttlingRateLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    unauthorizedCacheControlHeaderStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MethodSettingsSettings'>inputs.apigateway.MethodSettingsSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The settings block, see below.
@@ -7645,10 +8585,12 @@ The settings block, see below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodSettingsState-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L175" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/methodSettings.ts#L177" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage
@@ -7657,7 +8599,7 @@ The name of the stage
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MethodState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L203" >}}">interface <b>MethodState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L205" >}}">interface <b>MethodState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7666,10 +8608,12 @@ Input properties used for looking up and filtering Method resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MethodState-apiKeyRequired">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L207" >}}">property <b>apiKeyRequired</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L209" >}}">property <b>apiKeyRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apiKeyRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify if the method requires an API key
@@ -7677,10 +8621,12 @@ Specify if the method requires an API key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-authorization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L211" >}}">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L213" >}}">property <b>authorization</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
@@ -7688,10 +8634,12 @@ The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COG
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-authorizationScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L215" >}}">property <b>authorizationScopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L217" >}}">property <b>authorizationScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizationScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
@@ -7699,10 +8647,12 @@ The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-authorizerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L219" >}}">property <b>authorizerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L221" >}}">property <b>authorizerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
@@ -7710,10 +8660,12 @@ The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-httpMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L223" >}}">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L225" >}}">property <b>httpMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
@@ -7721,10 +8673,12 @@ The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-requestModels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L229" >}}">property <b>requestModels</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L231" >}}">property <b>requestModels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestModels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of the API models used for the request's content type
@@ -7734,10 +8688,12 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-requestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L234" >}}">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L236" >}}">property <b>requestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of request query string parameters and headers that should be passed to the integration.
@@ -7746,10 +8702,12 @@ For example: `requestParameters = {"method.request.header.X-Some-Header" = true 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-requestValidatorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L238" >}}">property <b>requestValidatorId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L240" >}}">property <b>requestValidatorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestValidatorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of a `aws.apigateway.RequestValidator`
@@ -7757,10 +8715,12 @@ The ID of a `aws.apigateway.RequestValidator`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L242" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L244" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API resource ID
@@ -7768,10 +8728,12 @@ The API resource ID
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MethodState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L246" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/method.ts#L248" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -7780,7 +8742,7 @@ The ID of the associated REST API
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ModelArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L153" >}}">interface <b>ModelArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L155" >}}">interface <b>ModelArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7789,10 +8751,12 @@ The set of arguments for constructing a Model resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ModelArgs-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L157" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L159" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The content type of the model
@@ -7800,10 +8764,12 @@ The content type of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L161" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L163" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the model
@@ -7811,10 +8777,12 @@ The description of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L165" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L167" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the model
@@ -7822,10 +8790,12 @@ The name of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L169" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L171" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -7833,10 +8803,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-schema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L173" >}}">property <b>schema</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L175" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The schema of the model in a JSON form
@@ -7845,7 +8817,7 @@ The schema of the model in a JSON form
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ModelState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L127" >}}">interface <b>ModelState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L129" >}}">interface <b>ModelState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7854,10 +8826,12 @@ Input properties used for looking up and filtering Model resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ModelState-contentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L131" >}}">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L133" >}}">property <b>contentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The content type of the model
@@ -7865,10 +8839,12 @@ The content type of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L135" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L137" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the model
@@ -7876,10 +8852,12 @@ The description of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L139" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L141" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the model
@@ -7887,10 +8865,12 @@ The name of the model
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L143" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L145" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -7898,10 +8878,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-schema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L147" >}}">property <b>schema</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/model.ts#L149" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The schema of the model in a JSON form
@@ -7910,7 +8892,7 @@ The schema of the model in a JSON form
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RequestValidatorArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L133" >}}">interface <b>RequestValidatorArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L135" >}}">interface <b>RequestValidatorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7919,10 +8901,12 @@ The set of arguments for constructing a RequestValidator resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RequestValidatorArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L137" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L139" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the request validator
@@ -7930,10 +8914,12 @@ The name of the request validator
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidatorArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L141" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L143" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -7941,10 +8927,12 @@ The ID of the associated Rest API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidatorArgs-validateRequestBody">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L145" >}}">property <b>validateRequestBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L147" >}}">property <b>validateRequestBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>validateRequestBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to validate request body. Defaults to `false`.
@@ -7952,10 +8940,12 @@ Boolean whether to validate request body. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidatorArgs-validateRequestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L149" >}}">property <b>validateRequestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L151" >}}">property <b>validateRequestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>validateRequestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to validate request parameters. Defaults to `false`.
@@ -7964,7 +8954,7 @@ Boolean whether to validate request parameters. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RequestValidatorState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L111" >}}">interface <b>RequestValidatorState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L113" >}}">interface <b>RequestValidatorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7973,10 +8963,12 @@ Input properties used for looking up and filtering RequestValidator resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RequestValidatorState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L115" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L117" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the request validator
@@ -7984,10 +8976,12 @@ The name of the request validator
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidatorState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L119" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L121" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated Rest API
@@ -7995,10 +8989,12 @@ The ID of the associated Rest API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidatorState-validateRequestBody">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L123" >}}">property <b>validateRequestBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L125" >}}">property <b>validateRequestBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>validateRequestBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to validate request body. Defaults to `false`.
@@ -8006,10 +9002,12 @@ Boolean whether to validate request body. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RequestValidatorState-validateRequestParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L127" >}}">property <b>validateRequestParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/requestValidator.ts#L129" >}}">property <b>validateRequestParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>validateRequestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to validate request parameters. Defaults to `false`.
@@ -8018,7 +9016,7 @@ Boolean whether to validate request parameters. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L142" >}}">interface <b>ResourceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L144" >}}">interface <b>ResourceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8027,10 +9025,12 @@ The set of arguments for constructing a Resource resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceArgs-parentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L146" >}}">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L148" >}}">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the parent API resource
@@ -8038,10 +9038,12 @@ The ID of the parent API resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceArgs-pathPart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L150" >}}">property <b>pathPart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L152" >}}">property <b>pathPart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pathPart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The last path segment of this API resource.
@@ -8049,10 +9051,12 @@ The last path segment of this API resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L154" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L156" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -8061,7 +9065,7 @@ The ID of the associated REST API
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L120" >}}">interface <b>ResourceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L122" >}}">interface <b>ResourceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8070,10 +9074,12 @@ Input properties used for looking up and filtering Resource resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceState-parentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L124" >}}">property <b>parentId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L126" >}}">property <b>parentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the parent API resource
@@ -8081,10 +9087,12 @@ The ID of the parent API resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceState-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L128" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L130" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The complete path for this API resource, including all parent paths.
@@ -8092,10 +9100,12 @@ The complete path for this API resource, including all parent paths.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceState-pathPart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L132" >}}">property <b>pathPart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L134" >}}">property <b>pathPart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pathPart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The last path segment of this API resource.
@@ -8103,10 +9113,12 @@ The last path segment of this API resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L136" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/resource.ts#L138" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -8115,7 +9127,7 @@ The ID of the associated REST API
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResponseArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L151" >}}">interface <b>ResponseArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L153" >}}">interface <b>ResponseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8124,10 +9136,12 @@ The set of arguments for constructing a Response resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResponseArgs-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L155" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L157" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the templates used to transform the response body.
@@ -8135,10 +9149,12 @@ A map specifying the templates used to transform the response body.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResponseArgs-responseTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L159" >}}">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L161" >}}">property <b>responseTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
@@ -8146,10 +9162,12 @@ A map specifying the parameters (paths, query strings and headers) of the Gatewa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResponseArgs-responseType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L163" >}}">property <b>responseType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L165" >}}">property <b>responseType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The response type of the associated GatewayResponse.
@@ -8157,10 +9175,12 @@ The response type of the associated GatewayResponse.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResponseArgs-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L167" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L169" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The string identifier of the associated REST API.
@@ -8168,10 +9188,12 @@ The string identifier of the associated REST API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResponseArgs-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L171" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L173" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code of the Gateway Response.
@@ -8180,7 +9202,7 @@ The HTTP status code of the Gateway Response.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResponseState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L125" >}}">interface <b>ResponseState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L127" >}}">interface <b>ResponseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8189,10 +9211,12 @@ Input properties used for looking up and filtering Response resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResponseState-responseParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L129" >}}">property <b>responseParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L131" >}}">property <b>responseParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the templates used to transform the response body.
@@ -8200,10 +9224,12 @@ A map specifying the templates used to transform the response body.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResponseState-responseTemplates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L133" >}}">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L135" >}}">property <b>responseTemplates</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
@@ -8211,10 +9237,12 @@ A map specifying the parameters (paths, query strings and headers) of the Gatewa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResponseState-responseType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L137" >}}">property <b>responseType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L139" >}}">property <b>responseType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>responseType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The response type of the associated GatewayResponse.
@@ -8222,10 +9250,12 @@ The response type of the associated GatewayResponse.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResponseState-restApiId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L141" >}}">property <b>restApiId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L143" >}}">property <b>restApiId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The string identifier of the associated REST API.
@@ -8233,10 +9263,12 @@ The string identifier of the associated REST API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResponseState-statusCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L145" >}}">property <b>statusCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/response.ts#L147" >}}">property <b>statusCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP status code of the Gateway Response.
@@ -8245,7 +9277,7 @@ The HTTP status code of the Gateway Response.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RestApiArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L215" >}}">interface <b>RestApiArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L217" >}}">interface <b>RestApiArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8254,10 +9286,12 @@ The set of arguments for constructing a RestApi resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RestApiArgs-apiKeySource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L219" >}}">property <b>apiKeySource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L221" >}}">property <b>apiKeySource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apiKeySource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source of the API key for requests. Valid values are HEADER (default) and AUTHORIZER.
@@ -8265,10 +9299,12 @@ The source of the API key for requests. Valid values are HEADER (default) and AU
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiArgs-binaryMediaTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L223" >}}">property <b>binaryMediaTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L225" >}}">property <b>binaryMediaTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>binaryMediaTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.
@@ -8276,10 +9312,12 @@ The list of binary media types supported by the RestApi. By default, the RestApi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiArgs-body">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L227" >}}">property <b>body</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L229" >}}">property <b>body</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An OpenAPI specification that defines the set of routes and integrations to create as part of the REST API.
@@ -8287,10 +9325,12 @@ An OpenAPI specification that defines the set of routes and integrations to crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L231" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L233" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the REST API
@@ -8298,12 +9338,12 @@ The description of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiArgs-endpointConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L235" >}}">property <b>endpointConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L237" >}}">property <b>endpointConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    types: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RestApiEndpointConfiguration'>inputs.apigateway.RestApiEndpointConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Nested argument defining API endpoint configuration including endpoint type. Defined below.
@@ -8311,10 +9351,12 @@ Nested argument defining API endpoint configuration including endpoint type. Def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiArgs-minimumCompressionSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L239" >}}">property <b>minimumCompressionSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L241" >}}">property <b>minimumCompressionSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minimumCompressionSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).
@@ -8322,10 +9364,12 @@ Minimum response size to compress for the REST API. Integer between -1 and 10485
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L243" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L245" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the REST API
@@ -8333,10 +9377,12 @@ The name of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiArgs-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L247" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L249" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 JSON formatted policy document that controls access to the API Gateway.
@@ -8345,7 +9391,7 @@ JSON formatted policy document that controls access to the API Gateway.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RestApiState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L163" >}}">interface <b>RestApiState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L165" >}}">interface <b>RestApiState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8354,10 +9400,12 @@ Input properties used for looking up and filtering RestApi resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RestApiState-apiKeySource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L167" >}}">property <b>apiKeySource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L169" >}}">property <b>apiKeySource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apiKeySource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source of the API key for requests. Valid values are HEADER (default) and AUTHORIZER.
@@ -8365,10 +9413,12 @@ The source of the API key for requests. Valid values are HEADER (default) and AU
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-binaryMediaTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L171" >}}">property <b>binaryMediaTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L173" >}}">property <b>binaryMediaTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>binaryMediaTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of binary media types supported by the RestApi. By default, the RestApi supports only UTF-8-encoded text payloads.
@@ -8376,10 +9426,12 @@ The list of binary media types supported by the RestApi. By default, the RestApi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-body">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L175" >}}">property <b>body</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L177" >}}">property <b>body</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An OpenAPI specification that defines the set of routes and integrations to create as part of the REST API.
@@ -8387,10 +9439,12 @@ An OpenAPI specification that defines the set of routes and integrations to crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L179" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L181" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The creation date of the REST API
@@ -8398,10 +9452,12 @@ The creation date of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L183" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L185" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the REST API
@@ -8409,12 +9465,12 @@ The description of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-endpointConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L187" >}}">property <b>endpointConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L189" >}}">property <b>endpointConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    types: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>endpointConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RestApiEndpointConfiguration'>inputs.apigateway.RestApiEndpointConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Nested argument defining API endpoint configuration including endpoint type. Defined below.
@@ -8422,10 +9478,12 @@ Nested argument defining API endpoint configuration including endpoint type. Def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-executionArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L193" >}}">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L195" >}}">property <b>executionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>executionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The execution ARN part to be used in [`lambdaPermission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `sourceArn`
@@ -8435,10 +9493,12 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-minimumCompressionSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L197" >}}">property <b>minimumCompressionSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L199" >}}">property <b>minimumCompressionSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minimumCompressionSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Minimum response size to compress for the REST API. Integer between -1 and 10485760 (10MB). Setting a value greater than -1 will enable compression, -1 disables compression (default).
@@ -8446,10 +9506,12 @@ Minimum response size to compress for the REST API. Integer between -1 and 10485
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L201" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L203" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the REST API
@@ -8457,10 +9519,12 @@ The name of the REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L205" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L207" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 JSON formatted policy document that controls access to the API Gateway.
@@ -8468,10 +9532,12 @@ JSON formatted policy document that controls access to the API Gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RestApiState-rootResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L209" >}}">property <b>rootResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/restApi.ts#L211" >}}">property <b>rootResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rootResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource ID of the REST API's root
@@ -8480,7 +9546,7 @@ The resource ID of the REST API's root
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StageArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L303" >}}">interface <b>StageArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L305" >}}">interface <b>StageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8489,13 +9555,12 @@ The set of arguments for constructing a Stage resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StageArgs-accessLogSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L307" >}}">property <b>accessLogSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L309" >}}">property <b>accessLogSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    destinationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageAccessLogSettings'>inputs.apigateway.StageAccessLogSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables access logs for the API stage. Detailed below.
@@ -8503,10 +9568,12 @@ Enables access logs for the API stage. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-cacheClusterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L311" >}}">property <b>cacheClusterEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L313" >}}">property <b>cacheClusterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheClusterEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether a cache cluster is enabled for the stage
@@ -8514,10 +9581,12 @@ Specifies whether a cache cluster is enabled for the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-cacheClusterSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L316" >}}">property <b>cacheClusterSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L318" >}}">property <b>cacheClusterSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheClusterSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the cache cluster for the stage, if enabled.
@@ -8526,10 +9595,12 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-clientCertificateId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L320" >}}">property <b>clientCertificateId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L322" >}}">property <b>clientCertificateId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientCertificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The identifier of a client certificate for the stage.
@@ -8537,10 +9608,12 @@ The identifier of a client certificate for the stage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-deployment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L324" >}}">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L326" >}}">property <b>deployment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Deployment'>Deployment</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the deployment that the stage points to
@@ -8548,10 +9621,12 @@ The ID of the deployment that the stage points to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L328" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L330" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the stage
@@ -8559,10 +9634,12 @@ The description of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-documentationVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L332" >}}">property <b>documentationVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L334" >}}">property <b>documentationVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentationVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The version of the associated API documentation
@@ -8570,10 +9647,12 @@ The version of the associated API documentation
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L336" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L338" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -8581,10 +9660,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L340" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L342" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage
@@ -8592,10 +9673,12 @@ The name of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L344" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L346" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -8603,10 +9686,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-variables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L348" >}}">property <b>variables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L350" >}}">property <b>variables</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map that defines the stage variables
@@ -8614,10 +9699,12 @@ A map that defines the stage variables
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageArgs-xrayTracingEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L352" >}}">property <b>xrayTracingEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L354" >}}">property <b>xrayTracingEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>xrayTracingEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether active tracing with X-ray is enabled. Defaults to `false`.
@@ -8626,7 +9713,7 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StageState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L237" >}}">interface <b>StageState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L239" >}}">interface <b>StageState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8635,13 +9722,12 @@ Input properties used for looking up and filtering Stage resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StageState-accessLogSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L241" >}}">property <b>accessLogSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L243" >}}">property <b>accessLogSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    destinationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageAccessLogSettings'>inputs.apigateway.StageAccessLogSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables access logs for the API stage. Detailed below.
@@ -8649,10 +9735,12 @@ Enables access logs for the API stage. Detailed below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-cacheClusterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L245" >}}">property <b>cacheClusterEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L247" >}}">property <b>cacheClusterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheClusterEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether a cache cluster is enabled for the stage
@@ -8660,10 +9748,12 @@ Specifies whether a cache cluster is enabled for the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-cacheClusterSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L250" >}}">property <b>cacheClusterSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L252" >}}">property <b>cacheClusterSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacheClusterSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the cache cluster for the stage, if enabled.
@@ -8672,10 +9762,12 @@ Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `2
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-clientCertificateId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L254" >}}">property <b>clientCertificateId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L256" >}}">property <b>clientCertificateId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientCertificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The identifier of a client certificate for the stage.
@@ -8683,10 +9775,12 @@ The identifier of a client certificate for the stage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-deployment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L258" >}}">property <b>deployment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L260" >}}">property <b>deployment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Deployment'>Deployment</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the deployment that the stage points to
@@ -8694,10 +9788,12 @@ The ID of the deployment that the stage points to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L262" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L264" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the stage
@@ -8705,10 +9801,12 @@ The description of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-documentationVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L266" >}}">property <b>documentationVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L268" >}}">property <b>documentationVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentationVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The version of the associated API documentation
@@ -8716,10 +9814,12 @@ The version of the associated API documentation
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-executionArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L272" >}}">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L274" >}}">property <b>executionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>executionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The execution ARN to be used in [`lambdaPermission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `sourceArn`
@@ -8729,10 +9829,12 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-invokeUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L277" >}}">property <b>invokeUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L279" >}}">property <b>invokeUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invokeUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URL to invoke the API pointing to the stage,
@@ -8741,10 +9843,12 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-restApi">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L281" >}}">property <b>restApi</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L283" >}}">property <b>restApi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RestApi'>RestApi</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the associated REST API
@@ -8752,10 +9856,12 @@ The ID of the associated REST API
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-stageName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L285" >}}">property <b>stageName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L287" >}}">property <b>stageName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stage
@@ -8763,10 +9869,12 @@ The name of the stage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L289" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L291" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -8774,10 +9882,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-variables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L293" >}}">property <b>variables</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L295" >}}">property <b>variables</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map that defines the stage variables
@@ -8785,10 +9895,12 @@ A map that defines the stage variables
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StageState-xrayTracingEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L297" >}}">property <b>xrayTracingEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/stage.ts#L299" >}}">property <b>xrayTracingEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>xrayTracingEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether active tracing with X-ray is enabled. Defaults to `false`.
@@ -8797,7 +9909,7 @@ Whether active tracing with X-ray is enabled. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UsagePlanArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L175" >}}">interface <b>UsagePlanArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L177" >}}">interface <b>UsagePlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8806,13 +9918,12 @@ The set of arguments for constructing a UsagePlan resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UsagePlanArgs-apiStages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L179" >}}">property <b>apiStages</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L181" >}}">property <b>apiStages</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>apiStages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    stage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>apiStages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanApiStage'>inputs.apigateway.UsagePlanApiStage</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The associated API stages of the usage plan.
@@ -8820,10 +9931,12 @@ The associated API stages of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L183" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L185" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of a usage plan.
@@ -8831,10 +9944,12 @@ The description of a usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L187" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L189" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the usage plan.
@@ -8842,10 +9957,12 @@ The name of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanArgs-productCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L191" >}}">property <b>productCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L193" >}}">property <b>productCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>productCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
@@ -8853,14 +9970,12 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanArgs-quotaSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L195" >}}">property <b>quotaSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L197" >}}">property <b>quotaSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>quotaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    limit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    offset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>quotaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanQuotaSettings'>inputs.apigateway.UsagePlanQuotaSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The quota settings of the usage plan.
@@ -8868,13 +9983,12 @@ The quota settings of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanArgs-throttleSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L199" >}}">property <b>throttleSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L201" >}}">property <b>throttleSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    burstLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    rateLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanThrottleSettings'>inputs.apigateway.UsagePlanThrottleSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The throttling limits of the usage plan.
@@ -8883,7 +9997,7 @@ The throttling limits of the usage plan.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UsagePlanKeyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L155" >}}">interface <b>UsagePlanKeyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L157" >}}">interface <b>UsagePlanKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8892,10 +10006,12 @@ The set of arguments for constructing a UsagePlanKey resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UsagePlanKeyArgs-keyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L159" >}}">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L161" >}}">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The identifier of the API key resource.
@@ -8903,10 +10019,12 @@ The identifier of the API key resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKeyArgs-keyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L163" >}}">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L165" >}}">property <b>keyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the API key resource. Currently, the valid key type is API_KEY.
@@ -8914,10 +10032,12 @@ The type of the API key resource. Currently, the valid key type is API_KEY.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKeyArgs-usagePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L167" >}}">property <b>usagePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L169" >}}">property <b>usagePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>usagePlanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the usage plan resource representing to associate the key to.
@@ -8926,7 +10046,7 @@ The Id of the usage plan resource representing to associate the key to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UsagePlanKeyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L129" >}}">interface <b>UsagePlanKeyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L131" >}}">interface <b>UsagePlanKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8935,10 +10055,12 @@ Input properties used for looking up and filtering UsagePlanKey resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UsagePlanKeyState-keyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L133" >}}">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L135" >}}">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The identifier of the API key resource.
@@ -8946,10 +10068,12 @@ The identifier of the API key resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKeyState-keyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L137" >}}">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L139" >}}">property <b>keyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the API key resource. Currently, the valid key type is API_KEY.
@@ -8957,10 +10081,12 @@ The type of the API key resource. Currently, the valid key type is API_KEY.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKeyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L141" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L143" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a usage plan key.
@@ -8968,10 +10094,12 @@ The name of a usage plan key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKeyState-usagePlanId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L145" >}}">property <b>usagePlanId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L147" >}}">property <b>usagePlanId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>usagePlanId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the usage plan resource representing to associate the key to.
@@ -8979,10 +10107,12 @@ The Id of the usage plan resource representing to associate the key to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanKeyState-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L149" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlanKey.ts#L151" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of a usage plan key.
@@ -8991,7 +10121,7 @@ The value of a usage plan key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UsagePlanState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L145" >}}">interface <b>UsagePlanState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L147" >}}">interface <b>UsagePlanState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9000,13 +10130,12 @@ Input properties used for looking up and filtering UsagePlan resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UsagePlanState-apiStages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L149" >}}">property <b>apiStages</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L151" >}}">property <b>apiStages</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>apiStages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    stage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>apiStages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanApiStage'>inputs.apigateway.UsagePlanApiStage</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The associated API stages of the usage plan.
@@ -9014,10 +10143,12 @@ The associated API stages of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L153" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L155" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of a usage plan.
@@ -9025,10 +10156,12 @@ The description of a usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L157" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L159" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the usage plan.
@@ -9036,10 +10169,12 @@ The name of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanState-productCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L161" >}}">property <b>productCode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L163" >}}">property <b>productCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>productCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
@@ -9047,14 +10182,12 @@ The AWS Markeplace product identifier to associate with the usage plan as a SaaS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanState-quotaSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L165" >}}">property <b>quotaSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L167" >}}">property <b>quotaSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>quotaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    limit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    offset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>quotaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanQuotaSettings'>inputs.apigateway.UsagePlanQuotaSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The quota settings of the usage plan.
@@ -9062,13 +10195,12 @@ The quota settings of the usage plan.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UsagePlanState-throttleSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L169" >}}">property <b>throttleSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/usagePlan.ts#L171" >}}">property <b>throttleSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    burstLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    rateLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>throttleSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanThrottleSettings'>inputs.apigateway.UsagePlanThrottleSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The throttling limits of the usage plan.
@@ -9077,7 +10209,7 @@ The throttling limits of the usage plan.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VpcLinkArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L127" >}}">interface <b>VpcLinkArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L129" >}}">interface <b>VpcLinkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9086,10 +10218,12 @@ The set of arguments for constructing a VpcLink resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VpcLinkArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L131" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L133" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the VPC link.
@@ -9097,10 +10231,12 @@ The description of the VPC link.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLinkArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L135" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L137" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name used to label and identify the VPC link.
@@ -9108,10 +10244,12 @@ The name used to label and identify the VPC link.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLinkArgs-targetArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L139" >}}">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L141" >}}">property <b>targetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.
@@ -9120,7 +10258,7 @@ The list of network load balancer arns in the VPC targeted by the VPC link. Curr
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VpcLinkState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L109" >}}">interface <b>VpcLinkState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L111" >}}">interface <b>VpcLinkState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9129,10 +10267,12 @@ Input properties used for looking up and filtering VpcLink resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VpcLinkState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L113" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L115" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the VPC link.
@@ -9140,10 +10280,12 @@ The description of the VPC link.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLinkState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L117" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L119" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name used to label and identify the VPC link.
@@ -9151,10 +10293,12 @@ The name used to label and identify the VPC link.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VpcLinkState-targetArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L121" >}}">property <b>targetArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="apigateway/vpcLink.ts#L123" >}}">property <b>targetArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.

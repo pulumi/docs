@@ -43,10 +43,12 @@ title: Module efs
 
 
 <h2 class="pdoc-module-header" id="FileSystem">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L40" >}}">class <b>FileSystem</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L42" >}}">class <b>FileSystem</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an Elastic File System (EFS) resource.
@@ -83,13 +85,15 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("fooWithLifecylePolicy", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FileSystem-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L109" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L111" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FileSystem(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#FileSystemArgs'>FileSystemArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a FileSystem resource with the given unique name, arguments, and options.
 
@@ -100,13 +104,15 @@ Create a FileSystem resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L51" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FileSystemState'>FileSystemState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FileSystem'>FileSystem</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing FileSystem resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -114,23 +120,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L42" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L62" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of FileSystem.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -138,10 +148,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L70" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L72" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name of the file system.
@@ -149,10 +161,12 @@ Amazon Resource Name of the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-creationToken">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L77" >}}">property <b>creationToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L79" >}}">property <b>creationToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>creationToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name (a maximum of 64 characters are allowed)
@@ -163,10 +177,12 @@ system creation. By default generated by this provider. See [Elastic File System
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L81" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L83" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
@@ -174,10 +190,12 @@ The DNS name for the filesystem per [documented convention](http://docs.aws.amaz
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-encrypted">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L85" >}}">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L87" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, the disk will be encrypted.
@@ -185,10 +203,12 @@ If true, the disk will be encrypted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L42" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -197,10 +217,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L89" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L91" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
@@ -208,12 +230,12 @@ The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-lifecyclePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L93" >}}">property <b>lifecyclePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L95" >}}">property <b>lifecyclePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>lifecyclePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    transitionToIa: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>lifecyclePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FileSystemLifecyclePolicy'>outputs.efs.FileSystemLifecyclePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
@@ -221,10 +243,12 @@ A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_L
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-performanceMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L97" >}}">property <b>performanceMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L99" >}}">property <b>performanceMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>performanceMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
@@ -232,10 +256,12 @@ The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-provisionedThroughputInMibps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L101" >}}">property <b>provisionedThroughputInMibps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L103" >}}">property <b>provisionedThroughputInMibps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>provisionedThroughputInMibps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughputMode` set to `provisioned`.
@@ -243,10 +269,12 @@ The throughput, measured in MiB/s, that you want to provision for the file syste
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L105" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L107" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the file system.
@@ -254,10 +282,12 @@ A mapping of tags to assign to the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-throughputMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L109" >}}">property <b>throughputMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L111" >}}">property <b>throughputMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>throughputMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisionedThroughputInMibps`.
@@ -265,10 +295,12 @@ Throughput mode for the file system. Defaults to `bursting`. Valid values: `burs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystem-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L42" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -278,10 +310,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MountTarget">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L32" >}}">class <b>MountTarget</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L34" >}}">class <b>MountTarget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an Elastic File System (EFS) mount target.
@@ -310,13 +344,15 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MountTarget-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L88" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L90" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MountTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MountTargetArgs'>MountTargetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MountTarget resource with the given unique name, arguments, and options.
 
@@ -327,13 +363,15 @@ Create a MountTarget resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L41" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MountTargetState'>MountTargetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MountTarget'>MountTarget</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MountTarget resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -341,23 +379,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L34" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L52" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MountTarget.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -365,10 +407,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L62" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L64" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
@@ -376,10 +420,12 @@ The DNS name for the given subnet/AZ per [documented convention](http://docs.aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-fileSystemArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L66" >}}">property <b>fileSystemArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L68" >}}">property <b>fileSystemArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fileSystemArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name of the file system.
@@ -387,10 +433,12 @@ Amazon Resource Name of the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-fileSystemId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L70" >}}">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L72" >}}">property <b>fileSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fileSystemId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the file system for which the mount target is intended.
@@ -398,10 +446,12 @@ The ID of the file system for which the mount target is intended.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L34" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -410,10 +460,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L75" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L77" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address (within the address range of the specified subnet) at
@@ -422,10 +474,12 @@ which the file system may be mounted via the mount target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-networkInterfaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L79" >}}">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L81" >}}">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>networkInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network interface that Amazon EFS created when it created the mount target.
@@ -433,10 +487,12 @@ The ID of the network interface that Amazon EFS created when it created the moun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-securityGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L84" >}}">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L86" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of up to 5 VPC security group IDs (that must
@@ -445,10 +501,12 @@ be for the same VPC as subnet specified) in effect for the mount target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L88" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L90" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnet to add the mount target in.
@@ -456,10 +514,12 @@ The ID of the subnet to add the mount target in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTarget-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L34" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -469,13 +529,15 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getFileSystem">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L26" >}}">function <b>getFileSystem</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L28" >}}">function <b>getFileSystem</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getFileSystem(args?: <a href='#GetFileSystemArgs'>GetFileSystemArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetFileSystemResult'>GetFileSystemResult</a>&gt; &amp; <a href='#GetFileSystemResult'>GetFileSystemResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Provides information about an Elastic File System (EFS).
 
@@ -498,13 +560,15 @@ const byId = aws.efs.getFileSystem({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getMountTarget">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L26" >}}">function <b>getMountTarget</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L28" >}}">function <b>getMountTarget</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getMountTarget(args: <a href='#GetMountTargetArgs'>GetMountTargetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetMountTargetResult'>GetMountTargetResult</a>&gt; &amp; <a href='#GetMountTargetResult'>GetMountTargetResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Provides information about an Elastic File System Mount Target (EFS).
 
@@ -527,7 +591,7 @@ const byId = aws.efs.getMountTarget({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="FileSystemArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L209" >}}">interface <b>FileSystemArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L211" >}}">interface <b>FileSystemArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -536,10 +600,12 @@ The set of arguments for constructing a FileSystem resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FileSystemArgs-creationToken">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L216" >}}">property <b>creationToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L218" >}}">property <b>creationToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>creationToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name (a maximum of 64 characters are allowed)
@@ -550,10 +616,12 @@ system creation. By default generated by this provider. See [Elastic File System
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemArgs-encrypted">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L220" >}}">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L222" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, the disk will be encrypted.
@@ -561,10 +629,12 @@ If true, the disk will be encrypted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemArgs-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L224" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L226" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
@@ -572,12 +642,12 @@ The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemArgs-lifecyclePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L228" >}}">property <b>lifecyclePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L230" >}}">property <b>lifecyclePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lifecyclePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    transitionToIa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lifecyclePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FileSystemLifecyclePolicy'>inputs.efs.FileSystemLifecyclePolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
@@ -585,10 +655,12 @@ A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_L
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemArgs-performanceMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L232" >}}">property <b>performanceMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L234" >}}">property <b>performanceMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>performanceMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
@@ -596,10 +668,12 @@ The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemArgs-provisionedThroughputInMibps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L236" >}}">property <b>provisionedThroughputInMibps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L238" >}}">property <b>provisionedThroughputInMibps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>provisionedThroughputInMibps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughputMode` set to `provisioned`.
@@ -607,10 +681,12 @@ The throughput, measured in MiB/s, that you want to provision for the file syste
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L240" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L242" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the file system.
@@ -618,10 +694,12 @@ A mapping of tags to assign to the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemArgs-throughputMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L244" >}}">property <b>throughputMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L246" >}}">property <b>throughputMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>throughputMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisionedThroughputInMibps`.
@@ -630,7 +708,7 @@ Throughput mode for the file system. Defaults to `bursting`. Valid values: `burs
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FileSystemState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L160" >}}">interface <b>FileSystemState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L162" >}}">interface <b>FileSystemState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -639,10 +717,12 @@ Input properties used for looking up and filtering FileSystem resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FileSystemState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L164" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L166" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name of the file system.
@@ -650,10 +730,12 @@ Amazon Resource Name of the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-creationToken">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L171" >}}">property <b>creationToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L173" >}}">property <b>creationToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>creationToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name (a maximum of 64 characters are allowed)
@@ -664,10 +746,12 @@ system creation. By default generated by this provider. See [Elastic File System
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L175" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L177" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
@@ -675,10 +759,12 @@ The DNS name for the filesystem per [documented convention](http://docs.aws.amaz
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-encrypted">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L179" >}}">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L181" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, the disk will be encrypted.
@@ -686,10 +772,12 @@ If true, the disk will be encrypted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L183" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L185" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
@@ -697,12 +785,12 @@ The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-lifecyclePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L187" >}}">property <b>lifecyclePolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L189" >}}">property <b>lifecyclePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lifecyclePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    transitionToIa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lifecyclePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FileSystemLifecyclePolicy'>inputs.efs.FileSystemLifecyclePolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
@@ -710,10 +798,12 @@ A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_L
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-performanceMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L191" >}}">property <b>performanceMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L193" >}}">property <b>performanceMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>performanceMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
@@ -721,10 +811,12 @@ The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-provisionedThroughputInMibps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L195" >}}">property <b>provisionedThroughputInMibps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L197" >}}">property <b>provisionedThroughputInMibps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>provisionedThroughputInMibps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughputMode` set to `provisioned`.
@@ -732,10 +824,12 @@ The throughput, measured in MiB/s, that you want to provision for the file syste
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L199" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L201" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the file system.
@@ -743,10 +837,12 @@ A mapping of tags to assign to the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileSystemState-throughputMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L203" >}}">property <b>throughputMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/fileSystem.ts#L205" >}}">property <b>throughputMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>throughputMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisionedThroughputInMibps`.
@@ -755,7 +851,7 @@ Throughput mode for the file system. Defaults to `bursting`. Valid values: `burs
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetFileSystemArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L47" >}}">interface <b>GetFileSystemArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L49" >}}">interface <b>GetFileSystemArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -764,10 +860,12 @@ A collection of arguments for invoking getFileSystem.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetFileSystemArgs-creationToken">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L51" >}}">property <b>creationToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L53" >}}">property <b>creationToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>creationToken?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Restricts the list to the file system with this creation token.
@@ -775,10 +873,12 @@ Restricts the list to the file system with this creation token.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemArgs-fileSystemId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L55" >}}">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L57" >}}">property <b>fileSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fileSystemId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID that identifies the file system (e.g. fs-ccfc0d65).
@@ -786,16 +886,18 @@ The ID that identifies the file system (e.g. fs-ccfc0d65).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L56" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L58" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetFileSystemResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L62" >}}">interface <b>GetFileSystemResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L64" >}}">interface <b>GetFileSystemResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -804,10 +906,12 @@ A collection of values returned by getFileSystem.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetFileSystemResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L66" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L68" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name of the file system.
@@ -815,18 +919,22 @@ Amazon Resource Name of the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemResult-creationToken">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L67" >}}">property <b>creationToken</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L69" >}}">property <b>creationToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>creationToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemResult-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L71" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L73" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
@@ -834,10 +942,12 @@ The DNS name for the filesystem per [documented convention](http://docs.aws.amaz
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemResult-encrypted">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L75" >}}">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L77" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether EFS is encrypted.
@@ -845,18 +955,22 @@ Whether EFS is encrypted.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemResult-fileSystemId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L76" >}}">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L78" >}}">property <b>fileSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fileSystemId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L92" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L94" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -864,10 +978,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemResult-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L80" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L82" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN for the KMS encryption key.
@@ -875,10 +991,12 @@ The ARN for the KMS encryption key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemResult-performanceMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L84" >}}">property <b>performanceMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L86" >}}">property <b>performanceMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>performanceMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PerformanceMode of the file system.
@@ -886,10 +1004,12 @@ The PerformanceMode of the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFileSystemResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L88" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getFileSystem.ts#L90" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of tags assigned to the file system.
@@ -898,7 +1018,7 @@ The list of tags assigned to the file system.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetMountTargetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L44" >}}">interface <b>GetMountTargetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L46" >}}">interface <b>GetMountTargetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -907,10 +1027,12 @@ A collection of arguments for invoking getMountTarget.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetMountTargetArgs-mountTargetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L48" >}}">property <b>mountTargetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L50" >}}">property <b>mountTargetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mountTargetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the mount target that you want to have described
@@ -919,7 +1041,7 @@ ID of the mount target that you want to have described
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetMountTargetResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L54" >}}">interface <b>GetMountTargetResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L56" >}}">interface <b>GetMountTargetResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -928,10 +1050,12 @@ A collection of values returned by getMountTarget.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetMountTargetResult-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L58" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L60" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
@@ -939,10 +1063,12 @@ The DNS name for the given subnet/AZ per [documented convention](http://docs.aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-fileSystemArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L62" >}}">property <b>fileSystemArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L64" >}}">property <b>fileSystemArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fileSystemArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name of the file system for which the mount target is intended.
@@ -950,10 +1076,12 @@ Amazon Resource Name of the file system for which the mount target is intended.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-fileSystemId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L66" >}}">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L68" >}}">property <b>fileSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fileSystemId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the file system for which the mount target is intended.
@@ -961,10 +1089,12 @@ ID of the file system for which the mount target is intended.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L87" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L89" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -972,10 +1102,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L70" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L72" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Address at which the file system may be mounted via the mount target.
@@ -983,18 +1115,22 @@ Address at which the file system may be mounted via the mount target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-mountTargetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L71" >}}">property <b>mountTargetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L73" >}}">property <b>mountTargetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mountTargetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-networkInterfaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L75" >}}">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L77" >}}">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkInterfaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network interface that Amazon EFS created when it created the mount target.
@@ -1002,10 +1138,12 @@ The ID of the network interface that Amazon EFS created when it created the moun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-securityGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L79" >}}">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L81" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of VPC security group IDs attached to the mount target.
@@ -1013,10 +1151,12 @@ List of VPC security group IDs attached to the mount target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetMountTargetResult-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L83" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/getMountTarget.ts#L85" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the mount target's subnet.
@@ -1025,7 +1165,7 @@ ID of the mount target's subnet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MountTargetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L175" >}}">interface <b>MountTargetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L177" >}}">interface <b>MountTargetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1034,10 +1174,12 @@ The set of arguments for constructing a MountTarget resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MountTargetArgs-fileSystemId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L179" >}}">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L181" >}}">property <b>fileSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fileSystemId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the file system for which the mount target is intended.
@@ -1045,10 +1187,12 @@ The ID of the file system for which the mount target is intended.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetArgs-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L184" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L186" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address (within the address range of the specified subnet) at
@@ -1057,10 +1201,12 @@ which the file system may be mounted via the mount target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetArgs-securityGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L189" >}}">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L191" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of up to 5 VPC security group IDs (that must
@@ -1069,10 +1215,12 @@ be for the same VPC as subnet specified) in effect for the mount target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetArgs-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L193" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L195" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnet to add the mount target in.
@@ -1081,7 +1229,7 @@ The ID of the subnet to add the mount target in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MountTargetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L139" >}}">interface <b>MountTargetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L141" >}}">interface <b>MountTargetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1090,10 +1238,12 @@ Input properties used for looking up and filtering MountTarget resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MountTargetState-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L143" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L145" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
@@ -1101,10 +1251,12 @@ The DNS name for the given subnet/AZ per [documented convention](http://docs.aws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetState-fileSystemArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L147" >}}">property <b>fileSystemArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L149" >}}">property <b>fileSystemArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fileSystemArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name of the file system.
@@ -1112,10 +1264,12 @@ Amazon Resource Name of the file system.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetState-fileSystemId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L151" >}}">property <b>fileSystemId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L153" >}}">property <b>fileSystemId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fileSystemId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the file system for which the mount target is intended.
@@ -1123,10 +1277,12 @@ The ID of the file system for which the mount target is intended.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetState-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L156" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L158" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address (within the address range of the specified subnet) at
@@ -1135,10 +1291,12 @@ which the file system may be mounted via the mount target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetState-networkInterfaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L160" >}}">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L162" >}}">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkInterfaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network interface that Amazon EFS created when it created the mount target.
@@ -1146,10 +1304,12 @@ The ID of the network interface that Amazon EFS created when it created the moun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetState-securityGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L165" >}}">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L167" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of up to 5 VPC security group IDs (that must
@@ -1158,10 +1318,12 @@ be for the same VPC as subnet specified) in effect for the mount target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MountTargetState-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L169" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="efs/mountTarget.ts#L171" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnet to add the mount target in.

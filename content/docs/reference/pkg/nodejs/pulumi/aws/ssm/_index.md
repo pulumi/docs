@@ -74,7 +74,9 @@ title: Module ssm
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L40" >}}">class <b>Activation</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.
@@ -114,10 +116,12 @@ const foo = new aws.ssm.Activation("foo", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L102" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Activation(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ActivationArgs'>ActivationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Activation resource with the given unique name, arguments, and options.
 
@@ -131,10 +135,12 @@ Create a Activation resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ActivationState'>ActivationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Activation'>Activation</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Activation resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -142,23 +148,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Activation-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L40" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Activation-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Activation.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -169,7 +179,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L70" >}}">property <b>activationCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>activationCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The code the system generates when it processes the activation.
@@ -180,7 +192,9 @@ The code the system generates when it processes the activation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L74" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the resource that you want to register.
@@ -191,7 +205,9 @@ The description of the resource that you want to register.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L78" >}}">property <b>expirationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>expirationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time.
@@ -202,7 +218,9 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L82" >}}">property <b>expired</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>expired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the current activation has expired.
@@ -213,7 +231,9 @@ If the current activation has expired.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L86" >}}">property <b>iamRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>iamRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM Role to attach to the managed instance.
@@ -221,10 +241,12 @@ The IAM Role to attach to the managed instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Activation-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L40" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -236,7 +258,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default name of the registered managed instance.
@@ -247,7 +271,9 @@ The default name of the registered managed instance.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L94" >}}">property <b>registrationCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>registrationCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of managed instances that are currently registered using this activation.
@@ -258,7 +284,9 @@ The number of managed instances that are currently registered using this activat
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L98" >}}">property <b>registrationLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>registrationLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of managed instances you want to register. The default value is 1 instance.
@@ -269,7 +297,9 @@ The maximum number of managed instances you want to register. The default value 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L102" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -277,10 +307,12 @@ A mapping of tags to assign to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Activation-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L40" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -290,10 +322,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Association">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L26" >}}">class <b>Association</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L28" >}}">class <b>Association</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Associates an SSM Document to an instance or EC2 tag.
@@ -316,13 +350,15 @@ const example = new aws.ssm.Association("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Association-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L97" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L99" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Association(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#AssociationArgs'>AssociationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Association resource with the given unique name, arguments, and options.
 
@@ -333,13 +369,15 @@ Create a Association resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L35" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AssociationState'>AssociationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Association'>Association</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Association resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -347,23 +385,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L46" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Association.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -371,18 +413,22 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-associationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L53" >}}">property <b>associationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L55" >}}">property <b>associationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-associationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L57" >}}">property <b>associationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L59" >}}">property <b>associationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The descriptive name for the association.
@@ -390,10 +436,12 @@ The descriptive name for the association.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-complianceSeverity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L61" >}}">property <b>complianceSeverity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L63" >}}">property <b>complianceSeverity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>complianceSeverity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
@@ -401,10 +449,12 @@ The compliance severity for the association. Can be one of the following: `UNSPE
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-documentVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L65" >}}">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L67" >}}">property <b>documentVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>documentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The document version you want to associate with the target(s). Can be a specific version or the default version.
@@ -412,10 +462,12 @@ The document version you want to associate with the target(s). Can be a specific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -424,10 +476,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L69" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L71" >}}">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
@@ -435,10 +489,12 @@ The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-maxConcurrency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L73" >}}">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L75" >}}">property <b>maxConcurrency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxConcurrency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
@@ -446,10 +502,12 @@ The maximum number of targets allowed to run the association at the same time. Y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-maxErrors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L77" >}}">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L79" >}}">property <b>maxErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxErrors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
@@ -457,10 +515,12 @@ The number of errors that are allowed before the system stops sending requests t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L81" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L83" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSM document to apply.
@@ -468,13 +528,12 @@ The name of the SSM document to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-outputLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L85" >}}">property <b>outputLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L87" >}}">property <b>outputLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>outputLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    s3BucketName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    s3KeyPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>outputLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssociationOutputLocation'>outputs.ssm.AssociationOutputLocation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An output location block. Output Location is documented below.
@@ -482,10 +541,12 @@ An output location block. Output Location is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L89" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L91" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of arbitrary string parameters to pass to the SSM document.
@@ -493,10 +554,12 @@ A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-scheduleExpression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L93" >}}">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L95" >}}">property <b>scheduleExpression</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scheduleExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A cron expression when the association will be applied to the target(s).
@@ -504,13 +567,12 @@ A cron expression when the association will be applied to the target(s).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L97" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L99" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AssociationTarget'>outputs.ssm.AssociationTarget</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
@@ -518,10 +580,12 @@ A block containing the targets of the SSM association. Targets are documented be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Association-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -531,10 +595,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Document">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L56" >}}">class <b>Document</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L58" >}}">class <b>Document</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an SSM Document resource
@@ -587,13 +653,15 @@ The permissions mapping supports the following:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Document-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L151" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L153" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Document(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DocumentArgs'>DocumentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Document resource with the given unique name, arguments, and options.
 
@@ -604,13 +672,15 @@ Create a Document resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L65" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L67" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DocumentState'>DocumentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Document'>Document</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Document resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -618,23 +688,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L58" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L76" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L78" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Document.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -642,18 +716,22 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L83" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L85" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L87" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L89" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The JSON or YAML content of the document.
@@ -661,10 +739,12 @@ The JSON or YAML content of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L91" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L93" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date the document was created.
@@ -672,10 +752,12 @@ The date the document was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-defaultVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L95" >}}">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L97" >}}">property <b>defaultVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default version of the document.
@@ -683,10 +765,12 @@ The default version of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L99" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L101" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the document.
@@ -694,10 +778,12 @@ The description of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-documentFormat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L103" >}}">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L105" >}}">property <b>documentFormat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>documentFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The format of the document. Valid document types include: `JSON` and `YAML`
@@ -705,10 +791,12 @@ The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-documentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L107" >}}">property <b>documentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L109" >}}">property <b>documentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>documentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the document. Valid document types include: `Command`, `Policy`, `Automation` and `Session`
@@ -716,10 +804,12 @@ The type of the document. Valid document types include: `Command`, `Policy`, `Au
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-hash">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L111" >}}">property <b>hash</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L113" >}}">property <b>hash</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The sha1 or sha256 of the document content
@@ -727,10 +817,12 @@ The sha1 or sha256 of the document content
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-hashType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L115" >}}">property <b>hashType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L117" >}}">property <b>hashType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hashType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 "Sha1" "Sha256". The hashing algorithm used when hashing the content.
@@ -738,10 +830,12 @@ The sha1 or sha256 of the document content
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L58" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -750,10 +844,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-latestVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L119" >}}">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L121" >}}">property <b>latestVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>latestVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The latest version of the document.
@@ -761,10 +857,12 @@ The latest version of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L123" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the document.
@@ -772,10 +870,12 @@ The name of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L127" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L129" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS user account of the person who created the document.
@@ -783,15 +883,12 @@ The AWS user account of the person who created the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L131" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L133" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    defaultValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentParameter'>outputs.ssm.DocumentParameter</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The parameters that are available to this document.
@@ -799,13 +896,12 @@ The parameters that are available to this document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-permissions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L135" >}}">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L137" >}}">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    accountIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DocumentPermissions'>outputs.ssm.DocumentPermissions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Additional Permissions to attach to the document. See Permissions below for details.
@@ -813,10 +909,12 @@ Additional Permissions to attach to the document. See Permissions below for deta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-platformTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L139" >}}">property <b>platformTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L141" >}}">property <b>platformTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>platformTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
@@ -824,10 +922,12 @@ A list of OS platforms compatible with this SSM document, either "Windows" or "L
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-schemaVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L143" >}}">property <b>schemaVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L145" >}}">property <b>schemaVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>schemaVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The schema version of the document.
@@ -835,10 +935,12 @@ The schema version of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L147" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L149" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 "Creating", "Active" or "Deleting". The current status of the document.
@@ -846,10 +948,12 @@ The schema version of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L151" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L153" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -857,10 +961,12 @@ A mapping of tags to assign to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Document-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L58" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -870,10 +976,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindow">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L25" >}}">class <b>MaintenanceWindow</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L27" >}}">class <b>MaintenanceWindow</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an SSM Maintenance Window resource
@@ -895,13 +1003,15 @@ const production = new aws.ssm.MaintenanceWindow("production", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindow-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L91" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L93" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MaintenanceWindow(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MaintenanceWindowArgs'>MaintenanceWindowArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MaintenanceWindow resource with the given unique name, arguments, and options.
 
@@ -912,13 +1022,15 @@ Create a MaintenanceWindow resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L34" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MaintenanceWindowState'>MaintenanceWindowState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MaintenanceWindow'>MaintenanceWindow</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MaintenanceWindow resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -926,23 +1038,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L45" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MaintenanceWindow.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -950,10 +1066,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-allowUnassociatedTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L55" >}}">property <b>allowUnassociatedTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L57" >}}">property <b>allowUnassociatedTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowUnassociatedTargets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
@@ -961,10 +1079,12 @@ Whether targets must be registered with the Maintenance Window before tasks can 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-cutoff">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L59" >}}">property <b>cutoff</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L61" >}}">property <b>cutoff</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cutoff: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
@@ -972,10 +1092,12 @@ The number of hours before the end of the Maintenance Window that Systems Manage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-duration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L63" >}}">property <b>duration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L65" >}}">property <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The duration of the Maintenance Window in hours.
@@ -983,10 +1105,12 @@ The duration of the Maintenance Window in hours.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L67" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L69" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the maintenance window is enabled. Default: `true`.
@@ -994,10 +1118,12 @@ Whether the maintenance window is enabled. Default: `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-endDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L71" >}}">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L73" >}}">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
@@ -1005,10 +1131,12 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1017,10 +1145,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L75" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L77" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the maintenance window.
@@ -1028,10 +1158,12 @@ The name of the maintenance window.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L79" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L81" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
@@ -1039,10 +1171,12 @@ The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-scheduleTimezone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L83" >}}">property <b>scheduleTimezone</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L85" >}}">property <b>scheduleTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scheduleTimezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
@@ -1050,10 +1184,12 @@ Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone D
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-startDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L87" >}}">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L89" >}}">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>startDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
@@ -1061,10 +1197,12 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L91" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L93" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1072,10 +1210,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindow-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1085,10 +1225,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindowTarget">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L34" >}}">class <b>MaintenanceWindowTarget</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L36" >}}">class <b>MaintenanceWindowTarget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an SSM Maintenance Window Target resource
@@ -1119,13 +1261,15 @@ const target1 = new aws.ssm.MaintenanceWindowTarget("target1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L84" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L86" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MaintenanceWindowTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MaintenanceWindowTargetArgs'>MaintenanceWindowTargetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MaintenanceWindowTarget resource with the given unique name, arguments, and options.
 
@@ -1136,13 +1280,15 @@ Create a MaintenanceWindowTarget resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MaintenanceWindowTargetState'>MaintenanceWindowTargetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MaintenanceWindowTarget'>MaintenanceWindowTarget</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MaintenanceWindowTarget resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1150,23 +1296,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MaintenanceWindowTarget.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1174,10 +1324,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L64" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L66" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the maintenance window target.
@@ -1185,10 +1337,12 @@ The description of the maintenance window target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1197,10 +1351,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L68" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the maintenance window target.
@@ -1208,10 +1364,12 @@ The name of the maintenance window target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-ownerInformation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L72" >}}">property <b>ownerInformation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L74" >}}">property <b>ownerInformation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ownerInformation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
@@ -1219,10 +1377,12 @@ User-provided value that will be included in any CloudWatch events raised while 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-resourceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L76" >}}">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L78" >}}">property <b>resourceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
@@ -1230,13 +1390,12 @@ The type of target being registered with the Maintenance Window. Possible values
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L80" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L82" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTargetTarget'>outputs.ssm.MaintenanceWindowTargetTarget</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
@@ -1244,10 +1403,12 @@ The targets (either instances or tags). Instances are specified using Key=Instan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1256,10 +1417,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTarget-windowId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L84" >}}">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L86" >}}">property <b>windowId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>windowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the maintenance window to register the target with.
@@ -1268,10 +1431,12 @@ The Id of the maintenance window to register the target with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindowTask">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L136" >}}">class <b>MaintenanceWindowTask</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L138" >}}">class <b>MaintenanceWindowTask</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an SSM Maintenance Window Task resource
@@ -1404,13 +1569,15 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L214" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L216" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MaintenanceWindowTask(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MaintenanceWindowTaskArgs'>MaintenanceWindowTaskArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MaintenanceWindowTask resource with the given unique name, arguments, and options.
 
@@ -1421,13 +1588,15 @@ Create a MaintenanceWindowTask resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L145" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L147" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MaintenanceWindowTaskState'>MaintenanceWindowTaskState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MaintenanceWindowTask'>MaintenanceWindowTask</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MaintenanceWindowTask resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1435,23 +1604,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L138" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L156" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L158" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MaintenanceWindowTask.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1459,10 +1632,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L166" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L168" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the maintenance window task.
@@ -1470,10 +1645,12 @@ The description of the maintenance window task.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L138" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1482,14 +1659,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-loggingInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L170" >}}">property <b>loggingInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L172" >}}">property <b>loggingInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>loggingInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    s3BucketName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    s3BucketPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    s3Region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>loggingInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskLoggingInfo'>outputs.ssm.MaintenanceWindowTaskLoggingInfo</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `taskInvocationParameters` configuration block `runCommandParameters` configuration block `output_s3_*` arguments instead. Conflicts with `taskInvocationParameters`. Documented below.
@@ -1497,10 +1672,12 @@ A structure containing information about an Amazon S3 bucket to write instance-l
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-maxConcurrency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L174" >}}">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L176" >}}">property <b>maxConcurrency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxConcurrency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of targets this task can be run for in parallel.
@@ -1508,10 +1685,12 @@ The maximum number of targets this task can be run for in parallel.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-maxErrors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L178" >}}">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L180" >}}">property <b>maxErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxErrors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of errors allowed before this task stops being scheduled.
@@ -1519,10 +1698,12 @@ The maximum number of errors allowed before this task stops being scheduled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L182" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L184" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The parameter name.
@@ -1530,10 +1711,12 @@ The parameter name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L186" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L188" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
@@ -1541,10 +1724,12 @@ The priority of the task in the Maintenance Window, the lower the number the hig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-serviceRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L190" >}}">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L192" >}}">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM service role to assume during task execution.
@@ -1552,13 +1737,12 @@ The IAM service role to assume during task execution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L194" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L196" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTarget'>outputs.ssm.MaintenanceWindowTaskTarget</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
@@ -1566,10 +1750,12 @@ The targets (either instances or window target ids). Instances are specified usi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-taskArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L198" >}}">property <b>taskArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L200" >}}">property <b>taskArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>taskArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the task to execute.
@@ -1577,45 +1763,12 @@ The ARN of the task to execute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-taskInvocationParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L202" >}}">property <b>taskInvocationParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L204" >}}">property <b>taskInvocationParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>taskInvocationParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    automationParameters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        documentVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        parameters: {
-            name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        }[];
-    };
-    lambdaParameters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        clientContext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        payload: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        qualifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    runCommandParameters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        comment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        documentHash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        documentHashType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        notificationConfig: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-            notificationArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            notificationEvents: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-            notificationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-        outputS3Bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        outputS3KeyPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        parameters: {
-            name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        }[];
-        serviceRoleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        timeoutSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    };
-    stepFunctionsParameters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        input: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>taskInvocationParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskInvocationParameters'>outputs.ssm.MaintenanceWindowTaskTaskInvocationParameters</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The parameters for task execution. This argument is conflict with `taskParameters` and `loggingInfo`.
@@ -1623,13 +1776,12 @@ The parameters for task execution. This argument is conflict with `taskParameter
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-taskParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L206" >}}">property <b>taskParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L208" >}}">property <b>taskParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>taskParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>taskParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#MaintenanceWindowTaskTaskParameter'>outputs.ssm.MaintenanceWindowTaskTaskParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A structure containing information about parameters required by the particular `taskArn`. Use `parameter` configuration blocks under the `taskInvocationParameters` configuration block instead. Conflicts with `taskInvocationParameters`. Documented below.
@@ -1637,10 +1789,12 @@ A structure containing information about parameters required by the particular `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-taskType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L210" >}}">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L212" >}}">property <b>taskType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of task being registered. The only allowed value is `RUN_COMMAND`.
@@ -1648,10 +1802,12 @@ The type of task being registered. The only allowed value is `RUN_COMMAND`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L138" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1660,10 +1816,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTask-windowId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L214" >}}">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L216" >}}">property <b>windowId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>windowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the maintenance window to register the task with.
@@ -1672,10 +1830,12 @@ The Id of the maintenance window to register the task with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Parameter">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L59" >}}">class <b>Parameter</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L61" >}}">class <b>Parameter</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an SSM Parameter resource.
@@ -1729,13 +1889,15 @@ const secret = new aws.ssm.Parameter("secret", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Parameter-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L129" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L131" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Parameter(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ParameterArgs'>ParameterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Parameter resource with the given unique name, arguments, and options.
 
@@ -1746,13 +1908,15 @@ Create a Parameter resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L68" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L70" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ParameterState'>ParameterState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Parameter'>Parameter</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Parameter resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1760,23 +1924,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L61" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L79" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L81" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Parameter.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1784,10 +1952,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-allowedPattern">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L89" >}}">property <b>allowedPattern</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L91" >}}">property <b>allowedPattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowedPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A regular expression used to validate the parameter value.
@@ -1795,10 +1965,12 @@ A regular expression used to validate the parameter value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L93" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L95" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the parameter.
@@ -1806,10 +1978,12 @@ The ARN of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L97" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L99" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the parameter.
@@ -1817,10 +1991,12 @@ The description of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L61" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1829,10 +2005,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-keyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L101" >}}">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L103" >}}">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The KMS key id or arn for encrypting a SecureString.
@@ -1840,10 +2018,12 @@ The KMS key id or arn for encrypting a SecureString.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L105" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L107" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the parameter. If the name contains a path (e.g. any forward slashes (`/`)), it must be fully qualified with a leading forward slash (`/`). For additional requirements and constraints, see the [AWS SSM User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html).
@@ -1851,10 +2031,12 @@ The name of the parameter. If the name contains a path (e.g. any forward slashes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-overwrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L109" >}}">property <b>overwrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L111" >}}">property <b>overwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>overwrite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
@@ -1862,10 +2044,12 @@ Overwrite an existing parameter. If not specified, will default to `false` if th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L113" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L115" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -1873,10 +2057,12 @@ A mapping of tags to assign to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-tier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L117" >}}">property <b>tier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L119" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard` and `Advanced`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
@@ -1884,10 +2070,12 @@ The tier of the parameter. If not specified, will default to `Standard`. Valid t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L121" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L123" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ParameterType'>ParameterType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
@@ -1895,10 +2083,12 @@ The type of the parameter. Valid types are `String`, `StringList` and `SecureStr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L61" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1907,10 +2097,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L125" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L127" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the parameter.
@@ -1918,10 +2110,12 @@ The value of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Parameter-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L129" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L131" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The version of the parameter.
@@ -1930,10 +2124,12 @@ The version of the parameter.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PatchBaseline">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L94" >}}">class <b>PatchBaseline</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L96" >}}">class <b>PatchBaseline</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an SSM Patch Baseline resource
@@ -2024,13 +2220,15 @@ const production = new aws.ssm.PatchBaseline("production", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PatchBaseline-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L153" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L155" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PatchBaseline(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#PatchBaselineArgs'>PatchBaselineArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a PatchBaseline resource with the given unique name, arguments, and options.
 
@@ -2041,13 +2239,15 @@ Create a PatchBaseline resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L103" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L105" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PatchBaselineState'>PatchBaselineState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PatchBaseline'>PatchBaseline</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing PatchBaseline resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2055,23 +2255,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L96" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L114" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L116" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of PatchBaseline.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2079,18 +2283,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-approvalRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L124" >}}">property <b>approvalRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L126" >}}">property <b>approvalRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>approvalRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    approveAfterDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    complianceLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    enableNonSecurity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    patchFilters: {
-        key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    }[];
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>approvalRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineApprovalRule'>outputs.ssm.PatchBaselineApprovalRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
@@ -2098,10 +2296,12 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-approvedPatches">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L128" >}}">property <b>approvedPatches</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L130" >}}">property <b>approvedPatches</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>approvedPatches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of explicitly approved patches for the baseline.
@@ -2109,10 +2309,12 @@ A list of explicitly approved patches for the baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-approvedPatchesComplianceLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L132" >}}">property <b>approvedPatchesComplianceLevel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L134" >}}">property <b>approvedPatchesComplianceLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>approvedPatchesComplianceLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
@@ -2120,10 +2322,12 @@ Defines the compliance level for approved patches. This means that if an approve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L136" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L138" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the patch baseline.
@@ -2131,13 +2335,12 @@ The description of the patch baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-globalFilters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L140" >}}">property <b>globalFilters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L142" >}}">property <b>globalFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>globalFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>globalFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PatchBaselineGlobalFilter'>outputs.ssm.PatchBaselineGlobalFilter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
@@ -2145,10 +2348,12 @@ A set of global filters used to exclude patches from the baseline. Up to 4 globa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L96" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2157,10 +2362,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L144" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L146" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the patch baseline.
@@ -2168,10 +2375,12 @@ The name of the patch baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L148" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L150" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>operatingSystem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
@@ -2179,10 +2388,12 @@ Defines the operating system the patch baseline applies to. Supported operating 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-rejectedPatches">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L152" >}}">property <b>rejectedPatches</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L154" >}}">property <b>rejectedPatches</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>rejectedPatches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of rejected patches.
@@ -2190,18 +2401,22 @@ A list of rejected patches.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L153" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L155" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaseline-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L96" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2211,10 +2426,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PatchGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L27" >}}">class <b>PatchGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L29" >}}">class <b>PatchGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an SSM Patch Group resource
@@ -2238,13 +2455,15 @@ const patchgroup = new aws.ssm.PatchGroup("patchgroup", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PatchGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L61" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L63" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PatchGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PatchGroupArgs'>PatchGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a PatchGroup resource with the given unique name, arguments, and options.
 
@@ -2255,13 +2474,15 @@ Create a PatchGroup resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroup-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L36" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PatchGroupState'>PatchGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PatchGroup'>PatchGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing PatchGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2269,23 +2490,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L47" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of PatchGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2293,10 +2518,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroup-baselineId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L57" >}}">property <b>baselineId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L59" >}}">property <b>baselineId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>baselineId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the patch baseline to register the patch group with.
@@ -2304,10 +2531,12 @@ The ID of the patch baseline to register the patch group with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2316,10 +2545,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroup-patchGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L61" >}}">property <b>patchGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L63" >}}">property <b>patchGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>patchGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the patch group that should be registered with the patch baseline.
@@ -2327,10 +2558,12 @@ The name of the patch group that should be registered with the patch baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2340,10 +2573,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceDataSync">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L71" >}}">class <b>ResourceDataSync</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L73" >}}">class <b>ResourceDataSync</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a SSM resource data sync.
@@ -2411,13 +2646,15 @@ const foo = new aws.ssm.ResourceDataSync("foo", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceDataSync-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L105" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L107" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ResourceDataSync(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ResourceDataSyncArgs'>ResourceDataSyncArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ResourceDataSync resource with the given unique name, arguments, and options.
 
@@ -2428,13 +2665,15 @@ Create a ResourceDataSync resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSync-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L80" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L82" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ResourceDataSyncState'>ResourceDataSyncState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ResourceDataSync'>ResourceDataSync</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ResourceDataSync resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2442,23 +2681,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSync-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L73" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSync-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L91" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L93" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ResourceDataSync.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2466,10 +2709,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSync-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L73" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2478,10 +2723,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSync-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L101" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L103" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name for the configuration.
@@ -2489,16 +2736,12 @@ Name for the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSync-s3Destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L105" >}}">property <b>s3Destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L107" >}}">property <b>s3Destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    bucketName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    kmsKeyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    syncFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResourceDataSyncS3Destination'>outputs.ssm.ResourceDataSyncS3Destination</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon S3 configuration details for the sync.
@@ -2506,10 +2749,12 @@ Amazon S3 configuration details for the sync.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSync-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L73" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2519,13 +2764,15 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getDocument">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L39" >}}">function <b>getDocument</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L41" >}}">function <b>getDocument</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getDocument(args: <a href='#GetDocumentArgs'>GetDocumentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDocumentResult'>GetDocumentResult</a>&gt; &amp; <a href='#GetDocumentResult'>GetDocumentResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Gets the contents of the specified Systems Manager document.
 
@@ -2561,13 +2808,15 @@ const test = aws_ssm_document_test.name.apply(name => aws.ssm.getDocument({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getParameter">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L29" >}}">function <b>getParameter</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L31" >}}">function <b>getParameter</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getParameter(args: <a href='#GetParameterArgs'>GetParameterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetParameterResult'>GetParameterResult</a>&gt; &amp; <a href='#GetParameterResult'>GetParameterResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Provides an SSM Parameter data source.
 
@@ -2605,7 +2854,9 @@ The set of arguments for constructing a Activation resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L200" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the resource that you want to register.
@@ -2616,7 +2867,9 @@ The description of the resource that you want to register.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L204" >}}">property <b>expirationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time.
@@ -2627,7 +2880,9 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L208" >}}">property <b>iamRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>iamRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM Role to attach to the managed instance.
@@ -2638,7 +2893,9 @@ The IAM Role to attach to the managed instance.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L212" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default name of the registered managed instance.
@@ -2649,7 +2906,9 @@ The default name of the registered managed instance.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L216" >}}">property <b>registrationLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registrationLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of managed instances you want to register. The default value is 1 instance.
@@ -2660,7 +2919,9 @@ The maximum number of managed instances you want to register. The default value 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L220" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -2681,7 +2942,9 @@ Input properties used for looking up and filtering Activation resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L158" >}}">property <b>activationCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activationCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The code the system generates when it processes the activation.
@@ -2692,7 +2955,9 @@ The code the system generates when it processes the activation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L162" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the resource that you want to register.
@@ -2703,7 +2968,9 @@ The description of the resource that you want to register.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L166" >}}">property <b>expirationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time.
@@ -2714,7 +2981,9 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L170" >}}">property <b>expired</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the current activation has expired.
@@ -2725,7 +2994,9 @@ If the current activation has expired.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L174" >}}">property <b>iamRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>iamRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM Role to attach to the managed instance.
@@ -2736,7 +3007,9 @@ The IAM Role to attach to the managed instance.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L178" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default name of the registered managed instance.
@@ -2747,7 +3020,9 @@ The default name of the registered managed instance.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L182" >}}">property <b>registrationCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registrationCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of managed instances that are currently registered using this activation.
@@ -2758,7 +3033,9 @@ The number of managed instances that are currently registered using this activat
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L186" >}}">property <b>registrationLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registrationLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of managed instances you want to register. The default value is 1 instance.
@@ -2769,7 +3046,9 @@ The maximum number of managed instances you want to register. The default value 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/activation.ts#L190" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -2778,7 +3057,7 @@ A mapping of tags to assign to the object.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AssociationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L203" >}}">interface <b>AssociationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L205" >}}">interface <b>AssociationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2787,10 +3066,12 @@ The set of arguments for constructing a Association resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AssociationArgs-associationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L207" >}}">property <b>associationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L209" >}}">property <b>associationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The descriptive name for the association.
@@ -2798,10 +3079,12 @@ The descriptive name for the association.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-complianceSeverity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L211" >}}">property <b>complianceSeverity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L213" >}}">property <b>complianceSeverity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>complianceSeverity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
@@ -2809,10 +3092,12 @@ The compliance severity for the association. Can be one of the following: `UNSPE
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-documentVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L215" >}}">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L217" >}}">property <b>documentVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The document version you want to associate with the target(s). Can be a specific version or the default version.
@@ -2820,10 +3105,12 @@ The document version you want to associate with the target(s). Can be a specific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L219" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L221" >}}">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
@@ -2831,10 +3118,12 @@ The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-maxConcurrency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L223" >}}">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L225" >}}">property <b>maxConcurrency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxConcurrency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
@@ -2842,10 +3131,12 @@ The maximum number of targets allowed to run the association at the same time. Y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-maxErrors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L227" >}}">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L229" >}}">property <b>maxErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxErrors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
@@ -2853,10 +3144,12 @@ The number of errors that are allowed before the system stops sending requests t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L231" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L233" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSM document to apply.
@@ -2864,13 +3157,12 @@ The name of the SSM document to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-outputLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L235" >}}">property <b>outputLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L237" >}}">property <b>outputLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    s3KeyPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationOutputLocation'>inputs.ssm.AssociationOutputLocation</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An output location block. Output Location is documented below.
@@ -2878,10 +3170,12 @@ An output location block. Output Location is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L239" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L241" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of arbitrary string parameters to pass to the SSM document.
@@ -2889,10 +3183,12 @@ A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-scheduleExpression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L243" >}}">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L245" >}}">property <b>scheduleExpression</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scheduleExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A cron expression when the association will be applied to the target(s).
@@ -2900,13 +3196,12 @@ A cron expression when the association will be applied to the target(s).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationArgs-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L247" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L249" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationTarget'>inputs.ssm.AssociationTarget</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
@@ -2915,7 +3210,7 @@ A block containing the targets of the SSM association. Targets are documented be
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AssociationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L152" >}}">interface <b>AssociationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L154" >}}">interface <b>AssociationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2924,18 +3219,22 @@ Input properties used for looking up and filtering Association resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AssociationState-associationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L153" >}}">property <b>associationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L155" >}}">property <b>associationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-associationName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L157" >}}">property <b>associationName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L159" >}}">property <b>associationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The descriptive name for the association.
@@ -2943,10 +3242,12 @@ The descriptive name for the association.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-complianceSeverity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L161" >}}">property <b>complianceSeverity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L163" >}}">property <b>complianceSeverity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>complianceSeverity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
@@ -2954,10 +3255,12 @@ The compliance severity for the association. Can be one of the following: `UNSPE
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-documentVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L165" >}}">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L167" >}}">property <b>documentVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The document version you want to associate with the target(s). Can be a specific version or the default version.
@@ -2965,10 +3268,12 @@ The document version you want to associate with the target(s). Can be a specific
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L169" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L171" >}}">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
@@ -2976,10 +3281,12 @@ The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-maxConcurrency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L173" >}}">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L175" >}}">property <b>maxConcurrency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxConcurrency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
@@ -2987,10 +3294,12 @@ The maximum number of targets allowed to run the association at the same time. Y
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-maxErrors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L177" >}}">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L179" >}}">property <b>maxErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxErrors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
@@ -2998,10 +3307,12 @@ The number of errors that are allowed before the system stops sending requests t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L181" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L183" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSM document to apply.
@@ -3009,13 +3320,12 @@ The name of the SSM document to apply.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-outputLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L185" >}}">property <b>outputLocation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L187" >}}">property <b>outputLocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    s3KeyPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>outputLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationOutputLocation'>inputs.ssm.AssociationOutputLocation</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An output location block. Output Location is documented below.
@@ -3023,10 +3333,12 @@ An output location block. Output Location is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L189" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L191" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of arbitrary string parameters to pass to the SSM document.
@@ -3034,10 +3346,12 @@ A block of arbitrary string parameters to pass to the SSM document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-scheduleExpression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L193" >}}">property <b>scheduleExpression</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L195" >}}">property <b>scheduleExpression</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scheduleExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A cron expression when the association will be applied to the target(s).
@@ -3045,13 +3359,12 @@ A cron expression when the association will be applied to the target(s).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssociationState-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L197" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/association.ts#L199" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AssociationTarget'>inputs.ssm.AssociationTarget</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
@@ -3060,7 +3373,7 @@ A block containing the targets of the SSM association. Targets are documented be
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DocumentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L299" >}}">interface <b>DocumentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L301" >}}">interface <b>DocumentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3069,10 +3382,12 @@ The set of arguments for constructing a Document resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DocumentArgs-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L303" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L305" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The JSON or YAML content of the document.
@@ -3080,10 +3395,12 @@ The JSON or YAML content of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentArgs-documentFormat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L307" >}}">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L309" >}}">property <b>documentFormat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The format of the document. Valid document types include: `JSON` and `YAML`
@@ -3091,10 +3408,12 @@ The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentArgs-documentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L311" >}}">property <b>documentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L313" >}}">property <b>documentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the document. Valid document types include: `Command`, `Policy`, `Automation` and `Session`
@@ -3102,10 +3421,12 @@ The type of the document. Valid document types include: `Command`, `Policy`, `Au
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L315" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L317" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the document.
@@ -3113,13 +3434,12 @@ The name of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentArgs-permissions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L319" >}}">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L321" >}}">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    accountIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentPermissions'>inputs.ssm.DocumentPermissions</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Additional Permissions to attach to the document. See Permissions below for details.
@@ -3127,10 +3447,12 @@ Additional Permissions to attach to the document. See Permissions below for deta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L323" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L325" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -3139,7 +3461,7 @@ A mapping of tags to assign to the object.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DocumentState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L224" >}}">interface <b>DocumentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L226" >}}">interface <b>DocumentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3148,18 +3470,22 @@ Input properties used for looking up and filtering Document resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DocumentState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L225" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L227" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L229" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L231" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The JSON or YAML content of the document.
@@ -3167,10 +3493,12 @@ The JSON or YAML content of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-createdDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L233" >}}">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L235" >}}">property <b>createdDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date the document was created.
@@ -3178,10 +3506,12 @@ The date the document was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-defaultVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L237" >}}">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L239" >}}">property <b>defaultVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default version of the document.
@@ -3189,10 +3519,12 @@ The default version of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L241" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L243" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the document.
@@ -3200,10 +3532,12 @@ The description of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-documentFormat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L245" >}}">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L247" >}}">property <b>documentFormat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The format of the document. Valid document types include: `JSON` and `YAML`
@@ -3211,10 +3545,12 @@ The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-documentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L249" >}}">property <b>documentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L251" >}}">property <b>documentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the document. Valid document types include: `Command`, `Policy`, `Automation` and `Session`
@@ -3222,10 +3558,12 @@ The type of the document. Valid document types include: `Command`, `Policy`, `Au
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-hash">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L253" >}}">property <b>hash</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L255" >}}">property <b>hash</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The sha1 or sha256 of the document content
@@ -3233,10 +3571,12 @@ The sha1 or sha256 of the document content
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-hashType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L257" >}}">property <b>hashType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L259" >}}">property <b>hashType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hashType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 "Sha1" "Sha256". The hashing algorithm used when hashing the content.
@@ -3244,10 +3584,12 @@ The sha1 or sha256 of the document content
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-latestVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L261" >}}">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L263" >}}">property <b>latestVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>latestVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The latest version of the document.
@@ -3255,10 +3597,12 @@ The latest version of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L265" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L267" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the document.
@@ -3266,10 +3610,12 @@ The name of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L269" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L271" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS user account of the person who created the document.
@@ -3277,15 +3623,12 @@ The AWS user account of the person who created the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L273" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L275" >}}">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    defaultValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentParameter'>inputs.ssm.DocumentParameter</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The parameters that are available to this document.
@@ -3293,13 +3636,12 @@ The parameters that are available to this document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-permissions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L277" >}}">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L279" >}}">property <b>permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    accountIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DocumentPermissions'>inputs.ssm.DocumentPermissions</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Additional Permissions to attach to the document. See Permissions below for details.
@@ -3307,10 +3649,12 @@ Additional Permissions to attach to the document. See Permissions below for deta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-platformTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L281" >}}">property <b>platformTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L283" >}}">property <b>platformTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>platformTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
@@ -3318,10 +3662,12 @@ A list of OS platforms compatible with this SSM document, either "Windows" or "L
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-schemaVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L285" >}}">property <b>schemaVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L287" >}}">property <b>schemaVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schemaVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The schema version of the document.
@@ -3329,10 +3675,12 @@ The schema version of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L289" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L291" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 "Creating", "Active" or "Deleting". The current status of the document.
@@ -3340,10 +3688,12 @@ The schema version of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DocumentState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L293" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/document.ts#L295" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -3352,7 +3702,7 @@ A mapping of tags to assign to the object.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDocumentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L59" >}}">interface <b>GetDocumentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L61" >}}">interface <b>GetDocumentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3361,10 +3711,12 @@ A collection of arguments for invoking getDocument.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDocumentArgs-documentFormat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L63" >}}">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L65" >}}">property <b>documentFormat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
@@ -3372,10 +3724,12 @@ Returns the document in the specified format. The document format can be either 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDocumentArgs-documentVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L67" >}}">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L69" >}}">property <b>documentVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The document version for which you want information.
@@ -3383,10 +3737,12 @@ The document version for which you want information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDocumentArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Systems Manager document.
@@ -3395,7 +3751,7 @@ The name of the Systems Manager document.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDocumentResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L77" >}}">interface <b>GetDocumentResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L79" >}}">interface <b>GetDocumentResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3404,10 +3760,12 @@ A collection of values returned by getDocument.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDocumentResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L81" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L83" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the document.
@@ -3415,10 +3773,12 @@ The ARN of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDocumentResult-content">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L85" >}}">property <b>content</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L87" >}}">property <b>content</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The contents of the document.
@@ -3426,18 +3786,22 @@ The contents of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDocumentResult-documentFormat">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L86" >}}">property <b>documentFormat</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L88" >}}">property <b>documentFormat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDocumentResult-documentType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L90" >}}">property <b>documentType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L92" >}}">property <b>documentType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the document.
@@ -3445,18 +3809,22 @@ The type of the document.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDocumentResult-documentVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L91" >}}">property <b>documentVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L93" >}}">property <b>documentVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>documentVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDocumentResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L96" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L98" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -3464,16 +3832,18 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDocumentResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L92" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getDocument.ts#L94" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetParameterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L48" >}}">interface <b>GetParameterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L50" >}}">interface <b>GetParameterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3482,10 +3852,12 @@ A collection of arguments for invoking getParameter.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetParameterArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L52" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the parameter.
@@ -3493,10 +3865,12 @@ The name of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetParameterArgs-withDecryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L56" >}}">property <b>withDecryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L58" >}}">property <b>withDecryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>withDecryption?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to return decrypted `SecureString` value. Defaults to `true`.
@@ -3505,7 +3879,7 @@ Whether to return decrypted `SecureString` value. Defaults to `true`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetParameterResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L62" >}}">interface <b>GetParameterResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L64" >}}">interface <b>GetParameterResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3514,18 +3888,22 @@ A collection of values returned by getParameter.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetParameterResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L63" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L65" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetParameterResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L72" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L74" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -3533,48 +3911,58 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetParameterResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L64" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L66" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetParameterResult-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L65" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L67" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetParameterResult-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L66" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L68" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetParameterResult-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L67" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L69" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetParameterResult-withDecryption">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L68" >}}">property <b>withDecryption</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/getParameter.ts#L70" >}}">property <b>withDecryption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>withDecryption?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindowArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L197" >}}">interface <b>MaintenanceWindowArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L199" >}}">interface <b>MaintenanceWindowArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3583,10 +3971,12 @@ The set of arguments for constructing a MaintenanceWindow resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-allowUnassociatedTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L201" >}}">property <b>allowUnassociatedTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L203" >}}">property <b>allowUnassociatedTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowUnassociatedTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
@@ -3594,10 +3984,12 @@ Whether targets must be registered with the Maintenance Window before tasks can 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-cutoff">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L205" >}}">property <b>cutoff</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L207" >}}">property <b>cutoff</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cutoff: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
@@ -3605,10 +3997,12 @@ The number of hours before the end of the Maintenance Window that Systems Manage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-duration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L209" >}}">property <b>duration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L211" >}}">property <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The duration of the Maintenance Window in hours.
@@ -3616,10 +4010,12 @@ The duration of the Maintenance Window in hours.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L213" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L215" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the maintenance window is enabled. Default: `true`.
@@ -3627,10 +4023,12 @@ Whether the maintenance window is enabled. Default: `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-endDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L217" >}}">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L219" >}}">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
@@ -3638,10 +4036,12 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L221" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L223" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the maintenance window.
@@ -3649,10 +4049,12 @@ The name of the maintenance window.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L225" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L227" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
@@ -3660,10 +4062,12 @@ The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-scheduleTimezone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L229" >}}">property <b>scheduleTimezone</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L231" >}}">property <b>scheduleTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scheduleTimezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
@@ -3671,10 +4075,12 @@ Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone D
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-startDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L233" >}}">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L235" >}}">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
@@ -3682,10 +4088,12 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L237" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L239" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3694,7 +4102,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindowState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L151" >}}">interface <b>MaintenanceWindowState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L153" >}}">interface <b>MaintenanceWindowState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3703,10 +4111,12 @@ Input properties used for looking up and filtering MaintenanceWindow resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-allowUnassociatedTargets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L155" >}}">property <b>allowUnassociatedTargets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L157" >}}">property <b>allowUnassociatedTargets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowUnassociatedTargets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
@@ -3714,10 +4124,12 @@ Whether targets must be registered with the Maintenance Window before tasks can 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-cutoff">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L159" >}}">property <b>cutoff</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L161" >}}">property <b>cutoff</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cutoff?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
@@ -3725,10 +4137,12 @@ The number of hours before the end of the Maintenance Window that Systems Manage
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-duration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L163" >}}">property <b>duration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L165" >}}">property <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The duration of the Maintenance Window in hours.
@@ -3736,10 +4150,12 @@ The duration of the Maintenance Window in hours.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L167" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L169" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the maintenance window is enabled. Default: `true`.
@@ -3747,10 +4163,12 @@ Whether the maintenance window is enabled. Default: `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-endDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L171" >}}">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L173" >}}">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
@@ -3758,10 +4176,12 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L175" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L177" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the maintenance window.
@@ -3769,10 +4189,12 @@ The name of the maintenance window.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L179" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L181" >}}">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schedule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
@@ -3780,10 +4202,12 @@ The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-scheduleTimezone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L183" >}}">property <b>scheduleTimezone</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L185" >}}">property <b>scheduleTimezone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scheduleTimezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
@@ -3791,10 +4215,12 @@ Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone D
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-startDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L187" >}}">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L189" >}}">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
@@ -3802,10 +4228,12 @@ Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L191" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindow.ts#L193" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3814,7 +4242,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindowTargetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L166" >}}">interface <b>MaintenanceWindowTargetArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L168" >}}">interface <b>MaintenanceWindowTargetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3823,10 +4251,12 @@ The set of arguments for constructing a MaintenanceWindowTarget resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L170" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L172" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the maintenance window target.
@@ -3834,10 +4264,12 @@ The description of the maintenance window target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L174" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L176" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the maintenance window target.
@@ -3845,10 +4277,12 @@ The name of the maintenance window target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-ownerInformation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L178" >}}">property <b>ownerInformation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L180" >}}">property <b>ownerInformation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerInformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
@@ -3856,10 +4290,12 @@ User-provided value that will be included in any CloudWatch events raised while 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-resourceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L182" >}}">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L184" >}}">property <b>resourceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
@@ -3867,13 +4303,12 @@ The type of target being registered with the Maintenance Window. Possible values
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L186" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L188" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTargetTarget'>inputs.ssm.MaintenanceWindowTargetTarget</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
@@ -3881,10 +4316,12 @@ The targets (either instances or tags). Instances are specified using Key=Instan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetArgs-windowId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L190" >}}">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L192" >}}">property <b>windowId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>windowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the maintenance window to register the target with.
@@ -3893,7 +4330,7 @@ The Id of the maintenance window to register the target with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindowTargetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L136" >}}">interface <b>MaintenanceWindowTargetState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L138" >}}">interface <b>MaintenanceWindowTargetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3902,10 +4339,12 @@ Input properties used for looking up and filtering MaintenanceWindowTarget resou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L140" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L142" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the maintenance window target.
@@ -3913,10 +4352,12 @@ The description of the maintenance window target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L144" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L146" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the maintenance window target.
@@ -3924,10 +4365,12 @@ The name of the maintenance window target.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetState-ownerInformation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L148" >}}">property <b>ownerInformation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L150" >}}">property <b>ownerInformation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerInformation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
@@ -3935,10 +4378,12 @@ User-provided value that will be included in any CloudWatch events raised while 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetState-resourceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L152" >}}">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L154" >}}">property <b>resourceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of target being registered with the Maintenance Window. Possible values `INSTANCE`.
@@ -3946,13 +4391,12 @@ The type of target being registered with the Maintenance Window. Possible values
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetState-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L156" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L158" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTargetTarget'>inputs.ssm.MaintenanceWindowTargetTarget</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
@@ -3960,10 +4404,12 @@ The targets (either instances or tags). Instances are specified using Key=Instan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTargetState-windowId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L160" >}}">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTarget.ts#L162" >}}">property <b>windowId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>windowId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the maintenance window to register the target with.
@@ -3972,7 +4418,7 @@ The Id of the maintenance window to register the target with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindowTaskArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L350" >}}">interface <b>MaintenanceWindowTaskArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L352" >}}">interface <b>MaintenanceWindowTaskArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3981,10 +4427,12 @@ The set of arguments for constructing a MaintenanceWindowTask resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L354" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L356" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the maintenance window task.
@@ -3992,14 +4440,12 @@ The description of the maintenance window task.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-loggingInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L358" >}}">property <b>loggingInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L360" >}}">property <b>loggingInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>loggingInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    s3BucketPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    s3Region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>loggingInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskLoggingInfo'>inputs.ssm.MaintenanceWindowTaskLoggingInfo</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `taskInvocationParameters` configuration block `runCommandParameters` configuration block `output_s3_*` arguments instead. Conflicts with `taskInvocationParameters`. Documented below.
@@ -4007,10 +4453,12 @@ A structure containing information about an Amazon S3 bucket to write instance-l
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-maxConcurrency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L362" >}}">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L364" >}}">property <b>maxConcurrency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxConcurrency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of targets this task can be run for in parallel.
@@ -4018,10 +4466,12 @@ The maximum number of targets this task can be run for in parallel.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-maxErrors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L366" >}}">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L368" >}}">property <b>maxErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxErrors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of errors allowed before this task stops being scheduled.
@@ -4029,10 +4479,12 @@ The maximum number of errors allowed before this task stops being scheduled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L370" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L372" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The parameter name.
@@ -4040,10 +4492,12 @@ The parameter name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L374" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L376" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
@@ -4051,10 +4505,12 @@ The priority of the task in the Maintenance Window, the lower the number the hig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-serviceRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L378" >}}">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L380" >}}">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM service role to assume during task execution.
@@ -4062,13 +4518,12 @@ The IAM service role to assume during task execution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L382" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L384" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>targets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget'>inputs.ssm.MaintenanceWindowTaskTarget</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
@@ -4076,10 +4531,12 @@ The targets (either instances or window target ids). Instances are specified usi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-taskArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L386" >}}">property <b>taskArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L388" >}}">property <b>taskArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>taskArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the task to execute.
@@ -4087,45 +4544,12 @@ The ARN of the task to execute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-taskInvocationParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L390" >}}">property <b>taskInvocationParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L392" >}}">property <b>taskInvocationParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    automationParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        documentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        }&gt;[]&gt;;
-    }&gt;;
-    lambdaParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        clientContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        payload: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        qualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    runCommandParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        documentHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        documentHashType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            notificationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            notificationEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-            notificationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        outputS3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        outputS3KeyPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        }&gt;[]&gt;;
-        serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        timeoutSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;;
-    stepFunctionsParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        input: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskInvocationParameters'>inputs.ssm.MaintenanceWindowTaskTaskInvocationParameters</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The parameters for task execution. This argument is conflict with `taskParameters` and `loggingInfo`.
@@ -4133,13 +4557,12 @@ The parameters for task execution. This argument is conflict with `taskParameter
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-taskParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L394" >}}">property <b>taskParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L396" >}}">property <b>taskParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>taskParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>taskParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskParameter'>inputs.ssm.MaintenanceWindowTaskTaskParameter</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A structure containing information about parameters required by the particular `taskArn`. Use `parameter` configuration blocks under the `taskInvocationParameters` configuration block instead. Conflicts with `taskInvocationParameters`. Documented below.
@@ -4147,10 +4570,12 @@ A structure containing information about parameters required by the particular `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-taskType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L398" >}}">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L400" >}}">property <b>taskType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>taskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of task being registered. The only allowed value is `RUN_COMMAND`.
@@ -4158,10 +4583,12 @@ The type of task being registered. The only allowed value is `RUN_COMMAND`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskArgs-windowId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L402" >}}">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L404" >}}">property <b>windowId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>windowId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the maintenance window to register the task with.
@@ -4170,7 +4597,7 @@ The Id of the maintenance window to register the task with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MaintenanceWindowTaskState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L292" >}}">interface <b>MaintenanceWindowTaskState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L294" >}}">interface <b>MaintenanceWindowTaskState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4179,10 +4606,12 @@ Input properties used for looking up and filtering MaintenanceWindowTask resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L296" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L298" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the maintenance window task.
@@ -4190,14 +4619,12 @@ The description of the maintenance window task.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-loggingInfo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L300" >}}">property <b>loggingInfo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L302" >}}">property <b>loggingInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>loggingInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    s3BucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    s3BucketPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    s3Region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>loggingInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskLoggingInfo'>inputs.ssm.MaintenanceWindowTaskLoggingInfo</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `taskInvocationParameters` configuration block `runCommandParameters` configuration block `output_s3_*` arguments instead. Conflicts with `taskInvocationParameters`. Documented below.
@@ -4205,10 +4632,12 @@ A structure containing information about an Amazon S3 bucket to write instance-l
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-maxConcurrency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L304" >}}">property <b>maxConcurrency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L306" >}}">property <b>maxConcurrency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxConcurrency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of targets this task can be run for in parallel.
@@ -4216,10 +4645,12 @@ The maximum number of targets this task can be run for in parallel.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-maxErrors">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L308" >}}">property <b>maxErrors</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L310" >}}">property <b>maxErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxErrors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of errors allowed before this task stops being scheduled.
@@ -4227,10 +4658,12 @@ The maximum number of errors allowed before this task stops being scheduled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L312" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L314" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The parameter name.
@@ -4238,10 +4671,12 @@ The parameter name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L316" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L318" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
@@ -4249,10 +4684,12 @@ The priority of the task in the Maintenance Window, the lower the number the hig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-serviceRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L320" >}}">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L322" >}}">property <b>serviceRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serviceRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM service role to assume during task execution.
@@ -4260,13 +4697,12 @@ The IAM service role to assume during task execution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-targets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L324" >}}">property <b>targets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L326" >}}">property <b>targets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>targets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTarget'>inputs.ssm.MaintenanceWindowTaskTarget</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
@@ -4274,10 +4710,12 @@ The targets (either instances or window target ids). Instances are specified usi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-taskArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L328" >}}">property <b>taskArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L330" >}}">property <b>taskArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>taskArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the task to execute.
@@ -4285,45 +4723,12 @@ The ARN of the task to execute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-taskInvocationParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L332" >}}">property <b>taskInvocationParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L334" >}}">property <b>taskInvocationParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    automationParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        documentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        }&gt;[]&gt;;
-    }&gt;;
-    lambdaParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        clientContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        payload: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        qualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    runCommandParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        documentHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        documentHashType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            notificationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            notificationEvents: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-            notificationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        outputS3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        outputS3KeyPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        }&gt;[]&gt;;
-        serviceRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        timeoutSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;;
-    stepFunctionsParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        input: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>taskInvocationParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskInvocationParameters'>inputs.ssm.MaintenanceWindowTaskTaskInvocationParameters</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The parameters for task execution. This argument is conflict with `taskParameters` and `loggingInfo`.
@@ -4331,13 +4736,12 @@ The parameters for task execution. This argument is conflict with `taskParameter
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-taskParameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L336" >}}">property <b>taskParameters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L338" >}}">property <b>taskParameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>taskParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>taskParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#MaintenanceWindowTaskTaskParameter'>inputs.ssm.MaintenanceWindowTaskTaskParameter</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A structure containing information about parameters required by the particular `taskArn`. Use `parameter` configuration blocks under the `taskInvocationParameters` configuration block instead. Conflicts with `taskInvocationParameters`. Documented below.
@@ -4345,10 +4749,12 @@ A structure containing information about parameters required by the particular `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-taskType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L340" >}}">property <b>taskType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L342" >}}">property <b>taskType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>taskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of task being registered. The only allowed value is `RUN_COMMAND`.
@@ -4356,10 +4762,12 @@ The type of task being registered. The only allowed value is `RUN_COMMAND`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MaintenanceWindowTaskState-windowId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L344" >}}">property <b>windowId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/maintenanceWindowTask.ts#L346" >}}">property <b>windowId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>windowId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Id of the maintenance window to register the task with.
@@ -4368,7 +4776,7 @@ The Id of the maintenance window to register the task with.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ParameterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L238" >}}">interface <b>ParameterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L240" >}}">interface <b>ParameterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4377,10 +4785,12 @@ The set of arguments for constructing a Parameter resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ParameterArgs-allowedPattern">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L242" >}}">property <b>allowedPattern</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L244" >}}">property <b>allowedPattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A regular expression used to validate the parameter value.
@@ -4388,10 +4798,12 @@ A regular expression used to validate the parameter value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L246" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L248" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the parameter.
@@ -4399,10 +4811,12 @@ The ARN of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L250" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L252" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the parameter.
@@ -4410,10 +4824,12 @@ The description of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-keyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L254" >}}">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L256" >}}">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The KMS key id or arn for encrypting a SecureString.
@@ -4421,10 +4837,12 @@ The KMS key id or arn for encrypting a SecureString.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L258" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L260" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the parameter. If the name contains a path (e.g. any forward slashes (`/`)), it must be fully qualified with a leading forward slash (`/`). For additional requirements and constraints, see the [AWS SSM User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html).
@@ -4432,10 +4850,12 @@ The name of the parameter. If the name contains a path (e.g. any forward slashes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-overwrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L262" >}}">property <b>overwrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L264" >}}">property <b>overwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>overwrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
@@ -4443,10 +4863,12 @@ Overwrite an existing parameter. If not specified, will default to `false` if th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L266" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L268" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -4454,10 +4876,12 @@ A mapping of tags to assign to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-tier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L270" >}}">property <b>tier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L272" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard` and `Advanced`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
@@ -4465,10 +4889,12 @@ The tier of the parameter. If not specified, will default to `Standard`. Valid t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L274" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L276" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ParameterType'>ParameterType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
@@ -4476,10 +4902,12 @@ The type of the parameter. Valid types are `String`, `StringList` and `SecureStr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterArgs-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L278" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L280" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the parameter.
@@ -4488,7 +4916,7 @@ The value of the parameter.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ParameterState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L188" >}}">interface <b>ParameterState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L190" >}}">interface <b>ParameterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4497,10 +4925,12 @@ Input properties used for looking up and filtering Parameter resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ParameterState-allowedPattern">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L192" >}}">property <b>allowedPattern</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L194" >}}">property <b>allowedPattern</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A regular expression used to validate the parameter value.
@@ -4508,10 +4938,12 @@ A regular expression used to validate the parameter value.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L196" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L198" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the parameter.
@@ -4519,10 +4951,12 @@ The ARN of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L200" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L202" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the parameter.
@@ -4530,10 +4964,12 @@ The description of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-keyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L204" >}}">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L206" >}}">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The KMS key id or arn for encrypting a SecureString.
@@ -4541,10 +4977,12 @@ The KMS key id or arn for encrypting a SecureString.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L208" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L210" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the parameter. If the name contains a path (e.g. any forward slashes (`/`)), it must be fully qualified with a leading forward slash (`/`). For additional requirements and constraints, see the [AWS SSM User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html).
@@ -4552,10 +4990,12 @@ The name of the parameter. If the name contains a path (e.g. any forward slashes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-overwrite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L212" >}}">property <b>overwrite</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L214" >}}">property <b>overwrite</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>overwrite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
@@ -4563,10 +5003,12 @@ Overwrite an existing parameter. If not specified, will default to `false` if th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L216" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L218" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the object.
@@ -4574,10 +5016,12 @@ A mapping of tags to assign to the object.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-tier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L220" >}}">property <b>tier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L222" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard` and `Advanced`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
@@ -4585,10 +5029,12 @@ The tier of the parameter. If not specified, will default to `Standard`. Valid t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L224" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L226" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ParameterType'>ParameterType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
@@ -4596,10 +5042,12 @@ The type of the parameter. Valid types are `String`, `StringList` and `SecureStr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L228" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L230" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the parameter.
@@ -4607,10 +5055,12 @@ The value of the parameter.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ParameterState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L232" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/parameter.ts#L234" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The version of the parameter.
@@ -4619,7 +5069,7 @@ The version of the parameter.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PatchBaselineArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L241" >}}">interface <b>PatchBaselineArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L243" >}}">interface <b>PatchBaselineArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4628,18 +5078,12 @@ The set of arguments for constructing a PatchBaseline resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-approvalRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L245" >}}">property <b>approvalRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L247" >}}">property <b>approvalRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    approveAfterDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    complianceLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enableNonSecurity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    patchFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineApprovalRule'>inputs.ssm.PatchBaselineApprovalRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
@@ -4647,10 +5091,12 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-approvedPatches">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L249" >}}">property <b>approvedPatches</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L251" >}}">property <b>approvedPatches</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>approvedPatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of explicitly approved patches for the baseline.
@@ -4658,10 +5104,12 @@ A list of explicitly approved patches for the baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-approvedPatchesComplianceLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L253" >}}">property <b>approvedPatchesComplianceLevel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L255" >}}">property <b>approvedPatchesComplianceLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>approvedPatchesComplianceLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
@@ -4669,10 +5117,12 @@ Defines the compliance level for approved patches. This means that if an approve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L257" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L259" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the patch baseline.
@@ -4680,13 +5130,12 @@ The description of the patch baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-globalFilters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L261" >}}">property <b>globalFilters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L263" >}}">property <b>globalFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineGlobalFilter'>inputs.ssm.PatchBaselineGlobalFilter</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
@@ -4694,10 +5143,12 @@ A set of global filters used to exclude patches from the baseline. Up to 4 globa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L265" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L267" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the patch baseline.
@@ -4705,10 +5156,12 @@ The name of the patch baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L269" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L271" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operatingSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
@@ -4716,10 +5169,12 @@ Defines the operating system the patch baseline applies to. Supported operating 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-rejectedPatches">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L273" >}}">property <b>rejectedPatches</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L275" >}}">property <b>rejectedPatches</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rejectedPatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of rejected patches.
@@ -4727,16 +5182,18 @@ A list of rejected patches.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L274" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L276" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PatchBaselineState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L202" >}}">interface <b>PatchBaselineState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L204" >}}">interface <b>PatchBaselineState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4745,18 +5202,12 @@ Input properties used for looking up and filtering PatchBaseline resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PatchBaselineState-approvalRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L206" >}}">property <b>approvalRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L208" >}}">property <b>approvalRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    approveAfterDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    complianceLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enableNonSecurity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    patchFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>approvalRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineApprovalRule'>inputs.ssm.PatchBaselineApprovalRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approvalRule block requires the fields documented below.
@@ -4764,10 +5215,12 @@ A set of rules used to include patches in the baseline. up to 10 approval rules 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineState-approvedPatches">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L210" >}}">property <b>approvedPatches</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L212" >}}">property <b>approvedPatches</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>approvedPatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of explicitly approved patches for the baseline.
@@ -4775,10 +5228,12 @@ A list of explicitly approved patches for the baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineState-approvedPatchesComplianceLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L214" >}}">property <b>approvedPatchesComplianceLevel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L216" >}}">property <b>approvedPatchesComplianceLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>approvedPatchesComplianceLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
@@ -4786,10 +5241,12 @@ Defines the compliance level for approved patches. This means that if an approve
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L218" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L220" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the patch baseline.
@@ -4797,13 +5254,12 @@ The description of the patch baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineState-globalFilters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L222" >}}">property <b>globalFilters</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L224" >}}">property <b>globalFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>globalFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PatchBaselineGlobalFilter'>inputs.ssm.PatchBaselineGlobalFilter</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
@@ -4811,10 +5267,12 @@ A set of global filters used to exclude patches from the baseline. Up to 4 globa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L226" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L228" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the patch baseline.
@@ -4822,10 +5280,12 @@ The name of the patch baseline.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineState-operatingSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L230" >}}">property <b>operatingSystem</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L232" >}}">property <b>operatingSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operatingSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
@@ -4833,10 +5293,12 @@ Defines the operating system the patch baseline applies to. Supported operating 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineState-rejectedPatches">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L234" >}}">property <b>rejectedPatches</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L236" >}}">property <b>rejectedPatches</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rejectedPatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of rejected patches.
@@ -4844,16 +5306,18 @@ A list of rejected patches.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchBaselineState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L235" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchBaseline.ts#L237" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PatchGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L116" >}}">interface <b>PatchGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L118" >}}">interface <b>PatchGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4862,10 +5326,12 @@ The set of arguments for constructing a PatchGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PatchGroupArgs-baselineId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L120" >}}">property <b>baselineId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L122" >}}">property <b>baselineId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>baselineId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the patch baseline to register the patch group with.
@@ -4873,10 +5339,12 @@ The ID of the patch baseline to register the patch group with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroupArgs-patchGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L124" >}}">property <b>patchGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L126" >}}">property <b>patchGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>patchGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the patch group that should be registered with the patch baseline.
@@ -4885,7 +5353,7 @@ The name of the patch group that should be registered with the patch baseline.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PatchGroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L102" >}}">interface <b>PatchGroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L104" >}}">interface <b>PatchGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4894,10 +5362,12 @@ Input properties used for looking up and filtering PatchGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PatchGroupState-baselineId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L106" >}}">property <b>baselineId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L108" >}}">property <b>baselineId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>baselineId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the patch baseline to register the patch group with.
@@ -4905,10 +5375,12 @@ The ID of the patch baseline to register the patch group with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PatchGroupState-patchGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L110" >}}">property <b>patchGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/patchGroup.ts#L112" >}}">property <b>patchGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>patchGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the patch group that should be registered with the patch baseline.
@@ -4917,7 +5389,7 @@ The name of the patch group that should be registered with the patch baseline.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceDataSyncArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L157" >}}">interface <b>ResourceDataSyncArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L159" >}}">interface <b>ResourceDataSyncArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4926,10 +5398,12 @@ The set of arguments for constructing a ResourceDataSync resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceDataSyncArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L161" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L163" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name for the configuration.
@@ -4937,16 +5411,12 @@ Name for the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSyncArgs-s3Destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L165" >}}">property <b>s3Destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L167" >}}">property <b>s3Destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    syncFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>s3Destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceDataSyncS3Destination'>inputs.ssm.ResourceDataSyncS3Destination</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon S3 configuration details for the sync.
@@ -4955,7 +5425,7 @@ Amazon S3 configuration details for the sync.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceDataSyncState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L143" >}}">interface <b>ResourceDataSyncState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L145" >}}">interface <b>ResourceDataSyncState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4964,10 +5434,12 @@ Input properties used for looking up and filtering ResourceDataSync resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceDataSyncState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L147" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L149" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name for the configuration.
@@ -4975,16 +5447,12 @@ Name for the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceDataSyncState-s3Destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L151" >}}">property <b>s3Destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="ssm/resourceDataSync.ts#L153" >}}">property <b>s3Destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>s3Destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    bucketName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    syncFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>s3Destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceDataSyncS3Destination'>inputs.ssm.ResourceDataSyncS3Destination</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon S3 configuration details for the sync.
@@ -4996,23 +5464,31 @@ Amazon S3 configuration details for the sync.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameterType.ts#L14" >}}">let <b>SecureStringParameter</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> SecureStringParameter: <a href='#ParameterType'>ParameterType</a> = <span class='s2'>&#34;SecureString&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="StringListParameter">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameterType.ts#L13" >}}">let <b>StringListParameter</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> StringListParameter: <a href='#ParameterType'>ParameterType</a> = <span class='s2'>&#34;StringList&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="StringParameter">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameterType.ts#L12" >}}">let <b>StringParameter</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> StringParameter: <a href='#ParameterType'>ParameterType</a> = <span class='s2'>&#34;String&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="ParameterType">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="ssm/parameterType.ts#L16" >}}">type <b>ParameterType</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> ParameterType = <span class='s2'>"String"</span> | <span class='s2'>"StringList"</span> | <span class='s2'>"SecureString"</span>;</pre>
+{{< /md-disable >}}
 </div>

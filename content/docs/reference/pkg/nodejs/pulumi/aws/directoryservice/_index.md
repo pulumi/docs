@@ -43,7 +43,9 @@ title: Module directoryservice
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L28" >}}">class <b>ConditionalForwader</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.
@@ -71,10 +73,12 @@ const example = new aws.directoryservice.ConditionalForwader("example", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ConditionalForwader(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ConditionalForwaderArgs'>ConditionalForwaderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ConditionalForwader resource with the given unique name, arguments, and options.
 
@@ -88,10 +92,12 @@ Create a ConditionalForwader resource with the given unique name, arguments, and
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConditionalForwaderState'>ConditionalForwaderState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ConditionalForwader'>ConditionalForwader</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ConditionalForwader resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -99,23 +105,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConditionalForwader-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConditionalForwader-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ConditionalForwader.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -126,7 +136,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L58" >}}">property <b>directoryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of directory.
@@ -137,7 +149,9 @@ The id of directory.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L62" >}}">property <b>dnsIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of forwarder IP addresses.
@@ -145,10 +159,12 @@ A list of forwarder IP addresses.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConditionalForwader-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -160,7 +176,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L66" >}}">property <b>remoteDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>remoteDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name of the remote domain for which forwarders will be used.
@@ -168,10 +186,12 @@ The fully qualified domain name of the remote domain for which forwarders will b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConditionalForwader-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -181,10 +201,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Directory">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L123" >}}">class <b>Directory</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L125" >}}">class <b>Directory</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Simple or Managed Microsoft directory in AWS Directory Service.
@@ -304,13 +326,15 @@ const connector = new aws.directoryservice.Directory("connector", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Directory-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L209" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L211" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Directory(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DirectoryArgs'>DirectoryArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Directory resource with the given unique name, arguments, and options.
 
@@ -321,13 +345,15 @@ Create a Directory resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L132" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L134" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DirectoryState'>DirectoryState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Directory'>Directory</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Directory resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -335,23 +361,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L125" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L143" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L145" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Directory.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -359,10 +389,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-accessUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L153" >}}">property <b>accessUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L155" >}}">property <b>accessUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accessUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access URL for the directory, such as `http://alias.awsapps.com`.
@@ -370,10 +402,12 @@ The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-alias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L157" >}}">property <b>alias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L159" >}}">property <b>alias</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The alias for the directory (must be unique amongst all aliases in AWS). Required for `enableSso`.
@@ -381,15 +415,12 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-connectSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L161" >}}">property <b>connectSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L163" >}}">property <b>connectSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>connectSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    customerDnsIps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    customerUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subnetIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>connectSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryConnectSettings'>outputs.directoryservice.DirectoryConnectSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Connector related information about the directory. Fields documented below.
@@ -397,10 +428,12 @@ Connector related information about the directory. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L165" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L167" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A textual description for the directory.
@@ -408,10 +441,12 @@ A textual description for the directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-dnsIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L169" >}}">property <b>dnsIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L171" >}}">property <b>dnsIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of IP addresses of the DNS servers for the directory or connector.
@@ -419,10 +454,12 @@ A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-edition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L173" >}}">property <b>edition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L175" >}}">property <b>edition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>edition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
@@ -430,10 +467,12 @@ The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-enableSso">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L177" >}}">property <b>enableSso</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L179" >}}">property <b>enableSso</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableSso: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
@@ -441,10 +480,12 @@ Whether to enable single-sign on for the directory. Requires `alias`. Defaults t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L125" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -453,10 +494,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L181" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L183" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified name for the directory, such as `corp.example.com`
@@ -464,10 +507,12 @@ The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L185" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L187" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password for the directory administrator or connector user.
@@ -475,10 +520,12 @@ The password for the directory administrator or connector user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-securityGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L189" >}}">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L191" >}}">property <b>securityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the security group created by the directory.
@@ -486,10 +533,12 @@ The ID of the security group created by the directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-shortName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L193" >}}">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L195" >}}">property <b>shortName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shortName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The short name of the directory, such as `CORP`.
@@ -497,10 +546,12 @@ The short name of the directory, such as `CORP`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L197" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L199" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the directory (`Small` or `Large` are accepted values).
@@ -508,10 +559,12 @@ The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L201" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L203" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -519,10 +572,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L205" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L207" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
@@ -530,10 +585,12 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L125" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -542,13 +599,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Directory-vpcSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L209" >}}">property <b>vpcSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L211" >}}">property <b>vpcSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>vpcSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    subnetIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>vpcSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryVpcSettings'>outputs.directoryservice.DirectoryVpcSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC related information about the directory. Fields documented below.
@@ -557,10 +613,12 @@ VPC related information about the directory. Fields documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogService">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L45" >}}">class <b>LogService</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L47" >}}">class <b>LogService</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.
@@ -602,13 +660,15 @@ const exampleLogService = new aws.directoryservice.LogService("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LogService-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L79" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L81" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LogService(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LogServiceArgs'>LogServiceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a LogService resource with the given unique name, arguments, and options.
 
@@ -619,13 +679,15 @@ Create a LogService resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogService-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#LogServiceState'>LogServiceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#LogService'>LogService</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing LogService resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -633,23 +695,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogService-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L47" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogService-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of LogService.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -657,10 +723,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogService-directoryId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L75" >}}">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L77" >}}">property <b>directoryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of directory.
@@ -668,10 +736,12 @@ The id of directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogService-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L47" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -680,10 +750,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogService-logGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L79" >}}">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L81" >}}">property <b>logGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>logGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.
@@ -691,10 +763,12 @@ Name of the cloudwatch log group to which the logs should be published. The log 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogService-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L47" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -716,7 +790,9 @@ The set of arguments for constructing a ConditionalForwader resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L134" >}}">property <b>directoryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of directory.
@@ -727,7 +803,9 @@ The id of directory.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L138" >}}">property <b>dnsIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of forwarder IP addresses.
@@ -738,7 +816,9 @@ A list of forwarder IP addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L142" >}}">property <b>remoteDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>remoteDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name of the remote domain for which forwarders will be used.
@@ -759,7 +839,9 @@ Input properties used for looking up and filtering ConditionalForwader resources
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L116" >}}">property <b>directoryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>directoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of directory.
@@ -770,7 +852,9 @@ The id of directory.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L120" >}}">property <b>dnsIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of forwarder IP addresses.
@@ -781,7 +865,9 @@ A list of forwarder IP addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/conditionalForwader.ts#L124" >}}">property <b>remoteDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>remoteDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name of the remote domain for which forwarders will be used.
@@ -790,7 +876,7 @@ The fully qualified domain name of the remote domain for which forwarders will b
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DirectoryArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L339" >}}">interface <b>DirectoryArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L341" >}}">interface <b>DirectoryArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -799,10 +885,12 @@ The set of arguments for constructing a Directory resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DirectoryArgs-alias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L343" >}}">property <b>alias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L345" >}}">property <b>alias</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The alias for the directory (must be unique amongst all aliases in AWS). Required for `enableSso`.
@@ -810,15 +898,12 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-connectSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L347" >}}">property <b>connectSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L349" >}}">property <b>connectSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    customerDnsIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    customerUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryConnectSettings'>inputs.directoryservice.DirectoryConnectSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Connector related information about the directory. Fields documented below.
@@ -826,10 +911,12 @@ Connector related information about the directory. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L351" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L353" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A textual description for the directory.
@@ -837,10 +924,12 @@ A textual description for the directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-edition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L355" >}}">property <b>edition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L357" >}}">property <b>edition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>edition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
@@ -848,10 +937,12 @@ The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-enableSso">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L359" >}}">property <b>enableSso</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L361" >}}">property <b>enableSso</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableSso?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
@@ -859,10 +950,12 @@ Whether to enable single-sign on for the directory. Requires `alias`. Defaults t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L363" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L365" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified name for the directory, such as `corp.example.com`
@@ -870,10 +963,12 @@ The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L367" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L369" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password for the directory administrator or connector user.
@@ -881,10 +976,12 @@ The password for the directory administrator or connector user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-shortName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L371" >}}">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L373" >}}">property <b>shortName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shortName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The short name of the directory, such as `CORP`.
@@ -892,10 +989,12 @@ The short name of the directory, such as `CORP`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L375" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L377" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the directory (`Small` or `Large` are accepted values).
@@ -903,10 +1002,12 @@ The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L379" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L381" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -914,10 +1015,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L383" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L385" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
@@ -925,13 +1028,12 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryArgs-vpcSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L387" >}}">property <b>vpcSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L389" >}}">property <b>vpcSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryVpcSettings'>inputs.directoryservice.DirectoryVpcSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC related information about the directory. Fields documented below.
@@ -940,7 +1042,7 @@ VPC related information about the directory. Fields documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DirectoryState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L273" >}}">interface <b>DirectoryState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L275" >}}">interface <b>DirectoryState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -949,10 +1051,12 @@ Input properties used for looking up and filtering Directory resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DirectoryState-accessUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L277" >}}">property <b>accessUrl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L279" >}}">property <b>accessUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access URL for the directory, such as `http://alias.awsapps.com`.
@@ -960,10 +1064,12 @@ The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-alias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L281" >}}">property <b>alias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L283" >}}">property <b>alias</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The alias for the directory (must be unique amongst all aliases in AWS). Required for `enableSso`.
@@ -971,15 +1077,12 @@ The alias for the directory (must be unique amongst all aliases in AWS). Require
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-connectSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L285" >}}">property <b>connectSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L287" >}}">property <b>connectSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    customerDnsIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    customerUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>connectSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryConnectSettings'>inputs.directoryservice.DirectoryConnectSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Connector related information about the directory. Fields documented below.
@@ -987,10 +1090,12 @@ Connector related information about the directory. Fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L289" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L291" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A textual description for the directory.
@@ -998,10 +1103,12 @@ A textual description for the directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-dnsIpAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L293" >}}">property <b>dnsIpAddresses</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L295" >}}">property <b>dnsIpAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of IP addresses of the DNS servers for the directory or connector.
@@ -1009,10 +1116,12 @@ A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-edition">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L297" >}}">property <b>edition</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L299" >}}">property <b>edition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>edition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
@@ -1020,10 +1129,12 @@ The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-enableSso">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L301" >}}">property <b>enableSso</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L303" >}}">property <b>enableSso</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableSso?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
@@ -1031,10 +1142,12 @@ Whether to enable single-sign on for the directory. Requires `alias`. Defaults t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L305" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L307" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified name for the directory, such as `corp.example.com`
@@ -1042,10 +1155,12 @@ The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L309" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L311" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password for the directory administrator or connector user.
@@ -1053,10 +1168,12 @@ The password for the directory administrator or connector user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-securityGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L313" >}}">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L315" >}}">property <b>securityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the security group created by the directory.
@@ -1064,10 +1181,12 @@ The ID of the security group created by the directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-shortName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L317" >}}">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L319" >}}">property <b>shortName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shortName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The short name of the directory, such as `CORP`.
@@ -1075,10 +1194,12 @@ The short name of the directory, such as `CORP`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L321" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L323" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the directory (`Small` or `Large` are accepted values).
@@ -1086,10 +1207,12 @@ The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L325" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L327" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1097,10 +1220,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L329" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L331" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
@@ -1108,13 +1233,12 @@ The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted valu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DirectoryState-vpcSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L333" >}}">property <b>vpcSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/directory.ts#L335" >}}">property <b>vpcSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>vpcSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryVpcSettings'>inputs.directoryservice.DirectoryVpcSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC related information about the directory. Fields documented below.
@@ -1123,7 +1247,7 @@ VPC related information about the directory. Fields documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogServiceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L134" >}}">interface <b>LogServiceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L136" >}}">interface <b>LogServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1132,10 +1256,12 @@ The set of arguments for constructing a LogService resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LogServiceArgs-directoryId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L138" >}}">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L140" >}}">property <b>directoryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of directory.
@@ -1143,10 +1269,12 @@ The id of directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogServiceArgs-logGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L142" >}}">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L144" >}}">property <b>logGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.
@@ -1155,7 +1283,7 @@ Name of the cloudwatch log group to which the logs should be published. The log 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogServiceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L120" >}}">interface <b>LogServiceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L122" >}}">interface <b>LogServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1164,10 +1292,12 @@ Input properties used for looking up and filtering LogService resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LogServiceState-directoryId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L124" >}}">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L126" >}}">property <b>directoryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>directoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of directory.
@@ -1175,10 +1305,12 @@ The id of directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogServiceState-logGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L128" >}}">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directoryservice/logService.ts#L130" >}}">property <b>logGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.

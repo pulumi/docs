@@ -5,47 +5,45 @@ title: Module servicenetworking
 <div class="section" id="servicenetworking">
 <h1>servicenetworking<a class="headerlink" href="#servicenetworking" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google">Terraform Provider</a> distributed under
+<div><p>This provider is a derived work of the <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google">Terraform Provider</a> distributed under
 <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">MPL 2.0</a>. If you encounter a bug or missing feature, first check the
 <a class="reference external" href="https://github.com/pulumi/pulumi-gcp/issues">pulumi/pulumi-gcp repo</a>; however, if that doesn’t turn up
-anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</div></blockquote>
+anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/issues">terraform-providers/terraform-provider-google repo</a>.</p>
+</div></blockquote>
 <span class="target" id="module-pulumi_gcp.servicenetworking"></span><dl class="class">
 <dt id="pulumi_gcp.servicenetworking.Connection">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.servicenetworking.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>network=None</em>, <em>reserved_peering_ranges=None</em>, <em>service=None</em>, <em>__props__=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.servicenetworking.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">reserved_peering_ranges=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a private VPC connection with a GCP service provider. For more information see
 <a class="reference external" href="https://cloud.google.com/vpc/docs/configure-private-services-access#creating-connection">the official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/v1/services.connections">API</a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of VPC network connected with service producers using VPC peering.</li>
-<li><strong>reserved_peering_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Named IP address range(s) of PEERING type reserved for
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of VPC network connected with service producers using VPC peering.</p></li>
+<li><p><strong>reserved_peering_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
-is already established will not reallocate already provisioned service producer subnetworks.</li>
-<li><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provider peering service that is managing peering connectivity for a
+is already established will not reallocate already provisioned service producer subnetworks.</p></li>
+<li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
-‘servicenetworking.googleapis.com’.</li>
+‘servicenetworking.googleapis.com’.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown</a>.</div></blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.servicenetworking.Connection.network">
-<code class="descname">network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.network" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">network</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of VPC network connected with service producers using VPC peering.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.servicenetworking.Connection.reserved_peering_ranges">
-<code class="descname">reserved_peering_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.reserved_peering_ranges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reserved_peering_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.reserved_peering_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.</p>
@@ -53,15 +51,15 @@ is already established will not reallocate already provisioned service producer 
 
 <dl class="attribute">
 <dt id="pulumi_gcp.servicenetworking.Connection.service">
-<code class="descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">service</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 ‘servicenetworking.googleapis.com’.</p>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="pulumi_gcp.servicenetworking.Connection.get">
-<em class="property">static </em><code class="descname">get</code><span class="sig-paren">(</span><em>resource_name</em>, <em>id</em>, <em>opts=None</em>, <em>network=None</em>, <em>peering=None</em>, <em>reserved_peering_ranges=None</em>, <em>service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">peering=None</em>, <em class="sig-param">reserved_peering_ranges=None</em>, <em class="sig-param">service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Connection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.
 :param str resource_name: The unique name of the resulting resource.
@@ -70,58 +68,55 @@ properties used to qualify the lookup.
 :param pulumi.Input[str] network: Name of VPC network connected with service producers using VPC peering.
 :param pulumi.Input[list] reserved_peering_ranges: Named IP address range(s) of PEERING type reserved for</p>
 <blockquote>
-<div>this service provider. Note that invoking this method with a different range when connection
-is already established will not reallocate already provisioned service producer subnetworks.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provider peering service that is managing peering connectivity for a
+<div><p>this service provider. Note that invoking this method with a different range when connection
+is already established will not reallocate already provisioned service producer subnetworks.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
-‘servicenetworking.googleapis.com’.</td>
-</tr>
-</tbody>
-</table>
+‘servicenetworking.googleapis.com’.</p>
+</dd>
+</dl>
 <blockquote>
-<div>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown</a>.</div></blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/service_networking_connection.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_gcp.servicenetworking.Connection.translate_output_property">
-<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.translate_output_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
 into a format of their choosing before writing those properties to the resource object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_gcp.servicenetworking.Connection.translate_input_property">
-<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.servicenetworking.Connection.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

@@ -40,7 +40,9 @@ title: Module types/input
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L11" >}}">property <b>allowedMemberTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedMemberTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
@@ -51,7 +53,9 @@ Specifies whether this app role definition can be assigned to users and groups b
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L15" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Permission help text that appears in the admin app assignment and consent experiences.
@@ -62,7 +66,9 @@ Permission help text that appears in the admin app assignment and consent experi
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L19" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Display name for the permission that appears in the admin consent and app assignment experiences.
@@ -73,7 +79,9 @@ Display name for the permission that appears in the admin consent and app assign
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L23" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier of the `appRole`.
@@ -84,7 +92,9 @@ The unique identifier of the `appRole`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L27" >}}">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Determines if the app role is enabled: Defaults to `true`.
@@ -95,7 +105,9 @@ Determines if the app role is enabled: Defaults to `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L31" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
@@ -111,7 +123,9 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L38" >}}">property <b>adminConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminConsentDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the admin consent.
@@ -122,7 +136,9 @@ The description of the admin consent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L42" >}}">property <b>adminConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminConsentDisplayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The display name of the admin consent.
@@ -133,7 +149,9 @@ The display name of the admin consent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L46" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier of the `appRole`.
@@ -144,7 +162,9 @@ The unique identifier of the `appRole`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L50" >}}">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Determines if the app role is enabled: Defaults to `true`.
@@ -155,7 +175,9 @@ Determines if the app role is enabled: Defaults to `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L54" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
@@ -166,7 +188,9 @@ Specifies whether the id property references an `OAuth2Permission` or an `AppRol
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L58" >}}">property <b>userConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userConsentDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the user consent.
@@ -177,7 +201,9 @@ The description of the user consent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L62" >}}">property <b>userConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userConsentDisplayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The display name of the user consent.
@@ -188,7 +214,9 @@ The display name of the user consent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L66" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
@@ -204,7 +232,9 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L73" >}}">property <b>resourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccessResourceAccess'>inputs.ApplicationRequiredResourceAccessResourceAccess</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A collection of `resourceAccess` blocks as documented below.
@@ -215,7 +245,9 @@ A collection of `resourceAccess` blocks as documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L77" >}}">property <b>resourceAppId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceAppId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
@@ -231,7 +263,9 @@ The unique identifier for the resource that the application requires access to. 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L84" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier of the `appRole`.
@@ -242,7 +276,9 @@ The unique identifier of the `appRole`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L88" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
@@ -258,7 +294,9 @@ Specifies whether the id property references an `OAuth2Permission` or an `AppRol
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L95" >}}">property <b>allowedMemberTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedMemberTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
@@ -269,7 +307,9 @@ Specifies whether this app role definition can be assigned to users and groups, 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L99" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Permission help text that appears in the admin app assignment and consent experiences.
@@ -280,7 +320,9 @@ Permission help text that appears in the admin app assignment and consent experi
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L103" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Display name for the permission that appears in the admin consent and app assignment experiences.
@@ -291,7 +333,9 @@ Display name for the permission that appears in the admin consent and app assign
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L107" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier of the `appRole`.
@@ -302,7 +346,9 @@ The unique identifier of the `appRole`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L111" >}}">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Determines if the app role is enabled.
@@ -313,7 +359,9 @@ Determines if the app role is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L115" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
@@ -329,7 +377,9 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L122" >}}">property <b>adminConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminConsentDescription?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the admin consent
@@ -340,7 +390,9 @@ The description of the admin consent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L126" >}}">property <b>adminConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminConsentDisplayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The display name of the admin consent
@@ -351,7 +403,9 @@ The display name of the admin consent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L130" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier of the `appRole`.
@@ -362,7 +416,9 @@ The unique identifier of the `appRole`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L134" >}}">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Determines if the app role is enabled.
@@ -373,7 +429,9 @@ Determines if the app role is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L138" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the permission
@@ -384,7 +442,9 @@ The type of the permission
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L142" >}}">property <b>userConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userConsentDescription?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the user consent
@@ -395,7 +455,9 @@ The description of the user consent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L146" >}}">property <b>userConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userConsentDisplayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The display name of the user consent
@@ -406,7 +468,9 @@ The display name of the user consent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L150" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
@@ -422,7 +486,9 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L157" >}}">property <b>allowedMemberTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedMemberTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
@@ -433,7 +499,9 @@ Specifies whether this app role definition can be assigned to users and groups, 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L161" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Permission help text that appears in the admin app assignment and consent experiences.
@@ -444,7 +512,9 @@ Permission help text that appears in the admin app assignment and consent experi
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L165" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Display Name of the Azure AD Application associated with this Service Principal.
@@ -455,7 +525,9 @@ The Display Name of the Azure AD Application associated with this Service Princi
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L169" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier of the `appRole`.
@@ -466,7 +538,9 @@ The unique identifier of the `appRole`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L173" >}}">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Determines if the app role is enabled.
@@ -477,7 +551,9 @@ Determines if the app role is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L177" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
@@ -493,7 +569,9 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L184" >}}">property <b>adminConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminConsentDescription?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the admin consent
@@ -504,7 +582,9 @@ The description of the admin consent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L188" >}}">property <b>adminConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminConsentDisplayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The display name of the admin consent
@@ -515,7 +595,9 @@ The display name of the admin consent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L192" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier of the `appRole`.
@@ -526,7 +608,9 @@ The unique identifier of the `appRole`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L196" >}}">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Determines if the app role is enabled.
@@ -537,7 +621,9 @@ Determines if the app role is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L200" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the permission
@@ -548,7 +634,9 @@ The type of the permission
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L204" >}}">property <b>userConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userConsentDescription?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the user consent
@@ -559,7 +647,9 @@ The description of the user consent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L208" >}}">property <b>userConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userConsentDisplayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The display name of the user consent
@@ -570,7 +660,9 @@ The display name of the user consent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L212" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
@@ -586,7 +678,9 @@ Specifies the value of the roles claim that the application should expect in the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L219" >}}">property <b>adminConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminConsentDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the admin consent.
@@ -597,7 +691,9 @@ The description of the admin consent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L223" >}}">property <b>adminConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminConsentDisplayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The display name of the admin consent.
@@ -608,7 +704,9 @@ The display name of the admin consent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L227" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique identifier for one of the `OAuth2Permission`.
@@ -619,7 +717,9 @@ The unique identifier for one of the `OAuth2Permission`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L231" >}}">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is this permission enabled?
@@ -630,7 +730,9 @@ Is this permission enabled?
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L235" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the permission.
@@ -641,7 +743,9 @@ The type of the permission.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L239" >}}">property <b>userConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userConsentDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the user consent.
@@ -652,7 +756,9 @@ The description of the user consent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L243" >}}">property <b>userConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userConsentDisplayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The display name of the user consent.
@@ -663,7 +769,9 @@ The display name of the user consent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azuread" path="types/input.ts#L247" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of this permission.

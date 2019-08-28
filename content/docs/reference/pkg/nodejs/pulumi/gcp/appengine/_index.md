@@ -37,10 +37,12 @@ title: Module appengine
 
 
 <h2 class="pdoc-module-header" id="Application">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L33" >}}">class <b>Application</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L35" >}}">class <b>Application</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows creation and management of an App Engine application.
@@ -70,13 +72,15 @@ const app = new gcp.appengine.Application("app", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L106" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L108" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Application(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationArgs'>ApplicationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Application resource with the given unique name, arguments, and options.
 
@@ -87,13 +91,15 @@ Create a Application resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ApplicationState'>ApplicationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Application'>Application</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Application resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -101,23 +107,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Application.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -125,10 +135,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-authDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L63" >}}">property <b>authDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L65" >}}">property <b>authDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to authenticate users with when using App Engine's User API.
@@ -136,10 +148,12 @@ The domain to authenticate users with when using App Engine's User API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-codeBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L67" >}}">property <b>codeBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L69" >}}">property <b>codeBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>codeBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The GCS bucket code is being stored in for this app.
@@ -147,10 +161,12 @@ The GCS bucket code is being stored in for this app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-defaultBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L71" >}}">property <b>defaultBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L73" >}}">property <b>defaultBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultBucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The GCS bucket content is being stored in for this app.
@@ -158,10 +174,12 @@ The GCS bucket content is being stored in for this app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-defaultHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L75" >}}">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L77" >}}">property <b>defaultHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default hostname for this app.
@@ -169,12 +187,12 @@ The default hostname for this app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-featureSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L79" >}}">property <b>featureSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L81" >}}">property <b>featureSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>featureSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    splitHealthChecks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>featureSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationFeatureSettings'>outputs.appengine.ApplicationFeatureSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of optional settings to configure specific App Engine features:
@@ -182,10 +200,12 @@ A block of optional settings to configure specific App Engine features:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-gcrDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L83" >}}">property <b>gcrDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L85" >}}">property <b>gcrDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>gcrDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The GCR domain used for storing managed Docker images for this app.
@@ -193,10 +213,12 @@ The GCR domain used for storing managed Docker images for this app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -205,10 +227,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-locationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L88" >}}">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L90" >}}">property <b>locationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>locationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [location](https://cloud.google.com/appengine/docs/locations)
@@ -217,10 +241,12 @@ to serve the app from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L92" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L94" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unique name of the app, usually `apps/{PROJECT_ID}`
@@ -228,10 +254,12 @@ Unique name of the app, usually `apps/{PROJECT_ID}`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L98" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L100" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project ID to create the application under.
@@ -241,10 +269,12 @@ you may get a "Permission denied" error.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-servingStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L102" >}}">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L104" >}}">property <b>servingStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>servingStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The serving status of the app.
@@ -252,14 +282,12 @@ The serving status of the app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-urlDispatchRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L106" >}}">property <b>urlDispatchRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L108" >}}">property <b>urlDispatchRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>urlDispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>urlDispatchRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ApplicationUrlDispatchRule'>outputs.appengine.ApplicationUrlDispatchRule</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
@@ -267,10 +295,12 @@ A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -280,10 +310,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L43" >}}">class <b>FirewallRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L45" >}}">class <b>FirewallRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A single firewall rule that is evaluated against incoming traffic
@@ -322,13 +354,15 @@ const rule = new gcp.appengine.FirewallRule("rule", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L78" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L80" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FirewallRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FirewallRuleArgs'>FirewallRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a FirewallRule resource with the given unique name, arguments, and options.
 
@@ -339,13 +373,15 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L54" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FirewallRuleState'>FirewallRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FirewallRule'>FirewallRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing FirewallRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -353,23 +389,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L45" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L65" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of FirewallRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -377,26 +417,32 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L70" >}}">property <b>action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L72" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L71" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L73" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L45" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -405,18 +451,22 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L72" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L74" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L77" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L79" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -425,18 +475,22 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-sourceRange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L78" >}}">property <b>sourceRange</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L80" >}}">property <b>sourceRange</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sourceRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L45" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -446,7 +500,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L215" >}}">interface <b>ApplicationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L217" >}}">interface <b>ApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -455,10 +509,12 @@ The set of arguments for constructing a Application resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationArgs-authDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L219" >}}">property <b>authDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L221" >}}">property <b>authDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to authenticate users with when using App Engine's User API.
@@ -466,12 +522,12 @@ The domain to authenticate users with when using App Engine's User API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-featureSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L223" >}}">property <b>featureSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L225" >}}">property <b>featureSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    splitHealthChecks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationFeatureSettings'>inputs.appengine.ApplicationFeatureSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of optional settings to configure specific App Engine features:
@@ -479,10 +535,12 @@ A block of optional settings to configure specific App Engine features:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-locationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L228" >}}">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L230" >}}">property <b>locationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [location](https://cloud.google.com/appengine/docs/locations)
@@ -491,10 +549,12 @@ to serve the app from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L234" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L236" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project ID to create the application under.
@@ -504,10 +564,12 @@ you may get a "Permission denied" error.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-servingStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L238" >}}">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L240" >}}">property <b>servingStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>servingStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The serving status of the app.
@@ -516,7 +578,7 @@ The serving status of the app.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L162" >}}">interface <b>ApplicationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L164" >}}">interface <b>ApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -525,10 +587,12 @@ Input properties used for looking up and filtering Application resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationState-authDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L166" >}}">property <b>authDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L168" >}}">property <b>authDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to authenticate users with when using App Engine's User API.
@@ -536,10 +600,12 @@ The domain to authenticate users with when using App Engine's User API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-codeBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L170" >}}">property <b>codeBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L172" >}}">property <b>codeBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>codeBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The GCS bucket code is being stored in for this app.
@@ -547,10 +613,12 @@ The GCS bucket code is being stored in for this app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-defaultBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L174" >}}">property <b>defaultBucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L176" >}}">property <b>defaultBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The GCS bucket content is being stored in for this app.
@@ -558,10 +626,12 @@ The GCS bucket content is being stored in for this app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-defaultHostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L178" >}}">property <b>defaultHostname</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L180" >}}">property <b>defaultHostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default hostname for this app.
@@ -569,12 +639,12 @@ The default hostname for this app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-featureSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L182" >}}">property <b>featureSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L184" >}}">property <b>featureSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    splitHealthChecks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>featureSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationFeatureSettings'>inputs.appengine.ApplicationFeatureSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block of optional settings to configure specific App Engine features:
@@ -582,10 +652,12 @@ A block of optional settings to configure specific App Engine features:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-gcrDomain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L186" >}}">property <b>gcrDomain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L188" >}}">property <b>gcrDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gcrDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The GCR domain used for storing managed Docker images for this app.
@@ -593,10 +665,12 @@ The GCR domain used for storing managed Docker images for this app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-locationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L191" >}}">property <b>locationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L193" >}}">property <b>locationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [location](https://cloud.google.com/appengine/docs/locations)
@@ -605,10 +679,12 @@ to serve the app from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L195" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L197" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unique name of the app, usually `apps/{PROJECT_ID}`
@@ -616,10 +692,12 @@ Unique name of the app, usually `apps/{PROJECT_ID}`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L201" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L203" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The project ID to create the application under.
@@ -629,10 +707,12 @@ you may get a "Permission denied" error.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-servingStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L205" >}}">property <b>servingStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L207" >}}">property <b>servingStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>servingStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The serving status of the app.
@@ -640,14 +720,12 @@ The serving status of the app.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-urlDispatchRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L209" >}}">property <b>urlDispatchRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/application.ts#L211" >}}">property <b>urlDispatchRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urlDispatchRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>urlDispatchRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ApplicationUrlDispatchRule'>inputs.appengine.ApplicationUrlDispatchRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
@@ -656,7 +734,7 @@ A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service`
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L140" >}}">interface <b>FirewallRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L142" >}}">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -665,34 +743,42 @@ The set of arguments for constructing a FirewallRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L141" >}}">property <b>action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L143" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L142" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L144" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L143" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L145" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L148" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L150" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -701,16 +787,18 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-sourceRange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L149" >}}">property <b>sourceRange</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L151" >}}">property <b>sourceRange</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L125" >}}">interface <b>FirewallRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L127" >}}">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -719,34 +807,42 @@ Input properties used for looking up and filtering FirewallRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleState-action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L126" >}}">property <b>action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L128" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L127" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L129" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L128" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L130" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L133" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L135" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -755,10 +851,12 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-sourceRange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L134" >}}">property <b>sourceRange</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="appengine/firewallRule.ts#L136" >}}">property <b>sourceRange</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
