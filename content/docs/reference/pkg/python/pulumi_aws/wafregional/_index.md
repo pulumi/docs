@@ -39,6 +39,18 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>byte_match_tuples</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Settings for the ByteMatchTuple. FieldToMatch documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">positionalConstraint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Within the portion of a web request that you want to search.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The formatting way for web request.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -46,6 +58,17 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.wafregional.ByteMatchSet.byte_match_tuples">
 <code class="sig-name descname">byte_match_tuples</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet.byte_match_tuples" title="Permalink to this definition">¶</a></dt>
 <dd><p>Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Settings for the ByteMatchTuple. FieldToMatch documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">positionalConstraint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Within the portion of a web request that you want to search.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetString</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The formatting way for web request.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -58,12 +81,30 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.wafregional.ByteMatchSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">byte_match_tuples=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ByteMatchSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] byte_match_tuples: Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-:param pulumi.Input[str] name: The name or description of the ByteMatchSet.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>byte_match_tuples</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the ByteMatchSet.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>byte_match_tuples</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Settings for the ByteMatchTuple. FieldToMatch documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">positionalConstraint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Within the portion of a web request that you want to search.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The formatting way for web request.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_byte_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -121,6 +162,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>geo_match_constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of geographical area you want AWS WAF to search for. Currently Country is the only valid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country that you want AWS WAF to search for.
+This is the two-letter country code, e.g. <code class="docutils literal notranslate"><span class="pre">US</span></code>, <code class="docutils literal notranslate"><span class="pre">CA</span></code>, <code class="docutils literal notranslate"><span class="pre">RU</span></code>, <code class="docutils literal notranslate"><span class="pre">CN</span></code>, etc.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html">docs</a> for all supported values.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -128,6 +176,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.GeoMatchSet.geo_match_constraints">
 <code class="sig-name descname">geo_match_constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.GeoMatchSet.geo_match_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of geographical area you want AWS WAF to search for. Currently Country is the only valid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The country that you want AWS WAF to search for.
+This is the two-letter country code, e.g. <code class="docutils literal notranslate"><span class="pre">US</span></code>, <code class="docutils literal notranslate"><span class="pre">CA</span></code>, <code class="docutils literal notranslate"><span class="pre">RU</span></code>, <code class="docutils literal notranslate"><span class="pre">CN</span></code>, etc.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html">docs</a> for all supported values.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -140,12 +194,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.GeoMatchSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">geo_match_constraints=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.GeoMatchSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GeoMatchSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] geo_match_constraints: The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
-:param pulumi.Input[str] name: The name or description of the Geo Match Set.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>geo_match_constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the Geo Match Set.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>geo_match_constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of geographical area you want AWS WAF to search for. Currently Country is the only valid value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country that you want AWS WAF to search for.
+This is the two-letter country code, e.g. <code class="docutils literal notranslate"><span class="pre">US</span></code>, <code class="docutils literal notranslate"><span class="pre">CA</span></code>, <code class="docutils literal notranslate"><span class="pre">RU</span></code>, <code class="docutils literal notranslate"><span class="pre">CN</span></code>, etc.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html">docs</a> for all supported values.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_geo_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -239,6 +306,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>ip_set_descriptors</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The string like IPV4 or IPV6.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR notation.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown</a>.</p>
 </div></blockquote>
@@ -252,6 +324,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.IpSet.ip_set_descriptors">
 <code class="sig-name descname">ip_set_descriptors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.IpSet.ip_set_descriptors" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The string like IPV4 or IPV6.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR notation.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -264,13 +340,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.IpSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">ip_set_descriptors=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.IpSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IpSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the WAF IPSet.
-:param pulumi.Input[list] ip_set_descriptors: One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
-:param pulumi.Input[str] name: The name or description of the IPSet.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the WAF IPSet.</p></li>
+<li><p><strong>ip_set_descriptors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the IPSet.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ip_set_descriptors</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The string like IPV4 or IPV6.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR notation.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_ipset.html.markdown</a>.</p>
 </div></blockquote>
@@ -331,6 +418,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>predicates</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique identifier for a predicate in the rule, such as Byte Match Set ID or IPSet ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set this to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to allow, block, or count requests
+based on the settings in the specified <code class="docutils literal notranslate"><span class="pre">ByteMatchSet</span></code>, <code class="docutils literal notranslate"><span class="pre">IPSet</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatchSet</span></code>, <code class="docutils literal notranslate"><span class="pre">XssMatchSet</span></code>, or <code class="docutils literal notranslate"><span class="pre">SizeConstraintSet</span></code>.
+For example, if an IPSet includes the IP address <code class="docutils literal notranslate"><span class="pre">192.0.2.44</span></code>, AWS WAF will allow or block requests based on that IP address.
+If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, AWS WAF will allow, block, or count requests based on all IP addresses <em>except</em> <code class="docutils literal notranslate"><span class="pre">192.0.2.44</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of predicate in a rule. Valid values: <code class="docutils literal notranslate"><span class="pre">ByteMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">GeoMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">IPMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">RegexMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">SizeConstraint</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatch</span></code>, or <code class="docutils literal notranslate"><span class="pre">XssMatch</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -350,6 +446,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RateBasedRule.predicates">
 <code class="sig-name descname">predicates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.RateBasedRule.predicates" title="Permalink to this definition">¶</a></dt>
 <dd><p>The objects to include in a rule (documented below).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique identifier for a predicate in the rule, such as Byte Match Set ID or IPSet ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Set this to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to allow, block, or count requests
+based on the settings in the specified <code class="docutils literal notranslate"><span class="pre">ByteMatchSet</span></code>, <code class="docutils literal notranslate"><span class="pre">IPSet</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatchSet</span></code>, <code class="docutils literal notranslate"><span class="pre">XssMatchSet</span></code>, or <code class="docutils literal notranslate"><span class="pre">SizeConstraintSet</span></code>.
+For example, if an IPSet includes the IP address <code class="docutils literal notranslate"><span class="pre">192.0.2.44</span></code>, AWS WAF will allow or block requests based on that IP address.
+If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, AWS WAF will allow, block, or count requests based on all IP addresses <em>except</em> <code class="docutils literal notranslate"><span class="pre">192.0.2.44</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of predicate in a rule. Valid values: <code class="docutils literal notranslate"><span class="pre">ByteMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">GeoMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">IPMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">RegexMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">SizeConstraint</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatch</span></code>, or <code class="docutils literal notranslate"><span class="pre">XssMatch</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -368,15 +472,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RateBasedRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em>, <em class="sig-param">rate_key=None</em>, <em class="sig-param">rate_limit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RateBasedRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RateBasedRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] metric_name: The name or description for the Amazon CloudWatch metric of this rule.
-:param pulumi.Input[str] name: The name or description of the rule.
-:param pulumi.Input[list] predicates: The objects to include in a rule (documented below).
-:param pulumi.Input[str] rate_key: Valid value is IP.
-:param pulumi.Input[float] rate_limit: The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 2000.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this rule.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the rule.</p></li>
+<li><p><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The objects to include in a rule (documented below).</p></li>
+<li><p><strong>rate_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid value is IP.</p></li>
+<li><p><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 2000.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>predicates</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique identifier for a predicate in the rule, such as Byte Match Set ID or IPSet ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set this to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to allow, block, or count requests
+based on the settings in the specified <code class="docutils literal notranslate"><span class="pre">ByteMatchSet</span></code>, <code class="docutils literal notranslate"><span class="pre">IPSet</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatchSet</span></code>, <code class="docutils literal notranslate"><span class="pre">XssMatchSet</span></code>, or <code class="docutils literal notranslate"><span class="pre">SizeConstraintSet</span></code>.
+For example, if an IPSet includes the IP address <code class="docutils literal notranslate"><span class="pre">192.0.2.44</span></code>, AWS WAF will allow or block requests based on that IP address.
+If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, AWS WAF will allow, block, or count requests based on all IP addresses <em>except</em> <code class="docutils literal notranslate"><span class="pre">192.0.2.44</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of predicate in a rule. Valid values: <code class="docutils literal notranslate"><span class="pre">ByteMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">GeoMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">IPMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">RegexMatch</span></code>, <code class="docutils literal notranslate"><span class="pre">SizeConstraint</span></code>, <code class="docutils literal notranslate"><span class="pre">SqlInjectionMatch</span></code>, or <code class="docutils literal notranslate"><span class="pre">XssMatch</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rate_based_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -435,6 +554,24 @@ the location in requests that you want AWS WAF to search, and other settings. Se
 </ul>
 </dd>
 </dl>
+<p>The <strong>regex_match_tuples</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The part of a web request that you want to search, such as a specified header or a query string.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regexPatternSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/waf_regex_pattern_set.html">Regex Pattern Set</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation">docs</a>
+for all supported values.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -449,21 +586,60 @@ the location in requests that you want AWS WAF to search, and other settings. Se
 <code class="sig-name descname">regex_match_tuples</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.RegexMatchSet.regex_match_tuples" title="Permalink to this definition">¶</a></dt>
 <dd><p>The regular expression pattern that you want AWS WAF to search for in web requests,
 the location in requests that you want AWS WAF to search, and other settings. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The part of a web request that you want to search, such as a specified header or a query string.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regexPatternSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/waf_regex_pattern_set.html">Regex Pattern Set</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation">docs</a>
+for all supported values.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.wafregional.RegexMatchSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">regex_match_tuples=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RegexMatchSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegexMatchSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name or description of the Regex Match Set.
-:param pulumi.Input[list] regex_match_tuples: The regular expression pattern that you want AWS WAF to search for in web requests,</p>
-<blockquote>
-<div><p>the location in requests that you want AWS WAF to search, and other settings. See below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the Regex Match Set.</p></li>
+<li><p><strong>regex_match_tuples</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The regular expression pattern that you want AWS WAF to search for in web requests,
+the location in requests that you want AWS WAF to search, and other settings. See below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>regex_match_tuples</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The part of a web request that you want to search, such as a specified header or a query string.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regexPatternSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/waf_regex_pattern_set.html">Regex Pattern Set</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation">docs</a>
+for all supported values.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -540,12 +716,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RegexPatternSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">regex_pattern_strings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RegexPatternSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RegexPatternSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name or description of the Regex Pattern Set.
-:param pulumi.Input[list] regex_pattern_strings: A list of regular expression (regex) patterns that you want AWS WAF to search for, such as <code class="docutils literal notranslate"><span class="pre">B[a&#64;]dB[o0]t</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the Regex Pattern Set.</p></li>
+<li><p><strong>regex_pattern_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of regular expression (regex) patterns that you want AWS WAF to search for, such as <code class="docutils literal notranslate"><span class="pre">B[a&#64;]dB[o0]t</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_pattern_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_regex_pattern_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -610,6 +792,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>predicates</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -629,19 +817,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.Rule.predicates">
 <code class="sig-name descname">predicates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.Rule.predicates" title="Permalink to this definition">¶</a></dt>
 <dd><p>The objects to include in a rule (documented below).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.wafregional.Rule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicates=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.Rule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Rule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] metric_name: The name or description for the Amazon CloudWatch metric of this rule.
-:param pulumi.Input[str] name: The name or description of the rule.
-:param pulumi.Input[list] predicates: The objects to include in a rule (documented below).</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this rule.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the rule.</p></li>
+<li><p><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The objects to include in a rule (documented below).</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>predicates</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -700,6 +905,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>activated_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The rule type, either <cite>``REGULAR`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_, <cite>``RATE_BASED`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>&gt;`_, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the order in which the rules are evaluated. Rules with a lower value are evaluated before rules with a higher value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">rule</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The rule type, either <cite>``REGULAR`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_, <cite>``RATE_BASED`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>&gt;`_, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -707,6 +923,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RuleGroup.activated_rules">
 <code class="sig-name descname">activated_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.RuleGroup.activated_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of activated rules, see below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The rule type, either <cite>``REGULAR`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_, <cite>``RATE_BASED`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>&gt;`_, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the order in which the rules are evaluated. Rules with a lower value are evaluated before rules with a higher value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">rule</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The rule type, either <cite>``REGULAR`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_, <cite>``RATE_BASED`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>&gt;`_, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -725,13 +951,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.RuleGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activated_rules=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.RuleGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RuleGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] activated_rules: A list of activated rules, see below
-:param pulumi.Input[str] metric_name: A friendly name for the metrics from the rule group
-:param pulumi.Input[str] name: A friendly name of the rule group</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>activated_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of activated rules, see below</p></li>
+<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the metrics from the rule group</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name of the rule group</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>activated_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The rule type, either <cite>``REGULAR`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_, <cite>``RATE_BASED`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>&gt;`_, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the order in which the rules are evaluated. Rules with a lower value are evaluated before rules with a higher value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">rule</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The rule type, either <cite>``REGULAR`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_, <cite>``RATE_BASED`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rate_based_rule.html</a>&gt;`_, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -789,6 +1032,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>size_constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">comparison_operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of comparison you want to perform.
+e.g. <code class="docutils literal notranslate"><span class="pre">EQ</span></code>, <code class="docutils literal notranslate"><span class="pre">NE</span></code>, <code class="docutils literal notranslate"><span class="pre">LT</span></code>, <code class="docutils literal notranslate"><span class="pre">GT</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-ComparisonOperator">docs</a> for all supported values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies where in a web request to look for the size constraint.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size in bytes that you want to compare against the size of the specified <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code>.
+Valid values are between 0 - 21474836480 bytes (0 - 20 GB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+If you specify a transformation, AWS WAF performs the transformation on <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code> before inspecting a request for a match.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation">docs</a>
+for all supported values.
+<strong>Note:</strong> if you choose <code class="docutils literal notranslate"><span class="pre">BODY</span></code> as <code class="docutils literal notranslate"><span class="pre">type</span></code>, you must choose <code class="docutils literal notranslate"><span class="pre">NONE</span></code> because CloudFront forwards only the first 8192 bytes for inspection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -802,18 +1069,71 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.SizeConstraintSet.size_constraints">
 <code class="sig-name descname">size_constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.SizeConstraintSet.size_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the parts of web requests that you want to inspect the size of.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">comparison_operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of comparison you want to perform.
+e.g. <code class="docutils literal notranslate"><span class="pre">EQ</span></code>, <code class="docutils literal notranslate"><span class="pre">NE</span></code>, <code class="docutils literal notranslate"><span class="pre">LT</span></code>, <code class="docutils literal notranslate"><span class="pre">GT</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-ComparisonOperator">docs</a> for all supported values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies where in a web request to look for the size constraint.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size in bytes that you want to compare against the size of the specified <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code>.
+Valid values are between 0 - 21474836480 bytes (0 - 20 GB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+If you specify a transformation, AWS WAF performs the transformation on <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code> before inspecting a request for a match.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation">docs</a>
+for all supported values.
+<strong>Note:</strong> if you choose <code class="docutils literal notranslate"><span class="pre">BODY</span></code> as <code class="docutils literal notranslate"><span class="pre">type</span></code>, you must choose <code class="docutils literal notranslate"><span class="pre">NONE</span></code> because CloudFront forwards only the first 8192 bytes for inspection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.wafregional.SizeConstraintSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">size_constraints=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.SizeConstraintSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SizeConstraintSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name or description of the Size Constraint Set.
-:param pulumi.Input[list] size_constraints: Specifies the parts of web requests that you want to inspect the size of.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the Size Constraint Set.</p></li>
+<li><p><strong>size_constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the parts of web requests that you want to inspect the size of.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>size_constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">comparison_operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of comparison you want to perform.
+e.g. <code class="docutils literal notranslate"><span class="pre">EQ</span></code>, <code class="docutils literal notranslate"><span class="pre">NE</span></code>, <code class="docutils literal notranslate"><span class="pre">LT</span></code>, <code class="docutils literal notranslate"><span class="pre">GT</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-ComparisonOperator">docs</a> for all supported values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies where in a web request to look for the size constraint.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size in bytes that you want to compare against the size of the specified <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code>.
+Valid values are between 0 - 21474836480 bytes (0 - 20 GB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+If you specify a transformation, AWS WAF performs the transformation on <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code> before inspecting a request for a match.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_SizeConstraint.html#WAF-Type-SizeConstraint-TextTransformation">docs</a>
+for all supported values.
+<strong>Note:</strong> if you choose <code class="docutils literal notranslate"><span class="pre">BODY</span></code> as <code class="docutils literal notranslate"><span class="pre">type</span></code>, you must choose <code class="docutils literal notranslate"><span class="pre">NONE</span></code> because CloudFront forwards only the first 8192 bytes for inspection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -871,6 +1191,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>sql_injection_match_tuples</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies where in a web request to look for snippets of malicious SQL code.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+If you specify a transformation, AWS WAF performs the transformation on <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code> before inspecting a request for a match.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_SqlInjectionMatchTuple.html#WAF-Type-regional_SqlInjectionMatchTuple-TextTransformation">docs</a>
+for all supported values.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -884,18 +1222,59 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.SqlInjectionMatchSet.sql_injection_match_tuples">
 <code class="sig-name descname">sql_injection_match_tuples</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.SqlInjectionMatchSet.sql_injection_match_tuples" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies where in a web request to look for snippets of malicious SQL code.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+If you specify a transformation, AWS WAF performs the transformation on <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code> before inspecting a request for a match.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_SqlInjectionMatchTuple.html#WAF-Type-regional_SqlInjectionMatchTuple-TextTransformation">docs</a>
+for all supported values.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.wafregional.SqlInjectionMatchSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sql_injection_match_tuples=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.SqlInjectionMatchSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SqlInjectionMatchSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name or description of the SizeConstraintSet.
-:param pulumi.Input[list] sql_injection_match_tuples: The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the SizeConstraintSet.</p></li>
+<li><p><strong>sql_injection_match_tuples</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>sql_injection_match_tuples</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies where in a web request to look for snippets of malicious SQL code.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want to search, e.g. <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit this field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string.
+e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, <code class="docutils literal notranslate"><span class="pre">METHOD</span></code> or <code class="docutils literal notranslate"><span class="pre">BODY</span></code>.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_FieldToMatch.html">docs</a>
+for all supported values.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
+If you specify a transformation, AWS WAF performs the transformation on <code class="docutils literal notranslate"><span class="pre">field_to_match</span></code> before inspecting a request for a match.
+e.g. <code class="docutils literal notranslate"><span class="pre">CMD_LINE</span></code>, <code class="docutils literal notranslate"><span class="pre">HTML_ENTITY_DECODE</span></code> or <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.
+See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_SqlInjectionMatchTuple.html#WAF-Type-regional_SqlInjectionMatchTuple-TextTransformation">docs</a>
+for all supported values.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_sql_injection_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -956,6 +1335,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_action</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+<p>The <strong>logging_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">log_destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redactedFields</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block containing parts of the request that you want redacted from the logs. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set of configuration blocks for fields to redact. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want the WAF to search, for example, <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>. If the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The <strong>rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the order in which the rules in a WebACL are evaluated.
+Rules with a lower value are evaluated before rules with a higher value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the associated WAF (Regional) rule (e.g. <cite>``wafregional.Rule`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_). WAF (Global) rules cannot be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown</a>.</p>
 </div></blockquote>
@@ -969,12 +1383,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.WebAcl.default_action">
 <code class="sig-name descname">default_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.default_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>The action that you want AWS WAF Regional to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.WebAcl.logging_configuration">
 <code class="sig-name descname">logging_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.logging_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block to enable WAF logging. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">log_destination</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redactedFields</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block containing parts of the request that you want redacted from the logs. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatches</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of configuration blocks for fields to redact. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want the WAF to search, for example, <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>. If the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -993,22 +1423,79 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.WebAcl.rules">
 <code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set of configuration blocks containing rules for the web ACL. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideAction</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the order in which the rules in a WebACL are evaluated.
+Rules with a lower value are evaluated before rules with a higher value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the associated WAF (Regional) rule (e.g. <cite>``wafregional.Rule`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_). WAF (Global) rules cannot be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.wafregional.WebAcl.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">logging_configuration=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing WebAcl resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the WAF Regional WebACL.
-:param pulumi.Input[dict] default_action: The action that you want AWS WAF Regional to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL.
-:param pulumi.Input[dict] logging_configuration: Configuration block to enable WAF logging. Detailed below.
-:param pulumi.Input[str] metric_name: The name or description for the Amazon CloudWatch metric of this web ACL.
-:param pulumi.Input[str] name: The name or description of the web ACL.
-:param pulumi.Input[list] rules: Set of configuration blocks containing rules for the web ACL. Detailed below.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the WAF Regional WebACL.</p></li>
+<li><p><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The action that you want AWS WAF Regional to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL.</p></li>
+<li><p><strong>logging_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to enable WAF logging. Detailed below.</p></li>
+<li><p><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this web ACL.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the web ACL.</p></li>
+<li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of configuration blocks containing rules for the web ACL. Detailed below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>default_action</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+<p>The <strong>logging_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">log_destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redactedFields</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block containing parts of the request that you want redacted from the logs. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set of configuration blocks for fields to redact. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want the WAF to search, for example, <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>. If the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The <strong>rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrideAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the order in which the rules in a WebACL are evaluated.
+Rules with a lower value are evaluated before rules with a higher value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the associated WAF (Regional) rule (e.g. <cite>``wafregional.Rule`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_). WAF (Global) rules cannot be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown</a>.</p>
 </div></blockquote>
@@ -1088,12 +1575,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.WebAclAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">resource_arn=None</em>, <em class="sig-param">web_acl_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.WebAclAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing WebAclAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] resource_arn: ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
-:param pulumi.Input[str] web_acl_id: The ID of the WAF Regional WebACL to create an association.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>resource_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.</p></li>
+<li><p><strong>web_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the WAF Regional WebACL to create an association.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -1151,6 +1644,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>xss_match_tuples</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies where in a web request to look for cross-site scripting attacks.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want the WAF to search, for example, <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>. If the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string. e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code> or <code class="docutils literal notranslate"><span class="pre">METHOD</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -1164,18 +1667,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.XssMatchSet.xss_match_tuples">
 <code class="sig-name descname">xss_match_tuples</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.XssMatchSet.xss_match_tuples" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parts of web requests that you want to inspect for cross-site scripting attacks.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies where in a web request to look for cross-site scripting attacks.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want the WAF to search, for example, <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>. If the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The part of the web request that you want AWS WAF to search for a specified string. e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code> or <code class="docutils literal notranslate"><span class="pre">METHOD</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.wafregional.XssMatchSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">xss_match_tuples=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.XssMatchSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing XssMatchSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the set
-:param pulumi.Input[list] xss_match_tuples: The parts of web requests that you want to inspect for cross-site scripting attacks.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the set</p></li>
+<li><p><strong>xss_match_tuples</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The parts of web requests that you want to inspect for cross-site scripting attacks.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>xss_match_tuples</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldToMatch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies where in a web request to look for cross-site scripting attacks.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">HEADER</span></code>, enter the name of the header that you want the WAF to search, for example, <code class="docutils literal notranslate"><span class="pre">User-Agent</span></code> or <code class="docutils literal notranslate"><span class="pre">Referer</span></code>. If the value of <code class="docutils literal notranslate"><span class="pre">type</span></code> is any other value, omit <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The part of the web request that you want AWS WAF to search for a specified string. e.g. <code class="docutils literal notranslate"><span class="pre">HEADER</span></code> or <code class="docutils literal notranslate"><span class="pre">METHOD</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textTransformation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_xss_match_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -1223,6 +1751,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.get_ipset">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_ipset</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_ipset" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.IpSet</span></code> Retrieves a WAF Regional IP Set Resource Id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Regional IP set.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_ipset.html.markdown</a>.</p>
 </div></blockquote>
@@ -1232,6 +1765,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.get_rule">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_rule</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.Rule</span></code> Retrieves a WAF Regional Rule Resource Id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF rule.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -1241,6 +1779,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.wafregional.get_web_acl">
 <code class="sig-prename descclassname">pulumi_aws.wafregional.</code><code class="sig-name descname">get_web_acl</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.get_web_acl" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">wafregional.WebAcl</span></code> Retrieves a WAF Regional Web ACL Resource Id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the WAF Web ACL.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_web_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_web_acl.html.markdown</a>.</p>
 </div></blockquote>

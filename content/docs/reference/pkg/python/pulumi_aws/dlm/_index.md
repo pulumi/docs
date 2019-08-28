@@ -26,6 +26,30 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>policy_details</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of resource types that should be targeted by the lifecycle policy. <code class="docutils literal notranslate"><span class="pre">VOLUME</span></code> is currently the only allowed value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">schedule</span></code> configuration block.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">copyTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">create_rule</span></code> block. Max of 1 per schedule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How often this lifecycle policy should be evaluated. <code class="docutils literal notranslate"><span class="pre">2</span></code>,<code class="docutils literal notranslate"><span class="pre">3</span></code>,<code class="docutils literal notranslate"><span class="pre">4</span></code>,<code class="docutils literal notranslate"><span class="pre">6</span></code>,<code class="docutils literal notranslate"><span class="pre">8</span></code>,<code class="docutils literal notranslate"><span class="pre">12</span></code> or <code class="docutils literal notranslate"><span class="pre">24</span></code> are valid values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unit for how often the lifecycle policy should be evaluated. <code class="docutils literal notranslate"><span class="pre">HOURS</span></code> is currently the only allowed value and also the default value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">times</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the schedule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retainRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">retain_rule</span></code> block. Max of 1 per schedule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many snapshots to keep. Must be an integer between 1 and 1000.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dlm_lifecycle_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dlm_lifecycle_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -45,6 +69,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.dlm.LifecyclePolicy.policy_details">
 <code class="sig-name descname">policy_details</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy.policy_details" title="Permalink to this definition">¶</a></dt>
 <dd><p>See the <code class="docutils literal notranslate"><span class="pre">policy_details</span></code> configuration block. Max of 1.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of resource types that should be targeted by the lifecycle policy. <code class="docutils literal notranslate"><span class="pre">VOLUME</span></code> is currently the only allowed value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">schedule</span></code> configuration block.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">copyTags</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createRule</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">create_rule</span></code> block. Max of 1 per schedule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - How often this lifecycle policy should be evaluated. <code class="docutils literal notranslate"><span class="pre">2</span></code>,<code class="docutils literal notranslate"><span class="pre">3</span></code>,<code class="docutils literal notranslate"><span class="pre">4</span></code>,<code class="docutils literal notranslate"><span class="pre">6</span></code>,<code class="docutils literal notranslate"><span class="pre">8</span></code>,<code class="docutils literal notranslate"><span class="pre">12</span></code> or <code class="docutils literal notranslate"><span class="pre">24</span></code> are valid values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unit for how often the lifecycle policy should be evaluated. <code class="docutils literal notranslate"><span class="pre">HOURS</span></code> is currently the only allowed value and also the default value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">times</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for the schedule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retainRule</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">retain_rule</span></code> block. Max of 1 per schedule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - How many snapshots to keep. Must be an integer between 1 and 1000.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -57,14 +104,44 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.dlm.LifecyclePolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">policy_details=None</em>, <em class="sig-param">state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dlm.LifecyclePolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LifecyclePolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A description for the DLM lifecycle policy.
-:param pulumi.Input[str] execution_role_arn: The ARN of an IAM role that is able to be assumed by the DLM service.
-:param pulumi.Input[dict] policy_details: See the <code class="docutils literal notranslate"><span class="pre">policy_details</span></code> configuration block. Max of 1.
-:param pulumi.Input[str] state: Whether the lifecycle policy should be enabled or disabled. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> are valid values. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the DLM lifecycle policy.</p></li>
+<li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that is able to be assumed by the DLM service.</p></li>
+<li><p><strong>policy_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – See the <code class="docutils literal notranslate"><span class="pre">policy_details</span></code> configuration block. Max of 1.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the lifecycle policy should be enabled or disabled. <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> are valid values. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>policy_details</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceTypes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of resource types that should be targeted by the lifecycle policy. <code class="docutils literal notranslate"><span class="pre">VOLUME</span></code> is currently the only allowed value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schedules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">schedule</span></code> configuration block.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">copyTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">createRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">create_rule</span></code> block. Max of 1 per schedule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How often this lifecycle policy should be evaluated. <code class="docutils literal notranslate"><span class="pre">2</span></code>,<code class="docutils literal notranslate"><span class="pre">3</span></code>,<code class="docutils literal notranslate"><span class="pre">4</span></code>,<code class="docutils literal notranslate"><span class="pre">6</span></code>,<code class="docutils literal notranslate"><span class="pre">8</span></code>,<code class="docutils literal notranslate"><span class="pre">12</span></code> or <code class="docutils literal notranslate"><span class="pre">24</span></code> are valid values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unit for how often the lifecycle policy should be evaluated. <code class="docutils literal notranslate"><span class="pre">HOURS</span></code> is currently the only allowed value and also the default value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">times</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the schedule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retainRule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - See the <code class="docutils literal notranslate"><span class="pre">retain_rule</span></code> block. Max of 1 per schedule.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many snapshots to keep. Must be an integer between 1 and 1000.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tagsToAdd</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tag keys and their values. Any resources that match the <code class="docutils literal notranslate"><span class="pre">resource_types</span></code> and are tagged with <em>any</em> of these tags will be targeted.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dlm_lifecycle_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dlm_lifecycle_policy.html.markdown</a>.</p>
 </div></blockquote>

@@ -38,6 +38,19 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-prename descclassname">pulumi_aws.pricing.</code><code class="sig-name descname">get_product</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.get_product" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the pricing information of all products in AWS.
 This data source is only available in a us-east-1 or ap-south-1 provider.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.</p></li>
+<li><p><strong>service_code</strong> (<em>str</em>) – The code of the service. Available service codes can be fetched using the DescribeServices pricing API call.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The product attribute name that you want to filter on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The product attribute value that you want to filter on.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/pricing_product.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/pricing_product.html.markdown</a>.</p>
 </div></blockquote>

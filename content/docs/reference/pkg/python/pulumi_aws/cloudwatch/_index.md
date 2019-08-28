@@ -54,13 +54,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cloudwatch.Dashboard.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dashboard_arn=None</em>, <em class="sig-param">dashboard_body=None</em>, <em class="sig-param">dashboard_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.Dashboard.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Dashboard resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] dashboard_arn: The Amazon Resource Name (ARN) of the dashboard.
-:param pulumi.Input[str] dashboard_body: The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html">documentation</a>.
-:param pulumi.Input[str] dashboard_name: The name of the dashboard.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dashboard_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the dashboard.</p></li>
+<li><p><strong>dashboard_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html">documentation</a>.</p>
+</p></li>
+<li><p><strong>dashboard_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dashboard.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_dashboard.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_dashboard.html.markdown</a>.</p>
 </div></blockquote>
@@ -120,6 +127,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key for the condition. Valid values: <code class="docutils literal notranslate"><span class="pre">aws:PrincipalOrgID</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of condition. Value values: <code class="docutils literal notranslate"><span class="pre">StringEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value for the key.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_permission.html.markdown</a>.</p>
 </div></blockquote>
@@ -133,6 +146,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.EventPermission.condition">
 <code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventPermission.condition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Key for the condition. Valid values: <code class="docutils literal notranslate"><span class="pre">aws:PrincipalOrgID</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of condition. Value values: <code class="docutils literal notranslate"><span class="pre">StringEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value for the key.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -151,14 +169,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.EventPermission.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">principal=None</em>, <em class="sig-param">statement_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventPermission.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventPermission resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] action: The action that you are enabling the other account to perform. Defaults to <code class="docutils literal notranslate"><span class="pre">events:PutEvents</span></code>.
-:param pulumi.Input[dict] condition: Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
-:param pulumi.Input[str] principal: The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify <code class="docutils literal notranslate"><span class="pre">*</span></code> to permit any account to put events to your default event bus, optionally limited by <code class="docutils literal notranslate"><span class="pre">condition</span></code>.
-:param pulumi.Input[str] statement_id: An identifier string for the external account that you are granting permissions to.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The action that you are enabling the other account to perform. Defaults to <code class="docutils literal notranslate"><span class="pre">events:PutEvents</span></code>.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.</p></li>
+<li><p><strong>principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify <code class="docutils literal notranslate"><span class="pre">*</span></code> to permit any account to put events to your default event bus, optionally limited by <code class="docutils literal notranslate"><span class="pre">condition</span></code>.</p></li>
+<li><p><strong>statement_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An identifier string for the external account that you are granting permissions to.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>condition</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Key for the condition. Valid values: <code class="docutils literal notranslate"><span class="pre">aws:PrincipalOrgID</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of condition. Value values: <code class="docutils literal notranslate"><span class="pre">StringEquals</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value for the key.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_permission.html.markdown</a>.</p>
 </div></blockquote>
@@ -289,20 +319,19 @@ For example, <code class="docutils literal notranslate"><span class="pre">cron(0
 <dt id="pulumi_aws.cloudwatch.EventRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">event_pattern=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">schedule_expression=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) of the rule.
-:param pulumi.Input[str] description: The description of the rule.
-:param pulumi.Input[str] event_pattern: Event pattern</p>
-<blockquote>
-<div><p>described a JSON object.
-See full documentation of <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html">CloudWatch Events and Event Patterns</a> for details.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the rule.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the rule.</p></li>
+<li><p><strong>event_pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Event pattern
+described a JSON object.
+See full documentation of <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CloudWatchEventsandEventPatterns.html">CloudWatch Events and Event Patterns</a> for details.</p>
+</p></li>
 <li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the rule should be enabled (defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rule’s name. By default generated by this provider.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rule’s name. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
@@ -381,6 +410,46 @@ that is used for extracting part of the matched event when passing it to the tar
 </ul>
 </dd>
 </dl>
+<p>The <strong>batch_target</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arraySize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobDefinition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name to use for this execution of the job, if the target is an AWS Batch job.</p></li>
+</ul>
+<p>The <strong>ecs_target</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies an ECS task group for the task. The maximum length is 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Assign a public IP address to the ENI (Fargate launch type only). Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The subnets associated with the task or service.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">platformVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see <a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate Platform Versions</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of tasks to create based on the TaskDefinition. The default is 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskDefinitionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the task definition to use if the event target is an Amazon ECS cluster.</p></li>
+</ul>
+<p>The <strong>input_transformer</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">inputPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Key value pairs specified in the form of JSONPath (for example, time = $.time)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Structure containing the template body.</p></li>
+</ul>
+<p>The <strong>kinesis_target</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">partitionKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The JSON path to be extracted from the event and used as the partition key.</p></li>
+</ul>
+<p>The <strong>run_command_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be either <code class="docutils literal notranslate"><span class="pre">tag:tag-key</span></code> or <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If Key is <code class="docutils literal notranslate"><span class="pre">tag:tag-key</span></code>, Values is a list of tag values. If Key is <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code>, Values is a list of Amazon EC2 instance IDs.</p></li>
+</ul>
+<p>The <strong>sqs_target</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">messageGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The FIFO message group ID to use as the target.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_target.html.markdown</a>.</p>
 </div></blockquote>
@@ -394,12 +463,32 @@ that is used for extracting part of the matched event when passing it to the tar
 <dt id="pulumi_aws.cloudwatch.EventTarget.batch_target">
 <code class="sig-name descname">batch_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget.batch_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arraySize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobDefinition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name to use for this execution of the job, if the target is an AWS Batch job.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.EventTarget.ecs_target">
 <code class="sig-name descname">ecs_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget.ecs_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies an ECS task group for the task. The maximum length is 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Assign a public IP address to the ENI (Fargate launch type only). Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The subnets associated with the task or service.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">platformVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see <a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate Platform Versions</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of tasks to create based on the TaskDefinition. The default is 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskDefinitionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the task definition to use if the event target is an Amazon ECS cluster.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -419,12 +508,19 @@ that is used for extracting part of the matched event when passing it to the tar
 <dt id="pulumi_aws.cloudwatch.EventTarget.input_transformer">
 <code class="sig-name descname">input_transformer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget.input_transformer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters used when you are providing a custom input to a target based on certain event data.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">inputPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Key value pairs specified in the form of JSONPath (for example, time = $.time)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Structure containing the template body.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.EventTarget.kinesis_target">
 <code class="sig-name descname">kinesis_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget.kinesis_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">partitionKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The JSON path to be extracted from the event and used as the partition key.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -443,12 +539,19 @@ that is used for extracting part of the matched event when passing it to the tar
 <dt id="pulumi_aws.cloudwatch.EventTarget.run_command_targets">
 <code class="sig-name descname">run_command_targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget.run_command_targets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Can be either <code class="docutils literal notranslate"><span class="pre">tag:tag-key</span></code> or <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - If Key is <code class="docutils literal notranslate"><span class="pre">tag:tag-key</span></code>, Values is a list of tag values. If Key is <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code>, Values is a list of Amazon EC2 instance IDs.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.EventTarget.sqs_target">
 <code class="sig-name descname">sqs_target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget.sqs_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">messageGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The FIFO message group ID to use as the target.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -461,21 +564,20 @@ that is used for extracting part of the matched event when passing it to the tar
 <dt id="pulumi_aws.cloudwatch.EventTarget.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">batch_target=None</em>, <em class="sig-param">ecs_target=None</em>, <em class="sig-param">input=None</em>, <em class="sig-param">input_path=None</em>, <em class="sig-param">input_transformer=None</em>, <em class="sig-param">kinesis_target=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">rule=None</em>, <em class="sig-param">run_command_targets=None</em>, <em class="sig-param">sqs_target=None</em>, <em class="sig-param">target_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventTarget resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) associated of the target.
-:param pulumi.Input[dict] batch_target: Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
-:param pulumi.Input[dict] ecs_target: Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
-:param pulumi.Input[str] input: Valid JSON text passed to the target.
-:param pulumi.Input[str] input_path: The value of the <a class="reference external" href="http://goessner.net/articles/JsonPath/">JSONPath</a></p>
-<blockquote>
-<div><p>that is used for extracting part of the matched event when passing it to the target.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) associated of the target.</p></li>
+<li><p><strong>batch_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.</p></li>
+<li><p><strong>ecs_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.</p></li>
+<li><p><strong>input</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid JSON text passed to the target.</p></li>
+<li><p><strong>input_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The value of the <a class="reference external" href="http://goessner.net/articles/JsonPath/">JSONPath</a>
+that is used for extracting part of the matched event when passing it to the target.</p>
+</p></li>
 <li><p><strong>input_transformer</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used when you are providing a custom input to a target based on certain event data.</p></li>
 <li><p><strong>kinesis_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if <code class="docutils literal notranslate"><span class="pre">ecs_target</span></code> is used.</p></li>
@@ -486,6 +588,46 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>batch_target</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arraySize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobDefinition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name to use for this execution of the job, if the target is an AWS Batch job.</p></li>
+</ul>
+<p>The <strong>ecs_target</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies an ECS task group for the task. The maximum length is 255 characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Assign a public IP address to the ENI (Fargate launch type only). Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The subnets associated with the task or service.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">platformVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see <a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate Platform Versions</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of tasks to create based on the TaskDefinition. The default is 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskDefinitionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the task definition to use if the event target is an Amazon ECS cluster.</p></li>
+</ul>
+<p>The <strong>input_transformer</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">inputPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Key value pairs specified in the form of JSONPath (for example, time = $.time)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Structure containing the template body.</p></li>
+</ul>
+<p>The <strong>kinesis_target</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">partitionKeyPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The JSON path to be extracted from the event and used as the partition key.</p></li>
+</ul>
+<p>The <strong>run_command_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be either <code class="docutils literal notranslate"><span class="pre">tag:tag-key</span></code> or <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If Key is <code class="docutils literal notranslate"><span class="pre">tag:tag-key</span></code>, Values is a list of tag values. If Key is <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code>, Values is a list of Amazon EC2 instance IDs.</p></li>
+</ul>
+<p>The <strong>sqs_target</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">messageGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The FIFO message group ID to use as the target.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_target.html.markdown</a>.</p>
 </div></blockquote>
@@ -599,14 +741,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogDestination.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">target_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestination.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogDestination resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) specifying the log destination.
-:param pulumi.Input[str] name: A name for the log destination
-:param pulumi.Input[str] role_arn: The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target
-:param pulumi.Input[str] target_arn: The ARN of the target Amazon Kinesis stream or Amazon Lambda resource for the destination</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the log destination.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the log destination</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target</p></li>
+<li><p><strong>target_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the target Amazon Kinesis stream or Amazon Lambda resource for the destination</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_destination.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_destination.html.markdown</a>.</p>
 </div></blockquote>
@@ -683,12 +831,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogDestinationPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policy=None</em>, <em class="sig-param">destination_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestinationPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogDestinationPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] access_policy: The policy document. This is a JSON formatted string.
-:param pulumi.Input[str] destination_name: A name for the subscription filter</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
+<li><p><strong>destination_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the subscription filter</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_destination_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_destination_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -798,19 +952,17 @@ you want to retain log events in the specified log group.</p>
 <dt id="pulumi_aws.cloudwatch.LogGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) specifying the log group.
-:param pulumi.Input[str] kms_key_id: The ARN of the KMS Key to use when encrypting log data. Please note, after the AWS KMS CMK is disassociated from the log group,</p>
-<blockquote>
-<div><p>AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All previously ingested data remains encrypted, and AWS CloudWatch Logs requires
-permissions for the CMK whenever the encrypted data is requested.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the log group.</p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the KMS Key to use when encrypting log data. Please note, after the AWS KMS CMK is disassociated from the log group,
+AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All previously ingested data remains encrypted, and AWS CloudWatch Logs requires
+permissions for the CMK whenever the encrypted data is requested.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log group. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>retention_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of days
@@ -880,6 +1032,13 @@ for extracting metric data out of ingested log events.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>metric_transformation</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the metric filter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_metric_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_metric_filter.html.markdown</a>.</p>
 </div></blockquote>
@@ -894,6 +1053,12 @@ for extracting metric data out of ingested log events.</p></li>
 <code class="sig-name descname">metric_transformation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.LogMetricFilter.metric_transformation" title="Permalink to this definition">¶</a></dt>
 <dd><p>A block defining collection of information
 needed to define how metric data gets emitted. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for the metric filter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -913,18 +1078,16 @@ for extracting metric data out of ingested log events.</p>
 <dt id="pulumi_aws.cloudwatch.LogMetricFilter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">metric_transformation=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pattern=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogMetricFilter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogMetricFilter resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] log_group_name: The name of the log group to associate the metric filter with.
-:param pulumi.Input[dict] metric_transformation: A block defining collection of information</p>
-<blockquote>
-<div><p>needed to define how metric data gets emitted. See below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log group to associate the metric filter with.</p></li>
+<li><p><strong>metric_transformation</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block defining collection of information
+needed to define how metric data gets emitted. See below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the metric filter.</p></li>
 <li><p><strong>pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A valid <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/FilterAndPatternSyntax.html">CloudWatch Logs filter pattern</a>
 for extracting metric data out of ingested log events.</p>
@@ -932,6 +1095,13 @@ for extracting metric data out of ingested log events.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>metric_transformation</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the metric filter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_metric_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_metric_filter.html.markdown</a>.</p>
 </div></blockquote>
@@ -1008,12 +1178,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogResourcePolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_document=None</em>, <em class="sig-param">policy_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogResourcePolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogResourcePolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy_document: Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
-:param pulumi.Input[str] policy_name: Name of the resource policy.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.</p></li>
+<li><p><strong>policy_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource policy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_resource_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_resource_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -1096,13 +1272,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogStream.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogStream.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogStream resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) specifying the log stream.
-:param pulumi.Input[str] log_group_name: The name of the log group under which the log stream is to be created.
-:param pulumi.Input[str] name: The name of the log stream. Must not be longer than 512 characters and must not contain <code class="docutils literal notranslate"><span class="pre">:</span></code></p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the log stream.</p></li>
+<li><p><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log group under which the log stream is to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log stream. Must not be longer than 512 characters and must not contain <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_stream.html.markdown</a>.</p>
 </div></blockquote>
@@ -1207,16 +1389,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogSubscriptionFilter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_arn=None</em>, <em class="sig-param">distribution=None</em>, <em class="sig-param">filter_pattern=None</em>, <em class="sig-param">log_group=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogSubscriptionFilter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogSubscriptionFilter resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] destination_arn: The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.
-:param pulumi.Input[str] distribution: The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are “Random” and “ByLogStream”.
-:param pulumi.Input[str] filter_pattern: A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.
-:param pulumi.Input[str] log_group: The name of the log group to associate the subscription filter with
-:param pulumi.Input[str] name: A name for the subscription filter
-:param pulumi.Input[str] role_arn: The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver ingested log events to the destination. If you use Lambda as a destination, you should skip this argument and use <code class="docutils literal notranslate"><span class="pre">lambda.Permission</span></code> resource for granting access from CloudWatch logs to the destination Lambda function.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.</p></li>
+<li><p><strong>distribution</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are “Random” and “ByLogStream”.</p></li>
+<li><p><strong>filter_pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.</p></li>
+<li><p><strong>log_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log group to associate the subscription filter with</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the subscription filter</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver ingested log events to the destination. If you use Lambda as a destination, you should skip this argument and use <code class="docutils literal notranslate"><span class="pre">lambda.Permission</span></code> resource for granting access from CloudWatch logs to the destination Lambda function.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_subscription_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_subscription_filter.html.markdown</a>.</p>
 </div></blockquote>
@@ -1302,6 +1490,26 @@ Either of the following is supported: <code class="docutils literal notranslate"
 </ul>
 </dd>
 </dl>
+<p>The <strong>metric_queries</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The math expression to be performed on the returned data, if this object is performing a math expression. This expression can use the id of the other metrics to refer to those metrics, and can also use the id of other expressions to use the result of those expressions. For more information about metric math expressions, see Metric Math Syntax and Functions in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Amazon CloudWatch User Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A short name used to tie this object to the results in the response. If you are performing math expressions on this set of data, this name represents that data and can serve as a variable in the mathematical expression. The valid characters are letters, numbers, and underscore. The first character must be a lowercase letter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A human-readable label for this metric or expression. This is especially useful if this is an expression, so that you know what the value represents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The dimensions for this metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this metric.
+See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The namespace for this metric. See docs for the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html">list of namespaces</a>.
+See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">stat</span></code> is applied.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The statistic to apply to this metric.
+Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">SampleCount</span></code>, <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Sum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unit for this metric.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">returnData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specify exactly one <code class="docutils literal notranslate"><span class="pre">metric_query</span></code> to be <code class="docutils literal notranslate"><span class="pre">true</span></code> to use that <code class="docutils literal notranslate"><span class="pre">metric_query</span></code> result as the alarm.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_metric_alarm.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_metric_alarm.html.markdown</a>.</p>
 </div></blockquote>
@@ -1393,6 +1601,25 @@ See docs for <a class="reference external" href="https://docs.aws.amazon.com/Ama
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.metric_queries">
 <code class="sig-name descname">metric_queries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.metric_queries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables you to create an alarm based on a metric math expression. You may specify at most 20.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The math expression to be performed on the returned data, if this object is performing a math expression. This expression can use the id of the other metrics to refer to those metrics, and can also use the id of other expressions to use the result of those expressions. For more information about metric math expressions, see Metric Math Syntax and Functions in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Amazon CloudWatch User Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A short name used to tie this object to the results in the response. If you are performing math expressions on this set of data, this name represents that data and can serve as a variable in the mathematical expression. The valid characters are letters, numbers, and underscore. The first character must be a lowercase letter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A human-readable label for this metric or expression. This is especially useful if this is an expression, so that you know what the value represents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The dimensions for this metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name for this metric.
+See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The namespace for this metric. See docs for the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html">list of namespaces</a>.
+See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">stat</span></code> is applied.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The statistic to apply to this metric.
+Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">SampleCount</span></code>, <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Sum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unit for this metric.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">returnData</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specify exactly one <code class="docutils literal notranslate"><span class="pre">metric_query</span></code> to be <code class="docutils literal notranslate"><span class="pre">true</span></code> to use that <code class="docutils literal notranslate"><span class="pre">metric_query</span></code> result as the alarm.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1449,29 +1676,28 @@ Either of the following is supported: <code class="docutils literal notranslate"
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions_enabled=None</em>, <em class="sig-param">alarm_actions=None</em>, <em class="sig-param">alarm_description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">comparison_operator=None</em>, <em class="sig-param">datapoints_to_alarm=None</em>, <em class="sig-param">dimensions=None</em>, <em class="sig-param">evaluate_low_sample_count_percentiles=None</em>, <em class="sig-param">evaluation_periods=None</em>, <em class="sig-param">extended_statistic=None</em>, <em class="sig-param">insufficient_data_actions=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">metric_queries=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">ok_actions=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">statistic=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">treat_missing_data=None</em>, <em class="sig-param">unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MetricAlarm resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] actions_enabled: Indicates whether or not actions should be executed during any changes to the alarm’s state. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[list] alarm_actions: The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
-:param pulumi.Input[str] alarm_description: The description for the alarm.
-:param pulumi.Input[str] name: The descriptive name for the alarm. This name must be unique within the user’s AWS account
-:param pulumi.Input[str] arn: The ARN of the cloudwatch metric alarm.
-:param pulumi.Input[str] comparison_operator: The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqualToThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanOrEqualToThreshold</span></code>.
-:param pulumi.Input[float] datapoints_to_alarm: The number of datapoints that must be breaching to trigger the alarm.
-:param pulumi.Input[dict] dimensions: The dimensions for this metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.
-:param pulumi.Input[str] evaluate_low_sample_count_percentiles: Used only for alarms</p>
-<blockquote>
-<div><p>based on percentiles. If you specify <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, the alarm state will not
-change during periods with too few data points to be statistically significant.
-If you specify <code class="docutils literal notranslate"><span class="pre">evaluate</span></code> or omit this parameter, the alarm will always be
-evaluated and possibly change state no matter how many data points are available.
-The following values are supported: <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, and <code class="docutils literal notranslate"><span class="pre">evaluate</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>actions_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not actions should be executed during any changes to the alarm’s state. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>alarm_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p></li>
+<li><p><strong>alarm_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the alarm.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the alarm. This name must be unique within the user’s AWS account</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the cloudwatch metric alarm.</p></li>
+<li><p><strong>comparison_operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqualToThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanOrEqualToThreshold</span></code>.</p></li>
+<li><p><strong>datapoints_to_alarm</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of datapoints that must be breaching to trigger the alarm.</p></li>
+<li><p><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The dimensions for this metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</p>
+</p></li>
+<li><p><strong>evaluate_low_sample_count_percentiles</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used only for alarms
+based on percentiles. If you specify <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, the alarm state will not
+change during periods with too few data points to be statistically significant.
+If you specify <code class="docutils literal notranslate"><span class="pre">evaluate</span></code> or omit this parameter, the alarm will always be
+evaluated and possibly change state no matter how many data points are available.
+The following values are supported: <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, and <code class="docutils literal notranslate"><span class="pre">evaluate</span></code>.</p></li>
 <li><p><strong>evaluation_periods</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of periods over which data is compared to the specified threshold.</p></li>
 <li><p><strong>extended_statistic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.</p></li>
 <li><p><strong>insufficient_data_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p></li>
@@ -1493,6 +1719,26 @@ Either of the following is supported: <code class="docutils literal notranslate"
 </ul>
 </dd>
 </dl>
+<p>The <strong>metric_queries</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The math expression to be performed on the returned data, if this object is performing a math expression. This expression can use the id of the other metrics to refer to those metrics, and can also use the id of other expressions to use the result of those expressions. For more information about metric math expressions, see Metric Math Syntax and Functions in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Amazon CloudWatch User Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A short name used to tie this object to the results in the response. If you are performing math expressions on this set of data, this name represents that data and can serve as a variable in the mathematical expression. The valid characters are letters, numbers, and underscore. The first character must be a lowercase letter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A human-readable label for this metric or expression. This is especially useful if this is an expression, so that you know what the value represents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The dimensions for this metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metric_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this metric.
+See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The namespace for this metric. See docs for the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html">list of namespaces</a>.
+See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">stat</span></code> is applied.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The statistic to apply to this metric.
+Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">SampleCount</span></code>, <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Sum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unit for this metric.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">returnData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specify exactly one <code class="docutils literal notranslate"><span class="pre">metric_query</span></code> to be <code class="docutils literal notranslate"><span class="pre">true</span></code> to use that <code class="docutils literal notranslate"><span class="pre">metric_query</span></code> result as the alarm.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_metric_alarm.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_metric_alarm.html.markdown</a>.</p>
 </div></blockquote>
@@ -1540,6 +1786,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.get_log_group">
 <code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">get_log_group</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.get_log_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an AWS Cloudwatch Log Group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Cloudwatch log group</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudwatch_log_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudwatch_log_group.html.markdown</a>.</p>
 </div></blockquote>

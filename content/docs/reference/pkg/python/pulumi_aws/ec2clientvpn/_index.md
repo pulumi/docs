@@ -32,6 +32,18 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>authentication_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">activeDirectoryId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificateChainArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of client authentication to be used. Specify <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code> to use certificate-based authentication, or <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code> to use Active Directory authentication.</p></li>
+</ul>
+<p>The <strong>connection_log_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the CloudWatch Logs log group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the CloudWatch Logs log stream to which the connection data is published.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether connection logging is enabled.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -39,6 +51,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ec2clientvpn.Endpoint.authentication_options">
 <code class="sig-name descname">authentication_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint.authentication_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about the authentication method to be used to authenticate clients.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">activeDirectoryId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificateChainArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of client authentication to be used. Specify <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code> to use certificate-based authentication, or <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code> to use Active Directory authentication.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -51,6 +68,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ec2clientvpn.Endpoint.connection_log_options">
 <code class="sig-name descname">connection_log_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint.connection_log_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Information about the client connection logging options.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the CloudWatch Logs log group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogStream</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the CloudWatch Logs log stream to which the connection data is published.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether connection logging is enabled.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -105,21 +127,39 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ec2clientvpn.Endpoint.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authentication_options=None</em>, <em class="sig-param">client_cidr_block=None</em>, <em class="sig-param">connection_log_options=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">dns_servers=None</em>, <em class="sig-param">server_certificate_arn=None</em>, <em class="sig-param">split_tunnel=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">transport_protocol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Endpoint resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] authentication_options: Information about the authentication method to be used to authenticate clients.
-:param pulumi.Input[str] client_cidr_block: The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-:param pulumi.Input[dict] connection_log_options: Information about the client connection logging options.
-:param pulumi.Input[str] description: Name of the repository.
-:param pulumi.Input[str] dns_name: The DNS name to be used by clients when establishing their VPN session.
-:param pulumi.Input[list] dns_servers: Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-:param pulumi.Input[str] server_certificate_arn: The ARN of the ACM server certificate.
-:param pulumi.Input[bool] split_tunnel: Indicates whether split-tunnel is enabled on VPN endpoint. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] status: The current state of the Client VPN endpoint.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] transport_protocol: The transport protocol to be used by the VPN session. Default value is <code class="docutils literal notranslate"><span class="pre">udp</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>authentication_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Information about the authentication method to be used to authenticate clients.</p></li>
+<li><p><strong>client_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.</p></li>
+<li><p><strong>connection_log_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Information about the client connection logging options.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository.</p></li>
+<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name to be used by clients when establishing their VPN session.</p></li>
+<li><p><strong>dns_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.</p></li>
+<li><p><strong>server_certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the ACM server certificate.</p></li>
+<li><p><strong>split_tunnel</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether split-tunnel is enabled on VPN endpoint. Default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current state of the Client VPN endpoint.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>transport_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The transport protocol to be used by the VPN session. Default value is <code class="docutils literal notranslate"><span class="pre">udp</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>authentication_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">activeDirectoryId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Active Directory to be used for authentication if type is <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificateChainArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of client authentication to be used. Specify <code class="docutils literal notranslate"><span class="pre">certificate-authentication</span></code> to use certificate-based authentication, or <code class="docutils literal notranslate"><span class="pre">directory-service-authentication</span></code> to use Active Directory authentication.</p></li>
+</ul>
+<p>The <strong>connection_log_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the CloudWatch Logs log group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the CloudWatch Logs log stream to which the connection data is published.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether connection logging is enabled.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -215,15 +255,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2clientvpn.NetworkAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_vpn_endpoint_id=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2clientvpn.NetworkAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] client_vpn_endpoint_id: The ID of the Client VPN endpoint.
-:param pulumi.Input[list] security_groups: The IDs of the security groups applied to the target network association.
-:param pulumi.Input[str] status: The current state of the target network association.
-:param pulumi.Input[str] subnet_id: The ID of the subnet to associate with the Client VPN endpoint.
-:param pulumi.Input[str] vpc_id: The ID of the VPC in which the target network (subnet) is located.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_vpn_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Client VPN endpoint.</p></li>
+<li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of the security groups applied to the target network association.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current state of the target network association.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet to associate with the Client VPN endpoint.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC in which the target network (subnet) is located.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_network_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_client_vpn_network_association.html.markdown</a>.</p>
 </div></blockquote>

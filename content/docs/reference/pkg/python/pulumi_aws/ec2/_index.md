@@ -48,6 +48,21 @@ changes the set of further arguments that are required, as described below.</p><
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown</a>.</p>
 </div></blockquote>
@@ -68,6 +83,15 @@ changes the set of further arguments that are required, as described below.</p><
 <code class="sig-name descname">ebs_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Ami.ebs_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -81,6 +105,10 @@ attached to created instances. The structure of this block is described below.</
 <code class="sig-name descname">ephemeral_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Ami.ephemeral_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -147,19 +175,17 @@ changes the set of further arguments that are required, as described below.</p>
 <dt id="pulumi_aws.ec2.Ami.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">architecture=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ena_support=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">image_location=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">manage_ebs_snapshots=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ramdisk_id=None</em>, <em class="sig-param">root_device_name=None</em>, <em class="sig-param">root_snapshot_id=None</em>, <em class="sig-param">sriov_net_support=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtualization_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Ami.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Ami resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] architecture: Machine architecture for created instances. Defaults to “x86_64”.
-:param pulumi.Input[str] description: A longer, human-readable description for the AMI.
-:param pulumi.Input[list] ebs_block_devices: Nested block describing an EBS block device that should be</p>
-<blockquote>
-<div><p>attached to created instances. The structure of this block is described below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>architecture</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Machine architecture for created instances. Defaults to “x86_64”.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A longer, human-readable description for the AMI.</p></li>
+<li><p><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an EBS block device that should be
+attached to created instances. The structure of this block is described below.</p></li>
 <li><p><strong>ena_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether enhanced networking with ENA is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.</p></li>
@@ -181,6 +207,21 @@ changes the set of further arguments that are required, as described below.</p><
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown</a>.</p>
 </div></blockquote>
@@ -256,6 +297,21 @@ same as the AWS provider region in order to create a copy within the same region
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown</a>.</p>
 </div></blockquote>
@@ -276,6 +332,15 @@ same as the AWS provider region in order to create a copy within the same region
 <code class="sig-name descname">ebs_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.ebs_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -295,6 +360,10 @@ attached to created instances. The structure of this block is described below.</
 <code class="sig-name descname">ephemeral_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.ephemeral_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -375,19 +444,17 @@ changes the set of further arguments that are required, as described below.</p>
 <dt id="pulumi_aws.ec2.AmiCopy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">architecture=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ena_support=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">image_location=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">manage_ebs_snapshots=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ramdisk_id=None</em>, <em class="sig-param">root_device_name=None</em>, <em class="sig-param">root_snapshot_id=None</em>, <em class="sig-param">source_ami_id=None</em>, <em class="sig-param">source_ami_region=None</em>, <em class="sig-param">sriov_net_support=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtualization_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AmiCopy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] architecture: Machine architecture for created instances. Defaults to “x86_64”.
-:param pulumi.Input[str] description: A longer, human-readable description for the AMI.
-:param pulumi.Input[list] ebs_block_devices: Nested block describing an EBS block device that should be</p>
-<blockquote>
-<div><p>attached to created instances. The structure of this block is described below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>architecture</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Machine architecture for created instances. Defaults to “x86_64”.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A longer, human-readable description for the AMI.</p></li>
+<li><p><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an EBS block device that should be
+attached to created instances. The structure of this block is described below.</p></li>
 <li><p><strong>ena_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether enhanced networking with ENA is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
 <li><p><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an ephemeral block device that
@@ -414,6 +481,21 @@ changes the set of further arguments that are required, as described below.</p><
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown</a>.</p>
 </div></blockquote>
@@ -494,6 +576,21 @@ guarantees that no filesystem writes will be underway at the time of snapshot.</
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -514,6 +611,15 @@ guarantees that no filesystem writes will be underway at the time of snapshot.</
 <code class="sig-name descname">ebs_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.ebs_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -527,6 +633,10 @@ attached to created instances. The structure of this block is described below.</
 <code class="sig-name descname">ephemeral_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.ephemeral_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -602,19 +712,17 @@ changes the set of further arguments that are required, as described below.</p>
 <dt id="pulumi_aws.ec2.AmiFromInstance.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">architecture=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ena_support=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">image_location=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">manage_ebs_snapshots=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ramdisk_id=None</em>, <em class="sig-param">root_device_name=None</em>, <em class="sig-param">root_snapshot_id=None</em>, <em class="sig-param">snapshot_without_reboot=None</em>, <em class="sig-param">source_instance_id=None</em>, <em class="sig-param">sriov_net_support=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtualization_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AmiFromInstance resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] architecture: Machine architecture for created instances. Defaults to “x86_64”.
-:param pulumi.Input[str] description: A longer, human-readable description for the AMI.
-:param pulumi.Input[list] ebs_block_devices: Nested block describing an EBS block device that should be</p>
-<blockquote>
-<div><p>attached to created instances. The structure of this block is described below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>architecture</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Machine architecture for created instances. Defaults to “x86_64”.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A longer, human-readable description for the AMI.</p></li>
+<li><p><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an EBS block device that should be
+attached to created instances. The structure of this block is described below.</p></li>
 <li><p><strong>ena_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether enhanced networking with ENA is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.</p></li>
@@ -640,6 +748,21 @@ changes the set of further arguments that are required, as described below.</p><
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -716,12 +839,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.AmiLaunchPermission.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">image_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiLaunchPermission.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AmiLaunchPermission resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_id: An AWS Account ID to add launch permissions.
-:param pulumi.Input[str] image_id: A region-unique name for the AMI.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An AWS Account ID to add launch permissions.</p></li>
+<li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A region-unique name for the AMI.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown</a>.</p>
 </div></blockquote>
@@ -981,21 +1110,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.CapacityReservation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">end_date=None</em>, <em class="sig-param">end_date_type=None</em>, <em class="sig-param">ephemeral_storage=None</em>, <em class="sig-param">instance_count=None</em>, <em class="sig-param">instance_match_criteria=None</em>, <em class="sig-param">instance_platform=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CapacityReservation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] availability_zone: The Availability Zone in which to create the Capacity Reservation.
-:param pulumi.Input[bool] ebs_optimized: Indicates whether the Capacity Reservation supports EBS-optimized instances.
-:param pulumi.Input[str] end_date: The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)
-:param pulumi.Input[str] end_date_type: Indicates the way in which the Capacity Reservation ends. Specify either <code class="docutils literal notranslate"><span class="pre">unlimited</span></code> or <code class="docutils literal notranslate"><span class="pre">limited</span></code>.
-:param pulumi.Input[bool] ephemeral_storage: Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
-:param pulumi.Input[float] instance_count: The number of instances for which to reserve capacity.
-:param pulumi.Input[str] instance_match_criteria: Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <code class="docutils literal notranslate"><span class="pre">open</span></code> or <code class="docutils literal notranslate"><span class="pre">targeted</span></code>.
-:param pulumi.Input[str] instance_platform: The type of operating system for which to reserve capacity. Valid options are <code class="docutils literal notranslate"><span class="pre">Linux/UNIX</span></code>, <code class="docutils literal notranslate"><span class="pre">Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Enterprise</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Web</span></code>.
-:param pulumi.Input[str] instance_type: The instance type for which to reserve capacity.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] tenancy: Indicates the tenancy of the Capacity Reservation. Specify either <code class="docutils literal notranslate"><span class="pre">default</span></code> or <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone in which to create the Capacity Reservation.</p></li>
+<li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the Capacity Reservation supports EBS-optimized instances.</p></li>
+<li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</p>
+</p></li>
+<li><p><strong>end_date_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the way in which the Capacity Reservation ends. Specify either <code class="docutils literal notranslate"><span class="pre">unlimited</span></code> or <code class="docutils literal notranslate"><span class="pre">limited</span></code>.</p></li>
+<li><p><strong>ephemeral_storage</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.</p></li>
+<li><p><strong>instance_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of instances for which to reserve capacity.</p></li>
+<li><p><strong>instance_match_criteria</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <code class="docutils literal notranslate"><span class="pre">open</span></code> or <code class="docutils literal notranslate"><span class="pre">targeted</span></code>.</p></li>
+<li><p><strong>instance_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of operating system for which to reserve capacity. Valid options are <code class="docutils literal notranslate"><span class="pre">Linux/UNIX</span></code>, <code class="docutils literal notranslate"><span class="pre">Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Enterprise</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Web</span></code>.</p></li>
+<li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type for which to reserve capacity.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the tenancy of the Capacity Reservation. Specify either <code class="docutils literal notranslate"><span class="pre">default</span></code> or <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.html.markdown</a>.</p>
 </div></blockquote>
@@ -1088,17 +1224,21 @@ supports at this time is “ipsec.1”.</p>
 <dt id="pulumi_aws.ec2.CustomerGateway.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bgp_asn=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CustomerGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CustomerGateway resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] bgp_asn: The gateway’s Border Gateway Protocol (BGP) Autonomous System Number (ASN).
-:param pulumi.Input[str] ip_address: The IP address of the gateway’s Internet-routable external interface.
-:param pulumi.Input[dict] tags: Tags to apply to the gateway.
-:param pulumi.Input[str] type: The type of customer gateway. The only type AWS</p>
-<blockquote>
-<div><p>supports at this time is “ipsec.1”.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The gateway’s Border Gateway Protocol (BGP) Autonomous System Number (ASN).</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the gateway’s Internet-routable external interface.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Tags to apply to the gateway.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of customer gateway. The only type AWS
+supports at this time is “ipsec.1”.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -1179,6 +1319,34 @@ notes below on managing Subnets in the Default Network ACL</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>egress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
+</ul>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown</a>.</p>
 </div></blockquote>
@@ -1193,12 +1361,38 @@ attribute is exported from <code class="docutils literal notranslate"><span clas
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl.egress">
 <code class="sig-name descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl.egress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies an egress rule. Parameters defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The to port to match.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl.ingress">
 <code class="sig-name descname">ingress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl.ingress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies an ingress rule. Parameters defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The to port to match.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1230,17 +1424,15 @@ notes below on managing Subnets in the Default Network ACL</p>
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_network_acl_id=None</em>, <em class="sig-param">egress=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultNetworkAcl resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] default_network_acl_id: The Network ACL ID to manage. This</p>
-<blockquote>
-<div><p>attribute is exported from <code class="docutils literal notranslate"><span class="pre">ec2.Vpc</span></code>, or manually found via the AWS Console.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Network ACL ID to manage. This
+attribute is exported from <code class="docutils literal notranslate"><span class="pre">ec2.Vpc</span></code>, or manually found via the AWS Console.</p></li>
 <li><p><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an egress rule. Parameters defined below.</p></li>
 <li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an ingress rule. Parameters defined below.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the Default Network ACL</p></li>
@@ -1251,6 +1443,34 @@ notes below on managing Subnets in the Default Network ACL</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>egress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
+</ul>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown</a>.</p>
 </div></blockquote>
@@ -1336,6 +1556,18 @@ This argument is processed in <a class="reference external" href="https://www.te
 </ul>
 </dd>
 </dl>
+<p>The <strong>routes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block of the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC NAT gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 network interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC peering connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -1362,6 +1594,17 @@ This argument is processed in <a class="reference external" href="https://www.te
 <code class="sig-name descname">routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultRouteTable.routes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of route objects. Their keys are documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block of the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC NAT gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 network interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC peering connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1374,22 +1617,35 @@ This argument is processed in <a class="reference external" href="https://www.te
 <dt id="pulumi_aws.ec2.DefaultRouteTable.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_route_table_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">propagating_vgws=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultRouteTable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultRouteTable resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] default_route_table_id: The ID of the Default Routing Table.
-:param pulumi.Input[str] owner_id: The ID of the AWS account that owns the route table
-:param pulumi.Input[list] propagating_vgws: A list of virtual gateways for propagation.
-:param pulumi.Input[list] routes: A list of route objects. Their keys are documented below.</p>
-<blockquote>
-<div><p>This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Default Routing Table.</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the route table</p></li>
+<li><p><strong>propagating_vgws</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual gateways for propagation.</p></li>
+<li><p><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of route objects. Their keys are documented below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
 </dd>
 </dl>
+<p>The <strong>routes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block of the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC NAT gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 network interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC peering connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -1481,6 +1737,30 @@ modified, added, or removed.</strong> It will be left in its current state</p></
 </ul>
 </dd>
 </dl>
+<p>The <strong>egress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the security group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the security group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1489,6 +1769,17 @@ modified, added, or removed.</strong> It will be left in its current state</p></
 <code class="sig-name descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup.egress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the security group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1496,6 +1787,17 @@ egress rule. Each egress block supports fields documented below.</p>
 <code class="sig-name descname">ingress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup.ingress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the security group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1528,17 +1830,15 @@ modified, added, or removed.</strong> It will be left in its current state</p>
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">egress=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">revoke_rules_on_delete=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultSecurityGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] egress: Can be specified multiple times for each</p>
-<blockquote>
-<div><p>egress rule. Each egress block supports fields documented below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
+egress rule. Each egress block supports fields documented below.</p></li>
 <li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group</p></li>
@@ -1550,6 +1850,30 @@ modified, added, or removed.</strong> It will be left in its current state</p></
 </ul>
 </dd>
 </dl>
+<p>The <strong>egress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the security group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the security group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1658,20 +1982,18 @@ a public IP address.</p>
 <dt id="pulumi_aws.ec2.DefaultSubnet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">assign_ipv6_address_on_creation=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">availability_zone_id=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">ipv6_cidr_block=None</em>, <em class="sig-param">ipv6_cidr_block_association_id=None</em>, <em class="sig-param">map_public_ip_on_launch=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultSubnet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cidr_block: The CIDR block for the subnet.
-:param pulumi.Input[str] ipv6_cidr_block: The IPv6 CIDR block.
-:param pulumi.Input[bool] map_public_ip_on_launch: Specify true to indicate</p>
-<blockquote>
-<div><p>that instances launched into the subnet should be assigned
-a public IP address.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the subnet.</p></li>
+<li><p><strong>ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 CIDR block.</p></li>
+<li><p><strong>map_public_ip_on_launch</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
+that instances launched into the subnet should be assigned
+a public IP address.</p></li>
 <li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the subnet.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
@@ -1848,18 +2170,16 @@ this VPC. Note that you can change a VPC’s main route table by using an
 <dt id="pulumi_aws.ec2.DefaultVpc.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">assign_generated_ipv6_cidr_block=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">default_network_acl_id=None</em>, <em class="sig-param">default_route_table_id=None</em>, <em class="sig-param">default_security_group_id=None</em>, <em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">enable_classiclink=None</em>, <em class="sig-param">enable_classiclink_dns_support=None</em>, <em class="sig-param">enable_dns_hostnames=None</em>, <em class="sig-param">enable_dns_support=None</em>, <em class="sig-param">instance_tenancy=None</em>, <em class="sig-param">ipv6_association_id=None</em>, <em class="sig-param">ipv6_cidr_block=None</em>, <em class="sig-param">main_route_table_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultVpc resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of VPC
-:param pulumi.Input[bool] assign_generated_ipv6_cidr_block: Whether or not an Amazon-provided IPv6 CIDR</p>
-<blockquote>
-<div><p>block with a /56 prefix length for the VPC was assigned</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of VPC</p></li>
+<li><p><strong>assign_generated_ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not an Amazon-provided IPv6 CIDR
+block with a /56 prefix length for the VPC was assigned</p></li>
 <li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block of the VPC</p></li>
 <li><p><strong>default_network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network ACL created by default on VPC creation</p></li>
 <li><p><strong>default_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the route table created by default on VPC creation</p></li>
@@ -1976,14 +2296,21 @@ into management.</p>
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_name_servers=None</em>, <em class="sig-param">netbios_name_servers=None</em>, <em class="sig-param">netbios_node_type=None</em>, <em class="sig-param">ntp_servers=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DefaultVpcDhcpOptions resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] netbios_name_servers: List of NETBIOS name servers.
-:param pulumi.Input[str] netbios_node_type: The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.
-:param pulumi.Input[str] owner_id: The ID of the AWS account that owns the DHCP options set.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>netbios_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NETBIOS name servers.</p></li>
+<li><p><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
+</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the DHCP options set.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown</a>.</p>
 </div></blockquote>
@@ -2056,11 +2383,17 @@ outside of your VPC from initiating an IPv6 connection with your instance.</p>
 <dt id="pulumi_aws.ec2.EgressOnlyInternetGateway.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EgressOnlyInternetGateway resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] vpc_id: The VPC ID to create in.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -2197,18 +2530,16 @@ the Elastic IP address is associated with the primary private IP address.</p>
 <dt id="pulumi_aws.ec2.Eip.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_id=None</em>, <em class="sig-param">associate_with_private_ip=None</em>, <em class="sig-param">association_id=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">network_interface=None</em>, <em class="sig-param">private_dns=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">public_dns=None</em>, <em class="sig-param">public_ip=None</em>, <em class="sig-param">public_ipv4_pool=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Eip.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Eip resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] associate_with_private_ip: A user specified primary or secondary private IP address to</p>
-<blockquote>
-<div><p>associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>associate_with_private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user specified primary or secondary private IP address to
+associate with the Elastic IP address. If no private IP address is specified,
+the Elastic IP address is associated with the primary private IP address.</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 instance ID.</p></li>
 <li><p><strong>network_interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network interface ID to associate with.</p></li>
 <li><p><strong>private_dns</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Private DNS associated with the Elastic IP address (if in VPC).</p></li>
@@ -2349,18 +2680,16 @@ address.</p>
 <dt id="pulumi_aws.ec2.EipAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_id=None</em>, <em class="sig-param">allow_reassociation=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">private_ip_address=None</em>, <em class="sig-param">public_ip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EipAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EipAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] allocation_id: The allocation ID. This is required for EC2-VPC.
-:param pulumi.Input[bool] allow_reassociation: Whether to allow an Elastic IP to</p>
-<blockquote>
-<div><p>be re-associated. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code> in VPC.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allocation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation ID. This is required for EC2-VPC.</p></li>
+<li><p><strong>allow_reassociation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow an Elastic IP to
+be re-associated. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code> in VPC.</p></li>
 <li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance. This is required for
 EC2-Classic. For EC2-VPC, you can specify either the instance ID or the
 network interface ID, but not both. The operation fails if you specify an
@@ -2441,6 +2770,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>launch_template_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateSpecification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Nested argument containing EC2 Launch Template to use. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version number of the launch template.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrides</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Availability Zone in which to launch the instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instance type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Maximum price per unit hour that you are willing to pay for a Spot Instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Priority for the launch template override. If <code class="docutils literal notranslate"><span class="pre">on_demand_options</span></code> <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the subnet in which to launch the instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of units provided by the specified instance type.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>on_demand_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to allocate the target capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">diversified</span></code>, <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p></li>
+</ul>
+<p>The <strong>spot_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to allocate the target capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">diversified</span></code>, <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceInterruptionBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Behavior when a Spot Instance is interrupted. Valid values: <code class="docutils literal notranslate"><span class="pre">hibernate</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code>, <code class="docutils literal notranslate"><span class="pre">terminate</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">terminate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_pools_to_use_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
+<p>The <strong>target_capacity_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTargetCapacityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Default target capacity type. Valid values: <code class="docutils literal notranslate"><span class="pre">on-demand</span></code>, <code class="docutils literal notranslate"><span class="pre">spot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onDemandTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of On-Demand units to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of Spot units to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to request, filled using <code class="docutils literal notranslate"><span class="pre">default_target_capacity_type</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown</a>.</p>
 </div></blockquote>
@@ -2454,12 +2820,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.Fleet.launch_template_config">
 <code class="sig-name descname">launch_template_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.launch_template_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing EC2 Launch Template configurations. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateSpecification</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Nested argument containing EC2 Launch Template to use. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Version number of the launch template.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrides</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Availability Zone in which to launch the instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Instance type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Maximum price per unit hour that you are willing to pay for a Spot Instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Priority for the launch template override. If <code class="docutils literal notranslate"><span class="pre">on_demand_options</span></code> <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the subnet in which to launch the instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of units provided by the specified instance type.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Fleet.on_demand_options">
 <code class="sig-name descname">on_demand_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.on_demand_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing On-Demand configurations. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How to allocate the target capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">diversified</span></code>, <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2472,6 +2860,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.Fleet.spot_options">
 <code class="sig-name descname">spot_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.spot_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing Spot configurations. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How to allocate the target capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">diversified</span></code>, <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceInterruptionBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Behavior when a Spot Instance is interrupted. Valid values: <code class="docutils literal notranslate"><span class="pre">hibernate</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code>, <code class="docutils literal notranslate"><span class="pre">terminate</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">terminate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_pools_to_use_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2484,6 +2877,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.Fleet.target_capacity_specification">
 <code class="sig-name descname">target_capacity_specification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.target_capacity_specification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing target capacity configurations. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTargetCapacityType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Default target capacity type. Valid values: <code class="docutils literal notranslate"><span class="pre">on-demand</span></code>, <code class="docutils literal notranslate"><span class="pre">spot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onDemandTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of On-Demand units to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of Spot units to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of units to request, filled using <code class="docutils literal notranslate"><span class="pre">default_target_capacity_type</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2508,20 +2907,63 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.Fleet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">excess_capacity_termination_policy=None</em>, <em class="sig-param">launch_template_config=None</em>, <em class="sig-param">on_demand_options=None</em>, <em class="sig-param">replace_unhealthy_instances=None</em>, <em class="sig-param">spot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_capacity_specification=None</em>, <em class="sig-param">terminate_instances=None</em>, <em class="sig-param">terminate_instances_with_expiration=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Fleet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Fleet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] excess_capacity_termination_policy: Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code>, <code class="docutils literal notranslate"><span class="pre">termination</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">termination</span></code>.
-:param pulumi.Input[dict] launch_template_config: Nested argument containing EC2 Launch Template configurations. Defined below.
-:param pulumi.Input[dict] on_demand_options: Nested argument containing On-Demand configurations. Defined below.
-:param pulumi.Input[bool] replace_unhealthy_instances: Whether EC2 Fleet should replace unhealthy instances. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[dict] spot_options: Nested argument containing Spot configurations. Defined below.
-:param pulumi.Input[dict] tags: Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
-:param pulumi.Input[dict] target_capacity_specification: Nested argument containing target capacity configurations. Defined below.
-:param pulumi.Input[bool] terminate_instances: Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[bool] terminate_instances_with_expiration: Whether running instances should be terminated when the EC2 Fleet expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] type: The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: <code class="docutils literal notranslate"><span class="pre">maintain</span></code>, <code class="docutils literal notranslate"><span class="pre">request</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">maintain</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>excess_capacity_termination_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code>, <code class="docutils literal notranslate"><span class="pre">termination</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">termination</span></code>.</p></li>
+<li><p><strong>launch_template_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing EC2 Launch Template configurations. Defined below.</p></li>
+<li><p><strong>on_demand_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing On-Demand configurations. Defined below.</p></li>
+<li><p><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether EC2 Fleet should replace unhealthy instances. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>spot_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing Spot configurations. Defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.</p></li>
+<li><p><strong>target_capacity_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing target capacity configurations. Defined below.</p></li>
+<li><p><strong>terminate_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>terminate_instances_with_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether running instances should be terminated when the EC2 Fleet expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: <code class="docutils literal notranslate"><span class="pre">maintain</span></code>, <code class="docutils literal notranslate"><span class="pre">request</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">maintain</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>launch_template_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateSpecification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Nested argument containing EC2 Launch Template to use. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">launchTemplateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version number of the launch template.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">overrides</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Availability Zone in which to launch the instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instance type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Maximum price per unit hour that you are willing to pay for a Spot Instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Priority for the launch template override. If <code class="docutils literal notranslate"><span class="pre">on_demand_options</span></code> <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">prioritized</span></code>, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the subnet in which to launch the instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of units provided by the specified instance type.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>on_demand_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to allocate the target capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">diversified</span></code>, <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p></li>
+</ul>
+<p>The <strong>spot_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to allocate the target capacity across the Spot pools. Valid values: <code class="docutils literal notranslate"><span class="pre">diversified</span></code>, <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceInterruptionBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Behavior when a Spot Instance is interrupted. Valid values: <code class="docutils literal notranslate"><span class="pre">hibernate</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code>, <code class="docutils literal notranslate"><span class="pre">terminate</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">terminate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_pools_to_use_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
+<p>The <strong>target_capacity_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTargetCapacityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Default target capacity type. Valid values: <code class="docutils literal notranslate"><span class="pre">on-demand</span></code>, <code class="docutils literal notranslate"><span class="pre">spot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onDemandTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of On-Demand units to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of Spot units to request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">totalTargetCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to request, filled using <code class="docutils literal notranslate"><span class="pre">default_target_capacity_type</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown</a>.</p>
 </div></blockquote>
@@ -2641,18 +3083,24 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 <dt id="pulumi_aws.ec2.FlowLog.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eni_id=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">log_destination=None</em>, <em class="sig-param">log_destination_type=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FlowLog resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] eni_id: Elastic Network Interface ID to attach to
-:param pulumi.Input[str] iam_role_arn: The ARN for the IAM role that’s used to post flow logs to a CloudWatch Logs log group
-:param pulumi.Input[str] log_destination: The ARN of the logging destination.
-:param pulumi.Input[str] log_destination_type: The type of the logging destination. Valid values: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>, <code class="docutils literal notranslate"><span class="pre">s3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>.
-:param pulumi.Input[str] log_group_name: <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">log_destination</span></code> instead. The name of the CloudWatch log group.
-:param pulumi.Input[str] subnet_id: Subnet ID to attach to
-:param pulumi.Input[str] traffic_type: The type of traffic to capture. Valid values: <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code>,<code class="docutils literal notranslate"><span class="pre">REJECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.
-:param pulumi.Input[str] vpc_id: VPC ID to attach to</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>eni_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Elastic Network Interface ID to attach to</p></li>
+<li><p><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the IAM role that’s used to post flow logs to a CloudWatch Logs log group</p></li>
+<li><p><strong>log_destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the logging destination.</p></li>
+<li><p><strong>log_destination_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the logging destination. Valid values: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>, <code class="docutils literal notranslate"><span class="pre">s3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>.</p></li>
+<li><p><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">log_destination</span></code> instead. The name of the CloudWatch log group.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to attach to</p></li>
+<li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of traffic to capture. Valid values: <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code>,<code class="docutils literal notranslate"><span class="pre">REJECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – VPC ID to attach to</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown</a>.</p>
 </div></blockquote>
@@ -3528,7 +3976,7 @@ unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetSubnetIdsResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSubnetIdsResult.ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the subnet ids found. This data source will fail if none are found.</p>
+<dd><p>A set of all the subnet ids found. This data source will fail if none are found.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3955,6 +4403,59 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 </ul>
 </dd>
 </dl>
+<p>The <strong>credit_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Snapshot ID to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>root_block_device</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -4000,6 +4501,9 @@ only supported on creation of instance type that support CPU Options
 <dt id="pulumi_aws.ec2.Instance.credit_specification">
 <code class="sig-name descname">credit_specification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.credit_specification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize the credit specification of the instance. See Credit Specification below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4014,6 +4518,23 @@ Termination Protection</a></p>
 <code class="sig-name descname">ebs_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.ebs_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Snapshot ID to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4031,6 +4552,13 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 <code class="sig-name descname">ephemeral_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.ephemeral_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize Ephemeral (also known as
 “Instance Store”) volumes on the instance. See Block Devices below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4098,6 +4626,12 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 <dt id="pulumi_aws.ec2.Instance.network_interfaces">
 <code class="sig-name descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4155,6 +4689,21 @@ is only available if you’ve enabled DNS hostnames for your VPC</p>
 <code class="sig-name descname">root_block_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.root_block_device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize details about the root block
 device of the instance. See Block Devices below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4216,22 +4765,21 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <dt id="pulumi_aws.ec2.Instance.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ami=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cpu_core_count=None</em>, <em class="sig-param">cpu_threads_per_core=None</em>, <em class="sig-param">credit_specification=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">host_id=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_state=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">ipv6_address_count=None</em>, <em class="sig-param">ipv6_addresses=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">password_data=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">primary_network_interface_id=None</em>, <em class="sig-param">private_dns=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">public_dns=None</em>, <em class="sig-param">public_ip=None</em>, <em class="sig-param">root_block_device=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">user_data_base64=None</em>, <em class="sig-param">volume_tags=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] ami: The AMI to use for the instance.
-:param pulumi.Input[str] arn: The ARN of the instance.
-:param pulumi.Input[bool] associate_public_ip_address: Associate a public ip address with an instance in a VPC.  Boolean value.
-:param pulumi.Input[str] availability_zone: The AZ to start the instance in.
-:param pulumi.Input[float] cpu_core_count: Sets the number of CPU cores for an instance. This option is</p>
-<blockquote>
-<div><p>only supported on creation of instance type that support CPU Options
-<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ami</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI to use for the instance.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the instance.</p></li>
+<li><p><strong>associate_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Associate a public ip address with an instance in a VPC.  Boolean value.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ to start the instance in.</p></li>
+<li><p><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>Sets the number of CPU cores for an instance. This option is
+only supported on creation of instance type that support CPU Options
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
+</p></li>
 <li><p><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</p>
 </p></li>
 <li><p><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the credit specification of the instance. See Credit Specification below for more details.</p></li>
@@ -4306,6 +4854,59 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 </ul>
 </dd>
 </dl>
+<p>The <strong>credit_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Snapshot ID to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>root_block_device</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -4388,13 +4989,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.InternetGateway.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InternetGateway resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] owner_id: The ID of the AWS account that owns the internet gateway.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] vpc_id: The VPC ID to create in.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the internet gateway.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -4491,14 +5098,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.KeyPair.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_name_prefix=None</em>, <em class="sig-param">public_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KeyPair resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] fingerprint: The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-:param pulumi.Input[str] key_name: The name for the key pair.
-:param pulumi.Input[str] key_name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.
-:param pulumi.Input[str] public_key: The public key material.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MD5 public key fingerprint as specified in section 4 of RFC 4716.</p></li>
+<li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the key pair.</p></li>
+<li><p><strong>key_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p></li>
+<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key material.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
 </div></blockquote>
@@ -4632,6 +5245,30 @@ device of the instance. See Block Devices below for details.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>root_block_device</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown</a>.</p>
 </div></blockquote>
@@ -4646,6 +5283,16 @@ device of the instance. See Block Devices below for details.</p></li>
 <code class="sig-name descname">ebs_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.ebs_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4665,6 +5312,10 @@ instance.  See Block Devices below for details.</p>
 <code class="sig-name descname">ephemeral_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.ephemeral_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize Ephemeral (also known as
 “Instance Store”) volumes on the instance. See Block Devices below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4719,6 +5370,13 @@ for more details</p>
 <code class="sig-name descname">root_block_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.root_block_device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize details about the root block
 device of the instance. See Block Devices below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4761,18 +5419,16 @@ device of the instance. See Block Devices below for details.</p>
 <dt id="pulumi_aws.ec2.LaunchConfiguration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">root_block_device=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">user_data_base64=None</em>, <em class="sig-param">vpc_classic_link_id=None</em>, <em class="sig-param">vpc_classic_link_security_groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LaunchConfiguration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] associate_public_ip_address: Associate a public ip address with an instance in a VPC.
-:param pulumi.Input[list] ebs_block_devices: Additional EBS block devices to attach to the</p>
-<blockquote>
-<div><p>instance.  See Block Devices below for details.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>associate_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Associate a public ip address with an instance in a VPC.</p></li>
+<li><p><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Additional EBS block devices to attach to the
+instance.  See Block Devices below for details.</p></li>
 <li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will be EBS-optimized.</p></li>
 <li><p><strong>enable_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables/disables detailed monitoring. This is enabled by default.</p></li>
 <li><p><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize Ephemeral (also known as
@@ -4801,6 +5457,30 @@ device of the instance. See Block Devices below for details.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>root_block_device</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown</a>.</p>
 </div></blockquote>
@@ -4893,6 +5573,101 @@ Interfaces below for more details.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>block_device_mappings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the device to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configure EBS volume properties.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>capacity_reservation_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>credit_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>elastic_gpu_specifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Accelerator type.</p></li>
+</ul>
+<p>The <strong>elastic_inference_accelerator</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Accelerator type.</p></li>
+</ul>
+<p>The <strong>iam_instance_profile</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.</p></li>
+</ul>
+<p>The <strong>instance_market_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">marketType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">block_duration_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceInterruptionBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotInstanceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valid_until</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>license_specifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">licenseConfigurationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>monitoring</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4AddressCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_address_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>placement</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">affinity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>tag_specifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the launch template.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
 </div></blockquote>
@@ -4907,12 +5682,38 @@ Interfaces below for more details.</p></li>
 <code class="sig-name descname">block_device_mappings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.block_device_mappings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the device to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configure EBS volume properties.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.capacity_reservation_specification">
 <code class="sig-name descname">capacity_reservation_specification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.capacity_reservation_specification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4920,6 +5721,9 @@ See Block Devices below for details.</p>
 <code class="sig-name descname">credit_specification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.credit_specification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize the credit specification of the instance. See Credit
 Specification below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4952,12 +5756,18 @@ Termination Protection</a></p>
 <code class="sig-name descname">elastic_gpu_specifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.elastic_gpu_specifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Accelerator type.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.elastic_inference_accelerator">
 <code class="sig-name descname">elastic_inference_accelerator</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.elastic_inference_accelerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Accelerator type.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4965,6 +5775,10 @@ below for more details.</p>
 <code class="sig-name descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4985,6 +5799,18 @@ below for more details.</p>
 <code class="sig-name descname">instance_market_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.instance_market_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>The market (purchasing) option for the instance. See Market Options
 below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">marketType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">block_duration_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceInterruptionBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotInstanceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valid_until</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -5015,12 +5841,18 @@ below for details.</p>
 <dt id="pulumi_aws.ec2.LaunchTemplate.license_specifications">
 <code class="sig-name descname">license_specifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.license_specifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of license specifications to associate with. See License Specification below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">licenseConfigurationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.monitoring">
 <code class="sig-name descname">monitoring</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>The monitoring option for the instance. See Monitoring below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -5040,12 +5872,34 @@ below for details.</p>
 <code class="sig-name descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Description of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4AddressCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_address_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.placement">
 <code class="sig-name descname">placement</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.placement" title="Permalink to this definition">¶</a></dt>
 <dd><p>The placement of the instance. See Placement below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">affinity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -5065,6 +5919,10 @@ Interfaces below for more details.</p>
 <dt id="pulumi_aws.ec2.LaunchTemplate.tag_specifications">
 <code class="sig-name descname">tag_specifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.tag_specifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>The tags to apply to the resources during launch. See Tag Specifications below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tags to assign to the launch template.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -5089,18 +5947,16 @@ Interfaces below for more details.</p>
 <dt id="pulumi_aws.ec2.LaunchTemplate.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">block_device_mappings=None</em>, <em class="sig-param">capacity_reservation_specification=None</em>, <em class="sig-param">credit_specification=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_gpu_specifications=None</em>, <em class="sig-param">elastic_inference_accelerator=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_market_options=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kernel_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">license_specifications=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">placement=None</em>, <em class="sig-param">ram_disk_id=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">tag_specifications=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LaunchTemplate resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the launch template.
-:param pulumi.Input[list] block_device_mappings: Specify volumes to attach to the instance besides the volumes specified by the AMI.</p>
-<blockquote>
-<div><p>See Block Devices below for details.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the launch template.</p></li>
+<li><p><strong>block_device_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify volumes to attach to the instance besides the volumes specified by the AMI.
+See Block Devices below for details.</p></li>
 <li><p><strong>capacity_reservation_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.</p></li>
 <li><p><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the credit specification of the instance. See Credit
 Specification below for more details.</p></li>
@@ -5141,6 +5997,101 @@ Interfaces below for more details.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>block_device_mappings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the device to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configure EBS volume properties.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>capacity_reservation_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacityReservationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>credit_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>elastic_gpu_specifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Accelerator type.</p></li>
+</ul>
+<p>The <strong>elastic_inference_accelerator</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Accelerator type.</p></li>
+</ul>
+<p>The <strong>iam_instance_profile</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.</p></li>
+</ul>
+<p>The <strong>instance_market_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">marketType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">block_duration_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceInterruptionBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spotInstanceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valid_until</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>license_specifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">licenseConfigurationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>monitoring</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Description of the launch template.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4AddressCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_address_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>placement</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">affinity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spreadDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>tag_specifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the launch template.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
 </div></blockquote>
@@ -5231,18 +6182,18 @@ main route table for the target VPC</p>
 <dt id="pulumi_aws.ec2.MainRouteTableAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">original_route_table_id=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.MainRouteTableAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MainRouteTableAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] original_route_table_id: Used internally, see <strong>Notes</strong> below
-:param pulumi.Input[str] route_table_id: The ID of the Route Table to set as the new</p>
-<blockquote>
-<div><p>main route table for the target VPC</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC whose main route table should be set</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>original_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used internally, see <strong>Notes</strong> below</p></li>
+<li><p><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Route Table to set as the new
+main route table for the target VPC</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC whose main route table should be set</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -5346,16 +6297,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NatGateway.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">public_ip=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NatGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NatGateway resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] allocation_id: The Allocation ID of the Elastic IP address for the gateway.
-:param pulumi.Input[str] network_interface_id: The ENI ID of the network interface created by the NAT gateway.
-:param pulumi.Input[str] private_ip: The private IP address of the NAT Gateway.
-:param pulumi.Input[str] public_ip: The public IP address of the NAT Gateway.
-:param pulumi.Input[str] subnet_id: The Subnet ID of the subnet in which to place the gateway.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allocation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Allocation ID of the Elastic IP address for the gateway.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ENI ID of the network interface created by the NAT gateway.</p></li>
+<li><p><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private IP address of the NAT Gateway.</p></li>
+<li><p><strong>public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public IP address of the NAT Gateway.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Subnet ID of the subnet in which to place the gateway.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -5428,6 +6385,34 @@ This argument is processed in <a class="reference external" href="https://www.te
 </ul>
 </dd>
 </dl>
+<p>The <strong>egress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
+</ul>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
 </div></blockquote>
@@ -5436,6 +6421,19 @@ This argument is processed in <a class="reference external" href="https://www.te
 <code class="sig-name descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.egress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies an egress rule. Parameters defined below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The to port to match.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -5443,6 +6441,19 @@ This argument is processed in <a class="reference external" href="https://www.te
 <code class="sig-name descname">ingress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.ingress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies an ingress rule. Parameters defined below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The to port to match.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -5473,17 +6484,16 @@ This argument is processed in <a class="reference external" href="https://www.te
 <dt id="pulumi_aws.ec2.NetworkAcl.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">egress=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkAcl resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] egress: Specifies an egress rule. Parameters defined below.</p>
-<blockquote>
-<div><p>This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Specifies an egress rule. Parameters defined below.
+This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</p></li>
 <li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Specifies an ingress rule. Parameters defined below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
 </p></li>
@@ -5494,6 +6504,34 @@ This argument is processed in <a class="reference external" href="https://www.te
 </ul>
 </dd>
 </dl>
+<p>The <strong>egress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
+</ul>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to match. This must be a
+valid network mask.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The from port to match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type code to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icmp_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ICMP type to be used. Default 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPv6 CIDR block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to match. If using the -1 ‘all’
+protocol, you must specify a from and to port of 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleNo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The rule number. Used for ordering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The to port to match.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
 </div></blockquote>
@@ -5640,21 +6678,27 @@ a conflict of rule settings and will overwrite rules.</p>
 <dt id="pulumi_aws.ec2.NetworkAclRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">egress=None</em>, <em class="sig-param">from_port=None</em>, <em class="sig-param">icmp_code=None</em>, <em class="sig-param">icmp_type=None</em>, <em class="sig-param">ipv6_cidr_block=None</em>, <em class="sig-param">network_acl_id=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">rule_action=None</em>, <em class="sig-param">rule_number=None</em>, <em class="sig-param">to_port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAclRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkAclRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cidr_block: The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
-:param pulumi.Input[bool] egress: Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[float] from_port: The from port to match.
-:param pulumi.Input[str] icmp_code: ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
-:param pulumi.Input[str] icmp_type: ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
-:param pulumi.Input[str] ipv6_cidr_block: The IPv6 CIDR block to allow or deny.
-:param pulumi.Input[str] network_acl_id: The ID of the network ACL.
-:param pulumi.Input[str] protocol: The protocol. A value of -1 means all protocols.
-:param pulumi.Input[str] rule_action: Indicates whether to allow or deny the traffic that matches the rule. Accepted values: <code class="docutils literal notranslate"><span class="pre">allow</span></code> | <code class="docutils literal notranslate"><span class="pre">deny</span></code>
-:param pulumi.Input[float] rule_number: The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
-:param pulumi.Input[float] to_port: The to port to match.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).</p></li>
+<li><p><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The from port to match.</p></li>
+<li><p><strong>icmp_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1</p></li>
+<li><p><strong>icmp_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1</p></li>
+<li><p><strong>ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 CIDR block to allow or deny.</p></li>
+<li><p><strong>network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network ACL.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. A value of -1 means all protocols.</p></li>
+<li><p><strong>rule_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether to allow or deny the traffic that matches the rule. Accepted values: <code class="docutils literal notranslate"><span class="pre">allow</span></code> | <code class="docutils literal notranslate"><span class="pre">deny</span></code></p></li>
+<li><p><strong>rule_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.</p></li>
+<li><p><strong>to_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The to port to match.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -5718,6 +6762,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>attachments</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attachment_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown</a>.</p>
 </div></blockquote>
@@ -5725,6 +6775,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NetworkInterface.attachments">
 <code class="sig-name descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Block to define the attachment of the ENI. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attachment_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -5773,18 +6828,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NetworkInterface.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">private_dns_name=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">private_ips_count=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkInterface resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] attachments: Block to define the attachment of the ENI. Documented below.
-:param pulumi.Input[str] description: A description for the network interface.
-:param pulumi.Input[list] private_ips: List of private IPs to assign to the ENI.
-:param pulumi.Input[float] private_ips_count: Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + private_ips_count, as a primary private IP will be assiged to an ENI by default. 
-:param pulumi.Input[list] security_groups: List of security group IDs to assign to the ENI.
-:param pulumi.Input[bool] source_dest_check: Whether to enable source destination checking for the ENI. Default true.
-:param pulumi.Input[str] subnet_id: Subnet ID to create the ENI in.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Block to define the attachment of the ENI. Documented below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the network interface.</p></li>
+<li><p><strong>private_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of private IPs to assign to the ENI.</p></li>
+<li><p><strong>private_ips_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + private_ips_count, as a primary private IP will be assiged to an ENI by default.</p></li>
+<li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of security group IDs to assign to the ENI.</p></li>
+<li><p><strong>source_dest_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable source destination checking for the ENI. Default true.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to create the ENI in.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>attachments</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attachment_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.html.markdown</a>.</p>
 </div></blockquote>
@@ -5880,15 +6947,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.NetworkInterfaceAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachment_id=None</em>, <em class="sig-param">device_index=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkInterfaceAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] attachment_id: The ENI Attachment ID.
-:param pulumi.Input[float] device_index: Network interface index (int).
-:param pulumi.Input[str] instance_id: Instance ID to attach.
-:param pulumi.Input[str] network_interface_id: ENI ID to attach.
-:param pulumi.Input[str] status: The status of the Network Interface Attachment.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ENI Attachment ID.</p></li>
+<li><p><strong>device_index</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Network interface index (int).</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance ID to attach.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ENI ID to attach.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the Network Interface Attachment.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -5976,12 +7049,18 @@ one or the other.</p>
 <dt id="pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">security_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkInterfaceSecurityGroupAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] network_interface_id: The ID of the network interface to attach to.
-:param pulumi.Input[str] security_group_id: The ID of the security group.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network interface to attach to.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the security group.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -6055,6 +7134,32 @@ the peering connection (a maximum of one).</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>accepter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
+<p>The <strong>requester</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</p>
 </div></blockquote>
@@ -6064,6 +7169,18 @@ the peering connection (a maximum of one).</p></li>
 <dd><p>An optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -6072,6 +7189,18 @@ the peering connection (a maximum of one).</p>
 <dd><p>A optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -6084,18 +7213,16 @@ the peering connection (a maximum of one).</p>
 <dt id="pulumi_aws.ec2.PeeringConnectionOptions.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accepter=None</em>, <em class="sig-param">requester=None</em>, <em class="sig-param">vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PeeringConnectionOptions.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PeeringConnectionOptions resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] accepter: An optional configuration block that allows for [VPC Peering Connection]</p>
-<blockquote>
-<div><p>(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
-the peering connection (a maximum of one).</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional configuration block that allows for [VPC Peering Connection]
+(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
+the peering connection (a maximum of one).</p></li>
 <li><p><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p></li>
@@ -6103,6 +7230,32 @@ the peering connection (a maximum of one).</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>accepter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
+<p>The <strong>requester</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</p>
 </div></blockquote>
@@ -6180,12 +7333,18 @@ in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest
 <dt id="pulumi_aws.ec2.PlacementGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">strategy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PlacementGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the placement group.
-:param pulumi.Input[str] strategy: The placement strategy.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the placement group.</p></li>
+<li><p><strong>strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The placement strategy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -6266,18 +7425,18 @@ should be attached.</p>
 <dt id="pulumi_aws.ec2.ProxyProtocolPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_ports=None</em>, <em class="sig-param">load_balancer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.ProxyProtocolPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ProxyProtocolPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] instance_ports: List of instance ports to which the policy</p>
-<blockquote>
-<div><p>should be applied. This can be specified if the protocol is SSL or TCP.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to which the policy
-should be attached.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>instance_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instance ports to which the policy
+should be applied. This can be specified if the protocol is SSL or TCP.</p></li>
+<li><p><strong>load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to which the policy
+should be attached.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -6419,20 +7578,26 @@ a conflict of rule settings and will overwrite rules.</p>
 <dt id="pulumi_aws.ec2.Route.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">destination_ipv6_cidr_block=None</em>, <em class="sig-param">destination_prefix_list_id=None</em>, <em class="sig-param">egress_only_gateway_id=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">instance_owner_id=None</em>, <em class="sig-param">nat_gateway_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">transit_gateway_id=None</em>, <em class="sig-param">vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Route.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Route resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] destination_cidr_block: The destination CIDR block.
-:param pulumi.Input[str] destination_ipv6_cidr_block: The destination IPv6 CIDR block.
-:param pulumi.Input[str] egress_only_gateway_id: Identifier of a VPC Egress Only Internet Gateway.
-:param pulumi.Input[str] gateway_id: Identifier of a VPC internet gateway or a virtual private gateway.
-:param pulumi.Input[str] instance_id: Identifier of an EC2 instance.
-:param pulumi.Input[str] nat_gateway_id: Identifier of a VPC NAT gateway.
-:param pulumi.Input[str] network_interface_id: Identifier of an EC2 network interface.
-:param pulumi.Input[str] route_table_id: The ID of the routing table.
-:param pulumi.Input[str] transit_gateway_id: Identifier of an EC2 Transit Gateway.
-:param pulumi.Input[str] vpc_peering_connection_id: Identifier of a VPC peering connection.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination CIDR block.</p></li>
+<li><p><strong>destination_ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination IPv6 CIDR block.</p></li>
+<li><p><strong>egress_only_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of a VPC Egress Only Internet Gateway.</p></li>
+<li><p><strong>gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of an EC2 instance.</p></li>
+<li><p><strong>nat_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of a VPC NAT gateway.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of an EC2 network interface.</p></li>
+<li><p><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the routing table.</p></li>
+<li><p><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of an EC2 Transit Gateway.</p></li>
+<li><p><strong>vpc_peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of a VPC peering connection.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown</a>.</p>
 </div></blockquote>
@@ -6511,6 +7676,18 @@ the separate resource.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>routes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block of the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC NAT gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 network interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC peering connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -6530,6 +7707,17 @@ the separate resource.</p>
 <dt id="pulumi_aws.ec2.RouteTable.routes">
 <code class="sig-name descname">routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.RouteTable.routes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of route objects. Their keys are documented below. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block of the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC NAT gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 network interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Identifier of a VPC peering connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -6548,15 +7736,34 @@ the separate resource.</p>
 <dt id="pulumi_aws.ec2.RouteTable.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">propagating_vgws=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RouteTable resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] owner_id: The ID of the AWS account that owns the route table
-:param pulumi.Input[list] propagating_vgws: A list of virtual gateways for propagation.
-:param pulumi.Input[list] routes: A list of route objects. Their keys are documented below. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] vpc_id: The VPC ID.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the route table</p></li>
+<li><p><strong>propagating_vgws</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual gateways for propagation.</p></li>
+<li><p><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of route objects. Their keys are documented below. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>routes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block of the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">egress_only_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC Egress Only Internet Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC internet gateway or a virtual private gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Ipv6 CIDR block of the route</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nat_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC NAT gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 network interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of an EC2 Transit Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_peering_connection_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Identifier of a VPC peering connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -6633,12 +7840,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.RouteTableAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RouteTableAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] route_table_id: The ID of the routing table to associate with.
-:param pulumi.Input[str] subnet_id: The subnet ID to create an association.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the routing table to associate with.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet ID to create an association.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -6728,6 +7941,36 @@ Default <code class="docutils literal notranslate"><span class="pre">false</span
 </ul>
 </dd>
 </dl>
+<p>The <strong>egress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The security group description. Defaults to
+“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The security group description. Defaults to
+“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -6752,6 +7995,20 @@ to classify your security groups in a way that can be updated, use <code class="
 <dd><p>Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The security group description. Defaults to
+“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -6760,6 +8017,20 @@ This argument is processed in <a class="reference external" href="https://www.te
 <dd><p>Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The security group description. Defaults to
+“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -6810,20 +8081,18 @@ Default <code class="docutils literal notranslate"><span class="pre">false</span
 <dt id="pulumi_aws.ec2.SecurityGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">egress=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">revoke_rules_on_delete=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecurityGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the security group
-:param pulumi.Input[str] description: The security group description. Defaults to</p>
-<blockquote>
-<div><p>“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
-<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
-to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the security group</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group description. Defaults to
+“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p></li>
 <li><p><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
 This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
@@ -6849,6 +8118,36 @@ Default <code class="docutils literal notranslate"><span class="pre">false</span
 </ul>
 </dd>
 </dl>
+<p>The <strong>egress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The security group description. Defaults to
+“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The security group description. Defaults to
+“Managed by Pulumi”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6_cidr_blocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix_list_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">self</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -7007,21 +8306,19 @@ or <code class="docutils literal notranslate"><span class="pre">egress</span></c
 <dt id="pulumi_aws.ec2.SecurityGroupRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">from_port=None</em>, <em class="sig-param">ipv6_cidr_blocks=None</em>, <em class="sig-param">prefix_list_ids=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">self=None</em>, <em class="sig-param">source_security_group_id=None</em>, <em class="sig-param">to_port=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecurityGroupRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] cidr_blocks: List of CIDR blocks. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.
-:param pulumi.Input[str] description: Description of the rule.
-:param pulumi.Input[float] from_port: The start port (or ICMP type number if protocol is “icmp”).
-:param pulumi.Input[list] ipv6_cidr_blocks: List of IPv6 CIDR blocks.
-:param pulumi.Input[list] prefix_list_ids: List of prefix list IDs (for allowing access to VPC endpoints).</p>
-<blockquote>
-<div><p>Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of CIDR blocks. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the rule.</p></li>
+<li><p><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp”).</p></li>
+<li><p><strong>ipv6_cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 CIDR blocks.</p></li>
+<li><p><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).
+Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p></li>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
 </p></li>
 <li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group to apply this rule to.</p></li>
@@ -7111,12 +8408,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.SnapshotCreateVolumePermission.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">snapshot_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SnapshotCreateVolumePermission.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SnapshotCreateVolumePermission resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_id: An AWS Account ID to add create volume permissions
-:param pulumi.Input[str] snapshot_id: A snapshot ID</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An AWS Account ID to add create volume permissions</p></li>
+<li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A snapshot ID</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown</a>.</p>
 </div></blockquote>
@@ -7197,12 +8500,18 @@ This data feed is sent to an Amazon S3 bucket that you specify when you subscrib
 <dt id="pulumi_aws.ec2.SpotDatafeedSubscription.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotDatafeedSubscription.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpotDatafeedSubscription resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] bucket: The Amazon S3 bucket in which to store the Spot instance data feed.
-:param pulumi.Input[str] prefix: Path of folder inside bucket to place spot pricing data.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon S3 bucket in which to store the Spot instance data feed.</p></li>
+<li><p><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path of folder inside bucket to place spot pricing data.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown</a>.</p>
 </div></blockquote>
@@ -7296,6 +8605,54 @@ timeout of 10m is reached.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>launch_specifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ami</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_optimized</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ephemeral_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iam_instance_profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iamInstanceProfileArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement_tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootBlockDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum bid price per unit hour.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown</a>.</p>
 </div></blockquote>
@@ -7354,6 +8711,53 @@ the number of Spot pools that you specify.</p>
 <dd><p>Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ami</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_optimized</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ephemeral_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iam_instance_profile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iamInstanceProfileArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement_tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootBlockDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The maximum bid price per unit hour.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7425,18 +8829,16 @@ timeout of 10m is reached.</p>
 <dt id="pulumi_aws.ec2.SpotFleetRequest.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_strategy=None</em>, <em class="sig-param">client_token=None</em>, <em class="sig-param">excess_capacity_termination_policy=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">iam_fleet_role=None</em>, <em class="sig-param">instance_interruption_behaviour=None</em>, <em class="sig-param">instance_pools_to_use_count=None</em>, <em class="sig-param">launch_specifications=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">replace_unhealthy_instances=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">spot_request_state=None</em>, <em class="sig-param">target_capacity=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">terminate_instances_with_expiration=None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">wait_for_fulfillment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpotFleetRequest resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] allocation_strategy: Indicates how to allocate the target capacity across</p>
-<blockquote>
-<div><p>the Spot pools specified by the Spot fleet request. The default is
-<code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allocation_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates how to allocate the target capacity across
+the Spot pools specified by the Spot fleet request. The default is
+<code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p></li>
 <li><p><strong>excess_capacity_termination_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.</p></li>
@@ -7476,6 +8878,54 @@ timeout of 10m is reached.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>launch_specifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ami</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">associate_public_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_optimized</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ephemeral_block_devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iam_instance_profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iamInstanceProfileArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">monitoring</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement_tenancy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootBlockDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spot_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum bid price per unit hour.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown</a>.</p>
 </div></blockquote>
@@ -7629,6 +9079,59 @@ timeout of 10m is reached.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>credit_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Snapshot ID to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>root_block_device</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown</a>.</p>
 </div></blockquote>
@@ -7676,6 +9179,9 @@ only supported on creation of instance type that support CPU Options
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.credit_specification">
 <code class="sig-name descname">credit_specification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.credit_specification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize the credit specification of the instance. See Credit Specification below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7690,6 +9196,23 @@ Termination Protection</a></p>
 <code class="sig-name descname">ebs_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.ebs_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Snapshot ID to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7707,6 +9230,13 @@ See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/l
 <code class="sig-name descname">ephemeral_block_devices</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.ephemeral_block_devices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize Ephemeral (also known as
 “Instance Store”) volumes on the instance. See Block Devices below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7781,6 +9311,12 @@ If left empty instances are launched and terminated individually.</p>
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.network_interfaces">
 <code class="sig-name descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7822,6 +9358,21 @@ is only available if you’ve enabled DNS hostnames for your VPC</p>
 <code class="sig-name descname">root_block_device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.root_block_device" title="Permalink to this definition">¶</a></dt>
 <dd><p>Customize details about the root block
 device of the instance. See Block Devices below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7936,21 +9487,19 @@ timeout of 10m is reached.</p>
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ami=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">block_duration_minutes=None</em>, <em class="sig-param">cpu_core_count=None</em>, <em class="sig-param">cpu_threads_per_core=None</em>, <em class="sig-param">credit_specification=None</em>, <em class="sig-param">disable_api_termination=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">host_id=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">instance_initiated_shutdown_behavior=None</em>, <em class="sig-param">instance_interruption_behaviour=None</em>, <em class="sig-param">instance_state=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">ipv6_address_count=None</em>, <em class="sig-param">ipv6_addresses=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">launch_group=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">password_data=None</em>, <em class="sig-param">placement_group=None</em>, <em class="sig-param">primary_network_interface_id=None</em>, <em class="sig-param">private_dns=None</em>, <em class="sig-param">private_ip=None</em>, <em class="sig-param">public_dns=None</em>, <em class="sig-param">public_ip=None</em>, <em class="sig-param">root_block_device=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_dest_check=None</em>, <em class="sig-param">spot_bid_status=None</em>, <em class="sig-param">spot_instance_id=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">spot_request_state=None</em>, <em class="sig-param">spot_type=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenancy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">user_data_base64=None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">volume_tags=None</em>, <em class="sig-param">vpc_security_group_ids=None</em>, <em class="sig-param">wait_for_fulfillment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpotInstanceRequest resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] ami: The AMI to use for the instance.
-:param pulumi.Input[bool] associate_public_ip_address: Associate a public ip address with an instance in a VPC.  Boolean value.
-:param pulumi.Input[str] availability_zone: The AZ to start the instance in.
-:param pulumi.Input[float] block_duration_minutes: The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).</p>
-<blockquote>
-<div><p>The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
-Note that you can’t specify an Availability Zone group or a launch group if you specify a duration.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ami</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI to use for the instance.</p></li>
+<li><p><strong>associate_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Associate a public ip address with an instance in a VPC.  Boolean value.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ to start the instance in.</p></li>
+<li><p><strong>block_duration_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
+The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
+Note that you can’t specify an Availability Zone group or a launch group if you specify a duration.</p></li>
 <li><p><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
@@ -8050,6 +9599,59 @@ timeout of 10m is reached.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>credit_specification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cpuCredits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>ebs_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Snapshot ID to mount.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>ephemeral_block_devices</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the block device to mount on the instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Suppresses the specified device included in the AMI’s block device mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>).</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_index</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interface_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>root_block_device</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">EBS
+encryption</a>
+on the volume (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Cannot be used with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gibibytes (GiB).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown</a>.</p>
 </div></blockquote>
@@ -8196,19 +9798,17 @@ a public IP address. Default is <code class="docutils literal notranslate"><span
 <dt id="pulumi_aws.ec2.Subnet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">assign_ipv6_address_on_creation=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">availability_zone_id=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">ipv6_cidr_block=None</em>, <em class="sig-param">ipv6_cidr_block_association_id=None</em>, <em class="sig-param">map_public_ip_on_launch=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Subnet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the subnet.
-:param pulumi.Input[bool] assign_ipv6_address_on_creation: Specify true to indicate</p>
-<blockquote>
-<div><p>that network interfaces created in the specified subnet should be
-assigned an IPv6 address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the subnet.</p></li>
+<li><p><strong>assign_ipv6_address_on_creation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
+that network interfaces created in the specified subnet should be
+assigned an IPv6 address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ for the subnet.</p></li>
 <li><p><strong>availability_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ ID of the subnet.</p></li>
 <li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the subnet.</p></li>
@@ -8341,17 +9941,15 @@ means attached.</p>
 <dt id="pulumi_aws.ec2.VolumeAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">force_detach=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">skip_destroy=None</em>, <em class="sig-param">volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VolumeAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] device_name: The device name to expose to the instance (for</p>
-<blockquote>
-<div><p>example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name to expose to the instance (for
+example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.</p></li>
 <li><p><strong>force_detach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
@@ -8544,19 +10142,17 @@ this VPC. Note that you can change a VPC’s main route table by using an
 <dt id="pulumi_aws.ec2.Vpc.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">assign_generated_ipv6_cidr_block=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">default_network_acl_id=None</em>, <em class="sig-param">default_route_table_id=None</em>, <em class="sig-param">default_security_group_id=None</em>, <em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">enable_classiclink=None</em>, <em class="sig-param">enable_classiclink_dns_support=None</em>, <em class="sig-param">enable_dns_hostnames=None</em>, <em class="sig-param">enable_dns_support=None</em>, <em class="sig-param">instance_tenancy=None</em>, <em class="sig-param">ipv6_association_id=None</em>, <em class="sig-param">ipv6_cidr_block=None</em>, <em class="sig-param">main_route_table_id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Vpc.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Vpc resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of VPC
-:param pulumi.Input[bool] assign_generated_ipv6_cidr_block: Requests an Amazon-provided IPv6 CIDR</p>
-<blockquote>
-<div><p>block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or
-the size of the CIDR block. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of VPC</p></li>
+<li><p><strong>assign_generated_ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Requests an Amazon-provided IPv6 CIDR
+block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or
+the size of the CIDR block. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the VPC.</p></li>
 <li><p><strong>default_network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network ACL created by default on VPC creation</p></li>
 <li><p><strong>default_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the route table created by default on VPC creation</p></li>
@@ -8697,17 +10293,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_name_servers=None</em>, <em class="sig-param">netbios_name_servers=None</em>, <em class="sig-param">netbios_node_type=None</em>, <em class="sig-param">ntp_servers=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcDhcpOptions resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] domain_name: the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the <code class="docutils literal notranslate"><span class="pre">search</span></code> value in the <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code> file.
-:param pulumi.Input[list] domain_name_servers: List of name servers to configure in <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code>. If you want to use the default AWS nameservers you should set this to <code class="docutils literal notranslate"><span class="pre">AmazonProvidedDNS</span></code>.
-:param pulumi.Input[list] netbios_name_servers: List of NETBIOS name servers.
-:param pulumi.Input[str] netbios_node_type: The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.
-:param pulumi.Input[list] ntp_servers: List of NTP servers to configure.
-:param pulumi.Input[str] owner_id: The ID of the AWS account that owns the DHCP options set.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the <code class="docutils literal notranslate"><span class="pre">search</span></code> value in the <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code> file.</p></li>
+<li><p><strong>domain_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of name servers to configure in <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code>. If you want to use the default AWS nameservers you should set this to <code class="docutils literal notranslate"><span class="pre">AmazonProvidedDNS</span></code>.</p></li>
+<li><p><strong>netbios_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NETBIOS name servers.</p></li>
+<li><p><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
+</p></li>
+<li><p><strong>ntp_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NTP servers to configure.</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the DHCP options set.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown</a>.</p>
 </div></blockquote>
@@ -8788,12 +10391,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpcDhcpOptionsAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptionsAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcDhcpOptionsAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] dhcp_options_id: The ID of the DHCP Options Set to associate to the VPC.
-:param pulumi.Input[str] vpc_id: The ID of the VPC to which we would like to associate a DHCP Options Set.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dhcp_options_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the DHCP Options Set to associate to the VPC.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC to which we would like to associate a DHCP Options Set.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -8887,6 +10496,10 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dt id="pulumi_aws.ec2.VpcEndpoint.dns_entries">
 <code class="sig-name descname">dns_entries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.dns_entries" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DNS entries for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. DNS blocks are documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DNS name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the private hosted zone.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -8978,24 +10591,23 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">false</
 <dt id="pulumi_aws.ec2.VpcEndpoint.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_accept=None</em>, <em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">dns_entries=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">prefix_list_id=None</em>, <em class="sig-param">private_dns_enabled=None</em>, <em class="sig-param">requester_managed=None</em>, <em class="sig-param">route_table_ids=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_endpoint_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcEndpoint resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] auto_accept: Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).
-:param pulumi.Input[list] cidr_blocks: The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.
-:param pulumi.Input[list] dns_entries: The DNS entries for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. DNS blocks are documented below.
-:param pulumi.Input[list] network_interface_ids: One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
-:param pulumi.Input[str] owner_id: The ID of the AWS account that owns the VPC endpoint.
-:param pulumi.Input[str] policy: A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details.
-:param pulumi.Input[str] prefix_list_id: The prefix list ID of the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.
-:param pulumi.Input[bool] private_dns_enabled: Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
-<blockquote>
-<div><p>Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</p></li>
+<li><p><strong>cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p></li>
+<li><p><strong>dns_entries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The DNS entries for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. DNS blocks are documented below.</p></li>
+<li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that owns the VPC endpoint.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A policy to attach to the endpoint that controls access to the service. Defaults to full access. All <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> and some <code class="docutils literal notranslate"><span class="pre">Interface</span></code> endpoints support policies - see the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html">relevant AWS documentation</a> for more details.</p>
+</p></li>
+<li><p><strong>prefix_list_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix list ID of the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p></li>
+<li><p><strong>private_dns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>requester_managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not the VPC Endpoint is being managed by its service - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>route_table_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more route table IDs. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p></li>
 <li><p><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more security groups to associate with the network interface. Required for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p></li>
@@ -9008,6 +10620,11 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>dns_entries</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the private hosted zone.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -9111,16 +10728,23 @@ Connection notifications notify subscribers of VPC Endpoint events.</p>
 <dt id="pulumi_aws.ec2.VpcEndpointConnectionNotification.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">connection_events=None</em>, <em class="sig-param">connection_notification_arn=None</em>, <em class="sig-param">notification_type=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">vpc_endpoint_id=None</em>, <em class="sig-param">vpc_endpoint_service_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointConnectionNotification.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcEndpointConnectionNotification resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] connection_events: One or more endpoint <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters">events</a> for which to receive notifications.
-:param pulumi.Input[str] connection_notification_arn: The ARN of the SNS topic for the notifications.
-:param pulumi.Input[str] notification_type: The type of notification.
-:param pulumi.Input[str] state: The state of the notification.
-:param pulumi.Input[str] vpc_endpoint_id: The ID of the VPC Endpoint to receive notifications for.
-:param pulumi.Input[str] vpc_endpoint_service_id: The ID of the VPC Endpoint Service to receive notifications for.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>connection_events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>One or more endpoint <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters">events</a> for which to receive notifications.</p>
+</p></li>
+<li><p><strong>connection_notification_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic for the notifications.</p></li>
+<li><p><strong>notification_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of notification.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the notification.</p></li>
+<li><p><strong>vpc_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC Endpoint to receive notifications for.</p></li>
+<li><p><strong>vpc_endpoint_service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC Endpoint Service to receive notifications for.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown</a>.</p>
 </div></blockquote>
@@ -9197,12 +10821,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpcEndpointRouteTableAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">vpc_endpoint_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointRouteTableAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcEndpointRouteTableAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] route_table_id: Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-:param pulumi.Input[str] vpc_endpoint_id: Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the EC2 Route Table to be associated with the VPC Endpoint.</p></li>
+<li><p><strong>vpc_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -9343,21 +10973,27 @@ and will overwrite the association.</p>
 <dt id="pulumi_aws.ec2.VpcEndpointService.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acceptance_required=None</em>, <em class="sig-param">allowed_principals=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">base_endpoint_dns_names=None</em>, <em class="sig-param">manages_vpc_endpoints=None</em>, <em class="sig-param">network_load_balancer_arns=None</em>, <em class="sig-param">private_dns_name=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">service_type=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcEndpointService resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] acceptance_required: Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[list] allowed_principals: The ARNs of one or more principals allowed to discover the endpoint service.
-:param pulumi.Input[list] availability_zones: The Availability Zones in which the service is available.
-:param pulumi.Input[list] base_endpoint_dns_names: The DNS names for the service.
-:param pulumi.Input[bool] manages_vpc_endpoints: Whether or not the service manages its VPC endpoints - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[list] network_load_balancer_arns: The ARNs of one or more Network Load Balancers for the endpoint service.
-:param pulumi.Input[str] private_dns_name: The private DNS name for the service.
-:param pulumi.Input[str] service_name: The service name.
-:param pulumi.Input[str] service_type: The service type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
-:param pulumi.Input[str] state: The state of the VPC endpoint service.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>acceptance_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>allowed_principals</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARNs of one or more principals allowed to discover the endpoint service.</p></li>
+<li><p><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The Availability Zones in which the service is available.</p></li>
+<li><p><strong>base_endpoint_dns_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The DNS names for the service.</p></li>
+<li><p><strong>manages_vpc_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not the service manages its VPC endpoints - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>network_load_balancer_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARNs of one or more Network Load Balancers for the endpoint service.</p></li>
+<li><p><strong>private_dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private DNS name for the service.</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name.</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the VPC endpoint service.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown</a>.</p>
 </div></blockquote>
@@ -9441,12 +11077,18 @@ and will overwrite the association.</p>
 <dt id="pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">principal_arn=None</em>, <em class="sig-param">vpc_endpoint_service_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcEndpointServiceAllowedPrinciple resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] principal_arn: The ARN of the principal to allow permissions.
-:param pulumi.Input[str] vpc_endpoint_service_id: The ID of the VPC endpoint service to allow permission.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>principal_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the principal to allow permissions.</p></li>
+<li><p><strong>vpc_endpoint_service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC endpoint service to allow permission.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown</a>.</p>
 </div></blockquote>
@@ -9530,12 +11172,18 @@ Association resource. Doing so will cause a conflict of associations and will ov
 <dt id="pulumi_aws.ec2.VpcEndpointSubnetAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">vpc_endpoint_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointSubnetAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcEndpointSubnetAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] subnet_id: The ID of the subnet to be associated with the VPC endpoint.
-:param pulumi.Input[str] vpc_endpoint_id: The ID of the VPC endpoint with which the subnet will be associated.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet to be associated with the VPC endpoint.</p></li>
+<li><p><strong>vpc_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC endpoint with which the subnet will be associated.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -9614,12 +11262,18 @@ The <code class="docutils literal notranslate"><span class="pre">ec2.VpcIpv4Cidr
 <dt id="pulumi_aws.ec2.VpcIpv4CidrBlockAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cidr_block=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcIpv4CidrBlockAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcIpv4CidrBlockAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cidr_block: The additional IPv4 CIDR block to associate with the VPC.
-:param pulumi.Input[str] vpc_id: The ID of the VPC to make the association with.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional IPv4 CIDR block to associate with the VPC.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC to make the association with.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -9704,6 +11358,32 @@ the peering connection (a maximum of one).</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>accepter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
+<p>The <strong>requester</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown</a>.</p>
 </div></blockquote>
@@ -9719,6 +11399,18 @@ the peering connection (a maximum of one).</p></li>
 <dd><p>An optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -9753,6 +11445,18 @@ and use the <code class="docutils literal notranslate"><span class="pre">ec2.Vpc
 <dd><p>A optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
 the peering connection (a maximum of one).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -9771,19 +11475,17 @@ the peering connection (a maximum of one).</p>
 <dt id="pulumi_aws.ec2.VpcPeeringConnection.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accept_status=None</em>, <em class="sig-param">accepter=None</em>, <em class="sig-param">auto_accept=None</em>, <em class="sig-param">peer_owner_id=None</em>, <em class="sig-param">peer_region=None</em>, <em class="sig-param">peer_vpc_id=None</em>, <em class="sig-param">requester=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcPeeringConnection resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] accept_status: The status of the VPC Peering Connection request.
-:param pulumi.Input[dict] accepter: An optional configuration block that allows for [VPC Peering Connection]</p>
-<blockquote>
-<div><p>(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
-the peering connection (a maximum of one).</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accept_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the VPC Peering Connection request.</p></li>
+<li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional configuration block that allows for [VPC Peering Connection]
+(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
+the peering connection (a maximum of one).</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the peering (both VPCs need to be in the same AWS account).</p></li>
 <li><p><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider][1] is currently connected to.</p></li>
@@ -9798,6 +11500,32 @@ the peering connection (a maximum of one).</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>accepter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
+<p>The <strong>requester</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local linked EC2-Classic instance to communicate
+with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
+to the remote VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to resolve public DNS hostnames to
+private IP addresses when queried from instances in the peer VPC. This is
+<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html">not supported</a> for
+inter-region VPC peering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Allow a local VPC to communicate with a linked EC2-Classic
+instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
+connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown</a>.</p>
 </div></blockquote>
@@ -9866,6 +11594,24 @@ connection into management.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>accepter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local ClassicLink connection can communicate
+with the peer VPC over the VPC Peering Connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can resolve public DNS hostnames to
+private IP addresses when queried from instances in a peer VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can communicate with a ClassicLink
+connection in the peer VPC over the VPC Peering Connection.</p></li>
+</ul>
+<p>The <strong>requester</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local ClassicLink connection can communicate
+with the peer VPC over the VPC Peering Connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can resolve public DNS hostnames to
+private IP addresses when queried from instances in a peer VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can communicate with a ClassicLink
+connection in the peer VPC over the VPC Peering Connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown</a>.</p>
 </div></blockquote>
@@ -9880,6 +11626,14 @@ connection into management.</p>
 <code class="sig-name descname">accepter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.accepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>A configuration block that describes [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a local ClassicLink connection can communicate
+with the peer VPC over the VPC Peering Connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a local VPC can resolve public DNS hostnames to
+private IP addresses when queried from instances in a peer VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a local VPC can communicate with a ClassicLink
+connection in the peer VPC over the VPC Peering Connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -9911,6 +11665,14 @@ connection into management.</p>
 <code class="sig-name descname">requester</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.requester" title="Permalink to this definition">¶</a></dt>
 <dd><p>A configuration block that describes [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a local ClassicLink connection can communicate
+with the peer VPC over the VPC Peering Connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a local VPC can resolve public DNS hostnames to
+private IP addresses when queried from instances in a peer VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a local VPC can communicate with a ClassicLink
+connection in the peer VPC over the VPC Peering Connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -9935,18 +11697,16 @@ connection into management.</p>
 <dt id="pulumi_aws.ec2.VpcPeeringConnectionAccepter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accept_status=None</em>, <em class="sig-param">accepter=None</em>, <em class="sig-param">auto_accept=None</em>, <em class="sig-param">peer_owner_id=None</em>, <em class="sig-param">peer_region=None</em>, <em class="sig-param">peer_vpc_id=None</em>, <em class="sig-param">requester=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcPeeringConnectionAccepter resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] accept_status: The status of the VPC Peering Connection request.
-:param pulumi.Input[dict] accepter: A configuration block that describes [VPC Peering Connection]</p>
-<blockquote>
-<div><p>(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accept_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the VPC Peering Connection request.</p></li>
+<li><p><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
+(<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</p></li>
 <li><p><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to accept the peering request. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the owner of the requester VPC.</p></li>
 <li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the accepter VPC.</p></li>
@@ -9959,6 +11719,24 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>accepter</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local ClassicLink connection can communicate
+with the peer VPC over the VPC Peering Connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can resolve public DNS hostnames to
+private IP addresses when queried from instances in a peer VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can communicate with a ClassicLink
+connection in the peer VPC over the VPC Peering Connection.</p></li>
+</ul>
+<p>The <strong>requester</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowClassicLinkToRemoteVpc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local ClassicLink connection can communicate
+with the peer VPC over the VPC Peering Connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowRemoteVpcDnsResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can resolve public DNS hostnames to
+private IP addresses when queried from instances in a peer VPC.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowVpcToRemoteClassicLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a local VPC can communicate with a ClassicLink
+connection in the peer VPC over the VPC Peering Connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown</a>.</p>
 </div></blockquote>
@@ -10169,32 +11947,52 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpnConnection.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">customer_gateway_configuration=None</em>, <em class="sig-param">customer_gateway_id=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">static_routes_only=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">transit_gateway_attachment_id=None</em>, <em class="sig-param">transit_gateway_id=None</em>, <em class="sig-param">tunnel1_address=None</em>, <em class="sig-param">tunnel1_bgp_asn=None</em>, <em class="sig-param">tunnel1_bgp_holdtime=None</em>, <em class="sig-param">tunnel1_cgw_inside_address=None</em>, <em class="sig-param">tunnel1_inside_cidr=None</em>, <em class="sig-param">tunnel1_preshared_key=None</em>, <em class="sig-param">tunnel1_vgw_inside_address=None</em>, <em class="sig-param">tunnel2_address=None</em>, <em class="sig-param">tunnel2_bgp_asn=None</em>, <em class="sig-param">tunnel2_bgp_holdtime=None</em>, <em class="sig-param">tunnel2_cgw_inside_address=None</em>, <em class="sig-param">tunnel2_inside_cidr=None</em>, <em class="sig-param">tunnel2_preshared_key=None</em>, <em class="sig-param">tunnel2_vgw_inside_address=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vgw_telemetries=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpnConnection resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] customer_gateway_configuration: The configuration information for the VPN connection’s customer gateway (in the native XML format).
-:param pulumi.Input[str] customer_gateway_id: The ID of the customer gateway.
-:param pulumi.Input[bool] static_routes_only: Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don’t support BGP.
-:param pulumi.Input[dict] tags: Tags to apply to the connection.
-:param pulumi.Input[str] transit_gateway_attachment_id: When associated with an EC2 Transit Gateway (<code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> argument), the attachment ID.
-:param pulumi.Input[str] transit_gateway_id: The ID of the EC2 Transit Gateway.
-:param pulumi.Input[str] tunnel1_address: The public IP address of the first VPN tunnel.
-:param pulumi.Input[str] tunnel1_bgp_asn: The bgp asn number of the first VPN tunnel.
-:param pulumi.Input[float] tunnel1_bgp_holdtime: The bgp holdtime of the first VPN tunnel.
-:param pulumi.Input[str] tunnel1_cgw_inside_address: The RFC 6890 link-local address of the first VPN tunnel (Customer Gateway Side).
-:param pulumi.Input[str] tunnel1_inside_cidr: The CIDR block of the inside IP addresses for the first VPN tunnel.
-:param pulumi.Input[str] tunnel1_preshared_key: The preshared key of the first VPN tunnel.
-:param pulumi.Input[str] tunnel1_vgw_inside_address: The RFC 6890 link-local address of the first VPN tunnel (VPN Gateway Side).
-:param pulumi.Input[str] tunnel2_address: The public IP address of the second VPN tunnel.
-:param pulumi.Input[str] tunnel2_bgp_asn: The bgp asn number of the second VPN tunnel.
-:param pulumi.Input[float] tunnel2_bgp_holdtime: The bgp holdtime of the second VPN tunnel.
-:param pulumi.Input[str] tunnel2_cgw_inside_address: The RFC 6890 link-local address of the second VPN tunnel (Customer Gateway Side).
-:param pulumi.Input[str] tunnel2_inside_cidr: The CIDR block of the inside IP addresses for the second VPN tunnel.
-:param pulumi.Input[str] tunnel2_preshared_key: The preshared key of the second VPN tunnel.
-:param pulumi.Input[str] tunnel2_vgw_inside_address: The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
-:param pulumi.Input[str] type: The type of VPN connection. The only type AWS supports at this time is “ipsec.1”.
-:param pulumi.Input[str] vpn_gateway_id: The ID of the Virtual Private Gateway.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>customer_gateway_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The configuration information for the VPN connection’s customer gateway (in the native XML format).</p></li>
+<li><p><strong>customer_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the customer gateway.</p></li>
+<li><p><strong>static_routes_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don’t support BGP.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Tags to apply to the connection.</p></li>
+<li><p><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When associated with an EC2 Transit Gateway (<code class="docutils literal notranslate"><span class="pre">transit_gateway_id</span></code> argument), the attachment ID.</p></li>
+<li><p><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EC2 Transit Gateway.</p></li>
+<li><p><strong>tunnel1_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public IP address of the first VPN tunnel.</p></li>
+<li><p><strong>tunnel1_bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bgp asn number of the first VPN tunnel.</p></li>
+<li><p><strong>tunnel1_bgp_holdtime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The bgp holdtime of the first VPN tunnel.</p></li>
+<li><p><strong>tunnel1_cgw_inside_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RFC 6890 link-local address of the first VPN tunnel (Customer Gateway Side).</p></li>
+<li><p><strong>tunnel1_inside_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block of the inside IP addresses for the first VPN tunnel.</p></li>
+<li><p><strong>tunnel1_preshared_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preshared key of the first VPN tunnel.</p></li>
+<li><p><strong>tunnel1_vgw_inside_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RFC 6890 link-local address of the first VPN tunnel (VPN Gateway Side).</p></li>
+<li><p><strong>tunnel2_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public IP address of the second VPN tunnel.</p></li>
+<li><p><strong>tunnel2_bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bgp asn number of the second VPN tunnel.</p></li>
+<li><p><strong>tunnel2_bgp_holdtime</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The bgp holdtime of the second VPN tunnel.</p></li>
+<li><p><strong>tunnel2_cgw_inside_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RFC 6890 link-local address of the second VPN tunnel (Customer Gateway Side).</p></li>
+<li><p><strong>tunnel2_inside_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block of the inside IP addresses for the second VPN tunnel.</p></li>
+<li><p><strong>tunnel2_preshared_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preshared key of the second VPN tunnel.</p></li>
+<li><p><strong>tunnel2_vgw_inside_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of VPN connection. The only type AWS supports at this time is “ipsec.1”.</p></li>
+<li><p><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Private Gateway.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>routes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr_block</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>vgw_telemetries</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">acceptedRouteCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lastStatusChange</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outsideIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown</a>.</p>
 </div></blockquote>
@@ -10271,12 +12069,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpnConnectionRoute.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_cidr_block=None</em>, <em class="sig-param">vpn_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnectionRoute.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpnConnectionRoute resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] destination_cidr_block: The CIDR block associated with the local subnet of the customer network.
-:param pulumi.Input[str] vpn_connection_id: The ID of the VPN connection.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block associated with the local subnet of the customer network.</p></li>
+<li><p><strong>vpn_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPN connection.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown</a>.</p>
 </div></blockquote>
@@ -10367,14 +12171,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.VpnGateway.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">amazon_side_asn=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpnGateway resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] amazon_side_asn: The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don’t specify an ASN, the virtual private gateway is created with the default ASN.
-:param pulumi.Input[str] availability_zone: The Availability Zone for the virtual private gateway.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] vpc_id: The VPC ID to create in.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>amazon_side_asn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don’t specify an ASN, the virtual private gateway is created with the default ASN.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the virtual private gateway.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -10457,12 +12267,18 @@ to an existing VPC by setting the <code class="docutils literal notranslate"><sp
 <dt id="pulumi_aws.ec2.VpnGatewayAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpnGatewayAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] vpc_id: The ID of the VPC.
-:param pulumi.Input[str] vpn_gateway_id: The ID of the Virtual Private Gateway.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC.</p></li>
+<li><p><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Private Gateway.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -10544,12 +12360,18 @@ propagation not explicitly listed in its value will be removed.</p>
 <dt id="pulumi_aws.ec2.VpnGatewayRoutePropagation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayRoutePropagation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpnGatewayRoutePropagation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] route_table_id: The id of the <code class="docutils literal notranslate"><span class="pre">ec2.RouteTable</span></code> to propagate routes into.
-:param pulumi.Input[str] vpn_gateway_id: The id of the <code class="docutils literal notranslate"><span class="pre">ec2.VpnGateway</span></code> to propagate routes from.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the <code class="docutils literal notranslate"><span class="pre">ec2.RouteTable</span></code> to propagate routes into.</p></li>
+<li><p><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the <code class="docutils literal notranslate"><span class="pre">ec2.VpnGateway</span></code> to propagate routes from.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown</a>.</p>
 </div></blockquote>
@@ -10597,6 +12419,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ec2.get_customer_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_customer_gateway</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_customer_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AWS Customer Gateway.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – One or more [name-value pairs][dcg-filters] to filter by.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The ID of the gateway.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -10607,6 +12442,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instance</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">get_password_data=None</em>, <em class="sig-param">get_user_data=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – One or more name/value pairs to use as filters. There are
+several valid keys, for a full reference, check out
+[describe-instances in the AWS CLI reference][1].</p></li>
+<li><p><strong>get_password_data</strong> (<em>bool</em>) – <p>If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <code class="docutils literal notranslate"><span class="pre">password_data</span></code> attribute. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
+</p></li>
+<li><p><strong>get_user_data</strong> (<em>bool</em>) – Retrieve Base64 encoded User Data contents into the <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> attribute. A SHA-1 hash of the User Data contents will always be present in the <code class="docutils literal notranslate"><span class="pre">user_data</span></code> attribute. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>instance_id</strong> (<em>str</em>) – Specify the exact Instance ID with which to populate the data source.</p></li>
+<li><p><strong>instance_tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must
+exactly match a pair on the desired Instance.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -10615,7 +12470,25 @@ resources.</p>
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_instances">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">instance_state_names=None</em>, <em class="sig-param">instance_tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instances" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – One or more name/value pairs to use as filters. There are
+several valid keys, for a full reference, check out
+[describe-instances in the AWS CLI reference][1].</p></li>
+<li><p><strong>instance_state_names</strong> (<em>list</em>) – A list of instance states that should be applicable to the desired instances. The permitted values are: <code class="docutils literal notranslate"><span class="pre">pending,</span> <span class="pre">running,</span> <span class="pre">shutting-down,</span> <span class="pre">stopped,</span> <span class="pre">stopping,</span> <span class="pre">terminated</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">running</span></code>.</p></li>
+<li><p><strong>instance_tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must
+exactly match a pair on desired instances.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+<blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instances.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instances.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
@@ -10624,6 +12497,23 @@ resources.</p>
 <dt id="pulumi_aws.ec2.get_internet_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_internet_gateway</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">internet_gateway_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_internet_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ec2.InternetGateway</span></code> provides details about a specific Internet Gateway.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>internet_gateway_id</strong> (<em>str</em>) – The id of the specific Internet Gateway to retrieve.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired Internet Gateway.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInternetGateways.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+An Internet Gateway will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -10633,6 +12523,11 @@ resources.</p>
 <dt id="pulumi_aws.ec2.get_launch_configuration">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_launch_configuration</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the launch configuration.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown</a>.</p>
 </div></blockquote>
@@ -10642,6 +12537,11 @@ resources.</p>
 <dt id="pulumi_aws.ec2.get_launch_template">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_launch_template</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the launch template.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown</a>.</p>
 </div></blockquote>
@@ -10651,8 +12551,54 @@ resources.</p>
 <dt id="pulumi_aws.ec2.get_nat_gateway">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_nat_gateway</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_nat_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific Nat Gateway.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The id of the specific Nat Gateway to retrieve.</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – The state of the NAT gateway (pending | failed | available | deleting | deleted ).</p></li>
+<li><p><strong>subnet_id</strong> (<em>str</em>) – The id of subnet that the Nat Gateway resides in.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired Nat Gateway.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the Nat Gateway resides in.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNatGateways.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+An Nat Gateway will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ec2.get_network_acls">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_network_acls</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_acls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired network ACLs.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The VPC ID that you want to filter from.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNetworkAcls.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A VPC will be selected if any one of the given values matches.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_acls.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_acls.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -10660,8 +12606,45 @@ resources.</p>
 <dt id="pulumi_aws.ec2.get_network_interface">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_network_interface</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Network Interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – One or more name/value pairs to filter off of. There are several valid keys, for a full reference, check out <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-network-interfaces.html">describe-network-interfaces</a> in the AWS CLI reference.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The identifier for the network interface.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.ec2.get_network_interfaces">
+<code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_network_interfaces</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_interfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired network interfaces.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNetworkInterfaces.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interfaces.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interfaces.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -10672,6 +12655,22 @@ resources.</p>
 <p>This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>destination_cidr_block</strong> (<em>str</em>) – The CIDR block of the Route belonging to the Route Table.</p></li>
+<li><p><strong>destination_ipv6_cidr_block</strong> (<em>str</em>) – The IPv6 CIDR block of the Route belonging to the Route Table.</p></li>
+<li><p><strong>egress_only_gateway_id</strong> (<em>str</em>) – The Egress Only Gateway ID of the Route belonging to the Route Table.</p></li>
+<li><p><strong>gateway_id</strong> (<em>str</em>) – The Gateway ID of the Route belonging to the Route Table.</p></li>
+<li><p><strong>instance_id</strong> (<em>str</em>) – The Instance ID of the Route belonging to the Route Table.</p></li>
+<li><p><strong>nat_gateway_id</strong> (<em>str</em>) – The NAT Gateway ID of the Route belonging to the Route Table.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>str</em>) – The Network Interface ID of the Route belonging to the Route Table.</p></li>
+<li><p><strong>route_table_id</strong> (<em>str</em>) – The id of the specific Route Table containing the Route entry.</p></li>
+<li><p><strong>transit_gateway_id</strong> (<em>str</em>) – The EC2 Transit Gateway ID of the Route belonging to the Route Table.</p></li>
+<li><p><strong>vpc_peering_connection_id</strong> (<em>str</em>) – The VPC Peering Connection ID of the Route belonging to the Route Table.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown</a>.</p>
 </div></blockquote>
@@ -10684,6 +12683,25 @@ connection associated with a CIDR value.</p>
 <p>This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>route_table_id</strong> (<em>str</em>) – The id of the specific Route Table to retrieve.</p></li>
+<li><p><strong>subnet_id</strong> (<em>str</em>) – The id of a Subnet which is connected to the Route Table (not be exported if not given in parameter).</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired Route Table.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the desired Route Table belongs to.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A Route Table will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -10693,6 +12711,23 @@ the Route Table.</p>
 <dt id="pulumi_aws.ec2.get_route_tables">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_route_tables</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_tables" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of route table ids to be referenced elsewhere.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired route tables.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The VPC ID that you want to filter from.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeRouteTables.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A Route Table will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown</a>.</p>
 </div></blockquote>
@@ -10705,6 +12740,27 @@ the Route Table.</p>
 <p>This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The id of the specific security group to retrieve.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – <p>The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html">the underlying AWS API</a>.</p>
+</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired security group.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the desired security group belongs to.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A Security Group will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -10715,6 +12771,22 @@ VPC that the security group belongs to.</p>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_security_groups</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of this provider.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – One or more name/value pairs to use as filters. There are
+several valid keys, for a full reference, check out
+[describe-security-groups in the AWS CLI reference][1].</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match for
+desired security groups.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown</a>.</p>
 </div></blockquote>
@@ -10727,6 +12799,33 @@ outside of this provider.</p>
 <p>This resource can prove useful when a module accepts a subnet id as
 an input variable and needs to, for example, determine the id of the
 VPC that the subnet belongs to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>availability_zone</strong> (<em>str</em>) – The availability zone where the
+subnet must reside.</p></li>
+<li><p><strong>availability_zone_id</strong> (<em>str</em>) – The ID of the Availability Zone for the subnet.</p></li>
+<li><p><strong>cidr_block</strong> (<em>str</em>) – The cidr block of the desired subnet.</p></li>
+<li><p><strong>default_for_az</strong> (<em>bool</em>) – Boolean constraint for whether the desired
+subnet must be the default subnet for its associated availability zone.</p></li>
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The id of the specific subnet to retrieve.</p></li>
+<li><p><strong>ipv6_cidr_block</strong> (<em>str</em>) – The Ipv6 cidr block of the desired subnet</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – The state that the desired subnet must have.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired subnet.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The id of the VPC that the desired subnet belongs to.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html">the underlying AWS API</a>.
+For example, if matching against tag <code class="docutils literal notranslate"><span class="pre">Name</span></code>, use:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A subnet will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown</a>.</p>
 </div></blockquote>
@@ -10737,6 +12836,24 @@ VPC that the subnet belongs to.</p>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_subnet_ids</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ec2.getSubnetIds</span></code> provides a list of ids for a vpc_id</p>
 <p>This resource can be useful for getting back a list of subnet ids for a vpc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired subnets.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The VPC ID that you want to filter from.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html">the underlying AWS API</a>.
+For example, if matching against tag <code class="docutils literal notranslate"><span class="pre">Name</span></code>, use:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+Subnet IDs will be selected if any one of the given values match.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet_ids.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet_ids.html.markdown</a>.</p>
 </div></blockquote>
@@ -10749,6 +12866,29 @@ VPC that the subnet belongs to.</p>
 <p>This resource can prove useful when a module accepts a vpc id as
 an input variable and needs to, for example, determine the CIDR block of that
 VPC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cidr_block</strong> (<em>str</em>) – The cidr block of the desired VPC.</p></li>
+<li><p><strong>default</strong> (<em>bool</em>) – Boolean constraint on whether the desired VPC is
+the default VPC for the region.</p></li>
+<li><p><strong>dhcp_options_id</strong> (<em>str</em>) – The DHCP options id of the desired VPC.</p></li>
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The id of the specific VPC to retrieve.</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – The current state of the desired VPC.
+Can be either <code class="docutils literal notranslate"><span class="pre">&quot;pending&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;available&quot;</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired VPC.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A VPC will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc.html.markdown</a>.</p>
 </div></blockquote>
@@ -10758,6 +12898,19 @@ VPC.</p>
 <dt id="pulumi_aws.ec2.get_vpc_dhcp_options">
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_dhcp_options</code><span class="sig-paren">(</span><em class="sig-param">dhcp_options_id=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_dhcp_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an EC2 DHCP Options configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dhcp_options_id</strong> (<em>str</em>) – The EC2 DHCP Options ID.</p></li>
+<li><p><strong>filters</strong> (<em>list</em>) – List of custom filters as described below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values for filtering.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_dhcp_options.html.markdown</a>.</p>
 </div></blockquote>
@@ -10768,6 +12921,16 @@ VPC.</p>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint data source provides details about
 a specific VPC endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – The ID of the specific VPC Endpoint to retrieve.</p></li>
+<li><p><strong>service_name</strong> (<em>str</em>) – The AWS service name of the specific VPC Endpoint to retrieve.</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – The state of the specific VPC Endpoint to retrieve.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The ID of the VPC in which the specific VPC Endpoint is used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -10778,6 +12941,14 @@ a specific VPC endpoint.</p>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_endpoint_service</code><span class="sig-paren">(</span><em class="sig-param">service=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service</strong> (<em>str</em>) – The common name of an AWS service (e.g. <code class="docutils literal notranslate"><span class="pre">s3</span></code>).</p></li>
+<li><p><strong>service_name</strong> (<em>str</em>) – The service name that can be specified when creating a VPC endpoint.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown</a>.</p>
 </div></blockquote>
@@ -10788,6 +12959,32 @@ can be specified when creating a VPC endpoint within the region configured in th
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">peer_cidr_block=None</em>, <em class="sig-param">peer_owner_id=None</em>, <em class="sig-param">peer_region=None</em>, <em class="sig-param">peer_vpc_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Peering Connection data source provides details about
 a specific VPC peering connection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cidr_block</strong> (<em>str</em>) – The CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The ID of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>owner_id</strong> (<em>str</em>) – The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>peer_cidr_block</strong> (<em>str</em>) – The CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>peer_owner_id</strong> (<em>str</em>) – The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>peer_region</strong> (<em>str</em>) – The region of the accepter VPC of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>peer_vpc_id</strong> (<em>str</em>) – The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region of the requester VPC of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the specific VPC Peering Connection to retrieve.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired VPC Peering Connection.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – The ID of the requester VPC of the specific VPC Peering Connection to retrieve.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcPeeringConnections.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A VPC Peering Connection will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown</a>.</p>
 </div></blockquote>
@@ -10798,6 +12995,22 @@ a specific VPC peering connection.</p>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpcs</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of VPC Ids for a region.</p>
 <p>The following example retrieves a list of VPC Ids with a custom tag of <code class="docutils literal notranslate"><span class="pre">service</span></code> set to a value of “production”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired vpcs.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A VPC will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpcs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpcs.html.markdown</a>.</p>
 </div></blockquote>
@@ -10808,6 +13021,27 @@ a specific VPC peering connection.</p>
 <code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">get_vpn_gateway</code><span class="sig-paren">(</span><em class="sig-param">amazon_side_asn=None</em>, <em class="sig-param">attached_vpc_id=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">filters=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN Gateway data source provides details about
 a specific VPN gateway.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amazon_side_asn</strong> (<em>str</em>) – The Autonomous System Number (ASN) for the Amazon side of the specific VPN Gateway to retrieve.</p></li>
+<li><p><strong>attached_vpc_id</strong> (<em>str</em>) – The ID of a VPC attached to the specific VPN Gateway to retrieve.</p></li>
+<li><p><strong>availability_zone</strong> (<em>str</em>) – The Availability Zone of the specific VPN Gateway to retrieve.</p></li>
+<li><p><strong>filters</strong> (<em>list</em>) – Custom filter block as described below.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The ID of the specific VPN Gateway to retrieve.</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – The state of the specific VPN Gateway to retrieve.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags, each pair of which must exactly match
+a pair on the desired VPN Gateway.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field to filter by, as defined by
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpnGateways.html">the underlying AWS API</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of values that are accepted for the given field.
+A VPN Gateway will be selected if any one of the given values matches.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown</a>.</p>
 </div></blockquote>

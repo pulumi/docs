@@ -75,9 +75,9 @@ are applied immediately, or during the next maintenance window. Default is
 <li><p><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <code class="docutils literal notranslate"><span class="pre">db_subnet_group_name</span></code> specified on every <cite>``rds.ClusterInstance`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>&gt;`_ in the cluster.</p></li>
 <li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>enabled_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>.</p></li>
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>, <code class="docutils literal notranslate"><span class="pre">postgresql</span></code> (PostgreSQL).</p></li>
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this DB cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code></p></li>
-<li><p><strong>engine_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine mode. Valid values: <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">parallelquery</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. Defaults to: <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">RDS User Guide</a> for limitations when using <code class="docutils literal notranslate"><span class="pre">serverless</span></code>.</p></li>
+<li><p><strong>engine_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine mode. Valid values: <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">multimaster</span></code>, <code class="docutils literal notranslate"><span class="pre">parallelquery</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. Defaults to: <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">RDS User Guide</a> for limitations when using <code class="docutils literal notranslate"><span class="pre">serverless</span></code>.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version. Updating this argument results in an outage. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Aurora MySQL</a> and <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html">Aurora Postgres</a> documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is <code class="docutils literal notranslate"><span class="pre">5.7.mysql_aurora.2.03.2</span></code>.</p></li>
 <li><p><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -105,6 +105,22 @@ with the Cluster</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>s3_import</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bucket name where your backup is stored</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be blank, but is the path to your backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ingestionRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Role applied to load the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngine</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Source engine for the backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngineVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version of the source engine used to make the backup</p></li>
+</ul>
+<p>The <strong>scaling_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoPause</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable automatic pause. A DB cluster can be paused only when it’s idle (it has no connections). If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum capacity. The maximum capacity must be greater than or equal to the minimum capacity. Valid capacity values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">16</span></code>, <code class="docutils literal notranslate"><span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">64</span></code>, <code class="docutils literal notranslate"><span class="pre">128</span></code>, and <code class="docutils literal notranslate"><span class="pre">256</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum capacity. The minimum capacity must be lesser than or equal to the maximum capacity. Valid capacity values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">16</span></code>, <code class="docutils literal notranslate"><span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">64</span></code>, <code class="docutils literal notranslate"><span class="pre">128</span></code>, and <code class="docutils literal notranslate"><span class="pre">256</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secondsUntilAutoPause</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time, in seconds, before an Aurora DB cluster in serverless mode is paused. Valid values are <code class="docutils literal notranslate"><span class="pre">300</span></code> through <code class="docutils literal notranslate"><span class="pre">86400</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take when the timeout is reached. Valid values: <code class="docutils literal notranslate"><span class="pre">ForceApplyCapacityChange</span></code>, <code class="docutils literal notranslate"><span class="pre">RollbackCapacityChange</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">RollbackCapacityChange</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.timeout-action">documentation</a>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -198,7 +214,7 @@ are applied immediately, or during the next maintenance window. Default is
 <dt id="pulumi_aws.rds.Cluster.enabled_cloudwatch_logs_exports">
 <code class="sig-name descname">enabled_cloudwatch_logs_exports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.enabled_cloudwatch_logs_exports" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>.</p>
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>, <code class="docutils literal notranslate"><span class="pre">postgresql</span></code> (PostgreSQL).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -216,7 +232,7 @@ The following log types are supported: <code class="docutils literal notranslate
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.engine_mode">
 <code class="sig-name descname">engine_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.engine_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>The database engine mode. Valid values: <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">parallelquery</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. Defaults to: <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">RDS User Guide</a> for limitations when using <code class="docutils literal notranslate"><span class="pre">serverless</span></code>.</p>
+<dd><p>The database engine mode. Valid values: <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">multimaster</span></code>, <code class="docutils literal notranslate"><span class="pre">parallelquery</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. Defaults to: <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">RDS User Guide</a> for limitations when using <code class="docutils literal notranslate"><span class="pre">serverless</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -312,6 +328,13 @@ load-balanced across replicas</p>
 <dt id="pulumi_aws.rds.Cluster.scaling_configuration">
 <code class="sig-name descname">scaling_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.scaling_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested attribute with scaling properties. Only valid when <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. More details below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoPause</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable automatic pause. A DB cluster can be paused only when it’s idle (it has no connections). If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum capacity. The maximum capacity must be greater than or equal to the minimum capacity. Valid capacity values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">16</span></code>, <code class="docutils literal notranslate"><span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">64</span></code>, <code class="docutils literal notranslate"><span class="pre">128</span></code>, and <code class="docutils literal notranslate"><span class="pre">256</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum capacity. The minimum capacity must be lesser than or equal to the maximum capacity. Valid capacity values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">16</span></code>, <code class="docutils literal notranslate"><span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">64</span></code>, <code class="docutils literal notranslate"><span class="pre">128</span></code>, and <code class="docutils literal notranslate"><span class="pre">256</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secondsUntilAutoPause</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The time, in seconds, before an Aurora DB cluster in serverless mode is paused. Valid values are <code class="docutils literal notranslate"><span class="pre">300</span></code> through <code class="docutils literal notranslate"><span class="pre">86400</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to take when the timeout is reached. Valid values: <code class="docutils literal notranslate"><span class="pre">ForceApplyCapacityChange</span></code>, <code class="docutils literal notranslate"><span class="pre">RollbackCapacityChange</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">RollbackCapacityChange</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.timeout-action">documentation</a>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -355,18 +378,17 @@ with the Cluster</p>
 <dt id="pulumi_aws.rds.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">backtrack_window=None</em>, <em class="sig-param">backup_retention_period=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">cluster_identifier_prefix=None</em>, <em class="sig-param">cluster_members=None</em>, <em class="sig-param">cluster_resource_id=None</em>, <em class="sig-param">copy_tags_to_snapshot=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">db_cluster_parameter_group_name=None</em>, <em class="sig-param">db_subnet_group_name=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">enabled_cloudwatch_logs_exports=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_mode=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">final_snapshot_identifier=None</em>, <em class="sig-param">global_cluster_identifier=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">iam_database_authentication_enabled=None</em>, <em class="sig-param">iam_roles=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">master_password=None</em>, <em class="sig-param">master_username=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">preferred_backup_window=None</em>, <em class="sig-param">preferred_maintenance_window=None</em>, <em class="sig-param">reader_endpoint=None</em>, <em class="sig-param">replication_source_identifier=None</em>, <em class="sig-param">s3_import=None</em>, <em class="sig-param">scaling_configuration=None</em>, <em class="sig-param">skip_final_snapshot=None</em>, <em class="sig-param">snapshot_identifier=None</em>, <em class="sig-param">source_region=None</em>, <em class="sig-param">storage_encrypted=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] apply_immediately: Specifies whether any cluster modifications</p>
-<blockquote>
-<div><p>are applied immediately, or during the next maintenance window. Default is
-<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more information.</a></p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Specifies whether any cluster modifications
+are applied immediately, or during the next maintenance window. Default is
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more information.</a></p>
+</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of cluster</p></li>
 <li><p><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next deployment. It is recommended to specify 3 AZs or use <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> if necessary.</p></li>
 <li><p><strong>backtrack_window</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</p></li>
@@ -381,10 +403,10 @@ properties used to qualify the lookup.
 <li><p><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <code class="docutils literal notranslate"><span class="pre">db_subnet_group_name</span></code> specified on every <cite>``rds.ClusterInstance`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>&gt;`_ in the cluster.</p></li>
 <li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>enabled_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>.</p></li>
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>, <code class="docutils literal notranslate"><span class="pre">postgresql</span></code> (PostgreSQL).</p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS address of the RDS instance</p></li>
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this DB cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code></p></li>
-<li><p><strong>engine_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The database engine mode. Valid values: <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">parallelquery</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. Defaults to: <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">RDS User Guide</a> for limitations when using <code class="docutils literal notranslate"><span class="pre">serverless</span></code>.</p>
+<li><p><strong>engine_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The database engine mode. Valid values: <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">multimaster</span></code>, <code class="docutils literal notranslate"><span class="pre">parallelquery</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. Defaults to: <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">RDS User Guide</a> for limitations when using <code class="docutils literal notranslate"><span class="pre">serverless</span></code>.</p>
 </p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The database engine version. Updating this argument results in an outage. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">Aurora MySQL</a> and <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html">Aurora Postgres</a> documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is <code class="docutils literal notranslate"><span class="pre">5.7.mysql_aurora.2.03.2</span></code>.</p>
 </p></li>
@@ -418,6 +440,22 @@ with the Cluster</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>s3_import</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bucket name where your backup is stored</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be blank, but is the path to your backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ingestionRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Role applied to load the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngine</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Source engine for the backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngineVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version of the source engine used to make the backup</p></li>
+</ul>
+<p>The <strong>scaling_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoPause</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable automatic pause. A DB cluster can be paused only when it’s idle (it has no connections). If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum capacity. The maximum capacity must be greater than or equal to the minimum capacity. Valid capacity values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">16</span></code>, <code class="docutils literal notranslate"><span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">64</span></code>, <code class="docutils literal notranslate"><span class="pre">128</span></code>, and <code class="docutils literal notranslate"><span class="pre">256</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum capacity. The minimum capacity must be lesser than or equal to the maximum capacity. Valid capacity values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">16</span></code>, <code class="docutils literal notranslate"><span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">64</span></code>, <code class="docutils literal notranslate"><span class="pre">128</span></code>, and <code class="docutils literal notranslate"><span class="pre">256</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secondsUntilAutoPause</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time, in seconds, before an Aurora DB cluster in serverless mode is paused. Valid values are <code class="docutils literal notranslate"><span class="pre">300</span></code> through <code class="docutils literal notranslate"><span class="pre">86400</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take when the timeout is reached. Valid values: <code class="docutils literal notranslate"><span class="pre">ForceApplyCapacityChange</span></code>, <code class="docutils literal notranslate"><span class="pre">RollbackCapacityChange</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">RollbackCapacityChange</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.timeout-action">documentation</a>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -528,17 +566,23 @@ You can refer to the [User Guide][1].</p>
 <dt id="pulumi_aws.rds.ClusterEndpoint.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_endpoint_identifier=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">custom_endpoint_type=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">excluded_members=None</em>, <em class="sig-param">static_members=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterEndpoint.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterEndpoint resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of cluster
-:param pulumi.Input[str] cluster_endpoint_identifier: The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
-:param pulumi.Input[str] cluster_identifier: The cluster identifier.
-:param pulumi.Input[str] custom_endpoint_type: The type of the endpoint. One of: READER , ANY .
-:param pulumi.Input[str] endpoint: A custom endpoint for the Aurora cluster
-:param pulumi.Input[list] excluded_members: List of DB instance identifiers that aren’t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with <code class="docutils literal notranslate"><span class="pre">static_members</span></code>.
-:param pulumi.Input[list] static_members: List of DB instance identifiers that are part of the custom endpoint group. Conflicts with <code class="docutils literal notranslate"><span class="pre">excluded_members</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of cluster</p></li>
+<li><p><strong>cluster_endpoint_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier to use for the new endpoint. This parameter is stored as a lowercase string.</p></li>
+<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier.</p></li>
+<li><p><strong>custom_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the endpoint. One of: READER , ANY .</p></li>
+<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom endpoint for the Aurora cluster</p></li>
+<li><p><strong>excluded_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that aren’t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with <code class="docutils literal notranslate"><span class="pre">static_members</span></code>.</p></li>
+<li><p><strong>static_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that are part of the custom endpoint group. Conflicts with <code class="docutils literal notranslate"><span class="pre">excluded_members</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -814,17 +858,15 @@ details on controlling this property.</p>
 <dt id="pulumi_aws.rds.ClusterInstance.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">copy_tags_to_snapshot=None</em>, <em class="sig-param">db_parameter_group_name=None</em>, <em class="sig-param">db_subnet_group_name=None</em>, <em class="sig-param">dbi_resource_id=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">identifier_prefix=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">monitoring_interval=None</em>, <em class="sig-param">monitoring_role_arn=None</em>, <em class="sig-param">performance_insights_enabled=None</em>, <em class="sig-param">performance_insights_kms_key_id=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">preferred_backup_window=None</em>, <em class="sig-param">preferred_maintenance_window=None</em>, <em class="sig-param">promotion_tier=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">storage_encrypted=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">writer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterInstance resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] apply_immediately: Specifies whether any database modifications</p>
-<blockquote>
-<div><p>are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of cluster instance</p></li>
 <li><p><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</p>
@@ -933,6 +975,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “immediate” (default), or “pending-reboot”. Some
+engines can’t apply some parameters without a reboot, and you will need to
+specify “pending-reboot” here.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DB parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the DB parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -970,6 +1020,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.ClusterParameterGroup.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-cluster-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>&gt;`_ after initial creation of the group.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “immediate” (default), or “pending-reboot”. Some
+engines can’t apply some parameters without a reboot, and you will need to
+specify “pending-reboot” here.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the DB parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the DB parameter.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -982,17 +1039,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.ClusterParameterGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterParameterGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterParameterGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the db cluster parameter group.
-:param pulumi.Input[str] description: The description of the DB cluster parameter group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] family: The family of the DB cluster parameter group.
-:param pulumi.Input[str] name: The name of the DB parameter.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[list] parameters: A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-cluster-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>&gt;`_ after initial creation of the group.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the db cluster parameter group.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB cluster parameter group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the DB cluster parameter group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-cluster-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>&gt;`_ after initial creation of the group.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “immediate” (default), or “pending-reboot”. Some
+engines can’t apply some parameters without a reboot, and you will need to
+specify “pending-reboot” here.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DB parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the DB parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1135,23 +1206,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.ClusterSnapshot.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_storage=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">db_cluster_identifier=None</em>, <em class="sig-param">db_cluster_snapshot_arn=None</em>, <em class="sig-param">db_cluster_snapshot_identifier=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">license_model=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">snapshot_type=None</em>, <em class="sig-param">source_db_cluster_snapshot_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">storage_encrypted=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterSnapshot.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterSnapshot resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] allocated_storage: Specifies the allocated storage size in gigabytes (GB).
-:param pulumi.Input[list] availability_zones: List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
-:param pulumi.Input[str] db_cluster_identifier: The DB Cluster Identifier from which to take the snapshot.
-:param pulumi.Input[str] db_cluster_snapshot_arn: The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
-:param pulumi.Input[str] db_cluster_snapshot_identifier: The Identifier for the snapshot.
-:param pulumi.Input[str] engine: Specifies the name of the database engine.
-:param pulumi.Input[str] engine_version: Version of the database engine for this DB cluster snapshot.
-:param pulumi.Input[str] kms_key_id: If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
-:param pulumi.Input[str] license_model: License model information for the restored DB cluster.
-:param pulumi.Input[float] port: Port that the DB cluster was listening on at the time of the snapshot.
-:param pulumi.Input[str] status: The status of this DB Cluster Snapshot.
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster snapshot is encrypted.
-:param pulumi.Input[str] vpc_id: The VPC ID associated with the DB cluster snapshot.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the allocated storage size in gigabytes (GB).</p></li>
+<li><p><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.</p></li>
+<li><p><strong>db_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB Cluster Identifier from which to take the snapshot.</p></li>
+<li><p><strong>db_cluster_snapshot_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the DB Cluster Snapshot.</p></li>
+<li><p><strong>db_cluster_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Identifier for the snapshot.</p></li>
+<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the database engine.</p></li>
+<li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of the database engine for this DB cluster snapshot.</p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.</p></li>
+<li><p><strong>license_model</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License model information for the restored DB cluster.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port that the DB cluster was listening on at the time of the snapshot.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of this DB Cluster Snapshot.</p></li>
+<li><p><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster snapshot is encrypted.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID associated with the DB cluster snapshot.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_cluster_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_cluster_snapshot.html.markdown</a>.</p>
 </div></blockquote>
@@ -1276,18 +1353,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.EventSubscription.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">customer_aws_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">event_categories=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">sns_topic=None</em>, <em class="sig-param">source_ids=None</em>, <em class="sig-param">source_type=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.EventSubscription.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventSubscription resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] enabled: A boolean flag to enable/disable the subscription. Defaults to true.
-:param pulumi.Input[list] event_categories: A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html</a> or run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">rds</span> <span class="pre">describe-event-categories</span></code>.
-:param pulumi.Input[str] name: The name of the DB event subscription. By default generated by this provider.
-:param pulumi.Input[str] name_prefix: The name of the DB event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[str] sns_topic: The SNS topic to send events to.
-:param pulumi.Input[list] source_ids: A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
-:param pulumi.Input[str] source_type: The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable the subscription. Defaults to true.</p></li>
+<li><p><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html</a> or run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">rds</span> <span class="pre">describe-event-categories</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB event subscription. By default generated by this provider.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>sns_topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SNS topic to send events to.</p></li>
+<li><p><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.</p></li>
+<li><p><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_event_subscription.html.markdown</a>.</p>
 </div></blockquote>
@@ -1870,18 +1953,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.GlobalCluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">global_cluster_identifier=None</em>, <em class="sig-param">global_cluster_resource_id=None</em>, <em class="sig-param">storage_encrypted=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GlobalCluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: RDS Global Cluster Amazon Resource Name (ARN)
-:param pulumi.Input[str] database_name: Name for an automatically created database on cluster creation.
-:param pulumi.Input[bool] deletion_protection: If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] engine: Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.
-:param pulumi.Input[str] engine_version: Engine version of the Aurora global database.
-:param pulumi.Input[str] global_cluster_identifier: The global cluster identifier.
-:param pulumi.Input[str] global_cluster_resource_id: AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – RDS Global Cluster Amazon Resource Name (ARN)</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for an automatically created database on cluster creation.</p></li>
+<li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</p></li>
+<li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Engine version of the Aurora global database.</p></li>
+<li><p><strong>global_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The global cluster identifier.</p></li>
+<li><p><strong>global_cluster_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed</p></li>
+<li><p><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_global_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_global_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -2088,6 +2177,14 @@ associate.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>s3_import</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bucket name where your backup is stored</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be blank, but is the path to your backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ingestionRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Role applied to load the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngine</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Source engine for the backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngineVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version of the source engine used to make the backup</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -2425,6 +2522,13 @@ for more information on using Replication.</p>
 <dt id="pulumi_aws.rds.Instance.s3_import">
 <code class="sig-name descname">s3_import</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.s3_import" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restore from a Percona Xtrabackup in S3.  See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into an Amazon RDS MySQL DB Instance</a></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bucket name where your backup is stored</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Can be blank, but is the path to your backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ingestionRole</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Role applied to load the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngine</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Source engine for the backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngineVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Version of the source engine used to make the backup</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2510,20 +2614,18 @@ associate.</p>
 <dt id="pulumi_aws.rds.Instance.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">allocated_storage=None</em>, <em class="sig-param">allow_major_version_upgrade=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">backup_retention_period=None</em>, <em class="sig-param">backup_window=None</em>, <em class="sig-param">ca_cert_identifier=None</em>, <em class="sig-param">character_set_name=None</em>, <em class="sig-param">copy_tags_to_snapshot=None</em>, <em class="sig-param">db_subnet_group_name=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">domain_iam_role_name=None</em>, <em class="sig-param">enabled_cloudwatch_logs_exports=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">final_snapshot_identifier=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">iam_database_authentication_enabled=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">identifier_prefix=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">iops=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">license_model=None</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">max_allocated_storage=None</em>, <em class="sig-param">monitoring_interval=None</em>, <em class="sig-param">monitoring_role_arn=None</em>, <em class="sig-param">multi_az=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">option_group_name=None</em>, <em class="sig-param">parameter_group_name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">performance_insights_enabled=None</em>, <em class="sig-param">performance_insights_kms_key_id=None</em>, <em class="sig-param">performance_insights_retention_period=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">replicas=None</em>, <em class="sig-param">replicate_source_db=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">s3_import=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">skip_final_snapshot=None</em>, <em class="sig-param">snapshot_identifier=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">storage_encrypted=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] address: The hostname of the RDS instance. See also <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code>.
-:param pulumi.Input[float] allocated_storage: The allocated storage in gibibytes. If <code class="docutils literal notranslate"><span class="pre">max_allocated_storage</span></code> is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs.
-:param pulumi.Input[bool] allow_major_version_upgrade: Indicates that major version</p>
-<blockquote>
-<div><p>upgrades are allowed. Changing this parameter does not result in an outage and
-the change is asynchronously applied as soon as possible.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname of the RDS instance. See also <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code>.</p></li>
+<li><p><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The allocated storage in gibibytes. If <code class="docutils literal notranslate"><span class="pre">max_allocated_storage</span></code> is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs.</p></li>
+<li><p><strong>allow_major_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that major version
+upgrades are allowed. Changing this parameter does not result in an outage and
+the change is asynchronously applied as soon as possible.</p></li>
 <li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 <code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more
@@ -2669,6 +2771,14 @@ associate.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>s3_import</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bucket name where your backup is stored</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be blank, but is the path to your backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ingestionRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Role applied to load the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngine</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Source engine for the backup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceEngineVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Version of the source engine used to make the backup</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -2737,6 +2847,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dbSecurityGroupMemberships</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of DB Security Groups for which the option is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">optionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Option (e.g. MEMCACHED).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">optionSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of option settings to apply.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the setting.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Value of the setting.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Port number when connecting to the Option (e.g. 11211).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of the option (e.g. 13.1.0.0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcSecurityGroupMemberships</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of VPC Security Groups for which the option is enabled.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -2774,6 +2898,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.OptionGroup.options">
 <code class="sig-name descname">options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.OptionGroup.options" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Options to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dbSecurityGroupMemberships</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of DB Security Groups for which the option is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">optionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Option (e.g. MEMCACHED).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">optionSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of option settings to apply.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the setting.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Value of the setting.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Port number when connecting to the Option (e.g. 11211).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version of the option (e.g. 13.1.0.0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcSecurityGroupMemberships</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of VPC Security Groups for which the option is enabled.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2792,18 +2929,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.OptionGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">engine_name=None</em>, <em class="sig-param">major_engine_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">option_group_description=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.OptionGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OptionGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the db option group.
-:param pulumi.Input[str] engine_name: Specifies the name of the engine that this option group should be associated with.
-:param pulumi.Input[str] major_engine_version: Specifies the major version of the engine that this option group should be associated with.
-:param pulumi.Input[str] name: The Name of the setting.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Must be lowercase, to match as it is stored in AWS.
-:param pulumi.Input[list] options: A list of Options to apply.
-:param pulumi.Input[str] option_group_description: The description of the option group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the db option group.</p></li>
+<li><p><strong>engine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the engine that this option group should be associated with.</p></li>
+<li><p><strong>major_engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the major version of the engine that this option group should be associated with.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the setting.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Must be lowercase, to match as it is stored in AWS.</p></li>
+<li><p><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Options to apply.</p></li>
+<li><p><strong>option_group_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the option group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dbSecurityGroupMemberships</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of DB Security Groups for which the option is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">optionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Option (e.g. MEMCACHED).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">optionSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of option settings to apply.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the setting.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Value of the setting.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Port number when connecting to the Option (e.g. 11211).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of the option (e.g. 13.1.0.0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpcSecurityGroupMemberships</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of VPC Security Groups for which the option is enabled.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -2872,6 +3029,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “immediate” (default), or “pending-reboot”. Some
+engines can’t apply some parameters without a reboot, and you will need to
+specify “pending-reboot” here.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DB parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the DB parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -2909,6 +3074,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.ParameterGroup.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>&gt;`_ after initial creation of the group.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - “immediate” (default), or “pending-reboot”. Some
+engines can’t apply some parameters without a reboot, and you will need to
+specify “pending-reboot” here.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the DB parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the DB parameter.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2921,17 +3093,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.ParameterGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ParameterGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ParameterGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the db parameter group.
-:param pulumi.Input[str] description: The description of the DB parameter group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] family: The family of the DB parameter group.
-:param pulumi.Input[str] name: The name of the DB parameter.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[list] parameters: A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>&gt;`_ after initial creation of the group.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the db parameter group.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB parameter group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the DB parameter group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>&gt;`_ after initial creation of the group.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - “immediate” (default), or “pending-reboot”. Some
+engines can’t apply some parameters without a reboot, and you will need to
+specify “pending-reboot” here.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DB parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the DB parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -3022,13 +3208,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.RoleAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_instance_identifier=None</em>, <em class="sig-param">feature_name=None</em>, <em class="sig-param">role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.RoleAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RoleAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] db_instance_identifier: DB Instance Identifier to associate with the IAM Role.
-:param pulumi.Input[str] feature_name: Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the <code class="docutils literal notranslate"><span class="pre">SupportedFeatureNames</span></code> list returned by <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html">AWS CLI rds describe-db-engine-versions</a>.
-:param pulumi.Input[str] role_arn: Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>db_instance_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DB Instance Identifier to associate with the IAM Role.</p></li>
+<li><p><strong>feature_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the <code class="docutils literal notranslate"><span class="pre">SupportedFeatureNames</span></code> list returned by <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html">AWS CLI rds describe-db-engine-versions</a>.</p>
+</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance_role_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance_role_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -3091,6 +3284,14 @@ attribute instead.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to accept</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupOwnerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The owner Id of the security group provided
+by <code class="docutils literal notranslate"><span class="pre">security_group_name</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -3110,6 +3311,13 @@ attribute instead.</p>
 <dt id="pulumi_aws.rds.SecurityGroup.ingress">
 <code class="sig-name descname">ingress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.SecurityGroup.ingress" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of ingress rules.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block to accept</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupOwnerId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The owner Id of the security group provided
+by <code class="docutils literal notranslate"><span class="pre">security_group_name</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -3128,15 +3336,29 @@ attribute instead.</p>
 <dt id="pulumi_aws.rds.SecurityGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.SecurityGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecurityGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The arn of the DB security group.
-:param pulumi.Input[str] description: The description of the DB security group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[list] ingress: A list of ingress rules.
-:param pulumi.Input[str] name: The name of the DB security group.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The arn of the DB security group.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB security group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ingress rules.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB security group.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to accept</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupOwnerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The owner Id of the security group provided
+by <code class="docutils literal notranslate"><span class="pre">security_group_name</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -3310,28 +3532,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.Snapshot.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_storage=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">db_instance_identifier=None</em>, <em class="sig-param">db_snapshot_arn=None</em>, <em class="sig-param">db_snapshot_identifier=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">iops=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">license_model=None</em>, <em class="sig-param">option_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">snapshot_type=None</em>, <em class="sig-param">source_db_snapshot_identifier=None</em>, <em class="sig-param">source_region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Snapshot.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Snapshot resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] allocated_storage: Specifies the allocated storage size in gigabytes (GB).
-:param pulumi.Input[str] availability_zone: Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
-:param pulumi.Input[str] db_instance_identifier: The DB Instance Identifier from which to take the snapshot.
-:param pulumi.Input[str] db_snapshot_arn: The Amazon Resource Name (ARN) for the DB snapshot.
-:param pulumi.Input[str] db_snapshot_identifier: The Identifier for the snapshot.
-:param pulumi.Input[bool] encrypted: Specifies whether the DB snapshot is encrypted.
-:param pulumi.Input[str] engine: Specifies the name of the database engine.
-:param pulumi.Input[str] engine_version: Specifies the version of the database engine.
-:param pulumi.Input[float] iops: Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
-:param pulumi.Input[str] kms_key_id: The ARN for the KMS encryption key.
-:param pulumi.Input[str] license_model: License model information for the restored DB instance.
-:param pulumi.Input[str] option_group_name: Provides the option group name for the DB snapshot.
-:param pulumi.Input[str] source_db_snapshot_identifier: The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
-:param pulumi.Input[str] source_region: The region that the DB snapshot was created in or copied from.
-:param pulumi.Input[str] status: Specifies the status of this DB snapshot.
-:param pulumi.Input[str] storage_type: Specifies the storage type associated with DB snapshot.
-:param pulumi.Input[dict] tags: Key-value mapping of resource tags
-:param pulumi.Input[str] vpc_id: Specifies the storage type associated with DB snapshot.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the allocated storage size in gigabytes (GB).</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.</p></li>
+<li><p><strong>db_instance_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB Instance Identifier from which to take the snapshot.</p></li>
+<li><p><strong>db_snapshot_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the DB snapshot.</p></li>
+<li><p><strong>db_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Identifier for the snapshot.</p></li>
+<li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB snapshot is encrypted.</p></li>
+<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the database engine.</p></li>
+<li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of the database engine.</p></li>
+<li><p><strong>iops</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.</p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key.</p></li>
+<li><p><strong>license_model</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License model information for the restored DB instance.</p></li>
+<li><p><strong>option_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Provides the option group name for the DB snapshot.</p></li>
+<li><p><strong>source_db_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.</p></li>
+<li><p><strong>source_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region that the DB snapshot was created in or copied from.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the status of this DB snapshot.</p></li>
+<li><p><strong>storage_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage type associated with DB snapshot.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage type associated with DB snapshot.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_snapshot.html.markdown</a>.</p>
 </div></blockquote>
@@ -3435,16 +3663,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.SubnetGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.SubnetGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SubnetGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the db subnet group.
-:param pulumi.Input[str] description: The description of the DB subnet group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] name: The name of the DB subnet group. If omitted, this provider will assign a random, unique name.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[list] subnet_ids: A list of VPC subnet IDs.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the db subnet group.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB subnet group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB subnet group. If omitted, this provider will assign a random, unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC subnet IDs.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_subnet_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -3492,6 +3726,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a RDS cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cluster_identifier</strong> (<em>str</em>) – The cluster identifier of the RDS cluster.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/rds_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/rds_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -3504,7 +3743,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This data source does not apply to snapshots created on DB Instances. 
 See the <cite>``rds.Snapshot`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_snapshot.html</a>&gt;`_ for DB Instance snapshots.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_cluster_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_cluster_snapshot.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db_cluster_identifier</strong> (<em>str</em>) – Returns the list of snapshots created by the specific db_cluster</p></li>
+<li><p><strong>db_cluster_snapshot_identifier</strong> (<em>str</em>) – Returns information on a specific snapshot_id.</p></li>
+<li><p><strong>include_public</strong> (<em>bool</em>) – Set this value to true to include manual DB Cluster Snapshots that are public and can be
+copied or restored by any AWS account, otherwise set this value to false. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>include_shared</strong> (<em>bool</em>) – Set this value to true to include shared manual DB Cluster Snapshots from other
+AWS accounts that this AWS account has been given permission to copy or restore, otherwise set this value to false.
+The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>most_recent</strong> (<em>bool</em>) – If more than one result is returned, use the most recent Snapshot.</p></li>
+<li><p><strong>snapshot_type</strong> (<em>str</em>) – The type of snapshots to be returned. If you don’t specify a SnapshotType
+value, then both automated and manual DB cluster snapshots are returned. Shared and public DB Cluster Snapshots are not
+included in the returned results by default. Possible values are, <code class="docutils literal notranslate"><span class="pre">automated</span></code>, <code class="docutils literal notranslate"><span class="pre">manual</span></code>, <code class="docutils literal notranslate"><span class="pre">shared</span></code> and <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_cluster_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_cluster_snapshot.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.rds.get_event_categories">
+<code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_event_categories</code><span class="sig-paren">(</span><em class="sig-param">source_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_event_categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>source_type</strong> (<em>str</em>) – The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_event_categories.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_event_categories.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -3512,6 +3784,11 @@ See the <cite>``rds.Snapshot`</cite> data source &lt;<a class="reference externa
 <dt id="pulumi_aws.rds.get_instance">
 <code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_instance</code><span class="sig-paren">(</span><em class="sig-param">db_instance_identifier=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an RDS instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>db_instance_identifier</strong> (<em>str</em>) – The name of the RDS instance</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -3524,7 +3801,27 @@ See the <cite>``rds.Snapshot`</cite> data source &lt;<a class="reference externa
 <blockquote>
 <div><p><strong>NOTE:</strong> This data source does not apply to snapshots created on Aurora DB clusters.
 See the <cite>``rds.ClusterSnapshot`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html</a>&gt;`_ for DB Cluster snapshots.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_snapshot.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>db_instance_identifier</strong> (<em>str</em>) – Returns the list of snapshots created by the specific db_instance</p></li>
+<li><p><strong>db_snapshot_identifier</strong> (<em>str</em>) – Returns information on a specific snapshot_id.</p></li>
+<li><p><strong>include_public</strong> (<em>bool</em>) – Set this value to true to include manual DB snapshots that are public and can be
+copied or restored by any AWS account, otherwise set this value to false. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>include_shared</strong> (<em>bool</em>) – Set this value to true to include shared manual DB snapshots from other
+AWS accounts that this AWS account has been given permission to copy or restore, otherwise set this value to false.
+The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>most_recent</strong> (<em>bool</em>) – If more than one result is returned, use the most
+recent Snapshot.</p></li>
+<li><p><strong>snapshot_type</strong> (<em>str</em>) – The type of snapshots to be returned. If you don’t specify a SnapshotType
+value, then both automated and manual snapshots are returned. Shared and public DB snapshots are not
+included in the returned results by default. Possible values are, <code class="docutils literal notranslate"><span class="pre">automated</span></code>, <code class="docutils literal notranslate"><span class="pre">manual</span></code>, <code class="docutils literal notranslate"><span class="pre">shared</span></code> and <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_snapshot.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

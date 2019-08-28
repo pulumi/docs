@@ -44,6 +44,10 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>replicas</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">regionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region name of replica DynamoDB Table. e.g. <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code></p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -63,19 +67,32 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.dynamodb.GlobalTable.replicas">
 <code class="sig-name descname">replicas</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.GlobalTable.replicas" title="Permalink to this definition">¶</a></dt>
 <dd><p>Underlying DynamoDB Table. At least 1 replica must be defined. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">regionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS region name of replica DynamoDB Table. e.g. <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.dynamodb.GlobalTable.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">replicas=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GlobalTable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GlobalTable resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the DynamoDB Global Table
-:param pulumi.Input[str] name: The name of the global table. Must match underlying DynamoDB Table names in all regions.
-:param pulumi.Input[list] replicas: Underlying DynamoDB Table. At least 1 replica must be defined. See below.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the DynamoDB Global Table</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the global table. Must match underlying DynamoDB Table names in all regions.</p></li>
+<li><p><strong>replicas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Underlying DynamoDB Table. At least 1 replica must be defined. See below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>replicas</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">regionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region name of replica DynamoDB Table. e.g. <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code></p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_global_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -154,6 +171,54 @@ definition after you have created the resource.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Attribute type, which must be a scalar type: <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">N</span></code>, or <code class="docutils literal notranslate"><span class="pre">B</span></code> for (S)tring, (N)umber or (B)inary data</p></li>
+</ul>
+<p>The <strong>global_secondary_indexes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the hash key in the index; must be
+defined as an attribute in the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonKeyAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only required with <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> as a
+projection type; a list of attributes to project into the index. These
+do not need to be defined as attributes on the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> or <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+where <code class="docutils literal notranslate"><span class="pre">ALL</span></code> projects every attribute into the index, <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+projects just the hash and range key into the index, and <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code>
+projects only the keys specified in the _non_key<em>attributes</em>
+parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the range key; must be defined</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.</p></li>
+</ul>
+<p>The <strong>local_secondary_indexes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonKeyAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only required with <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> as a
+projection type; a list of attributes to project into the index. These
+do not need to be defined as attributes on the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> or <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+where <code class="docutils literal notranslate"><span class="pre">ALL</span></code> projects every attribute into the index, <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+projects just the hash and range key into the index, and <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code>
+projects only the keys specified in the _non_key<em>attributes</em>
+parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the range key; must be defined</p></li>
+</ul>
+<p>The <strong>point_in_time_recovery</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>server_side_encryption</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>ttl</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the table attribute to store the TTL timestamp in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -167,6 +232,10 @@ definition after you have created the resource.</p></li>
 <dt id="pulumi_aws.dynamodb.Table.attributes">
 <code class="sig-name descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of nested attribute definitions. Only required for <code class="docutils literal notranslate"><span class="pre">hash_key</span></code> and <code class="docutils literal notranslate"><span class="pre">range_key</span></code> attributes. Each attribute has two properties:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Attribute type, which must be a scalar type: <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">N</span></code>, or <code class="docutils literal notranslate"><span class="pre">B</span></code> for (S)tring, (N)umber or (B)inary data</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -181,6 +250,22 @@ definition after you have created the resource.</p></li>
 <dd><p>Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
 attributes, etc.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the hash key in the index; must be
+defined as an attribute in the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonKeyAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Only required with <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> as a
+projection type; a list of attributes to project into the index. These
+do not need to be defined as attributes on the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One of <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> or <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+where <code class="docutils literal notranslate"><span class="pre">ALL</span></code> projects every attribute into the index, <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+projects just the hash and range key into the index, and <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code>
+projects only the keys specified in the _non_key<em>attributes</em>
+parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the range key; must be defined</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -196,6 +281,18 @@ defined as an attribute in the resource.</p>
 <dd><p>Describe an LSI on the table;
 these can only be allocated <em>at creation</em> so you cannot change this
 definition after you have created the resource.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonKeyAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Only required with <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> as a
+projection type; a list of attributes to project into the index. These
+do not need to be defined as attributes on the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One of <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> or <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+where <code class="docutils literal notranslate"><span class="pre">ALL</span></code> projects every attribute into the index, <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+projects just the hash and range key into the index, and <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code>
+projects only the keys specified in the _non_key<em>attributes</em>
+parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the range key; must be defined</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -208,6 +305,9 @@ definition after you have created the resource.</p>
 <dt id="pulumi_aws.dynamodb.Table.point_in_time_recovery">
 <code class="sig-name descname">point_in_time_recovery</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.point_in_time_recovery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point-in-time recovery options.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -226,6 +326,9 @@ definition after you have created the resource.</p>
 <dt id="pulumi_aws.dynamodb.Table.server_side_encryption">
 <code class="sig-name descname">server_side_encryption</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.server_side_encryption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn’t specified.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -265,6 +368,10 @@ It can be used for creating CloudWatch Alarms. Only available when <code class="
 <dt id="pulumi_aws.dynamodb.Table.ttl">
 <code class="sig-name descname">ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.ttl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines ttl, has two properties, and can only be specified once:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the table attribute to store the TTL timestamp in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -277,21 +384,19 @@ It can be used for creating CloudWatch Alarms. Only available when <code class="
 <dt id="pulumi_aws.dynamodb.Table.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.Table.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Table resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The arn of the table
-:param pulumi.Input[list] attributes: List of nested attribute definitions. Only required for <code class="docutils literal notranslate"><span class="pre">hash_key</span></code> and <code class="docutils literal notranslate"><span class="pre">range_key</span></code> attributes. Each attribute has two properties:
-:param pulumi.Input[str] billing_mode: Controls how you are charged for read and write throughput and how you manage capacity. The valid values are <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code> and <code class="docutils literal notranslate"><span class="pre">PAY_PER_REQUEST</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code>.
-:param pulumi.Input[list] global_secondary_indexes: Describe a GSI for the table;</p>
-<blockquote>
-<div><p>subject to the normal limits on the number of GSIs, projected
-attributes, etc.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The arn of the table</p></li>
+<li><p><strong>attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested attribute definitions. Only required for <code class="docutils literal notranslate"><span class="pre">hash_key</span></code> and <code class="docutils literal notranslate"><span class="pre">range_key</span></code> attributes. Each attribute has two properties:</p></li>
+<li><p><strong>billing_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls how you are charged for read and write throughput and how you manage capacity. The valid values are <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code> and <code class="docutils literal notranslate"><span class="pre">PAY_PER_REQUEST</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code>.</p></li>
+<li><p><strong>global_secondary_indexes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Describe a GSI for the table;
+subject to the normal limits on the number of GSIs, projected
+attributes, etc.</p></li>
 <li><p><strong>hash_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the hash key in the index; must be
 defined as an attribute in the resource.</p></li>
 <li><p><strong>local_secondary_indexes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Describe an LSI on the table;
@@ -315,6 +420,54 @@ It can be used for creating CloudWatch Alarms. Only available when <code class="
 </ul>
 </dd>
 </dl>
+<p>The <strong>attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Attribute type, which must be a scalar type: <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">N</span></code>, or <code class="docutils literal notranslate"><span class="pre">B</span></code> for (S)tring, (N)umber or (B)inary data</p></li>
+</ul>
+<p>The <strong>global_secondary_indexes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the hash key in the index; must be
+defined as an attribute in the resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonKeyAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only required with <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> as a
+projection type; a list of attributes to project into the index. These
+do not need to be defined as attributes on the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> or <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+where <code class="docutils literal notranslate"><span class="pre">ALL</span></code> projects every attribute into the index, <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+projects just the hash and range key into the index, and <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code>
+projects only the keys specified in the _non_key<em>attributes</em>
+parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the range key; must be defined</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.</p></li>
+</ul>
+<p>The <strong>local_secondary_indexes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nonKeyAttributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Only required with <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> as a
+projection type; a list of attributes to project into the index. These
+do not need to be defined as attributes on the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code> or <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+where <code class="docutils literal notranslate"><span class="pre">ALL</span></code> projects every attribute into the index, <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>
+projects just the hash and range key into the index, and <code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code>
+projects only the keys specified in the _non_key<em>attributes</em>
+parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the range key; must be defined</p></li>
+</ul>
+<p>The <strong>point_in_time_recovery</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>server_side_encryption</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>ttl</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the table attribute to store the TTL timestamp in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -413,18 +566,16 @@ Only the primary key attributes are required; you can optionally provide other a
 <dt id="pulumi_aws.dynamodb.TableItem.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">item=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">table_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.TableItem.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TableItem resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] hash_key: Hash key to use for lookups and identification of the item
-:param pulumi.Input[str] item: JSON representation of a map of attribute name/value pairs, one for each attribute.</p>
-<blockquote>
-<div><p>Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>hash_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hash key to use for lookups and identification of the item</p></li>
+<li><p><strong>item</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON representation of a map of attribute name/value pairs, one for each attribute.
+Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.</p></li>
 <li><p><strong>range_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Range key to use for lookups and identification of the item. Required if there is range key defined in the table.</p></li>
 <li><p><strong>table_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the table to contain the item.</p></li>
 </ul>
@@ -477,6 +628,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dynamodb.get_table">
 <code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">get_table</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.get_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a DynamoDB table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the DynamoDB table.</p>
+</dd>
+</dl>
+<p>The <strong>server_side_encryption</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown</a>.</p>
 </div></blockquote>

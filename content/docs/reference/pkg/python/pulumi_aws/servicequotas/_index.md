@@ -156,18 +156,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.servicequotas.ServiceQuota.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">adjustable=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">default_value=None</em>, <em class="sig-param">quota_code=None</em>, <em class="sig-param">quota_name=None</em>, <em class="sig-param">request_id=None</em>, <em class="sig-param">request_status=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ServiceQuota resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] adjustable: Whether the service quota can be increased.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the service quota.
-:param pulumi.Input[float] default_value: Default value of the service quota.
-:param pulumi.Input[str] quota_code: Code of the service quota to track. For example: <code class="docutils literal notranslate"><span class="pre">L-F678F1CE</span></code>. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html">AWS CLI service-quotas list-service-quotas command</a>.
-:param pulumi.Input[str] quota_name: Name of the quota.
-:param pulumi.Input[str] service_code: Code of the service to track. For example: <code class="docutils literal notranslate"><span class="pre">vpc</span></code>. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.
-:param pulumi.Input[str] service_name: Name of the service.
-:param pulumi.Input[float] value: Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>adjustable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the service quota can be increased.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the service quota.</p></li>
+<li><p><strong>default_value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default value of the service quota.</p></li>
+<li><p><strong>quota_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Code of the service quota to track. For example: <code class="docutils literal notranslate"><span class="pre">L-F678F1CE</span></code>. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html">AWS CLI service-quotas list-service-quotas command</a>.</p>
+</p></li>
+<li><p><strong>quota_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the quota.</p></li>
+<li><p><strong>service_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Code of the service to track. For example: <code class="docutils literal notranslate"><span class="pre">vpc</span></code>. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
+</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the service.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown</a>.</p>
 </div></blockquote>
@@ -215,6 +223,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicequotas.get_service">
 <code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quotas Service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – <p>Service name to lookup within Service Quotas. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
+</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown</a>.</p>
 </div></blockquote>
@@ -224,6 +238,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicequotas.get_service_quota">
 <code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">get_service_quota</code><span class="sig-paren">(</span><em class="sig-param">quota_code=None</em>, <em class="sig-param">quota_name=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service_quota" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quota.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>quota_code</strong> (<em>str</em>) – <p>Quota code within the service. When configured, the data source directly looks up the service quota. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html">AWS CLI service-quotas list-service-quotas command</a>.</p>
+</p></li>
+<li><p><strong>quota_name</strong> (<em>str</em>) – <p>Quota name within the service. When configured, the data source searches through all service quotas to find the matching quota name. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html">AWS CLI service-quotas list-service-quotas command</a>.</p>
+</p></li>
+<li><p><strong>service_code</strong> (<em>str</em>) – <p>Service code for the quota. Available values can be found with the <cite>``servicequotas.getService`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/servicequotas_service.html">https://www.terraform.io/docs/providers/aws/d/servicequotas_service.html</a>&gt;`_ or <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown</a>.</p>
 </div></blockquote>

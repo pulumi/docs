@@ -120,6 +120,12 @@ are applied immediately, or during the next maintenance window. Default is
 <code class="sig-name descname">cache_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.cache_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of node objects including <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">address</span></code>, <code class="docutils literal notranslate"><span class="pre">port</span></code> and <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code>.
 Referenceable e.g. as <code class="docutils literal notranslate"><span class="pre">${aws_elasticache_cluster.bar.cache_nodes.0.address}</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead. Default: System chosen Availability Zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <code class="docutils literal notranslate"><span class="pre">replication_group_id</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -276,19 +282,17 @@ for the cache cluster.</p>
 <dt id="pulumi_aws.elasticache.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">az_mode=None</em>, <em class="sig-param">cache_nodes=None</em>, <em class="sig-param">cluster_address=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">configuration_endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">notification_topic_arn=None</em>, <em class="sig-param">num_cache_nodes=None</em>, <em class="sig-param">parameter_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">preferred_availability_zones=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">snapshot_arns=None</em>, <em class="sig-param">snapshot_name=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em>, <em class="sig-param">subnet_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] apply_immediately: Specifies whether any database modifications</p>
-<blockquote>
-<div><p>are applied immediately, or during the next maintenance window. Default is
-<code class="docutils literal notranslate"><span class="pre">false</span></code>. See [Amazon ElastiCache Documentation for more information.][1]
-(Available since v0.6.0)</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See [Amazon ElastiCache Documentation for more information.][1]
+(Available since v0.6.0)</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead. Default: System chosen Availability Zone.</p></li>
 <li><p><strong>az_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster’s region. Valid values for this parameter are <code class="docutils literal notranslate"><span class="pre">single-az</span></code> or <code class="docutils literal notranslate"><span class="pre">cross-az</span></code>, default is <code class="docutils literal notranslate"><span class="pre">single-az</span></code>. If you want to choose <code class="docutils literal notranslate"><span class="pre">cross-az</span></code>, <code class="docutils literal notranslate"><span class="pre">num_cache_nodes</span></code> must be greater than <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
 <li><p><strong>cache_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of node objects including <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">address</span></code>, <code class="docutils literal notranslate"><span class="pre">port</span></code> and <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code>.
@@ -343,6 +347,13 @@ for the cache cluster.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>cache_nodes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <code class="docutils literal notranslate"><span class="pre">preferred_availability_zones</span></code> instead. Default: System chosen Availability Zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <code class="docutils literal notranslate"><span class="pre">replication_group_id</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -621,6 +632,11 @@ begin taking a daily snapshot of the cache cluster.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ElastiCache parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the ElastiCache parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -646,20 +662,35 @@ begin taking a daily snapshot of the cache cluster.</p>
 <dt id="pulumi_aws.elasticache.ParameterGroup.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of ElastiCache parameters to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the ElastiCache parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the ElastiCache parameter.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.elasticache.ParameterGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ParameterGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The description of the ElastiCache parameter group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] family: The family of the ElastiCache parameter group.
-:param pulumi.Input[str] name: The name of the ElastiCache parameter.
-:param pulumi.Input[list] parameters: A list of ElastiCache parameters to apply.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the ElastiCache parameter group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the ElastiCache parameter group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ElastiCache parameter.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ElastiCache parameters to apply.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ElastiCache parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the ElastiCache parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -763,6 +794,11 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 </ul>
 </dd>
 </dl>
+<p>The <strong>cluster_mode</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numNodeGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicasPerNodeGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will force a new resource.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -806,6 +842,10 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <dt id="pulumi_aws.elasticache.ReplicationGroup.cluster_mode">
 <code class="sig-name descname">cluster_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.cluster_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a native redis cluster. <code class="docutils literal notranslate"><span class="pre">automatic_failover_enabled</span></code> must be set to true. Cluster Mode documented below. Only 1 <code class="docutils literal notranslate"><span class="pre">cluster_mode</span></code> block is allowed.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numNodeGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicasPerNodeGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will force a new resource.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -955,28 +995,26 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <dt id="pulumi_aws.elasticache.ReplicationGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">at_rest_encryption_enabled=None</em>, <em class="sig-param">auth_token=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">automatic_failover_enabled=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">cluster_mode=None</em>, <em class="sig-param">configuration_endpoint_address=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">member_clusters=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">notification_topic_arn=None</em>, <em class="sig-param">number_cache_clusters=None</em>, <em class="sig-param">parameter_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">primary_endpoint_address=None</em>, <em class="sig-param">replication_group_description=None</em>, <em class="sig-param">replication_group_id=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">security_group_names=None</em>, <em class="sig-param">snapshot_arns=None</em>, <em class="sig-param">snapshot_name=None</em>, <em class="sig-param">snapshot_retention_limit=None</em>, <em class="sig-param">snapshot_window=None</em>, <em class="sig-param">subnet_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">transit_encryption_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReplicationGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] apply_immediately: Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[bool] at_rest_encryption_enabled: Whether to enable encryption at rest.
-:param pulumi.Input[str] auth_token: The password used to access a password protected server. Can be specified only if <code class="docutils literal notranslate"><span class="pre">transit_encryption_enabled</span> <span class="pre">=</span> <span class="pre">true</span></code>.
-:param pulumi.Input[bool] auto_minor_version_upgrade: Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[bool] automatic_failover_enabled: Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[list] availability_zones: A list of EC2 availability zones in which the replication group’s cache clusters will be created. The order of the availability zones in the list is not important.
-:param pulumi.Input[dict] cluster_mode: Create a native redis cluster. <code class="docutils literal notranslate"><span class="pre">automatic_failover_enabled</span></code> must be set to true. Cluster Mode documented below. Only 1 <code class="docutils literal notranslate"><span class="pre">cluster_mode</span></code> block is allowed.
-:param pulumi.Input[str] configuration_endpoint_address: The address of the replication group configuration endpoint when cluster mode is enabled.
-:param pulumi.Input[str] engine: The name of the cache engine to be used for the clusters in this replication group. e.g. <code class="docutils literal notranslate"><span class="pre">redis</span></code>
-:param pulumi.Input[str] engine_version: The version number of the cache engine to be used for the cache clusters in this replication group.
-:param pulumi.Input[str] maintenance_window: Specifies the weekly time range for when maintenance</p>
-<blockquote>
-<div><p>on the cache cluster is performed. The format is <code class="docutils literal notranslate"><span class="pre">ddd:hh24:mi-ddd:hh24:mi</span></code> (24H Clock UTC).
-The minimum maintenance window is a 60 minute period. Example: <code class="docutils literal notranslate"><span class="pre">sun:05:00-sun:09:00</span></code></p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>at_rest_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable encryption at rest.</p></li>
+<li><p><strong>auth_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password used to access a password protected server. Can be specified only if <code class="docutils literal notranslate"><span class="pre">transit_encryption_enabled</span> <span class="pre">=</span> <span class="pre">true</span></code>.</p></li>
+<li><p><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>automatic_failover_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 availability zones in which the replication group’s cache clusters will be created. The order of the availability zones in the list is not important.</p></li>
+<li><p><strong>cluster_mode</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Create a native redis cluster. <code class="docutils literal notranslate"><span class="pre">automatic_failover_enabled</span></code> must be set to true. Cluster Mode documented below. Only 1 <code class="docutils literal notranslate"><span class="pre">cluster_mode</span></code> block is allowed.</p></li>
+<li><p><strong>configuration_endpoint_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address of the replication group configuration endpoint when cluster mode is enabled.</p></li>
+<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cache engine to be used for the clusters in this replication group. e.g. <code class="docutils literal notranslate"><span class="pre">redis</span></code></p></li>
+<li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version number of the cache engine to be used for the cache clusters in this replication group.</p></li>
+<li><p><strong>maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the weekly time range for when maintenance
+on the cache cluster is performed. The format is <code class="docutils literal notranslate"><span class="pre">ddd:hh24:mi-ddd:hh24:mi</span></code> (24H Clock UTC).
+The minimum maintenance window is a 60 minute period. Example: <code class="docutils literal notranslate"><span class="pre">sun:05:00-sun:09:00</span></code></p></li>
 <li><p><strong>member_clusters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The identifiers of all the nodes that are part of this replication group.</p></li>
 <li><p><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the nodes in the node group.</p></li>
 <li><p><strong>notification_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Amazon Resource Name (ARN) of an
@@ -1007,6 +1045,11 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 </ul>
 </dd>
 </dl>
+<p>The <strong>cluster_mode</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numNodeGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicasPerNodeGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will force a new resource.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1098,16 +1141,20 @@ authorized for ingress to the cache security group</p>
 <dt id="pulumi_aws.elasticache.SecurityGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecurityGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: description for the cache security group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] name: Name for the cache security group. This value is stored as a lowercase string.
-:param pulumi.Input[list] security_group_names: List of EC2 security group names to be</p>
-<blockquote>
-<div><p>authorized for ingress to the cache security group</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – description for the cache security group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the cache security group. This value is stored as a lowercase string.</p></li>
+<li><p><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of EC2 security group names to be
+authorized for ingress to the cache security group</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1196,13 +1243,19 @@ ElastiCache Security Group resource.</p>
 <dt id="pulumi_aws.elasticache.SubnetGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">subnet_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SubnetGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: Description for the cache subnet group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] name: Name for the cache subnet group. Elasticache converts this name to lowercase.
-:param pulumi.Input[list] subnet_ids: List of VPC Subnet IDs for the cache subnet group</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description for the cache subnet group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the cache subnet group. Elasticache converts this name to lowercase.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC Subnet IDs for the cache subnet group</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1250,6 +1303,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticache.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Cluster</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cluster_id</strong> (<em>str</em>) – Group identifier.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -1259,6 +1317,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticache.get_replication_group">
 <code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">get_replication_group</code><span class="sig-paren">(</span><em class="sig-param">replication_group_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_replication_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Replication Group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>replication_group_id</strong> (<em>str</em>) – The identifier for the replication group.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown</a>.</p>
 </div></blockquote>

@@ -127,18 +127,24 @@ in all regions - available regions are listed
 <dt id="pulumi_aws.codecommit.Repository.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">clone_url_http=None</em>, <em class="sig-param">clone_url_ssh=None</em>, <em class="sig-param">default_branch=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">repository_id=None</em>, <em class="sig-param">repository_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Repository resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the repository
-:param pulumi.Input[str] clone_url_http: The URL to use for cloning the repository over HTTPS.
-:param pulumi.Input[str] clone_url_ssh: The URL to use for cloning the repository over SSH.
-:param pulumi.Input[str] default_branch: The default branch of the repository. The branch specified here needs to exist.
-:param pulumi.Input[str] description: The description of the repository. This needs to be less than 1000 characters
-:param pulumi.Input[str] repository_id: The ID of the repository
-:param pulumi.Input[str] repository_name: The name for the repository. This needs to be less than 100 characters.
-:param pulumi.Input[dict] tags: Key-value mapping of resource tags</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the repository</p></li>
+<li><p><strong>clone_url_http</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to use for cloning the repository over HTTPS.</p></li>
+<li><p><strong>clone_url_ssh</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to use for cloning the repository over SSH.</p></li>
+<li><p><strong>default_branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default branch of the repository. The branch specified here needs to exist.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the repository. This needs to be less than 1000 characters</p></li>
+<li><p><strong>repository_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the repository</p></li>
+<li><p><strong>repository_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the repository. This needs to be less than 100 characters.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown</a>.</p>
 </div></blockquote>
@@ -200,6 +206,14 @@ in all regions - available regions are listed
 </ul>
 </dd>
 </dl>
+<p>The <strong>triggers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">branches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Any custom data associated with the trigger that will be included in the information sent to the target of the trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the resource that is the target for a trigger. For example, the ARN of a topic in Amazon Simple Notification Service (SNS).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">events</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The repository events that will cause the trigger to run actions in another service, such as sending a notification through Amazon Simple Notification Service (SNS). If no events are specified, the trigger will run for all repository events. Event types include: <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">updateReference</span></code>, <code class="docutils literal notranslate"><span class="pre">createReference</span></code>, <code class="docutils literal notranslate"><span class="pre">deleteReference</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the trigger.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown</a>.</p>
 </div></blockquote>
@@ -213,11 +227,25 @@ in all regions - available regions are listed
 <dt id="pulumi_aws.codecommit.Trigger.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">configuration_id=None</em>, <em class="sig-param">repository_name=None</em>, <em class="sig-param">triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Trigger.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Trigger resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] repository_name: The name for the repository. This needs to be less than 100 characters.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>repository_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the repository. This needs to be less than 100 characters.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>triggers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">branches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Any custom data associated with the trigger that will be included in the information sent to the target of the trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the resource that is the target for a trigger. For example, the ARN of a topic in Amazon Simple Notification Service (SNS).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">events</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The repository events that will cause the trigger to run actions in another service, such as sending a notification through Amazon Simple Notification Service (SNS). If no events are specified, the trigger will run for all repository events. Event types include: <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">updateReference</span></code>, <code class="docutils literal notranslate"><span class="pre">createReference</span></code>, <code class="docutils literal notranslate"><span class="pre">deleteReference</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the trigger.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown</a>.</p>
 </div></blockquote>
@@ -265,6 +293,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codecommit.get_repository">
 <code class="sig-prename descclassname">pulumi_aws.codecommit.</code><code class="sig-name descname">get_repository</code><span class="sig-paren">(</span><em class="sig-param">repository_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.get_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>repository_name</strong> (<em>str</em>) – The name for the repository. This needs to be less than 100 characters.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/codecommit_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/codecommit_repository.html.markdown</a>.</p>
 </div></blockquote>

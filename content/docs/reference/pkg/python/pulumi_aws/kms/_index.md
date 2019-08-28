@@ -66,19 +66,17 @@ The name must start with the word “alias” followed by a forward slash (alias
 <dt id="pulumi_aws.kms.Alias.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">target_key_arn=None</em>, <em class="sig-param">target_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Alias.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Alias resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) of the key alias.
-:param pulumi.Input[str] name: The display name of the alias. The name must start with the word “alias” followed by a forward slash (alias/)
-:param pulumi.Input[str] name_prefix: Creates an unique alias beginning with the specified prefix.</p>
-<blockquote>
-<div><p>The name must start with the word “alias” followed by a forward slash (alias/).  Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the key alias.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the alias. The name must start with the word “alias” followed by a forward slash (alias/)</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates an unique alias beginning with the specified prefix.
+The name must start with the word “alias” followed by a forward slash (alias/).  Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>target_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the target key identifier.</p></li>
 <li><p><strong>target_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier for the key for which the alias is for, can be either an ARN or key_id.</p></li>
 </ul>
@@ -205,14 +203,20 @@ the <cite>``kms.Ciphertext`</cite> data source &lt;<a class="reference external"
 <dt id="pulumi_aws.kms.Ciphertext.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Ciphertext.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Ciphertext resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] ciphertext_blob: Base64 encoded ciphertext
-:param pulumi.Input[dict] context: An optional mapping that makes up the encryption context.
-:param pulumi.Input[str] key_id: Globally unique key ID for the customer master key.
-:param pulumi.Input[str] plaintext: Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ciphertext_blob</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64 encoded ciphertext</p></li>
+<li><p><strong>context</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional mapping that makes up the encryption context.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Globally unique key ID for the customer master key.</p></li>
+<li><p><strong>plaintext</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</p>
 </div></blockquote>
@@ -351,21 +355,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kms.ExternalKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">expiration_model=None</em>, <em class="sig-param">key_material_base64=None</em>, <em class="sig-param">key_state=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">valid_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.ExternalKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ExternalKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) of the key.
-:param pulumi.Input[float] deletion_window_in_days: Duration in days after which the key is deleted after destruction of the resource. Must be between <code class="docutils literal notranslate"><span class="pre">7</span></code> and <code class="docutils literal notranslate"><span class="pre">30</span></code> days. Defaults to <code class="docutils literal notranslate"><span class="pre">30</span></code>.
-:param pulumi.Input[str] description: Description of the key.
-:param pulumi.Input[bool] enabled: Specifies whether the key is enabled. Keys pending import can only be <code class="docutils literal notranslate"><span class="pre">false</span></code>. Imported keys default to <code class="docutils literal notranslate"><span class="pre">true</span></code> unless expired.
-:param pulumi.Input[str] expiration_model: Whether the key material expires. Empty when pending key material import, otherwise <code class="docutils literal notranslate"><span class="pre">KEY_MATERIAL_EXPIRES</span></code> or <code class="docutils literal notranslate"><span class="pre">KEY_MATERIAL_DOES_NOT_EXPIRE</span></code>.
-:param pulumi.Input[str] key_material_base64: Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
-:param pulumi.Input[str] key_state: The state of the CMK.
-:param pulumi.Input[str] key_usage: The cryptographic operations for which you can use the CMK.
-:param pulumi.Input[str] policy: A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.
-:param pulumi.Input[dict] tags: A key-value map of tags to assign to the key.
-:param pulumi.Input[str] valid_to: Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the key.</p></li>
+<li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted after destruction of the resource. Must be between <code class="docutils literal notranslate"><span class="pre">7</span></code> and <code class="docutils literal notranslate"><span class="pre">30</span></code> days. Defaults to <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the key.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Keys pending import can only be <code class="docutils literal notranslate"><span class="pre">false</span></code>. Imported keys default to <code class="docutils literal notranslate"><span class="pre">true</span></code> unless expired.</p></li>
+<li><p><strong>expiration_model</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the key material expires. Empty when pending key material import, otherwise <code class="docutils literal notranslate"><span class="pre">KEY_MATERIAL_EXPIRES</span></code> or <code class="docutils literal notranslate"><span class="pre">KEY_MATERIAL_DOES_NOT_EXPIRE</span></code>.</p></li>
+<li><p><strong>key_material_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.</p></li>
+<li><p><strong>key_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the CMK.</p></li>
+<li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cryptographic operations for which you can use the CMK.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value map of tags to assign to the key.</p></li>
+<li><p><strong>valid_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</p>
+</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown</a>.</p>
 </div></blockquote>
@@ -527,6 +538,11 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 </ul>
 </dd>
 </dl>
+<p>The <strong>constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown</a>.</p>
 </div></blockquote>
@@ -534,6 +550,10 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <dt id="pulumi_aws.kms.Grant.constraints">
 <code class="sig-name descname">constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption Context</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -586,12 +606,20 @@ See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/A
 <dt id="pulumi_aws.kms.Grant.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">constraints=None</em>, <em class="sig-param">grant_creation_tokens=None</em>, <em class="sig-param">grant_id=None</em>, <em class="sig-param">grant_token=None</em>, <em class="sig-param">grantee_principal=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operations=None</em>, <em class="sig-param">retire_on_delete=None</em>, <em class="sig-param">retiring_principal=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Grant resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] constraints: A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption Context</a>.
-:param pulumi.Input[list] grant_creation_tokens: A list of grant tokens to be used when creating the grant. See <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a> for more information about grant tokens.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption Context</a>.</p>
+</p></li>
+<li><p><strong>grant_creation_tokens</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of grant tokens to be used when creating the grant. See <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a> for more information about grant tokens.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `retire_on_delete` -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
 See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
 </pre></div>
@@ -609,6 +637,11 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 </ul>
 </dd>
 </dl>
+<p>The <strong>constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown</a>.</p>
 </div></blockquote>
@@ -738,18 +771,16 @@ Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are su
 <dt id="pulumi_aws.kms.Key.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_key_rotation=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Key resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) of the key.
-:param pulumi.Input[float] deletion_window_in_days: Duration in days after which the key is deleted</p>
-<blockquote>
-<div><p>after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the key.</p></li>
+<li><p><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Duration in days after which the key is deleted
+after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key as viewed in AWS console.</p></li>
 <li><p><strong>enable_key_rotation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Specifies whether <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">key rotation</a>
 is enabled. Defaults to false.</p>
@@ -812,6 +843,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a KMS key alias.
 By using this data source, you can reference key alias
 without having to hard code the ARN as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The display name of the alias. The name must start with the word “alias” followed by a forward slash (alias/)</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown</a>.</p>
 </div></blockquote>
@@ -827,7 +863,18 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> (<em>dict</em>) – An optional mapping that makes up the encryption context.</p></li>
+<li><p><strong>key_id</strong> (<em>str</em>) – Globally unique key ID for the customer master key.</p></li>
+<li><p><strong>plaintext</strong> (<em>str</em>) – Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -838,6 +885,20 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 the specified KMS Key with flexible key id input. 
 This can be useful to reference key alias 
 without having to hard code the ARN as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grant_tokens</strong> (<em>list</em>) – List of grant tokens</p></li>
+<li><p><strong>key_id</strong> (<em>str</em>) – Key identifier which can be one of the following format:</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* Key ID. E.g: `1234abcd-12ab-34cd-56ef-1234567890ab`
+* Key ARN. E.g.: `arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
+* Alias name. E.g.: `alias/my-key`
+* Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
+</pre></div>
+</div>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown</a>.</p>
 </div></blockquote>
@@ -847,6 +908,13 @@ without having to hard code the ARN as input.</p>
 <dt id="pulumi_aws.kms.get_secret">
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param">secrets=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>!&gt; <strong>WARNING:</strong> This data source was removed in version 2.0.0 of the AWS Provider. You can migrate existing configurations to the <cite>``kms.getSecrets`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>&gt;`_ following instructions available in the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">Version 2 Upgrade Guide</a>.</p>
+<p>The <strong>secrets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">context</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grantTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secret.html.markdown</a>.</p>
 </div></blockquote>
@@ -856,6 +924,18 @@ without having to hard code the ARN as input.</p>
 <dt id="pulumi_aws.kms.get_secrets">
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_secrets</code><span class="sig-paren">(</span><em class="sig-param">secrets=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decrypt multiple secrets from data encrypted with the AWS KMS service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>secrets</strong> (<em>list</em>) – One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.</p>
+</dd>
+</dl>
+<p>The <strong>secrets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">context</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An optional mapping that makes up the Encryption Context for the secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grantTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An optional list of Grant Tokens for the secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name to export this secret under in the attributes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Base64 encoded payload, as returned from a KMS encrypt operation.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown</a>.</p>
 </div></blockquote>

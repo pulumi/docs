@@ -56,6 +56,29 @@ are applied immediately, or during the next maintenance window. Default is <code
 </ul>
 </dd>
 </dl>
+<p>The <strong>configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Configuration ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Revision of the Configuration.</p></li>
+</ul>
+<p>The <strong>logs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">audit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">general</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables general logging via CloudWatch. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>maintenance_window_start_time</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dayOfWeek</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The day of the week. e.g. <code class="docutils literal notranslate"><span class="pre">MONDAY</span></code>, <code class="docutils literal notranslate"><span class="pre">TUESDAY</span></code>, or <code class="docutils literal notranslate"><span class="pre">WEDNESDAY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time, in 24-hour format. e.g. <code class="docutils literal notranslate"><span class="pre">02:00</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time zone, UTC by default, in either the Country/City format, or the UTC offset format. e.g. <code class="docutils literal notranslate"><span class="pre">CET</span></code></p></li>
+</ul>
+<p>The <strong>users</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">consoleAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable access to the <a class="reference external" href="http://activemq.apache.org/web-console.html">ActiveMQ Web Console</a> for the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of groups (20 maximum) to which the ActiveMQ user belongs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username of the user.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_broker.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_broker.html.markdown</a>.</p>
 </div></blockquote>
@@ -88,6 +111,10 @@ are applied immediately, or during the next maintenance window. Default is <code
 <dt id="pulumi_aws.mq.Broker.configuration">
 <code class="sig-name descname">configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration of the broker. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Configuration ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Revision of the Configuration.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -126,7 +153,13 @@ are applied immediately, or during the next maintenance window. Default is <code
 <li><p><code class="docutils literal notranslate"><span class="pre">amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wss://broker-id.mq.us-west-2.amazonaws.com:61619</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wss://broker-id.mq.us-west-2.amazonaws.com:61619</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">consoleUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -134,12 +167,21 @@ are applied immediately, or during the next maintenance window. Default is <code
 <dt id="pulumi_aws.mq.Broker.logs">
 <code class="sig-name descname">logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logging configuration of the broker. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">audit</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">general</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables general logging via CloudWatch. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.mq.Broker.maintenance_window_start_time">
 <code class="sig-name descname">maintenance_window_start_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.maintenance_window_start_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maintenance window start time. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dayOfWeek</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The day of the week. e.g. <code class="docutils literal notranslate"><span class="pre">MONDAY</span></code>, <code class="docutils literal notranslate"><span class="pre">TUESDAY</span></code>, or <code class="docutils literal notranslate"><span class="pre">WEDNESDAY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The time, in 24-hour format. e.g. <code class="docutils literal notranslate"><span class="pre">02:00</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The time zone, UTC by default, in either the Country/City format, or the UTC offset format. e.g. <code class="docutils literal notranslate"><span class="pre">CET</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -170,23 +212,27 @@ are applied immediately, or during the next maintenance window. Default is <code
 <dt id="pulumi_aws.mq.Broker.users">
 <code class="sig-name descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.users" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of all ActiveMQ usernames for the specified broker. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">consoleAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable access to the <a class="reference external" href="http://activemq.apache.org/web-console.html">ActiveMQ Web Console</a> for the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of groups (20 maximum) to which the ActiveMQ user belongs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username of the user.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.mq.Broker.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">broker_name=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">deployment_mode=None</em>, <em class="sig-param">engine_type=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">host_instance_type=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">maintenance_window_start_time=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Broker resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] apply_immediately: Specifies whether any broker modifications</p>
-<blockquote>
-<div><p>are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any broker modifications
+are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the broker.</p></li>
 <li><p><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.</p></li>
 <li><p><strong>broker_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the broker.</p></li>
@@ -223,6 +269,35 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Configuration ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Revision of the Configuration.</p></li>
+</ul>
+<p>The <strong>instances</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">consoleUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>logs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">audit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">general</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables general logging via CloudWatch. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>maintenance_window_start_time</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dayOfWeek</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The day of the week. e.g. <code class="docutils literal notranslate"><span class="pre">MONDAY</span></code>, <code class="docutils literal notranslate"><span class="pre">TUESDAY</span></code>, or <code class="docutils literal notranslate"><span class="pre">WEDNESDAY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeOfDay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time, in 24-hour format. e.g. <code class="docutils literal notranslate"><span class="pre">02:00</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time zone, UTC by default, in either the Country/City format, or the UTC offset format. e.g. <code class="docutils literal notranslate"><span class="pre">CET</span></code></p></li>
+</ul>
+<p>The <strong>users</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">consoleAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable access to the <a class="reference external" href="http://activemq.apache.org/web-console.html">ActiveMQ Web Console</a> for the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of groups (20 maximum) to which the ActiveMQ user belongs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username of the user.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_broker.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/mq_broker.html.markdown</a>.</p>
 </div></blockquote>
@@ -344,19 +419,18 @@ for supported parameters and format of the XML.</p>
 <dt id="pulumi_aws.mq.Configuration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">engine_type=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">latest_revision=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Configuration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the configuration.
-:param pulumi.Input[str] data: The broker configuration in XML format.</p>
-<blockquote>
-<div><p>See <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html">official docs</a>
-for supported parameters and format of the XML.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the configuration.</p></li>
+<li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The broker configuration in XML format.
+See <a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html">official docs</a>
+for supported parameters and format of the XML.</p>
+</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the configuration.</p></li>
 <li><p><strong>engine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of broker engine.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the broker engine.</p></li>
@@ -425,6 +499,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.mq.get_broker">
 <code class="sig-prename descclassname">pulumi_aws.mq.</code><code class="sig-name descname">get_broker</code><span class="sig-paren">(</span><em class="sig-param">broker_id=None</em>, <em class="sig-param">broker_name=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a MQ Broker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>broker_id</strong> (<em>str</em>) – The unique id of the mq broker.</p></li>
+<li><p><strong>broker_name</strong> (<em>str</em>) – The unique name of the mq broker.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>logs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">audit</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">general</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/mq_broker.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/mq_broker.html.markdown</a>.</p>
 </div></blockquote>

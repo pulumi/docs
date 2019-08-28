@@ -60,14 +60,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.dms.Certificate.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">certificate_pem=None</em>, <em class="sig-param">certificate_wallet=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.Certificate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Certificate resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] certificate_arn: The Amazon Resource Name (ARN) for the certificate.
-:param pulumi.Input[str] certificate_id: The certificate identifier.
-:param pulumi.Input[str] certificate_pem: The contents of the .pem X.509 certificate file for the certificate. Either <code class="docutils literal notranslate"><span class="pre">certificate_pem</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate_wallet</span></code> must be set.
-:param pulumi.Input[str] certificate_wallet: The contents of the Oracle Wallet certificate for use with SSL. Either <code class="docutils literal notranslate"><span class="pre">certificate_pem</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate_wallet</span></code> must be set.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the certificate.</p></li>
+<li><p><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate identifier.</p></li>
+<li><p><strong>certificate_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the .pem X.509 certificate file for the certificate. Either <code class="docutils literal notranslate"><span class="pre">certificate_pem</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate_wallet</span></code> must be set.</p></li>
+<li><p><strong>certificate_wallet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the Oracle Wallet certificate for use with SSL. Either <code class="docutils literal notranslate"><span class="pre">certificate_pem</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate_wallet</span></code> must be set.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_certificate.html.markdown</a>.</p>
 </div></blockquote>
@@ -143,6 +149,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>mongodb_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authMechanism</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docsToInvestigate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extractDocId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nestingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>s3_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketFolder</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">csvDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">csvRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalTableDefinition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccessRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -198,6 +223,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.Endpoint.mongodb_settings">
 <code class="sig-name descname">mongodb_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.mongodb_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Settings for the source MongoDB endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">password</span></code>), <code class="docutils literal notranslate"><span class="pre">auth_mechanism</span></code> (default: <code class="docutils literal notranslate"><span class="pre">default</span></code>), <code class="docutils literal notranslate"><span class="pre">nesting_level</span></code> (default: <code class="docutils literal notranslate"><span class="pre">none</span></code>), <code class="docutils literal notranslate"><span class="pre">extract_doc_id</span></code> (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>), <code class="docutils literal notranslate"><span class="pre">docs_to_investigate</span></code> (default: <code class="docutils literal notranslate"><span class="pre">1000</span></code>) and <code class="docutils literal notranslate"><span class="pre">auth_source</span></code> (default: <code class="docutils literal notranslate"><span class="pre">admin</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html">Using MongoDB as a Source for AWS DMS</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authMechanism</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authSource</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docsToInvestigate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extractDocId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nestingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -216,6 +249,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.Endpoint.s3_settings">
 <code class="sig-name descname">s3_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.s3_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Settings for the target S3 endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">service_access_role_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">external_table_definition</span></code>, <code class="docutils literal notranslate"><span class="pre">csv_row_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">\n</span></code>), <code class="docutils literal notranslate"><span class="pre">csv_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">,</span></code>), <code class="docutils literal notranslate"><span class="pre">bucket_folder</span></code>, <code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> and <code class="docutils literal notranslate"><span class="pre">compression_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html">Using Amazon S3 as a Target for AWS Database Migration Service</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketFolder</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">csvDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">csvRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalTableDefinition</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccessRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -252,27 +294,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.Endpoint.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">endpoint_arn=None</em>, <em class="sig-param">endpoint_id=None</em>, <em class="sig-param">endpoint_type=None</em>, <em class="sig-param">engine_name=None</em>, <em class="sig-param">extra_connection_attributes=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">mongodb_settings=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">s3_settings=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">service_access_role=None</em>, <em class="sig-param">ssl_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.Endpoint.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Endpoint resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] certificate_arn: The Amazon Resource Name (ARN) for the certificate.
-:param pulumi.Input[str] database_name: The name of the endpoint database.
-:param pulumi.Input[str] endpoint_arn: The Amazon Resource Name (ARN) for the endpoint.
-:param pulumi.Input[str] endpoint_id: The database endpoint identifier.
-:param pulumi.Input[str] endpoint_type: The type of endpoint. Can be one of <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">|</span> <span class="pre">target</span></code>.
-:param pulumi.Input[str] engine_name: The type of engine for the endpoint. Can be one of <code class="docutils literal notranslate"><span class="pre">aurora</span> <span class="pre">|</span> <span class="pre">azuredb</span> <span class="pre">|</span> <span class="pre">db2</span> <span class="pre">|</span> <span class="pre">docdb</span> <span class="pre">|</span> <span class="pre">dynamodb</span> <span class="pre">|</span> <span class="pre">mariadb</span> <span class="pre">|</span> <span class="pre">mongodb</span> <span class="pre">|</span> <span class="pre">mysql</span> <span class="pre">|</span> <span class="pre">oracle</span> <span class="pre">|</span> <span class="pre">postgres</span> <span class="pre">|</span> <span class="pre">redshift</span> <span class="pre">|</span> <span class="pre">s3</span> <span class="pre">|</span> <span class="pre">sqlserver</span> <span class="pre">|</span> <span class="pre">sybase</span></code>.
-:param pulumi.Input[str] extra_connection_attributes: Additional attributes associated with the connection. For available attributes see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html">Using Extra Connection Attributes with AWS Database Migration Service</a>.
-:param pulumi.Input[str] kms_key_arn: The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-:param pulumi.Input[dict] mongodb_settings: Settings for the source MongoDB endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">password</span></code>), <code class="docutils literal notranslate"><span class="pre">auth_mechanism</span></code> (default: <code class="docutils literal notranslate"><span class="pre">default</span></code>), <code class="docutils literal notranslate"><span class="pre">nesting_level</span></code> (default: <code class="docutils literal notranslate"><span class="pre">none</span></code>), <code class="docutils literal notranslate"><span class="pre">extract_doc_id</span></code> (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>), <code class="docutils literal notranslate"><span class="pre">docs_to_investigate</span></code> (default: <code class="docutils literal notranslate"><span class="pre">1000</span></code>) and <code class="docutils literal notranslate"><span class="pre">auth_source</span></code> (default: <code class="docutils literal notranslate"><span class="pre">admin</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html">Using MongoDB as a Source for AWS DMS</a>.
-:param pulumi.Input[str] password: The password to be used to login to the endpoint database.
-:param pulumi.Input[float] port: The port used by the endpoint database.
-:param pulumi.Input[dict] s3_settings: Settings for the target S3 endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">service_access_role_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">external_table_definition</span></code>, <code class="docutils literal notranslate"><span class="pre">csv_row_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">\n</span></code>), <code class="docutils literal notranslate"><span class="pre">csv_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">,</span></code>), <code class="docutils literal notranslate"><span class="pre">bucket_folder</span></code>, <code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> and <code class="docutils literal notranslate"><span class="pre">compression_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html">Using Amazon S3 as a Target for AWS Database Migration Service</a>.
-:param pulumi.Input[str] server_name: The host name of the server.
-:param pulumi.Input[str] service_access_role: The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
-:param pulumi.Input[str] ssl_mode: The SSL mode to use for the connection. Can be one of <code class="docutils literal notranslate"><span class="pre">none</span> <span class="pre">|</span> <span class="pre">require</span> <span class="pre">|</span> <span class="pre">verify-ca</span> <span class="pre">|</span> <span class="pre">verify-full</span></code>
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] username: The user name to be used to login to the endpoint database.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the certificate.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint database.</p></li>
+<li><p><strong>endpoint_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the endpoint.</p></li>
+<li><p><strong>endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database endpoint identifier.</p></li>
+<li><p><strong>endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of endpoint. Can be one of <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">|</span> <span class="pre">target</span></code>.</p></li>
+<li><p><strong>engine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of engine for the endpoint. Can be one of <code class="docutils literal notranslate"><span class="pre">aurora</span> <span class="pre">|</span> <span class="pre">azuredb</span> <span class="pre">|</span> <span class="pre">db2</span> <span class="pre">|</span> <span class="pre">docdb</span> <span class="pre">|</span> <span class="pre">dynamodb</span> <span class="pre">|</span> <span class="pre">mariadb</span> <span class="pre">|</span> <span class="pre">mongodb</span> <span class="pre">|</span> <span class="pre">mysql</span> <span class="pre">|</span> <span class="pre">oracle</span> <span class="pre">|</span> <span class="pre">postgres</span> <span class="pre">|</span> <span class="pre">redshift</span> <span class="pre">|</span> <span class="pre">s3</span> <span class="pre">|</span> <span class="pre">sqlserver</span> <span class="pre">|</span> <span class="pre">sybase</span></code>.</p></li>
+<li><p><strong>extra_connection_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Additional attributes associated with the connection. For available attributes see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html">Using Extra Connection Attributes with AWS Database Migration Service</a>.</p>
+</p></li>
+<li><p><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</p></li>
+<li><p><strong>mongodb_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Settings for the source MongoDB endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">password</span></code>), <code class="docutils literal notranslate"><span class="pre">auth_mechanism</span></code> (default: <code class="docutils literal notranslate"><span class="pre">default</span></code>), <code class="docutils literal notranslate"><span class="pre">nesting_level</span></code> (default: <code class="docutils literal notranslate"><span class="pre">none</span></code>), <code class="docutils literal notranslate"><span class="pre">extract_doc_id</span></code> (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>), <code class="docutils literal notranslate"><span class="pre">docs_to_investigate</span></code> (default: <code class="docutils literal notranslate"><span class="pre">1000</span></code>) and <code class="docutils literal notranslate"><span class="pre">auth_source</span></code> (default: <code class="docutils literal notranslate"><span class="pre">admin</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html">Using MongoDB as a Source for AWS DMS</a>.</p>
+</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to be used to login to the endpoint database.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port used by the endpoint database.</p></li>
+<li><p><strong>s3_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Settings for the target S3 endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">service_access_role_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">external_table_definition</span></code>, <code class="docutils literal notranslate"><span class="pre">csv_row_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">\n</span></code>), <code class="docutils literal notranslate"><span class="pre">csv_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">,</span></code>), <code class="docutils literal notranslate"><span class="pre">bucket_folder</span></code>, <code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> and <code class="docutils literal notranslate"><span class="pre">compression_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html">Using Amazon S3 as a Target for AWS Database Migration Service</a>.</p>
+</p></li>
+<li><p><strong>server_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host name of the server.</p></li>
+<li><p><strong>service_access_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.</p></li>
+<li><p><strong>ssl_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SSL mode to use for the connection. Can be one of <code class="docutils literal notranslate"><span class="pre">none</span> <span class="pre">|</span> <span class="pre">require</span> <span class="pre">|</span> <span class="pre">verify-ca</span> <span class="pre">|</span> <span class="pre">verify-full</span></code></p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user name to be used to login to the endpoint database.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>mongodb_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authMechanism</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docsToInvestigate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extractDocId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nestingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>s3_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketFolder</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">csvDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">csvRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalTableDefinition</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccessRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -451,27 +521,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.ReplicationInstance.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_storage=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">multi_az=None</em>, <em class="sig-param">preferred_maintenance_window=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">replication_instance_arn=None</em>, <em class="sig-param">replication_instance_class=None</em>, <em class="sig-param">replication_instance_id=None</em>, <em class="sig-param">replication_instance_private_ips=None</em>, <em class="sig-param">replication_instance_public_ips=None</em>, <em class="sig-param">replication_subnet_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationInstance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReplicationInstance resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] allocated_storage: The amount of storage (in gigabytes) to be initially allocated for the replication instance.
-:param pulumi.Input[bool] apply_immediately: Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
-:param pulumi.Input[bool] auto_minor_version_upgrade: Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
-:param pulumi.Input[str] availability_zone: The EC2 Availability Zone that the replication instance will be created in.
-:param pulumi.Input[str] engine_version: The engine version number of the replication instance.
-:param pulumi.Input[str] kms_key_arn: The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-:param pulumi.Input[bool] multi_az: Specifies if the replication instance is a multi-az deployment. You cannot set the <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> parameter if the <code class="docutils literal notranslate"><span class="pre">multi_az</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] preferred_maintenance_window: The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
-:param pulumi.Input[bool] publicly_accessible: Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
-:param pulumi.Input[str] replication_instance_arn: The Amazon Resource Name (ARN) of the replication instance.
-:param pulumi.Input[str] replication_instance_class: The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of <code class="docutils literal notranslate"><span class="pre">dms.t2.micro</span> <span class="pre">|</span> <span class="pre">dms.t2.small</span> <span class="pre">|</span> <span class="pre">dms.t2.medium</span> <span class="pre">|</span> <span class="pre">dms.t2.large</span> <span class="pre">|</span> <span class="pre">dms.c4.large</span> <span class="pre">|</span> <span class="pre">dms.c4.xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.2xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.4xlarge</span></code>
-:param pulumi.Input[str] replication_instance_id: The replication instance identifier. This parameter is stored as a lowercase string.
-:param pulumi.Input[list] replication_instance_private_ips: A list of the private IP addresses of the replication instance.
-:param pulumi.Input[list] replication_instance_public_ips: A list of the public IP addresses of the replication instance.
-:param pulumi.Input[str] replication_subnet_group_id: A subnet group to associate with the replication instance.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[list] vpc_security_group_ids: A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of storage (in gigabytes) to be initially allocated for the replication instance.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.</p></li>
+<li><p><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the replication instance will be created in.</p></li>
+<li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The engine version number of the replication instance.</p></li>
+<li><p><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</p></li>
+<li><p><strong>multi_az</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the replication instance is a multi-az deployment. You cannot set the <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> parameter if the <code class="docutils literal notranslate"><span class="pre">multi_az</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).</p></li>
+<li><p><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.</p></li>
+<li><p><strong>replication_instance_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the replication instance.</p></li>
+<li><p><strong>replication_instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of <code class="docutils literal notranslate"><span class="pre">dms.t2.micro</span> <span class="pre">|</span> <span class="pre">dms.t2.small</span> <span class="pre">|</span> <span class="pre">dms.t2.medium</span> <span class="pre">|</span> <span class="pre">dms.t2.large</span> <span class="pre">|</span> <span class="pre">dms.c4.large</span> <span class="pre">|</span> <span class="pre">dms.c4.xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.2xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.4xlarge</span></code></p></li>
+<li><p><strong>replication_instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The replication instance identifier. This parameter is stored as a lowercase string.</p></li>
+<li><p><strong>replication_instance_private_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the private IP addresses of the replication instance.</p></li>
+<li><p><strong>replication_instance_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the public IP addresses of the replication instance.</p></li>
+<li><p><strong>replication_subnet_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A subnet group to associate with the replication instance.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_instance.html.markdown</a>.</p>
 </div></blockquote>
@@ -568,15 +644,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.ReplicationSubnetGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">replication_subnet_group_arn=None</em>, <em class="sig-param">replication_subnet_group_description=None</em>, <em class="sig-param">replication_subnet_group_id=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationSubnetGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReplicationSubnetGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] replication_subnet_group_description: The description for the subnet group.
-:param pulumi.Input[str] replication_subnet_group_id: The name for the replication subnet group. This value is stored as a lowercase string.
-:param pulumi.Input[list] subnet_ids: A list of the EC2 subnet IDs for the subnet group.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] vpc_id: The ID of the VPC the subnet group is in.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>replication_subnet_group_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the subnet group.</p></li>
+<li><p><strong>replication_subnet_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the replication subnet group. This value is stored as a lowercase string.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the EC2 subnet IDs for the subnet group.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC the subnet group is in.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_subnet_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -708,20 +790,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dms.ReplicationTask.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cdc_start_time=None</em>, <em class="sig-param">migration_type=None</em>, <em class="sig-param">replication_instance_arn=None</em>, <em class="sig-param">replication_task_arn=None</em>, <em class="sig-param">replication_task_id=None</em>, <em class="sig-param">replication_task_settings=None</em>, <em class="sig-param">source_endpoint_arn=None</em>, <em class="sig-param">table_mappings=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_endpoint_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationTask.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReplicationTask resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cdc_start_time: The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
-:param pulumi.Input[str] migration_type: The migration type. Can be one of <code class="docutils literal notranslate"><span class="pre">full-load</span> <span class="pre">|</span> <span class="pre">cdc</span> <span class="pre">|</span> <span class="pre">full-load-and-cdc</span></code>.
-:param pulumi.Input[str] replication_instance_arn: The Amazon Resource Name (ARN) of the replication instance.
-:param pulumi.Input[str] replication_task_arn: The Amazon Resource Name (ARN) for the replication task.
-:param pulumi.Input[str] replication_task_id: The replication task identifier.
-:param pulumi.Input[str] replication_task_settings: An escaped JSON string that contains the task settings. For a complete list of task settings, see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html">Task Settings for AWS Database Migration Service Tasks</a>.
-:param pulumi.Input[str] source_endpoint_arn: The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
-:param pulumi.Input[str] table_mappings: An escaped JSON string that contains the table mappings. For information on table mapping see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html">Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data</a>
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] target_endpoint_arn: The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cdc_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.</p></li>
+<li><p><strong>migration_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The migration type. Can be one of <code class="docutils literal notranslate"><span class="pre">full-load</span> <span class="pre">|</span> <span class="pre">cdc</span> <span class="pre">|</span> <span class="pre">full-load-and-cdc</span></code>.</p></li>
+<li><p><strong>replication_instance_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the replication instance.</p></li>
+<li><p><strong>replication_task_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the replication task.</p></li>
+<li><p><strong>replication_task_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The replication task identifier.</p></li>
+<li><p><strong>replication_task_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>An escaped JSON string that contains the task settings. For a complete list of task settings, see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html">Task Settings for AWS Database Migration Service Tasks</a>.</p>
+</p></li>
+<li><p><strong>source_endpoint_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.</p></li>
+<li><p><strong>table_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>An escaped JSON string that contains the table mappings. For information on table mapping see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html">Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data</a></p>
+</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>target_endpoint_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dms_replication_task.html.markdown</a>.</p>
 </div></blockquote>

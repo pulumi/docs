@@ -52,6 +52,21 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 </ul>
 </dd>
 </dl>
+<p>The <strong>event_trigger</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>source_repository</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deployedUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown</a>.</p>
 </div></blockquote>
@@ -83,6 +98,15 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_gcp.cloudfunctions.Function.event_trigger">
 <code class="sig-name descname">event_trigger</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.event_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -153,6 +177,10 @@ defaults to <code class="docutils literal notranslate"><span class="pre">&quot;n
 <code class="sig-name descname">source_repository</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.source_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside <code class="docutils literal notranslate"><span class="pre">source_archive_bucket</span></code> or <code class="docutils literal notranslate"><span class="pre">source_archive_object</span></code>. Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deployedUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -171,30 +199,28 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_gcp.cloudfunctions.Function.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_trigger=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repository=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Function resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] available_memory_mb: Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
-:param pulumi.Input[str] description: Description of the function.
-:param pulumi.Input[str] entry_point: Name of the function that will be executed when the Google Cloud Function is triggered.
-:param pulumi.Input[dict] environment_variables: A set of key/value environment variable pairs to assign to the function.
-:param pulumi.Input[dict] event_trigger: A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.
-:param pulumi.Input[str] https_trigger_url: URL which triggers function execution. Returned only if <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> is used.
-:param pulumi.Input[dict] labels: A set of key/value label pairs to assign to the function.
-:param pulumi.Input[float] max_instances: The limit on the maximum number of function instances that may coexist at a given time.
-:param pulumi.Input[str] name: A user-defined name of the function. Function names must be unique globally.
-:param pulumi.Input[str] project: Project of the function. If it is not provided, the provider project is used.
-:param pulumi.Input[str] region: Region of function. Currently can be only “us-central1”. If it is not provided, the provider region is used.
-:param pulumi.Input[str] runtime: The runtime in which the function is going to run. One</p>
-<blockquote>
-<div><p>of <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs8&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs10&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;python37&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;go111&quot;</span></code>. If empty,
-defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>. It’s recommended that you override the default, as
-<code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code> is deprecated.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>available_memory_mb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the function.</p></li>
+<li><p><strong>entry_point</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the function that will be executed when the Google Cloud Function is triggered.</p></li>
+<li><p><strong>environment_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value environment variable pairs to assign to the function.</p></li>
+<li><p><strong>event_trigger</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.</p></li>
+<li><p><strong>https_trigger_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL which triggers function execution. Returned only if <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> is used.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to the function.</p></li>
+<li><p><strong>max_instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The limit on the maximum number of function instances that may coexist at a given time.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-defined name of the function. Function names must be unique globally.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project of the function. If it is not provided, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of function. Currently can be only “us-central1”. If it is not provided, the provider region is used.</p></li>
+<li><p><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The runtime in which the function is going to run. One
+of <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs8&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;nodejs10&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;python37&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;go111&quot;</span></code>. If empty,
+defaults to <code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code>. It’s recommended that you override the default, as
+<code class="docutils literal notranslate"><span class="pre">&quot;nodejs6&quot;</span></code> is deprecated.</p></li>
 <li><p><strong>service_account_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If provided, the self-provided service account to run the function with.</p></li>
 <li><p><strong>source_archive_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCS bucket containing the zip archive which contains the function.</p></li>
 <li><p><strong>source_archive_object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source archive object (file) in archive bucket.</p></li>
@@ -205,6 +231,21 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 </ul>
 </dd>
 </dl>
+<p>The <strong>event_trigger</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>source_repository</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deployedUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudfunctions_function.html.markdown</a>.</p>
 </div></blockquote>
@@ -338,6 +379,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Get information about a Google Cloud Function. For more information see
 the <a class="reference external" href="https://cloud.google.com/functions/docs/">official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/functions/docs/apis">API</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of a Cloud Function.</p></li>
+<li><p><strong>project</strong> (<em>str</em>) – The project in which the resource belongs. If it
+is not provided, the provider project is used.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which the resource belongs. If it
+is not provided, the provider region is used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/cloudfunctions_function.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/cloudfunctions_function.html.markdown</a>.</p>
 </div></blockquote>

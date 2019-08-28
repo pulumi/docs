@@ -41,6 +41,37 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>broker_node_group_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">azDistribution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The distribution of broker nodes across availability zones (<a class="reference external" href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution">documentation</a>). Currently the only valid value is <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSubnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of subnets to connect to in client VPC (<a class="reference external" href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets">documentation</a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsVolumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size in GiB of the EBS volume for the data drive on each broker node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. (<a class="reference external" href="https://aws.amazon.com/msk/pricing/">Pricing info</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.</p></li>
+</ul>
+<p>The <strong>client_authentication</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for specifying TLS client authentication. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateAuthorityArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of ACM Certificate Authority Amazon Resource Names (ARNs).</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>configuration_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Revision of the MSK Configuration to use in the cluster.</p></li>
+</ul>
+<p>The <strong>encryption_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionAtRestKmsKeyArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (‘aws/msk’ managed service) key will be used for encrypting the data at rest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionInTransit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block to specify encryption in transit. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption setting for data in transit between clients and brokers. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>, and <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inCluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether data communication among broker nodes is encrypted. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -66,12 +97,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.msk.Cluster.broker_node_group_info">
 <code class="sig-name descname">broker_node_group_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.broker_node_group_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for the broker nodes of the Kafka cluster.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">azDistribution</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The distribution of broker nodes across availability zones (<a class="reference external" href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution">documentation</a>). Currently the only valid value is <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSubnets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of subnets to connect to in client VPC (<a class="reference external" href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets">documentation</a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsVolumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size in GiB of the EBS volume for the data drive on each broker node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. (<a class="reference external" href="https://aws.amazon.com/msk/pricing/">Pricing info</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.msk.Cluster.client_authentication">
 <code class="sig-name descname">client_authentication</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.client_authentication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for specifying a client authentication. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for specifying TLS client authentication. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateAuthorityArns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of ACM Certificate Authority Amazon Resource Names (ARNs).</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -84,6 +129,10 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.msk.Cluster.configuration_info">
 <code class="sig-name descname">configuration_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.configuration_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Revision of the MSK Configuration to use in the cluster.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -99,6 +148,15 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.msk.Cluster.encryption_info">
 <code class="sig-name descname">encryption_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.encryption_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for specifying encryption. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionAtRestKmsKeyArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (‘aws/msk’ managed service) key will be used for encrypting the data at rest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionInTransit</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block to specify encryption in transit. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Encryption setting for data in transit between clients and brokers. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>, and <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inCluster</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether data communication among broker nodes is encrypted. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -135,18 +193,24 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.msk.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bootstrap_brokers=None</em>, <em class="sig-param">bootstrap_brokers_tls=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">current_version=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zookeeper_connect_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
-:param pulumi.Input[str] bootstrap_brokers: A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if <code class="docutils literal notranslate"><span class="pre">client_broker</span></code> encryption in transit is set to <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.
-:param pulumi.Input[str] bootstrap_brokers_tls: A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if <code class="docutils literal notranslate"><span class="pre">client_broker</span></code> encryption in transit is set to <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS</span></code>.
-:param pulumi.Input[dict] broker_node_group_info: Configuration block for the broker nodes of the Kafka cluster.
-:param pulumi.Input[dict] client_authentication: Configuration block for specifying a client authentication. See below.
-:param pulumi.Input[str] cluster_name: Name of the MSK cluster.
-:param pulumi.Input[dict] configuration_info: Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
-:param pulumi.Input[str] current_version: Current version of the MSK Cluster used for updates, e.g. <code class="docutils literal notranslate"><span class="pre">K13V1IB3VIYZZH</span></code></p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.</p></li>
+<li><p><strong>bootstrap_brokers</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if <code class="docutils literal notranslate"><span class="pre">client_broker</span></code> encryption in transit is set to <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.</p></li>
+<li><p><strong>bootstrap_brokers_tls</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if <code class="docutils literal notranslate"><span class="pre">client_broker</span></code> encryption in transit is set to <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS</span></code>.</p></li>
+<li><p><strong>broker_node_group_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for the broker nodes of the Kafka cluster.</p></li>
+<li><p><strong>client_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for specifying a client authentication. See below.</p></li>
+<li><p><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the MSK cluster.</p></li>
+<li><p><strong>configuration_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.</p></li>
+<li><p><strong>current_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Current version of the MSK Cluster used for updates, e.g. <code class="docutils literal notranslate"><span class="pre">K13V1IB3VIYZZH</span></code></p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
 </pre></div>
 </div>
@@ -163,6 +227,37 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>broker_node_group_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">azDistribution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The distribution of broker nodes across availability zones (<a class="reference external" href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution">documentation</a>). Currently the only valid value is <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSubnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of subnets to connect to in client VPC (<a class="reference external" href="https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets">documentation</a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsVolumeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size in GiB of the EBS volume for the data drive on each broker node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. (<a class="reference external" href="https://aws.amazon.com/msk/pricing/">Pricing info</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.</p></li>
+</ul>
+<p>The <strong>client_authentication</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for specifying TLS client authentication. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateAuthorityArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of ACM Certificate Authority Amazon Resource Names (ARNs).</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>configuration_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Revision of the MSK Configuration to use in the cluster.</p></li>
+</ul>
+<p>The <strong>encryption_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionAtRestKmsKeyArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS (‘aws/msk’ managed service) key will be used for encrypting the data at rest.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionInTransit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block to specify encryption in transit. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption setting for data in transit between clients and brokers. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>, and <code class="docutils literal notranslate"><span class="pre">PLAINTEXT</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">TLS_PLAINTEXT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inCluster</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether data communication among broker nodes is encrypted. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -269,16 +364,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.msk.Configuration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kafka_versions=None</em>, <em class="sig-param">latest_revision=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">server_properties=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Configuration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Configuration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the configuration.
-:param pulumi.Input[str] description: Description of the configuration.
-:param pulumi.Input[list] kafka_versions: List of Apache Kafka versions which can use this configuration.
-:param pulumi.Input[float] latest_revision: Latest revision of the configuration.
-:param pulumi.Input[str] name: Name of the configuration.
-:param pulumi.Input[str] server_properties: Contents of the server.properties file. Supported properties are documented in the <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html">MSK Developer Guide</a>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the configuration.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the configuration.</p></li>
+<li><p><strong>kafka_versions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Apache Kafka versions which can use this configuration.</p></li>
+<li><p><strong>latest_revision</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Latest revision of the configuration.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the configuration.</p></li>
+<li><p><strong>server_properties</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Contents of the server.properties file. Supported properties are documented in the <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html">MSK Developer Guide</a>.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_configuration.html.markdown</a>.</p>
 </div></blockquote>
@@ -422,6 +524,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.msk.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cluster_name</strong> (<em>str</em>) – Name of the cluster.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -431,6 +538,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.msk.get_configuration">
 <code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_configuration</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the configuration.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_configuration.html.markdown</a>.</p>
 </div></blockquote>

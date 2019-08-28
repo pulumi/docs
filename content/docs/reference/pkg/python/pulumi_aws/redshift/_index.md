@@ -77,6 +77,19 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>logging</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
+For more information on the permissions required for the bucket, please read the AWS <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">documentation</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_key_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix applied to the log file names.</p></li>
+</ul>
+<p>The <strong>snapshot_copy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination region that you want to copy snapshots to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grantName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -213,6 +226,12 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 <dt id="pulumi_aws.redshift.Cluster.logging">
 <code class="sig-name descname">logging</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logging, documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
+For more information on the permissions required for the bucket, please read the AWS <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">documentation</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_key_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix applied to the log file names.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -283,6 +302,11 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
 <dt id="pulumi_aws.redshift.Cluster.snapshot_copy">
 <code class="sig-name descname">snapshot_copy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.snapshot_copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration of automatic copy of snapshots from one region to another. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination region that you want to copy snapshots to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grantName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_period</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -307,21 +331,19 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
 <dt id="pulumi_aws.redshift.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_version_upgrade=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">automated_snapshot_retention_period=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">cluster_parameter_group_name=None</em>, <em class="sig-param">cluster_public_key=None</em>, <em class="sig-param">cluster_revision_number=None</em>, <em class="sig-param">cluster_security_groups=None</em>, <em class="sig-param">cluster_subnet_group_name=None</em>, <em class="sig-param">cluster_type=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">elastic_ip=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">enhanced_vpc_routing=None</em>, <em class="sig-param">final_snapshot_identifier=None</em>, <em class="sig-param">iam_roles=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">logging=None</em>, <em class="sig-param">master_password=None</em>, <em class="sig-param">master_username=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">number_of_nodes=None</em>, <em class="sig-param">owner_account=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">preferred_maintenance_window=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">skip_final_snapshot=None</em>, <em class="sig-param">snapshot_cluster_identifier=None</em>, <em class="sig-param">snapshot_copy=None</em>, <em class="sig-param">snapshot_identifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] allow_version_upgrade: If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of cluster
-:param pulumi.Input[float] automated_snapshot_retention_period: The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
-:param pulumi.Input[str] availability_zone: The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
-:param pulumi.Input[str] cluster_identifier: The Cluster Identifier. Must be a lower case</p>
-<blockquote>
-<div><p>string.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allow_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of cluster</p></li>
+<li><p><strong>automated_snapshot_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.</p></li>
+<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cluster Identifier. Must be a lower case
+string.</p></li>
 <li><p><strong>cluster_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parameter group to be associated with this cluster.</p></li>
 <li><p><strong>cluster_public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key for the cluster</p></li>
 <li><p><strong>cluster_revision_number</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The specific revision number of the database in the cluster</p></li>
@@ -362,6 +384,19 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>logging</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
+For more information on the permissions required for the bucket, please read the AWS <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">documentation</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_key_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix applied to the log file names.</p></li>
+</ul>
+<p>The <strong>snapshot_copy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination region that you want to copy snapshots to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grantName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_period</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -486,18 +521,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.EventSubscription.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">customer_aws_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">event_categories=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">sns_topic_arn=None</em>, <em class="sig-param">source_ids=None</em>, <em class="sig-param">source_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.EventSubscription.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventSubscription resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] enabled: A boolean flag to enable/disable the subscription. Defaults to true.
-:param pulumi.Input[list] event_categories: A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html">https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html</a> or run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">redshift</span> <span class="pre">describe-event-categories</span></code>.
-:param pulumi.Input[str] name: The name of the Redshift event subscription.
-:param pulumi.Input[str] severity: The event severity to be published by the notification subscription. Valid options are <code class="docutils literal notranslate"><span class="pre">INFO</span></code> or <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>.
-:param pulumi.Input[str] sns_topic_arn: The ARN of the SNS topic to send events to.
-:param pulumi.Input[list] source_ids: A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
-:param pulumi.Input[str] source_type: The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">cluster</span></code>, <code class="docutils literal notranslate"><span class="pre">cluster-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">cluster-security-group</span></code>, or <code class="docutils literal notranslate"><span class="pre">cluster-snapshot</span></code>. If not set, all sources will be subscribed to.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable the subscription. Defaults to true.</p></li>
+<li><p><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html">https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html</a> or run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">redshift</span> <span class="pre">describe-event-categories</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift event subscription.</p></li>
+<li><p><strong>severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The event severity to be published by the notification subscription. Valid options are <code class="docutils literal notranslate"><span class="pre">INFO</span></code> or <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>.</p></li>
+<li><p><strong>sns_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic to send events to.</p></li>
+<li><p><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.</p></li>
+<li><p><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">cluster</span></code>, <code class="docutils literal notranslate"><span class="pre">cluster-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">cluster-security-group</span></code>, or <code class="docutils literal notranslate"><span class="pre">cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_event_subscription.html.markdown</a>.</p>
 </div></blockquote>
@@ -762,6 +803,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Redshift parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the Redshift parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -793,6 +839,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.ParameterGroup.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Redshift parameters to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Redshift parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the Redshift parameter.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -805,16 +855,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.ParameterGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ParameterGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of parameter group
-:param pulumi.Input[str] description: The description of the Redshift parameter group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] family: The family of the Redshift parameter group.
-:param pulumi.Input[str] name: The name of the Redshift parameter.
-:param pulumi.Input[list] parameters: A list of Redshift parameters to apply.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of parameter group</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift parameter group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the Redshift parameter group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift parameter.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Redshift parameters to apply.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Redshift parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the Redshift parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -873,6 +934,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to accept</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupOwnerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The owner Id of the security group provided
+by <code class="docutils literal notranslate"><span class="pre">security_group_name</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -886,6 +954,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SecurityGroup.ingress">
 <code class="sig-name descname">ingress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SecurityGroup.ingress" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of ingress rules.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR block to accept</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupOwnerId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The owner Id of the security group provided
+by <code class="docutils literal notranslate"><span class="pre">security_group_name</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -898,13 +972,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SecurityGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SecurityGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecurityGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The description of the Redshift security group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[list] ingress: A list of ingress rules.
-:param pulumi.Input[str] name: The name of the Redshift security group.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift security group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ingress rules.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift security group.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ingress</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR block to accept</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the security group to authorize</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupOwnerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The owner Id of the security group provided
+by <code class="docutils literal notranslate"><span class="pre">security_group_name</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -995,14 +1082,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SnapshotCopyGrant.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">snapshot_copy_grant_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotCopyGrant.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SnapshotCopyGrant resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of snapshot copy grant
-:param pulumi.Input[str] kms_key_id: The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.
-:param pulumi.Input[str] snapshot_copy_grant_name: A friendly name for identifying the grant.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of snapshot copy grant</p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.</p></li>
+<li><p><strong>snapshot_copy_grant_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for identifying the grant.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_snapshot_copy_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_snapshot_copy_grant.html.markdown</a>.</p>
 </div></blockquote>
@@ -1102,20 +1195,20 @@ identifier beginning with the specified prefix. Conflicts with <code class="docu
 <dt id="pulumi_aws.redshift.SnapshotSchedule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">definitions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">identifier_prefix=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotSchedule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SnapshotSchedule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] definitions: The definition of the snapshot schedule. The definition is made up of schedule expressions, for example <code class="docutils literal notranslate"><span class="pre">cron(30</span> <span class="pre">12</span> <span class="pre">*)</span></code> or <code class="docutils literal notranslate"><span class="pre">rate(12</span> <span class="pre">hours)</span></code>.
-:param pulumi.Input[str] description: The description of the snapshot schedule.
-:param pulumi.Input[bool] force_destroy: Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-:param pulumi.Input[str] identifier_prefix: Creates a unique</p>
-<blockquote>
-<div><p>identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>definitions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The definition of the snapshot schedule. The definition is made up of schedule expressions, for example <code class="docutils literal notranslate"><span class="pre">cron(30</span> <span class="pre">12</span> <span class="pre">*)</span></code> or <code class="docutils literal notranslate"><span class="pre">rate(12</span> <span class="pre">hours)</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the snapshot schedule.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.</p></li>
+<li><p><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique
+identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -1194,12 +1287,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SnapshotScheduleAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">schedule_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotScheduleAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SnapshotScheduleAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cluster_identifier: The cluster identifier.
-:param pulumi.Input[str] schedule_identifier: The snapshot schedule identifier.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier.</p></li>
+<li><p><strong>schedule_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot schedule identifier.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_snapshot_schedule_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_snapshot_schedule_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -1296,15 +1395,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SubnetGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SubnetGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the Redshift Subnet group name
-:param pulumi.Input[str] description: The description of the Redshift Subnet group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] name: The name of the Redshift Subnet group.
-:param pulumi.Input[list] subnet_ids: An array of VPC subnet IDs.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the Redshift Subnet group name</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift Subnet group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift Subnet group.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of VPC subnet IDs.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_subnet_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1352,6 +1457,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific redshift cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cluster_identifier</strong> (<em>str</em>) – The cluster identifier</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -1362,6 +1472,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">get_service_account</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">AWS Redshift Service Account</a>
 in a given region for the purpose of allowing Redshift to store audit data in S3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS Redshift account ID is desired.
+Defaults to the region from the AWS provider configuration.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_service_account.html.markdown</a>.</p>
 </div></blockquote>

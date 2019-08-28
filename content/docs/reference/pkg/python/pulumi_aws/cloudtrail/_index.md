@@ -71,6 +71,17 @@ defined for notification of log file delivery.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>event_selectors</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies logging data events. Fields documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource type in which you want to log data events. You can specify only the follwing value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of ARN for the specified S3 buckets and object prefixes..</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeManagementEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specify if you want your event selector to include management events for your trail.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">readWriteType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify if you want your trail to log read-only events, write-only events, or all. By default, the value is All. You can specify only the following value: “ReadOnly”, “WriteOnly”, “All”. Defaults to <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown</a>.</p>
 </div></blockquote>
@@ -112,6 +123,16 @@ Setting this to <code class="docutils literal notranslate"><span class="pre">fal
 <dt id="pulumi_aws.cloudtrail.Trail.event_selectors">
 <code class="sig-name descname">event_selectors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail.event_selectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies an event selector for enabling data event logging. Fields documented below. Please note the <a class="reference external" href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html">CloudTrail limits</a> when configuring these.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataResources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies logging data events. Fields documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The resource type in which you want to log data events. You can specify only the follwing value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of ARN for the specified S3 buckets and object prefixes..</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeManagementEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specify if you want your event selector to include management events for your trail.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">readWriteType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specify if you want your trail to log read-only events, write-only events, or all. By default, the value is All. You can specify only the following value: “ReadOnly”, “WriteOnly”, “All”. Defaults to <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -182,18 +203,16 @@ defined for notification of log file delivery.</p>
 <dt id="pulumi_aws.cloudtrail.Trail.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cloud_watch_logs_group_arn=None</em>, <em class="sig-param">cloud_watch_logs_role_arn=None</em>, <em class="sig-param">enable_log_file_validation=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">event_selectors=None</em>, <em class="sig-param">home_region=None</em>, <em class="sig-param">include_global_service_events=None</em>, <em class="sig-param">is_multi_region_trail=None</em>, <em class="sig-param">is_organization_trail=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">s3_bucket_name=None</em>, <em class="sig-param">s3_key_prefix=None</em>, <em class="sig-param">sns_topic_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Trail resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name of the trail.
-:param pulumi.Input[str] cloud_watch_logs_group_arn: Specifies a log group name using an Amazon Resource Name (ARN),</p>
-<blockquote>
-<div><p>that represents the log group to which CloudTrail logs will be delivered.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name of the trail.</p></li>
+<li><p><strong>cloud_watch_logs_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a log group name using an Amazon Resource Name (ARN),
+that represents the log group to which CloudTrail logs will be delivered.</p></li>
 <li><p><strong>cloud_watch_logs_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the role for the CloudWatch Logs
 endpoint to assume to write to a user’s log group.</p></li>
 <li><p><strong>enable_log_file_validation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether log file integrity validation is enabled.
@@ -219,6 +238,17 @@ defined for notification of log file delivery.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>event_selectors</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataResources</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies logging data events. Fields documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource type in which you want to log data events. You can specify only the follwing value: “AWS::S3::Object”, “AWS::Lambda::Function”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of ARN for the specified S3 buckets and object prefixes..</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeManagementEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specify if you want your event selector to include management events for your trail.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">readWriteType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify if you want your trail to log read-only events, write-only events, or all. By default, the value is All. You can specify only the following value: “ReadOnly”, “WriteOnly”, “All”. Defaults to <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown</a>.</p>
 </div></blockquote>
@@ -267,6 +297,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.cloudtrail.</code><code class="sig-name descname">get_service_account</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html">AWS CloudTrail Service Account</a>
 in a given region for the purpose of allowing CloudTrail to store trail data in S3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS CloudTrail account ID is desired.
+Defaults to the region from the AWS provider configuration.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudtrail_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudtrail_service_account.html.markdown</a>.</p>
 </div></blockquote>

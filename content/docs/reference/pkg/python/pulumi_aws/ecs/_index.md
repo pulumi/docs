@@ -69,13 +69,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ecs.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) that identifies the cluster
-:param pulumi.Input[str] name: The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
-:param pulumi.Input[dict] tags: Key-value mapping of resource tags</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) that identifies the cluster</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -388,6 +394,40 @@ Guide</a>.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>deployment_controller</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>load_balancers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>network_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+<p>The <strong>ordered_placement_strategies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>placement_constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_registries</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
 </div></blockquote>
@@ -401,6 +441,9 @@ Guide</a>.</p></li>
 <dt id="pulumi_aws.ecs.Service.deployment_controller">
 <code class="sig-name descname">deployment_controller</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.deployment_controller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing deployment controller configuration. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -449,6 +492,12 @@ Guide</a>.</p></li>
 <dt id="pulumi_aws.ecs.Service.load_balancers">
 <code class="sig-name descname">load_balancers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>A load balancer block. Load balancers documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -461,12 +510,21 @@ Guide</a>.</p></li>
 <dt id="pulumi_aws.ecs.Service.network_configuration">
 <code class="sig-name descname">network_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.network_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The network configuration for the service. This parameter is required for task definitions that use the <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code> network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.Service.ordered_placement_strategies">
 <code class="sig-name descname">ordered_placement_strategies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.ordered_placement_strategies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of <code class="docutils literal notranslate"><span class="pre">ordered_placement_strategy</span></code> blocks is <code class="docutils literal notranslate"><span class="pre">5</span></code>. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -474,6 +532,10 @@ Guide</a>.</p></li>
 <code class="sig-name descname">placement_constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.placement_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>rules that are taken into consideration during task placement. Maximum number of
 <code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -498,6 +560,12 @@ Guide</a>.</p></li>
 <dt id="pulumi_aws.ecs.Service.service_registries">
 <code class="sig-name descname">service_registries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.Service.service_registries" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service discovery registries for the service. The maximum number of <code class="docutils literal notranslate"><span class="pre">service_registries</span></code> blocks is <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -522,30 +590,28 @@ Guide</a>.</p></li>
 <dt id="pulumi_aws.ecs.Service.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">deployment_controller=None</em>, <em class="sig-param">deployment_maximum_percent=None</em>, <em class="sig-param">deployment_minimum_healthy_percent=None</em>, <em class="sig-param">desired_count=None</em>, <em class="sig-param">enable_ecs_managed_tags=None</em>, <em class="sig-param">health_check_grace_period_seconds=None</em>, <em class="sig-param">iam_role=None</em>, <em class="sig-param">launch_type=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_configuration=None</em>, <em class="sig-param">ordered_placement_strategies=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">propagate_tags=None</em>, <em class="sig-param">scheduling_strategy=None</em>, <em class="sig-param">service_registries=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">wait_for_steady_state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Service.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cluster: ARN of an ECS cluster
-:param pulumi.Input[dict] deployment_controller: Configuration block containing deployment controller configuration. Defined below.
-:param pulumi.Input[float] deployment_maximum_percent: The upper limit (as a percentage of the service’s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the <code class="docutils literal notranslate"><span class="pre">DAEMON</span></code> scheduling strategy.
-:param pulumi.Input[float] deployment_minimum_healthy_percent: The lower limit (as a percentage of the service’s desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
-:param pulumi.Input[float] desired_count: The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the <code class="docutils literal notranslate"><span class="pre">DAEMON</span></code> scheduling strategy.
-:param pulumi.Input[bool] enable_ecs_managed_tags: Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
-:param pulumi.Input[float] health_check_grace_period_seconds: Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
-:param pulumi.Input[str] iam_role: ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code> network mode. If using <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code> network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
-:param pulumi.Input[str] launch_type: The launch type on which to run your service. The valid values are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">EC2</span></code>.
-:param pulumi.Input[list] load_balancers: A load balancer block. Load balancers documented below.
-:param pulumi.Input[str] name: The name of the service (up to 255 letters, numbers, hyphens, and underscores)
-:param pulumi.Input[dict] network_configuration: The network configuration for the service. This parameter is required for task definitions that use the <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code> network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
-:param pulumi.Input[list] ordered_placement_strategies: Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of <code class="docutils literal notranslate"><span class="pre">ordered_placement_strategy</span></code> blocks is <code class="docutils literal notranslate"><span class="pre">5</span></code>. Defined below.
-:param pulumi.Input[list] placement_constraints: rules that are taken into consideration during task placement. Maximum number of</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>. Defined below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of an ECS cluster</p></li>
+<li><p><strong>deployment_controller</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing deployment controller configuration. Defined below.</p></li>
+<li><p><strong>deployment_maximum_percent</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The upper limit (as a percentage of the service’s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the <code class="docutils literal notranslate"><span class="pre">DAEMON</span></code> scheduling strategy.</p></li>
+<li><p><strong>deployment_minimum_healthy_percent</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The lower limit (as a percentage of the service’s desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.</p></li>
+<li><p><strong>desired_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the <code class="docutils literal notranslate"><span class="pre">DAEMON</span></code> scheduling strategy.</p></li>
+<li><p><strong>enable_ecs_managed_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to enable Amazon ECS managed tags for the tasks within the service.</p></li>
+<li><p><strong>health_check_grace_period_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.</p></li>
+<li><p><strong>iam_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code> network mode. If using <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code> network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.</p></li>
+<li><p><strong>launch_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The launch type on which to run your service. The valid values are <code class="docutils literal notranslate"><span class="pre">EC2</span></code> and <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">EC2</span></code>.</p></li>
+<li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A load balancer block. Load balancers documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service (up to 255 letters, numbers, hyphens, and underscores)</p></li>
+<li><p><strong>network_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The network configuration for the service. This parameter is required for task definitions that use the <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code> network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.</p></li>
+<li><p><strong>ordered_placement_strategies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of <code class="docutils literal notranslate"><span class="pre">ordered_placement_strategy</span></code> blocks is <code class="docutils literal notranslate"><span class="pre">5</span></code>. Defined below.</p></li>
+<li><p><strong>placement_constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – rules that are taken into consideration during task placement. Maximum number of
+<code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>. Defined below.</p></li>
 <li><p><strong>platform_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The platform version on which to run your service. Only applicable for <code class="docutils literal notranslate"><span class="pre">launch_type</span></code> set to <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>. More information about Fargate platform versions can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS ECS User Guide</a>.</p>
 </p></li>
 <li><p><strong>propagate_tags</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are <code class="docutils literal notranslate"><span class="pre">SERVICE</span></code> and <code class="docutils literal notranslate"><span class="pre">TASK_DEFINITION</span></code>.</p></li>
@@ -557,6 +623,40 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>deployment_controller</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>load_balancers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elbName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>network_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assignPublicIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+<p>The <strong>ordered_placement_strategies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>placement_constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_registries</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">registryArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
 </div></blockquote>
@@ -631,6 +731,35 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 </ul>
 </dd>
 </dl>
+<p>The <strong>placement_constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster Query Language expression to apply to the constraint.
+For more information, see <a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
+</ul>
+<p>The <strong>proxy_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
+</ul>
+<p>The <strong>volumes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dockerVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used to configure a docker volume</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoprovision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the Docker volume is created if it does not already exist. <em>Note</em>: This field is only used if the scope is <code class="docutils literal notranslate"><span class="pre">shared</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">driver</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">driverOpts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of Docker driver specific options.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of custom metadata to add to your Docker volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
+parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown</a>.</p>
 </div></blockquote>
@@ -697,12 +826,24 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <dt id="pulumi_aws.ecs.TaskDefinition.placement_constraints">
 <code class="sig-name descname">placement_constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.placement_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of placement constraints rules that are taken into consideration during task placement. Maximum number of <code class="docutils literal notranslate"><span class="pre">placement_constraints</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Cluster Query Language expression to apply to the constraint.
+For more information, see <a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ecs.TaskDefinition.proxy_configuration">
 <code class="sig-name descname">proxy_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.proxy_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The proxy configuration details for the App Mesh proxy.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -733,28 +874,41 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <dt id="pulumi_aws.ecs.TaskDefinition.volumes">
 <code class="sig-name descname">volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.volumes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of volume blocks that containers in your task may use.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dockerVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Used to configure a docker volume</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoprovision</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the Docker volume is created if it does not already exist. <em>Note</em>: This field is only used if the scope is <code class="docutils literal notranslate"><span class="pre">shared</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">driver</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">driverOpts</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of Docker driver specific options.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of custom metadata to add to your Docker volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
+parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.ecs.TaskDefinition.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">container_definitions=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">proxy_configuration=None</em>, <em class="sig-param">requires_compatibilities=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_role_arn=None</em>, <em class="sig-param">volumes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TaskDefinition resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Full ARN of the Task Definition (including both <code class="docutils literal notranslate"><span class="pre">family</span></code> and <code class="docutils literal notranslate"><span class="pre">revision</span></code>).
-:param pulumi.Input[str] container_definitions: A list of valid [container definitions]</p>
-<blockquote>
-<div><p>(<a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html">http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html</a>) provided as a
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Full ARN of the Task Definition (including both <code class="docutils literal notranslate"><span class="pre">family</span></code> and <code class="docutils literal notranslate"><span class="pre">revision</span></code>).</p></li>
+<li><p><strong>container_definitions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A list of valid [container definitions]
+(<a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html">http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html</a>) provided as a
 single valid JSON document. Please note that you should only provide values that are part of the container
 definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
 (<a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html</a>) section from the
 official <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide">Developer Guide</a>.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
+</p></li>
 <li><p><strong>cpu</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The number of cpu units used by the task. If the <code class="docutils literal notranslate"><span class="pre">requires_compatibilities</span></code> is <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> this field is required.</p></li>
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.</p></li>
 <li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your task definition.</p></li>
@@ -772,6 +926,35 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 </ul>
 </dd>
 </dl>
+<p>The <strong>placement_constraints</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster Query Language expression to apply to the constraint.
+For more information, see <a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
+</ul>
+<p>The <strong>proxy_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">containerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container that will serve as the App Mesh proxy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The proxy type. The default value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>. The only supported value is <code class="docutils literal notranslate"><span class="pre">APPMESH</span></code>.</p></li>
+</ul>
+<p>The <strong>volumes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dockerVolumeConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Used to configure a docker volume</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoprovision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the Docker volume is created if it does not already exist. <em>Note</em>: This field is only used if the scope is <code class="docutils literal notranslate"><span class="pre">shared</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">driver</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">driverOpts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of Docker driver specific options.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of custom metadata to add to your Docker volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope for the Docker volume, which determines its lifecycle, either <code class="docutils literal notranslate"><span class="pre">task</span></code> or <code class="docutils literal notranslate"><span class="pre">shared</span></code>.  Docker volumes that are scoped to a <code class="docutils literal notranslate"><span class="pre">task</span></code> are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are <code class="docutils literal notranslate"><span class="pre">scoped</span></code> as shared persist after the task stops.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the volume. This name is referenced in the <code class="docutils literal notranslate"><span class="pre">sourceVolume</span></code>
+parameter of container definition in the <code class="docutils literal notranslate"><span class="pre">mountPoints</span></code> section.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown</a>.</p>
 </div></blockquote>
@@ -820,6 +1003,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cluster_name</strong> (<em>str</em>) – The name of the ECS Cluster</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -830,6 +1018,14 @@ cluster within an AWS ECS service.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_container_definition</code><span class="sig-paren">(</span><em class="sig-param">container_name=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_container_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS container definition data source allows access to details of
 a specific container within an AWS ECS service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>container_name</strong> (<em>str</em>) – The name of the container definition</p></li>
+<li><p><strong>task_definition</strong> (<em>str</em>) – The ARN of the task definition which contains the container</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown</a>.</p>
 </div></blockquote>
@@ -840,6 +1036,14 @@ a specific container within an AWS ECS service.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">cluster_arn=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Service data source allows access to details of a specific
 Service within a AWS ECS Cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_arn</strong> (<em>str</em>) – The arn of the ECS Cluster</p></li>
+<li><p><strong>service_name</strong> (<em>str</em>) – The name of the ECS Service</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown</a>.</p>
 </div></blockquote>
@@ -850,6 +1054,11 @@ Service within a AWS ECS Cluster.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_task_definition</code><span class="sig-paren">(</span><em class="sig-param">task_definition=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_task_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>task_definition</strong> (<em>str</em>) – The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown</a>.</p>
 </div></blockquote>

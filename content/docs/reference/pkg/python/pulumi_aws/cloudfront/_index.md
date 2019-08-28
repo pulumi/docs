@@ -76,6 +76,261 @@ region and the credentials configuring this argument must have
 </ul>
 </dd>
 </dl>
+<p>The <strong>custom_error_responses</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">errorCachingMinTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum amount of time you want
+HTTP error codes to stay in CloudFront caches before CloudFront queries your
+origin to see whether the object has been updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">errorCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The 4xx or 5xx HTTP status code that you want to
+customize.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code that you want CloudFront
+to return with the custom error page to the viewer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responsePagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path of the custom error page (for
+example, <code class="docutils literal notranslate"><span class="pre">/custom_404.html</span></code>).</p></li>
+</ul>
+<p>The <strong>default_cache_behavior</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Controls which HTTP methods CloudFront
+processes and forwards to your Amazon S3 bucket or your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cachedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Controls whether CloudFront caches the
+response to requests using the specified HTTP methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you want CloudFront to automatically
+compress content for web requests that include <code class="docutils literal notranslate"><span class="pre">Accept-Encoding:</span> <span class="pre">gzip</span></code> in
+the request header (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+in the absence of an <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code> or <code class="docutils literal notranslate"><span class="pre">Expires</span></code> header. Defaults to
+1 day.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLevelEncryptionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Field level encryption configuration ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The forwarded values cookies
+that specifies how CloudFront handles cookies (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether you want CloudFront to forward
+cookies to the origin that is associated with this cache behavior. You can
+specify <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code> or <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>. If <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, you must include the
+subsequent <code class="docutils literal notranslate"><span class="pre">whitelisted_names</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whitelistedNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If you have specified <code class="docutils literal notranslate"><span class="pre">whitelist</span></code> to
+<code class="docutils literal notranslate"><span class="pre">forward</span></code>, the whitelisted cookies that you want CloudFront to forward to
+your origin.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the Headers, if any, that you want
+CloudFront to vary upon for this cache behavior. Specify <code class="docutils literal notranslate"><span class="pre">*</span></code> to include all
+headers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want CloudFront to forward
+query strings to the origin that is associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryStringCacheKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - When specified, along with a value of
+<code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query strings are forwarded, however only the
+query string keys listed in this argument are cached. When omitted with a
+value of <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query string keys are cached.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionAssociations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A config block that triggers a lambda function with
+specific actions. Defined below, maximum 4.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific event to trigger this function.
+Valid values: <code class="docutils literal notranslate"><span class="pre">viewer-request</span></code>, <code class="docutils literal notranslate"><span class="pre">origin-request</span></code>, <code class="docutils literal notranslate"><span class="pre">viewer-response</span></code>,
+<code class="docutils literal notranslate"><span class="pre">origin-response</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeBody</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the Lambda function.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+to your origin to determine whether the object has been updated. Only
+effective in the presence of <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code>, <code class="docutils literal notranslate"><span class="pre">Cache-Control</span>
+<span class="pre">s-maxage</span></code>, and <code class="docutils literal notranslate"><span class="pre">Expires</span></code> headers. Defaults to 365 days.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum amount of time that you want objects to
+stay in CloudFront caches before CloudFront queries your origin to see
+whether the object has been updated. Defaults to 0 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smoothStreaming</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to distribute
+media files in Microsoft Smooth Streaming format using the origin that is
+associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of ID for the origin that you want
+CloudFront to route requests to when a request matches the path pattern
+either for a cache behavior or for the default cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Use this element to specify the
+protocol that users can use to access the files in the origin specified by
+TargetOriginId when a request matches the path pattern in PathPattern. One
+of <code class="docutils literal notranslate"><span class="pre">allow-all</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">redirect-to-https</span></code>.</p></li>
+</ul>
+<p>The <strong>logging_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 bucket to store the access logs in, for
+example, <code class="docutils literal notranslate"><span class="pre">myawslogbucket.s3.amazonaws.com</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeCookies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether you want CloudFront to
+include cookies in access logs (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional string that you want CloudFront to prefix
+to the access log filenames for this distribution, for example, <code class="docutils literal notranslate"><span class="pre">myprefix/</span></code>.</p></li>
+</ul>
+<p>The <strong>ordered_cache_behaviors</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Controls which HTTP methods CloudFront
+processes and forwards to your Amazon S3 bucket or your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cachedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Controls whether CloudFront caches the
+response to requests using the specified HTTP methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you want CloudFront to automatically
+compress content for web requests that include <code class="docutils literal notranslate"><span class="pre">Accept-Encoding:</span> <span class="pre">gzip</span></code> in
+the request header (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+in the absence of an <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code> or <code class="docutils literal notranslate"><span class="pre">Expires</span></code> header. Defaults to
+1 day.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLevelEncryptionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Field level encryption configuration ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The forwarded values cookies
+that specifies how CloudFront handles cookies (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether you want CloudFront to forward
+cookies to the origin that is associated with this cache behavior. You can
+specify <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code> or <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>. If <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, you must include the
+subsequent <code class="docutils literal notranslate"><span class="pre">whitelisted_names</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whitelistedNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If you have specified <code class="docutils literal notranslate"><span class="pre">whitelist</span></code> to
+<code class="docutils literal notranslate"><span class="pre">forward</span></code>, the whitelisted cookies that you want CloudFront to forward to
+your origin.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the Headers, if any, that you want
+CloudFront to vary upon for this cache behavior. Specify <code class="docutils literal notranslate"><span class="pre">*</span></code> to include all
+headers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want CloudFront to forward
+query strings to the origin that is associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryStringCacheKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - When specified, along with a value of
+<code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query strings are forwarded, however only the
+query string keys listed in this argument are cached. When omitted with a
+value of <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query string keys are cached.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionAssociations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A config block that triggers a lambda function with
+specific actions. Defined below, maximum 4.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific event to trigger this function.
+Valid values: <code class="docutils literal notranslate"><span class="pre">viewer-request</span></code>, <code class="docutils literal notranslate"><span class="pre">origin-request</span></code>, <code class="docutils literal notranslate"><span class="pre">viewer-response</span></code>,
+<code class="docutils literal notranslate"><span class="pre">origin-response</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeBody</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the Lambda function.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+to your origin to determine whether the object has been updated. Only
+effective in the presence of <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code>, <code class="docutils literal notranslate"><span class="pre">Cache-Control</span>
+<span class="pre">s-maxage</span></code>, and <code class="docutils literal notranslate"><span class="pre">Expires</span></code> headers. Defaults to 365 days.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum amount of time that you want objects to
+stay in CloudFront caches before CloudFront queries your origin to see
+whether the object has been updated. Defaults to 0 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The pattern (for example, <code class="docutils literal notranslate"><span class="pre">images/*.jpg)</span></code> that
+specifies which requests you want this cache behavior to apply to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smoothStreaming</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to distribute
+media files in Microsoft Smooth Streaming format using the origin that is
+associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of ID for the origin that you want
+CloudFront to route requests to when a request matches the path pattern
+either for a cache behavior or for the default cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Use this element to specify the
+protocol that users can use to access the files in the origin specified by
+TargetOriginId when a request matches the path pattern in PathPattern. One
+of <code class="docutils literal notranslate"><span class="pre">allow-all</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">redirect-to-https</span></code>.</p></li>
+</ul>
+<p>The <strong>origin_groups</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failoverCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The failover criteria for when to failover to the secondary origin</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP status codes for the origin group</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. Minimum 2.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the member origin</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the member origin</p></li>
+</ul>
+<p>The <strong>origins</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more sub-resources with <code class="docutils literal notranslate"><span class="pre">name</span></code> and
+<code class="docutils literal notranslate"><span class="pre">value</span></code> parameters that specify header data that will be sent to the origin
+(multiples allowed).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customOriginConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudFront custom
+origin configuration information. If an S3
+origin is required, use <code class="docutils literal notranslate"><span class="pre">s3_origin_config</span></code> instead.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP port the custom origin listens on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTPS port the custom origin listens on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originKeepaliveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of <code class="docutils literal notranslate"><span class="pre">60</span></code>. But you can request an <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout">increase</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The origin protocol policy to apply to
+your origin. One of <code class="docutils literal notranslate"><span class="pre">http-only</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">match-viewer</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originReadTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Custom Read timeout, in seconds. By default, AWS enforces a limit of <code class="docutils literal notranslate"><span class="pre">60</span></code>. But you can request an <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout">increase</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originSslProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The SSL/TLS protocols that you want
+CloudFront to use when communicating with your origin over HTTPS. A list of
+one or more of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">TLSv1.2</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS domain name of either the S3 bucket, or
+web site of your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the member origin</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional element that causes CloudFront to
+request your content from a directory in your Amazon S3 bucket or your
+custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3OriginConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudFront S3 origin
+configuration information. If a custom origin is required, use
+<code class="docutils literal notranslate"><span class="pre">custom_origin_config</span></code> instead.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">originAccessIdentity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [CloudFront origin access
+identity][5] to associate with the origin.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>restrictions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">geoRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The [ISO 3166-1-alpha-2 codes][4] for which you
+want CloudFront either to distribute your content (<code class="docutils literal notranslate"><span class="pre">whitelist</span></code>) or not
+distribute your content (<code class="docutils literal notranslate"><span class="pre">blacklist</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The method that you want to use to restrict
+distribution of your content by country: <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">blacklist</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>viewer_certificate</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the [AWS Certificate Manager][6]
+certificate that you wish to use with this distribution. Specify this,
+<code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.  The ACM
+certificate must be in  US-EAST-1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudfrontDefaultCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want viewers to use HTTPS
+to request your objects and you’re using the CloudFront domain name for your
+distribution. Specify this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iamCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IAM certificate identifier of the custom viewer
+certificate for this distribution if you are using a custom domain. Specify
+this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum version of the SSL protocol that
+you want CloudFront to use for HTTPS connections. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
+<code class="docutils literal notranslate"><span class="pre">TLSv1_2016</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1_2016</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1.2_2018</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>. <strong>NOTE</strong>:
+If you are using a custom certificate (specified with <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>
+or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>), and have specified <code class="docutils literal notranslate"><span class="pre">sni-only</span></code> in
+<code class="docutils literal notranslate"><span class="pre">ssl_support_method</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code> or later must be specified. If you have
+specified <code class="docutils literal notranslate"><span class="pre">vip</span></code> in <code class="docutils literal notranslate"><span class="pre">ssl_support_method</span></code>, only <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code> can be
+specified. If you have specified <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>
+must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslSupportMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown</a>.</p>
 </div></blockquote>
@@ -118,6 +373,17 @@ distribution.</p>
 <dt id="pulumi_aws.cloudfront.Distribution.custom_error_responses">
 <code class="sig-name descname">custom_error_responses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.custom_error_responses" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more custom error response elements (multiples allowed).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">errorCachingMinTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum amount of time you want
+HTTP error codes to stay in CloudFront caches before CloudFront queries your
+origin to see whether the object has been updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">errorCode</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The 4xx or 5xx HTTP status code that you want to
+customize.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP status code that you want CloudFront
+to return with the custom error page to the viewer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responsePagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path of the custom error page (for
+example, <code class="docutils literal notranslate"><span class="pre">/custom_404.html</span></code>).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -125,6 +391,76 @@ distribution.</p>
 <code class="sig-name descname">default_cache_behavior</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.default_cache_behavior" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default cache behavior for this distribution (maximum
 one).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Controls which HTTP methods CloudFront
+processes and forwards to your Amazon S3 bucket or your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cachedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Controls whether CloudFront caches the
+response to requests using the specified HTTP methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compress</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you want CloudFront to automatically
+compress content for web requests that include <code class="docutils literal notranslate"><span class="pre">Accept-Encoding:</span> <span class="pre">gzip</span></code> in
+the request header (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The default amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+in the absence of an <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code> or <code class="docutils literal notranslate"><span class="pre">Expires</span></code> header. Defaults to
+1 day.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLevelEncryptionId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Field level encryption configuration ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookies</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The forwarded values cookies
+that specifies how CloudFront handles cookies (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether you want CloudFront to forward
+cookies to the origin that is associated with this cache behavior. You can
+specify <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code> or <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>. If <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, you must include the
+subsequent <code class="docutils literal notranslate"><span class="pre">whitelisted_names</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whitelistedNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - If you have specified <code class="docutils literal notranslate"><span class="pre">whitelist</span></code> to
+<code class="docutils literal notranslate"><span class="pre">forward</span></code>, the whitelisted cookies that you want CloudFront to forward to
+your origin.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the Headers, if any, that you want
+CloudFront to vary upon for this cache behavior. Specify <code class="docutils literal notranslate"><span class="pre">*</span></code> to include all
+headers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want CloudFront to forward
+query strings to the origin that is associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryStringCacheKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - When specified, along with a value of
+<code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query strings are forwarded, however only the
+query string keys listed in this argument are cached. When omitted with a
+value of <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query string keys are cached.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionAssociations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A config block that triggers a lambda function with
+specific actions. Defined below, maximum 4.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The specific event to trigger this function.
+Valid values: <code class="docutils literal notranslate"><span class="pre">viewer-request</span></code>, <code class="docutils literal notranslate"><span class="pre">origin-request</span></code>, <code class="docutils literal notranslate"><span class="pre">viewer-response</span></code>,
+<code class="docutils literal notranslate"><span class="pre">origin-response</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeBody</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ARN of the Lambda function.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+to your origin to determine whether the object has been updated. Only
+effective in the presence of <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code>, <code class="docutils literal notranslate"><span class="pre">Cache-Control</span>
+<span class="pre">s-maxage</span></code>, and <code class="docutils literal notranslate"><span class="pre">Expires</span></code> headers. Defaults to 365 days.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum amount of time that you want objects to
+stay in CloudFront caches before CloudFront queries your origin to see
+whether the object has been updated. Defaults to 0 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smoothStreaming</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to distribute
+media files in Microsoft Smooth Streaming format using the origin that is
+associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of ID for the origin that you want
+CloudFront to route requests to when a request matches the path pattern
+either for a cache behavior or for the default cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Use this element to specify the
+protocol that users can use to access the files in the origin specified by
+TargetOriginId when a request matches the path pattern in PathPattern. One
+of <code class="docutils literal notranslate"><span class="pre">allow-all</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">redirect-to-https</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -196,6 +532,14 @@ currently in progress.</p>
 <dd><p>The logging
 configuration that controls how logs are written
 to your distribution (maximum one).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 bucket to store the access logs in, for
+example, <code class="docutils literal notranslate"><span class="pre">myawslogbucket.s3.amazonaws.com</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeCookies</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether you want CloudFront to
+include cookies in access logs (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional string that you want CloudFront to prefix
+to the access log filenames for this distribution, for example, <code class="docutils literal notranslate"><span class="pre">myprefix/</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -204,6 +548,78 @@ to your distribution (maximum one).</p>
 <dd><p>An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Controls which HTTP methods CloudFront
+processes and forwards to your Amazon S3 bucket or your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cachedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Controls whether CloudFront caches the
+response to requests using the specified HTTP methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compress</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you want CloudFront to automatically
+compress content for web requests that include <code class="docutils literal notranslate"><span class="pre">Accept-Encoding:</span> <span class="pre">gzip</span></code> in
+the request header (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The default amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+in the absence of an <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code> or <code class="docutils literal notranslate"><span class="pre">Expires</span></code> header. Defaults to
+1 day.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLevelEncryptionId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Field level encryption configuration ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookies</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The forwarded values cookies
+that specifies how CloudFront handles cookies (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether you want CloudFront to forward
+cookies to the origin that is associated with this cache behavior. You can
+specify <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code> or <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>. If <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, you must include the
+subsequent <code class="docutils literal notranslate"><span class="pre">whitelisted_names</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whitelistedNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - If you have specified <code class="docutils literal notranslate"><span class="pre">whitelist</span></code> to
+<code class="docutils literal notranslate"><span class="pre">forward</span></code>, the whitelisted cookies that you want CloudFront to forward to
+your origin.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the Headers, if any, that you want
+CloudFront to vary upon for this cache behavior. Specify <code class="docutils literal notranslate"><span class="pre">*</span></code> to include all
+headers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want CloudFront to forward
+query strings to the origin that is associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryStringCacheKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - When specified, along with a value of
+<code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query strings are forwarded, however only the
+query string keys listed in this argument are cached. When omitted with a
+value of <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query string keys are cached.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionAssociations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A config block that triggers a lambda function with
+specific actions. Defined below, maximum 4.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The specific event to trigger this function.
+Valid values: <code class="docutils literal notranslate"><span class="pre">viewer-request</span></code>, <code class="docutils literal notranslate"><span class="pre">origin-request</span></code>, <code class="docutils literal notranslate"><span class="pre">viewer-response</span></code>,
+<code class="docutils literal notranslate"><span class="pre">origin-response</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeBody</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ARN of the Lambda function.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+to your origin to determine whether the object has been updated. Only
+effective in the presence of <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code>, <code class="docutils literal notranslate"><span class="pre">Cache-Control</span>
+<span class="pre">s-maxage</span></code>, and <code class="docutils literal notranslate"><span class="pre">Expires</span></code> headers. Defaults to 365 days.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum amount of time that you want objects to
+stay in CloudFront caches before CloudFront queries your origin to see
+whether the object has been updated. Defaults to 0 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The pattern (for example, <code class="docutils literal notranslate"><span class="pre">images/*.jpg)</span></code> that
+specifies which requests you want this cache behavior to apply to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smoothStreaming</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to distribute
+media files in Microsoft Smooth Streaming format using the origin that is
+associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of ID for the origin that you want
+CloudFront to route requests to when a request matches the path pattern
+either for a cache behavior or for the default cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Use this element to specify the
+protocol that users can use to access the files in the origin specified by
+TargetOriginId when a request matches the path pattern in PathPattern. One
+of <code class="docutils literal notranslate"><span class="pre">allow-all</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">redirect-to-https</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -211,6 +627,45 @@ in order of precedence. The topmost cache behavior will have precedence 0.</p>
 <code class="sig-name descname">origins</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.origins" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more origins for this
 distribution (multiples allowed).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more sub-resources with <code class="docutils literal notranslate"><span class="pre">name</span></code> and
+<code class="docutils literal notranslate"><span class="pre">value</span></code> parameters that specify header data that will be sent to the origin
+(multiples allowed).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customOriginConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudFront custom
+origin configuration information. If an S3
+origin is required, use <code class="docutils literal notranslate"><span class="pre">s3_origin_config</span></code> instead.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP port the custom origin listens on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTPS port the custom origin listens on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originKeepaliveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of <code class="docutils literal notranslate"><span class="pre">60</span></code>. But you can request an <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout">increase</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The origin protocol policy to apply to
+your origin. One of <code class="docutils literal notranslate"><span class="pre">http-only</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">match-viewer</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originReadTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Custom Read timeout, in seconds. By default, AWS enforces a limit of <code class="docutils literal notranslate"><span class="pre">60</span></code>. But you can request an <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout">increase</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originSslProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The SSL/TLS protocols that you want
+CloudFront to use when communicating with your origin over HTTPS. A list of
+one or more of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">TLSv1.2</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DNS domain name of either the S3 bucket, or
+web site of your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the member origin</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An optional element that causes CloudFront to
+request your content from a directory in your Amazon S3 bucket or your
+custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3OriginConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudFront S3 origin
+configuration information. If a custom origin is required, use
+<code class="docutils literal notranslate"><span class="pre">custom_origin_config</span></code> instead.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">originAccessIdentity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The [CloudFront origin access
+identity][5] to associate with the origin.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -218,6 +673,19 @@ distribution (multiples allowed).</p>
 <code class="sig-name descname">origin_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.origin_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more origin_group for this
 distribution (multiples allowed).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failoverCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The failover criteria for when to failover to the secondary origin</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of HTTP status codes for the origin group</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. Minimum 2.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the member origin</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the member origin</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -232,6 +700,18 @@ distribution (multiples allowed).</p>
 <code class="sig-name descname">restrictions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.restrictions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The restriction
 configuration for this distribution (maximum one).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">geoRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The [ISO 3166-1-alpha-2 codes][4] for which you
+want CloudFront either to distribute your content (<code class="docutils literal notranslate"><span class="pre">whitelist</span></code>) or not
+distribute your content (<code class="docutils literal notranslate"><span class="pre">blacklist</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The method that you want to use to restrict
+distribution of your content by country: <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">blacklist</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -262,6 +742,28 @@ CloudFront system.</p>
 <dd><p>The SSL
 configuration for this distribution (maximum
 one).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the [AWS Certificate Manager][6]
+certificate that you wish to use with this distribution. Specify this,
+<code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.  The ACM
+certificate must be in  US-EAST-1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudfrontDefaultCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want viewers to use HTTPS
+to request your objects and you’re using the CloudFront domain name for your
+distribution. Specify this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iamCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IAM certificate identifier of the custom viewer
+certificate for this distribution if you are using a custom domain. Specify
+this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The minimum version of the SSL protocol that
+you want CloudFront to use for HTTPS connections. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
+<code class="docutils literal notranslate"><span class="pre">TLSv1_2016</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1_2016</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1.2_2018</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>. <strong>NOTE</strong>:
+If you are using a custom certificate (specified with <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>
+or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>), and have specified <code class="docutils literal notranslate"><span class="pre">sni-only</span></code> in
+<code class="docutils literal notranslate"><span class="pre">ssl_support_method</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code> or later must be specified. If you have
+specified <code class="docutils literal notranslate"><span class="pre">vip</span></code> in <code class="docutils literal notranslate"><span class="pre">ssl_support_method</span></code>, only <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code> can be
+specified. If you have specified <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>
+must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslSupportMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -286,18 +788,16 @@ region and the credentials configuring this argument must have
 <dt id="pulumi_aws.cloudfront.Distribution.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_trusted_signers=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">custom_error_responses=None</em>, <em class="sig-param">default_cache_behavior=None</em>, <em class="sig-param">default_root_object=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">http_version=None</em>, <em class="sig-param">in_progress_validation_batches=None</em>, <em class="sig-param">is_ipv6_enabled=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">logging_config=None</em>, <em class="sig-param">ordered_cache_behaviors=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">origin_groups=None</em>, <em class="sig-param">price_class=None</em>, <em class="sig-param">restrictions=None</em>, <em class="sig-param">retain_on_delete=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">viewer_certificate=None</em>, <em class="sig-param">wait_for_deployment=None</em>, <em class="sig-param">web_acl_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Distribution resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] active_trusted_signers: The key pair IDs that CloudFront is aware of for</p>
-<blockquote>
-<div><p>each trusted signer, if the distribution is set up to serve private content
-with signed URLs.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active_trusted_signers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The key pair IDs that CloudFront is aware of for
+each trusted signer, if the distribution is set up to serve private content
+with signed URLs.</p></li>
 <li><p><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Extra CNAMEs (alternate domain names), if any, for
 this distribution.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</p></li>
@@ -361,6 +861,261 @@ region and the credentials configuring this argument must have
 </ul>
 </dd>
 </dl>
+<p>The <strong>custom_error_responses</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">errorCachingMinTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum amount of time you want
+HTTP error codes to stay in CloudFront caches before CloudFront queries your
+origin to see whether the object has been updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">errorCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The 4xx or 5xx HTTP status code that you want to
+customize.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP status code that you want CloudFront
+to return with the custom error page to the viewer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">responsePagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path of the custom error page (for
+example, <code class="docutils literal notranslate"><span class="pre">/custom_404.html</span></code>).</p></li>
+</ul>
+<p>The <strong>default_cache_behavior</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Controls which HTTP methods CloudFront
+processes and forwards to your Amazon S3 bucket or your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cachedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Controls whether CloudFront caches the
+response to requests using the specified HTTP methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you want CloudFront to automatically
+compress content for web requests that include <code class="docutils literal notranslate"><span class="pre">Accept-Encoding:</span> <span class="pre">gzip</span></code> in
+the request header (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+in the absence of an <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code> or <code class="docutils literal notranslate"><span class="pre">Expires</span></code> header. Defaults to
+1 day.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLevelEncryptionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Field level encryption configuration ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The forwarded values cookies
+that specifies how CloudFront handles cookies (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether you want CloudFront to forward
+cookies to the origin that is associated with this cache behavior. You can
+specify <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code> or <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>. If <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, you must include the
+subsequent <code class="docutils literal notranslate"><span class="pre">whitelisted_names</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whitelistedNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If you have specified <code class="docutils literal notranslate"><span class="pre">whitelist</span></code> to
+<code class="docutils literal notranslate"><span class="pre">forward</span></code>, the whitelisted cookies that you want CloudFront to forward to
+your origin.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the Headers, if any, that you want
+CloudFront to vary upon for this cache behavior. Specify <code class="docutils literal notranslate"><span class="pre">*</span></code> to include all
+headers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want CloudFront to forward
+query strings to the origin that is associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryStringCacheKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - When specified, along with a value of
+<code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query strings are forwarded, however only the
+query string keys listed in this argument are cached. When omitted with a
+value of <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query string keys are cached.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionAssociations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A config block that triggers a lambda function with
+specific actions. Defined below, maximum 4.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific event to trigger this function.
+Valid values: <code class="docutils literal notranslate"><span class="pre">viewer-request</span></code>, <code class="docutils literal notranslate"><span class="pre">origin-request</span></code>, <code class="docutils literal notranslate"><span class="pre">viewer-response</span></code>,
+<code class="docutils literal notranslate"><span class="pre">origin-response</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeBody</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the Lambda function.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+to your origin to determine whether the object has been updated. Only
+effective in the presence of <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code>, <code class="docutils literal notranslate"><span class="pre">Cache-Control</span>
+<span class="pre">s-maxage</span></code>, and <code class="docutils literal notranslate"><span class="pre">Expires</span></code> headers. Defaults to 365 days.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum amount of time that you want objects to
+stay in CloudFront caches before CloudFront queries your origin to see
+whether the object has been updated. Defaults to 0 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smoothStreaming</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to distribute
+media files in Microsoft Smooth Streaming format using the origin that is
+associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of ID for the origin that you want
+CloudFront to route requests to when a request matches the path pattern
+either for a cache behavior or for the default cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Use this element to specify the
+protocol that users can use to access the files in the origin specified by
+TargetOriginId when a request matches the path pattern in PathPattern. One
+of <code class="docutils literal notranslate"><span class="pre">allow-all</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">redirect-to-https</span></code>.</p></li>
+</ul>
+<p>The <strong>logging_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 bucket to store the access logs in, for
+example, <code class="docutils literal notranslate"><span class="pre">myawslogbucket.s3.amazonaws.com</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeCookies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether you want CloudFront to
+include cookies in access logs (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional string that you want CloudFront to prefix
+to the access log filenames for this distribution, for example, <code class="docutils literal notranslate"><span class="pre">myprefix/</span></code>.</p></li>
+</ul>
+<p>The <strong>ordered_cache_behaviors</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Controls which HTTP methods CloudFront
+processes and forwards to your Amazon S3 bucket or your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cachedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Controls whether CloudFront caches the
+response to requests using the specified HTTP methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you want CloudFront to automatically
+compress content for web requests that include <code class="docutils literal notranslate"><span class="pre">Accept-Encoding:</span> <span class="pre">gzip</span></code> in
+the request header (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+in the absence of an <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code> or <code class="docutils literal notranslate"><span class="pre">Expires</span></code> header. Defaults to
+1 day.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLevelEncryptionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Field level encryption configuration ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forwardedValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The forwarded values configuration that specifies how CloudFront
+handles query strings, cookies and headers (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The forwarded values cookies
+that specifies how CloudFront handles cookies (maximum one).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">forward</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether you want CloudFront to forward
+cookies to the origin that is associated with this cache behavior. You can
+specify <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code> or <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>. If <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, you must include the
+subsequent <code class="docutils literal notranslate"><span class="pre">whitelisted_names</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whitelistedNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - If you have specified <code class="docutils literal notranslate"><span class="pre">whitelist</span></code> to
+<code class="docutils literal notranslate"><span class="pre">forward</span></code>, the whitelisted cookies that you want CloudFront to forward to
+your origin.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the Headers, if any, that you want
+CloudFront to vary upon for this cache behavior. Specify <code class="docutils literal notranslate"><span class="pre">*</span></code> to include all
+headers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want CloudFront to forward
+query strings to the origin that is associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryStringCacheKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - When specified, along with a value of
+<code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query strings are forwarded, however only the
+query string keys listed in this argument are cached. When omitted with a
+value of <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">query_string</span></code>, all query string keys are cached.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionAssociations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A config block that triggers a lambda function with
+specific actions. Defined below, maximum 4.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific event to trigger this function.
+Valid values: <code class="docutils literal notranslate"><span class="pre">viewer-request</span></code>, <code class="docutils literal notranslate"><span class="pre">origin-request</span></code>, <code class="docutils literal notranslate"><span class="pre">viewer-response</span></code>,
+<code class="docutils literal notranslate"><span class="pre">origin-response</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeBody</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the Lambda function.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum amount of time (in seconds) that an
+object is in a CloudFront cache before CloudFront forwards another request
+to your origin to determine whether the object has been updated. Only
+effective in the presence of <code class="docutils literal notranslate"><span class="pre">Cache-Control</span> <span class="pre">max-age</span></code>, <code class="docutils literal notranslate"><span class="pre">Cache-Control</span>
+<span class="pre">s-maxage</span></code>, and <code class="docutils literal notranslate"><span class="pre">Expires</span></code> headers. Defaults to 365 days.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum amount of time that you want objects to
+stay in CloudFront caches before CloudFront queries your origin to see
+whether the object has been updated. Defaults to 0 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The pattern (for example, <code class="docutils literal notranslate"><span class="pre">images/*.jpg)</span></code> that
+specifies which requests you want this cache behavior to apply to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smoothStreaming</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to distribute
+media files in Microsoft Smooth Streaming format using the origin that is
+associated with this cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of ID for the origin that you want
+CloudFront to route requests to when a request matches the path pattern
+either for a cache behavior or for the default cache behavior.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Use this element to specify the
+protocol that users can use to access the files in the origin specified by
+TargetOriginId when a request matches the path pattern in PathPattern. One
+of <code class="docutils literal notranslate"><span class="pre">allow-all</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">redirect-to-https</span></code>.</p></li>
+</ul>
+<p>The <strong>origin_groups</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failoverCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The failover criteria for when to failover to the secondary origin</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP status codes for the origin group</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. Minimum 2.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the member origin</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the member origin</p></li>
+</ul>
+<p>The <strong>origins</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more sub-resources with <code class="docutils literal notranslate"><span class="pre">name</span></code> and
+<code class="docutils literal notranslate"><span class="pre">value</span></code> parameters that specify header data that will be sent to the origin
+(multiples allowed).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customOriginConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudFront custom
+origin configuration information. If an S3
+origin is required, use <code class="docutils literal notranslate"><span class="pre">s3_origin_config</span></code> instead.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP port the custom origin listens on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpsPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTPS port the custom origin listens on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originKeepaliveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of <code class="docutils literal notranslate"><span class="pre">60</span></code>. But you can request an <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout">increase</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The origin protocol policy to apply to
+your origin. One of <code class="docutils literal notranslate"><span class="pre">http-only</span></code>, <code class="docutils literal notranslate"><span class="pre">https-only</span></code>, or <code class="docutils literal notranslate"><span class="pre">match-viewer</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originReadTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Custom Read timeout, in seconds. By default, AWS enforces a limit of <code class="docutils literal notranslate"><span class="pre">60</span></code>. But you can request an <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout">increase</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originSslProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The SSL/TLS protocols that you want
+CloudFront to use when communicating with your origin over HTTPS. A list of
+one or more of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1</span></code>, and <code class="docutils literal notranslate"><span class="pre">TLSv1.2</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS domain name of either the S3 bucket, or
+web site of your custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the member origin</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">originPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An optional element that causes CloudFront to
+request your content from a directory in your Amazon S3 bucket or your
+custom origin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3OriginConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudFront S3 origin
+configuration information. If a custom origin is required, use
+<code class="docutils literal notranslate"><span class="pre">custom_origin_config</span></code> instead.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">originAccessIdentity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [CloudFront origin access
+identity][5] to associate with the origin.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>restrictions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">geoRestriction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">locations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The [ISO 3166-1-alpha-2 codes][4] for which you
+want CloudFront either to distribute your content (<code class="docutils literal notranslate"><span class="pre">whitelist</span></code>) or not
+distribute your content (<code class="docutils literal notranslate"><span class="pre">blacklist</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restrictionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The method that you want to use to restrict
+distribution of your content by country: <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">whitelist</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">blacklist</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>viewer_certificate</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">acmCertificateArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the [AWS Certificate Manager][6]
+certificate that you wish to use with this distribution. Specify this,
+<code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.  The ACM
+certificate must be in  US-EAST-1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudfrontDefaultCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want viewers to use HTTPS
+to request your objects and you’re using the CloudFront domain name for your
+distribution. Specify this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iamCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IAM certificate identifier of the custom viewer
+certificate for this distribution if you are using a custom domain. Specify
+this, <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>, or <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum version of the SSL protocol that
+you want CloudFront to use for HTTPS connections. One of <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>,
+<code class="docutils literal notranslate"><span class="pre">TLSv1_2016</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1.1_2016</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1.2_2018</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>. <strong>NOTE</strong>:
+If you are using a custom certificate (specified with <code class="docutils literal notranslate"><span class="pre">acm_certificate_arn</span></code>
+or <code class="docutils literal notranslate"><span class="pre">iam_certificate_id</span></code>), and have specified <code class="docutils literal notranslate"><span class="pre">sni-only</span></code> in
+<code class="docutils literal notranslate"><span class="pre">ssl_support_method</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code> or later must be specified. If you have
+specified <code class="docutils literal notranslate"><span class="pre">vip</span></code> in <code class="docutils literal notranslate"><span class="pre">ssl_support_method</span></code>, only <code class="docutils literal notranslate"><span class="pre">SSLv3</span></code> or <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code> can be
+specified. If you have specified <code class="docutils literal notranslate"><span class="pre">cloudfront_default_certificate</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1</span></code>
+must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslSupportMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown</a>.</p>
 </div></blockquote>
@@ -471,17 +1226,15 @@ permission to an object in Amazon S3.</p>
 <dt id="pulumi_aws.cloudfront.OriginAccessIdentity.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">caller_reference=None</em>, <em class="sig-param">cloudfront_access_identity_path=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">iam_arn=None</em>, <em class="sig-param">s3_canonical_user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OriginAccessIdentity resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] caller_reference: Internal value used by CloudFront to allow future</p>
-<blockquote>
-<div><p>updates to the origin access identity.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>caller_reference</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Internal value used by CloudFront to allow future
+updates to the origin access identity.</p></li>
 <li><p><strong>cloudfront_access_identity_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.</p></li>
 <li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment for the origin access identity.</p></li>
@@ -598,16 +1351,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudfront.PublicKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">encoded_key=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PublicKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] caller_reference: Internal value used by CloudFront to allow future updates to the public key configuration.
-:param pulumi.Input[str] comment: An optional comment about the public key.
-:param pulumi.Input[str] encoded_key: The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
-:param pulumi.Input[str] etag: The current version of the public key. For example: <code class="docutils literal notranslate"><span class="pre">E2QWRUHAPOMQZL</span></code>.
-:param pulumi.Input[str] name: The name for the public key. By default generated by this provider.
-:param pulumi.Input[str] name_prefix: The name for the public key. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>caller_reference</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Internal value used by CloudFront to allow future updates to the public key configuration.</p></li>
+<li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment about the public key.</p></li>
+<li><p><strong>encoded_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encoded public key that you want to add to CloudFront to use with features like field-level encryption.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the public key. For example: <code class="docutils literal notranslate"><span class="pre">E2QWRUHAPOMQZL</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the public key. By default generated by this provider.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the public key. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_public_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_public_key.html.markdown</a>.</p>
 </div></blockquote>

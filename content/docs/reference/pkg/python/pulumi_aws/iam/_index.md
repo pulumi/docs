@@ -87,11 +87,17 @@ Valid values are <code class="docutils literal notranslate"><span class="pre">Ac
 <dt id="pulumi_aws.iam.AccessKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encrypted_secret=None</em>, <em class="sig-param">key_fingerprint=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">ses_smtp_password=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccessKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AccessKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] encrypted_secret: The encrypted secret, base64 encoded.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>encrypted_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encrypted secret, base64 encoded.</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; **NOTE:** The encrypted secret may be decrypted using the command line,
 for example: `... | base64 --decode | keybase pgp decrypt`.
 </pre></div>
@@ -188,11 +194,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.AccountAlias.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_alias=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccountAlias.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AccountAlias resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_alias: The account alias</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The account alias</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_account_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_account_alias.html.markdown</a>.</p>
 </div></blockquote>
@@ -333,19 +345,17 @@ Returns <code class="docutils literal notranslate"><span class="pre">false</span
 <dt id="pulumi_aws.iam.AccountPasswordPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_users_to_change_password=None</em>, <em class="sig-param">expire_passwords=None</em>, <em class="sig-param">hard_expiry=None</em>, <em class="sig-param">max_password_age=None</em>, <em class="sig-param">minimum_password_length=None</em>, <em class="sig-param">password_reuse_prevention=None</em>, <em class="sig-param">require_lowercase_characters=None</em>, <em class="sig-param">require_numbers=None</em>, <em class="sig-param">require_symbols=None</em>, <em class="sig-param">require_uppercase_characters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccountPasswordPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AccountPasswordPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] allow_users_to_change_password: Whether to allow users to change their own password
-:param pulumi.Input[bool] expire_passwords: Indicates whether passwords in the account expire.</p>
-<blockquote>
-<div><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">max_password_age</span></code> contains a value greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>.
-Returns <code class="docutils literal notranslate"><span class="pre">false</span></code> if it is <code class="docutils literal notranslate"><span class="pre">0</span></code> or <em>not present</em>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allow_users_to_change_password</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow users to change their own password</p></li>
+<li><p><strong>expire_passwords</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether passwords in the account expire.
+Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">max_password_age</span></code> contains a value greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>.
+Returns <code class="docutils literal notranslate"><span class="pre">false</span></code> if it is <code class="docutils literal notranslate"><span class="pre">0</span></code> or <em>not present</em>.</p></li>
 <li><p><strong>hard_expiry</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)</p></li>
 <li><p><strong>max_password_age</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days that an user password is valid.</p></li>
@@ -758,14 +768,21 @@ was created.</p>
 <dt id="pulumi_aws.iam.Group.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Group.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Group resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource<em>name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN assigned by AWS for this group.
-:param pulumi.Input[str] name: The group’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.&#64;-</em>.`. Group names are not distinguished by case. For example, you cannot create groups named both “ADMINS” and “admins”.
-:param pulumi.Input[str] path: Path in which to create the group.
-:param pulumi.Input[str] unique_id: The [unique ID][1] assigned by AWS.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The unique name of the resulting resource.</p>
+</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS for this group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <cite>=,.&#64;-*.</cite>. Group names are not distinguished by case. For example, you cannot create groups named both “ADMINS” and “admins”.</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the group.</p></li>
+<li><p><strong>unique_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [unique ID][1] assigned by AWS.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -858,13 +875,19 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 <dt id="pulumi_aws.iam.GroupMembership.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupMembership.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GroupMembership resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] group: The IAM Group name to attach the list of <code class="docutils literal notranslate"><span class="pre">users</span></code> to
-:param pulumi.Input[str] name: The name to identify the Group Membership
-:param pulumi.Input[list] users: A list of IAM User names to associate with the Group</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Group name to attach the list of <code class="docutils literal notranslate"><span class="pre">users</span></code> to</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify the Group Membership</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IAM User names to associate with the Group</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_group_membership.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_group_membership.html.markdown</a>.</p>
 </div></blockquote>
@@ -959,18 +982,16 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_aws.iam.GroupPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GroupPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] group: The IAM group to attach to the policy.
-:param pulumi.Input[str] name: The name of the policy. If omitted, this provider will</p>
-<blockquote>
-<div><p>assign a random, unique name.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM group to attach to the policy.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. If omitted, this provider will
+assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
@@ -1056,12 +1077,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.GroupPolicyAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">policy_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupPolicyAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GroupPolicyAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] group: The group the policy should be applied to
-:param pulumi.Input[str] policy_arn: The ARN of the policy you want to apply</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group the policy should be applied to</p></li>
+<li><p><strong>policy_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy you want to apply</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_group_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_group_policy_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -1180,23 +1207,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.InstanceProfile.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">create_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.InstanceProfile.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceProfile resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN assigned by AWS to the instance profile.
-:param pulumi.Input[str] create_date: The creation timestamp of the instance profile.
-:param pulumi.Input[str] name: The profile’s name. If omitted, this provider will assign a random, unique name.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[str] path: Path in which to create the profile.
-:param pulumi.Input[str] role: The role name to include in the profile.
-:param pulumi.Input[list] roles:</p>
-<blockquote>
-<div><p>A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to <code class="docutils literal notranslate"><span class="pre">Cannot</span> <span class="pre">exceed</span> <span class="pre">quota</span> <span class="pre">for</span> <span class="pre">InstanceSessionsPerInstanceProfile:</span> <span class="pre">1</span></code>, then you must contact AWS support and ask for a limit increase.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>unique_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [unique ID][1] assigned by AWS.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS to the instance profile.</p></li>
+<li><p><strong>create_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation timestamp of the instance profile.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The profile’s name. If omitted, this provider will assign a random, unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the profile.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role name to include in the profile.</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to <code class="docutils literal notranslate"><span class="pre">Cannot</span> <span class="pre">exceed</span> <span class="pre">quota</span> <span class="pre">for</span> <span class="pre">InstanceSessionsPerInstanceProfile:</span> <span class="pre">1</span></code>, then you must contact AWS support and ask for a limit increase.</p></li>
+<li><p><strong>unique_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [unique ID][1] assigned by AWS.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -1288,14 +1314,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.OpenIdConnectProvider.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">client_id_lists=None</em>, <em class="sig-param">thumbprint_lists=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.OpenIdConnectProvider.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OpenIdConnectProvider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN assigned by AWS for this provider.
-:param pulumi.Input[list] client_id_lists: A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that’s sent as the client_id parameter on OAuth requests.)
-:param pulumi.Input[list] thumbprint_lists: A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider’s server certificate(s). 
-:param pulumi.Input[str] url: The URL of the identity provider. Corresponds to the <em>iss</em> claim.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS for this provider.</p></li>
+<li><p><strong>client_id_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that’s sent as the client_id parameter on OAuth requests.)</p></li>
+<li><p><strong>thumbprint_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider’s server certificate(s).</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the identity provider. Corresponds to the <em>iss</em> claim.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_openid_connect_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_openid_connect_provider.html.markdown</a>.</p>
 </div></blockquote>
@@ -1401,21 +1433,22 @@ See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/U
 <dt id="pulumi_aws.iam.Policy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Policy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Policy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN assigned by AWS to this policy.
-:param pulumi.Input[str] description: Description of the IAM policy.
-:param pulumi.Input[str] name: The name of the policy. If omitted, this provider will assign a random, unique name.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[str] path: Path in which to create the policy.</p>
-<blockquote>
-<div><p>See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS to this policy.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the IAM policy.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. If omitted, this provider will assign a random, unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Path in which to create the policy.
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
+</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -1519,15 +1552,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.PolicyAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_arn=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.PolicyAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PolicyAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] groups: The group(s) the policy should be applied to
-:param pulumi.Input[str] name: The name of the attachment. This cannot be an empty string.
-:param pulumi.Input[str] policy_arn: The ARN of the policy you want to apply
-:param pulumi.Input[list] roles: The role(s) the policy should be applied to
-:param pulumi.Input[list] users: The user(s) the policy should be applied to</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The group(s) the policy should be applied to</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the attachment. This cannot be an empty string.</p></li>
+<li><p><strong>policy_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy you want to apply</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The role(s) the policy should be applied to</p></li>
+<li><p><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The user(s) the policy should be applied to</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_policy_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -1677,25 +1716,24 @@ See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/U
 <dt id="pulumi_aws.iam.Role.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">assume_role_policy=None</em>, <em class="sig-param">create_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">force_detach_policies=None</em>, <em class="sig-param">max_session_duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">permissions_boundary=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Role.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Role resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) specifying the role.
-:param pulumi.Input[str] assume_role_policy: The policy that grants an entity permission to assume the role.
-:param pulumi.Input[str] create_date: The creation date of the IAM role.
-:param pulumi.Input[str] description: The description of the role.
-:param pulumi.Input[bool] force_detach_policies: Specifies to force detaching any policies the role has before destroying it. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[float] max_session_duration: The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
-:param pulumi.Input[str] name: The name of the role. If omitted, this provider will assign a random, unique name.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[str] path: The path to the role.</p>
-<blockquote>
-<div><p>See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the role.</p></li>
+<li><p><strong>assume_role_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy that grants an entity permission to assume the role.</p></li>
+<li><p><strong>create_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the IAM role.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the role.</p></li>
+<li><p><strong>force_detach_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies to force detaching any policies the role has before destroying it. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>max_session_duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role. If omitted, this provider will assign a random, unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The path to the role.
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
+</p></li>
 <li><p><strong>permissions_boundary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy that is used to set the permissions boundary for the role.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the IAM role</p></li>
 <li><p><strong>unique_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The stable and unique string identifying the role.</p></li>
@@ -1796,17 +1834,15 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_aws.iam.RolePolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.RolePolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RolePolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the role policy. If omitted, this provider will</p>
-<blockquote>
-<div><p>assign a random, unique name.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role policy. If omitted, this provider will
+assign a random, unique name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
 prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
@@ -1893,12 +1929,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.RolePolicyAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_arn=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.RolePolicyAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RolePolicyAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy_arn: The ARN of the policy you want to apply
-:param pulumi.Input[str] role: The role the policy should be applied to</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy you want to apply</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role the policy should be applied to</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_role_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_role_policy_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -1987,14 +2029,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.SamlProvider.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">saml_metadata_document=None</em>, <em class="sig-param">valid_until=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.SamlProvider.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SamlProvider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN assigned by AWS for this provider.
-:param pulumi.Input[str] name: The name of the provider to create.
-:param pulumi.Input[str] saml_metadata_document: An XML document generated by an identity provider that supports SAML 2.0.
-:param pulumi.Input[str] valid_until: The expiration date and time for the SAML provider in RFC1123 format, e.g. <code class="docutils literal notranslate"><span class="pre">Mon,</span> <span class="pre">02</span> <span class="pre">Jan</span> <span class="pre">2006</span> <span class="pre">15:04:05</span> <span class="pre">MST</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS for this provider.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the provider to create.</p></li>
+<li><p><strong>saml_metadata_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An XML document generated by an identity provider that supports SAML 2.0.</p></li>
+<li><p><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration date and time for the SAML provider in RFC1123 format, e.g. <code class="docutils literal notranslate"><span class="pre">Mon,</span> <span class="pre">02</span> <span class="pre">Jan</span> <span class="pre">2006</span> <span class="pre">15:04:05</span> <span class="pre">MST</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_saml_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_saml_provider.html.markdown</a>.</p>
 </div></blockquote>
@@ -2135,18 +2183,16 @@ See [IAM Identifiers][1] for more details on IAM Paths.</p>
 <dt id="pulumi_aws.iam.ServerCertificate.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">certificate_body=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">private_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.ServerCertificate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ServerCertificate resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) specifying the server certificate.
-:param pulumi.Input[str] certificate_body: The contents of the public key certificate in</p>
-<blockquote>
-<div><p>PEM-encoded format.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the server certificate.</p></li>
+<li><p><strong>certificate_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the public key certificate in
+PEM-encoded format.</p></li>
 <li><p><strong>certificate_chain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the certificate chain.
 This is typically a concatenation of the PEM-encoded public key certificates
 of the chain.</p></li>
@@ -2275,18 +2321,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.ServiceLinkedRole.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">aws_service_name=None</em>, <em class="sig-param">create_date=None</em>, <em class="sig-param">custom_suffix=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.ServiceLinkedRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ServiceLinkedRole resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) specifying the role.
-:param pulumi.Input[str] aws_service_name: The AWS service to which this role is attached. You use a string similar to a URL but without the <code class="docutils literal notranslate"><span class="pre">http://</span></code> in front. For example: <code class="docutils literal notranslate"><span class="pre">elasticbeanstalk.amazonaws.com</span></code>. To find the full list of services that support service-linked roles, check <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">the docs</a>.
-:param pulumi.Input[str] create_date: The creation date of the IAM role.
-:param pulumi.Input[str] custom_suffix: Additional string appended to the role name. Not all AWS services support custom suffixes.
-:param pulumi.Input[str] description: The description of the role.
-:param pulumi.Input[str] name: The name of the role.
-:param pulumi.Input[str] path: The path of the role.
-:param pulumi.Input[str] unique_id: The stable and unique string identifying the role.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the role.</p></li>
+<li><p><strong>aws_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The AWS service to which this role is attached. You use a string similar to a URL but without the <code class="docutils literal notranslate"><span class="pre">http://</span></code> in front. For example: <code class="docutils literal notranslate"><span class="pre">elasticbeanstalk.amazonaws.com</span></code>. To find the full list of services that support service-linked roles, check <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">the docs</a>.</p>
+</p></li>
+<li><p><strong>create_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the IAM role.</p></li>
+<li><p><strong>custom_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Additional string appended to the role name. Not all AWS services support custom suffixes.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the role.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role.</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of the role.</p></li>
+<li><p><strong>unique_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The stable and unique string identifying the role.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_service_linked_role.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_service_linked_role.html.markdown</a>.</p>
 </div></blockquote>
@@ -2389,16 +2442,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.SshKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">ssh_public_key_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.SshKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SshKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] encoding: Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use <code class="docutils literal notranslate"><span class="pre">SSH</span></code>. To retrieve the public key in PEM format, use <code class="docutils literal notranslate"><span class="pre">PEM</span></code>.
-:param pulumi.Input[str] fingerprint: The MD5 message digest of the SSH public key.
-:param pulumi.Input[str] public_key: The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
-:param pulumi.Input[str] ssh_public_key_id: The unique identifier for the SSH public key.
-:param pulumi.Input[str] status: The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is <code class="docutils literal notranslate"><span class="pre">active</span></code>.
-:param pulumi.Input[str] username: The name of the IAM user to associate the SSH public key with.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use <code class="docutils literal notranslate"><span class="pre">SSH</span></code>. To retrieve the public key in PEM format, use <code class="docutils literal notranslate"><span class="pre">PEM</span></code>.</p></li>
+<li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MD5 message digest of the SSH public key.</p></li>
+<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.</p></li>
+<li><p><strong>ssh_public_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the SSH public key.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is <code class="docutils literal notranslate"><span class="pre">active</span></code>.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IAM user to associate the SSH public key with.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_ssh_key.html.markdown</a>.</p>
 </div></blockquote>
@@ -2515,19 +2574,17 @@ a user with non-this provider-managed access keys and login profile will fail to
 <dt id="pulumi_aws.iam.User.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">permissions_boundary=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN assigned by AWS for this user.
-:param pulumi.Input[bool] force_destroy: When destroying this user, destroy even if it</p>
-<blockquote>
-<div><p>has non-this provider-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
-a user with non-this provider-managed access keys and login profile will fail to be destroyed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS for this user.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When destroying this user, destroy even if it
+has non-this provider-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
+a user with non-this provider-managed access keys and login profile will fail to be destroyed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <code class="docutils literal notranslate"><span class="pre">=,.&#64;-_.</span></code>. User names are not distinguished by case. For example, you cannot create users named both “TESTUSER” and “testuser”.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the user.</p></li>
 <li><p><strong>permissions_boundary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy that is used to set the permissions boundary for the user.</p></li>
@@ -2616,12 +2673,18 @@ groups.</p>
 <dt id="pulumi_aws.iam.UserGroupMembership.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserGroupMembership.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserGroupMembership resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] groups: A list of [IAM Groups][1] to add the user to
-:param pulumi.Input[str] user: The name of the [IAM User][2] to add to groups</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of [IAM Groups][1] to add the user to</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the [IAM User][2] to add to groups</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_group_membership.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_group_membership.html.markdown</a>.</p>
 </div></blockquote>
@@ -2727,16 +2790,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.UserLoginProfile.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">key_fingerprint=None</em>, <em class="sig-param">password_length=None</em>, <em class="sig-param">password_reset_required=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserLoginProfile resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] encrypted_password: The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
-:param pulumi.Input[str] key_fingerprint: The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
-:param pulumi.Input[float] password_length: The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-:param pulumi.Input[bool] password_reset_required: Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
-:param pulumi.Input[str] pgp_key: Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:username</span></code>. Only applies on resource creation. Drift detection is not possible with this argument.
-:param pulumi.Input[str] user: The IAM user’s name.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.</p></li>
+<li><p><strong>key_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.</p></li>
+<li><p><strong>password_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.</p></li>
+<li><p><strong>password_reset_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.</p></li>
+<li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:username</span></code>. Only applies on resource creation. Drift detection is not possible with this argument.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM user’s name.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_login_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_login_profile.html.markdown</a>.</p>
 </div></blockquote>
@@ -2827,14 +2896,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.UserPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the policy. If omitted, this provider will assign a random, unique name.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[str] policy: The policy document. This is a JSON formatted string.
-:param pulumi.Input[str] user: IAM user to which to attach this policy.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. If omitted, this provider will assign a random, unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM user to which to attach this policy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -2914,12 +2989,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iam.UserPolicyAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_arn=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserPolicyAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserPolicyAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy_arn: The ARN of the policy you want to apply
-:param pulumi.Input[str] user: The user the policy should be applied to</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy you want to apply</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user the policy should be applied to</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_policy_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -2979,6 +3060,11 @@ for the effective account in which this provider is working.</p>
 <dd><p>This data source can be used to fetch information about a specific
 IAM group. By using this data source, you can reference IAM group
 properties without having to hard code ARNs as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>group_name</strong> (<em>str</em>) – The friendly IAM group name to match.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -2990,6 +3076,11 @@ properties without having to hard code ARNs as input.</p>
 <dd><p>This data source can be used to fetch information about a specific
 IAM instance profile. By using this data source, you can reference IAM
 instance profile properties without having to hard code ARNs as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly IAM instance profile name to match.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_instance_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_instance_profile.html.markdown</a>.</p>
 </div></blockquote>
@@ -3000,6 +3091,11 @@ instance profile properties without having to hard code ARNs as input.</p>
 <code class="sig-prename descclassname">pulumi_aws.iam.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch information about a specific
 IAM policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arn</strong> (<em>str</em>) – ARN of the IAM policy.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -3027,6 +3123,73 @@ states that <code class="docutils literal notranslate"><span class="pre">&quot;P
 those principals have different behavior for IAM Role Trust Policy. Therefore
 this provider will normalize the principal field only in above-mentioned case and principals
 like <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;AWS&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">identifiers</span> <span class="pre">=</span> <span class="pre">[&quot;*&quot;]</span></code> will be rendered as <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">{&quot;AWS&quot;:</span> <span class="pre">&quot;*&quot;}</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>override_json</strong> (<em>str</em>) – An IAM policy document to import and override the
+current policy document.  Statements with non-blank <code class="docutils literal notranslate"><span class="pre">sid</span></code>s in the override
+document will overwrite statements with the same <code class="docutils literal notranslate"><span class="pre">sid</span></code> in the current document.
+Statements without an <code class="docutils literal notranslate"><span class="pre">sid</span></code> cannot be overwritten.</p></li>
+<li><p><strong>policy_id</strong> (<em>str</em>) – An ID for the policy document.</p></li>
+<li><p><strong>source_json</strong> (<em>str</em>) – An IAM policy document to import as a base for the
+current policy document.  Statements with non-blank <code class="docutils literal notranslate"><span class="pre">sid</span></code>s in the current
+policy document will overwrite statements with the same <code class="docutils literal notranslate"><span class="pre">sid</span></code> in the source
+json.  Statements without an <code class="docutils literal notranslate"><span class="pre">sid</span></code> cannot be overwritten.</p></li>
+<li><p><strong>statements</strong> (<em>list</em>) – A nested configuration block (described below)
+configuring one <em>statement</em> to be included in the policy document.</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – IAM policy document version. Valid values: <code class="docutils literal notranslate"><span class="pre">2008-10-17</span></code>, <code class="docutils literal notranslate"><span class="pre">2012-10-17</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2012-10-17</span></code>. For more information, see the <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html">AWS IAM User Guide</a>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>statements</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of actions that this statement either allows
+or denies. For example, <code class="docutils literal notranslate"><span class="pre">[&quot;ec2:RunInstances&quot;,</span> <span class="pre">&quot;s3:*&quot;]</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A nested configuration block (described below)
+that defines a further, possibly-service-specific condition that constrains
+whether this statement applies.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">test</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the
+<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html">IAM condition operator</a>
+to evaluate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The values to evaluate the condition against. If multiple
+values are provided, the condition matches if at least one of them applies.
+(That is, the tests are combined with the “OR” boolean operation.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of a
+<a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys">Context Variable</a>
+to apply the condition to. Context variables may either be standard AWS
+variables starting with <code class="docutils literal notranslate"><span class="pre">aws:</span></code>, or service-specific variables prefixed with
+the service name.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">effect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Either “Allow” or “Deny”, to specify whether this
+statement allows or denies the given actions. The default is “Allow”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notActions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of actions that this statement does <em>not</em>
+apply to. Used to apply a policy statement to all actions <em>except</em> those
+listed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notPrincipals</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Like <code class="docutils literal notranslate"><span class="pre">principals</span></code> except gives resources that
+the statement does <em>not</em> apply to.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identifiers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of identifiers for principals. When <code class="docutils literal notranslate"><span class="pre">type</span></code>
+is “AWS”, these are IAM user or role ARNs.  When <code class="docutils literal notranslate"><span class="pre">type</span></code> is “Service”, these are AWS Service roles e.g. <code class="docutils literal notranslate"><span class="pre">lambda.amazonaws.com</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of principal. For AWS ARNs this is “AWS”.  For AWS services (e.g. Lambda), this is “Service”.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notResources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of resource ARNs that this statement
+does <em>not</em> apply to. Used to apply a policy statement to all resources
+<em>except</em> those listed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">principals</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A nested configuration block (described below)
+specifying a resource (or resource pattern) to which this statement applies.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identifiers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of identifiers for principals. When <code class="docutils literal notranslate"><span class="pre">type</span></code>
+is “AWS”, these are IAM user or role ARNs.  When <code class="docutils literal notranslate"><span class="pre">type</span></code> is “Service”, these are AWS Service roles e.g. <code class="docutils literal notranslate"><span class="pre">lambda.amazonaws.com</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of principal. For AWS ARNs this is “AWS”.  For AWS services (e.g. Lambda), this is “Service”.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resources</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of resource ARNs that this statement applies
+to. This is required by AWS if used for an IAM policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An ID for the policy statement.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_policy_document.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_policy_document.html.markdown</a>.</p>
 </div></blockquote>
@@ -3038,6 +3201,11 @@ like <code class="docutils literal notranslate"><span class="pre">type</span> <s
 <dd><p>This data source can be used to fetch information about a specific
 IAM role. By using this data source, you can reference IAM role
 properties without having to hard code ARNs as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly IAM role name to match.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_role.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_role.html.markdown</a>.</p>
 </div></blockquote>
@@ -3049,6 +3217,16 @@ properties without having to hard code ARNs as input.</p>
 <dd><p>Use this data source to lookup information about IAM Server Certificates.</p>
 <p>The import function will read in certificate body, certificate chain (if it exists), id, name, path, and arn. 
 It will not retrieve the private key which is not available through the AWS API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>latest</strong> (<em>bool</em>) – sort results by expiration date. returns the certificate with expiration date in furthest in the future.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – exact name of the cert to lookup</p></li>
+<li><p><strong>name_prefix</strong> (<em>str</em>) – prefix of cert to filter by</p></li>
+<li><p><strong>path_prefix</strong> (<em>str</em>) – prefix of path to filter by</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_server_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_server_certificate.html.markdown</a>.</p>
 </div></blockquote>
@@ -3060,6 +3238,11 @@ It will not retrieve the private key which is not available through the AWS API.
 <dd><p>This data source can be used to fetch information about a specific
 IAM user. By using this data source, you can reference IAM user
 properties without having to hard code ARNs or unique IDs as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user_name</strong> (<em>str</em>) – The friendly IAM user name to match.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_user.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_user.html.markdown</a>.</p>
 </div></blockquote>

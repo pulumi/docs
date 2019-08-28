@@ -25,6 +25,15 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The egress filter type. By default, the type is <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.
+Valid values are <code class="docutils literal notranslate"><span class="pre">ALLOW_ALL</span></code> and <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown</a>.</p>
 </div></blockquote>
@@ -56,6 +65,14 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appmesh.Mesh.spec">
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Mesh.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The service mesh specification to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The egress filter type. By default, the type is <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.
+Valid values are <code class="docutils literal notranslate"><span class="pre">ALLOW_ALL</span></code> and <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -68,16 +85,31 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appmesh.Mesh.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">last_updated_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Mesh.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Mesh resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the service mesh.
-:param pulumi.Input[str] created_date: The creation date of the service mesh.
-:param pulumi.Input[str] last_updated_date: The last update date of the service mesh.
-:param pulumi.Input[str] name: The name to use for the service mesh.
-:param pulumi.Input[dict] spec: The service mesh specification to apply.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the service mesh.</p></li>
+<li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the service mesh.</p></li>
+<li><p><strong>last_updated_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The last update date of the service mesh.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the service mesh.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The service mesh specification to apply.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">egressFilter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The egress filter type. By default, the type is <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.
+Valid values are <code class="docutils literal notranslate"><span class="pre">ALLOW_ALL</span></code> and <code class="docutils literal notranslate"><span class="pre">DROP_ALL</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown</a>.</p>
 </div></blockquote>
@@ -138,6 +170,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">httpRoute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The HTTP routing information for the route.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The action to take if a match is determined.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedTargets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The virtual node to associate with the weighted target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative weight of the weighted target. An integer between 0 and 100.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The criteria for determining an HTTP request match.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tcpRoute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The TCP routing information for the route.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The action to take if a match is determined.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedTargets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The virtual node to associate with the weighted target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative weight of the weighted target. An integer between 0 and 100.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown</a>.</p>
 </div></blockquote>
@@ -175,6 +246,44 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.Route.spec">
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Route.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The route specification to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">httpRoute</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The HTTP routing information for the route.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The action to take if a match is determined.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedTargets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The virtual node to associate with the weighted target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The relative weight of the weighted target. An integer between 0 and 100.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The criteria for determining an HTTP request match.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tcpRoute</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The TCP routing information for the route.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The action to take if a match is determined.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedTargets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The virtual node to associate with the weighted target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The relative weight of the weighted target. An integer between 0 and 100.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -193,18 +302,63 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.Route.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">last_updated_date=None</em>, <em class="sig-param">mesh_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_router_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Route.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Route resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the route.
-:param pulumi.Input[str] created_date: The creation date of the route.
-:param pulumi.Input[str] last_updated_date: The last update date of the route.
-:param pulumi.Input[str] mesh_name: The name of the service mesh in which to create the route.
-:param pulumi.Input[str] name: The name to use for the route.
-:param pulumi.Input[dict] spec: The route specification to apply.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] virtual_router_name: The name of the virtual router in which to create the route.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the route.</p></li>
+<li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the route.</p></li>
+<li><p><strong>last_updated_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The last update date of the route.</p></li>
+<li><p><strong>mesh_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service mesh in which to create the route.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the route.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The route specification to apply.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>virtual_router_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual router in which to create the route.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">httpRoute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The HTTP routing information for the route.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The action to take if a match is determined.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedTargets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The virtual node to associate with the weighted target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative weight of the weighted target. An integer between 0 and 100.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The criteria for determining an HTTP request match.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tcpRoute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The TCP routing information for the route.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The action to take if a match is determined.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">weightedTargets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The virtual node to associate with the weighted target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The relative weight of the weighted target. An integer between 0 and 100.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown</a>.</p>
 </div></blockquote>
@@ -271,6 +425,73 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 </ul>
 </dd>
 </dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backends</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The backends to which the virtual node is expected to send outbound traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a virtual service to use as a backend for a virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualServiceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the virtual service that is acting as a virtual node backend.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listener</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The listeners from which the virtual node is expected to receive inbound traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">health_check</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The health check information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_millis</span></code>- (Required) The time period in milliseconds between each health check execution.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time to wait when receiving a response from the health check, in milliseconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The port mapping information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The inbound and outbound access logging information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLog</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The access log configuration for a virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The file object to send virtual node access logs to.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceDiscovery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The service discovery information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsCloudMap</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies any AWS Cloud Map information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespaceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map namespace to use.
+Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html</a>&gt;`_ resource to configure a Cloud Map namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the DNS service name for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS host name for your virtual node.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown</a>.</p>
 </div></blockquote>
@@ -308,6 +529,72 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 <dt id="pulumi_aws.appmesh.VirtualNode.spec">
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The virtual node specification to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backends</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The backends to which the virtual node is expected to send outbound traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualService</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a virtual service to use as a backend for a virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualServiceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the virtual service that is acting as a virtual node backend.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listener</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The listeners from which the virtual node is expected to receive inbound traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">health_check</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The health check information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_millis</span></code>- (Required) The time period in milliseconds between each health check execution.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time to wait when receiving a response from the health check, in milliseconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The port mapping information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The inbound and outbound access logging information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLog</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The access log configuration for a virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The file object to send virtual node access logs to.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceDiscovery</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The service discovery information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsCloudMap</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies any AWS Cloud Map information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespaceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the AWS Cloud Map namespace to use.
+Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html</a>&gt;`_ resource to configure a Cloud Map namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the DNS service name for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DNS host name for your virtual node.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -320,17 +607,90 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 <dt id="pulumi_aws.appmesh.VirtualNode.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">last_updated_date=None</em>, <em class="sig-param">mesh_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualNode resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the virtual node.
-:param pulumi.Input[str] created_date: The creation date of the virtual node.
-:param pulumi.Input[str] last_updated_date: The last update date of the virtual node.
-:param pulumi.Input[str] mesh_name: The name of the service mesh in which to create the virtual node.
-:param pulumi.Input[str] name: The name to use for the virtual node.
-:param pulumi.Input[dict] spec: The virtual node specification to apply.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the virtual node.</p></li>
+<li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the virtual node.</p></li>
+<li><p><strong>last_updated_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The last update date of the virtual node.</p></li>
+<li><p><strong>mesh_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service mesh in which to create the virtual node.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the virtual node.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The virtual node specification to apply.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backends</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The backends to which the virtual node is expected to send outbound traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a virtual service to use as a backend for a virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualServiceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the virtual service that is acting as a virtual node backend.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listener</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The listeners from which the virtual node is expected to receive inbound traffic.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">health_check</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The health check information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive successful health checks that must occur before declaring listener healthy.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_millis</span></code>- (Required) The time period in milliseconds between each health check execution.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intervalMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutMillis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time to wait when receiving a response from the health check, in milliseconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The port mapping information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The inbound and outbound access logging information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">accessLog</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The access log configuration for a virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The file object to send virtual node access logs to.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceDiscovery</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The service discovery information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsCloudMap</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies any AWS Cloud Map information for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespaceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map namespace to use.
+Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html</a>&gt;`_ resource to configure a Cloud Map namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AWS Cloud Map service to use. Use the <cite>``servicediscovery.Service`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html">https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html</a>&gt;`_ resource to configure a Cloud Map service.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the DNS service name for the virtual node.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS host name for your virtual node.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown</a>.</p>
 </div></blockquote>
@@ -398,6 +758,20 @@ These resource can be imported using <code class="docutils literal notranslate">
 </ul>
 </dd>
 </dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">listener</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The listeners that the virtual router is expected to receive inbound traffic from.
+Currently only one listener is supported per virtual router.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The port mapping information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port used for the port mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol used for the port mapping. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown</a>.</p>
 </div></blockquote>
@@ -435,6 +809,19 @@ These resource can be imported using <code class="docutils literal notranslate">
 <dt id="pulumi_aws.appmesh.VirtualRouter.spec">
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualRouter.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The virtual router specification to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">listener</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The listeners that the virtual router is expected to receive inbound traffic from.
+Currently only one listener is supported per virtual router.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The port mapping information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port used for the port mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol used for the port mapping. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -447,17 +834,37 @@ These resource can be imported using <code class="docutils literal notranslate">
 <dt id="pulumi_aws.appmesh.VirtualRouter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">last_updated_date=None</em>, <em class="sig-param">mesh_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualRouter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualRouter resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the virtual router.
-:param pulumi.Input[str] created_date: The creation date of the virtual router.
-:param pulumi.Input[str] last_updated_date: The last update date of the virtual router.
-:param pulumi.Input[str] mesh_name: The name of the service mesh in which to create the virtual router.
-:param pulumi.Input[str] name: The name to use for the virtual router.
-:param pulumi.Input[dict] spec: The virtual router specification to apply.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the virtual router.</p></li>
+<li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the virtual router.</p></li>
+<li><p><strong>last_updated_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The last update date of the virtual router.</p></li>
+<li><p><strong>mesh_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service mesh in which to create the virtual router.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the virtual router.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The virtual router specification to apply.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">listener</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The listeners that the virtual router is expected to receive inbound traffic from.
+Currently only one listener is supported per virtual router.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The port mapping information for the listener.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port used for the port mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol used for the port mapping. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown</a>.</p>
 </div></blockquote>
@@ -517,6 +924,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The virtual node associated with a virtual service.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNodeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the virtual node that is acting as a service provider.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualRouter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The virtual router associated with a virtual service.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_router_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the virtual router that is acting as a service provider.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown</a>.</p>
 </div></blockquote>
@@ -554,6 +978,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.VirtualService.spec">
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.VirtualService.spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>The virtual service specification to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The virtual node associated with a virtual service.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNodeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the virtual node that is acting as a service provider.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualRouter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The virtual router associated with a virtual service.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_router_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the virtual router that is acting as a service provider.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -566,17 +1006,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.VirtualService.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">last_updated_date=None</em>, <em class="sig-param">mesh_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualService.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualService resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the virtual service.
-:param pulumi.Input[str] created_date: The creation date of the virtual service.
-:param pulumi.Input[str] last_updated_date: The last update date of the virtual service.
-:param pulumi.Input[str] mesh_name: The name of the service mesh in which to create the virtual service.
-:param pulumi.Input[str] name: The name to use for the virtual service.
-:param pulumi.Input[dict] spec: The virtual service specification to apply.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the virtual service.</p></li>
+<li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the virtual service.</p></li>
+<li><p><strong>last_updated_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The last update date of the virtual service.</p></li>
+<li><p><strong>mesh_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service mesh in which to create the virtual service.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the virtual service.</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The virtual service specification to apply.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>spec</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The virtual node associated with a virtual service.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNodeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the virtual node that is acting as a service provider.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualRouter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The virtual router associated with a virtual service.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_router_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the virtual router that is acting as a service provider.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown</a>.</p>
 </div></blockquote>

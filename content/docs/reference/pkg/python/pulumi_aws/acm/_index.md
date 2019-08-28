@@ -63,6 +63,10 @@ which is currently in use (eg, by <code class="docutils literal notranslate"><sp
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Importing</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">certificate</span>
 </pre></div>
 </div>
+<p>The <strong>options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateTransparencyLoggingPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown</a>.</p>
 </div></blockquote>
@@ -103,6 +107,12 @@ which is currently in use (eg, by <code class="docutils literal notranslate"><sp
 <dt id="pulumi_aws.acm.Certificate.domain_validation_options">
 <code class="sig-name descname">domain_validation_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acm.Certificate.domain_validation_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if <code class="docutils literal notranslate"><span class="pre">DNS</span></code>-validation was used.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A domain name for which the certificate should be issued</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceRecordName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the DNS record to create to validate the certificate</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceRecordType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of DNS record to create</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceRecordValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value the DNS record needs to have</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -142,14 +152,20 @@ which is currently in use (eg, by <code class="docutils literal notranslate"><sp
 <dt id="pulumi_aws.acm.Certificate.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority_arn=None</em>, <em class="sig-param">certificate_body=None</em>, <em class="sig-param">certificate_chain=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_validation_options=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">subject_alternative_names=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">validation_emails=None</em>, <em class="sig-param">validation_method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acm.Certificate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Certificate resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the certificate
-:param pulumi.Input[str] certificate_authority_arn: ARN of an ACMPCA
-:param pulumi.Input[str] certificate_body: The certificate’s PEM-formatted public key
-:param pulumi.Input[str] certificate_chain: The certificate’s PEM-formatted chain</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the certificate</p></li>
+<li><p><strong>certificate_authority_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of an ACMPCA</p></li>
+<li><p><strong>certificate_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate’s PEM-formatted public key</p></li>
+<li><p><strong>certificate_chain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate’s PEM-formatted chain</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Creating</span> <span class="n">a</span> <span class="n">private</span> <span class="n">CA</span> <span class="n">issued</span> <span class="n">certificate</span>
 </pre></div>
 </div>
@@ -169,6 +185,17 @@ properties used to qualify the lookup.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Importing</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">certificate</span>
 </pre></div>
 </div>
+<p>The <strong>domain_validation_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A domain name for which the certificate should be issued</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceRecordName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DNS record to create to validate the certificate</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceRecordType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of DNS record to create</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceRecordValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value the DNS record needs to have</p></li>
+</ul>
+<p>The <strong>options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateTransparencyLoggingPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown</a>.</p>
 </div></blockquote>
@@ -252,12 +279,18 @@ deploy the required validation records and wait for validation to complete.</p>
 <dt id="pulumi_aws.acm.CertificateValidation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">validation_record_fqdns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acm.CertificateValidation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CertificateValidation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] certificate_arn: The ARN of the certificate that is being validated.
-:param pulumi.Input[list] validation_record_fqdns: List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the certificate that is being validated.</p></li>
+<li><p><strong>validation_record_fqdns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate_validation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate_validation.html.markdown</a>.</p>
 </div></blockquote>
@@ -325,6 +358,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a certificate in AWS Certificate
 Manager (ACM), you can reference
 it by domain without having to hard code the ARNs as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> (<em>str</em>) – The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.</p></li>
+<li><p><strong>key_types</strong> (<em>list</em>) – A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. Valid values are <code class="docutils literal notranslate"><span class="pre">RSA_1024</span></code>, <code class="docutils literal notranslate"><span class="pre">RSA_2048</span></code>, <code class="docutils literal notranslate"><span class="pre">RSA_4096</span></code>, <code class="docutils literal notranslate"><span class="pre">EC_prime256v1</span></code>, <code class="docutils literal notranslate"><span class="pre">EC_secp384r1</span></code>, and <code class="docutils literal notranslate"><span class="pre">EC_secp521r1</span></code>.</p></li>
+<li><p><strong>most_recent</strong> (<em>bool</em>) – If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.</p></li>
+<li><p><strong>statuses</strong> (<em>list</em>) – A list of statuses on which to filter the returned list. Valid values are <code class="docutils literal notranslate"><span class="pre">PENDING_VALIDATION</span></code>, <code class="docutils literal notranslate"><span class="pre">ISSUED</span></code>,
+<code class="docutils literal notranslate"><span class="pre">INACTIVE</span></code>, <code class="docutils literal notranslate"><span class="pre">EXPIRED</span></code>, <code class="docutils literal notranslate"><span class="pre">VALIDATION_TIMED_OUT</span></code>, <code class="docutils literal notranslate"><span class="pre">REVOKED</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>. If no value is specified, only certificates in the <code class="docutils literal notranslate"><span class="pre">ISSUED</span></code> state
+are returned.</p></li>
+<li><p><strong>types</strong> (<em>list</em>) – A list of types on which to filter the returned list. Valid values are <code class="docutils literal notranslate"><span class="pre">AMAZON_ISSUED</span></code> and <code class="docutils literal notranslate"><span class="pre">IMPORTED</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acm_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acm_certificate.html.markdown</a>.</p>
 </div></blockquote>

@@ -85,19 +85,17 @@ Defaults to the provider project configuration.</p>
 <dt id="pulumi_gcp.service_account.Account.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Account.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Account resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_id: The account id that is used to generate the service</p>
-<blockquote>
-<div><p>account email address and a stable unique id. It is unique within a project,
-must be 6-30 characters long, and match the regular expression <code class="docutils literal notranslate"><span class="pre">a-z</span></code>
-to comply with RFC1035. Changing this forces a new service account to be created.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The account id that is used to generate the service
+account email address and a stable unique id. It is unique within a project,
+must be 6-30 characters long, and match the regular expression <code class="docutils literal notranslate"><span class="pre">a-z</span></code>
+to comply with RFC1035. Changing this forces a new service account to be created.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the service account.
 Can be updated without creating a new resource.</p></li>
 <li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The e-mail address of the service account. This value
@@ -295,19 +293,19 @@ that would grant the service account privileges.</p>
 <dt id="pulumi_gcp.service_account.IAMBinding.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMBinding.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMBinding resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] etag: (Computed) The etag of the service account IAM policy.
-:param pulumi.Input[str] role: The role that should be applied. Only one</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the service account IAM policy.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
+<li><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -406,19 +404,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.service_account.IAMMember.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMMember.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMMember resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] etag: (Computed) The etag of the service account IAM policy.
-:param pulumi.Input[str] role: The role that should be applied. Only one</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the service account IAM policy.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">serviceAccount.IAMBinding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
+<li><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -515,18 +513,18 @@ a <code class="docutils literal notranslate"><span class="pre">organizations.get
 <dt id="pulumi_gcp.service_account.IAMPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">service_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] etag: (Computed) The etag of the service account IAM policy.
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
-<blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the service account IAM policy.</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
+<li><p><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -690,19 +688,18 @@ A timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds. Example: 
 <dt id="pulumi_gcp.service_account.Key.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_algorithm=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">private_key_encrypted=None</em>, <em class="sig-param">private_key_fingerprint=None</em>, <em class="sig-param">private_key_type=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">public_key_type=None</em>, <em class="sig-param">service_account_id=None</em>, <em class="sig-param">valid_after=None</em>, <em class="sig-param">valid_before=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Key.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Key resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] key_algorithm: The algorithm used to generate the key. KEY_ALG_RSA_2048 is the default algorithm.</p>
-<blockquote>
-<div><p>Valid values are listed at
-<a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm">ServiceAccountPrivateKeyType</a>
-(only used on create)</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>key_algorithm</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The algorithm used to generate the key. KEY_ALG_RSA_2048 is the default algorithm.
+Valid values are listed at
+<a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys#ServiceAccountKeyAlgorithm">ServiceAccountPrivateKeyType</a>
+(only used on create)</p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name used for this key pair</p></li>
 <li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional PGP key to encrypt the resulting private
 key material. Only used when creating or importing a new key pair. May either be
@@ -776,6 +773,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_gcp.service_account.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param">account_id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the service account from a project. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/access/service-accounts">API</a> documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>account_id</strong> (<em>str</em>) – The Service account id.  (This is the part of the service account’s email field that comes before the &#64; symbol.)</p></li>
+<li><p><strong>project</strong> (<em>str</em>) – The ID of the project that the service account is present in.
+Defaults to the provider project configuration.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account.html.markdown</a>.</p>
 </div></blockquote>
@@ -787,6 +793,16 @@ the official <a class="reference external" href="https://cloud.google.com/comput
 <dd><p>This data source provides a google <code class="docutils literal notranslate"><span class="pre">oauth2</span></code> <code class="docutils literal notranslate"><span class="pre">access_token</span></code> for a different service account than the one initially running the script.</p>
 <p>For more information see
 <a class="reference external" href="https://cloud.google.com/iam/docs/creating-short-lived-service-account-credentials">the official documentation</a> as well as <a class="reference external" href="https://cloud.google.com/iam/credentials/reference/rest/v1/projects.serviceAccounts/generateAccessToken">iamcredentials.generateAccessToken()</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>delegates</strong> (<em>list</em>) – Deegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. <code class="docutils literal notranslate"><span class="pre">[&quot;projects/-/serviceAccounts/delegate-svc-account&#64;project-id.iam.gserviceaccount.com&quot;]</span></code>)</p></li>
+<li><p><strong>lifetime</strong> (<em>str</em>) – Lifetime of the impersonated token (defaults to its max: <code class="docutils literal notranslate"><span class="pre">3600s</span></code>).</p></li>
+<li><p><strong>scopes</strong> (<em>list</em>) – The scopes the new credential should have (e.g. <code class="docutils literal notranslate"><span class="pre">[&quot;storage-ro&quot;,</span> <span class="pre">&quot;cloud-platform&quot;]</span></code>)</p></li>
+<li><p><strong>target_service_account</strong> (<em>str</em>) – The service account <em>to</em> impersonate (e.g. <code class="docutils literal notranslate"><span class="pre">service_B&#64;your-project-id.iam.gserviceaccount.com</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_access_token.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_access_token.html.markdown</a>.</p>
 </div></blockquote>
@@ -796,6 +812,18 @@ the official <a class="reference external" href="https://cloud.google.com/comput
 <dt id="pulumi_gcp.service_account.get_account_key">
 <code class="sig-prename descclassname">pulumi_gcp.service_account.</code><code class="sig-name descname">get_account_key</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">public_key_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.get_account_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get service account public key. For more information, see <a class="reference external" href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get">API</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the service account key. This must have format
+<code class="docutils literal notranslate"><span class="pre">projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{KEYID}</span></code>, where <code class="docutils literal notranslate"><span class="pre">{ACCOUNT}</span></code>
+is the email address or unique id of the service account.</p></li>
+<li><p><strong>project</strong> (<em>str</em>) – The ID of the project that the service account will be created in.
+Defaults to the provider project configuration.</p></li>
+<li><p><strong>public_key_type</strong> (<em>str</em>) – The output format of the public key requested. X509_PEM is the default output format.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_key.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/service_account_key.html.markdown</a>.</p>
 </div></blockquote>
