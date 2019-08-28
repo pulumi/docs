@@ -736,7 +736,7 @@ func simplifyModuleName(modnode *typeDocNode, parentModule string) string {
 // isLocalSource returns true if this source is local to this repo. This filters out references to types or
 // members that might be defined elsewhere, to avoid generating bogus links.
 func isLocalSource(source typeDocSource) bool {
-	return source.FileName != "" && source.FileName[0] != '/'
+	return source.FileName != "" && source.FileName[0] != '/' && !strings.HasPrefix(source.FileName, "node_modules/")
 }
 
 // getURLPath returns a URL path to a given type node that is relative to a given repo.
