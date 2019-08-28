@@ -37,10 +37,12 @@ title: Module iam
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="iam/getRule.ts#L23" >}}">function <b>getRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getRule(args: <a href='#GetRuleArgs'>GetRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetRuleResult'>GetRuleResult</a>&gt; &amp; <a href='#GetRuleResult'>GetRuleResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get information about a Google IAM Role.
 
@@ -72,7 +74,9 @@ A collection of arguments for invoking getRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="iam/getRule.ts#L45" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Role to lookup in the form `roles/{ROLE_NAME}`, `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` or `projects/{PROJECT_ID}/roles/{ROLE_NAME}`
@@ -93,7 +97,9 @@ A collection of values returned by getRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="iam/getRule.ts#L68" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -104,7 +110,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="iam/getRule.ts#L55" >}}">property <b>includedPermissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>includedPermissions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
@@ -115,7 +123,9 @@ specifies the list of one or more permissions to include in the custom role, suc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="iam/getRule.ts#L56" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -123,7 +133,9 @@ specifies the list of one or more permissions to include in the custom role, suc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="iam/getRule.ts#L60" >}}">property <b>stage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
@@ -134,7 +146,9 @@ indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="iam/getRule.ts#L64" >}}">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>title: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 is a friendly title for the role, such as "Role Viewer"

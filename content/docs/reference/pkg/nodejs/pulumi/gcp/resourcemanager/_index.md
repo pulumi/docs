@@ -37,7 +37,9 @@ title: Module resourcemanager
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L32" >}}">class <b>Lien</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Lien represents an encumbrance on the actions that can be performed on a resource.
@@ -67,10 +69,12 @@ const lien = new gcp.resourcemanager.Lien("lien", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L64" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Lien(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LienArgs'>LienArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Lien resource with the given unique name, arguments, and options.
 
@@ -84,10 +88,12 @@ Create a Lien resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#LienState'>LienState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Lien'>Lien</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Lien resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -95,23 +101,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lien-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lien-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Lien.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -122,15 +132,19 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L59" >}}">property <b>createTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lien-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -142,7 +156,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L60" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -150,7 +166,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L61" >}}">property <b>origin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -158,7 +176,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L62" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -166,7 +186,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L63" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -174,15 +196,19 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L64" >}}">property <b>restrictions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lien-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L32" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -204,7 +230,9 @@ The set of arguments for constructing a Lien resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L132" >}}">property <b>origin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -212,7 +240,9 @@ The set of arguments for constructing a Lien resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L133" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -220,7 +250,9 @@ The set of arguments for constructing a Lien resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L134" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -228,7 +260,9 @@ The set of arguments for constructing a Lien resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L135" >}}">property <b>restrictions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -246,7 +280,9 @@ Input properties used for looking up and filtering Lien resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L120" >}}">property <b>createTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -254,7 +290,9 @@ Input properties used for looking up and filtering Lien resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L121" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -262,7 +300,9 @@ Input properties used for looking up and filtering Lien resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L122" >}}">property <b>origin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -270,7 +310,9 @@ Input properties used for looking up and filtering Lien resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L123" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -278,7 +320,9 @@ Input properties used for looking up and filtering Lien resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L124" >}}">property <b>reason</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -286,7 +330,9 @@ Input properties used for looking up and filtering Lien resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="resourcemanager/lien.ts#L125" >}}">property <b>restrictions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>restrictions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

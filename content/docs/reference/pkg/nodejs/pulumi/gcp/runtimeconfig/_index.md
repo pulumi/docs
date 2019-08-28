@@ -40,7 +40,9 @@ title: Module runtimeconfig
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L28" >}}">class <b>Config</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a RuntimeConfig resource in Google Cloud. For more information, see the
@@ -68,10 +70,12 @@ const myRuntimeConfig = new gcp.runtimeconfig.Config("my-runtime-config", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L68" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Config(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ConfigArgs'>ConfigArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Config resource with the given unique name, arguments, and options.
 
@@ -85,10 +89,12 @@ Create a Config resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConfigState'>ConfigState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Config'>Config</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Config resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -96,23 +102,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Config-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Config-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Config.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -123,7 +133,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L59" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description to associate with the runtime
@@ -132,10 +144,12 @@ config.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Config-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -147,7 +161,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L63" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the runtime config.
@@ -158,7 +174,9 @@ The name of the runtime config.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L68" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -167,10 +185,12 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Config-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -183,7 +203,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L51" >}}">class <b>Variable</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a RuntimeConfig variable in Google Cloud. For more information, see the
@@ -234,10 +256,12 @@ const mySecret = new gcp.runtimeconfig.Variable("my-secret", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L100" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Variable(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VariableArgs'>VariableArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Variable resource with the given unique name, arguments, and options.
 
@@ -251,10 +275,12 @@ Create a Variable resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L60" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VariableState'>VariableState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Variable'>Variable</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Variable resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -262,23 +288,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Variable-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L51" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Variable-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L71" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Variable.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -286,10 +316,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Variable-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L51" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -301,7 +333,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L82" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the variable to manage. Note that variable
@@ -313,7 +347,9 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L87" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the RuntimeConfig resource containing this
@@ -325,7 +361,9 @@ variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L92" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -337,7 +375,9 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L93" >}}">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>text: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -345,7 +385,9 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L99" >}}">property <b>updateTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The timestamp in RFC3339 UTC "Zulu" format,
@@ -355,10 +397,12 @@ Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Variable-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L51" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -370,7 +414,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L100" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -388,7 +434,9 @@ The set of arguments for constructing a Config resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L130" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description to associate with the runtime
@@ -400,7 +448,9 @@ config.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L134" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the runtime config.
@@ -411,7 +461,9 @@ The name of the runtime config.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L139" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -433,7 +485,9 @@ Input properties used for looking up and filtering Config resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L110" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description to associate with the runtime
@@ -445,7 +499,9 @@ config.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L114" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the runtime config.
@@ -456,7 +512,9 @@ The name of the runtime config.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/config.ts#L119" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -478,7 +536,9 @@ The set of arguments for constructing a Variable resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L180" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the variable to manage. Note that variable
@@ -490,7 +550,9 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L185" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the RuntimeConfig resource containing this
@@ -502,7 +564,9 @@ variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L190" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -514,7 +578,9 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L191" >}}">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>text?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -522,7 +588,9 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L192" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -540,7 +608,9 @@ Input properties used for looking up and filtering Variable resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L151" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the variable to manage. Note that variable
@@ -552,7 +622,9 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L156" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the RuntimeConfig resource containing this
@@ -564,7 +636,9 @@ variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L161" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -576,7 +650,9 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L162" >}}">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>text?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -584,7 +660,9 @@ is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L168" >}}">property <b>updateTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The timestamp in RFC3339 UTC "Zulu" format,
@@ -597,7 +675,9 @@ Example: "2016-10-09T12:33:37.578138407Z".
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="runtimeconfig/variable.ts#L169" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

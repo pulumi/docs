@@ -37,7 +37,9 @@ title: Module redis
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L54" >}}">class <b>Instance</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Google Cloud Redis instance.
@@ -90,10 +92,12 @@ const cache = new gcp.redis.Instance("cache", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L101" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Instance(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#InstanceArgs'>InstanceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Instance resource with the given unique name, arguments, and options.
 
@@ -107,10 +111,12 @@ Create a Instance resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L63" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#InstanceState'>InstanceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Instance'>Instance</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -118,23 +124,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L54" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L74" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Instance.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -145,7 +155,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L81" >}}">property <b>alternativeLocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>alternativeLocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -153,7 +165,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L82" >}}">property <b>authorizedNetwork</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authorizedNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -161,7 +175,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L83" >}}">property <b>createTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -169,7 +185,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L84" >}}">property <b>currentLocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>currentLocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -177,7 +195,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L85" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -185,15 +205,19 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L86" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L54" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -205,7 +229,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L87" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -213,7 +239,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L88" >}}">property <b>locationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>locationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -221,7 +249,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L89" >}}">property <b>memorySizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>memorySizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -229,7 +259,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -237,7 +269,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L91" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -245,7 +279,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L96" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -257,7 +293,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L97" >}}">property <b>redisConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>redisConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -265,7 +303,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L98" >}}">property <b>redisVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>redisVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -273,7 +313,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L99" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -281,7 +323,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L100" >}}">property <b>reservedIpRange</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>reservedIpRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -289,15 +333,19 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L101" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L54" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -319,7 +367,9 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L197" >}}">property <b>alternativeLocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alternativeLocationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -327,7 +377,9 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L198" >}}">property <b>authorizedNetwork</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -335,7 +387,9 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L199" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -343,7 +397,9 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L200" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -351,7 +407,9 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L201" >}}">property <b>locationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -359,7 +417,9 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L202" >}}">property <b>memorySizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>memorySizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -367,7 +427,9 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L203" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -375,7 +437,9 @@ The set of arguments for constructing a Instance resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L208" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -387,7 +451,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L209" >}}">property <b>redisConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -395,7 +461,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L210" >}}">property <b>redisVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -403,7 +471,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L211" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -411,7 +481,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L212" >}}">property <b>reservedIpRange</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reservedIpRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -419,7 +491,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L213" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -437,7 +511,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L170" >}}">property <b>alternativeLocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alternativeLocationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -445,7 +521,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L171" >}}">property <b>authorizedNetwork</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -453,7 +531,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L172" >}}">property <b>createTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -461,7 +541,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L173" >}}">property <b>currentLocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>currentLocationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -469,7 +551,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L174" >}}">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -477,7 +561,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L175" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -485,7 +571,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L176" >}}">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -493,7 +581,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L177" >}}">property <b>locationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -501,7 +591,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L178" >}}">property <b>memorySizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>memorySizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -509,7 +601,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L179" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -517,7 +611,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L180" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -525,7 +621,9 @@ Input properties used for looking up and filtering Instance resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L185" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -537,7 +635,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L186" >}}">property <b>redisConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -545,7 +645,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L187" >}}">property <b>redisVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -553,7 +655,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L188" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -561,7 +665,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L189" >}}">property <b>reservedIpRange</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reservedIpRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -569,7 +675,9 @@ If it is not provided, the provider project is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="redis/instance.ts#L190" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
