@@ -73,7 +73,7 @@ with `***`.
 
 1.  In a browser, navigate to the URL for `frontendURL`. You should see the voting app webpage.
 
-   ![Voting app screenshot](./voting-app-webpage.png)
+   ![Voting app screenshot](https://github.com/pulumi/examples/blob/master/aws-ts-voting-app/voting-app-webpage.png)
 
 ### Delete resources
 
@@ -111,7 +111,7 @@ The definition of `frontend` is more interesting, as it uses `image` property of
 
 So that the `frontend` container can connect to `redisCache`, the environment variables `REDIS`, `REDIS_PORT` are defined. Using the `redisListenre.endpoint` property, it's easy to declare the connection between the two containers.
 
-The Flask app uses these environment variables to connect to the Redis cache container. See the following in [`frontend/app/main.py`](frontend/app/main.py):
+The Flask app uses these environment variables to connect to the Redis cache container. See the following in [`frontend/app/main.py`](https://github.com/pulumi/examples/blob/master/aws-ts-voting-app/frontend/app/main.py):
 
 ```python
 redis_server =   os.environ['REDIS']

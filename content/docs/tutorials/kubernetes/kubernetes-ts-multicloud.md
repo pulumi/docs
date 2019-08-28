@@ -68,10 +68,10 @@ After cloning this repo, from this working directory, run these commands:
     ```
    
    Here's what it should look like once it completes:
-   ![appUrls](images/appUrls.png)
+   ![appUrls](https://github.com/pulumi/examples/blob/master/kubernetes-ts-multicloud/images/appUrls.png)
 
 6. You can connect to the example app (kuard) on each cluster using the exported URLs.
-   ![kuard](images/kuard.png)
+   ![kuard](https://github.com/pulumi/examples/blob/master/kubernetes-ts-multicloud/images/kuard.png)
 
    Important: This application is exposed publicly over http, and can be used to view sensitive details about the
    node. Do not run this application on production clusters!

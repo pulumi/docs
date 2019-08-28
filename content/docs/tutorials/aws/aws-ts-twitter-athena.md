@@ -67,7 +67,7 @@ Register a new [Twitter app](https://apps.twitter.com/).
 
 1.  Navigate to the URL for `topUsersQueryUri` and run the query in Athena. You'll see tweets for your search term, by users with more than 1000 followers.
 
-    ![Athena console](athena-screenshot.png)
+    ![Athena console](https://github.com/pulumi/examples/blob/master/aws-ts-twitter-athena/athena-screenshot.png)
 
 ## Clean up
 

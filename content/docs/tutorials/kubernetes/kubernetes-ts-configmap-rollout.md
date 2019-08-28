@@ -16,7 +16,7 @@ the file `default.conf` in this directory; this program reads that file and puts
 `ConfigMap`. Hence, changing data in that file will cause register as a change in the `ConfigMap`'s
 data, which will trigger a rollout of the nginx `Deployment`.
 
-![configmapRollout](images/rollout.gif "ConfigMap-induced Rollout")
+![configmapRollout](https://github.com/pulumi/examples/blob/master/kubernetes-ts-configmap-rollout/images/rollout.gif "ConfigMap-induced Rollout")
 
 ## Running the App
 

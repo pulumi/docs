@@ -21,6 +21,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
 
@@ -160,9 +161,9 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			MetaDesc:  "",
 			Cloud:     parts[0],
 			Language:  parts[1],
-			Body:      cleanMarkdownBody(string(body)),
+			Body:      cleanMarkdownBody(name, string(body)),
 			URL:       fmt.Sprintf("/docs/tutorials/%s/%s", parts[0], name),
-			GitHubURL: fmt.Sprintf("https://github.com/pulumi/examples/tree/master/%s", name),
+			GitHubURL: fmt.Sprintf("%s/tree/master/%s", gitHubBaseURL, name),
 		})
 	}
 
@@ -170,10 +171,15 @@ func gatherTutorials(root string) ([]tutorial, error) {
 }
 
 const (
+	gitHubBaseURL                 = "https://github.com/pulumi/examples"
 	tutorialsIndexShortcodePrefix = "tutorials-index"
 )
 
-func cleanMarkdownBody(body string) string {
+var (
+	markdownLinkURL = regexp.MustCompile(`\[(.*)\]\((.*)\)`)
+)
+
+func cleanMarkdownBody(name, body string) string {
 	// HACK: for now, skip everything leading up to, and including, the H1. The reason is otherwise
 	// Hugo will add an H1 (due to our template). And we want to ensure we can add the badge explicitly.
 	h1ix := strings.Index(body, "# ")
@@ -185,7 +191,37 @@ func cleanMarkdownBody(body string) string {
 	if nlix == -1 {
 		return body
 	}
-	return body[nlix+1:]
+	tidied := body[nlix+1:]
+
+	// Also rewrite any URLs that are local to this repo so they refer back to the GitHub repo content.
+	var lix int
+	var result string
+	for _, loc := range markdownLinkURL.FindAllStringSubmatchIndex(tidied, -1) {
+		// Locations:
+		//    - 0:1 is start:end
+		//    - 2:3 is the [...] part, i.e. text
+		//    - 4:5 is the (...) part, i.e. URL
+		result += tidied[lix:loc[0]]
+		mdtext := tidied[loc[2]:loc[3]]
+		mdurl := tidied[loc[4]:loc[5]]
+
+		// If the URL contains a scheme, we have no reason to replace it.
+		if !strings.Contains(mdurl, "://") {
+			// Otherwise, we need to make it relative to the Git repo's contents.
+			if strings.HasPrefix(mdurl, "./") {
+				mdurl = mdurl[2:]
+			}
+			mdurl = fmt.Sprintf("%s/blob/master/%s/%s", gitHubBaseURL, name, mdurl)
+		}
+		result += fmt.Sprintf("[%s](%s)", mdtext, mdurl)
+
+		lix = loc[1]
+	}
+	if lix < len(tidied) {
+		result += tidied[lix:]
+	}
+
+	return result
 }
 
 func makeLangMap(tutorials []tutorial, include []string, exclude []string) (map[string][]tutorial, int) {

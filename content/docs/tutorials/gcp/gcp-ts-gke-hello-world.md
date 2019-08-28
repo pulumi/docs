@@ -134,7 +134,7 @@ After cloning this repo, from this working directory, run these commands:
     the minimally disruptive change to achieve the desired state.
 
 	> **Note:** Pulumi auto-generates a suffix for all objects.
-    > See the [Pulumi Programming Model](../../reference/programming-model.md#autonaming) for more info.
+    > See the [Pulumi Programming Model](https://github.com/pulumi/examples/blob/master/gcp-ts-gke-hello-world/../../reference/programming-model.md#autonaming) for more info.
     >
     > ```
     > clusterName    : "helloworld-2a6de9a"

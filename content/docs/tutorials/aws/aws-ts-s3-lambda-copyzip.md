@@ -14,7 +14,7 @@ title: "Serverless App to Copy and Zip S3 Objects Between Buckets"
 This example sets up two AWS S3 Buckets and a single Lambda that listens to one and, upon each new
 object arriving in it, zips it up and copies it to the second bucket. Its architecture looks like this:
 
-![Architecture](./arch.png)
+![Architecture](https://github.com/pulumi/examples/blob/master/aws-ts-s3-lambda-copyzip/arch.png)
 
 This example is also featured in the blog post [Easy Serverless Apps and Infrastructure --
 Real Events, Real Code](https://blog.pulumi.com/easy-serverless-apps-and-infrastructure-real-events-real-code).
