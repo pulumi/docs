@@ -1,5 +1,5 @@
 ---
-title: "#5: Gating rollout on Prometheus checks"
+title: "Gating rollout on Prometheus checks"
 
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-p8s-rollout/"]
 ---

@@ -1,5 +1,5 @@
 ---
-title: "#2: Deploying the WordPress Helm Chart"
+title: "Deploying the WordPress Helm Chart"
 
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/"]
 ---

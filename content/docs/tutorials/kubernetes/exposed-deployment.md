@@ -1,5 +1,5 @@
 ---
-title: "#1: Hello, World!"
+title: "Hello, World!"
 
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/"]
 ---

@@ -29,6 +29,7 @@ generate:
 	./scripts/run_typedoc.sh
 	./scripts/generate_python_docs.sh
 	pulumi gen-markdown ./content/docs/reference/cli
+	./scripts/mktutorial.sh
 
 .PHONY: build
 build:
@@ -46,6 +47,7 @@ test:
 	#     - Our LinkedIn page, for some reason, returns an HTTP error (despite being valid)
 	#     - Our Visual Studio Marketplace link for the Azure Pipelines task extension,
 	#       although valid and publicly available, is reported as a broken link.
+	#     - A number of synthetic illustrative links come from our examples/tutorials.
 	./node_modules/.bin/blc http://localhost:1313 --recursive --follow \
 		--exclude "/docs/reference/pkg" \
 		--exclude "/docs/get-started/install/versions" \
@@ -56,7 +58,10 @@ test:
 		--exclude "https://www.linkedin.com/" \
 		--exclude "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task" \
 		--exclude "https://blog.mapbox.com/" \
-		--exclude "https://www.youtube.com/"
+		--exclude "https://www.youtube.com/" \
+		--exclude "https://apps.twitter.com/" \
+		--exclude "https://www.googleapis.com/" \
+		--exclude "https://us-central1-/"
 
 .PHONY: validate
 validate:
