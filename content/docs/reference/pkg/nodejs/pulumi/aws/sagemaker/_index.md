@@ -49,7 +49,9 @@ title: Module sagemaker
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L28" >}}">class <b>Endpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a SageMaker Endpoint resource.
@@ -77,10 +79,12 @@ const endpoint = new aws.sagemaker.Endpoint("e", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Endpoint(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EndpointArgs'>EndpointArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Endpoint resource with the given unique name, arguments, and options.
 
@@ -94,10 +98,12 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EndpointState'>EndpointState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Endpoint'>Endpoint</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Endpoint resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -105,23 +111,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Endpoint.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -132,7 +142,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L58" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this endpoint.
@@ -143,7 +155,9 @@ The Amazon Resource Name (ARN) assigned by AWS to this endpoint.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L62" >}}">property <b>endpointConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpointConfigName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint configuration to use.
@@ -151,10 +165,12 @@ The name of the endpoint configuration to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -166,7 +182,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L66" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint. If omitted, this provider will assign a random, unique name.
@@ -177,7 +195,9 @@ The name of the endpoint. If omitted, this provider will assign a random, unique
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L70" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -185,10 +205,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -198,10 +220,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointConfiguration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L34" >}}">class <b>EndpointConfiguration</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L36" >}}">class <b>EndpointConfiguration</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a SageMaker endpoint configuration resource.
@@ -232,13 +256,15 @@ const ec = new aws.sagemaker.EndpointConfiguration("ec", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointConfiguration-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L80" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EndpointConfiguration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EndpointConfigurationArgs'>EndpointConfigurationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a EndpointConfiguration resource with the given unique name, arguments, and options.
 
@@ -249,13 +275,15 @@ Create a EndpointConfiguration resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EndpointConfigurationState'>EndpointConfigurationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EndpointConfiguration'>EndpointConfiguration</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing EndpointConfiguration resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -263,23 +291,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of EndpointConfiguration.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -287,10 +319,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L64" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L66" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
@@ -298,10 +332,12 @@ The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -310,10 +346,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-kmsKeyArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L68" >}}">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L70" >}}">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
@@ -321,10 +359,12 @@ Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageM
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L72" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L74" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
@@ -332,17 +372,12 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-productionVariants">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L76" >}}">property <b>productionVariants</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L78" >}}">property <b>productionVariants</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>productionVariants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    acceleratorType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    initialInstanceCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    initialVariantWeight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    instanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    modelName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    variantName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>productionVariants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointConfigurationProductionVariant'>outputs.sagemaker.EndpointConfigurationProductionVariant</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Fields are documented below.
@@ -350,10 +385,12 @@ Fields are documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L80" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L82" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -361,10 +398,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfiguration-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -374,10 +413,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Model">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L40" >}}">class <b>Model</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L42" >}}">class <b>Model</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a SageMaker model resource.
@@ -414,13 +455,15 @@ const role = new aws.iam.Role("r", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Model-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L98" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L100" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Model(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ModelArgs'>ModelArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Model resource with the given unique name, arguments, and options.
 
@@ -431,13 +474,15 @@ Create a Model resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L51" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ModelState'>ModelState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Model'>Model</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Model resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -445,23 +490,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L42" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L62" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Model.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -469,10 +518,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L70" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L72" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this model.
@@ -480,15 +531,12 @@ The Amazon Resource Name (ARN) assigned by AWS to this model.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-containers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L74" >}}">property <b>containers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L76" >}}">property <b>containers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    containerHostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    environment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-    image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    modelDataUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelContainer'>outputs.sagemaker.ModelContainer</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies containers in the inference pipeline. If not specified, the `primaryContainer` argument is required. Fields are documented below.
@@ -496,10 +544,12 @@ Specifies containers in the inference pipeline. If not specified, the `primaryCo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-enableNetworkIsolation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L78" >}}">property <b>enableNetworkIsolation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L80" >}}">property <b>enableNetworkIsolation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableNetworkIsolation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
@@ -507,10 +557,12 @@ Isolates the model container. No inbound or outbound network calls can be made t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-executionRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L82" >}}">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L84" >}}">property <b>executionRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>executionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A role that SageMaker can assume to access model artifacts and docker images for deployment.
@@ -518,10 +570,12 @@ A role that SageMaker can assume to access model artifacts and docker images for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L42" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -530,10 +584,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L86" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L88" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the model (must be unique). If omitted, this provider will assign a random, unique name.
@@ -541,15 +597,12 @@ The name of the model (must be unique). If omitted, this provider will assign a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-primaryContainer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L90" >}}">property <b>primaryContainer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L92" >}}">property <b>primaryContainer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>primaryContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    containerHostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    environment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-    image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    modelDataUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>primaryContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelPrimaryContainer'>outputs.sagemaker.ModelPrimaryContainer</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
@@ -557,10 +610,12 @@ The primary docker image containing inference code that is used when the model i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L94" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L96" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -568,10 +623,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L42" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -580,13 +637,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Model-vpcConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L98" >}}">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L100" >}}">property <b>vpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    securityGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    subnets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ModelVpcConfig'>outputs.sagemaker.ModelVpcConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
@@ -595,10 +651,12 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotebookInstance">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L29" >}}">class <b>NotebookInstance</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L31" >}}">class <b>NotebookInstance</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Sagemaker Notebook Instance resource.
@@ -624,13 +682,15 @@ const ni = new aws.sagemaker.NotebookInstance("ni", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotebookInstance-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L91" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L93" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NotebookInstance(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NotebookInstanceArgs'>NotebookInstanceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a NotebookInstance resource with the given unique name, arguments, and options.
 
@@ -641,13 +701,15 @@ Create a NotebookInstance resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L38" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NotebookInstanceState'>NotebookInstanceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#NotebookInstance'>NotebookInstance</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing NotebookInstance resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -655,23 +717,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L31" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L49" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of NotebookInstance.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -679,10 +745,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L59" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L61" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
@@ -690,10 +758,12 @@ The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L31" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -702,10 +772,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L63" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L65" >}}">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of ML compute instance type.
@@ -713,10 +785,12 @@ The name of ML compute instance type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L67" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L69" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
@@ -724,10 +798,12 @@ The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encry
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-lifecycleConfigName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L71" >}}">property <b>lifecycleConfigName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L73" >}}">property <b>lifecycleConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lifecycleConfigName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a lifecycle configuration to associate with the notebook instance.
@@ -735,10 +811,12 @@ The name of a lifecycle configuration to associate with the notebook instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L75" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L77" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the notebook instance (must be unique).
@@ -746,10 +824,12 @@ The name of the notebook instance (must be unique).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L79" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L81" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
@@ -757,10 +837,12 @@ The ARN of the IAM role to be used by the notebook instance which allows SageMak
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-securityGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L83" >}}">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L85" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The associated security groups.
@@ -768,10 +850,12 @@ The associated security groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L87" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L89" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VPC subnet ID.
@@ -779,10 +863,12 @@ The VPC subnet ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L91" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L93" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -790,10 +876,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstance-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L31" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -803,10 +891,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotebookInstanceLifecycleConfiguration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L12" >}}">class <b>NotebookInstanceLifecycleConfiguration</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L14" >}}">class <b>NotebookInstanceLifecycleConfiguration</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a lifecycle configuration for SageMaker Notebook Instances.
@@ -815,13 +905,15 @@ Provides a lifecycle configuration for SageMaker Notebook Instances.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NotebookInstanceLifecycleConfiguration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#NotebookInstanceLifecycleConfigurationArgs'>NotebookInstanceLifecycleConfigurationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a NotebookInstanceLifecycleConfiguration resource with the given unique name, arguments, and options.
 
@@ -832,13 +924,15 @@ Create a NotebookInstanceLifecycleConfiguration resource with the given unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L23" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NotebookInstanceLifecycleConfigurationState'>NotebookInstanceLifecycleConfigurationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#NotebookInstanceLifecycleConfiguration'>NotebookInstanceLifecycleConfiguration</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing NotebookInstanceLifecycleConfiguration resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -846,23 +940,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L14" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L34" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of NotebookInstanceLifecycleConfiguration.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -870,10 +968,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L42" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L44" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this lifecycle configuration.
@@ -881,10 +981,12 @@ The Amazon Resource Name (ARN) assigned by AWS to this lifecycle configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L14" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -893,10 +995,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L46" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L48" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the lifecycle configuration (must be unique). If omitted, this provider will assign a random, unique name.
@@ -904,10 +1008,12 @@ The name of the lifecycle configuration (must be unique). If omitted, this provi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-onCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L50" >}}">property <b>onCreate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L52" >}}">property <b>onCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>onCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A shell script (base64-encoded) that runs only once when the SageMaker Notebook Instance is created.
@@ -915,10 +1021,12 @@ A shell script (base64-encoded) that runs only once when the SageMaker Notebook 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-onStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L54" >}}">property <b>onStart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L56" >}}">property <b>onStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>onStart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it's created.
@@ -926,10 +1034,12 @@ A shell script (base64-encoded) that runs every time the SageMaker Notebook Inst
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfiguration-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L14" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -951,7 +1061,9 @@ The set of arguments for constructing a Endpoint resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L138" >}}">property <b>endpointConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointConfigName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint configuration to use.
@@ -962,7 +1074,9 @@ The name of the endpoint configuration to use.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L142" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint. If omitted, this provider will assign a random, unique name.
@@ -973,7 +1087,9 @@ The name of the endpoint. If omitted, this provider will assign a random, unique
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L146" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -982,7 +1098,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointConfigurationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L150" >}}">interface <b>EndpointConfigurationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L152" >}}">interface <b>EndpointConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -991,10 +1107,12 @@ The set of arguments for constructing a EndpointConfiguration resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointConfigurationArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L154" >}}">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L156" >}}">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
@@ -1002,10 +1120,12 @@ Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageM
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfigurationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L158" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L160" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
@@ -1013,17 +1133,12 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfigurationArgs-productionVariants">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L162" >}}">property <b>productionVariants</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L164" >}}">property <b>productionVariants</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>productionVariants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    acceleratorType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    initialInstanceCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    initialVariantWeight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    modelName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    variantName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>productionVariants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationProductionVariant'>inputs.sagemaker.EndpointConfigurationProductionVariant</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Fields are documented below.
@@ -1031,10 +1146,12 @@ Fields are documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfigurationArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L166" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L168" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1043,7 +1160,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointConfigurationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L124" >}}">interface <b>EndpointConfigurationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L126" >}}">interface <b>EndpointConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1052,10 +1169,12 @@ Input properties used for looking up and filtering EndpointConfiguration resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EndpointConfigurationState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L128" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L130" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
@@ -1063,10 +1182,12 @@ The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfigurationState-kmsKeyArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L132" >}}">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L134" >}}">property <b>kmsKeyArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
@@ -1074,10 +1195,12 @@ Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageM
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfigurationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L136" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L138" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
@@ -1085,17 +1208,12 @@ The name of the endpoint configuration. If omitted, this provider will assign a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfigurationState-productionVariants">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L140" >}}">property <b>productionVariants</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L142" >}}">property <b>productionVariants</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>productionVariants?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    acceleratorType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    initialInstanceCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    initialVariantWeight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    modelName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    variantName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>productionVariants?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointConfigurationProductionVariant'>inputs.sagemaker.EndpointConfigurationProductionVariant</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Fields are documented below.
@@ -1103,10 +1221,12 @@ Fields are documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointConfigurationState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L144" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpointConfiguration.ts#L146" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1127,7 +1247,9 @@ Input properties used for looking up and filtering Endpoint resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L116" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this endpoint.
@@ -1138,7 +1260,9 @@ The Amazon Resource Name (ARN) assigned by AWS to this endpoint.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L120" >}}">property <b>endpointConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointConfigName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint configuration to use.
@@ -1149,7 +1273,9 @@ The name of the endpoint configuration to use.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L124" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the endpoint. If omitted, this provider will assign a random, unique name.
@@ -1160,7 +1286,9 @@ The name of the endpoint. If omitted, this provider will assign a random, unique
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/endpoint.ts#L128" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1169,7 +1297,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ModelArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L186" >}}">interface <b>ModelArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L188" >}}">interface <b>ModelArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1178,15 +1306,12 @@ The set of arguments for constructing a Model resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ModelArgs-containers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L190" >}}">property <b>containers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L192" >}}">property <b>containers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    containerHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    modelDataUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelContainer'>inputs.sagemaker.ModelContainer</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies containers in the inference pipeline. If not specified, the `primaryContainer` argument is required. Fields are documented below.
@@ -1194,10 +1319,12 @@ Specifies containers in the inference pipeline. If not specified, the `primaryCo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-enableNetworkIsolation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L194" >}}">property <b>enableNetworkIsolation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L196" >}}">property <b>enableNetworkIsolation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableNetworkIsolation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
@@ -1205,10 +1332,12 @@ Isolates the model container. No inbound or outbound network calls can be made t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-executionRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L198" >}}">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L200" >}}">property <b>executionRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>executionRoleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A role that SageMaker can assume to access model artifacts and docker images for deployment.
@@ -1216,10 +1345,12 @@ A role that SageMaker can assume to access model artifacts and docker images for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L202" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L204" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the model (must be unique). If omitted, this provider will assign a random, unique name.
@@ -1227,15 +1358,12 @@ The name of the model (must be unique). If omitted, this provider will assign a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-primaryContainer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L206" >}}">property <b>primaryContainer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L208" >}}">property <b>primaryContainer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>primaryContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    containerHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    modelDataUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>primaryContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelPrimaryContainer'>inputs.sagemaker.ModelPrimaryContainer</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
@@ -1243,10 +1371,12 @@ The primary docker image containing inference code that is used when the model i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L210" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L212" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1254,13 +1384,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelArgs-vpcConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L214" >}}">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L216" >}}">property <b>vpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelVpcConfig'>inputs.sagemaker.ModelVpcConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
@@ -1269,7 +1398,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ModelState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L148" >}}">interface <b>ModelState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L150" >}}">interface <b>ModelState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1278,10 +1407,12 @@ Input properties used for looking up and filtering Model resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ModelState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L152" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L154" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this model.
@@ -1289,15 +1420,12 @@ The Amazon Resource Name (ARN) assigned by AWS to this model.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-containers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L156" >}}">property <b>containers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L158" >}}">property <b>containers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    containerHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    modelDataUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelContainer'>inputs.sagemaker.ModelContainer</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies containers in the inference pipeline. If not specified, the `primaryContainer` argument is required. Fields are documented below.
@@ -1305,10 +1433,12 @@ Specifies containers in the inference pipeline. If not specified, the `primaryCo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-enableNetworkIsolation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L160" >}}">property <b>enableNetworkIsolation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L162" >}}">property <b>enableNetworkIsolation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableNetworkIsolation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
@@ -1316,10 +1446,12 @@ Isolates the model container. No inbound or outbound network calls can be made t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-executionRoleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L164" >}}">property <b>executionRoleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L166" >}}">property <b>executionRoleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>executionRoleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A role that SageMaker can assume to access model artifacts and docker images for deployment.
@@ -1327,10 +1459,12 @@ A role that SageMaker can assume to access model artifacts and docker images for
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L168" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L170" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the model (must be unique). If omitted, this provider will assign a random, unique name.
@@ -1338,15 +1472,12 @@ The name of the model (must be unique). If omitted, this provider will assign a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-primaryContainer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L172" >}}">property <b>primaryContainer</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L174" >}}">property <b>primaryContainer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>primaryContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    containerHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-    image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    modelDataUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>primaryContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelPrimaryContainer'>inputs.sagemaker.ModelPrimaryContainer</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
@@ -1354,10 +1485,12 @@ The primary docker image containing inference code that is used when the model i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L176" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L178" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1365,13 +1498,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ModelState-vpcConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L180" >}}">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/model.ts#L182" >}}">property <b>vpcConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ModelVpcConfig'>inputs.sagemaker.ModelVpcConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
@@ -1380,7 +1512,7 @@ Specifies the VPC that you want your model to connect to. VpcConfig is used in h
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotebookInstanceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L188" >}}">interface <b>NotebookInstanceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L190" >}}">interface <b>NotebookInstanceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1389,10 +1521,12 @@ The set of arguments for constructing a NotebookInstance resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotebookInstanceArgs-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L192" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L194" >}}">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of ML compute instance type.
@@ -1400,10 +1534,12 @@ The name of ML compute instance type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceArgs-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L196" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L198" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
@@ -1411,10 +1547,12 @@ The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encry
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceArgs-lifecycleConfigName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L200" >}}">property <b>lifecycleConfigName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L202" >}}">property <b>lifecycleConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lifecycleConfigName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a lifecycle configuration to associate with the notebook instance.
@@ -1422,10 +1560,12 @@ The name of a lifecycle configuration to associate with the notebook instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L204" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L206" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the notebook instance (must be unique).
@@ -1433,10 +1573,12 @@ The name of the notebook instance (must be unique).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceArgs-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L208" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L210" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
@@ -1444,10 +1586,12 @@ The ARN of the IAM role to be used by the notebook instance which allows SageMak
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceArgs-securityGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L212" >}}">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L214" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The associated security groups.
@@ -1455,10 +1599,12 @@ The associated security groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceArgs-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L216" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L218" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VPC subnet ID.
@@ -1466,10 +1612,12 @@ The VPC subnet ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L220" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L222" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1478,7 +1626,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotebookInstanceLifecycleConfigurationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L115" >}}">interface <b>NotebookInstanceLifecycleConfigurationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L117" >}}">interface <b>NotebookInstanceLifecycleConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1487,10 +1635,12 @@ The set of arguments for constructing a NotebookInstanceLifecycleConfiguration r
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfigurationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L119" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L121" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the lifecycle configuration (must be unique). If omitted, this provider will assign a random, unique name.
@@ -1498,10 +1648,12 @@ The name of the lifecycle configuration (must be unique). If omitted, this provi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfigurationArgs-onCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L123" >}}">property <b>onCreate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L125" >}}">property <b>onCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A shell script (base64-encoded) that runs only once when the SageMaker Notebook Instance is created.
@@ -1509,10 +1661,12 @@ A shell script (base64-encoded) that runs only once when the SageMaker Notebook 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfigurationArgs-onStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L127" >}}">property <b>onStart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L129" >}}">property <b>onStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it's created.
@@ -1521,7 +1675,7 @@ A shell script (base64-encoded) that runs every time the SageMaker Notebook Inst
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotebookInstanceLifecycleConfigurationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L93" >}}">interface <b>NotebookInstanceLifecycleConfigurationState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L95" >}}">interface <b>NotebookInstanceLifecycleConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1530,10 +1684,12 @@ Input properties used for looking up and filtering NotebookInstanceLifecycleConf
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfigurationState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L97" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L99" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this lifecycle configuration.
@@ -1541,10 +1697,12 @@ The Amazon Resource Name (ARN) assigned by AWS to this lifecycle configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfigurationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L101" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L103" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the lifecycle configuration (must be unique). If omitted, this provider will assign a random, unique name.
@@ -1552,10 +1710,12 @@ The name of the lifecycle configuration (must be unique). If omitted, this provi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfigurationState-onCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L105" >}}">property <b>onCreate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L107" >}}">property <b>onCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A shell script (base64-encoded) that runs only once when the SageMaker Notebook Instance is created.
@@ -1563,10 +1723,12 @@ A shell script (base64-encoded) that runs only once when the SageMaker Notebook 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceLifecycleConfigurationState-onStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L109" >}}">property <b>onStart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstanceLifecycleConfiguration.ts#L111" >}}">property <b>onStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it's created.
@@ -1575,7 +1737,7 @@ A shell script (base64-encoded) that runs every time the SageMaker Notebook Inst
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NotebookInstanceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L146" >}}">interface <b>NotebookInstanceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L148" >}}">interface <b>NotebookInstanceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1584,10 +1746,12 @@ Input properties used for looking up and filtering NotebookInstance resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NotebookInstanceState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L150" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L152" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
@@ -1595,10 +1759,12 @@ The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceState-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L154" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L156" >}}">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of ML compute instance type.
@@ -1606,10 +1772,12 @@ The name of ML compute instance type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceState-kmsKeyId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L158" >}}">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L160" >}}">property <b>kmsKeyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
@@ -1617,10 +1785,12 @@ The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encry
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceState-lifecycleConfigName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L162" >}}">property <b>lifecycleConfigName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L164" >}}">property <b>lifecycleConfigName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lifecycleConfigName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a lifecycle configuration to associate with the notebook instance.
@@ -1628,10 +1798,12 @@ The name of a lifecycle configuration to associate with the notebook instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L166" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L168" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the notebook instance (must be unique).
@@ -1639,10 +1811,12 @@ The name of the notebook instance (must be unique).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceState-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L170" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L172" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
@@ -1650,10 +1824,12 @@ The ARN of the IAM role to be used by the notebook instance which allows SageMak
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceState-securityGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L174" >}}">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L176" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The associated security groups.
@@ -1661,10 +1837,12 @@ The associated security groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceState-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L178" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L180" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VPC subnet ID.
@@ -1672,10 +1850,12 @@ The VPC subnet ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NotebookInstanceState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L182" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="sagemaker/notebookInstance.ts#L184" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.

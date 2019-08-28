@@ -79,7 +79,9 @@ title: Module directconnect
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L25" >}}">class <b>BgpPeer</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Direct Connect BGP peer resource.
@@ -104,10 +106,12 @@ const peer = new aws.directconnect.BgpPeer("peer", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L89" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BgpPeer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BgpPeerArgs'>BgpPeerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a BgpPeer resource with the given unique name, arguments, and options.
 
@@ -121,10 +125,12 @@ Create a BgpPeer resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BgpPeerState'>BgpPeerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BgpPeer'>BgpPeer</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing BgpPeer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -132,23 +138,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BgpPeer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L25" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BgpPeer-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of BgpPeer.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -159,7 +169,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L55" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -170,7 +182,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L60" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>amazonAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon.
@@ -182,7 +196,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L64" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>awsDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the BGP peer terminates.
@@ -193,7 +209,9 @@ The Direct Connect endpoint on which the BGP peer terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L68" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -204,7 +222,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L72" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAuthKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -215,7 +235,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L76" >}}">property <b>bgpPeerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpPeerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the BGP peer.
@@ -226,7 +248,9 @@ The ID of the BGP peer.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L80" >}}">property <b>bgpStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Up/Down state of the BGP peer.
@@ -237,7 +261,9 @@ The Up/Down state of the BGP peer.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L85" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>customerAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic.
@@ -246,10 +272,12 @@ Required for IPv4 BGP peers on public virtual interfaces.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BgpPeer-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L25" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -258,10 +286,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BgpPeer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L25" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -273,7 +303,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L89" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>virtualInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface on which to create the BGP peer.
@@ -285,7 +317,9 @@ The ID of the Direct Connect virtual interface on which to create the BGP peer.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L24" >}}">class <b>Connection</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Connection of Direct Connect.
@@ -309,10 +343,12 @@ const hoge = new aws.directconnect.Connection("hoge", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Connection(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ConnectionArgs'>ConnectionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Connection resource with the given unique name, arguments, and options.
 
@@ -326,10 +362,12 @@ Create a Connection resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L33" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConnectionState'>ConnectionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Connection'>Connection</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Connection resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -337,23 +375,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L24" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L44" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Connection.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -364,7 +406,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L54" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the connection.
@@ -375,7 +419,9 @@ The ARN of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L58" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>awsDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the physical connection terminates.
@@ -386,7 +432,9 @@ The Direct Connect endpoint on which the physical connection terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L62" >}}">property <b>bandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
@@ -397,7 +445,9 @@ The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L66" >}}">property <b>hasLogicalRedundancy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hasLogicalRedundancy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
@@ -405,10 +455,12 @@ Indicates whether the connection supports a secondary BGP peer in the same addre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L24" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -420,7 +472,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L70" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>jumboFrameCapable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean value representing if jumbo frames have been enabled for this connection.
@@ -431,7 +485,9 @@ Boolean value representing if jumbo frames have been enabled for this connection
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L74" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
@@ -442,7 +498,9 @@ The AWS Direct Connect location where the connection is located. See [DescribeLo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L78" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the connection.
@@ -453,7 +511,9 @@ The name of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L82" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -461,10 +521,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L24" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -477,7 +539,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L32" >}}">class <b>ConnectionAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Associates a Direct Connect Connection with a LAG.
@@ -509,10 +573,12 @@ const exampleConnectionAssociation = new aws.directconnect.ConnectionAssociation
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ConnectionAssociation(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ConnectionAssociationArgs'>ConnectionAssociationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ConnectionAssociation resource with the given unique name, arguments, and options.
 
@@ -526,10 +592,12 @@ Create a ConnectionAssociation resource with the given unique name, arguments, a
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConnectionAssociationState'>ConnectionAssociationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ConnectionAssociation'>ConnectionAssociation</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ConnectionAssociation resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -537,23 +605,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionAssociation-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionAssociation-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ConnectionAssociation.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -564,7 +636,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L62" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the connection.
@@ -572,10 +646,12 @@ The ID of the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionAssociation-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -587,7 +663,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L66" >}}">property <b>lagId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the LAG with which to associate the connection.
@@ -595,10 +673,12 @@ The ID of the LAG with which to associate the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionAssociation-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L32" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -611,7 +691,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L23" >}}">class <b>Gateway</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Direct Connect Gateway.
@@ -634,10 +716,12 @@ const example = new aws.directconnect.Gateway("example", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L61" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Gateway(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GatewayArgs'>GatewayArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Gateway resource with the given unique name, arguments, and options.
 
@@ -651,10 +735,12 @@ Create a Gateway resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L32" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#GatewayState'>GatewayState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Gateway'>Gateway</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Gateway resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -662,23 +748,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L23" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L43" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Gateway.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -689,7 +779,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L53" >}}">property <b>amazonSideAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>amazonSideAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ASN to be configured on the Amazon side of the connection. The ASN must be in the private range of 64,512 to 65,534 or 4,200,000,000 to 4,294,967,294.
@@ -697,10 +789,12 @@ The ASN to be configured on the Amazon side of the connection. The ASN must be i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L23" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -712,7 +806,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L57" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the connection.
@@ -723,7 +819,9 @@ The name of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L61" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ownerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS Account ID of the gateway.
@@ -731,10 +829,12 @@ AWS Account ID of the gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Gateway-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L23" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -747,7 +847,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L86" >}}">class <b>GatewayAssociation</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Associates a Direct Connect Gateway with a VGW or transit gateway.
@@ -833,10 +935,12 @@ A full example of how to create a VPN Gateway in one AWS account, create a Direc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L152" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> GatewayAssociation(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GatewayAssociationArgs'>GatewayAssociationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a GatewayAssociation resource with the given unique name, arguments, and options.
 
@@ -850,10 +954,12 @@ Create a GatewayAssociation resource with the given unique name, arguments, and 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L95" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#GatewayAssociationState'>GatewayAssociationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#GatewayAssociation'>GatewayAssociation</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing GatewayAssociation resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -861,23 +967,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayAssociation-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L86" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayAssociation-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L106" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of GatewayAssociation.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -888,7 +998,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L116" >}}">property <b>allowedPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowedPrefixes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
@@ -899,7 +1011,9 @@ VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L121" >}}">property <b>associatedGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associatedGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -911,7 +1025,9 @@ Used for single account Direct Connect gateway associations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L126" >}}">property <b>associatedGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associatedGatewayOwnerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -923,7 +1039,9 @@ Used for cross-account Direct Connect gateway associations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L130" >}}">property <b>associatedGatewayType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associatedGatewayType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
@@ -934,7 +1052,9 @@ The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L134" >}}">property <b>dxGatewayAssociationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dxGatewayAssociationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway association.
@@ -945,7 +1065,9 @@ The ID of the Direct Connect gateway association.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L138" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dxGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway.
@@ -956,7 +1078,9 @@ The ID of the Direct Connect gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L142" >}}">property <b>dxGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dxGatewayOwnerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the AWS account that owns the Direct Connect gateway.
@@ -964,10 +1088,12 @@ The ID of the AWS account that owns the Direct Connect gateway.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayAssociation-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L86" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -979,7 +1105,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L147" >}}">property <b>proposalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>proposalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway association proposal.
@@ -988,10 +1116,12 @@ Used for cross-account Direct Connect gateway associations.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayAssociation-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L86" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1003,7 +1133,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L152" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpnGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 *Deprecated:* Use `associatedGatewayId` instead. The ID of the VGW with which to associate the gateway.
@@ -1016,7 +1148,9 @@ Used for single account Direct Connect gateway associations.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L27" >}}">class <b>GatewayAssociationProposal</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the [`aws.directconnect.GatewayAssociation` resource](https://www.terraform.io/docs/providers/aws/r/dx_gateway_association.html).
@@ -1043,10 +1177,12 @@ A full example of how to create a VPN Gateway in one AWS account, create a Direc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L81" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> GatewayAssociationProposal(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GatewayAssociationProposalArgs'>GatewayAssociationProposalArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a GatewayAssociationProposal resource with the given unique name, arguments, and options.
 
@@ -1060,10 +1196,12 @@ Create a GatewayAssociationProposal resource with the given unique name, argumen
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#GatewayAssociationProposalState'>GatewayAssociationProposalState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#GatewayAssociationProposal'>GatewayAssociationProposal</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing GatewayAssociationProposal resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1071,23 +1209,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayAssociationProposal-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayAssociationProposal-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of GatewayAssociationProposal.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1098,7 +1240,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L57" >}}">property <b>allowedPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowedPrefixes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
@@ -1109,7 +1253,9 @@ VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L61" >}}">property <b>associatedGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associatedGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -1120,7 +1266,9 @@ The ID of the VGW or transit gateway with which to associate the Direct Connect 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L65" >}}">property <b>associatedGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associatedGatewayOwnerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -1131,7 +1279,9 @@ The ID of the AWS account that owns the VGW or transit gateway with which to ass
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L69" >}}">property <b>associatedGatewayType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associatedGatewayType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
@@ -1142,7 +1292,9 @@ The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L73" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dxGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Direct Connect Gateway identifier.
@@ -1153,7 +1305,9 @@ Direct Connect Gateway identifier.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L77" >}}">property <b>dxGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dxGatewayOwnerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS Account identifier of the Direct Connect Gateway's owner.
@@ -1161,10 +1315,12 @@ AWS Account identifier of the Direct Connect Gateway's owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayAssociationProposal-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1173,10 +1329,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GatewayAssociationProposal-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1188,7 +1346,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L81" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpnGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 *Deprecated:* Use `associatedGatewayId` instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.
@@ -1200,7 +1360,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L27" >}}">class <b>HostedPrivateVirtualInterface</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Direct Connect hosted private virtual interface resource. This resource represents the allocator's side of the hosted virtual interface.
@@ -1227,10 +1389,12 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L105" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HostedPrivateVirtualInterface(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HostedPrivateVirtualInterfaceArgs'>HostedPrivateVirtualInterfaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a HostedPrivateVirtualInterface resource with the given unique name, arguments, and options.
 
@@ -1244,10 +1408,12 @@ Create a HostedPrivateVirtualInterface resource with the given unique name, argu
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#HostedPrivateVirtualInterfaceState'>HostedPrivateVirtualInterfaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#HostedPrivateVirtualInterface'>HostedPrivateVirtualInterface</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing HostedPrivateVirtualInterface resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1255,23 +1421,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPrivateVirtualInterface-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPrivateVirtualInterface-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of HostedPrivateVirtualInterface.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1282,7 +1452,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L57" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -1293,7 +1465,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L61" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>amazonAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -1304,7 +1478,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L65" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -1315,7 +1491,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L69" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>awsDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -1326,7 +1504,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L73" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -1337,7 +1517,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L77" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAuthKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -1348,7 +1530,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L81" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -1359,7 +1543,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L85" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>customerAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -1367,10 +1553,12 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPrivateVirtualInterface-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1382,7 +1570,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L89" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>jumboFrameCapable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether jumbo frames (9001 MTU) are supported.
@@ -1393,7 +1583,9 @@ Indicates whether jumbo frames (9001 MTU) are supported.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L93" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mtu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
@@ -1404,7 +1596,9 @@ The maximum transmission unit (MTU) is the size, in bytes, of the largest permis
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L97" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -1415,7 +1609,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L101" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ownerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS account that will own the new virtual interface.
@@ -1423,10 +1619,12 @@ The AWS account that will own the new virtual interface.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPrivateVirtualInterface-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1438,7 +1636,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L105" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -1450,7 +1650,9 @@ The VLAN ID.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L13" >}}">class <b>HostedPrivateVirtualInterfaceAccepter</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to manage the accepter's side of a Direct Connect hosted private virtual interface.
@@ -1463,10 +1665,12 @@ This resource accepts ownership of a private virtual interface created by anothe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L59" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HostedPrivateVirtualInterfaceAccepter(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HostedPrivateVirtualInterfaceAccepterArgs'>HostedPrivateVirtualInterfaceAccepterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a HostedPrivateVirtualInterfaceAccepter resource with the given unique name, arguments, and options.
 
@@ -1480,10 +1684,12 @@ Create a HostedPrivateVirtualInterfaceAccepter resource with the given unique na
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L22" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#HostedPrivateVirtualInterfaceAccepterState'>HostedPrivateVirtualInterfaceAccepterState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#HostedPrivateVirtualInterfaceAccepter'>HostedPrivateVirtualInterfaceAccepter</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing HostedPrivateVirtualInterfaceAccepter resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1491,23 +1697,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPrivateVirtualInterfaceAccepter-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L13" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPrivateVirtualInterfaceAccepter-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L33" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of HostedPrivateVirtualInterfaceAccepter.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1518,7 +1728,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L43" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -1529,7 +1741,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L47" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dxGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -1537,10 +1751,12 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPrivateVirtualInterfaceAccepter-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L13" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1552,7 +1768,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L51" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1560,10 +1778,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPrivateVirtualInterfaceAccepter-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L13" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1575,7 +1795,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L55" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>virtualInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface to accept.
@@ -1586,7 +1808,9 @@ The ID of the Direct Connect virtual interface to accept.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L59" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpnGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the virtual private gateway to which to connect the virtual interface.
@@ -1598,7 +1822,9 @@ The ID of the virtual private gateway to which to connect the virtual interface.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L33" >}}">class <b>HostedPublicVirtualInterface</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Direct Connect hosted public virtual interface resource. This resource represents the allocator's side of the hosted virtual interface.
@@ -1631,10 +1857,12 @@ const foo = new aws.directconnect.HostedPublicVirtualInterface("foo", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L107" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HostedPublicVirtualInterface(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HostedPublicVirtualInterfaceArgs'>HostedPublicVirtualInterfaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a HostedPublicVirtualInterface resource with the given unique name, arguments, and options.
 
@@ -1648,10 +1876,12 @@ Create a HostedPublicVirtualInterface resource with the given unique name, argum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L42" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#HostedPublicVirtualInterfaceState'>HostedPublicVirtualInterfaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#HostedPublicVirtualInterface'>HostedPublicVirtualInterface</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing HostedPublicVirtualInterface resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1659,23 +1889,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPublicVirtualInterface-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L33" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPublicVirtualInterface-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L53" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of HostedPublicVirtualInterface.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1686,7 +1920,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L63" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -1697,7 +1933,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L67" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>amazonAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -1708,7 +1946,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L71" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -1719,7 +1959,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L75" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>awsDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -1730,7 +1972,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L79" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -1741,7 +1985,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L83" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAuthKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -1752,7 +1998,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L87" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -1763,7 +2011,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L91" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>customerAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -1771,10 +2021,12 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPublicVirtualInterface-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L33" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1786,7 +2038,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L95" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -1797,7 +2051,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L99" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ownerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS account that will own the new virtual interface.
@@ -1808,7 +2064,9 @@ The AWS account that will own the new virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L103" >}}">property <b>routeFilterPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>routeFilterPrefixes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of routes to be advertised to the AWS network in this region.
@@ -1816,10 +2074,12 @@ A list of routes to be advertised to the AWS network in this region.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPublicVirtualInterface-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L33" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1831,7 +2091,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L107" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -1843,7 +2105,9 @@ The VLAN ID.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L13" >}}">class <b>HostedPublicVirtualInterfaceAccepter</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.
@@ -1856,10 +2120,12 @@ This resource accepts ownership of a public virtual interface created by another
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L51" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HostedPublicVirtualInterfaceAccepter(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HostedPublicVirtualInterfaceAccepterArgs'>HostedPublicVirtualInterfaceAccepterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a HostedPublicVirtualInterfaceAccepter resource with the given unique name, arguments, and options.
 
@@ -1873,10 +2139,12 @@ Create a HostedPublicVirtualInterfaceAccepter resource with the given unique nam
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L22" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#HostedPublicVirtualInterfaceAccepterState'>HostedPublicVirtualInterfaceAccepterState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#HostedPublicVirtualInterfaceAccepter'>HostedPublicVirtualInterfaceAccepter</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing HostedPublicVirtualInterfaceAccepter resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1884,23 +2152,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPublicVirtualInterfaceAccepter-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L13" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPublicVirtualInterfaceAccepter-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L33" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of HostedPublicVirtualInterfaceAccepter.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1911,7 +2183,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L43" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -1919,10 +2193,12 @@ The ARN of the virtual interface.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPublicVirtualInterfaceAccepter-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L13" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1934,7 +2210,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L47" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1942,10 +2220,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HostedPublicVirtualInterfaceAccepter-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L13" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1957,7 +2237,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L51" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>virtualInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface to accept.
@@ -1969,7 +2251,9 @@ The ID of the Direct Connect virtual interface to accept.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L27" >}}">class <b>LinkAggregationGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Direct Connect LAG. Connections can be added to the LAG via the [`aws.directconnect.Connection`](https://www.terraform.io/docs/providers/aws/r/dx_connection.html) and [`aws.directconnect.ConnectionAssociation`](https://www.terraform.io/docs/providers/aws/r/dx_connection_association.html) resources.
@@ -1996,10 +2280,12 @@ const hoge = new aws.directconnect.LinkAggregationGroup("hoge", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L83" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LinkAggregationGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LinkAggregationGroupArgs'>LinkAggregationGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a LinkAggregationGroup resource with the given unique name, arguments, and options.
 
@@ -2013,10 +2299,12 @@ Create a LinkAggregationGroup resource with the given unique name, arguments, an
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#LinkAggregationGroupState'>LinkAggregationGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#LinkAggregationGroup'>LinkAggregationGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing LinkAggregationGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2024,23 +2312,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkAggregationGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkAggregationGroup-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of LinkAggregationGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2051,7 +2343,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L58" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the LAG.
@@ -2063,7 +2357,9 @@ The ARN of the LAG.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L62" >}}">property <b>connectionsBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionsBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bandwidth of the individual physical connections bundled by the LAG. Available values: 1Gbps, 10Gbps. Case sensitive.
@@ -2074,7 +2370,9 @@ The bandwidth of the individual physical connections bundled by the LAG. Availab
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L66" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
@@ -2085,7 +2383,9 @@ A boolean that indicates all connections associated with the LAG should be delet
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L70" >}}">property <b>hasLogicalRedundancy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hasLogicalRedundancy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).
@@ -2093,10 +2393,12 @@ Indicates whether the LAG supports a secondary BGP peer in the same address fami
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkAggregationGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2108,7 +2410,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L71" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>jumboFrameCapable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2116,7 +2420,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L75" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
@@ -2127,7 +2433,9 @@ The AWS Direct Connect location in which the LAG should be allocated. See [Descr
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L79" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the LAG.
@@ -2138,7 +2446,9 @@ The name of the LAG.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L83" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2146,10 +2456,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LinkAggregationGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2162,7 +2474,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L26" >}}">class <b>PrivateVirtualInterface</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Direct Connect private virtual interface resource.
@@ -2188,10 +2502,12 @@ const foo = new aws.directconnect.PrivateVirtualInterface("foo", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L113" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PrivateVirtualInterface(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PrivateVirtualInterfaceArgs'>PrivateVirtualInterfaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a PrivateVirtualInterface resource with the given unique name, arguments, and options.
 
@@ -2205,10 +2521,12 @@ Create a PrivateVirtualInterface resource with the given unique name, arguments,
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L35" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PrivateVirtualInterfaceState'>PrivateVirtualInterfaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PrivateVirtualInterface'>PrivateVirtualInterface</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing PrivateVirtualInterface resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2216,23 +2534,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateVirtualInterface-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateVirtualInterface-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L46" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of PrivateVirtualInterface.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2243,7 +2565,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L56" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -2254,7 +2578,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L60" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>amazonAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -2265,7 +2591,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L64" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -2276,7 +2604,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L68" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>awsDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -2287,7 +2617,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L72" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -2298,7 +2630,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L76" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAuthKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -2309,7 +2643,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L80" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -2320,7 +2656,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L84" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>customerAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -2331,7 +2669,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L88" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dxGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -2339,10 +2679,12 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateVirtualInterface-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2354,7 +2696,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L92" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>jumboFrameCapable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether jumbo frames (9001 MTU) are supported.
@@ -2365,7 +2709,9 @@ Indicates whether jumbo frames (9001 MTU) are supported.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L97" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mtu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
@@ -2377,7 +2723,9 @@ The MTU of a virtual private interface can be either `1500` or `9001` (jumbo fra
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L101" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -2388,7 +2736,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L105" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2396,10 +2746,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PrivateVirtualInterface-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2411,7 +2763,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L109" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -2422,7 +2776,9 @@ The VLAN ID.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L113" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpnGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the virtual private gateway to which to connect the virtual interface.
@@ -2434,7 +2790,9 @@ The ID of the virtual private gateway to which to connect the virtual interface.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L32" >}}">class <b>PublicVirtualInterface</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Direct Connect public virtual interface resource.
@@ -2466,10 +2824,12 @@ const foo = new aws.directconnect.PublicVirtualInterface("foo", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L106" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PublicVirtualInterface(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PublicVirtualInterfaceArgs'>PublicVirtualInterfaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a PublicVirtualInterface resource with the given unique name, arguments, and options.
 
@@ -2483,10 +2843,12 @@ Create a PublicVirtualInterface resource with the given unique name, arguments, 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PublicVirtualInterfaceState'>PublicVirtualInterfaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PublicVirtualInterface'>PublicVirtualInterface</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing PublicVirtualInterface resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2494,23 +2856,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PublicVirtualInterface-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PublicVirtualInterface-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of PublicVirtualInterface.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2521,7 +2887,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L62" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -2532,7 +2900,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L66" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>amazonAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -2543,7 +2913,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L70" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -2554,7 +2926,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L74" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>awsDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -2565,7 +2939,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L78" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -2576,7 +2952,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L82" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAuthKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -2587,7 +2965,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L86" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -2598,7 +2978,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L90" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>customerAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -2606,10 +2988,12 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PublicVirtualInterface-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2621,7 +3005,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L94" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -2632,7 +3018,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L98" >}}">property <b>routeFilterPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>routeFilterPrefixes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of routes to be advertised to the AWS network in this region.
@@ -2643,7 +3031,9 @@ A list of routes to be advertised to the AWS network in this region.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L102" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2651,10 +3041,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PublicVirtualInterface-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L32" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2666,7 +3058,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L106" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -2678,7 +3072,9 @@ The VLAN ID.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L31" >}}">class <b>TransitVirtualInterface</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Direct Connect transit virtual interface resource.
@@ -2709,10 +3105,12 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L114" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TransitVirtualInterface(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TransitVirtualInterfaceArgs'>TransitVirtualInterfaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a TransitVirtualInterface resource with the given unique name, arguments, and options.
 
@@ -2726,10 +3124,12 @@ Create a TransitVirtualInterface resource with the given unique name, arguments,
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TransitVirtualInterfaceState'>TransitVirtualInterfaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TransitVirtualInterface'>TransitVirtualInterface</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing TransitVirtualInterface resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2737,23 +3137,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TransitVirtualInterface-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L31" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TransitVirtualInterface-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of TransitVirtualInterface.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2764,7 +3168,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L61" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -2775,7 +3181,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L65" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>amazonAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -2786,7 +3194,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L69" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -2797,7 +3207,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L73" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>awsDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -2808,7 +3220,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L77" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -2819,7 +3233,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L81" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bgpAuthKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -2830,7 +3246,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L85" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -2841,7 +3259,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L89" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>customerAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -2852,7 +3272,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L93" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dxGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -2860,10 +3282,12 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TransitVirtualInterface-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L31" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2875,7 +3299,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L97" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>jumboFrameCapable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether jumbo frames (8500 MTU) are supported.
@@ -2886,7 +3312,9 @@ Indicates whether jumbo frames (8500 MTU) are supported.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L102" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mtu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
@@ -2898,7 +3326,9 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L106" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -2909,7 +3339,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L110" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2917,10 +3349,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TransitVirtualInterface-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L31" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2932,7 +3366,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L114" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -2944,10 +3380,12 @@ The VLAN ID.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="directconnect/getGateway.ts#L23" >}}">function <b>getGateway</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getGateway(args: <a href='#GetGatewayArgs'>GetGatewayArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetGatewayResult'>GetGatewayResult</a>&gt; &amp; <a href='#GetGatewayResult'>GetGatewayResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Retrieve information about a Direct Connect Gateway.
 
@@ -2979,7 +3417,9 @@ The set of arguments for constructing a BgpPeer resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L195" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -2990,7 +3430,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L200" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon.
@@ -3002,7 +3444,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L204" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -3013,7 +3457,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L208" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -3024,7 +3470,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L213" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic.
@@ -3036,7 +3484,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L217" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface on which to create the BGP peer.
@@ -3057,7 +3507,9 @@ Input properties used for looking up and filtering BgpPeer resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L151" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -3068,7 +3520,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L156" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon.
@@ -3080,7 +3534,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L160" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the BGP peer terminates.
@@ -3091,7 +3547,9 @@ The Direct Connect endpoint on which the BGP peer terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L164" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -3102,7 +3560,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L168" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -3113,7 +3573,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L172" >}}">property <b>bgpPeerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpPeerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the BGP peer.
@@ -3124,7 +3586,9 @@ The ID of the BGP peer.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L176" >}}">property <b>bgpStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Up/Down state of the BGP peer.
@@ -3135,7 +3599,9 @@ The Up/Down state of the BGP peer.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L181" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic.
@@ -3147,7 +3613,9 @@ Required for IPv4 BGP peers on public virtual interfaces.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/bgpPeer.ts#L185" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualInterfaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface on which to create the BGP peer.
@@ -3168,7 +3636,9 @@ The set of arguments for constructing a Connection resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L177" >}}">property <b>bandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
@@ -3179,7 +3649,9 @@ The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L181" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
@@ -3190,7 +3662,9 @@ The AWS Direct Connect location where the connection is located. See [DescribeLo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L185" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the connection.
@@ -3201,7 +3675,9 @@ The name of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L189" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3222,7 +3698,9 @@ The set of arguments for constructing a ConnectionAssociation resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L125" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the connection.
@@ -3233,7 +3711,9 @@ The ID of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L129" >}}">property <b>lagId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lagId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the LAG with which to associate the connection.
@@ -3254,7 +3734,9 @@ Input properties used for looking up and filtering ConnectionAssociation resourc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L111" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the connection.
@@ -3265,7 +3747,9 @@ The ID of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connectionAssociation.ts#L115" >}}">property <b>lagId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lagId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the LAG with which to associate the connection.
@@ -3286,7 +3770,9 @@ Input properties used for looking up and filtering Connection resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L139" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the connection.
@@ -3297,7 +3783,9 @@ The ARN of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L143" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the physical connection terminates.
@@ -3308,7 +3796,9 @@ The Direct Connect endpoint on which the physical connection terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L147" >}}">property <b>bandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
@@ -3319,7 +3809,9 @@ The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L151" >}}">property <b>hasLogicalRedundancy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hasLogicalRedundancy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
@@ -3330,7 +3822,9 @@ Indicates whether the connection supports a secondary BGP peer in the same addre
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L155" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>jumboFrameCapable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean value representing if jumbo frames have been enabled for this connection.
@@ -3341,7 +3835,9 @@ Boolean value representing if jumbo frames have been enabled for this connection
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L159" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
@@ -3352,7 +3848,9 @@ The AWS Direct Connect location where the connection is located. See [DescribeLo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L163" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the connection.
@@ -3363,7 +3861,9 @@ The name of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/connection.ts#L167" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3384,7 +3884,9 @@ The set of arguments for constructing a Gateway resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L123" >}}">property <b>amazonSideAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonSideAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ASN to be configured on the Amazon side of the connection. The ASN must be in the private range of 64,512 to 65,534 or 4,200,000,000 to 4,294,967,294.
@@ -3395,7 +3897,9 @@ The ASN to be configured on the Amazon side of the connection. The ASN must be i
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L127" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the connection.
@@ -3416,7 +3920,9 @@ The set of arguments for constructing a GatewayAssociation resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L254" >}}">property <b>allowedPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedPrefixes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
@@ -3427,7 +3933,9 @@ VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L259" >}}">property <b>associatedGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -3439,7 +3947,9 @@ Used for single account Direct Connect gateway associations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L264" >}}">property <b>associatedGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayOwnerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -3451,7 +3961,9 @@ Used for cross-account Direct Connect gateway associations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L268" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway.
@@ -3462,7 +3974,9 @@ The ID of the Direct Connect gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L273" >}}">property <b>proposalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>proposalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway association proposal.
@@ -3474,7 +3988,9 @@ Used for cross-account Direct Connect gateway associations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L278" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpnGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 *Deprecated:* Use `associatedGatewayId` instead. The ID of the VGW with which to associate the gateway.
@@ -3496,7 +4012,9 @@ The set of arguments for constructing a GatewayAssociationProposal resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L170" >}}">property <b>allowedPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedPrefixes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
@@ -3507,7 +4025,9 @@ VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L174" >}}">property <b>associatedGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -3518,7 +4038,9 @@ The ID of the VGW or transit gateway with which to associate the Direct Connect 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L178" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Direct Connect Gateway identifier.
@@ -3529,7 +4051,9 @@ Direct Connect Gateway identifier.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L182" >}}">property <b>dxGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayOwnerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS Account identifier of the Direct Connect Gateway's owner.
@@ -3540,7 +4064,9 @@ AWS Account identifier of the Direct Connect Gateway's owner.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L186" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpnGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 *Deprecated:* Use `associatedGatewayId` instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.
@@ -3561,7 +4087,9 @@ Input properties used for looking up and filtering GatewayAssociationProposal re
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L136" >}}">property <b>allowedPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedPrefixes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
@@ -3572,7 +4100,9 @@ VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L140" >}}">property <b>associatedGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -3583,7 +4113,9 @@ The ID of the VGW or transit gateway with which to associate the Direct Connect 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L144" >}}">property <b>associatedGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayOwnerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -3594,7 +4126,9 @@ The ID of the AWS account that owns the VGW or transit gateway with which to ass
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L148" >}}">property <b>associatedGatewayType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
@@ -3605,7 +4139,9 @@ The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L152" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Direct Connect Gateway identifier.
@@ -3616,7 +4152,9 @@ Direct Connect Gateway identifier.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L156" >}}">property <b>dxGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayOwnerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS Account identifier of the Direct Connect Gateway's owner.
@@ -3627,7 +4165,9 @@ AWS Account identifier of the Direct Connect Gateway's owner.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociationProposal.ts#L160" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpnGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 *Deprecated:* Use `associatedGatewayId` instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.
@@ -3648,7 +4188,9 @@ Input properties used for looking up and filtering GatewayAssociation resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L208" >}}">property <b>allowedPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedPrefixes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
@@ -3659,7 +4201,9 @@ VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L213" >}}">property <b>associatedGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -3671,7 +4215,9 @@ Used for single account Direct Connect gateway associations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L218" >}}">property <b>associatedGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayOwnerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -3683,7 +4229,9 @@ Used for cross-account Direct Connect gateway associations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L222" >}}">property <b>associatedGatewayType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedGatewayType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
@@ -3694,7 +4242,9 @@ The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L226" >}}">property <b>dxGatewayAssociationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayAssociationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway association.
@@ -3705,7 +4255,9 @@ The ID of the Direct Connect gateway association.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L230" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway.
@@ -3716,7 +4268,9 @@ The ID of the Direct Connect gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L234" >}}">property <b>dxGatewayOwnerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayOwnerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the AWS account that owns the Direct Connect gateway.
@@ -3727,7 +4281,9 @@ The ID of the AWS account that owns the Direct Connect gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L239" >}}">property <b>proposalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>proposalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway association proposal.
@@ -3739,7 +4295,9 @@ Used for cross-account Direct Connect gateway associations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gatewayAssociation.ts#L244" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpnGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 *Deprecated:* Use `associatedGatewayId` instead. The ID of the VGW with which to associate the gateway.
@@ -3761,7 +4319,9 @@ Input properties used for looking up and filtering Gateway resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L105" >}}">property <b>amazonSideAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonSideAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ASN to be configured on the Amazon side of the connection. The ASN must be in the private range of 64,512 to 65,534 or 4,200,000,000 to 4,294,967,294.
@@ -3772,7 +4332,9 @@ The ASN to be configured on the Amazon side of the connection. The ASN must be i
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L109" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the connection.
@@ -3783,7 +4345,9 @@ The name of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/gateway.ts#L113" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS Account ID of the gateway.
@@ -3804,7 +4368,9 @@ A collection of arguments for invoking getGateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/getGateway.ts#L45" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the gateway to retrieve.
@@ -3825,7 +4391,9 @@ A collection of values returned by getGateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/getGateway.ts#L55" >}}">property <b>amazonSideAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonSideAsn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ASN on the Amazon side of the connection.
@@ -3836,7 +4404,9 @@ The ASN on the Amazon side of the connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/getGateway.ts#L64" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -3847,7 +4417,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/getGateway.ts#L56" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -3855,7 +4427,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/getGateway.ts#L60" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS Account ID of the gateway.
@@ -3876,7 +4450,9 @@ The set of arguments for constructing a HostedPrivateVirtualInterfaceAccepter re
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L133" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -3887,7 +4463,9 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L137" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3898,7 +4476,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L141" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface to accept.
@@ -3909,7 +4489,9 @@ The ID of the Direct Connect virtual interface to accept.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L145" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpnGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the virtual private gateway to which to connect the virtual interface.
@@ -3930,7 +4512,9 @@ Input properties used for looking up and filtering HostedPrivateVirtualInterface
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L107" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -3941,7 +4525,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L111" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -3952,7 +4538,9 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L115" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3963,7 +4551,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L119" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualInterfaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface to accept.
@@ -3974,7 +4564,9 @@ The ID of the Direct Connect virtual interface to accept.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterfaceAccepter.ts#L123" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpnGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the virtual private gateway to which to connect the virtual interface.
@@ -3995,7 +4587,9 @@ The set of arguments for constructing a HostedPrivateVirtualInterface resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L239" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -4006,7 +4600,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L243" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -4017,7 +4613,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L247" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -4028,7 +4626,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L251" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -4039,7 +4639,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L255" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -4050,7 +4652,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L259" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -4061,7 +4665,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L263" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
@@ -4072,7 +4678,9 @@ The maximum transmission unit (MTU) is the size, in bytes, of the largest permis
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L267" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -4083,7 +4691,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L271" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS account that will own the new virtual interface.
@@ -4094,7 +4704,9 @@ The AWS account that will own the new virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L275" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -4115,7 +4727,9 @@ Input properties used for looking up and filtering HostedPrivateVirtualInterface
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L181" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -4126,7 +4740,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L185" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -4137,7 +4753,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L189" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -4148,7 +4766,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L193" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -4159,7 +4779,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L197" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -4170,7 +4792,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L201" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -4181,7 +4805,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L205" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -4192,7 +4818,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L209" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -4203,7 +4831,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L213" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>jumboFrameCapable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether jumbo frames (9001 MTU) are supported.
@@ -4214,7 +4844,9 @@ Indicates whether jumbo frames (9001 MTU) are supported.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L217" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
@@ -4225,7 +4857,9 @@ The maximum transmission unit (MTU) is the size, in bytes, of the largest permis
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L221" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -4236,7 +4870,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L225" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS account that will own the new virtual interface.
@@ -4247,7 +4883,9 @@ The AWS account that will own the new virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPrivateVirtualInterface.ts#L229" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -4268,7 +4906,9 @@ The set of arguments for constructing a HostedPublicVirtualInterfaceAccepter res
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L113" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4279,7 +4919,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L117" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualInterfaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface to accept.
@@ -4300,7 +4942,9 @@ Input properties used for looking up and filtering HostedPublicVirtualInterfaceA
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L95" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -4311,7 +4955,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L99" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4322,7 +4968,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterfaceAccepter.ts#L103" >}}">property <b>virtualInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualInterfaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect virtual interface to accept.
@@ -4343,7 +4991,9 @@ The set of arguments for constructing a HostedPublicVirtualInterface resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L238" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -4354,7 +5004,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L242" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -4365,7 +5017,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L246" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -4376,7 +5030,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L250" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -4387,7 +5043,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L254" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -4398,7 +5056,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L258" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -4409,7 +5069,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L262" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -4420,7 +5082,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L266" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS account that will own the new virtual interface.
@@ -4431,7 +5095,9 @@ The AWS account that will own the new virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L270" >}}">property <b>routeFilterPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routeFilterPrefixes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of routes to be advertised to the AWS network in this region.
@@ -4442,7 +5108,9 @@ A list of routes to be advertised to the AWS network in this region.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L274" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -4463,7 +5131,9 @@ Input properties used for looking up and filtering HostedPublicVirtualInterface 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L184" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -4474,7 +5144,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L188" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -4485,7 +5157,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L192" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -4496,7 +5170,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L196" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -4507,7 +5183,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L200" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -4518,7 +5196,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L204" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -4529,7 +5209,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L208" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -4540,7 +5222,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L212" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -4551,7 +5235,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L216" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -4562,7 +5248,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L220" >}}">property <b>ownerAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS account that will own the new virtual interface.
@@ -4573,7 +5261,9 @@ The AWS account that will own the new virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L224" >}}">property <b>routeFilterPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routeFilterPrefixes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of routes to be advertised to the AWS network in this region.
@@ -4584,7 +5274,9 @@ A list of routes to be advertised to the AWS network in this region.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/hostedPublicVirtualInterface.ts#L228" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -4605,7 +5297,9 @@ The set of arguments for constructing a LinkAggregationGroup resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L176" >}}">property <b>connectionsBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionsBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bandwidth of the individual physical connections bundled by the LAG. Available values: 1Gbps, 10Gbps. Case sensitive.
@@ -4616,7 +5310,9 @@ The bandwidth of the individual physical connections bundled by the LAG. Availab
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L180" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
@@ -4627,7 +5323,9 @@ A boolean that indicates all connections associated with the LAG should be delet
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L184" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
@@ -4638,7 +5336,9 @@ The AWS Direct Connect location in which the LAG should be allocated. See [Descr
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L188" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the LAG.
@@ -4649,7 +5349,9 @@ The name of the LAG.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L192" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4670,7 +5372,9 @@ Input properties used for looking up and filtering LinkAggregationGroup resource
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L141" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the LAG.
@@ -4682,7 +5386,9 @@ The ARN of the LAG.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L145" >}}">property <b>connectionsBandwidth</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionsBandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The bandwidth of the individual physical connections bundled by the LAG. Available values: 1Gbps, 10Gbps. Case sensitive.
@@ -4693,7 +5399,9 @@ The bandwidth of the individual physical connections bundled by the LAG. Availab
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L149" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
@@ -4704,7 +5412,9 @@ A boolean that indicates all connections associated with the LAG should be delet
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L153" >}}">property <b>hasLogicalRedundancy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hasLogicalRedundancy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).
@@ -4715,7 +5425,9 @@ Indicates whether the LAG supports a secondary BGP peer in the same address fami
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L154" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>jumboFrameCapable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4723,7 +5435,9 @@ Indicates whether the LAG supports a secondary BGP peer in the same address fami
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L158" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
@@ -4734,7 +5448,9 @@ The AWS Direct Connect location in which the LAG should be allocated. See [Descr
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L162" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the LAG.
@@ -4745,7 +5461,9 @@ The name of the LAG.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/linkAggregationGroup.ts#L166" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4766,7 +5484,9 @@ The set of arguments for constructing a PrivateVirtualInterface resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L257" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -4777,7 +5497,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L261" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -4788,7 +5510,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L265" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -4799,7 +5523,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L269" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -4810,7 +5536,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L273" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -4821,7 +5549,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L277" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -4832,7 +5562,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L281" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -4843,7 +5575,9 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L286" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
@@ -4855,7 +5589,9 @@ The MTU of a virtual private interface can be either `1500` or `9001` (jumbo fra
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L290" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -4866,7 +5602,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L294" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4877,7 +5615,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L298" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -4888,7 +5628,9 @@ The VLAN ID.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L302" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpnGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the virtual private gateway to which to connect the virtual interface.
@@ -4909,7 +5651,9 @@ Input properties used for looking up and filtering PrivateVirtualInterface resou
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L190" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -4920,7 +5664,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L194" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -4931,7 +5677,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L198" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -4942,7 +5690,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L202" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -4953,7 +5703,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L206" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -4964,7 +5716,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L210" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -4975,7 +5729,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L214" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -4986,7 +5742,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L218" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -4997,7 +5755,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L222" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -5008,7 +5768,9 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L226" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>jumboFrameCapable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether jumbo frames (9001 MTU) are supported.
@@ -5019,7 +5781,9 @@ Indicates whether jumbo frames (9001 MTU) are supported.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L231" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
@@ -5031,7 +5795,9 @@ The MTU of a virtual private interface can be either `1500` or `9001` (jumbo fra
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L235" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -5042,7 +5808,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L239" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -5053,7 +5821,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L243" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -5064,7 +5834,9 @@ The VLAN ID.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/privateVirtualInterface.ts#L247" >}}">property <b>vpnGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpnGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the virtual private gateway to which to connect the virtual interface.
@@ -5085,7 +5857,9 @@ The set of arguments for constructing a PublicVirtualInterface resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L234" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -5096,7 +5870,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L238" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -5107,7 +5883,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L242" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -5118,7 +5896,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L246" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -5129,7 +5909,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L250" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -5140,7 +5922,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L254" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -5151,7 +5935,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L258" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -5162,7 +5948,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L262" >}}">property <b>routeFilterPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routeFilterPrefixes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of routes to be advertised to the AWS network in this region.
@@ -5173,7 +5961,9 @@ A list of routes to be advertised to the AWS network in this region.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L266" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -5184,7 +5974,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L270" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -5205,7 +5997,9 @@ Input properties used for looking up and filtering PublicVirtualInterface resour
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L180" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -5216,7 +6010,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L184" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -5227,7 +6023,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L188" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -5238,7 +6036,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L192" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -5249,7 +6049,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L196" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -5260,7 +6062,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L200" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -5271,7 +6075,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L204" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -5282,7 +6088,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L208" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -5293,7 +6101,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L212" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -5304,7 +6114,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L216" >}}">property <b>routeFilterPrefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routeFilterPrefixes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of routes to be advertised to the AWS network in this region.
@@ -5315,7 +6127,9 @@ A list of routes to be advertised to the AWS network in this region.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L220" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -5326,7 +6140,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/publicVirtualInterface.ts#L224" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -5347,7 +6163,9 @@ The set of arguments for constructing a TransitVirtualInterface resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L255" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -5358,7 +6176,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L259" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -5369,7 +6189,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L263" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -5380,7 +6202,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L267" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -5391,7 +6215,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L271" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -5402,7 +6228,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L275" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -5413,7 +6241,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L279" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -5424,7 +6254,9 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L284" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
@@ -5436,7 +6268,9 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L288" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -5447,7 +6281,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L292" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -5458,7 +6294,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L296" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.
@@ -5479,7 +6317,9 @@ Input properties used for looking up and filtering TransitVirtualInterface resou
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L192" >}}">property <b>addressFamily</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressFamily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
@@ -5490,7 +6330,9 @@ The address family for the BGP peer. `ipv4 ` or `ipv6`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L196" >}}">property <b>amazonAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>amazonAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
@@ -5501,7 +6343,9 @@ The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP pe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L200" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the virtual interface.
@@ -5512,7 +6356,9 @@ The ARN of the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L204" >}}">property <b>awsDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsDevice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Direct Connect endpoint on which the virtual interface terminates.
@@ -5523,7 +6369,9 @@ The Direct Connect endpoint on which the virtual interface terminates.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L208" >}}">property <b>bgpAsn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAsn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
@@ -5534,7 +6382,9 @@ The autonomous system (AS) number for Border Gateway Protocol (BGP) configuratio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L212" >}}">property <b>bgpAuthKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bgpAuthKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The authentication key for BGP configuration.
@@ -5545,7 +6395,9 @@ The authentication key for BGP configuration.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L216" >}}">property <b>connectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
@@ -5556,7 +6408,9 @@ The ID of the Direct Connect connection (or LAG) on which to create the virtual 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L220" >}}">property <b>customerAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customerAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
@@ -5567,7 +6421,9 @@ The IPv4 CIDR destination address to which Amazon should send traffic. Required 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L224" >}}">property <b>dxGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dxGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Direct Connect gateway to which to connect the virtual interface.
@@ -5578,7 +6434,9 @@ The ID of the Direct Connect gateway to which to connect the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L228" >}}">property <b>jumboFrameCapable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>jumboFrameCapable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether jumbo frames (8500 MTU) are supported.
@@ -5589,7 +6447,9 @@ Indicates whether jumbo frames (8500 MTU) are supported.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L233" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
@@ -5601,7 +6461,9 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L237" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the virtual interface.
@@ -5612,7 +6474,9 @@ The name for the virtual interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L241" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -5623,7 +6487,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="directconnect/transitVirtualInterface.ts#L245" >}}">property <b>vlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN ID.

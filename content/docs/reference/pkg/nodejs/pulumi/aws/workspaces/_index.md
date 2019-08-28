@@ -34,13 +34,15 @@ title: Module workspaces
 
 
 <h2 class="pdoc-module-header" id="getBundle">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L23" >}}">function <b>getBundle</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L24" >}}">function <b>getBundle</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getBundle(args: <a href='#GetBundleArgs'>GetBundleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetBundleResult'>GetBundleResult</a>&gt; &amp; <a href='#GetBundleResult'>GetBundleResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get information about a Workspaces Bundle.
 
@@ -60,7 +62,7 @@ const example = aws.workspaces.getBundle({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetBundleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L41" >}}">interface <b>GetBundleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L42" >}}">interface <b>GetBundleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -69,10 +71,12 @@ A collection of arguments for invoking getBundle.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBundleArgs-bundleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L45" >}}">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L46" >}}">property <b>bundleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bundleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the bundle.
@@ -81,7 +85,7 @@ The ID of the bundle.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBundleResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L51" >}}">interface <b>GetBundleResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L52" >}}">interface <b>GetBundleResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -90,20 +94,22 @@ A collection of values returned by getBundle.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetBundleResult-bundleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L52" >}}">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L53" >}}">property <b>bundleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bundleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-computeTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L56" >}}">property <b>computeTypes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L57" >}}">property <b>computeTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>computeTypes: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>computeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleComputeType'>outputs.workspaces.GetBundleComputeType</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The compute type. See supported fields below.
@@ -111,10 +117,12 @@ The compute type. See supported fields below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L60" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L61" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the bundle.
@@ -122,10 +130,12 @@ The description of the bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L80" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L81" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -133,10 +143,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L64" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the compute type.
@@ -144,10 +156,12 @@ The name of the compute type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L68" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L69" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the bundle.
@@ -155,12 +169,12 @@ The owner of the bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-rootStorages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L72" >}}">property <b>rootStorages</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L73" >}}">property <b>rootStorages</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>rootStorages: {
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>rootStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleRootStorage'>outputs.workspaces.GetBundleRootStorage</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The root volume. See supported fields below.
@@ -168,12 +182,12 @@ The root volume. See supported fields below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-userStorages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L76" >}}">property <b>userStorages</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="workspaces/getBundle.ts#L77" >}}">property <b>userStorages</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>userStorages: {
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>userStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleUserStorage'>outputs.workspaces.GetBundleUserStorage</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user storage. See supported fields below.

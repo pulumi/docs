@@ -58,10 +58,12 @@ title: Module cognito
 
 
 <h2 class="pdoc-module-header" id="IdentityPool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L46" >}}">class <b>IdentityPool</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L48" >}}">class <b>IdentityPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an AWS Cognito Identity Pool.
@@ -104,13 +106,15 @@ const main = new aws.cognito.IdentityPool("main", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPool-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L109" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L111" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IdentityPool(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#IdentityPoolArgs'>IdentityPoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a IdentityPool resource with the given unique name, arguments, and options.
 
@@ -121,13 +125,15 @@ Create a IdentityPool resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L55" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#IdentityPoolState'>IdentityPoolState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IdentityPool'>IdentityPool</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing IdentityPool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -135,23 +141,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L48" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L66" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L68" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of IdentityPool.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -159,10 +169,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-allowUnauthenticatedIdentities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L76" >}}">property <b>allowUnauthenticatedIdentities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L78" >}}">property <b>allowUnauthenticatedIdentities</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowUnauthenticatedIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the identity pool supports unauthenticated logins or not.
@@ -170,10 +182,12 @@ Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L80" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L82" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the identity pool.
@@ -181,14 +195,12 @@ The ARN of the identity pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-cognitoIdentityProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L84" >}}">property <b>cognitoIdentityProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L86" >}}">property <b>cognitoIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>cognitoIdentityProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    providerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    serverSideTokenCheck: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>cognitoIdentityProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolCognitoIdentityProvider'>outputs.cognito.IdentityPoolCognitoIdentityProvider</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of Amazon Cognito Identity user pools and their client IDs.
@@ -196,10 +208,12 @@ An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-developerProviderName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L89" >}}">property <b>developerProviderName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L91" >}}">property <b>developerProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>developerProviderName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
@@ -208,10 +222,12 @@ backend and the Cognito service to communicate about the developer provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L48" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -220,10 +236,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-identityPoolName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L93" >}}">property <b>identityPoolName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L95" >}}">property <b>identityPoolName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>identityPoolName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Cognito Identity Pool name.
@@ -231,10 +249,12 @@ The Cognito Identity Pool name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-openidConnectProviderArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L97" >}}">property <b>openidConnectProviderArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L99" >}}">property <b>openidConnectProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>openidConnectProviderArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of OpendID Connect provider ARNs.
@@ -242,10 +262,12 @@ A list of OpendID Connect provider ARNs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-samlProviderArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L101" >}}">property <b>samlProviderArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L103" >}}">property <b>samlProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>samlProviderArns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
@@ -253,10 +275,12 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-supportedLoginProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L105" >}}">property <b>supportedLoginProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L107" >}}">property <b>supportedLoginProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>supportedLoginProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Key-Value pairs mapping provider names to provider app IDs.
@@ -264,10 +288,12 @@ Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L109" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L111" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the Identity Pool.
@@ -275,10 +301,12 @@ A mapping of tags to assign to the Identity Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L48" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -288,10 +316,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolRoleAttachment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L87" >}}">class <b>IdentityPoolRoleAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L89" >}}">class <b>IdentityPoolRoleAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides an AWS Cognito Identity Pool Roles Attachment.
@@ -375,13 +405,15 @@ const authenticatedRolePolicy = new aws.iam.RolePolicy("authenticated", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L125" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L127" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IdentityPoolRoleAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#IdentityPoolRoleAttachmentArgs'>IdentityPoolRoleAttachmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a IdentityPoolRoleAttachment resource with the given unique name, arguments, and options.
 
@@ -392,13 +424,15 @@ Create a IdentityPoolRoleAttachment resource with the given unique name, argumen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L96" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L98" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#IdentityPoolRoleAttachmentState'>IdentityPoolRoleAttachmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IdentityPoolRoleAttachment'>IdentityPoolRoleAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing IdentityPoolRoleAttachment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -406,23 +440,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L89" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L107" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L109" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of IdentityPoolRoleAttachment.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -430,10 +468,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L89" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -442,10 +482,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-identityPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L117" >}}">property <b>identityPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L119" >}}">property <b>identityPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>identityPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An identity pool ID in the format REGION:GUID.
@@ -453,20 +495,12 @@ An identity pool ID in the format REGION:GUID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-roleMappings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L121" >}}">property <b>roleMappings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L123" >}}">property <b>roleMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>roleMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    ambiguousRoleResolution: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    identityProvider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    mappingRules: {
-        claim: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        matchType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>roleMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolRoleAttachmentRoleMapping'>outputs.cognito.IdentityPoolRoleAttachmentRoleMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A List of Role Mapping.
@@ -474,13 +508,12 @@ A List of Role Mapping.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-roles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L125" >}}">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L127" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    authenticated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    unauthenticated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IdentityPoolRoleAttachmentRoles'>outputs.cognito.IdentityPoolRoleAttachmentRoles</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
@@ -488,10 +521,12 @@ The map of roles associated with this pool. For a given role, the key will be ei
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L89" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -501,10 +536,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityProvider">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L37" >}}">class <b>IdentityProvider</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L39" >}}">class <b>IdentityProvider</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Cognito User Identity Provider resource.
@@ -538,13 +575,15 @@ const exampleProvider = new aws.cognito.IdentityProvider("exampleProvider", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityProvider-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L87" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L89" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IdentityProvider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#IdentityProviderArgs'>IdentityProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a IdentityProvider resource with the given unique name, arguments, and options.
 
@@ -555,13 +594,15 @@ Create a IdentityProvider resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L46" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L48" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#IdentityProviderState'>IdentityProviderState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IdentityProvider'>IdentityProvider</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing IdentityProvider resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -569,23 +610,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L39" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L57" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L59" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of IdentityProvider.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -593,10 +638,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-attributeMapping">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L67" >}}">property <b>attributeMapping</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L69" >}}">property <b>attributeMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attributeMapping: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
@@ -604,10 +651,12 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L39" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -616,10 +665,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-idpIdentifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L71" >}}">property <b>idpIdentifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L73" >}}">property <b>idpIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>idpIdentifiers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of identity providers.
@@ -627,10 +678,12 @@ The list of identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-providerDetails">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L75" >}}">property <b>providerDetails</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L77" >}}">property <b>providerDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>providerDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of identity details, such as access token
@@ -638,10 +691,12 @@ The map of identity details, such as access token
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-providerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L79" >}}">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L81" >}}">property <b>providerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider name
@@ -649,10 +704,12 @@ The provider name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-providerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L83" >}}">property <b>providerType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L85" >}}">property <b>providerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>providerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType)
@@ -660,10 +717,12 @@ The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L39" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -672,10 +731,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProvider-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L87" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L89" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool id
@@ -684,10 +745,12 @@ The user pool id
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceServer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L44" >}}">class <b>ResourceServer</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L46" >}}">class <b>ResourceServer</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Cognito Resource Server.
@@ -728,13 +791,15 @@ const resource = new aws.cognito.ResourceServer("resource", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceServer-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L87" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L89" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ResourceServer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ResourceServerArgs'>ResourceServerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ResourceServer resource with the given unique name, arguments, and options.
 
@@ -745,13 +810,15 @@ Create a ResourceServer resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L55" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ResourceServerState'>ResourceServerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ResourceServer'>ResourceServer</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ResourceServer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -759,23 +826,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L46" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L66" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ResourceServer.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -783,10 +854,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L46" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -795,10 +868,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-identifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L74" >}}">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L76" >}}">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An identifier for the resource server.
@@ -806,10 +881,12 @@ An identifier for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L78" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L80" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the resource server.
@@ -817,10 +894,12 @@ A name for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-scopeIdentifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L86" >}}">property <b>scopeIdentifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L88" >}}">property <b>scopeIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scopeIdentifiers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of all scopes configured for this resource server in the format identifier/scope_name.
@@ -828,13 +907,12 @@ A list of all scopes configured for this resource server in the format identifie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L82" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L84" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    scopeDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    scopeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResourceServerScope'>outputs.cognito.ResourceServerScope</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Authorization Scope.
@@ -842,10 +920,12 @@ A list of Authorization Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L46" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -854,19 +934,23 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServer-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L87" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L89" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L51" >}}">class <b>UserGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L53" >}}">class <b>UserGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Cognito User Group resource.
@@ -914,13 +998,15 @@ const mainUserGroup = new aws.cognito.UserGroup("main", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L97" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L99" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> UserGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#UserGroupArgs'>UserGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a UserGroup resource with the given unique name, arguments, and options.
 
@@ -931,13 +1017,15 @@ Create a UserGroup resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L60" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L62" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UserGroupState'>UserGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#UserGroup'>UserGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing UserGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -945,23 +1033,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L53" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L71" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L73" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of UserGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -969,10 +1061,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L81" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L83" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the user group.
@@ -980,10 +1074,12 @@ The description of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L53" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -992,10 +1088,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L85" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L87" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user group.
@@ -1003,10 +1101,12 @@ The name of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-precedence">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L89" >}}">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L91" >}}">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>precedence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The precedence of the user group.
@@ -1014,10 +1114,12 @@ The precedence of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L93" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L95" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role to be associated with the user group.
@@ -1025,10 +1127,12 @@ The ARN of the IAM role to be associated with the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L53" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1037,10 +1141,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroup-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L97" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L99" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool ID.
@@ -1049,10 +1155,12 @@ The user pool ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L23" >}}">class <b>UserPool</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L25" >}}">class <b>UserPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Cognito User Pool resource.
@@ -1072,13 +1180,15 @@ const pool = new aws.cognito.UserPool("pool", {});
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPool-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L141" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L143" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> UserPool(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#UserPoolArgs'>UserPoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a UserPool resource with the given unique name, arguments, and options.
 
@@ -1089,13 +1199,15 @@ Create a UserPool resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L32" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UserPoolState'>UserPoolState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#UserPool'>UserPool</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing UserPool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1103,23 +1215,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L25" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L43" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of UserPool.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1127,18 +1243,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-adminCreateUserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L53" >}}">property <b>adminCreateUserConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L55" >}}">property <b>adminCreateUserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>adminCreateUserConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    allowAdminCreateUserOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    inviteMessageTemplate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        emailMessage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        emailSubject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        smsMessage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    unusedAccountValidityDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>adminCreateUserConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolAdminCreateUserConfig'>outputs.cognito.UserPoolAdminCreateUserConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The configuration for AdminCreateUser requests.
@@ -1146,10 +1256,12 @@ The configuration for AdminCreateUser requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-aliasAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L57" >}}">property <b>aliasAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L59" >}}">property <b>aliasAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>aliasAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `usernameAttributes`.
@@ -1157,10 +1269,12 @@ Attributes supported as an alias for this user pool. Possible values: phone_numb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L61" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L63" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the user pool.
@@ -1168,10 +1282,12 @@ The ARN of the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-autoVerifiedAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L65" >}}">property <b>autoVerifiedAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L67" >}}">property <b>autoVerifiedAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoVerifiedAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The attributes to be auto-verified. Possible values: email, phone_number.
@@ -1179,10 +1295,12 @@ The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-creationDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L69" >}}">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L71" >}}">property <b>creationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>creationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date the user pool was created.
@@ -1190,13 +1308,12 @@ The date the user pool was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-deviceConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L73" >}}">property <b>deviceConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L75" >}}">property <b>deviceConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>deviceConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    challengeRequiredOnNewDevice: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    deviceOnlyRememberedOnUserPrompt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>deviceConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolDeviceConfiguration'>outputs.cognito.UserPoolDeviceConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The configuration for the user pool's device tracking.
@@ -1204,14 +1321,12 @@ The configuration for the user pool's device tracking.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-emailConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L77" >}}">property <b>emailConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L79" >}}">property <b>emailConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>emailConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    emailSendingAccount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    replyToEmailAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    sourceArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>emailConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolEmailConfiguration'>outputs.cognito.UserPoolEmailConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Email Configuration.
@@ -1219,10 +1334,12 @@ The Email Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-emailVerificationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L81" >}}">property <b>emailVerificationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L83" >}}">property <b>emailVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>emailVerificationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the email verification message. Conflicts with `verificationMessageTemplate` configuration block `emailMessage` argument.
@@ -1230,10 +1347,12 @@ A string representing the email verification message. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-emailVerificationSubject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L85" >}}">property <b>emailVerificationSubject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L87" >}}">property <b>emailVerificationSubject</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>emailVerificationSubject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the email verification subject. Conflicts with `verificationMessageTemplate` configuration block `emailSubject` argument.
@@ -1241,10 +1360,12 @@ A string representing the email verification subject. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L89" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L91" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
@@ -1252,10 +1373,12 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L25" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1264,21 +1387,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-lambdaConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L93" >}}">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L95" >}}">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    createAuthChallenge: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    customMessage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    defineAuthChallenge: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    postAuthentication: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    postConfirmation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    preAuthentication: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    preSignUp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    preTokenGeneration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    userMigration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    verifyAuthChallengeResponse: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>lambdaConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolLambdaConfig'>outputs.cognito.UserPoolLambdaConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container for the AWS Lambda triggers associated with the user pool.
@@ -1286,10 +1400,12 @@ A container for the AWS Lambda triggers associated with the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-lastModifiedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L97" >}}">property <b>lastModifiedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L99" >}}">property <b>lastModifiedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lastModifiedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date the user pool was last modified.
@@ -1297,10 +1413,12 @@ The date the user pool was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-mfaConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L101" >}}">property <b>mfaConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L103" >}}">property <b>mfaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mfaConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)
@@ -1308,10 +1426,12 @@ Set to enable multi-factor authentication. Must be one of the following values (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L105" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L107" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the attribute.
@@ -1319,16 +1439,12 @@ The name of the attribute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-passwordPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L109" >}}">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L111" >}}">property <b>passwordPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>passwordPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    minimumLength: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    requireLowercase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    requireNumbers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    requireSymbols: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    requireUppercase: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>passwordPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolPasswordPolicy'>outputs.cognito.UserPoolPasswordPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container for information about the user pool password policy.
@@ -1336,24 +1452,12 @@ A container for information about the user pool password policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-schemas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L113" >}}">property <b>schemas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L115" >}}">property <b>schemas</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>schemas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    attributeDataType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    developerOnlyAttribute: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    mutable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    numberAttributeConstraints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        maxValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        minValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    required: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    stringAttributeConstraints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        maxLength: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        minLength: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>schemas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSchema'>outputs.cognito.UserPoolSchema</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container with the schema attributes of a user pool. Maximum of 50 attributes.
@@ -1361,10 +1465,12 @@ A container with the schema attributes of a user pool. Maximum of 50 attributes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-smsAuthenticationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L117" >}}">property <b>smsAuthenticationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L119" >}}">property <b>smsAuthenticationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>smsAuthenticationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the SMS authentication message.
@@ -1372,13 +1478,12 @@ A string representing the SMS authentication message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-smsConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L121" >}}">property <b>smsConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L123" >}}">property <b>smsConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>smsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    externalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    snsCallerArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>smsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSmsConfiguration'>outputs.cognito.UserPoolSmsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The SMS Configuration.
@@ -1386,10 +1491,12 @@ The SMS Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-smsVerificationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L125" >}}">property <b>smsVerificationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L127" >}}">property <b>smsVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>smsVerificationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the SMS verification message. Conflicts with `verificationMessageTemplate` configuration block `smsMessage` argument.
@@ -1397,10 +1504,12 @@ A string representing the SMS verification message. Conflicts with `verification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L129" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L131" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the User Pool.
@@ -1408,10 +1517,12 @@ A mapping of tags to assign to the User Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L25" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1420,12 +1531,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-userPoolAddOns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L133" >}}">property <b>userPoolAddOns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L135" >}}">property <b>userPoolAddOns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>userPoolAddOns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    advancedSecurityMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>userPoolAddOns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolUserPoolAddOns'>outputs.cognito.UserPoolUserPoolAddOns</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block for user pool add-ons to enable user pool advanced security mode features.
@@ -1433,10 +1544,12 @@ Configuration block for user pool add-ons to enable user pool advanced security 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-usernameAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L137" >}}">property <b>usernameAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L139" >}}">property <b>usernameAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>usernameAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `aliasAttributes`.
@@ -1444,17 +1557,12 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPool-verificationMessageTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L141" >}}">property <b>verificationMessageTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L143" >}}">property <b>verificationMessageTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>verificationMessageTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    defaultEmailOption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    emailMessage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    emailMessageByLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    emailSubject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    emailSubjectByLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    smsMessage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>verificationMessageTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolVerificationMessageTemplate'>outputs.cognito.UserPoolVerificationMessageTemplate</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The verification message templates configuration.
@@ -1463,10 +1571,12 @@ The verification message templates configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolClient">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L39" >}}">class <b>UserPoolClient</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L41" >}}">class <b>UserPoolClient</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Cognito User Pool Client resource.
@@ -1502,13 +1612,15 @@ const client = new aws.cognito.UserPoolClient("client", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolClient-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L125" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L127" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> UserPoolClient(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#UserPoolClientArgs'>UserPoolClientArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a UserPoolClient resource with the given unique name, arguments, and options.
 
@@ -1519,13 +1631,15 @@ Create a UserPoolClient resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L48" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L50" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UserPoolClientState'>UserPoolClientState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#UserPoolClient'>UserPoolClient</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing UserPoolClient resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1533,23 +1647,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L41" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L59" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L61" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of UserPoolClient.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1557,10 +1675,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-allowedOauthFlows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L69" >}}">property <b>allowedOauthFlows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L71" >}}">property <b>allowedOauthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowedOauthFlows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed OAuth flows (code, implicit, client_credentials).
@@ -1568,10 +1688,12 @@ List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-allowedOauthFlowsUserPoolClient">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L73" >}}">property <b>allowedOauthFlowsUserPoolClient</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L75" >}}">property <b>allowedOauthFlowsUserPoolClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowedOauthFlowsUserPoolClient: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
@@ -1579,10 +1701,12 @@ Whether the client is allowed to follow the OAuth protocol when interacting with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-allowedOauthScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L77" >}}">property <b>allowedOauthScopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L79" >}}">property <b>allowedOauthScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowedOauthScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
@@ -1590,10 +1714,12 @@ List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.sig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-callbackUrls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L81" >}}">property <b>callbackUrls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L83" >}}">property <b>callbackUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>callbackUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed callback URLs for the identity providers.
@@ -1601,10 +1727,12 @@ List of allowed callback URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-clientSecret">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L85" >}}">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L87" >}}">property <b>clientSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The client secret of the user pool client.
@@ -1612,10 +1740,12 @@ The client secret of the user pool client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-defaultRedirectUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L89" >}}">property <b>defaultRedirectUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L91" >}}">property <b>defaultRedirectUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultRedirectUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default redirect URI. Must be in the list of callback URLs.
@@ -1623,10 +1753,12 @@ The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-explicitAuthFlows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L93" >}}">property <b>explicitAuthFlows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L95" >}}">property <b>explicitAuthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>explicitAuthFlows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).
@@ -1634,10 +1766,12 @@ List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PAS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-generateSecret">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L97" >}}">property <b>generateSecret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L99" >}}">property <b>generateSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>generateSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should an application secret be generated.
@@ -1645,10 +1779,12 @@ Should an application secret be generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L41" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1657,10 +1793,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-logoutUrls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L101" >}}">property <b>logoutUrls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L103" >}}">property <b>logoutUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>logoutUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed logout URLs for the identity providers.
@@ -1668,10 +1806,12 @@ List of allowed logout URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L105" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L107" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the application client.
@@ -1679,10 +1819,12 @@ The name of the application client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-readAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L109" >}}">property <b>readAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L111" >}}">property <b>readAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>readAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of user pool attributes the application client can read from.
@@ -1690,10 +1832,12 @@ List of user pool attributes the application client can read from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-refreshTokenValidity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L113" >}}">property <b>refreshTokenValidity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L115" >}}">property <b>refreshTokenValidity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>refreshTokenValidity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time limit in days refresh tokens are valid for.
@@ -1701,10 +1845,12 @@ The time limit in days refresh tokens are valid for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-supportedIdentityProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L117" >}}">property <b>supportedIdentityProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L119" >}}">property <b>supportedIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>supportedIdentityProviders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of provider names for the identity providers that are supported on this client.
@@ -1712,10 +1858,12 @@ List of provider names for the identity providers that are supported on this cli
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L41" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1724,10 +1872,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L121" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L123" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool the client belongs to.
@@ -1735,10 +1885,12 @@ The user pool the client belongs to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClient-writeAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L125" >}}">property <b>writeAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L127" >}}">property <b>writeAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>writeAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of user pool attributes the application client can write to.
@@ -1747,10 +1899,12 @@ List of user pool attributes the application client can write to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolDomain">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L38" >}}">class <b>UserPoolDomain</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L40" >}}">class <b>UserPoolDomain</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a Cognito User Pool Domain resource.
@@ -1785,13 +1939,15 @@ const main = new aws.cognito.UserPoolDomain("main", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolDomain-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L92" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L94" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> UserPoolDomain(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#UserPoolDomainArgs'>UserPoolDomainArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a UserPoolDomain resource with the given unique name, arguments, and options.
 
@@ -1802,13 +1958,15 @@ Create a UserPoolDomain resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L47" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UserPoolDomainState'>UserPoolDomainState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#UserPoolDomain'>UserPoolDomain</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing UserPoolDomain resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1816,23 +1974,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L40" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L58" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of UserPoolDomain.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1840,10 +2002,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-awsAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L68" >}}">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L70" >}}">property <b>awsAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>awsAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS account ID for the user pool owner.
@@ -1851,10 +2015,12 @@ The AWS account ID for the user pool owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-certificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L72" >}}">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L74" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
@@ -1862,10 +2028,12 @@ The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-cloudfrontDistributionArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L76" >}}">property <b>cloudfrontDistributionArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L78" >}}">property <b>cloudfrontDistributionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cloudfrontDistributionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the CloudFront distribution.
@@ -1873,10 +2041,12 @@ The ARN of the CloudFront distribution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-domain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L80" >}}">property <b>domain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L82" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain string.
@@ -1884,10 +2054,12 @@ The domain string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L40" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1896,10 +2068,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-s3Bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L84" >}}">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L86" >}}">property <b>s3Bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>s3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The S3 bucket where the static files for this domain are stored.
@@ -1907,10 +2081,12 @@ The S3 bucket where the static files for this domain are stored.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L40" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1919,10 +2095,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L88" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L90" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool ID.
@@ -1930,10 +2108,12 @@ The user pool ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomain-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L92" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L94" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The app version.
@@ -1942,13 +2122,15 @@ The app version.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getUserPools">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L31" >}}">function <b>getUserPools</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L33" >}}">function <b>getUserPools</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getUserPools(args: <a href='#GetUserPoolsArgs'>GetUserPoolsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetUserPoolsResult'>GetUserPoolsResult</a>&gt; &amp; <a href='#GetUserPoolsResult'>GetUserPoolsResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get a list of cognito user pools.
 
@@ -1976,7 +2158,7 @@ const cognito = new aws.apigateway.Authorizer("cognito", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetUserPoolsArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L49" >}}">interface <b>GetUserPoolsArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L51" >}}">interface <b>GetUserPoolsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1985,10 +2167,12 @@ A collection of arguments for invoking getUserPools.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserPoolsArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L53" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L55" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the cognito user pools. Name is not a unique attribute for cognito user pool, so multiple pools might be returned with given name.
@@ -1997,7 +2181,7 @@ Name of the cognito user pools. Name is not a unique attribute for cognito user 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserPoolsResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L59" >}}">interface <b>GetUserPoolsResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L61" >}}">interface <b>GetUserPoolsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2006,18 +2190,22 @@ A collection of values returned by getUserPools.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-arns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L60" >}}">property <b>arns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L62" >}}">property <b>arns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L69" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L71" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2025,10 +2213,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-ids">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L64" >}}">property <b>ids</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L66" >}}">property <b>ids</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of cognito user pool ids.
@@ -2036,16 +2226,18 @@ The list of cognito user pool ids.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserPoolsResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/getUserPools.ts#L67" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L204" >}}">interface <b>IdentityPoolArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L206" >}}">interface <b>IdentityPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2054,10 +2246,12 @@ The set of arguments for constructing a IdentityPool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-allowUnauthenticatedIdentities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L208" >}}">property <b>allowUnauthenticatedIdentities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L210" >}}">property <b>allowUnauthenticatedIdentities</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowUnauthenticatedIdentities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the identity pool supports unauthenticated logins or not.
@@ -2065,14 +2259,12 @@ Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-cognitoIdentityProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L212" >}}">property <b>cognitoIdentityProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L214" >}}">property <b>cognitoIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    serverSideTokenCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolCognitoIdentityProvider'>inputs.cognito.IdentityPoolCognitoIdentityProvider</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of Amazon Cognito Identity user pools and their client IDs.
@@ -2080,10 +2272,12 @@ An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-developerProviderName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L217" >}}">property <b>developerProviderName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L219" >}}">property <b>developerProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>developerProviderName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
@@ -2092,10 +2286,12 @@ backend and the Cognito service to communicate about the developer provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-identityPoolName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L221" >}}">property <b>identityPoolName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L223" >}}">property <b>identityPoolName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identityPoolName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Cognito Identity Pool name.
@@ -2103,10 +2299,12 @@ The Cognito Identity Pool name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-openidConnectProviderArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L225" >}}">property <b>openidConnectProviderArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L227" >}}">property <b>openidConnectProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>openidConnectProviderArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of OpendID Connect provider ARNs.
@@ -2114,10 +2312,12 @@ A list of OpendID Connect provider ARNs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-samlProviderArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L229" >}}">property <b>samlProviderArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L231" >}}">property <b>samlProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>samlProviderArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
@@ -2125,10 +2325,12 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-supportedLoginProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L233" >}}">property <b>supportedLoginProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L235" >}}">property <b>supportedLoginProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>supportedLoginProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Key-Value pairs mapping provider names to provider app IDs.
@@ -2136,10 +2338,12 @@ Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L237" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L239" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the Identity Pool.
@@ -2148,7 +2352,7 @@ A mapping of tags to assign to the Identity Pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolRoleAttachmentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L186" >}}">interface <b>IdentityPoolRoleAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L188" >}}">interface <b>IdentityPoolRoleAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2157,10 +2361,12 @@ The set of arguments for constructing a IdentityPoolRoleAttachment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentArgs-identityPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L190" >}}">property <b>identityPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L192" >}}">property <b>identityPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identityPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An identity pool ID in the format REGION:GUID.
@@ -2168,20 +2374,12 @@ An identity pool ID in the format REGION:GUID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentArgs-roleMappings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L194" >}}">property <b>roleMappings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L196" >}}">property <b>roleMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ambiguousRoleResolution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    identityProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    mappingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        claim: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        matchType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoleMapping'>inputs.cognito.IdentityPoolRoleAttachmentRoleMapping</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A List of Role Mapping.
@@ -2189,13 +2387,12 @@ A List of Role Mapping.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentArgs-roles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L198" >}}">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L200" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    authenticated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    unauthenticated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoles'>inputs.cognito.IdentityPoolRoleAttachmentRoles</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
@@ -2204,7 +2401,7 @@ The map of roles associated with this pool. For a given role, the key will be ei
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolRoleAttachmentState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L168" >}}">interface <b>IdentityPoolRoleAttachmentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L170" >}}">interface <b>IdentityPoolRoleAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2213,10 +2410,12 @@ Input properties used for looking up and filtering IdentityPoolRoleAttachment re
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentState-identityPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L172" >}}">property <b>identityPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L174" >}}">property <b>identityPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identityPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An identity pool ID in the format REGION:GUID.
@@ -2224,20 +2423,12 @@ An identity pool ID in the format REGION:GUID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentState-roleMappings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L176" >}}">property <b>roleMappings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L178" >}}">property <b>roleMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    ambiguousRoleResolution: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    identityProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    mappingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        claim: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        matchType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>roleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoleMapping'>inputs.cognito.IdentityPoolRoleAttachmentRoleMapping</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A List of Role Mapping.
@@ -2245,13 +2436,12 @@ A List of Role Mapping.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolRoleAttachmentState-roles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L180" >}}">property <b>roles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPoolRoleAttachment.ts#L182" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    authenticated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    unauthenticated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolRoleAttachmentRoles'>inputs.cognito.IdentityPoolRoleAttachmentRoles</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
@@ -2260,7 +2450,7 @@ The map of roles associated with this pool. For a given role, the key will be ei
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityPoolState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L161" >}}">interface <b>IdentityPoolState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L163" >}}">interface <b>IdentityPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2269,10 +2459,12 @@ Input properties used for looking up and filtering IdentityPool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityPoolState-allowUnauthenticatedIdentities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L165" >}}">property <b>allowUnauthenticatedIdentities</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L167" >}}">property <b>allowUnauthenticatedIdentities</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowUnauthenticatedIdentities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the identity pool supports unauthenticated logins or not.
@@ -2280,10 +2472,12 @@ Whether the identity pool supports unauthenticated logins or not.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L169" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L171" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the identity pool.
@@ -2291,14 +2485,12 @@ The ARN of the identity pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-cognitoIdentityProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L173" >}}">property <b>cognitoIdentityProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L175" >}}">property <b>cognitoIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    serverSideTokenCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>cognitoIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IdentityPoolCognitoIdentityProvider'>inputs.cognito.IdentityPoolCognitoIdentityProvider</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of Amazon Cognito Identity user pools and their client IDs.
@@ -2306,10 +2498,12 @@ An array of Amazon Cognito Identity user pools and their client IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-developerProviderName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L178" >}}">property <b>developerProviderName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L180" >}}">property <b>developerProviderName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>developerProviderName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The "domain" by which Cognito will refer to your users. This name acts as a placeholder that allows your
@@ -2318,10 +2512,12 @@ backend and the Cognito service to communicate about the developer provider.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-identityPoolName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L182" >}}">property <b>identityPoolName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L184" >}}">property <b>identityPoolName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identityPoolName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Cognito Identity Pool name.
@@ -2329,10 +2525,12 @@ The Cognito Identity Pool name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-openidConnectProviderArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L186" >}}">property <b>openidConnectProviderArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L188" >}}">property <b>openidConnectProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>openidConnectProviderArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of OpendID Connect provider ARNs.
@@ -2340,10 +2538,12 @@ A list of OpendID Connect provider ARNs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-samlProviderArns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L190" >}}">property <b>samlProviderArns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L192" >}}">property <b>samlProviderArns</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>samlProviderArns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
@@ -2351,10 +2551,12 @@ An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-supportedLoginProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L194" >}}">property <b>supportedLoginProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L196" >}}">property <b>supportedLoginProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>supportedLoginProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Key-Value pairs mapping provider names to provider app IDs.
@@ -2362,10 +2564,12 @@ Key-Value pairs mapping provider names to provider app IDs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityPoolState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L198" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityPool.ts#L200" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the Identity Pool.
@@ -2374,7 +2578,7 @@ A mapping of tags to assign to the Identity Pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityProviderArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L172" >}}">interface <b>IdentityProviderArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L174" >}}">interface <b>IdentityProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2383,10 +2587,12 @@ The set of arguments for constructing a IdentityProvider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-attributeMapping">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L176" >}}">property <b>attributeMapping</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L178" >}}">property <b>attributeMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>attributeMapping?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
@@ -2394,10 +2600,12 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-idpIdentifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L180" >}}">property <b>idpIdentifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L182" >}}">property <b>idpIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>idpIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of identity providers.
@@ -2405,10 +2613,12 @@ The list of identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-providerDetails">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L184" >}}">property <b>providerDetails</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L186" >}}">property <b>providerDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providerDetails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of identity details, such as access token
@@ -2416,10 +2626,12 @@ The map of identity details, such as access token
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-providerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L188" >}}">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L190" >}}">property <b>providerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider name
@@ -2427,10 +2639,12 @@ The provider name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-providerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L192" >}}">property <b>providerType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L194" >}}">property <b>providerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType)
@@ -2438,10 +2652,12 @@ The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderArgs-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L196" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L198" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool id
@@ -2450,7 +2666,7 @@ The user pool id
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IdentityProviderState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L142" >}}">interface <b>IdentityProviderState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L144" >}}">interface <b>IdentityProviderState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2459,10 +2675,12 @@ Input properties used for looking up and filtering IdentityProvider resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IdentityProviderState-attributeMapping">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L146" >}}">property <b>attributeMapping</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L148" >}}">property <b>attributeMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>attributeMapping?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
@@ -2470,10 +2688,12 @@ The map of attribute mapping of user pool attributes. [AttributeMapping in AWS A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-idpIdentifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L150" >}}">property <b>idpIdentifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L152" >}}">property <b>idpIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>idpIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of identity providers.
@@ -2481,10 +2701,12 @@ The list of identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-providerDetails">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L154" >}}">property <b>providerDetails</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L156" >}}">property <b>providerDetails</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providerDetails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of identity details, such as access token
@@ -2492,10 +2714,12 @@ The map of identity details, such as access token
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-providerName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L158" >}}">property <b>providerName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L160" >}}">property <b>providerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider name
@@ -2503,10 +2727,12 @@ The provider name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-providerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L162" >}}">property <b>providerType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L164" >}}">property <b>providerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType)
@@ -2514,10 +2740,12 @@ The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/c
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IdentityProviderState-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L166" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/identityProvider.ts#L168" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool id
@@ -2526,7 +2754,7 @@ The user pool id
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceServerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L157" >}}">interface <b>ResourceServerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L159" >}}">interface <b>ResourceServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2535,10 +2763,12 @@ The set of arguments for constructing a ResourceServer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceServerArgs-identifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L161" >}}">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L163" >}}">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An identifier for the resource server.
@@ -2546,10 +2776,12 @@ An identifier for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L165" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L167" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the resource server.
@@ -2557,13 +2789,12 @@ A name for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerArgs-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L169" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L171" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    scopeDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scopeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceServerScope'>inputs.cognito.ResourceServerScope</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Authorization Scope.
@@ -2571,16 +2802,18 @@ A list of Authorization Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerArgs-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L170" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L172" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceServerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L134" >}}">interface <b>ResourceServerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L136" >}}">interface <b>ResourceServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2589,10 +2822,12 @@ Input properties used for looking up and filtering ResourceServer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ResourceServerState-identifier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L138" >}}">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L140" >}}">property <b>identifier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An identifier for the resource server.
@@ -2600,10 +2835,12 @@ An identifier for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L142" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L144" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the resource server.
@@ -2611,10 +2848,12 @@ A name for the resource server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerState-scopeIdentifiers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L150" >}}">property <b>scopeIdentifiers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L152" >}}">property <b>scopeIdentifiers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scopeIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of all scopes configured for this resource server in the format identifier/scope_name.
@@ -2622,13 +2861,12 @@ A list of all scopes configured for this resource server in the format identifie
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerState-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L146" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L148" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    scopeDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    scopeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResourceServerScope'>inputs.cognito.ResourceServerScope</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Authorization Scope.
@@ -2636,16 +2874,18 @@ A list of Authorization Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceServerState-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L151" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/resourceServer.ts#L153" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L167" >}}">interface <b>UserGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L169" >}}">interface <b>UserGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2654,10 +2894,12 @@ The set of arguments for constructing a UserGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroupArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L171" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L173" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the user group.
@@ -2665,10 +2907,12 @@ The description of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L175" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L177" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user group.
@@ -2676,10 +2920,12 @@ The name of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupArgs-precedence">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L179" >}}">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L181" >}}">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>precedence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The precedence of the user group.
@@ -2687,10 +2933,12 @@ The precedence of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupArgs-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L183" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L185" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role to be associated with the user group.
@@ -2698,10 +2946,12 @@ The ARN of the IAM role to be associated with the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupArgs-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L187" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L189" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool ID.
@@ -2710,7 +2960,7 @@ The user pool ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserGroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L141" >}}">interface <b>UserGroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L143" >}}">interface <b>UserGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2719,10 +2969,12 @@ Input properties used for looking up and filtering UserGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserGroupState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L145" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L147" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the user group.
@@ -2730,10 +2982,12 @@ The description of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L149" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L151" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user group.
@@ -2741,10 +2995,12 @@ The name of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupState-precedence">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L153" >}}">property <b>precedence</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L155" >}}">property <b>precedence</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>precedence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The precedence of the user group.
@@ -2752,10 +3008,12 @@ The precedence of the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupState-roleArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L157" >}}">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L159" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the IAM role to be associated with the user group.
@@ -2763,10 +3021,12 @@ The ARN of the IAM role to be associated with the user group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserGroupState-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L161" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userGroup.ts#L163" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool ID.
@@ -2775,7 +3035,7 @@ The user pool ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L316" >}}">interface <b>UserPoolArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L318" >}}">interface <b>UserPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2784,18 +3044,12 @@ The set of arguments for constructing a UserPool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolArgs-adminCreateUserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L320" >}}">property <b>adminCreateUserConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L322" >}}">property <b>adminCreateUserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    allowAdminCreateUserOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    inviteMessageTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        emailMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        emailSubject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        smsMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    unusedAccountValidityDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAdminCreateUserConfig'>inputs.cognito.UserPoolAdminCreateUserConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The configuration for AdminCreateUser requests.
@@ -2803,10 +3057,12 @@ The configuration for AdminCreateUser requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-aliasAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L324" >}}">property <b>aliasAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L326" >}}">property <b>aliasAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aliasAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `usernameAttributes`.
@@ -2814,10 +3070,12 @@ Attributes supported as an alias for this user pool. Possible values: phone_numb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-autoVerifiedAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L328" >}}">property <b>autoVerifiedAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L330" >}}">property <b>autoVerifiedAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoVerifiedAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The attributes to be auto-verified. Possible values: email, phone_number.
@@ -2825,13 +3083,12 @@ The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-deviceConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L332" >}}">property <b>deviceConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L334" >}}">property <b>deviceConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    challengeRequiredOnNewDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    deviceOnlyRememberedOnUserPrompt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolDeviceConfiguration'>inputs.cognito.UserPoolDeviceConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The configuration for the user pool's device tracking.
@@ -2839,14 +3096,12 @@ The configuration for the user pool's device tracking.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-emailConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L336" >}}">property <b>emailConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L338" >}}">property <b>emailConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    emailSendingAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    replyToEmailAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolEmailConfiguration'>inputs.cognito.UserPoolEmailConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Email Configuration.
@@ -2854,10 +3109,12 @@ The Email Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-emailVerificationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L340" >}}">property <b>emailVerificationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L342" >}}">property <b>emailVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>emailVerificationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the email verification message. Conflicts with `verificationMessageTemplate` configuration block `emailMessage` argument.
@@ -2865,10 +3122,12 @@ A string representing the email verification message. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-emailVerificationSubject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L344" >}}">property <b>emailVerificationSubject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L346" >}}">property <b>emailVerificationSubject</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>emailVerificationSubject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the email verification subject. Conflicts with `verificationMessageTemplate` configuration block `emailSubject` argument.
@@ -2876,21 +3135,12 @@ A string representing the email verification subject. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-lambdaConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L348" >}}">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L350" >}}">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    createAuthChallenge: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    customMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    defineAuthChallenge: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    postAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    postConfirmation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    preAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    preSignUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    preTokenGeneration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    userMigration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    verifyAuthChallengeResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolLambdaConfig'>inputs.cognito.UserPoolLambdaConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container for the AWS Lambda triggers associated with the user pool.
@@ -2898,10 +3148,12 @@ A container for the AWS Lambda triggers associated with the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-mfaConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L352" >}}">property <b>mfaConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L354" >}}">property <b>mfaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mfaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)
@@ -2909,10 +3161,12 @@ Set to enable multi-factor authentication. Must be one of the following values (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L356" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L358" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the attribute.
@@ -2920,16 +3174,12 @@ The name of the attribute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-passwordPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L360" >}}">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L362" >}}">property <b>passwordPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    minimumLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    requireLowercase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    requireNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    requireSymbols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    requireUppercase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolPasswordPolicy'>inputs.cognito.UserPoolPasswordPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container for information about the user pool password policy.
@@ -2937,24 +3187,12 @@ A container for information about the user pool password policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-schemas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L364" >}}">property <b>schemas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L366" >}}">property <b>schemas</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    attributeDataType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    developerOnlyAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    mutable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    numberAttributeConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        maxValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        minValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    required: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    stringAttributeConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        maxLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        minLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchema'>inputs.cognito.UserPoolSchema</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container with the schema attributes of a user pool. Maximum of 50 attributes.
@@ -2962,10 +3200,12 @@ A container with the schema attributes of a user pool. Maximum of 50 attributes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-smsAuthenticationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L368" >}}">property <b>smsAuthenticationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L370" >}}">property <b>smsAuthenticationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>smsAuthenticationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the SMS authentication message.
@@ -2973,13 +3213,12 @@ A string representing the SMS authentication message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-smsConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L372" >}}">property <b>smsConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L374" >}}">property <b>smsConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    snsCallerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSmsConfiguration'>inputs.cognito.UserPoolSmsConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The SMS Configuration.
@@ -2987,10 +3226,12 @@ The SMS Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-smsVerificationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L376" >}}">property <b>smsVerificationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L378" >}}">property <b>smsVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>smsVerificationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the SMS verification message. Conflicts with `verificationMessageTemplate` configuration block `smsMessage` argument.
@@ -2998,10 +3239,12 @@ A string representing the SMS verification message. Conflicts with `verification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L380" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L382" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the User Pool.
@@ -3009,12 +3252,12 @@ A mapping of tags to assign to the User Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-userPoolAddOns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L384" >}}">property <b>userPoolAddOns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L386" >}}">property <b>userPoolAddOns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    advancedSecurityMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolUserPoolAddOns'>inputs.cognito.UserPoolUserPoolAddOns</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block for user pool add-ons to enable user pool advanced security mode features.
@@ -3022,10 +3265,12 @@ Configuration block for user pool add-ons to enable user pool advanced security 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-usernameAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L388" >}}">property <b>usernameAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L390" >}}">property <b>usernameAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>usernameAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `aliasAttributes`.
@@ -3033,17 +3278,12 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolArgs-verificationMessageTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L392" >}}">property <b>verificationMessageTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L394" >}}">property <b>verificationMessageTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    defaultEmailOption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    emailMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    emailMessageByLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    emailSubject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    emailSubjectByLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    smsMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolVerificationMessageTemplate'>inputs.cognito.UserPoolVerificationMessageTemplate</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The verification message templates configuration.
@@ -3052,7 +3292,7 @@ The verification message templates configuration.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolClientArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L255" >}}">interface <b>UserPoolClientArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L257" >}}">interface <b>UserPoolClientArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3061,10 +3301,12 @@ The set of arguments for constructing a UserPoolClient resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-allowedOauthFlows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L259" >}}">property <b>allowedOauthFlows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L261" >}}">property <b>allowedOauthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedOauthFlows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed OAuth flows (code, implicit, client_credentials).
@@ -3072,10 +3314,12 @@ List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-allowedOauthFlowsUserPoolClient">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L263" >}}">property <b>allowedOauthFlowsUserPoolClient</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L265" >}}">property <b>allowedOauthFlowsUserPoolClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedOauthFlowsUserPoolClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
@@ -3083,10 +3327,12 @@ Whether the client is allowed to follow the OAuth protocol when interacting with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-allowedOauthScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L267" >}}">property <b>allowedOauthScopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L269" >}}">property <b>allowedOauthScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedOauthScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
@@ -3094,10 +3340,12 @@ List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.sig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-callbackUrls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L271" >}}">property <b>callbackUrls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L273" >}}">property <b>callbackUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed callback URLs for the identity providers.
@@ -3105,10 +3353,12 @@ List of allowed callback URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-defaultRedirectUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L275" >}}">property <b>defaultRedirectUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L277" >}}">property <b>defaultRedirectUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultRedirectUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default redirect URI. Must be in the list of callback URLs.
@@ -3116,10 +3366,12 @@ The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-explicitAuthFlows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L279" >}}">property <b>explicitAuthFlows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L281" >}}">property <b>explicitAuthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>explicitAuthFlows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).
@@ -3127,10 +3379,12 @@ List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PAS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-generateSecret">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L283" >}}">property <b>generateSecret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L285" >}}">property <b>generateSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>generateSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should an application secret be generated.
@@ -3138,10 +3392,12 @@ Should an application secret be generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-logoutUrls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L287" >}}">property <b>logoutUrls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L289" >}}">property <b>logoutUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logoutUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed logout URLs for the identity providers.
@@ -3149,10 +3405,12 @@ List of allowed logout URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L291" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L293" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the application client.
@@ -3160,10 +3418,12 @@ The name of the application client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-readAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L295" >}}">property <b>readAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L297" >}}">property <b>readAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of user pool attributes the application client can read from.
@@ -3171,10 +3431,12 @@ List of user pool attributes the application client can read from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-refreshTokenValidity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L299" >}}">property <b>refreshTokenValidity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L301" >}}">property <b>refreshTokenValidity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>refreshTokenValidity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time limit in days refresh tokens are valid for.
@@ -3182,10 +3444,12 @@ The time limit in days refresh tokens are valid for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-supportedIdentityProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L303" >}}">property <b>supportedIdentityProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L305" >}}">property <b>supportedIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>supportedIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of provider names for the identity providers that are supported on this client.
@@ -3193,10 +3457,12 @@ List of provider names for the identity providers that are supported on this cli
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L307" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L309" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool the client belongs to.
@@ -3204,10 +3470,12 @@ The user pool the client belongs to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientArgs-writeAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L311" >}}">property <b>writeAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L313" >}}">property <b>writeAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of user pool attributes the application client can write to.
@@ -3216,7 +3484,7 @@ List of user pool attributes the application client can write to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolClientState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L189" >}}">interface <b>UserPoolClientState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L191" >}}">interface <b>UserPoolClientState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3225,10 +3493,12 @@ Input properties used for looking up and filtering UserPoolClient resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolClientState-allowedOauthFlows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L193" >}}">property <b>allowedOauthFlows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L195" >}}">property <b>allowedOauthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedOauthFlows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed OAuth flows (code, implicit, client_credentials).
@@ -3236,10 +3506,12 @@ List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-allowedOauthFlowsUserPoolClient">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L197" >}}">property <b>allowedOauthFlowsUserPoolClient</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L199" >}}">property <b>allowedOauthFlowsUserPoolClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedOauthFlowsUserPoolClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
@@ -3247,10 +3519,12 @@ Whether the client is allowed to follow the OAuth protocol when interacting with
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-allowedOauthScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L201" >}}">property <b>allowedOauthScopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L203" >}}">property <b>allowedOauthScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedOauthScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
@@ -3258,10 +3532,12 @@ List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.sig
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-callbackUrls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L205" >}}">property <b>callbackUrls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L207" >}}">property <b>callbackUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed callback URLs for the identity providers.
@@ -3269,10 +3545,12 @@ List of allowed callback URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-clientSecret">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L209" >}}">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L211" >}}">property <b>clientSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The client secret of the user pool client.
@@ -3280,10 +3558,12 @@ The client secret of the user pool client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-defaultRedirectUri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L213" >}}">property <b>defaultRedirectUri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L215" >}}">property <b>defaultRedirectUri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultRedirectUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default redirect URI. Must be in the list of callback URLs.
@@ -3291,10 +3571,12 @@ The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-explicitAuthFlows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L217" >}}">property <b>explicitAuthFlows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L219" >}}">property <b>explicitAuthFlows</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>explicitAuthFlows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).
@@ -3302,10 +3584,12 @@ List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PAS
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-generateSecret">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L221" >}}">property <b>generateSecret</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L223" >}}">property <b>generateSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>generateSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should an application secret be generated.
@@ -3313,10 +3597,12 @@ Should an application secret be generated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-logoutUrls">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L225" >}}">property <b>logoutUrls</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L227" >}}">property <b>logoutUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logoutUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of allowed logout URLs for the identity providers.
@@ -3324,10 +3610,12 @@ List of allowed logout URLs for the identity providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L229" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L231" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the application client.
@@ -3335,10 +3623,12 @@ The name of the application client.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-readAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L233" >}}">property <b>readAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L235" >}}">property <b>readAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of user pool attributes the application client can read from.
@@ -3346,10 +3636,12 @@ List of user pool attributes the application client can read from.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-refreshTokenValidity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L237" >}}">property <b>refreshTokenValidity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L239" >}}">property <b>refreshTokenValidity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>refreshTokenValidity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time limit in days refresh tokens are valid for.
@@ -3357,10 +3649,12 @@ The time limit in days refresh tokens are valid for.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-supportedIdentityProviders">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L241" >}}">property <b>supportedIdentityProviders</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L243" >}}">property <b>supportedIdentityProviders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>supportedIdentityProviders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of provider names for the identity providers that are supported on this client.
@@ -3368,10 +3662,12 @@ List of provider names for the identity providers that are supported on this cli
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L245" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L247" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool the client belongs to.
@@ -3379,10 +3675,12 @@ The user pool the client belongs to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolClientState-writeAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L249" >}}">property <b>writeAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolClient.ts#L251" >}}">property <b>writeAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of user pool attributes the application client can write to.
@@ -3391,7 +3689,7 @@ List of user pool attributes the application client can write to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolDomainArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L177" >}}">interface <b>UserPoolDomainArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L179" >}}">interface <b>UserPoolDomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3400,10 +3698,12 @@ The set of arguments for constructing a UserPoolDomain resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolDomainArgs-certificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L181" >}}">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L183" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
@@ -3411,10 +3711,12 @@ The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainArgs-domain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L185" >}}">property <b>domain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L187" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain string.
@@ -3422,10 +3724,12 @@ The domain string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainArgs-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L189" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L191" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool ID.
@@ -3434,7 +3738,7 @@ The user pool ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolDomainState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L143" >}}">interface <b>UserPoolDomainState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L145" >}}">interface <b>UserPoolDomainState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3443,10 +3747,12 @@ Input properties used for looking up and filtering UserPoolDomain resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolDomainState-awsAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L147" >}}">property <b>awsAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L149" >}}">property <b>awsAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>awsAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS account ID for the user pool owner.
@@ -3454,10 +3760,12 @@ The AWS account ID for the user pool owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-certificateArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L151" >}}">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L153" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
@@ -3465,10 +3773,12 @@ The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-cloudfrontDistributionArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L155" >}}">property <b>cloudfrontDistributionArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L157" >}}">property <b>cloudfrontDistributionArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cloudfrontDistributionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the CloudFront distribution.
@@ -3476,10 +3786,12 @@ The ARN of the CloudFront distribution.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-domain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L159" >}}">property <b>domain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L161" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain string.
@@ -3487,10 +3799,12 @@ The domain string.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-s3Bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L163" >}}">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L165" >}}">property <b>s3Bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The S3 bucket where the static files for this domain are stored.
@@ -3498,10 +3812,12 @@ The S3 bucket where the static files for this domain are stored.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-userPoolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L167" >}}">property <b>userPoolId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L169" >}}">property <b>userPoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user pool ID.
@@ -3509,10 +3825,12 @@ The user pool ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolDomainState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L171" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPoolDomain.ts#L173" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The app version.
@@ -3521,7 +3839,7 @@ The app version.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserPoolState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L218" >}}">interface <b>UserPoolState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L220" >}}">interface <b>UserPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3530,18 +3848,12 @@ Input properties used for looking up and filtering UserPool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserPoolState-adminCreateUserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L222" >}}">property <b>adminCreateUserConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L224" >}}">property <b>adminCreateUserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    allowAdminCreateUserOnly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    inviteMessageTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        emailMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        emailSubject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        smsMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    unusedAccountValidityDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>adminCreateUserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAdminCreateUserConfig'>inputs.cognito.UserPoolAdminCreateUserConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The configuration for AdminCreateUser requests.
@@ -3549,10 +3861,12 @@ The configuration for AdminCreateUser requests.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-aliasAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L226" >}}">property <b>aliasAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L228" >}}">property <b>aliasAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aliasAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `usernameAttributes`.
@@ -3560,10 +3874,12 @@ Attributes supported as an alias for this user pool. Possible values: phone_numb
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L230" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L232" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the user pool.
@@ -3571,10 +3887,12 @@ The ARN of the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-autoVerifiedAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L234" >}}">property <b>autoVerifiedAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L236" >}}">property <b>autoVerifiedAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoVerifiedAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The attributes to be auto-verified. Possible values: email, phone_number.
@@ -3582,10 +3900,12 @@ The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-creationDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L238" >}}">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L240" >}}">property <b>creationDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>creationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date the user pool was created.
@@ -3593,13 +3913,12 @@ The date the user pool was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-deviceConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L242" >}}">property <b>deviceConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L244" >}}">property <b>deviceConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    challengeRequiredOnNewDevice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    deviceOnlyRememberedOnUserPrompt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>deviceConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolDeviceConfiguration'>inputs.cognito.UserPoolDeviceConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The configuration for the user pool's device tracking.
@@ -3607,14 +3926,12 @@ The configuration for the user pool's device tracking.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-emailConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L246" >}}">property <b>emailConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L248" >}}">property <b>emailConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    emailSendingAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    replyToEmailAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolEmailConfiguration'>inputs.cognito.UserPoolEmailConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Email Configuration.
@@ -3622,10 +3939,12 @@ The Email Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-emailVerificationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L250" >}}">property <b>emailVerificationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L252" >}}">property <b>emailVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>emailVerificationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the email verification message. Conflicts with `verificationMessageTemplate` configuration block `emailMessage` argument.
@@ -3633,10 +3952,12 @@ A string representing the email verification message. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-emailVerificationSubject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L254" >}}">property <b>emailVerificationSubject</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L256" >}}">property <b>emailVerificationSubject</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>emailVerificationSubject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the email verification subject. Conflicts with `verificationMessageTemplate` configuration block `emailSubject` argument.
@@ -3644,10 +3965,12 @@ A string representing the email verification subject. Conflicts with `verificati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L258" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L260" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
@@ -3655,21 +3978,12 @@ The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-lambdaConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L262" >}}">property <b>lambdaConfig</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L264" >}}">property <b>lambdaConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    createAuthChallenge: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    customMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    defineAuthChallenge: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    postAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    postConfirmation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    preAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    preSignUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    preTokenGeneration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    userMigration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    verifyAuthChallengeResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lambdaConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolLambdaConfig'>inputs.cognito.UserPoolLambdaConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container for the AWS Lambda triggers associated with the user pool.
@@ -3677,10 +3991,12 @@ A container for the AWS Lambda triggers associated with the user pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-lastModifiedDate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L266" >}}">property <b>lastModifiedDate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L268" >}}">property <b>lastModifiedDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lastModifiedDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date the user pool was last modified.
@@ -3688,10 +4004,12 @@ The date the user pool was last modified.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-mfaConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L270" >}}">property <b>mfaConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L272" >}}">property <b>mfaConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mfaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)
@@ -3699,10 +4017,12 @@ Set to enable multi-factor authentication. Must be one of the following values (
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L274" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L276" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the attribute.
@@ -3710,16 +4030,12 @@ The name of the attribute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-passwordPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L278" >}}">property <b>passwordPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L280" >}}">property <b>passwordPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    minimumLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    requireLowercase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    requireNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    requireSymbols: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    requireUppercase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>passwordPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolPasswordPolicy'>inputs.cognito.UserPoolPasswordPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container for information about the user pool password policy.
@@ -3727,24 +4043,12 @@ A container for information about the user pool password policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-schemas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L282" >}}">property <b>schemas</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L284" >}}">property <b>schemas</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    attributeDataType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    developerOnlyAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    mutable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    numberAttributeConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        maxValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        minValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    required: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    stringAttributeConstraints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        maxLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        minLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>schemas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchema'>inputs.cognito.UserPoolSchema</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A container with the schema attributes of a user pool. Maximum of 50 attributes.
@@ -3752,10 +4056,12 @@ A container with the schema attributes of a user pool. Maximum of 50 attributes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-smsAuthenticationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L286" >}}">property <b>smsAuthenticationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L288" >}}">property <b>smsAuthenticationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>smsAuthenticationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the SMS authentication message.
@@ -3763,13 +4069,12 @@ A string representing the SMS authentication message.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-smsConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L290" >}}">property <b>smsConfiguration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L292" >}}">property <b>smsConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    externalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    snsCallerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>smsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSmsConfiguration'>inputs.cognito.UserPoolSmsConfiguration</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The SMS Configuration.
@@ -3777,10 +4082,12 @@ The SMS Configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-smsVerificationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L294" >}}">property <b>smsVerificationMessage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L296" >}}">property <b>smsVerificationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>smsVerificationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string representing the SMS verification message. Conflicts with `verificationMessageTemplate` configuration block `smsMessage` argument.
@@ -3788,10 +4095,12 @@ A string representing the SMS verification message. Conflicts with `verification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L298" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L300" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the User Pool.
@@ -3799,12 +4108,12 @@ A mapping of tags to assign to the User Pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-userPoolAddOns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L302" >}}">property <b>userPoolAddOns</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L304" >}}">property <b>userPoolAddOns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    advancedSecurityMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>userPoolAddOns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolUserPoolAddOns'>inputs.cognito.UserPoolUserPoolAddOns</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Configuration block for user pool add-ons to enable user pool advanced security mode features.
@@ -3812,10 +4121,12 @@ Configuration block for user pool add-ons to enable user pool advanced security 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-usernameAttributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L306" >}}">property <b>usernameAttributes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L308" >}}">property <b>usernameAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>usernameAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `aliasAttributes`.
@@ -3823,17 +4134,12 @@ Specifies whether email addresses or phone numbers can be specified as usernames
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPoolState-verificationMessageTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L310" >}}">property <b>verificationMessageTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cognito/userPool.ts#L312" >}}">property <b>verificationMessageTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    defaultEmailOption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    emailMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    emailMessageByLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    emailSubject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    emailSubjectByLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    smsMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>verificationMessageTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolVerificationMessageTemplate'>inputs.cognito.UserPoolVerificationMessageTemplate</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The verification message templates configuration.
