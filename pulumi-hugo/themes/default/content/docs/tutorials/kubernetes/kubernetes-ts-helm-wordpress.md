@@ -1,12 +1,19 @@
 ---
-title: "Deploying the WordPress Helm Chart"
-
-aliases: ["/docs/reference/tutorials/kubernetes/tutorial-wordpress-chart/"]
+title: "Kubernetes: Deploying the Wordpress Helm chart"
 ---
 
-In this tutorial, we'll use the Helm API of `@pulumi/kubernetes` to deploy `v2.1.3` of the Wordpress
-Helm Chart to a Kubernetes cluster. **The Tiller server is not required to be installed.** Pulumi
-will expand the Helm Chart and submit the expanded YAML to the cluster.
+<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress" target="_blank">
+    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
+</a>
+
+<p class="mb-4">
+    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+</p>
+
+
+Uses the Helm API of `@pulumi/kubernetes` to deploy `v2.1.3` of the Wordpress Helm Chart to a
+Kubernetes cluster. **The Tiller server is not required to be installed.** Pulumi will expand the
+Helm Chart and submit the expanded YAML to the cluster.
 
 > **NOTE:** Because Tiller is not used, it is important to be aware that a small number of Charts
 > depend on values that can only be expanded on the server. These variables will get default values
@@ -15,35 +22,32 @@ will expand the Helm Chart and submit the expanded YAML to the cluster.
 > **NOTE:** This example has a dependency on the `helm` CLI. **Be sure to install that first!** See
 > instructions below.
 
-![wordpress](/images/docs/quickstart/kubernetes/wp-deploy.gif "Wordpress Helm Chart deployment")
+![wordpress](https://github.com/pulumi/examples/blob/master/kubernetes-ts-helm-wordpress/images/deploy.gif "Wordpress Helm Chart deployment")
 
 ## Running the App
-
-Start by downloading the example code
-[here](https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress).
 
 Use the [Helm installation guide](https://docs.helm.sh/using_helm/#installing-helm) to install the
 `helm` CLI. On macOS this might look something like:
 
 ```sh
-$ brew install kubernetes-helm
+brew install kubernetes-helm
 ```
 
 Once `helm` is installed, initialize it with:
 
 ```sh
-$ helm init --client-only
+helm init --client-only
 ```
 
 If you haven't already, follow the steps in [Pulumi Installation and
-Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}}) to get setup with
+Setup](https://docs.pulumi.com/install/) and [Configuring Pulumi
+Kubernetes](https://docs.pulumi.com/reference/kubernetes.html#configuration) to get setup with
 Pulumi and Kubernetes.
 
 Now, install dependencies:
 
 ```sh
-$ npm install
+npm install
 ```
 
 Create a new stack:
@@ -98,3 +102,4 @@ and `grep` to retrieve the `<title>` of the site the proxy points at.
 $ curl -sL $(pulumi stack output frontendIp):80 | grep "<title>"
 <title>User&#039;s Blog! &#8211; Just another WordPress site</title>
 ```
+

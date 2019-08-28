@@ -1,5 +1,5 @@
 ---
-title: "#7: EKS - Migrating Node Groups with Zero Downtime"
+title: "EKS - Migrating Node Groups with Zero Downtime"
 
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-eks-migrate-nodegroups/"]
 ---

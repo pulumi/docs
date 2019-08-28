@@ -1,35 +1,37 @@
 ---
-title: "Hello, World!"
-
-aliases: ["/docs/reference/tutorials/kubernetes/tutorial-exposed-deployment/"]
+title: "Kubernetes: Exposing a Deployment with a public IP address"
 ---
 
-In this tutorial, we'll deploy `nginx` to a Kubernetes cluster, and publicly expose it to the
-Internet with an IP address, using a Kubernetes `Service`. Along the way, we'll get a flavor for the
-Pulumi CLI utility, and a general sense of the workflow for writing and managing Kubernetes
-applications with Pulumi.
+<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment" target="_blank">
+    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
+</a>
+
+<p class="mb-4">
+    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-exposed-deployment" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+</p>
+
+
+Deploys `nginx` to a Kubernetes cluster, and publicly exposes it to the Internet with an IP address,
+using a Kubernetes `Service`.
 
 In the gif below we see the experience of deploying this example with `pulumi up`. Notice that
 Pulumi has an inherent notion of "done-ness" -- Pulumi waits for the IP address to be allocated to
 the `Service`. Because this example uses the Pulumi concept of _stack exports_ to report this IP
 address, in this example we are also able to use `curl` to reach the `nginx` server.
 
-![Allocating a public IP to a Deployment](/images/docs/quickstart/kubernetes/exposed-deploy.gif "Allocating a public IP to a Deployment")
+![Allocating a public IP to a Deployment](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/images/deploy.gif "Allocating a public IP to a Deployment")
 
 ## Running the App
 
-Start by downloading the example code
-[here](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/README.md)
-
 If you haven't already, follow the steps in [Pulumi Installation and
-Setup]({{< relref "/docs/get-started/install" >}}) and [Configuring Pulumi
-Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}}) to get setup with
+Setup](https://docs.pulumi.com/install/) and [Configuring Pulumi
+Kubernetes](https://docs.pulumi.com/reference/kubernetes.html#configuration) to get setup with
 Pulumi and Kubernetes.
 
 Now, install dependencies:
 
 ```sh
-$ npm install
+npm install
 ```
 
 Create a new stack:
@@ -44,7 +46,7 @@ This example will attempt to expose the `nginx` deployment Internet with a `Serv
 type `ClusterIP` instead; all you need to do is to tell it whether you're deploying to minikube:
 
 ```sh
-$ pulumi config set isMinikube <value>
+pulumi config set isMinikube <value>
 ```
 
 Perform the deployment:
@@ -75,7 +77,7 @@ Update duration: 46.555593397s
 Permalink: https://app.pulumi.com/hausdorff/exposed-deployment-dev/updates/1
 ```
 
-We can see here in the `---outputs:---` section that nginx was allocated a public IP, in this
+We can see here in the `---outputs:---` section that Wordpress was allocated a public IP, in this
 case `35.226.79.225`. It is exported with a stack output variable, `frontendIp`. We can use `curl`
 and `grep` to retrieve the `<title>` of the site the proxy points at.
 
@@ -96,9 +98,10 @@ example!
 If we change the `nginx` image to `nginx:1.16-alpine`, we can run `pulumi preview --diff` and see
 this change reported to us:
 
-![Diff](/images/docs/quickstart/kubernetes/diff.gif "Reporting a diff after we change the app")
+![Diff](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/images/diff.gif "Reporting a diff after we change the app")
 
 Notice also that if you provide an image that does not exist, Pulumi will report errors as it sees
 them. You should see something similar in principle to this:
 
-![Diff](/images/docs/quickstart/kubernetes/error.gif "Error reporting")
+![Diff](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/images/error.gif "Error reporting")
+

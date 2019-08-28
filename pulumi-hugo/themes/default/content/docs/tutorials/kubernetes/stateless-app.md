@@ -1,5 +1,5 @@
 ---
-title: "#6: Run a Stateless App Deployment"
+title: "Run a Stateless App Deployment"
 
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-stateless-app/"]
 ---
