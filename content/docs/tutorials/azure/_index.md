@@ -16,7 +16,7 @@ The following tutorials highlight the Azure platform using complete end-to-end s
 >
 > If you are looking to use Kubernetes on Azure, see [the AKS tutorial]({{< relref "../kubernetes/aks" >}}).
 
-# Featured Tutorials
+## Featured Tutorials
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
@@ -70,7 +70,7 @@ The following tutorials highlight the Azure platform using complete end-to-end s
     </div>
 </div>
 
-# Other Examples and Tutorials
+## Other Examples and Tutorials
 
 {{< langchoose nogo >}}
 {{< tutorials-index-azure >}}

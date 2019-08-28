@@ -6,9 +6,9 @@ title: "Serverless REST API on AWS"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/aws-ts-apigateway" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-apigateway). Ensure you have
-> a copy locally and have changed into its directory before starting the tutorial's steps.
+<p class="mb-4">
+    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/aws-ts-apigateway" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+</p>
 
 
 A simple REST API that counts the number of times a route has been hit. For a detailed walkthrough of this example, see the article [Create a Serverless REST API](https://www.pulumi.com/docs/reference/tutorials/aws/tutorial-rest-api/).

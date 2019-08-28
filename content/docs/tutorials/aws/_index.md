@@ -18,7 +18,7 @@ The following tutorials highlight the AWS platform using complete end-to-end sce
 >
 > If you are looking to use Kubernetes on AWS, see [the EKS tutorial]({{< relref "../kubernetes/eks" >}}).
 
-# Featured Tutorials
+## Featured Tutorials
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
@@ -73,7 +73,7 @@ The following tutorials highlight the AWS platform using complete end-to-end sce
     </div>
 </div>
 
-# Other Examples and Tutorials
+## Other Examples and Tutorials
 
 {{< langchoose nogo >}}
 {{< tutorials-index-aws >}}

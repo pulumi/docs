@@ -14,7 +14,7 @@ The following tutorials highlight the Kubernetes platform using complete end-to-
 > If this is your first time getting started with Pulumi for Kubernetes, try the
 > easy <a href="{{< relref "/docs/get-started/kubernetes" >}}">Get Started guide</a> first.
 
-# Featured Tutorials
+## Featured Tutorials
 
 Tutorials are available for a number of Kubernetes tasks:
 
@@ -22,7 +22,7 @@ Tutorials are available for a number of Kubernetes tasks:
 * [Workloads](#workloads) - effectively running applications
 * [Day Two Tasks](#day-two-tasks) - complex tasks for managing existing Kubernetes environments
 
-## Clusters
+### Clusters
 
 These tutorials will help you provision a Kubernetes cluster on your cloud of choice:
 
@@ -53,8 +53,7 @@ These tutorials will help you provision a Kubernetes cluster on your cloud of ch
     </div>
 </div>
 
-
-## Workloads
+### Workloads
 
 These tutorials deploy application workloads to any Kubernetes cluster, managed or self-managed:
 
@@ -126,7 +125,7 @@ These tutorials deploy application workloads to any Kubernetes cluster, managed 
     </div>
 </div>
 
-## Day Two Tasks
+### Day Two Tasks
 
 These tutorials tackle difficult "day two" tasks:
 
@@ -157,7 +156,7 @@ These tutorials tackle difficult "day two" tasks:
     </div>
 </div>
 
-# Other Examples and Tutorials
+## Other Examples and Tutorials
 
 {{< langchoose nogo >}}
 {{< tutorials-index-kubernetes >}}

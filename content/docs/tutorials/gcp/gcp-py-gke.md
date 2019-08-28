@@ -6,9 +6,9 @@ title: "Google Kubernetes Engine (GKE) with a Canary Deployment"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/gcp-py-gke" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/gcp-py-gke). Ensure you have
-> a copy locally and have changed into its directory before starting the tutorial's steps.
+<p class="mb-4">
+    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/gcp-py-gke" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+</p>
 
 
 This example provisions a [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) cluster, using

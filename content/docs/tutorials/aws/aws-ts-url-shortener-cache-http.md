@@ -6,9 +6,9 @@ title: "Serverless URL Shortener with Redis Cache and HttpServer"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/aws-ts-url-shortener-cache-http" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-url-shortener-cache-http). Ensure you have
-> a copy locally and have changed into its directory before starting the tutorial's steps.
+<p class="mb-4">
+    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/aws-ts-url-shortener-cache-http" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+</p>
 
 
 A sample URL shortener SPA that uses the high-level components. The example shows to combine serverless functions along with containers. This shows that you can create your own higher level

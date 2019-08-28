@@ -6,9 +6,9 @@ title: "Deploy a Spring Boot App using Jenkins and Pulumi"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/azure-ts-appservice-springboot" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-springboot). Ensure you have
-> a copy locally and have changed into its directory before starting the tutorial's steps.
+<p class="mb-4">
+    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/azure-ts-appservice-springboot" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+</p>
 
 
 This example shows how you can deploy a Spring Boot app to an Azure App Service instance using Pulumi in a Jenkins Pipeline. The Spring Boot app is packaged into a container image that is automatically (and conveniently!) built as part of the Pulumi app. The container image is pushed up to a private Azure Container Registry and then used as the source for an App Service instance.

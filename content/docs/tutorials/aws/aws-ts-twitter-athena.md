@@ -6,9 +6,9 @@ title: "Twitter Search in Athena"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/aws-ts-twitter-athena" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-twitter-athena). Ensure you have
-> a copy locally and have changed into its directory before starting the tutorial's steps.
+<p class="mb-4">
+    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/aws-ts-twitter-athena" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+</p>
 
 
 A sample project that queries Twitter every 2 minutes and stores the results in S3. The project also sets up an Athena table and query. This project demonstrates using `aws.cloudwatch.EventRule` to run a Lambda on an interval.

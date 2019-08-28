@@ -14,7 +14,7 @@ The following tutorials highlight the Google Cloud platform using complete end-t
 > If this is your first time getting started with Pulumi for GCP, try the
 > easy <a href="{{< relref "/docs/get-started/gcp" >}}">Get Started guide</a> first.
 
-# Featured Tutorials
+## Featured Tutorials
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
@@ -67,7 +67,7 @@ The following tutorials highlight the Google Cloud platform using complete end-t
     </div>
 </div>
 
-# Other Examples and Tutorials
+## Other Examples and Tutorials
 
 {{< langchoose nogo >}}
 {{< tutorials-index-gcp >}}

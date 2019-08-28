@@ -6,9 +6,9 @@ title: "Kubernetes: Deploying the Wordpress Helm chart"
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
-> <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress" target="_blank" style="float: right"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
-> The source code for this tutorial is available [on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress). Ensure you have
-> a copy locally and have changed into its directory before starting the tutorial's steps.
+<p class="mb-4">
+    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/kubernetes-ts-helm-wordpress" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+</p>
 
 
 Uses the Helm API of `@pulumi/kubernetes` to deploy `v2.1.3` of the Wordpress Helm Chart to a
