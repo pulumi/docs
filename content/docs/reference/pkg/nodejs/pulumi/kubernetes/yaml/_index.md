@@ -30,14 +30,14 @@ title: Module yaml
 
 
 <h2 class="pdoc-module-header" id="CollectionComponentResource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L143" >}}">class <b>CollectionComponentResource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L198" >}}">class <b>CollectionComponentResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 {{< /md-disable >}}
 <h3 class="pdoc-member-header" id="CollectionComponentResource-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L144" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L199" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -49,7 +49,7 @@ title: Module yaml
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-getCustomResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2174" >}}">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2229" >}}">method <b>getCustomResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -86,7 +86,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-getResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L158" >}}">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L213" >}}">method <b>getResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -2561,7 +2561,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-getResourceProperty">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L520" >}}">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L575" >}}">method <b>getResourceProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -14094,7 +14094,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L144" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L199" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14119,7 +14119,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigFile">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2218" >}}">class <b>ConfigFile</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2273" >}}">class <b>ConfigFile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
@@ -14132,7 +14132,7 @@ is not specified, `ConfigFile` assumes the argument `name` is the filename.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigFile-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2218" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2273" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -14144,7 +14144,7 @@ is not specified, `ConfigFile` assumes the argument `name` is the filename.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-getCustomResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2174" >}}">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2229" >}}">method <b>getCustomResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -14181,7 +14181,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-getResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L158" >}}">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L213" >}}">method <b>getResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -16656,7 +16656,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-getResourceProperty">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L520" >}}">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L575" >}}">method <b>getResourceProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -28189,7 +28189,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L144" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L199" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -28214,7 +28214,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2207" >}}">class <b>ConfigGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2262" >}}">class <b>ConfigGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
@@ -28239,7 +28239,7 @@ may be supplied using any of the following `ConfigGroupOpts`:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2207" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2262" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -28251,7 +28251,7 @@ may be supplied using any of the following `ConfigGroupOpts`:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-getCustomResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2174" >}}">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2229" >}}">method <b>getCustomResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -28288,7 +28288,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-getResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L158" >}}">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L213" >}}">method <b>getResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -30763,7 +30763,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-getResourceProperty">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L520" >}}">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L575" >}}">method <b>getResourceProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -42296,7 +42296,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L144" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L199" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -42321,11 +42321,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigFileOpts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L34" >}}">interface <b>ConfigFileOpts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L53" >}}">interface <b>ConfigFileOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ConfigFileOpts-file">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L36" >}}">property <b>file</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L55" >}}">property <b>file</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -42338,7 +42338,7 @@ Path or a URL that uniquely identifies a file.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFileOpts-resourcePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L48" >}}">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L85" >}}">property <b>resourcePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -42352,7 +42352,7 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFileOpts-transformations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L42" >}}">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L79" >}}">property <b>transformations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -42397,7 +42397,7 @@ JavaScript objects representing Kubernetes resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroupOpts-resourcePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L31" >}}">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L50" >}}">property <b>resourcePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -42411,7 +42411,7 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroupOpts-transformations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L25" >}}">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L44" >}}">property <b>transformations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -42439,11 +42439,11 @@ YAML text containing Kubernetes resource definitions.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigOpts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L51" >}}">interface <b>ConfigOpts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L88" >}}">interface <b>ConfigOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ConfigOpts-objs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L53" >}}">property <b>objs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L90" >}}">property <b>objs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -42456,7 +42456,7 @@ JavaScript objects representing Kubernetes resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigOpts-resourcePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L65" >}}">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L120" >}}">property <b>resourcePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -42470,7 +42470,7 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigOpts-transformations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L59" >}}">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L114" >}}">property <b>transformations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}

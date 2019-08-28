@@ -41,7 +41,7 @@ or reject and may change the object.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -60,7 +60,7 @@ Create a admissionregistration.v1beta1.MutatingWebhookConfiguration resource wit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -71,8 +71,8 @@ Create a admissionregistration.v1beta1.MutatingWebhookConfiguration resource wit
 {{% md %}}
 
 Get the state of an existing `MutatingWebhookConfiguration` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -91,7 +91,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfiguration-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfiguration.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -118,7 +118,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -148,7 +148,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -162,7 +162,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% md %}}
 
 Standard object metadata; More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 
 {{% /md %}}
 </div>
@@ -207,7 +207,7 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -226,7 +226,7 @@ Create a admissionregistration.v1beta1.MutatingWebhookConfigurationList resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -237,8 +237,8 @@ Create a admissionregistration.v1beta1.MutatingWebhookConfigurationList resource
 {{% md %}}
 
 Get the state of an existing `MutatingWebhookConfigurationList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -257,7 +257,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MutatingWebhookConfigurationList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/MutatingWebhookConfigurationList.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -284,7 +284,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -327,7 +327,7 @@ List of MutatingWebhookConfiguration.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -341,7 +341,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% md %}}
 
 Standard list metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -374,7 +374,7 @@ accept or reject and object without changing it.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -393,7 +393,7 @@ Create a admissionregistration.v1beta1.ValidatingWebhookConfiguration resource w
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -404,8 +404,8 @@ Create a admissionregistration.v1beta1.ValidatingWebhookConfiguration resource w
 {{% md %}}
 
 Get the state of an existing `ValidatingWebhookConfiguration` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -424,7 +424,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfiguration-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfiguration.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -451,7 +451,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -481,7 +481,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -495,7 +495,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% md %}}
 
 Standard object metadata; More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 
 {{% /md %}}
 </div>
@@ -540,7 +540,7 @@ ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -559,7 +559,7 @@ Create a admissionregistration.v1beta1.ValidatingWebhookConfigurationList resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -570,8 +570,8 @@ Create a admissionregistration.v1beta1.ValidatingWebhookConfigurationList resour
 {{% md %}}
 
 Get the state of an existing `ValidatingWebhookConfigurationList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -590,7 +590,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ValidatingWebhookConfigurationList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="admissionregistration/v1beta1/ValidatingWebhookConfigurationList.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -617,7 +617,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -660,7 +660,7 @@ List of ValidatingWebhookConfiguration.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -674,7 +674,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% md %}}
 
 Standard list metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>

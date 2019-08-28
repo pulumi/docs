@@ -42,7 +42,7 @@ scoped policy that includes permissions checking.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/LocalSubjectAccessReview.ts#L75" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/LocalSubjectAccessReview.ts#L74" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -61,7 +61,7 @@ Create a authorization.v1beta1.LocalSubjectAccessReview resource with the given 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/LocalSubjectAccessReview.ts#L58" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/LocalSubjectAccessReview.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -72,8 +72,8 @@ Create a authorization.v1beta1.LocalSubjectAccessReview resource with the given 
 {{% md %}}
 
 Get the state of an existing `LocalSubjectAccessReview` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -92,7 +92,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalSubjectAccessReview-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/LocalSubjectAccessReview.ts#L69" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/LocalSubjectAccessReview.ts#L68" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -119,7 +119,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -149,7 +149,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -220,7 +220,7 @@ should always be able to check whether they can perform an action
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectAccessReview.ts#L74" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectAccessReview.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -239,7 +239,7 @@ Create a authorization.v1beta1.SelfSubjectAccessReview resource with the given u
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectAccessReview.ts#L57" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectAccessReview.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -250,8 +250,8 @@ Create a authorization.v1beta1.SelfSubjectAccessReview resource with the given u
 {{% md %}}
 
 Get the state of an existing `SelfSubjectAccessReview` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -270,7 +270,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectAccessReview-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectAccessReview.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectAccessReview.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -297,7 +297,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -327,7 +327,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -402,7 +402,7 @@ decisions to the API server.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectRulesReview.ts#L79" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectRulesReview.ts#L78" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -421,7 +421,7 @@ Create a authorization.v1beta1.SelfSubjectRulesReview resource with the given un
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectRulesReview.ts#L62" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectRulesReview.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -432,8 +432,8 @@ Create a authorization.v1beta1.SelfSubjectRulesReview resource with the given un
 {{% md %}}
 
 Get the state of an existing `SelfSubjectRulesReview` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -452,7 +452,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSubjectRulesReview-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectRulesReview.ts#L73" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SelfSubjectRulesReview.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -479,7 +479,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -509,7 +509,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -577,7 +577,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubjectAccessReview-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SubjectAccessReview.ts#L72" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SubjectAccessReview.ts#L71" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -596,7 +596,7 @@ Create a authorization.v1beta1.SubjectAccessReview resource with the given uniqu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SubjectAccessReview.ts#L55" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SubjectAccessReview.ts#L54" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -607,8 +607,8 @@ Create a authorization.v1beta1.SubjectAccessReview resource with the given uniqu
 {{% md %}}
 
 Get the state of an existing `SubjectAccessReview` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -627,7 +627,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubjectAccessReview-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SubjectAccessReview.ts#L66" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authorization/v1beta1/SubjectAccessReview.ts#L65" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -654,7 +654,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -684,7 +684,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>

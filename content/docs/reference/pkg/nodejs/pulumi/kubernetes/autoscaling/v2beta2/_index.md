@@ -40,7 +40,7 @@ based on the metrics specified.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L78" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L77" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -59,7 +59,7 @@ Create a autoscaling.v2beta2.HorizontalPodAutoscaler resource with the given uni
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L61" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L60" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -70,8 +70,8 @@ Create a autoscaling.v2beta2.HorizontalPodAutoscaler resource with the given uni
 {{% md %}}
 
 Get the state of an existing `HorizontalPodAutoscaler` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -90,7 +90,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L72" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscaler.ts#L71" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -117,7 +117,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -147,7 +147,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -161,7 +161,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% md %}}
 
 metadata is the standard object metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
@@ -175,7 +175,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 {{% md %}}
 
 spec is the specification for the behaviour of the autoscaler. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status.
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
 
 {{% /md %}}
 </div>
@@ -220,7 +220,7 @@ HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L68" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -239,7 +239,7 @@ Create a autoscaling.v2beta2.HorizontalPodAutoscalerList resource with the given
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L51" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -250,8 +250,8 @@ Create a autoscaling.v2beta2.HorizontalPodAutoscalerList resource with the given
 {{% md %}}
 
 Get the state of an existing `HorizontalPodAutoscalerList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -270,7 +270,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v2beta2/HorizontalPodAutoscalerList.ts#L62" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -297,7 +297,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -340,7 +340,7 @@ items is the list of horizontal pod autoscaler objects.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>

@@ -40,7 +40,7 @@ title: Module apiextensions
 </div>
 
 <h2 class="pdoc-module-header" id="CustomResource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L85" >}}">class <b>CustomResource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L88" >}}">class <b>CustomResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
@@ -55,7 +55,7 @@ instantiate this as a Pulumi resource, one could call `new CustomResource`, pass
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResource-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L127" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L130" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -74,7 +74,7 @@ Create a CustomResource resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L118" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L121" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -93,7 +93,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-getInputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L126" >}}">method <b>getInputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L129" >}}">method <b>getInputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -133,7 +133,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L92" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L95" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -163,7 +163,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L100" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L103" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -179,7 +179,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L106" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L109" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -208,7 +208,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomResourceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L30" >}}">interface <b>CustomResourceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L33" >}}">interface <b>CustomResourceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -224,7 +224,7 @@ fields required across all CRDs.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceArgs-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L37" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L40" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -240,7 +240,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceArgs-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L45" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L48" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -256,7 +256,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceArgs-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L51" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L54" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -271,7 +271,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomResourceGetOptions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L59" >}}">interface <b>CustomResourceGetOptions</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L62" >}}">interface <b>CustomResourceGetOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
@@ -312,7 +312,7 @@ An optional list of aliases to treat this resource as matching.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceGetOptions-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L64" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L67" >}}">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -366,7 +366,7 @@ An optional additional explicit dependencies on other resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceGetOptions-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L76" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L79" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -409,7 +409,7 @@ options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceGetOptions-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L70" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/CustomResource.ts#L73" >}}">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}

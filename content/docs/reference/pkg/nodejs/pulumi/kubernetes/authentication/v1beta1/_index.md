@@ -38,7 +38,7 @@ be cached by the webhook token authenticator plugin in the kube-apiserver.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TokenReview-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1beta1/TokenReview.ts#L73" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1beta1/TokenReview.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -57,7 +57,7 @@ Create a authentication.v1beta1.TokenReview resource with the given unique name,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1beta1/TokenReview.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1beta1/TokenReview.ts#L55" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -68,8 +68,8 @@ Create a authentication.v1beta1.TokenReview resource with the given unique name,
 {{% md %}}
 
 Get the state of an existing `TokenReview` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -88,7 +88,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TokenReview-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1beta1/TokenReview.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="authentication/v1beta1/TokenReview.ts#L66" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -115,7 +115,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>

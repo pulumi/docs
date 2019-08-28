@@ -29,7 +29,7 @@ title: Module helm/v2
 
 
 <h2 class="pdoc-module-header" id="Chart">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L99" >}}">class <b>Chart</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L118" >}}">class <b>Chart</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
@@ -50,7 +50,7 @@ none of Tiller's server-side validity testing is executed.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Chart-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L99" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L118" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -69,7 +69,7 @@ Create an instance of the specified Helm chart.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Chart-getCustomResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2174" >}}">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L2229" >}}">method <b>getCustomResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -106,7 +106,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Chart-getResource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L158" >}}">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L213" >}}">method <b>getResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -2581,7 +2581,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Chart-getResourceProperty">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L520" >}}">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L575" >}}">method <b>getResourceProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -14102,7 +14102,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Chart-parseTemplate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L184" >}}">method <b>parseTemplate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L203" >}}">method <b>parseTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -14126,7 +14126,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Chart-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L144" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="yaml/yaml.ts#L199" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14151,7 +14151,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="fetch">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L362" >}}">function <b>fetch</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L381" >}}">function <b>fetch</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -14176,14 +14176,14 @@ will not be saved locally.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ChartOpts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L50" >}}">interface <b>ChartOpts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L69" >}}">interface <b>ChartOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#BaseChartOpts'>BaseChartOpts</a></pre>
 {{< /md-disable >}}
 <h3 class="pdoc-member-header" id="ChartOpts-chart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L60" >}}">property <b>chart</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L79" >}}">property <b>chart</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14197,7 +14197,7 @@ this chart name must be a fully qualified chart URL or `repo/chartname`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChartOpts-fetchOpts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L69" >}}">property <b>fetchOpts</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L88" >}}">property <b>fetchOpts</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14223,7 +14223,7 @@ The optional namespace to install chart resources into.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChartOpts-repo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L55" >}}">property <b>repo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L74" >}}">property <b>repo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14237,7 +14237,7 @@ or repo/chartname.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChartOpts-resourcePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L47" >}}">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L66" >}}">property <b>resourcePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14251,7 +14251,7 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChartOpts-transformations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L41" >}}">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L60" >}}">property <b>transformations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14278,7 +14278,7 @@ Overrides for chart values.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ChartOpts-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L64" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L83" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14292,7 +14292,7 @@ The version of the chart to deploy. If not provided, the latest version will be 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FetchOpts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L275" >}}">interface <b>FetchOpts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L294" >}}">interface <b>FetchOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -14301,7 +14301,7 @@ Additional options to customize the fetching of the Helm chart.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FetchOpts-caFile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L280" >}}">property <b>caFile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L299" >}}">property <b>caFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14314,7 +14314,7 @@ Verify certificates of HTTPS-enabled servers using this CA bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-certFile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L283" >}}">property <b>certFile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L302" >}}">property <b>certFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14327,7 +14327,7 @@ Identify HTTPS client using this SSL certificate file.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-destination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L292" >}}">property <b>destination</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L311" >}}">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14341,7 +14341,7 @@ Location to write the chart. If this and tardir are specified, tardir is appende
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-devel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L319" >}}">property <b>devel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L338" >}}">property <b>devel</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14355,7 +14355,7 @@ ignored.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-home">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L313" >}}">property <b>home</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L332" >}}">property <b>home</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14368,7 +14368,7 @@ Location of your Helm config. Overrides $HELM_HOME (default "/Users/alex/.helm")
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-keyFile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L286" >}}">property <b>keyFile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L305" >}}">property <b>keyFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14381,7 +14381,7 @@ Identify HTTPS client using this SSL key file.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-keyring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L295" >}}">property <b>keyring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L314" >}}">property <b>keyring</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14394,7 +14394,7 @@ Keyring containing public keys (default "/Users/alex/.gnupg/pubring.gpg").
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L298" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L317" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14407,7 +14407,7 @@ Chart repository password.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-prov">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L322" >}}">property <b>prov</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L341" >}}">property <b>prov</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14420,7 +14420,7 @@ Fetch the provenance file, but don't perform verification.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-repo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L301" >}}">property <b>repo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L320" >}}">property <b>repo</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14433,7 +14433,7 @@ Chart repository url where to locate the requested chart.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-untar">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L325" >}}">property <b>untar</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L344" >}}">property <b>untar</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14446,7 +14446,7 @@ If set to false, will leave the chart as a tarball after downloading.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-untardir">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L307" >}}">property <b>untardir</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L326" >}}">property <b>untardir</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14460,7 +14460,7 @@ expanded (default ".").
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-username">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L310" >}}">property <b>username</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L329" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14473,7 +14473,7 @@ Chart repository username.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-verify">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L328" >}}">property <b>verify</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L347" >}}">property <b>verify</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14486,7 +14486,7 @@ Verify the package against its signature.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FetchOpts-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L277" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L296" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14500,7 +14500,7 @@ Specific version of a chart. Without this, the latest version is fetched.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LocalChartOpts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L76" >}}">interface <b>LocalChartOpts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L95" >}}">interface <b>LocalChartOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
@@ -14520,7 +14520,7 @@ The optional namespace to install chart resources into.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalChartOpts-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L80" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L99" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14533,7 +14533,7 @@ The path to the chart directory which contains the `Chart.yaml` file.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalChartOpts-resourcePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L47" >}}">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L66" >}}">property <b>resourcePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -14547,7 +14547,7 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LocalChartOpts-transformations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L41" >}}">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="helm/v2/helm.ts#L60" >}}">property <b>transformations</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}

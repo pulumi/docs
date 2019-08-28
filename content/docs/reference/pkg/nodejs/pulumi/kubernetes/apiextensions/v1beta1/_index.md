@@ -39,7 +39,7 @@ name MUST be in the format &lt;.spec.name&gt;.&lt;.spec.group&gt;.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L73" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -58,7 +58,7 @@ Create a apiextensions.v1beta1.CustomResourceDefinition resource with the given 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L55" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -69,8 +69,8 @@ Create a apiextensions.v1beta1.CustomResourceDefinition resource with the given 
 {{% md %}}
 
 Get the state of an existing `CustomResourceDefinition` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -89,7 +89,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L66" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -116,7 +116,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -146,7 +146,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -214,7 +214,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -233,7 +233,7 @@ Create a apiextensions.v1beta1.CustomResourceDefinitionList resource with the gi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L50" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -244,8 +244,8 @@ Create a apiextensions.v1beta1.CustomResourceDefinitionList resource with the gi
 {{% md %}}
 
 Get the state of an existing `CustomResourceDefinitionList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -264,7 +264,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L61" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -291,7 +291,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -334,7 +334,7 @@ Items individual CustomResourceDefinitions
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>

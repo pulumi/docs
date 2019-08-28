@@ -38,7 +38,7 @@ AuditSink represents a cluster level audit sink
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuditSink-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -57,7 +57,7 @@ Create a auditregistration.v1alpha1.AuditSink resource with the given unique nam
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSink-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L50" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -68,8 +68,8 @@ Create a auditregistration.v1alpha1.AuditSink resource with the given unique nam
 {{% md %}}
 
 Get the state of an existing `AuditSink` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -88,7 +88,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSink-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L61" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSink.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -115,7 +115,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -200,7 +200,7 @@ AuditSinkList is a list of AuditSink items.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuditSinkList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L67" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -219,7 +219,7 @@ Create a auditregistration.v1alpha1.AuditSinkList resource with the given unique
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSinkList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L50" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -230,8 +230,8 @@ Create a auditregistration.v1alpha1.AuditSinkList resource with the given unique
 {{% md %}}
 
 Get the state of an existing `AuditSinkList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
@@ -250,7 +250,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuditSinkList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L61" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="auditregistration/v1alpha1/AuditSinkList.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -277,7 +277,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
@@ -320,7 +320,7 @@ List of audit configurations.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
