@@ -38,19 +38,17 @@ title: Module config
 <li><a href="#useMsi">let useMsi</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="config/vars.ts" >}}">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="clientCertificatePassword">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L13" >}}">let <b>clientCertificatePassword</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L13">let <b>clientCertificatePassword</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> clientCertificatePassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePassword&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_CERTIFICATE_PASSWORD&#34;) || &#34;&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client
@@ -59,12 +57,10 @@ Certificate
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="clientCertificatePath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L18" >}}">let <b>clientCertificatePath</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L18">let <b>clientCertificatePath</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> clientCertificatePath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientCertificatePath&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_CERTIFICATE_PATH&#34;) || &#34;&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
@@ -73,12 +69,10 @@ Principal using a Client Certificate.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="clientId">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L22" >}}">let <b>clientId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L22">let <b>clientId</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientId&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_ID&#34;) || &#34;&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Client ID which should be used.
@@ -86,12 +80,10 @@ The Client ID which should be used.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="clientSecret">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L26" >}}">let <b>clientSecret</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L26">let <b>clientSecret</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientSecret&#34;) || (utilities.getEnv(&#34;ARM_CLIENT_SECRET&#34;) || &#34;&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
@@ -99,12 +91,10 @@ The Client Secret which should be used. For use When authenticating as a Service
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="disableCorrelationRequestId">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L30" >}}">let <b>disableCorrelationRequestId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L30">let <b>disableCorrelationRequestId</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> disableCorrelationRequestId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;disableCorrelationRequestId&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This will disable the x-ms-correlation-request-id header.
@@ -112,12 +102,10 @@ This will disable the x-ms-correlation-request-id header.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="environment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L35" >}}">let <b>environment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L35">let <b>environment</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> environment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;environment&#34;) || (utilities.getEnv(&#34;ARM_ENVIRONMENT&#34;) || &#34;public&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
@@ -126,20 +114,16 @@ public.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="location">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L66" >}}">let <b>location</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L66">let <b>location</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;location&#34;) || utilities.getEnv(&#34;ARM_LOCATION&#34;)</span>;</pre>
-{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="msiEndpoint">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L40" >}}">let <b>msiEndpoint</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L40">let <b>msiEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> msiEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;msiEndpoint&#34;) || (utilities.getEnv(&#34;ARM_MSI_ENDPOINT&#34;) || &#34;&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
@@ -148,12 +132,10 @@ automatically.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="partnerId">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L44" >}}">let <b>partnerId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L44">let <b>partnerId</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> partnerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;partnerId&#34;) || (utilities.getEnv(&#34;ARM_PARTNER_ID&#34;) || &#34;&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
@@ -161,12 +143,10 @@ A GUID/UUID that is registered with Microsoft to facilitate partner resource usa
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="skipCredentialsValidation">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L48" >}}">let <b>skipCredentialsValidation</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L48">let <b>skipCredentialsValidation</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> skipCredentialsValidation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipCredentialsValidation&#34;) || (utilities.getEnvBoolean(&#34;ARM_SKIP_CREDENTIALS_VALIDATION&#34;) || false)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
@@ -174,12 +154,10 @@ This will cause the AzureRM Provider to skip verifying the credentials being use
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="skipProviderRegistration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L53" >}}">let <b>skipProviderRegistration</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L53">let <b>skipProviderRegistration</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> skipProviderRegistration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;skipProviderRegistration&#34;) || (utilities.getEnvBoolean(&#34;ARM_SKIP_PROVIDER_REGISTRATION&#34;) || false)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
@@ -188,12 +166,10 @@ registered?
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="subscriptionId">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L57" >}}">let <b>subscriptionId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L57">let <b>subscriptionId</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> subscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;subscriptionId&#34;) || (utilities.getEnv(&#34;ARM_SUBSCRIPTION_ID&#34;) || &#34;&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Subscription ID which should be used.
@@ -201,12 +177,10 @@ The Subscription ID which should be used.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="tenantId">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L61" >}}">let <b>tenantId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L61">let <b>tenantId</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tenantId&#34;) || (utilities.getEnv(&#34;ARM_TENANT_ID&#34;) || &#34;&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Tenant ID which should be used.
@@ -214,12 +188,10 @@ The Tenant ID which should be used.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="useMsi">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="config/vars.ts#L65" >}}">let <b>useMsi</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/config/vars.ts#L65">let <b>useMsi</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> useMsi: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;useMsi&#34;) || (utilities.getEnvBoolean(&#34;ARM_USE_MSI&#34;) || false)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Allowed Managed Service Identity be used for Authentication.

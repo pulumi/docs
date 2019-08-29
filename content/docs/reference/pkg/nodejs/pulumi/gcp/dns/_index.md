@@ -36,19 +36,17 @@ title: Module dns
 <li><a href="#RecordSetState">interface RecordSetState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts" >}}">dns/getManagedZone.ts</a> <a href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts" >}}">dns/managedZone.ts</a> <a href="{{< pkg-url pkg="gcp" path="dns/policy.ts" >}}">dns/policy.ts</a> <a href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts" >}}">dns/recordSet.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts">dns/getManagedZone.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts">dns/managedZone.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts">dns/policy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts">dns/recordSet.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ManagedZone">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L75" >}}">class <b>ManagedZone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L75">class <b>ManagedZone</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A zone is a subtree of the DNS namespace under one administrative
@@ -117,13 +115,11 @@ const privateZone = new gcp.dns.ManagedZone("private-zone", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManagedZone-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L116" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L116"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ManagedZone(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ManagedZoneArgs'>ManagedZoneArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -136,13 +132,11 @@ Create a ManagedZone resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L84" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L84">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ManagedZoneState'>ManagedZoneState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ManagedZone'>ManagedZone</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -152,25 +146,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L75" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L75">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L95" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L95">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -180,52 +170,34 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L102" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L102">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L103" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L103">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-dnssecConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L104" >}}">property <b>dnssecConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L104">property <b>dnssecConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnssecConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfig'>outputs.dns.ManagedZoneDnssecConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-forwardingConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L105" >}}">property <b>forwardingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L105">property <b>forwardingConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>forwardingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfig'>outputs.dns.ManagedZoneForwardingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L75" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L75">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -234,62 +206,40 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L106" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L106">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L107" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L107">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L108" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L108">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>nameServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-peeringConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L109" >}}">property <b>peeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L109">property <b>peeringConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>peeringConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePeeringConfig'>outputs.dns.ManagedZonePeeringConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-privateVisibilityConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L110" >}}">property <b>privateVisibilityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L110">property <b>privateVisibilityConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privateVisibilityConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfig'>outputs.dns.ManagedZonePrivateVisibilityConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L115" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L115">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -298,12 +248,10 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L75" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L75">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -312,23 +260,17 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZone-visibility">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L116" >}}">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L116">property <b>visibility</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>visibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Policy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L21" >}}">class <b>Policy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L21">class <b>Policy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A policy is a collection of DNS rules applied to one or more Virtual
@@ -344,13 +286,11 @@ To get more information about Policy, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L58" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L58"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Policy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#PolicyArgs'>PolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -363,13 +303,11 @@ Create a Policy resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L30" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L30">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PolicyState'>PolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Policy'>Policy</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -379,25 +317,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L21" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L21">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L41" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L41">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -407,52 +341,34 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-alternativeNameServerConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L48" >}}">property <b>alternativeNameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L48">property <b>alternativeNameServerConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>alternativeNameServerConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAlternativeNameServerConfig'>outputs.dns.PolicyAlternativeNameServerConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L49" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L49">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-enableInboundForwarding">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L50" >}}">property <b>enableInboundForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L50">property <b>enableInboundForwarding</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableInboundForwarding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-enableLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L51" >}}">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L51">property <b>enableLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableLogging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L21" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L21">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -461,32 +377,22 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L52" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L52">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-networks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L53" >}}">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L53">property <b>networks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyNetwork'>outputs.dns.PolicyNetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L58" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L58">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -495,12 +401,10 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L21" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L21">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -510,12 +414,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L127" >}}">class <b>RecordSet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L127">class <b>RecordSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a set of DNS records within Google Cloud DNS. For more information see [the official documentation](https://cloud.google.com/dns/records/) and
@@ -637,13 +539,11 @@ const cname = new gcp.dns.RecordSet("cname", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RecordSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L180" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L180"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RecordSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RecordSetArgs'>RecordSetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -656,13 +556,11 @@ Create a RecordSet resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L136" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L136">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RecordSetState'>RecordSetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RecordSet'>RecordSet</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -672,25 +570,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L127" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L127">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L147" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L147">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -700,12 +594,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L127" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L127">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -714,12 +606,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-managedZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L158" >}}">property <b>managedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L158">property <b>managedZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>managedZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the zone in which this record set will
@@ -728,12 +618,10 @@ reside.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L162" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L162">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DNS name this record set will apply to.
@@ -741,12 +629,10 @@ The DNS name this record set will apply to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L167" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L167">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -755,12 +641,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-rrdatas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L172" >}}">property <b>rrdatas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L172">property <b>rrdatas</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>rrdatas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The string data for the records in this record set
@@ -769,12 +653,10 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L176" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L176">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The time-to-live of this record set (seconds).
@@ -782,12 +664,10 @@ The time-to-live of this record set (seconds).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L180" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L180">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DNS record set type.
@@ -795,12 +675,10 @@ The DNS record set type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSet-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L127" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L127">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -810,13 +688,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getManagedZone">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L33" >}}">function <b>getManagedZone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L33">function <b>getManagedZone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getManagedZone(args: <a href='#GetManagedZoneArgs'>GetManagedZoneArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetManagedZoneResult'>GetManagedZoneResult</a>&gt; &amp; <a href='#GetManagedZoneResult'>GetManagedZoneResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -846,7 +722,7 @@ const dns = new gcp.dns.RecordSet("dns", {
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetManagedZoneArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L52" >}}">interface <b>GetManagedZoneArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L52">interface <b>GetManagedZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -855,12 +731,10 @@ A collection of arguments for invoking getManagedZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetManagedZoneArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L56" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L56">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -868,12 +742,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagedZoneArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L60" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L60">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project for the Google Cloud DNS zone.
@@ -882,7 +754,7 @@ The ID of the project for the Google Cloud DNS zone.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetManagedZoneResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L66" >}}">interface <b>GetManagedZoneResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L66">interface <b>GetManagedZoneResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -891,12 +763,10 @@ A collection of values returned by getManagedZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetManagedZoneResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L70" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L70">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A textual description field.
@@ -904,12 +774,10 @@ A textual description field.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagedZoneResult-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L74" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L74">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified DNS name of this zone, e.g. `example.com.`.
@@ -917,12 +785,10 @@ The fully qualified DNS name of this zone, e.g. `example.com.`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagedZoneResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L86" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -930,22 +796,16 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagedZoneResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L75" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L75">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagedZoneResult-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L81" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L81">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The list of nameservers that will be authoritative for this
@@ -955,18 +815,14 @@ thus making Google Cloud DNS authoritative for this zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagedZoneResult-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/getManagedZone.ts#L82" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/getManagedZone.ts#L82">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagedZoneArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L193" >}}">interface <b>ManagedZoneArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L193">interface <b>ManagedZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -975,92 +831,58 @@ The set of arguments for constructing a ManagedZone resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L194" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L194">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L195" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L195">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-dnssecConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L196" >}}">property <b>dnssecConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L196">property <b>dnssecConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnssecConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig'>inputs.dns.ManagedZoneDnssecConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-forwardingConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L197" >}}">property <b>forwardingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L197">property <b>forwardingConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forwardingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig'>inputs.dns.ManagedZoneForwardingConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L198" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L198">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L199" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L199">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-peeringConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L200" >}}">property <b>peeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L200">property <b>peeringConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>peeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig'>inputs.dns.ManagedZonePeeringConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-privateVisibilityConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L201" >}}">property <b>privateVisibilityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L201">property <b>privateVisibilityConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateVisibilityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig'>inputs.dns.ManagedZonePrivateVisibilityConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L206" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L206">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -1069,18 +891,14 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneArgs-visibility">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L207" >}}">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L207">property <b>visibility</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagedZoneState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L172" >}}">interface <b>ManagedZoneState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L172">interface <b>ManagedZoneState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1089,102 +907,64 @@ Input properties used for looking up and filtering ManagedZone resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManagedZoneState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L173" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L173">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-dnsName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L174" >}}">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L174">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-dnssecConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L175" >}}">property <b>dnssecConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L175">property <b>dnssecConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnssecConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig'>inputs.dns.ManagedZoneDnssecConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-forwardingConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L176" >}}">property <b>forwardingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L176">property <b>forwardingConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forwardingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig'>inputs.dns.ManagedZoneForwardingConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L177" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L177">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L178" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L178">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L179" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L179">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-peeringConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L180" >}}">property <b>peeringConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L180">property <b>peeringConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>peeringConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig'>inputs.dns.ManagedZonePeeringConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-privateVisibilityConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L181" >}}">property <b>privateVisibilityConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L181">property <b>privateVisibilityConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateVisibilityConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig'>inputs.dns.ManagedZonePrivateVisibilityConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L186" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L186">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -1193,18 +973,14 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagedZoneState-visibility">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/managedZone.ts#L187" >}}">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/managedZone.ts#L187">property <b>visibility</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L120" >}}">interface <b>PolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L120">interface <b>PolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1213,72 +989,46 @@ The set of arguments for constructing a Policy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyArgs-alternativeNameServerConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L121" >}}">property <b>alternativeNameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L121">property <b>alternativeNameServerConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alternativeNameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAlternativeNameServerConfig'>inputs.dns.PolicyAlternativeNameServerConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L122" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L122">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-enableInboundForwarding">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L123" >}}">property <b>enableInboundForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L123">property <b>enableInboundForwarding</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableInboundForwarding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-enableLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L124" >}}">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L124">property <b>enableLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L125" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L125">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-networks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L126" >}}">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L126">property <b>networks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyNetwork'>inputs.dns.PolicyNetwork</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L131" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L131">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -1288,7 +1038,7 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L103" >}}">interface <b>PolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L103">interface <b>PolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1297,72 +1047,46 @@ Input properties used for looking up and filtering Policy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicyState-alternativeNameServerConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L104" >}}">property <b>alternativeNameServerConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L104">property <b>alternativeNameServerConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alternativeNameServerConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAlternativeNameServerConfig'>inputs.dns.PolicyAlternativeNameServerConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L105" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L105">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-enableInboundForwarding">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L106" >}}">property <b>enableInboundForwarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L106">property <b>enableInboundForwarding</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableInboundForwarding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-enableLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L107" >}}">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L107">property <b>enableLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L108" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L108">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-networks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L109" >}}">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L109">property <b>networks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyNetwork'>inputs.dns.PolicyNetwork</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicyState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/policy.ts#L114" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/policy.ts#L114">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -1372,7 +1096,7 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L268" >}}">interface <b>RecordSetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L268">interface <b>RecordSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1381,12 +1105,10 @@ The set of arguments for constructing a RecordSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RecordSetArgs-managedZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L273" >}}">property <b>managedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L273">property <b>managedZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>managedZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the zone in which this record set will
@@ -1395,12 +1117,10 @@ reside.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L277" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L277">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DNS name this record set will apply to.
@@ -1408,12 +1128,10 @@ The DNS name this record set will apply to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L282" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L282">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -1422,12 +1140,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetArgs-rrdatas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L287" >}}">property <b>rrdatas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L287">property <b>rrdatas</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rrdatas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The string data for the records in this record set
@@ -1436,12 +1152,10 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L291" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L291">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The time-to-live of this record set (seconds).
@@ -1449,12 +1163,10 @@ The time-to-live of this record set (seconds).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L295" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L295">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DNS record set type.
@@ -1463,7 +1175,7 @@ The DNS record set type.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RecordSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L235" >}}">interface <b>RecordSetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L235">interface <b>RecordSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1472,12 +1184,10 @@ Input properties used for looking up and filtering RecordSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="RecordSetState-managedZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L240" >}}">property <b>managedZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L240">property <b>managedZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>managedZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the zone in which this record set will
@@ -1486,12 +1196,10 @@ reside.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L244" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L244">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DNS name this record set will apply to.
@@ -1499,12 +1207,10 @@ The DNS name this record set will apply to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L249" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L249">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs. If it
@@ -1513,12 +1219,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetState-rrdatas">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L254" >}}">property <b>rrdatas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L254">property <b>rrdatas</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rrdatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The string data for the records in this record set
@@ -1527,12 +1231,10 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L258" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L258">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The time-to-live of this record set (seconds).
@@ -1540,12 +1242,10 @@ The time-to-live of this record set (seconds).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RecordSetState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="dns/recordSet.ts#L262" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/dns/recordSet.ts#L262">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DNS record set type.

@@ -27,19 +27,17 @@ title: Module cloud9
 <li><a href="#EnvironmentEC2State">interface EnvironmentEC2State</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts" >}}">cloud9/environmentEC2.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts">cloud9/environmentEC2.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="EnvironmentEC2">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L23" >}}">class <b>EnvironmentEC2</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L23">class <b>EnvironmentEC2</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides a Cloud9 EC2 Development Environment.
@@ -59,13 +57,11 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EnvironmentEC2-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L81" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L81"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EnvironmentEC2(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EnvironmentEC2Args'>EnvironmentEC2Args</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -78,13 +74,11 @@ Create a EnvironmentEC2 resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L32" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L32">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EnvironmentEC2State'>EnvironmentEC2State</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EnvironmentEC2'>EnvironmentEC2</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -94,25 +88,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L23" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L23">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L43" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L43">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -122,12 +112,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L53" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L53">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the environment.
@@ -135,12 +123,10 @@ The ARN of the environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-automaticStopTimeMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L57" >}}">property <b>automaticStopTimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L57">property <b>automaticStopTimeMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>automaticStopTimeMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The number of minutes until the running instance is shut down after the environment has last been used.
@@ -148,12 +134,10 @@ The number of minutes until the running instance is shut down after the environm
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L61" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L61">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the environment.
@@ -161,12 +145,10 @@ The description of the environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L23" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L23">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -175,12 +157,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L65" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L65">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of instance to connect to the environment, e.g. `t2.micro`.
@@ -188,12 +168,10 @@ The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L69" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L69">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the environment.
@@ -201,12 +179,10 @@ The name of the environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-ownerArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L73" >}}">property <b>ownerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L73">property <b>ownerArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ownerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
@@ -214,12 +190,10 @@ The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L77" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L77">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
@@ -227,12 +201,10 @@ The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L81" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L81">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of the environment (e.g. `ssh` or `ec2`)
@@ -240,12 +212,10 @@ The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L23" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L23">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -255,7 +225,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EnvironmentEC2Args">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L169" >}}">interface <b>EnvironmentEC2Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L169">interface <b>EnvironmentEC2Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -264,12 +234,10 @@ The set of arguments for constructing a EnvironmentEC2 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EnvironmentEC2Args-automaticStopTimeMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L173" >}}">property <b>automaticStopTimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L173">property <b>automaticStopTimeMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>automaticStopTimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The number of minutes until the running instance is shut down after the environment has last been used.
@@ -277,12 +245,10 @@ The number of minutes until the running instance is shut down after the environm
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2Args-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L177" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L177">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the environment.
@@ -290,12 +256,10 @@ The description of the environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2Args-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L181" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L181">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of instance to connect to the environment, e.g. `t2.micro`.
@@ -303,12 +267,10 @@ The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2Args-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L185" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L185">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the environment.
@@ -316,12 +278,10 @@ The name of the environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2Args-ownerArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L189" >}}">property <b>ownerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L189">property <b>ownerArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
@@ -329,12 +289,10 @@ The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2Args-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L193" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L193">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
@@ -343,7 +301,7 @@ The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EnvironmentEC2State">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L131" >}}">interface <b>EnvironmentEC2State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L131">interface <b>EnvironmentEC2State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -352,12 +310,10 @@ Input properties used for looking up and filtering EnvironmentEC2 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EnvironmentEC2State-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L135" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L135">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the environment.
@@ -365,12 +321,10 @@ The ARN of the environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2State-automaticStopTimeMinutes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L139" >}}">property <b>automaticStopTimeMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L139">property <b>automaticStopTimeMinutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>automaticStopTimeMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The number of minutes until the running instance is shut down after the environment has last been used.
@@ -378,12 +332,10 @@ The number of minutes until the running instance is shut down after the environm
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2State-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L143" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L143">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the environment.
@@ -391,12 +343,10 @@ The description of the environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2State-instanceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L147" >}}">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L147">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of instance to connect to the environment, e.g. `t2.micro`.
@@ -404,12 +354,10 @@ The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2State-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L151" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L151">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the environment.
@@ -417,12 +365,10 @@ The name of the environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2State-ownerArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L155" >}}">property <b>ownerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L155">property <b>ownerArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
@@ -430,12 +376,10 @@ The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2State-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L159" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L159">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
@@ -443,12 +387,10 @@ The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentEC2State-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cloud9/environmentEC2.ts#L163" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cloud9/environmentEC2.ts#L163">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of the environment (e.g. `ssh` or `ec2`)

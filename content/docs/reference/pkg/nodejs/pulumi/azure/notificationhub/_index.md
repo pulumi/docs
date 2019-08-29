@@ -39,19 +39,17 @@ title: Module notificationhub
 <li><a href="#NamespaceState">interface NamespaceState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts" >}}">notificationhub/authorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts" >}}">notificationhub/getHub.ts</a> <a href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts" >}}">notificationhub/getNamespace.ts</a> <a href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts" >}}">notificationhub/hub.ts</a> <a href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts" >}}">notificationhub/namespace.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts">notificationhub/authorizationRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts">notificationhub/getHub.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts">notificationhub/getNamespace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts">notificationhub/hub.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts">notificationhub/namespace.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="AuthorizationRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L48" >}}">class <b>AuthorizationRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L48">class <b>AuthorizationRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.
@@ -94,13 +92,11 @@ const testAuthorizationRule = new azure.notificationhub.AuthorizationRule("test"
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L110" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L110"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AuthorizationRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AuthorizationRuleArgs'>AuthorizationRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -113,13 +109,11 @@ Create a AuthorizationRule resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L57" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L57">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AuthorizationRuleState'>AuthorizationRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AuthorizationRule'>AuthorizationRule</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -129,25 +123,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L48" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L48">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L68">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -157,12 +147,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L48" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L48">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -171,12 +159,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L78" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L78">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Listen access to the Notification Hub? Defaults to `false`.
@@ -184,12 +170,10 @@ Does this Authorization Rule have Listen access to the Notification Hub? Default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L82" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L82">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Manage access to the Notification Hub? Defaults to `false`.
@@ -197,12 +181,10 @@ Does this Authorization Rule have Manage access to the Notification Hub? Default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L86" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L86">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Authorization Rule. Changing this forces a new resource to be created.
@@ -210,12 +192,10 @@ The name to use for this Authorization Rule. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L90" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L90">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub Namespace in which the Notification Hub exists. Changing this forces a new resource to be created.
@@ -223,12 +203,10 @@ The name of the Notification Hub Namespace in which the Notification Hub exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-notificationHubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L94" >}}">property <b>notificationHubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L94">property <b>notificationHubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notificationHubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub for which the Authorization Rule should be created. Changing this forces a new resource to be created.
@@ -236,12 +214,10 @@ The name of the Notification Hub for which the Authorization Rule should be crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L98" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L98">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary Access Key associated with this Authorization Rule.
@@ -249,12 +225,10 @@ The Primary Access Key associated with this Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L102" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L102">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -262,12 +236,10 @@ The name of the Resource Group in which the Notification Hub Namespace exists. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L106" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L106">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Access Key associated with this Authorization Rule.
@@ -275,12 +247,10 @@ The Secondary Access Key associated with this Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L110" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L110">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Send access to the Notification Hub? Defaults to `false`.
@@ -288,12 +258,10 @@ Does this Authorization Rule have Send access to the Notification Hub? Defaults 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L48" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L48">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -303,12 +271,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hub">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L39" >}}">class <b>Hub</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L39">class <b>Hub</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Notification Hub within a Notification Hub Namespace.
@@ -342,13 +308,11 @@ const testHub = new azure.notificationhub.Hub("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hub-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L89" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L89"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Hub(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HubArgs'>HubArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -361,13 +325,11 @@ Create a Hub resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L48" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L48">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#HubState'>HubState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Hub'>Hub</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -377,25 +339,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L39" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L39">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L59" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L59">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -405,12 +363,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-apnsCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L69" >}}">property <b>apnsCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L69">property <b>apnsCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>apnsCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HubApnsCredential'>outputs.notificationhub.HubApnsCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `apnsCredential` block as defined below.
@@ -418,12 +374,10 @@ A `apnsCredential` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-gcmCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L73" >}}">property <b>gcmCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L73">property <b>gcmCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>gcmCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HubGcmCredential'>outputs.notificationhub.HubGcmCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `gcmCredential` block as defined below.
@@ -431,12 +385,10 @@ A `gcmCredential` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L39" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L39">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -445,12 +397,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L77" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L77">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -458,12 +408,10 @@ The Azure Region in which this Notification Hub Namespace exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L81" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L81">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Notification Hub. Changing this forces a new resource to be created.
@@ -471,12 +419,10 @@ The name to use for this Notification Hub. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L85" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L85">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub Namespace in which to create this Notification Hub. Changing this forces a new resource to be created.
@@ -484,12 +430,10 @@ The name of the Notification Hub Namespace in which to create this Notification 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L89" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L89">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -497,12 +441,10 @@ The name of the Resource Group in which the Notification Hub Namespace exists. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hub-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L39" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L39">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -512,12 +454,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Namespace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L33" >}}">class <b>Namespace</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L33">class <b>Namespace</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Notification Hub Namespace.
@@ -545,13 +485,11 @@ const testNamespace = new azure.notificationhub.Namespace("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L91" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L91"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Namespace(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NamespaceArgs'>NamespaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -564,13 +502,11 @@ Create a Namespace resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L42">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NamespaceState'>NamespaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Namespace'>Namespace</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -580,25 +516,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L33" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L33">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L53">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -608,12 +540,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L63" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L63">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Is this Notification Hub Namespace enabled? Defaults to `true`.
@@ -621,12 +551,10 @@ Is this Notification Hub Namespace enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L33" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L33">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -635,12 +563,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L67" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L67">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Notification Hub Namespace should be created.
@@ -648,12 +574,10 @@ The Azure Region in which this Notification Hub Namespace should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L71">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Notification Hub Namespace. Changing this forces a new resource to be created.
@@ -661,12 +585,10 @@ The name to use for this Notification Hub Namespace. Changing this forces a new 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-namespaceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L75" >}}">property <b>namespaceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L75">property <b>namespaceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Type of Namespace - possible values are `Messaging` or `NotificationHub`. Changing this forces a new resource to be created.
@@ -674,12 +596,10 @@ The Type of Namespace - possible values are `Messaging` or `NotificationHub`. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L79" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L79">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace should exist. Changing this forces a new resource to be created.
@@ -687,12 +607,10 @@ The name of the Resource Group in which the Notification Hub Namespace should ex
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-servicebusEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L83" >}}">property <b>servicebusEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L83">property <b>servicebusEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>servicebusEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ServiceBus Endpoint for this Notification Hub Namespace.
@@ -700,12 +618,10 @@ The ServiceBus Endpoint for this Notification Hub Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L87" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L87">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NamespaceSku'>outputs.notificationhub.NamespaceSku</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 ) A `sku` block as described below.
@@ -713,12 +629,10 @@ The ServiceBus Endpoint for this Notification Hub Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L91" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L91">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the SKU to use for this Notification Hub Namespace. Possible values are `Free`, `Basic` or `Standard`. Changing this forces a new resource to be created.
@@ -726,12 +640,10 @@ The name of the SKU to use for this Notification Hub Namespace. Possible values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L33" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L33">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -741,13 +653,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getHub">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L29" >}}">function <b>getHub</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L29">function <b>getHub</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getHub(args: <a href='#GetHubArgs'>GetHubArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetHubResult'>GetHubResult</a>&gt; &amp; <a href='#GetHubResult'>GetHubResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -773,13 +683,11 @@ export const id = test.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getNamespace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L28" >}}">function <b>getNamespace</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L28">function <b>getNamespace</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getNamespace(args: <a href='#GetNamespaceArgs'>GetNamespaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetNamespaceResult'>GetNamespaceResult</a>&gt; &amp; <a href='#GetNamespaceResult'>GetNamespaceResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -804,7 +712,7 @@ export const servicebusEndpoint = test.servicebusEndpoint;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AuthorizationRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L210" >}}">interface <b>AuthorizationRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L210">interface <b>AuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -813,12 +721,10 @@ The set of arguments for constructing a AuthorizationRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L214" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L214">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Listen access to the Notification Hub? Defaults to `false`.
@@ -826,12 +732,10 @@ Does this Authorization Rule have Listen access to the Notification Hub? Default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L218" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L218">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Manage access to the Notification Hub? Defaults to `false`.
@@ -839,12 +743,10 @@ Does this Authorization Rule have Manage access to the Notification Hub? Default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L222" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L222">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Authorization Rule. Changing this forces a new resource to be created.
@@ -852,12 +754,10 @@ The name to use for this Authorization Rule. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L226" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L226">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub Namespace in which the Notification Hub exists. Changing this forces a new resource to be created.
@@ -865,12 +765,10 @@ The name of the Notification Hub Namespace in which the Notification Hub exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleArgs-notificationHubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L230" >}}">property <b>notificationHubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L230">property <b>notificationHubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationHubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub for which the Authorization Rule should be created. Changing this forces a new resource to be created.
@@ -878,12 +776,10 @@ The name of the Notification Hub for which the Authorization Rule should be crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L234" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L234">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -891,12 +787,10 @@ The name of the Resource Group in which the Notification Hub Namespace exists. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L238" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L238">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Send access to the Notification Hub? Defaults to `false`.
@@ -905,7 +799,7 @@ Does this Authorization Rule have Send access to the Notification Hub? Defaults 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AuthorizationRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L168" >}}">interface <b>AuthorizationRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L168">interface <b>AuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -914,12 +808,10 @@ Input properties used for looking up and filtering AuthorizationRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L172" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L172">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Listen access to the Notification Hub? Defaults to `false`.
@@ -927,12 +819,10 @@ Does this Authorization Rule have Listen access to the Notification Hub? Default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L176" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L176">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Manage access to the Notification Hub? Defaults to `false`.
@@ -940,12 +830,10 @@ Does this Authorization Rule have Manage access to the Notification Hub? Default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L180" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L180">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Authorization Rule. Changing this forces a new resource to be created.
@@ -953,12 +841,10 @@ The name to use for this Authorization Rule. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L184" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L184">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub Namespace in which the Notification Hub exists. Changing this forces a new resource to be created.
@@ -966,12 +852,10 @@ The name of the Notification Hub Namespace in which the Notification Hub exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-notificationHubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L188" >}}">property <b>notificationHubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L188">property <b>notificationHubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationHubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub for which the Authorization Rule should be created. Changing this forces a new resource to be created.
@@ -979,12 +863,10 @@ The name of the Notification Hub for which the Authorization Rule should be crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L192" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L192">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary Access Key associated with this Authorization Rule.
@@ -992,12 +874,10 @@ The Primary Access Key associated with this Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L196" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L196">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -1005,12 +885,10 @@ The name of the Resource Group in which the Notification Hub Namespace exists. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L200" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L200">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Access Key associated with this Authorization Rule.
@@ -1018,12 +896,10 @@ The Secondary Access Key associated with this Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AuthorizationRuleState-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/authorizationRule.ts#L204" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/authorizationRule.ts#L204">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Send access to the Notification Hub? Defaults to `false`.
@@ -1032,7 +908,7 @@ Does this Authorization Rule have Send access to the Notification Hub? Defaults 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetHubArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L49" >}}">interface <b>GetHubArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L49">interface <b>GetHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1041,12 +917,10 @@ A collection of arguments for invoking getHub.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetHubArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L53" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L53">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Name of the Notification Hub.
@@ -1054,12 +928,10 @@ Specifies the Name of the Notification Hub.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHubArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L57" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L57">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Name of the Notification Hub Namespace which contains the Notification Hub.
@@ -1067,12 +939,10 @@ Specifies the Name of the Notification Hub Namespace which contains the Notifica
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHubArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L61" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L61">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Name of the Resource Group within which the Notification Hub exists.
@@ -1081,7 +951,7 @@ Specifies the Name of the Resource Group within which the Notification Hub exist
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetHubResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L67" >}}">interface <b>GetHubResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L67">interface <b>GetHubResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1090,12 +960,10 @@ A collection of values returned by getHub.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetHubResult-apnsCredentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L71" >}}">property <b>apnsCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L71">property <b>apnsCredentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apnsCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetHubApnsCredential'>outputs.notificationhub.GetHubApnsCredential</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `apnsCredential` block as defined below.
@@ -1103,12 +971,10 @@ A `apnsCredential` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHubResult-gcmCredentials">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L75" >}}">property <b>gcmCredentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L75">property <b>gcmCredentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gcmCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetHubGcmCredential'>outputs.notificationhub.GetHubGcmCredential</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `gcmCredential` block as defined below.
@@ -1116,12 +982,10 @@ A `gcmCredential` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHubResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L86" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1129,12 +993,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHubResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L79" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L79">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Notification Hub exists.
@@ -1142,38 +1004,26 @@ The Azure Region in which this Notification Hub exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHubResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L80" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L80">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHubResult-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L81" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L81">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHubResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getHub.ts#L82" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getHub.ts#L82">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetNamespaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L47" >}}">interface <b>GetNamespaceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L47">interface <b>GetNamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1182,12 +1032,10 @@ A collection of arguments for invoking getNamespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetNamespaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L51" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L51">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Name of the Notification Hub Namespace.
@@ -1195,12 +1043,10 @@ Specifies the Name of the Notification Hub Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetNamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L55" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L55">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Name of the Resource Group within which the Notification Hub exists.
@@ -1209,7 +1055,7 @@ Specifies the Name of the Resource Group within which the Notification Hub exist
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetNamespaceResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L61" >}}">interface <b>GetNamespaceResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L61">interface <b>GetNamespaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1218,12 +1064,10 @@ A collection of values returned by getNamespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetNamespaceResult-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L65" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L65">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Is this Notification Hub Namespace enabled?
@@ -1231,12 +1075,10 @@ Is this Notification Hub Namespace enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetNamespaceResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L87" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L87">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1244,12 +1086,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetNamespaceResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L69" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L69">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Notification Hub Namespace exists.
@@ -1257,12 +1097,10 @@ The Azure Region in which this Notification Hub Namespace exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetNamespaceResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L73" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L73">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Required) The name of the SKU to use for this Notification Hub Namespace. Possible values are `Free`, `Basic` or `Standard.`
@@ -1270,12 +1108,10 @@ The Azure Region in which this Notification Hub Namespace exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetNamespaceResult-namespaceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L77" >}}">property <b>namespaceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L77">property <b>namespaceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Type of Namespace, such as `Messaging` or `NotificationHub`.
@@ -1283,32 +1119,22 @@ The Type of Namespace, such as `Messaging` or `NotificationHub`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetNamespaceResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L78" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L78">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetNamespaceResult-servicebusEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L79" >}}">property <b>servicebusEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L79">property <b>servicebusEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>servicebusEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetNamespaceResult-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/getNamespace.ts#L83" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/getNamespace.ts#L83">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNamespaceSku'>outputs.notificationhub.GetNamespaceSku</a>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `sku` block as defined below.
@@ -1317,7 +1143,7 @@ A `sku` block as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HubArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L168" >}}">interface <b>HubArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L168">interface <b>HubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1326,12 +1152,10 @@ The set of arguments for constructing a Hub resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HubArgs-apnsCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L172" >}}">property <b>apnsCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L172">property <b>apnsCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubApnsCredential'>inputs.notificationhub.HubApnsCredential</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `apnsCredential` block as defined below.
@@ -1339,12 +1163,10 @@ A `apnsCredential` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubArgs-gcmCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L176" >}}">property <b>gcmCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L176">property <b>gcmCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubGcmCredential'>inputs.notificationhub.HubGcmCredential</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `gcmCredential` block as defined below.
@@ -1352,12 +1174,10 @@ A `gcmCredential` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L180" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L180">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -1365,12 +1185,10 @@ The Azure Region in which this Notification Hub Namespace exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L184" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L184">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Notification Hub. Changing this forces a new resource to be created.
@@ -1378,12 +1196,10 @@ The name to use for this Notification Hub. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L188" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L188">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub Namespace in which to create this Notification Hub. Changing this forces a new resource to be created.
@@ -1391,12 +1207,10 @@ The name of the Notification Hub Namespace in which to create this Notification 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L192" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L192">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -1405,7 +1219,7 @@ The name of the Resource Group in which the Notification Hub Namespace exists. C
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HubState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L138" >}}">interface <b>HubState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L138">interface <b>HubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1414,12 +1228,10 @@ Input properties used for looking up and filtering Hub resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HubState-apnsCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L142" >}}">property <b>apnsCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L142">property <b>apnsCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubApnsCredential'>inputs.notificationhub.HubApnsCredential</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `apnsCredential` block as defined below.
@@ -1427,12 +1239,10 @@ A `apnsCredential` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubState-gcmCredential">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L146" >}}">property <b>gcmCredential</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L146">property <b>gcmCredential</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubGcmCredential'>inputs.notificationhub.HubGcmCredential</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `gcmCredential` block as defined below.
@@ -1440,12 +1250,10 @@ A `gcmCredential` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L150" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L150">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -1453,12 +1261,10 @@ The Azure Region in which this Notification Hub Namespace exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L154" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L154">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Notification Hub. Changing this forces a new resource to be created.
@@ -1466,12 +1272,10 @@ The name to use for this Notification Hub. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L158" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L158">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Notification Hub Namespace in which to create this Notification Hub. Changing this forces a new resource to be created.
@@ -1479,12 +1283,10 @@ The name of the Notification Hub Namespace in which to create this Notification 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HubState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/hub.ts#L162" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/hub.ts#L162">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
@@ -1493,7 +1295,7 @@ The name of the Resource Group in which the Notification Hub Namespace exists. C
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L182" >}}">interface <b>NamespaceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L182">interface <b>NamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1502,12 +1304,10 @@ The set of arguments for constructing a Namespace resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L186" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L186">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Is this Notification Hub Namespace enabled? Defaults to `true`.
@@ -1515,12 +1315,10 @@ Is this Notification Hub Namespace enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L190" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L190">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Notification Hub Namespace should be created.
@@ -1528,12 +1326,10 @@ The Azure Region in which this Notification Hub Namespace should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L194" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L194">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Notification Hub Namespace. Changing this forces a new resource to be created.
@@ -1541,12 +1337,10 @@ The name to use for this Notification Hub Namespace. Changing this forces a new 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-namespaceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L198" >}}">property <b>namespaceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L198">property <b>namespaceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Type of Namespace - possible values are `Messaging` or `NotificationHub`. Changing this forces a new resource to be created.
@@ -1554,12 +1348,10 @@ The Type of Namespace - possible values are `Messaging` or `NotificationHub`. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L202" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L202">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace should exist. Changing this forces a new resource to be created.
@@ -1567,12 +1359,10 @@ The name of the Resource Group in which the Notification Hub Namespace should ex
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L206" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L206">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.notificationhub.NamespaceSku</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 ) A `sku` block as described below.
@@ -1580,12 +1370,10 @@ The name of the Resource Group in which the Notification Hub Namespace should ex
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L210" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L210">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the SKU to use for this Notification Hub Namespace. Possible values are `Free`, `Basic` or `Standard`. Changing this forces a new resource to be created.
@@ -1594,7 +1382,7 @@ The name of the SKU to use for this Notification Hub Namespace. Possible values 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L144" >}}">interface <b>NamespaceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L144">interface <b>NamespaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1603,12 +1391,10 @@ Input properties used for looking up and filtering Namespace resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L148" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L148">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Is this Notification Hub Namespace enabled? Defaults to `true`.
@@ -1616,12 +1402,10 @@ Is this Notification Hub Namespace enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L152" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L152">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Notification Hub Namespace should be created.
@@ -1629,12 +1413,10 @@ The Azure Region in which this Notification Hub Namespace should be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name to use for this Notification Hub Namespace. Changing this forces a new resource to be created.
@@ -1642,12 +1424,10 @@ The name to use for this Notification Hub Namespace. Changing this forces a new 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-namespaceType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L160" >}}">property <b>namespaceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L160">property <b>namespaceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Type of Namespace - possible values are `Messaging` or `NotificationHub`. Changing this forces a new resource to be created.
@@ -1655,12 +1435,10 @@ The Type of Namespace - possible values are `Messaging` or `NotificationHub`. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L164" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L164">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the Notification Hub Namespace should exist. Changing this forces a new resource to be created.
@@ -1668,12 +1446,10 @@ The name of the Resource Group in which the Notification Hub Namespace should ex
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-servicebusEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L168" >}}">property <b>servicebusEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L168">property <b>servicebusEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>servicebusEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ServiceBus Endpoint for this Notification Hub Namespace.
@@ -1681,12 +1457,10 @@ The ServiceBus Endpoint for this Notification Hub Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L172" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L172">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.notificationhub.NamespaceSku</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 ) A `sku` block as described below.
@@ -1694,12 +1468,10 @@ The ServiceBus Endpoint for this Notification Hub Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="notificationhub/namespace.ts#L176" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/notificationhub/namespace.ts#L176">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the SKU to use for this Notification Hub Namespace. Possible values are `Free`, `Basic` or `Standard`. Changing this forces a new resource to be created.

@@ -18,24 +18,22 @@ title: Module acmpca
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts" >}}">acmpca/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts">acmpca/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L19" >}}">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts#L19">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="crlGenerated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L42" >}}">function <b>crlGenerated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts#L42">function <b>crlGenerated</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>crlGenerated(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -44,13 +42,11 @@ A certificate revocation list (CRL) was generated. This metric applies only to a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="failure">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L74" >}}">function <b>failure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts#L74">function <b>failure</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>failure(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -59,13 +55,11 @@ Indicates that an operation failed. This metric applies only to the IssueCertifi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L31" >}}">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts#L31">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#AcmpcaMetricName'>AcmpcaMetricName</a>, change: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -79,13 +73,11 @@ Note, individual metrics can easily be obtained without supplying the name using
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="misconfiguredCRLBucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L50" >}}">function <b>misconfiguredCRLBucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts#L50">function <b>misconfiguredCRLBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>misconfiguredCRLBucket(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -95,13 +87,11 @@ metric applies only to a private CA.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="success">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L67" >}}">function <b>success</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts#L67">function <b>success</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>success(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -111,13 +101,11 @@ IssueCertificate operation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="time">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L59" >}}">function <b>time</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts#L59">function <b>time</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>time(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -128,13 +116,9 @@ operation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AcmpcaMetricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L20" >}}">type <b>AcmpcaMetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/acmpca/metrics.ts#L20">type <b>AcmpcaMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> AcmpcaMetricName = <span class='s2'>"CRLGenerated"</span> | <span class='s2'>"MisconfiguredCRLBucket"</span> | <span class='s2'>"Time"</span> | <span class='s2'>"Success"</span> | <span class='s2'>"Failure"</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

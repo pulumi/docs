@@ -18,64 +18,44 @@ title: Module types/input
 <li><a href="#SchemaPolicy">interface SchemaPolicy</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="postgresql" path="types/input.ts" >}}">types/input.ts</a> 
+<a href="https://github.com/pulumi/pulumi-postgresql/blob/c3c857909be392ab63943910833a25a313d85fce/sdk/nodejs/types/input.ts">types/input.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="SchemaPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="types/input.ts#L7" >}}">interface <b>SchemaPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-postgresql/blob/c3c857909be392ab63943910833a25a313d85fce/sdk/nodejs/types/input.ts#L7">interface <b>SchemaPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="SchemaPolicy-create">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="types/input.ts#L8" >}}">property <b>create</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/c3c857909be392ab63943910833a25a313d85fce/sdk/nodejs/types/input.ts#L8">property <b>create</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>create?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaPolicy-createWithGrant">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="types/input.ts#L9" >}}">property <b>createWithGrant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/c3c857909be392ab63943910833a25a313d85fce/sdk/nodejs/types/input.ts#L9">property <b>createWithGrant</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createWithGrant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaPolicy-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="types/input.ts#L10" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/c3c857909be392ab63943910833a25a313d85fce/sdk/nodejs/types/input.ts#L10">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaPolicy-usage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="types/input.ts#L11" >}}">property <b>usage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/c3c857909be392ab63943910833a25a313d85fce/sdk/nodejs/types/input.ts#L11">property <b>usage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>usage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaPolicy-usageWithGrant">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="types/input.ts#L12" >}}">property <b>usageWithGrant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-postgresql/blob/c3c857909be392ab63943910833a25a313d85fce/sdk/nodejs/types/input.ts#L12">property <b>usageWithGrant</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>usageWithGrant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

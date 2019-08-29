@@ -41,273 +41,187 @@ title: Module types/output
 <li><a href="#StackScriptUserDefinedField">interface StackScriptUserDefinedField</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="linode" path="types/output.ts" >}}">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts">types/output.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="GetInstanceTypeAddons">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L7" >}}">interface <b>GetInstanceTypeAddons</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L7">interface <b>GetInstanceTypeAddons</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetInstanceTypeAddons-backups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L8" >}}">property <b>backups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L8">property <b>backups</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backups: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypeAddonsBackups'>outputs.GetInstanceTypeAddonsBackups</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetInstanceTypeAddonsBackups">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L11" >}}">interface <b>GetInstanceTypeAddonsBackups</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L11">interface <b>GetInstanceTypeAddonsBackups</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetInstanceTypeAddonsBackups-price">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L12" >}}">property <b>price</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L12">property <b>price</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>price: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypeAddonsBackupsPrice'>outputs.GetInstanceTypeAddonsBackupsPrice</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetInstanceTypeAddonsBackupsPrice">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L15" >}}">interface <b>GetInstanceTypeAddonsBackupsPrice</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L15">interface <b>GetInstanceTypeAddonsBackupsPrice</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetInstanceTypeAddonsBackupsPrice-hourly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L16" >}}">property <b>hourly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L16">property <b>hourly</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hourly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceTypeAddonsBackupsPrice-monthly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L17" >}}">property <b>monthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L17">property <b>monthly</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monthly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetInstanceTypePrice">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L20" >}}">interface <b>GetInstanceTypePrice</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L20">interface <b>GetInstanceTypePrice</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetInstanceTypePrice-hourly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L21" >}}">property <b>hourly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L21">property <b>hourly</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hourly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetInstanceTypePrice-monthly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L22" >}}">property <b>monthly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L22">property <b>monthly</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monthly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetProfileReferrals">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L25" >}}">interface <b>GetProfileReferrals</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L25">interface <b>GetProfileReferrals</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetProfileReferrals-code">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L26" >}}">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L26">property <b>code</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProfileReferrals-completed">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L27" >}}">property <b>completed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L27">property <b>completed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>completed: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProfileReferrals-credit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L28" >}}">property <b>credit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L28">property <b>credit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>credit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProfileReferrals-pending">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L29" >}}">property <b>pending</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L29">property <b>pending</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pending: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProfileReferrals-total">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L30" >}}">property <b>total</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L30">property <b>total</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>total: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetProfileReferrals-url">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L31" >}}">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L31">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceAlerts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L34" >}}">interface <b>InstanceAlerts</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L34">interface <b>InstanceAlerts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceAlerts-cpu">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L35" >}}">property <b>cpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L35">property <b>cpu</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpu: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceAlerts-io">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L36" >}}">property <b>io</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L36">property <b>io</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>io: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceAlerts-networkIn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L37" >}}">property <b>networkIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L37">property <b>networkIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkIn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceAlerts-networkOut">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L38" >}}">property <b>networkOut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L38">property <b>networkOut</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkOut: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceAlerts-transferQuota">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L39" >}}">property <b>transferQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L39">property <b>transferQuota</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transferQuota: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceBackups">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L42" >}}">interface <b>InstanceBackups</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L42">interface <b>InstanceBackups</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceBackups-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L43" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L43">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceBackups-schedule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L44" >}}">property <b>schedule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L44">property <b>schedule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schedule: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceBackupsSchedule'>outputs.InstanceBackupsSchedule</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceBackupsSchedule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L47" >}}">interface <b>InstanceBackupsSchedule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L47">interface <b>InstanceBackupsSchedule</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceBackupsSchedule-day">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L48" >}}">property <b>day</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L48">property <b>day</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>day: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceBackupsSchedule-window">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L49" >}}">property <b>window</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L49">property <b>window</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>window: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfig">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L52" >}}">interface <b>InstanceConfig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L52">interface <b>InstanceConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfig-comments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L56" >}}">property <b>comments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L56">property <b>comments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>comments?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 - Arbitrary user comments about this `config`.
@@ -315,12 +229,10 @@ title: Module types/output
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfig-devices">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L60" >}}">property <b>devices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L60">property <b>devices</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>devices: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevices'>outputs.InstanceConfigDevices</a>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of `disk` or `volume` attachments for this `config`.  If the `bootConfigLabel` omits a `devices` block, the Linode will not be booted.
@@ -328,12 +240,10 @@ A list of `disk` or `volume` attachments for this `config`.  If the `bootConfigL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfig-helpers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L64" >}}">property <b>helpers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L64">property <b>helpers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>helpers: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigHelpers'>outputs.InstanceConfigHelpers</a>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Helpers enabled when booting to this Linode Config.
@@ -341,12 +251,10 @@ Helpers enabled when booting to this Linode Config.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfig-kernel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L68" >}}">property <b>kernel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L68">property <b>kernel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kernel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 - A Kernel ID to boot a Linode with. Default is based on image choice. (examples: linode/latest-64bit, linode/grub2, linode/direct-disk)
@@ -354,12 +262,10 @@ Helpers enabled when booting to this Linode Config.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfig-label">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L72" >}}">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L72">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Config's label for display purposes.  Also used by `bootConfigLabel`.
@@ -367,12 +273,10 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfig-memoryLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L76" >}}">property <b>memoryLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L76">property <b>memoryLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>memoryLimit?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 - Defaults to the total RAM of the Linode
@@ -380,12 +284,10 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfig-rootDevice">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L80" >}}">property <b>rootDevice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L80">property <b>rootDevice</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rootDevice: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 - The root device to boot. The corresponding disk must be attached to a `device` slot.  Example: `"/dev/sda"`
@@ -393,12 +295,10 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfig-runLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L84" >}}">property <b>runLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L84">property <b>runLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>runLevel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 - Defines the state of your Linode after booting. Defaults to `"default"`.
@@ -406,12 +306,10 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfig-virtMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L88" >}}">property <b>virtMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L88">property <b>virtMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 - Controls the virtualization mode. Defaults to `"paravirt"`.
@@ -420,101 +318,67 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevices">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L91" >}}">interface <b>InstanceConfigDevices</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L91">interface <b>InstanceConfigDevices</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevices-sda">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L92" >}}">property <b>sda</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L92">property <b>sda</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sda: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSda'>outputs.InstanceConfigDevicesSda</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevices-sdb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L93" >}}">property <b>sdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L93">property <b>sdb</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sdb: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdb'>outputs.InstanceConfigDevicesSdb</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevices-sdc">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L94" >}}">property <b>sdc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L94">property <b>sdc</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sdc: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdc'>outputs.InstanceConfigDevicesSdc</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevices-sdd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L95" >}}">property <b>sdd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L95">property <b>sdd</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sdd: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdd'>outputs.InstanceConfigDevicesSdd</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevices-sde">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L96" >}}">property <b>sde</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L96">property <b>sde</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sde: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSde'>outputs.InstanceConfigDevicesSde</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevices-sdf">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L97" >}}">property <b>sdf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L97">property <b>sdf</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sdf: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdf'>outputs.InstanceConfigDevicesSdf</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevices-sdg">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L98" >}}">property <b>sdg</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L98">property <b>sdg</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sdg: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdg'>outputs.InstanceConfigDevicesSdg</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevices-sdh">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L99" >}}">property <b>sdh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L99">property <b>sdh</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sdh: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdh'>outputs.InstanceConfigDevicesSdh</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevicesSda">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L102" >}}">interface <b>InstanceConfigDevicesSda</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L102">interface <b>InstanceConfigDevicesSda</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSda-diskId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L106" >}}">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L106">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Disk ID of the associated `diskLabel`, if used.
@@ -522,12 +386,10 @@ The Disk ID of the associated `diskLabel`, if used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSda-diskLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L110" >}}">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L110">property <b>diskLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `label` of the `disk` to map to this `device` slot.
@@ -535,12 +397,10 @@ The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSda-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L114" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L114">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Volume ID to map to this `device` slot.
@@ -549,16 +409,14 @@ The Volume ID to map to this `device` slot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevicesSdb">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L117" >}}">interface <b>InstanceConfigDevicesSdb</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L117">interface <b>InstanceConfigDevicesSdb</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdb-diskId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L121" >}}">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L121">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Disk ID of the associated `diskLabel`, if used.
@@ -566,12 +424,10 @@ The Disk ID of the associated `diskLabel`, if used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdb-diskLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L125" >}}">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L125">property <b>diskLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `label` of the `disk` to map to this `device` slot.
@@ -579,12 +435,10 @@ The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdb-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L129" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L129">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Volume ID to map to this `device` slot.
@@ -593,16 +447,14 @@ The Volume ID to map to this `device` slot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevicesSdc">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L132" >}}">interface <b>InstanceConfigDevicesSdc</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L132">interface <b>InstanceConfigDevicesSdc</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdc-diskId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L136" >}}">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L136">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Disk ID of the associated `diskLabel`, if used.
@@ -610,12 +462,10 @@ The Disk ID of the associated `diskLabel`, if used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdc-diskLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L140" >}}">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L140">property <b>diskLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `label` of the `disk` to map to this `device` slot.
@@ -623,12 +473,10 @@ The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdc-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L144" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L144">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Volume ID to map to this `device` slot.
@@ -637,16 +485,14 @@ The Volume ID to map to this `device` slot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevicesSdd">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L147" >}}">interface <b>InstanceConfigDevicesSdd</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L147">interface <b>InstanceConfigDevicesSdd</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdd-diskId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L151" >}}">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L151">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Disk ID of the associated `diskLabel`, if used.
@@ -654,12 +500,10 @@ The Disk ID of the associated `diskLabel`, if used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdd-diskLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L155" >}}">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L155">property <b>diskLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `label` of the `disk` to map to this `device` slot.
@@ -667,12 +511,10 @@ The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdd-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L159" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L159">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Volume ID to map to this `device` slot.
@@ -681,16 +523,14 @@ The Volume ID to map to this `device` slot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevicesSde">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L162" >}}">interface <b>InstanceConfigDevicesSde</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L162">interface <b>InstanceConfigDevicesSde</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSde-diskId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L166" >}}">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L166">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Disk ID of the associated `diskLabel`, if used.
@@ -698,12 +538,10 @@ The Disk ID of the associated `diskLabel`, if used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSde-diskLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L170" >}}">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L170">property <b>diskLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `label` of the `disk` to map to this `device` slot.
@@ -711,12 +549,10 @@ The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSde-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L174" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L174">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Volume ID to map to this `device` slot.
@@ -725,16 +561,14 @@ The Volume ID to map to this `device` slot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevicesSdf">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L177" >}}">interface <b>InstanceConfigDevicesSdf</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L177">interface <b>InstanceConfigDevicesSdf</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdf-diskId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L181" >}}">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L181">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Disk ID of the associated `diskLabel`, if used.
@@ -742,12 +576,10 @@ The Disk ID of the associated `diskLabel`, if used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdf-diskLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L185" >}}">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L185">property <b>diskLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `label` of the `disk` to map to this `device` slot.
@@ -755,12 +587,10 @@ The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdf-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L189" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L189">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Volume ID to map to this `device` slot.
@@ -769,16 +599,14 @@ The Volume ID to map to this `device` slot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevicesSdg">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L192" >}}">interface <b>InstanceConfigDevicesSdg</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L192">interface <b>InstanceConfigDevicesSdg</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdg-diskId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L196" >}}">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L196">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Disk ID of the associated `diskLabel`, if used.
@@ -786,12 +614,10 @@ The Disk ID of the associated `diskLabel`, if used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdg-diskLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L200" >}}">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L200">property <b>diskLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `label` of the `disk` to map to this `device` slot.
@@ -799,12 +625,10 @@ The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdg-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L204" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L204">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Volume ID to map to this `device` slot.
@@ -813,16 +637,14 @@ The Volume ID to map to this `device` slot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigDevicesSdh">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L207" >}}">interface <b>InstanceConfigDevicesSdh</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L207">interface <b>InstanceConfigDevicesSdh</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdh-diskId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L211" >}}">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L211">property <b>diskId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Disk ID of the associated `diskLabel`, if used.
@@ -830,12 +652,10 @@ The Disk ID of the associated `diskLabel`, if used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdh-diskLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L215" >}}">property <b>diskLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L215">property <b>diskLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `label` of the `disk` to map to this `device` slot.
@@ -843,12 +663,10 @@ The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigDevicesSdh-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L219" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L219">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Volume ID to map to this `device` slot.
@@ -857,26 +675,20 @@ The Volume ID to map to this `device` slot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceConfigHelpers">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L222" >}}">interface <b>InstanceConfigHelpers</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L222">interface <b>InstanceConfigHelpers</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceConfigHelpers-devtmpfsAutomount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L223" >}}">property <b>devtmpfsAutomount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L223">property <b>devtmpfsAutomount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>devtmpfsAutomount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigHelpers-distro">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L227" >}}">property <b>distro</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L227">property <b>distro</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>distro?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Controls the behavior of the Linode Config's Distribution Helper setting.
@@ -884,12 +696,10 @@ Controls the behavior of the Linode Config's Distribution Helper setting.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigHelpers-modulesDep">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L231" >}}">property <b>modulesDep</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L231">property <b>modulesDep</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>modulesDep?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Creates a modules dependency file for the Kernel you run.
@@ -897,12 +707,10 @@ Creates a modules dependency file for the Kernel you run.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigHelpers-network">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L235" >}}">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L235">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>network?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Controls the behavior of the Linode Config's Network Helper setting, used to automatically configure additional IP addresses assigned to this instance.
@@ -910,12 +718,10 @@ Controls the behavior of the Linode Config's Network Helper setting, used to aut
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceConfigHelpers-updatedbDisabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L239" >}}">property <b>updatedbDisabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L239">property <b>updatedbDisabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updatedbDisabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Disables updatedb cron job to avoid disk thrashing.
@@ -924,16 +730,14 @@ Disables updatedb cron job to avoid disk thrashing.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceDisk">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L242" >}}">interface <b>InstanceDisk</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L242">interface <b>InstanceDisk</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceDisk-authorizedKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L246" >}}">property <b>authorizedKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L246">property <b>authorizedKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizedKeys?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorizedKeys` forces the creation of a new Linode Instance.*
@@ -941,12 +745,10 @@ A list of SSH public keys to deploy for the root user on the newly created Linod
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-authorizedUsers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L250" >}}">property <b>authorizedUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L250">property <b>authorizedUsers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authorizedUsers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorizedUsers` forces the creation of a new Linode Instance.*
@@ -954,12 +756,10 @@ A list of Linode usernames. If the usernames have associated SSH keys, the keys 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-filesystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L254" >}}">property <b>filesystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L254">property <b>filesystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filesystem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 <elided>
@@ -967,12 +767,10 @@ A list of Linode usernames. If the usernames have associated SSH keys, the keys 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L258" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L258">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the disk in the Linode API.
@@ -980,12 +778,10 @@ The ID of the disk in the Linode API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L262" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L262">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
@@ -993,12 +789,10 @@ An Image ID to deploy the Disk from. Official Linode Images start with linode/, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-label">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L266" >}}">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L266">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Config's label for display purposes.  Also used by `bootConfigLabel`.
@@ -1006,22 +800,16 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-readOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L267" >}}">property <b>readOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L267">property <b>readOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-rootPass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L271" >}}">property <b>rootPass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L271">property <b>rootPass</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rootPass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 <elided>
@@ -1029,12 +817,10 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L275" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L275">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the Disk in MB.
@@ -1042,12 +828,10 @@ The size of the Disk in MB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-stackscriptData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L279" >}}">property <b>stackscriptData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L279">property <b>stackscriptData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stackscriptData: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscriptData` forces the creation of a new Linode Instance.*
@@ -1055,12 +839,10 @@ An object containing responses to any User Defined Fields present in the StackSc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceDisk-stackscriptId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L283" >}}">property <b>stackscriptId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L283">property <b>stackscriptId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stackscriptId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscriptId` forces the creation of a new Linode Instance.*
@@ -1069,141 +851,95 @@ The StackScript to deploy to the newly created Linode. If provided, 'image' must
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceSpecs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L286" >}}">interface <b>InstanceSpecs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L286">interface <b>InstanceSpecs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InstanceSpecs-disk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L287" >}}">property <b>disk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L287">property <b>disk</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disk: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceSpecs-memory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L288" >}}">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L288">property <b>memory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>memory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceSpecs-transfer">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L289" >}}">property <b>transfer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L289">property <b>transfer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transfer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceSpecs-vcpus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L290" >}}">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L290">property <b>vcpus</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vcpus: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeBalancerConfigNodeStatus">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L293" >}}">interface <b>NodeBalancerConfigNodeStatus</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L293">interface <b>NodeBalancerConfigNodeStatus</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="NodeBalancerConfigNodeStatus-statusDown">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L294" >}}">property <b>statusDown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L294">property <b>statusDown</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusDown: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeBalancerConfigNodeStatus-statusUp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L295" >}}">property <b>statusUp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L295">property <b>statusUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusUp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodeBalancerTransfer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L298" >}}">interface <b>NodeBalancerTransfer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L298">interface <b>NodeBalancerTransfer</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="NodeBalancerTransfer-in">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L299" >}}">property <b>in</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L299">property <b>in</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>in: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeBalancerTransfer-out">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L300" >}}">property <b>out</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L300">property <b>out</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>out: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NodeBalancerTransfer-total">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L301" >}}">property <b>total</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L301">property <b>total</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>total: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StackScriptUserDefinedField">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L304" >}}">interface <b>StackScriptUserDefinedField</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L304">interface <b>StackScriptUserDefinedField</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="StackScriptUserDefinedField-default">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L305" >}}">property <b>default</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L305">property <b>default</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackScriptUserDefinedField-example">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L306" >}}">property <b>example</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L306">property <b>example</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>example: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackScriptUserDefinedField-label">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L310" >}}">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L310">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The StackScript's label is for display purposes only.
@@ -1211,33 +947,21 @@ The StackScript's label is for display purposes only.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackScriptUserDefinedField-manyOf">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L311" >}}">property <b>manyOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L311">property <b>manyOf</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manyOf: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackScriptUserDefinedField-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L312" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L312">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackScriptUserDefinedField-oneOf">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="linode" path="types/output.ts#L313" >}}">property <b>oneOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/types/output.ts#L313">property <b>oneOf</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>oneOf: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

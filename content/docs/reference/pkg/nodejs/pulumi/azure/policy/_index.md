@@ -36,19 +36,17 @@ title: Module policy
 <li><a href="#PolicySetDefinitionState">interface PolicySetDefinitionState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="policy/assignment.ts" >}}">policy/assignment.ts</a> <a href="{{< pkg-url pkg="azure" path="policy/definition.ts" >}}">policy/definition.ts</a> <a href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts" >}}">policy/getPolicyDefintion.ts</a> <a href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts" >}}">policy/policySetDefinition.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts">policy/assignment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts">policy/definition.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts">policy/getPolicyDefintion.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts">policy/policySetDefinition.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Assignment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L68" >}}">class <b>Assignment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L68">class <b>Assignment</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Configures the specified Policy Definition at the specified Scope. Also, Policy Set Definitions are supported.
@@ -111,13 +109,11 @@ const testAssignment = new azure.policy.Assignment("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Assignment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L127" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L127"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Assignment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AssignmentArgs'>AssignmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -130,13 +126,11 @@ Create a Assignment resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L77" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AssignmentState'>AssignmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Assignment'>Assignment</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -146,25 +140,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L68" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L68">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L88" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L88">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -174,12 +164,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L98" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L98">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description to use for this Policy Assignment. Changing this forces a new resource to be created.
@@ -187,12 +175,10 @@ A description to use for this Policy Assignment. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L102" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L102">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly display name to use for this Policy Assignment. Changing this forces a new resource to be created.
@@ -200,12 +186,10 @@ A friendly display name to use for this Policy Assignment. Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L68">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -214,12 +198,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L106" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L106">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AssignmentIdentity'>outputs.policy.AssignmentIdentity</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An `identity` block.
@@ -227,12 +209,10 @@ An `identity` block.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L110" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L110">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.
@@ -240,12 +220,10 @@ The Azure location where this policy assignment should exist. This is required w
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L114" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L114">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Policy Assignment. Changing this forces a new resource to be created.
@@ -253,12 +231,10 @@ The name of the Policy Assignment. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-notScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L118" >}}">property <b>notScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L118">property <b>notScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of the Policy Assignment's excluded scopes. The list must contain Resource IDs (such as Subscriptions e.g. `/subscriptions/00000000-0000-0000-000000000000` or Resource Groups e.g.`/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup`).
@@ -266,12 +242,10 @@ A list of the Policy Assignment's excluded scopes. The list must contain Resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L122" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L122">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
@@ -279,12 +253,10 @@ Parameters for the policy definition. This field is a JSON object that maps to t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-policyDefinitionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L126" >}}">property <b>policyDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L126">property <b>policyDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Policy Definition to be applied at the specified Scope.
@@ -292,22 +264,16 @@ The ID of the Policy Definition to be applied at the specified Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L127" >}}">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L127">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Assignment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L68" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L68">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -317,12 +283,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Definition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L57" >}}">class <b>Definition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L57">class <b>Definition</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a policy rule definition on a management group or your provider subscription.
@@ -374,13 +338,11 @@ const policy = new azure.policy.Definition("policy", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Definition-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L129" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L129"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Definition(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DefinitionArgs'>DefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -393,13 +355,11 @@ Create a Definition resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L66" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L66">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DefinitionState'>DefinitionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Definition'>Definition</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -409,25 +369,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L57" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L57">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L77" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L77">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -437,12 +393,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L87" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L87">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the policy definition.
@@ -450,12 +404,10 @@ The description of the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L91" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L91">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name of the policy definition.
@@ -463,12 +415,10 @@ The display name of the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L57" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L57">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -477,12 +427,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-managementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L95" >}}">property <b>managementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L95">property <b>managementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>managementGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
@@ -490,12 +438,10 @@ The ID of the Management Group where this policy should be defined. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L101" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L101">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The metadata for the policy definition. This
@@ -505,12 +451,10 @@ with the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-mode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L108" >}}">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L108">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy mode that allows you to specify which resource
@@ -521,12 +465,10 @@ created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L113" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L113">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the policy definition. Changing this forces a
@@ -535,12 +477,10 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L118" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L118">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy definition. This field
@@ -549,12 +489,10 @@ is a json object that allows you to parameterize your policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-policyRule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L124" >}}">property <b>policyRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L124">property <b>policyRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyRule: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy rule for the policy definition. This
@@ -564,12 +502,10 @@ a then block.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L129" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L129">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy type.  The value can be "BuiltIn", "Custom"
@@ -578,12 +514,10 @@ or "NotSpecified". Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Definition-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L57" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L57">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -593,12 +527,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicySetDefinition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L51" >}}">class <b>PolicySetDefinition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L51">class <b>PolicySetDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a policy set definition.
@@ -644,13 +576,11 @@ const test = new azure.policy.PolicySetDefinition("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicySetDefinition-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L109" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L109"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PolicySetDefinition(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PolicySetDefinitionArgs'>PolicySetDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -663,13 +593,11 @@ Create a PolicySetDefinition resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L60" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L60">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PolicySetDefinitionState'>PolicySetDefinitionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PolicySetDefinition'>PolicySetDefinition</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -679,25 +607,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L51" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L51">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L71" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L71">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -707,12 +631,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L81" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L81">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the policy set definition.
@@ -720,12 +642,10 @@ The description of the policy set definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L85" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L85">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name of the policy set definition.
@@ -733,12 +653,10 @@ The display name of the policy set definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L51" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L51">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -747,12 +665,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-managementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L89" >}}">property <b>managementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L89">property <b>managementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>managementGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
@@ -760,12 +676,10 @@ The ID of the Management Group where this policy should be defined. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L93" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L93">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
@@ -773,12 +687,10 @@ The metadata for the policy set definition. This is a json object representing a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L97" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L97">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the policy set definition. Changing this forces a new resource to be created.
@@ -786,12 +698,10 @@ The name of the policy set definition. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L101" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L101">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
@@ -799,12 +709,10 @@ Parameters for the policy set definition. This field is a json object that allow
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-policyDefinitions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L105" >}}">property <b>policyDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L105">property <b>policyDefinitions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyDefinitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions .
@@ -812,12 +720,10 @@ The policy definitions for the policy set definition. This is a json object repr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L109" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L109">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
@@ -825,12 +731,10 @@ The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinition-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L51" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L51">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -840,13 +744,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getPolicyDefintion">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L27" >}}">function <b>getPolicyDefintion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L27">function <b>getPolicyDefintion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getPolicyDefintion(args: <a href='#GetPolicyDefintionArgs'>GetPolicyDefintionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetPolicyDefintionResult'>GetPolicyDefintionResult</a>&gt; &amp; <a href='#GetPolicyDefintionResult'>GetPolicyDefintionResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -870,7 +772,7 @@ export const id = test.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AssignmentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L221" >}}">interface <b>AssignmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L221">interface <b>AssignmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -879,12 +781,10 @@ The set of arguments for constructing a Assignment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AssignmentArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L225" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L225">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description to use for this Policy Assignment. Changing this forces a new resource to be created.
@@ -892,12 +792,10 @@ A description to use for this Policy Assignment. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L229" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L229">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly display name to use for this Policy Assignment. Changing this forces a new resource to be created.
@@ -905,12 +803,10 @@ A friendly display name to use for this Policy Assignment. Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L233" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L233">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AssignmentIdentity'>inputs.policy.AssignmentIdentity</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An `identity` block.
@@ -918,12 +814,10 @@ An `identity` block.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L237" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L237">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.
@@ -931,12 +825,10 @@ The Azure location where this policy assignment should exist. This is required w
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L241" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L241">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Policy Assignment. Changing this forces a new resource to be created.
@@ -944,12 +836,10 @@ The name of the Policy Assignment. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-notScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L245" >}}">property <b>notScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L245">property <b>notScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of the Policy Assignment's excluded scopes. The list must contain Resource IDs (such as Subscriptions e.g. `/subscriptions/00000000-0000-0000-000000000000` or Resource Groups e.g.`/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup`).
@@ -957,12 +847,10 @@ A list of the Policy Assignment's excluded scopes. The list must contain Resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L249" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L249">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
@@ -970,12 +858,10 @@ Parameters for the policy definition. This field is a JSON object that maps to t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-policyDefinitionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L253" >}}">property <b>policyDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L253">property <b>policyDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Policy Definition to be applied at the specified Scope.
@@ -983,18 +869,14 @@ The ID of the Policy Definition to be applied at the specified Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentArgs-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L254" >}}">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L254">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AssignmentState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L182" >}}">interface <b>AssignmentState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L182">interface <b>AssignmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1003,12 +885,10 @@ Input properties used for looking up and filtering Assignment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AssignmentState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L186" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L186">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description to use for this Policy Assignment. Changing this forces a new resource to be created.
@@ -1016,12 +896,10 @@ A description to use for this Policy Assignment. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L190" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L190">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly display name to use for this Policy Assignment. Changing this forces a new resource to be created.
@@ -1029,12 +907,10 @@ A friendly display name to use for this Policy Assignment. Changing this forces 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L194" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L194">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AssignmentIdentity'>inputs.policy.AssignmentIdentity</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An `identity` block.
@@ -1042,12 +918,10 @@ An `identity` block.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L198" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L198">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.
@@ -1055,12 +929,10 @@ The Azure location where this policy assignment should exist. This is required w
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L202" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L202">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Policy Assignment. Changing this forces a new resource to be created.
@@ -1068,12 +940,10 @@ The name of the Policy Assignment. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-notScopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L206" >}}">property <b>notScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L206">property <b>notScopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of the Policy Assignment's excluded scopes. The list must contain Resource IDs (such as Subscriptions e.g. `/subscriptions/00000000-0000-0000-000000000000` or Resource Groups e.g.`/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup`).
@@ -1081,12 +951,10 @@ A list of the Policy Assignment's excluded scopes. The list must contain Resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L210" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L210">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
@@ -1094,12 +962,10 @@ Parameters for the policy definition. This field is a JSON object that maps to t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-policyDefinitionId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L214" >}}">property <b>policyDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L214">property <b>policyDefinitionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyDefinitionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Policy Definition to be applied at the specified Scope.
@@ -1107,18 +973,14 @@ The ID of the Policy Definition to be applied at the specified Scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssignmentState-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/assignment.ts#L215" >}}">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/assignment.ts#L215">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DefinitionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L239" >}}">interface <b>DefinitionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L239">interface <b>DefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1127,12 +989,10 @@ The set of arguments for constructing a Definition resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DefinitionArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L243" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L243">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the policy definition.
@@ -1140,12 +1000,10 @@ The description of the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L247" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L247">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name of the policy definition.
@@ -1153,12 +1011,10 @@ The display name of the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-managementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L251" >}}">property <b>managementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L251">property <b>managementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>managementGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
@@ -1166,12 +1022,10 @@ The ID of the Management Group where this policy should be defined. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L257" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L257">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The metadata for the policy definition. This
@@ -1181,12 +1035,10 @@ with the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-mode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L264" >}}">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L264">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy mode that allows you to specify which resource
@@ -1197,12 +1049,10 @@ created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L269" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L269">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the policy definition. Changing this forces a
@@ -1211,12 +1061,10 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L274" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L274">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy definition. This field
@@ -1225,12 +1073,10 @@ is a json object that allows you to parameterize your policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-policyRule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L280" >}}">property <b>policyRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L280">property <b>policyRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy rule for the policy definition. This
@@ -1240,12 +1086,10 @@ a then block.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionArgs-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L285" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L285">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy type.  The value can be "BuiltIn", "Custom"
@@ -1255,7 +1099,7 @@ or "NotSpecified". Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DefinitionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L187" >}}">interface <b>DefinitionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L187">interface <b>DefinitionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1264,12 +1108,10 @@ Input properties used for looking up and filtering Definition resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DefinitionState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L191" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L191">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the policy definition.
@@ -1277,12 +1119,10 @@ The description of the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L195" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L195">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name of the policy definition.
@@ -1290,12 +1130,10 @@ The display name of the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-managementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L199" >}}">property <b>managementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L199">property <b>managementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>managementGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
@@ -1303,12 +1141,10 @@ The ID of the Management Group where this policy should be defined. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L205" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L205">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The metadata for the policy definition. This
@@ -1318,12 +1154,10 @@ with the policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-mode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L212" >}}">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L212">property <b>mode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy mode that allows you to specify which resource
@@ -1334,12 +1168,10 @@ created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L217" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L217">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the policy definition. Changing this forces a
@@ -1348,12 +1180,10 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L222" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L222">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy definition. This field
@@ -1362,12 +1192,10 @@ is a json object that allows you to parameterize your policy definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-policyRule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L228" >}}">property <b>policyRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L228">property <b>policyRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyRule?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy rule for the policy definition. This
@@ -1377,12 +1205,10 @@ a then block.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefinitionState-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/definition.ts#L233" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/definition.ts#L233">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy type.  The value can be "BuiltIn", "Custom"
@@ -1392,7 +1218,7 @@ or "NotSpecified". Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyDefintionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L46" >}}">interface <b>GetPolicyDefintionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L46">interface <b>GetPolicyDefintionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1401,12 +1227,10 @@ A collection of arguments for invoking getPolicyDefintion.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyDefintionArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L50" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L50">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Policy Definition.
@@ -1414,12 +1238,10 @@ Specifies the name of the Policy Definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionArgs-managementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L54" >}}">property <b>managementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L54">property <b>managementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>managementGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Only retrieve Policy Definitions from this Management Group.
@@ -1428,7 +1250,7 @@ Only retrieve Policy Definitions from this Management Group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPolicyDefintionResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L60" >}}">interface <b>GetPolicyDefintionResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L60">interface <b>GetPolicyDefintionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1437,12 +1259,10 @@ A collection of values returned by getPolicyDefintion.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L64" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L64">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Description of the Policy.
@@ -1450,22 +1270,16 @@ The Description of the Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L65" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L65">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L94" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L94">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1473,22 +1287,16 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-managementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L66" >}}">property <b>managementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L66">property <b>managementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>managementGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L70" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L70">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Any Metadata defined in the Policy.
@@ -1496,12 +1304,10 @@ Any Metadata defined in the Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L74" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L74">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Name of the Policy Definition.
@@ -1509,12 +1315,10 @@ The Name of the Policy Definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L78" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L78">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Any Parameters defined in the Policy.
@@ -1522,12 +1326,10 @@ Any Parameters defined in the Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-policyRule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L82" >}}">property <b>policyRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L82">property <b>policyRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyRule: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Rule as defined (in JSON) in the Policy.
@@ -1535,12 +1337,10 @@ The Rule as defined (in JSON) in the Policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L86" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L86">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Type of the Policy, such as `Microsoft.Authorization/policyDefinitions`.
@@ -1548,12 +1348,10 @@ The Type of the Policy, such as `Microsoft.Authorization/policyDefinitions`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPolicyDefintionResult-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/getPolicyDefintion.ts#L90" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/getPolicyDefintion.ts#L90">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Type of Policy.
@@ -1562,7 +1360,7 @@ The Type of Policy.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicySetDefinitionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L200" >}}">interface <b>PolicySetDefinitionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L200">interface <b>PolicySetDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1571,12 +1369,10 @@ The set of arguments for constructing a PolicySetDefinition resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L204" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L204">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the policy set definition.
@@ -1584,12 +1380,10 @@ The description of the policy set definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L208" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L208">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name of the policy set definition.
@@ -1597,12 +1391,10 @@ The display name of the policy set definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-managementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L212" >}}">property <b>managementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L212">property <b>managementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>managementGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
@@ -1610,12 +1402,10 @@ The ID of the Management Group where this policy should be defined. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L216" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L216">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
@@ -1623,12 +1413,10 @@ The metadata for the policy set definition. This is a json object representing a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L220" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L220">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the policy set definition. Changing this forces a new resource to be created.
@@ -1636,12 +1424,10 @@ The name of the policy set definition. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L224" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L224">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
@@ -1649,12 +1435,10 @@ Parameters for the policy set definition. This field is a json object that allow
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-policyDefinitions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L228" >}}">property <b>policyDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L228">property <b>policyDefinitions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyDefinitions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions .
@@ -1662,12 +1446,10 @@ The policy definitions for the policy set definition. This is a json object repr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionArgs-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L232" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L232">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
@@ -1676,7 +1458,7 @@ The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PolicySetDefinitionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L162" >}}">interface <b>PolicySetDefinitionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L162">interface <b>PolicySetDefinitionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1685,12 +1467,10 @@ Input properties used for looking up and filtering PolicySetDefinition resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L166" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L166">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The description of the policy set definition.
@@ -1698,12 +1478,10 @@ The description of the policy set definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L170" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L170">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name of the policy set definition.
@@ -1711,12 +1489,10 @@ The display name of the policy set definition.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-managementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L174" >}}">property <b>managementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L174">property <b>managementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>managementGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
@@ -1724,12 +1500,10 @@ The ID of the Management Group where this policy should be defined. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L178" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L178">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
@@ -1737,12 +1511,10 @@ The metadata for the policy set definition. This is a json object representing a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L182" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L182">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the policy set definition. Changing this forces a new resource to be created.
@@ -1750,12 +1522,10 @@ The name of the policy set definition. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-parameters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L186" >}}">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L186">property <b>parameters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
@@ -1763,12 +1533,10 @@ Parameters for the policy set definition. This field is a json object that allow
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-policyDefinitions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L190" >}}">property <b>policyDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L190">property <b>policyDefinitions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyDefinitions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions .
@@ -1776,12 +1544,10 @@ The policy definitions for the policy set definition. This is a json object repr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PolicySetDefinitionState-policyType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="policy/policySetDefinition.ts#L194" >}}">property <b>policyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/policy/policySetDefinition.ts#L194">property <b>policyType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.

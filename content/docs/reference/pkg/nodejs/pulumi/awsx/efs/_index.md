@@ -18,24 +18,22 @@ title: Module efs
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="efs/metrics.ts" >}}">efs/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts">efs/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L20" >}}">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="burstCreditBalance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L79" >}}">function <b>burstCreditBalance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L79">function <b>burstCreditBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>burstCreditBalance(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -56,13 +54,11 @@ Valid statistics: Minimum, Maximum, Average
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="clientConnections">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L94" >}}">function <b>clientConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L94">function <b>clientConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientConnections(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -79,13 +75,11 @@ Valid statistics: Sum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="dataReadIOBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L113" >}}">function <b>dataReadIOBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L113">function <b>dataReadIOBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dataReadIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -106,13 +100,11 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="dataWriteIOBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L132" >}}">function <b>dataWriteIOBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L132">function <b>dataWriteIOBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dataWriteIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -133,13 +125,11 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metadataIOBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L151" >}}">function <b>metadataIOBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L151">function <b>metadataIOBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadataIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -160,13 +150,11 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L51" >}}">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L51">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#EfsMetricName'>EfsMetricName</a>, change: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -190,13 +178,11 @@ takes the form of fs-XXXXXXXX.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="percentIOLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L165" >}}">function <b>percentIOLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L165">function <b>percentIOLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>percentIOLimit(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -212,13 +198,11 @@ Units: Percent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="permittedThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L185" >}}">function <b>permittedThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L185">function <b>permittedThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>permittedThroughput(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -240,13 +224,11 @@ Valid statistics: Minimum, Maximum, Average
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="totalIOBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L209" >}}">function <b>totalIOBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L209">function <b>totalIOBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>totalIOBytes(change?: <a href='#EfsMetricChange'>EfsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -272,18 +254,14 @@ Valid statistics: Minimum, Maximum, Average, Sum, SampleCount
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L26" >}}">interface <b>EfsMetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L26">interface <b>EfsMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
-{{% /md %}}
 <h3 class="pdoc-member-header" id="EfsMetricChange-color">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -293,12 +271,10 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-dimensions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -308,12 +284,10 @@ cleared.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -323,12 +297,10 @@ to [undefined] then the value will be set to the default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-fileSystem">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L30" >}}">property <b>fileSystem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L30">property <b>fileSystem</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fileSystem?: aws.efs.FileSystem;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Filters down events to the specified [FileSystem].
@@ -336,12 +308,10 @@ Filters down events to the specified [FileSystem].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-label">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -353,12 +323,10 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -368,12 +336,10 @@ to [undefined] then the value will be set to the default (300s).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-statistic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -383,12 +349,10 @@ property, then no change will be made.  However, if the property is there by set
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-unit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -398,12 +362,10 @@ to the default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-visible">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -414,12 +376,10 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricChange-yAxis">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -430,13 +390,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </div>
 </div>
 <h3 class="pdoc-member-header" id="EfsMetricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="efs/metrics.ts#L21" >}}">type <b>EfsMetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L21">type <b>EfsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> EfsMetricName = <span class='s2'>"BurstCreditBalance"</span> | <span class='s2'>"ClientConnections"</span> | <span class='s2'>"DataReadIOBytes"</span> | <span class='s2'>"DataWriteIOBytes"</span> | <span class='s2'>"MetadataIOBytes"</span> | <span class='s2'>"PercentIOLimit"</span> | <span class='s2'>"PermittedThroughput"</span> | <span class='s2'>"TotalIOBytes"</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

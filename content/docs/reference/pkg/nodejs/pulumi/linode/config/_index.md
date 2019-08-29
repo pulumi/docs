@@ -27,19 +27,17 @@ title: Module config
 <li><a href="#url">let url</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="linode" path="config/vars.ts" >}}">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="config/vars.ts#L12" >}}">let <b>token</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/config/vars.ts#L12">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;LINODE_TOKEN&#34;, &#34;LINODE_API_TOKEN&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The token that allows you access to your Linode account
@@ -47,12 +45,10 @@ The token that allows you access to your Linode account
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="uaPrefix">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="config/vars.ts#L16" >}}">let <b>uaPrefix</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/config/vars.ts#L16">let <b>uaPrefix</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> uaPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;uaPrefix&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An HTTP User-Agent Prefix to prepend in API requests.
@@ -60,12 +56,10 @@ An HTTP User-Agent Prefix to prepend in API requests.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="url">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="config/vars.ts#L20" >}}">let <b>url</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/config/vars.ts#L20">let <b>url</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;url&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HTTP(S) API address of the Linode API to use.

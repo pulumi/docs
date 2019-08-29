@@ -30,19 +30,17 @@ title: Module cur
 <li><a href="#ReportDefinitionState">interface ReportDefinitionState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts" >}}">cur/getReportDefinition.ts</a> <a href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts" >}}">cur/reportDefinition.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts">cur/getReportDefinition.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts">cur/reportDefinition.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ReportDefinition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L37" >}}">class <b>ReportDefinition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L37">class <b>ReportDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages Cost and Usage Report Definitions.
@@ -76,13 +74,11 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("exampleCurRepor
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReportDefinition-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L99" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L99"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ReportDefinition(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ReportDefinitionArgs'>ReportDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -95,13 +91,11 @@ Create a ReportDefinition resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L46" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L46">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ReportDefinitionState'>ReportDefinitionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ReportDefinition'>ReportDefinition</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -111,25 +105,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L37" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L37">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L57" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L57">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -139,12 +129,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-additionalArtifacts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L67" >}}">property <b>additionalArtifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L67">property <b>additionalArtifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>additionalArtifacts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
@@ -152,12 +140,10 @@ A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-additionalSchemaElements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L71" >}}">property <b>additionalSchemaElements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L71">property <b>additionalSchemaElements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>additionalSchemaElements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of schema elements. Valid values are: RESOURCES.
@@ -165,12 +151,10 @@ A list of schema elements. Valid values are: RESOURCES.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-compression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L75" >}}">property <b>compression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L75">property <b>compression</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>compression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Compression format for report. Valid values are: GZIP, ZIP.
@@ -178,12 +162,10 @@ Compression format for report. Valid values are: GZIP, ZIP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L79" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L79">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Format for report. Valid values are: textORcsv.
@@ -191,12 +173,10 @@ Format for report. Valid values are: textORcsv.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L37" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L37">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -205,12 +185,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-reportName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L83" >}}">property <b>reportName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L83">property <b>reportName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>reportName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
@@ -218,12 +196,10 @@ Unique name for the report. Must start with a number/letter and is case sensitiv
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-s3Bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L87" >}}">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L87">property <b>s3Bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>s3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the existing S3 bucket to hold generated reports.
@@ -231,12 +207,10 @@ Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-s3Prefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L91" >}}">property <b>s3Prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L91">property <b>s3Prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>s3Prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Report path prefix. Limited to 256 characters.
@@ -244,12 +218,10 @@ Report path prefix. Limited to 256 characters.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-s3Region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L95" >}}">property <b>s3Region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L95">property <b>s3Region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>s3Region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Region of the existing S3 bucket to hold generated reports.
@@ -257,12 +229,10 @@ Region of the existing S3 bucket to hold generated reports.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-timeUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L99" >}}">property <b>timeUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L99">property <b>timeUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>timeUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
@@ -270,12 +240,10 @@ The frequency on which report data are measured and displayed.  Valid values are
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinition-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L37" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L37">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -285,13 +253,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getReportDefinition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L27" >}}">function <b>getReportDefinition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L27">function <b>getReportDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getReportDefinition(args: <a href='#GetReportDefinitionArgs'>GetReportDefinitionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetReportDefinitionResult'>GetReportDefinitionResult</a>&gt; &amp; <a href='#GetReportDefinitionResult'>GetReportDefinitionResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -317,7 +283,7 @@ const reportDefinition = aws.cur.getReportDefinition({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetReportDefinitionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L45" >}}">interface <b>GetReportDefinitionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L45">interface <b>GetReportDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -326,12 +292,10 @@ A collection of arguments for invoking getReportDefinition.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetReportDefinitionArgs-reportName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L49" >}}">property <b>reportName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L49">property <b>reportName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reportName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the report definition to match.
@@ -340,7 +304,7 @@ The name of the report definition to match.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetReportDefinitionResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L55" >}}">interface <b>GetReportDefinitionResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L55">interface <b>GetReportDefinitionResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -349,12 +313,10 @@ A collection of values returned by getReportDefinition.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-additionalArtifacts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L59" >}}">property <b>additionalArtifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L59">property <b>additionalArtifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>additionalArtifacts: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of additional artifacts.
@@ -362,12 +324,10 @@ A list of additional artifacts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-additionalSchemaElements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L63" >}}">property <b>additionalSchemaElements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L63">property <b>additionalSchemaElements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>additionalSchemaElements: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of schema elements.
@@ -375,12 +335,10 @@ A list of schema elements.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-compression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L67" >}}">property <b>compression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L67">property <b>compression</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>compression: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Preferred format for report.
@@ -388,12 +346,10 @@ Preferred format for report.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L71" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L71">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Preferred compression format for report.
@@ -401,12 +357,10 @@ Preferred compression format for report.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L92" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L92">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -414,22 +368,16 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-reportName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L72" >}}">property <b>reportName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L72">property <b>reportName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reportName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-s3Bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L76" >}}">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L76">property <b>s3Bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Bucket: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of customer S3 bucket.
@@ -437,12 +385,10 @@ Name of customer S3 bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-s3Prefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L80" >}}">property <b>s3Prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L80">property <b>s3Prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Preferred report path prefix.
@@ -450,12 +396,10 @@ Preferred report path prefix.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-s3Region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L84" >}}">property <b>s3Region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L84">property <b>s3Region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Region of customer S3 bucket.
@@ -463,12 +407,10 @@ Region of customer S3 bucket.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetReportDefinitionResult-timeUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/getReportDefinition.ts#L88" >}}">property <b>timeUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/getReportDefinition.ts#L88">property <b>timeUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeUnit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The frequency on which report data are measured and displayed.
@@ -477,7 +419,7 @@ The frequency on which report data are measured and displayed.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReportDefinitionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L211" >}}">interface <b>ReportDefinitionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L211">interface <b>ReportDefinitionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -486,12 +428,10 @@ The set of arguments for constructing a ReportDefinition resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-additionalArtifacts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L215" >}}">property <b>additionalArtifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L215">property <b>additionalArtifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>additionalArtifacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
@@ -499,12 +439,10 @@ A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-additionalSchemaElements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L219" >}}">property <b>additionalSchemaElements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L219">property <b>additionalSchemaElements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>additionalSchemaElements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of schema elements. Valid values are: RESOURCES.
@@ -512,12 +450,10 @@ A list of schema elements. Valid values are: RESOURCES.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-compression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L223" >}}">property <b>compression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L223">property <b>compression</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>compression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Compression format for report. Valid values are: GZIP, ZIP.
@@ -525,12 +461,10 @@ Compression format for report. Valid values are: GZIP, ZIP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L227" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L227">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Format for report. Valid values are: textORcsv.
@@ -538,12 +472,10 @@ Format for report. Valid values are: textORcsv.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-reportName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L231" >}}">property <b>reportName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L231">property <b>reportName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reportName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
@@ -551,12 +483,10 @@ Unique name for the report. Must start with a number/letter and is case sensitiv
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-s3Bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L235" >}}">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L235">property <b>s3Bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the existing S3 bucket to hold generated reports.
@@ -564,12 +494,10 @@ Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-s3Prefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L239" >}}">property <b>s3Prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L239">property <b>s3Prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Report path prefix. Limited to 256 characters.
@@ -577,12 +505,10 @@ Report path prefix. Limited to 256 characters.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-s3Region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L243" >}}">property <b>s3Region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L243">property <b>s3Region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Region of the existing S3 bucket to hold generated reports.
@@ -590,12 +516,10 @@ Region of the existing S3 bucket to hold generated reports.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionArgs-timeUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L247" >}}">property <b>timeUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L247">property <b>timeUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.
@@ -604,7 +528,7 @@ The frequency on which report data are measured and displayed.  Valid values are
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReportDefinitionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L169" >}}">interface <b>ReportDefinitionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L169">interface <b>ReportDefinitionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -613,12 +537,10 @@ Input properties used for looking up and filtering ReportDefinition resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ReportDefinitionState-additionalArtifacts">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L173" >}}">property <b>additionalArtifacts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L173">property <b>additionalArtifacts</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>additionalArtifacts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
@@ -626,12 +548,10 @@ A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionState-additionalSchemaElements">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L177" >}}">property <b>additionalSchemaElements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L177">property <b>additionalSchemaElements</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>additionalSchemaElements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of schema elements. Valid values are: RESOURCES.
@@ -639,12 +559,10 @@ A list of schema elements. Valid values are: RESOURCES.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionState-compression">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L181" >}}">property <b>compression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L181">property <b>compression</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>compression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Compression format for report. Valid values are: GZIP, ZIP.
@@ -652,12 +570,10 @@ Compression format for report. Valid values are: GZIP, ZIP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionState-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L185" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L185">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Format for report. Valid values are: textORcsv.
@@ -665,12 +581,10 @@ Format for report. Valid values are: textORcsv.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionState-reportName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L189" >}}">property <b>reportName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L189">property <b>reportName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reportName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
@@ -678,12 +592,10 @@ Unique name for the report. Must start with a number/letter and is case sensitiv
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionState-s3Bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L193" >}}">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L193">property <b>s3Bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the existing S3 bucket to hold generated reports.
@@ -691,12 +603,10 @@ Name of the existing S3 bucket to hold generated reports.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionState-s3Prefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L197" >}}">property <b>s3Prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L197">property <b>s3Prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Report path prefix. Limited to 256 characters.
@@ -704,12 +614,10 @@ Report path prefix. Limited to 256 characters.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionState-s3Region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L201" >}}">property <b>s3Region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L201">property <b>s3Region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>s3Region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Region of the existing S3 bucket to hold generated reports.
@@ -717,12 +625,10 @@ Region of the existing S3 bucket to hold generated reports.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ReportDefinitionState-timeUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="cur/reportDefinition.ts#L205" >}}">property <b>timeUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/cur/reportDefinition.ts#L205">property <b>timeUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.

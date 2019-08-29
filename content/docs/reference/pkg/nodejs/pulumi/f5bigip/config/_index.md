@@ -29,19 +29,17 @@ title: Module config
 <li><a href="#username">let username</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="f5bigip" path="config/vars.ts" >}}">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-f5bigip/blob/60028e601aaaf389850f923486e6ada03ca4d839/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="address">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L12" >}}">let <b>address</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/60028e601aaaf389850f923486e6ada03ca4d839/sdk/nodejs/config/vars.ts#L12">let <b>address</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;address&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Domain name/IP of the BigIP
@@ -49,12 +47,10 @@ Domain name/IP of the BigIP
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="loginRef">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L16" >}}">let <b>loginRef</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/60028e601aaaf389850f923486e6ada03ca4d839/sdk/nodejs/config/vars.ts#L16">let <b>loginRef</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> loginRef: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;loginRef&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Login reference for token authentication (see BIG-IP REST docs for details)
@@ -62,12 +58,10 @@ Login reference for token authentication (see BIG-IP REST docs for details)
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="password">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L20" >}}">let <b>password</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/60028e601aaaf389850f923486e6ada03ca4d839/sdk/nodejs/config/vars.ts#L20">let <b>password</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The user's password
@@ -75,12 +69,10 @@ The user's password
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="tokenAuth">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L24" >}}">let <b>tokenAuth</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/60028e601aaaf389850f923486e6ada03ca4d839/sdk/nodejs/config/vars.ts#L24">let <b>tokenAuth</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> tokenAuth: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;tokenAuth&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable to use an external authentication source (LDAP, TACACS, etc)
@@ -88,12 +80,10 @@ Enable to use an external authentication source (LDAP, TACACS, etc)
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="username">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L28" >}}">let <b>username</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-f5bigip/blob/60028e601aaaf389850f923486e6ada03ca4d839/sdk/nodejs/config/vars.ts#L28">let <b>username</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;username&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Username with API access to the BigIP

@@ -55,19 +55,17 @@ title: Module cosmosdb
 <li><a href="#CosmosChangeFeedCallback">type CosmosChangeFeedCallback</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts" >}}">cosmosdb/account.ts</a> <a href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts" >}}">cosmosdb/cassandraKeyspace.ts</a> <a href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts" >}}">cosmosdb/getAccount.ts</a> <a href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts" >}}">cosmosdb/mongoCollection.ts</a> <a href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts" >}}">cosmosdb/mongoDatabase.ts</a> <a href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts" >}}">cosmosdb/sqlContainer.ts</a> <a href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts" >}}">cosmosdb/sqlDatabase.ts</a> <a href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts" >}}">cosmosdb/table.ts</a> <a href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts" >}}">cosmosdb/zMixins.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts">cosmosdb/account.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts">cosmosdb/cassandraKeyspace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts">cosmosdb/getAccount.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts">cosmosdb/mongoCollection.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts">cosmosdb/mongoDatabase.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts">cosmosdb/sqlContainer.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts">cosmosdb/sqlDatabase.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts">cosmosdb/table.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts">cosmosdb/zMixins.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L55" >}}">class <b>Account</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L55">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a CosmosDB (formally DocumentDB) Account.
@@ -117,13 +115,11 @@ const db = new azure.cosmosdb.Account("db", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L170" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L170"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Account(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AccountArgs'>AccountArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -136,13 +132,11 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L64" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L64">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AccountState'>AccountState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): Account</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -152,13 +146,11 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-getChangeFeedFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L157" >}}">method <b>getChangeFeedFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L157">method <b>getChangeFeedFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getChangeFeedFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GetCosmosDBFunctionArgs'>GetCosmosDBFunctionArgs</a>): <a href='#CosmosDBFunction'>CosmosDBFunction</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -170,25 +162,21 @@ Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L55" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L55">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L75" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L75">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -198,13 +186,11 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-onChange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L148" >}}">method <b>onChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L148">method <b>onChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onChange(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CosmosChangeFeedSubscriptionArgs'>CosmosChangeFeedSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#CosmosChangeFeedSubscription'>CosmosChangeFeedSubscription</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -216,12 +202,10 @@ want to compose multiple Functions into the same App manually.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L85" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L85">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountCapability'>outputs.cosmosdb.AccountCapability</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
@@ -229,12 +213,10 @@ The capabilities which should be enabled for this Cosmos DB account. Possible va
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L89" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L89">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of connection strings available for this CosmosDB account. If the kind is `GlobalDocumentDB`, this will be empty.
@@ -242,12 +224,10 @@ A list of connection strings available for this CosmosDB account. If the kind is
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-consistencyPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L93" >}}">property <b>consistencyPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L93">property <b>consistencyPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountConsistencyPolicy'>outputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
@@ -255,12 +235,10 @@ Specifies a `consistencyPolicy` resource, used to define the consistency policy 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-enableAutomaticFailover">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L97" >}}">property <b>enableAutomaticFailover</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L97">property <b>enableAutomaticFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableAutomaticFailover: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable automatic fail over for this Cosmos DB account.
@@ -268,12 +246,10 @@ Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-enableMultipleWriteLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L101" >}}">property <b>enableMultipleWriteLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L101">property <b>enableMultipleWriteLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableMultipleWriteLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable multi-master support for this Cosmos DB account.
@@ -281,12 +257,10 @@ Enable multi-master support for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L105" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L105">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The endpoint used to connect to the CosmosDB account.
@@ -294,22 +268,16 @@ The endpoint used to connect to the CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-failoverPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L106" >}}">property <b>failoverPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L106">property <b>failoverPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>failoverPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountFailoverPolicy'>outputs.cosmosdb.AccountFailoverPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-geoLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L110" >}}">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L110">property <b>geoLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountGeoLocation'>outputs.cosmosdb.AccountGeoLocation</a>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
@@ -317,12 +285,10 @@ Specifies a `geoLocation` resource, used to define where data should be replicat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L55" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L55">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -331,12 +297,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-ipRangeFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L114" >}}">property <b>ipRangeFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L114">property <b>ipRangeFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipRangeFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
@@ -344,12 +308,10 @@ CosmosDB Firewall Support: This value specifies the set of IP addresses or IP ad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isVirtualNetworkFilterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L118" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L118">property <b>isVirtualNetworkFilterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>isVirtualNetworkFilterEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enables virtual network filtering for this Cosmos DB account.
@@ -357,12 +319,10 @@ Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L122" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L122">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
@@ -370,12 +330,10 @@ Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L126" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L126">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Azure region to host replicated data.
@@ -383,12 +341,10 @@ The name of the Azure region to host replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L130" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L130">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The capability to enable - Possible values are `EnableTable`, `EnableCassandra`, and `EnableGremlin`.
@@ -396,12 +352,10 @@ The capability to enable - Possible values are `EnableTable`, `EnableCassandra`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-offerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L134" >}}">property <b>offerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L134">property <b>offerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>offerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
@@ -409,12 +363,10 @@ Specifies the Offer Type to use for this CosmosDB Account - currently this can o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L138" >}}">property <b>primaryMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L138">property <b>primaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryMasterKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary master key for the CosmosDB Account.
@@ -422,12 +374,10 @@ The Primary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L142" >}}">property <b>primaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L142">property <b>primaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryReadonlyMasterKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary read-only master Key for the CosmosDB Account.
@@ -435,12 +385,10 @@ The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-readEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L146" >}}">property <b>readEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L146">property <b>readEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>readEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of read endpoints available for this CosmosDB account.
@@ -448,12 +396,10 @@ A list of read endpoints available for this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L150" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L150">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
@@ -461,12 +407,10 @@ The name of the resource group in which the CosmosDB Account is created. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L154" >}}">property <b>secondaryMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L154">property <b>secondaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryMasterKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary master key for the CosmosDB Account.
@@ -474,12 +418,10 @@ The Secondary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L158" >}}">property <b>secondaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L158">property <b>secondaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryReadonlyMasterKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary read-only master key for the CosmosDB Account.
@@ -487,12 +429,10 @@ The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L162" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L162">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -500,12 +440,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L55" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L55">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -514,12 +452,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-virtualNetworkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L166" >}}">property <b>virtualNetworkRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L166">property <b>virtualNetworkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountVirtualNetworkRule'>outputs.cosmosdb.AccountVirtualNetworkRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
@@ -527,12 +463,10 @@ Specifies a `virtualNetworkRules` resource, used to define which subnets are all
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-writeEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L170" >}}">property <b>writeEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L170">property <b>writeEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>writeEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of write endpoints available for this CosmosDB account.
@@ -541,12 +475,10 @@ A list of write endpoints available for this CosmosDB account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CassandraKeyspace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L31" >}}">class <b>CassandraKeyspace</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L31">class <b>CassandraKeyspace</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Cassandra KeySpace within a Cosmos DB Account.
@@ -572,13 +504,11 @@ const exampleCassandraKeyspace = new azure.cosmosdb.CassandraKeyspace("example",
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspace-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CassandraKeyspace(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CassandraKeyspaceArgs'>CassandraKeyspaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -591,13 +521,11 @@ Create a CassandraKeyspace resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L40" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CassandraKeyspaceState'>CassandraKeyspaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CassandraKeyspace'>CassandraKeyspace</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -607,25 +535,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L31" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L31">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L51" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L51">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -635,12 +559,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L61" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L61">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Cassandra KeySpace to create the table within. Changing this forces a new resource to be created.
@@ -648,12 +570,10 @@ The name of the Cosmos DB Cassandra KeySpace to create the table within. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L31" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L31">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -662,12 +582,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a new resource to be created.
@@ -675,12 +593,10 @@ Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L69" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L69">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Cassandra KeySpace is created. Changing this forces a new resource to be created.
@@ -688,12 +604,10 @@ The name of the resource group in which the Cosmos DB Cassandra KeySpace is crea
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspace-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L31" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L31">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -703,44 +617,36 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CosmosChangeFeedSubscription">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L169" >}}">class <b>CosmosChangeFeedSubscription</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L169">class <b>CosmosChangeFeedSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</pre>
-{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscription-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L170" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L170"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CosmosChangeFeedSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, account: Account, args: <a href='#CosmosChangeFeedSubscriptionArgs'>CosmosChangeFeedSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L169" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L169">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L169" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L169">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -750,44 +656,32 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscription-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L169" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L169">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscription-account">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L170" >}}">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L170">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>account: Account;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscription-functionApp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L739" >}}">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L739">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L169" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L169">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -797,36 +691,30 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CosmosDBFunction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L192" >}}">class <b>CosmosDBFunction</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L192">class <b>CosmosDBFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Azure Function triggered by a Cosmos DB Change Feed.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CosmosDBFunction-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L192" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L192"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CosmosDBFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CosmosDBFunctionArgs'>CosmosDBFunctionArgs</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunction-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L476" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L476">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Application settings required by the function.
@@ -834,12 +722,10 @@ Application settings required by the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunction-bindings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L466" >}}">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L466">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An array of function binding definitions.
@@ -847,12 +733,10 @@ An array of function binding definitions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunction-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L471" >}}">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L471">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Function callback.
@@ -860,12 +744,10 @@ Function callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunction-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L461" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L461">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Function name.
@@ -874,12 +756,10 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoCollection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L49" >}}">class <b>MongoCollection</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L49">class <b>MongoCollection</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Mongo Collection within a Cosmos DB Account.
@@ -923,13 +803,11 @@ const exampleMongoCollection = new azure.cosmosdb.MongoCollection("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollection-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L100" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L100"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MongoCollection(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MongoCollectionArgs'>MongoCollectionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -942,13 +820,11 @@ Create a MongoCollection resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L58" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L58">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MongoCollectionState'>MongoCollectionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MongoCollection'>MongoCollection</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -958,25 +834,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L49" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L49">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L69" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L69">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -986,22 +858,16 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L76" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L76">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L80" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L80">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.
@@ -1009,12 +875,10 @@ The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-defaultTtlSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L84" >}}">property <b>defaultTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L84">property <b>defaultTtlSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The default Time To Live in seconds. If the value is `-1` items are not automatically expired.
@@ -1022,12 +886,10 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L49" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L49">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1036,12 +898,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-indexes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L88" >}}">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L88">property <b>indexes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MongoCollectionIndex'>outputs.cosmosdb.MongoCollectionIndex</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `indexes` blocks as defined below.
@@ -1049,12 +909,10 @@ One or more `indexes` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L92" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L92">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new resource to be created.
@@ -1062,12 +920,10 @@ Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L96" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L96">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.
@@ -1075,12 +931,10 @@ The name of the resource group in which the Cosmos DB Mongo Collection is create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-shardKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L100" >}}">property <b>shardKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L100">property <b>shardKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shardKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the key to partition on for sharding. There must not be any other unique index keys.
@@ -1088,12 +942,10 @@ The name of the key to partition on for sharding. There must not be any other un
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollection-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L49" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L49">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1103,12 +955,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoDatabase">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L31" >}}">class <b>MongoDatabase</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L31">class <b>MongoDatabase</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Mongo Database within a Cosmos DB Account.
@@ -1134,13 +984,11 @@ const exampleMongoDatabase = new azure.cosmosdb.MongoDatabase("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabase-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MongoDatabase(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MongoDatabaseArgs'>MongoDatabaseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1153,13 +1001,11 @@ Create a MongoDatabase resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L40" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MongoDatabaseState'>MongoDatabaseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MongoDatabase'>MongoDatabase</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1169,25 +1015,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L31" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L31">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L51" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L51">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1197,12 +1039,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L61" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L61">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Mongo Database to create the table within. Changing this forces a new resource to be created.
@@ -1210,12 +1050,10 @@ The name of the Cosmos DB Mongo Database to create the table within. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L31" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L31">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1224,12 +1062,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new resource to be created.
@@ -1237,12 +1073,10 @@ Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L69" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L69">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Mongo Database is created. Changing this forces a new resource to be created.
@@ -1250,12 +1084,10 @@ The name of the resource group in which the Cosmos DB Mongo Database is created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabase-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L31" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L31">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1265,12 +1097,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlContainer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L35" >}}">class <b>SqlContainer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L35">class <b>SqlContainer</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a SQL Container within a Cosmos DB Account.
@@ -1300,13 +1130,11 @@ const example = new azure.cosmosdb.SqlContainer("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlContainer-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L85" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L85"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SqlContainer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SqlContainerArgs'>SqlContainerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1319,13 +1147,11 @@ Create a SqlContainer resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L44" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L44">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SqlContainerState'>SqlContainerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SqlContainer'>SqlContainer</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1335,25 +1161,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L35" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L35">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L55" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L55">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1363,12 +1185,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L65" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L65">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
@@ -1376,12 +1196,10 @@ The name of the Cosmos DB Account to create the container within. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L69" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L69">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
@@ -1389,12 +1207,10 @@ The name of the Cosmos DB SQL Database to create the container within. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L35" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L35">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1403,12 +1219,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L73" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L73">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB SQL Database. Changing this forces a new resource to be created.
@@ -1416,12 +1230,10 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-partitionKeyPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L77" >}}">property <b>partitionKeyPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L77">property <b>partitionKeyPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>partitionKeyPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Define a partition key. Changing this forces a new resource to be created.
@@ -1429,12 +1241,10 @@ Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L81" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L81">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB SQL Database is created. Changing this forces a new resource to be created.
@@ -1442,12 +1252,10 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-uniqueKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L85" >}}">property <b>uniqueKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L85">property <b>uniqueKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>uniqueKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerUniqueKey'>outputs.cosmosdb.SqlContainerUniqueKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `uniqueKey` blocks as defined below. Changing this forces a new resource to be created.
@@ -1455,12 +1263,10 @@ One or more `uniqueKey` blocks as defined below. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L35" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L35">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1470,12 +1276,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlDatabase">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L31" >}}">class <b>SqlDatabase</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L31">class <b>SqlDatabase</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a SQL Database within a Cosmos DB Account.
@@ -1501,13 +1305,11 @@ const exampleSqlDatabase = new azure.cosmosdb.SqlDatabase("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabase-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SqlDatabase(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SqlDatabaseArgs'>SqlDatabaseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1520,13 +1322,11 @@ Create a SqlDatabase resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L40" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SqlDatabaseState'>SqlDatabaseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SqlDatabase'>SqlDatabase</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1536,25 +1336,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L31" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L31">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L51" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L51">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1564,12 +1360,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L61" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L61">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB SQL Database to create the table within. Changing this forces a new resource to be created.
@@ -1577,12 +1371,10 @@ The name of the Cosmos DB SQL Database to create the table within. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L31" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L31">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1591,12 +1383,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB SQL Database. Changing this forces a new resource to be created.
@@ -1604,12 +1394,10 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L69" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L69">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB SQL Database is created. Changing this forces a new resource to be created.
@@ -1617,12 +1405,10 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabase-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L31" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L31">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1632,12 +1418,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Table">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L31" >}}">class <b>Table</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L31">class <b>Table</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Table within a Cosmos DB Account.
@@ -1663,13 +1447,11 @@ const exampleTable = new azure.cosmosdb.Table("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Table-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L69"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Table(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TableArgs'>TableArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1682,13 +1464,11 @@ Create a Table resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L40" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L40">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TableState'>TableState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Table'>Table</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1698,25 +1478,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L31" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L31">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L51" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L51">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1726,12 +1502,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L61" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L61">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Table to create the table within. Changing this forces a new resource to be created.
@@ -1739,12 +1513,10 @@ The name of the Cosmos DB Table to create the table within. Changing this forces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L31" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L31">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1753,12 +1525,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Table. Changing this forces a new resource to be created.
@@ -1766,12 +1536,10 @@ Specifies the name of the Cosmos DB Table. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L69" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L69">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Table is created. Changing this forces a new resource to be created.
@@ -1779,12 +1547,10 @@ The name of the resource group in which the Cosmos DB Table is created. Changing
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Table-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L31" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L31">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1794,13 +1560,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getAccount">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L28" >}}">function <b>getAccount</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L28">function <b>getAccount</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getAccount(args: <a href='#GetAccountArgs'>GetAccountArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAccountResult'>GetAccountResult</a>&gt; &amp; <a href='#GetAccountResult'>GetAccountResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1825,7 +1589,7 @@ export const cosmosdbAccountEndpoint = azurerm_cosmosdb_account_jobs.endpoint;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L351" >}}">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L351">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1834,12 +1598,10 @@ The set of arguments for constructing a Account resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L355" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L355">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCapability'>inputs.cosmosdb.AccountCapability</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
@@ -1847,12 +1609,10 @@ The capabilities which should be enabled for this Cosmos DB account. Possible va
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-consistencyPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L359" >}}">property <b>consistencyPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L359">property <b>consistencyPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountConsistencyPolicy'>inputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
@@ -1860,12 +1620,10 @@ Specifies a `consistencyPolicy` resource, used to define the consistency policy 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-enableAutomaticFailover">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L363" >}}">property <b>enableAutomaticFailover</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L363">property <b>enableAutomaticFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableAutomaticFailover?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable automatic fail over for this Cosmos DB account.
@@ -1873,12 +1631,10 @@ Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-enableMultipleWriteLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L367" >}}">property <b>enableMultipleWriteLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L367">property <b>enableMultipleWriteLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableMultipleWriteLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable multi-master support for this Cosmos DB account.
@@ -1886,22 +1642,16 @@ Enable multi-master support for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-failoverPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L368" >}}">property <b>failoverPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L368">property <b>failoverPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountFailoverPolicy'>inputs.cosmosdb.AccountFailoverPolicy</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-geoLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L372" >}}">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L372">property <b>geoLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountGeoLocation'>inputs.cosmosdb.AccountGeoLocation</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
@@ -1909,12 +1659,10 @@ Specifies a `geoLocation` resource, used to define where data should be replicat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-ipRangeFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L376" >}}">property <b>ipRangeFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L376">property <b>ipRangeFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipRangeFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
@@ -1922,12 +1670,10 @@ CosmosDB Firewall Support: This value specifies the set of IP addresses or IP ad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-isVirtualNetworkFilterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L380" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L380">property <b>isVirtualNetworkFilterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isVirtualNetworkFilterEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enables virtual network filtering for this Cosmos DB account.
@@ -1935,12 +1681,10 @@ Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L384" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L384">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
@@ -1948,12 +1692,10 @@ Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L388" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L388">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Azure region to host replicated data.
@@ -1961,12 +1703,10 @@ The name of the Azure region to host replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L392" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L392">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The capability to enable - Possible values are `EnableTable`, `EnableCassandra`, and `EnableGremlin`.
@@ -1974,12 +1714,10 @@ The capability to enable - Possible values are `EnableTable`, `EnableCassandra`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-offerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L396" >}}">property <b>offerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L396">property <b>offerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>offerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
@@ -1987,12 +1725,10 @@ Specifies the Offer Type to use for this CosmosDB Account - currently this can o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L400" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L400">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
@@ -2000,12 +1736,10 @@ The name of the resource group in which the CosmosDB Account is created. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L404" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L404">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2013,12 +1747,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-virtualNetworkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L408" >}}">property <b>virtualNetworkRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L408">property <b>virtualNetworkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountVirtualNetworkRule'>inputs.cosmosdb.AccountVirtualNetworkRule</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
@@ -2027,7 +1759,7 @@ Specifies a `virtualNetworkRules` resource, used to define which subnets are all
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L256" >}}">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L256">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2036,12 +1768,10 @@ Input properties used for looking up and filtering Account resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L260" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L260">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCapability'>inputs.cosmosdb.AccountCapability</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
@@ -2049,12 +1779,10 @@ The capabilities which should be enabled for this Cosmos DB account. Possible va
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L264" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L264">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of connection strings available for this CosmosDB account. If the kind is `GlobalDocumentDB`, this will be empty.
@@ -2062,12 +1790,10 @@ A list of connection strings available for this CosmosDB account. If the kind is
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-consistencyPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L268" >}}">property <b>consistencyPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L268">property <b>consistencyPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consistencyPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountConsistencyPolicy'>inputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `consistencyPolicy` resource, used to define the consistency policy for this CosmosDB account.
@@ -2075,12 +1801,10 @@ Specifies a `consistencyPolicy` resource, used to define the consistency policy 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-enableAutomaticFailover">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L272" >}}">property <b>enableAutomaticFailover</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L272">property <b>enableAutomaticFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableAutomaticFailover?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable automatic fail over for this Cosmos DB account.
@@ -2088,12 +1812,10 @@ Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-enableMultipleWriteLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L276" >}}">property <b>enableMultipleWriteLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L276">property <b>enableMultipleWriteLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableMultipleWriteLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable multi-master support for this Cosmos DB account.
@@ -2101,12 +1823,10 @@ Enable multi-master support for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L280" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L280">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The endpoint used to connect to the CosmosDB account.
@@ -2114,22 +1834,16 @@ The endpoint used to connect to the CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-failoverPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L281" >}}">property <b>failoverPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L281">property <b>failoverPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountFailoverPolicy'>inputs.cosmosdb.AccountFailoverPolicy</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-geoLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L285" >}}">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L285">property <b>geoLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountGeoLocation'>inputs.cosmosdb.AccountGeoLocation</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `geoLocation` resource, used to define where data should be replicated with the `failoverPriority` 0 specifying the primary location.
@@ -2137,12 +1851,10 @@ Specifies a `geoLocation` resource, used to define where data should be replicat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-ipRangeFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L289" >}}">property <b>ipRangeFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L289">property <b>ipRangeFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipRangeFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
@@ -2150,12 +1862,10 @@ CosmosDB Firewall Support: This value specifies the set of IP addresses or IP ad
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-isVirtualNetworkFilterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L293" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L293">property <b>isVirtualNetworkFilterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isVirtualNetworkFilterEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enables virtual network filtering for this Cosmos DB account.
@@ -2163,12 +1873,10 @@ Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L297" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L297">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
@@ -2176,12 +1884,10 @@ Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L301" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L301">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Azure region to host replicated data.
@@ -2189,12 +1895,10 @@ The name of the Azure region to host replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L305" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L305">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The capability to enable - Possible values are `EnableTable`, `EnableCassandra`, and `EnableGremlin`.
@@ -2202,12 +1906,10 @@ The capability to enable - Possible values are `EnableTable`, `EnableCassandra`,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-offerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L309" >}}">property <b>offerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L309">property <b>offerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>offerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
@@ -2215,12 +1917,10 @@ Specifies the Offer Type to use for this CosmosDB Account - currently this can o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L313" >}}">property <b>primaryMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L313">property <b>primaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryMasterKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary master key for the CosmosDB Account.
@@ -2228,12 +1928,10 @@ The Primary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L317" >}}">property <b>primaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L317">property <b>primaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryReadonlyMasterKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary read-only master Key for the CosmosDB Account.
@@ -2241,12 +1939,10 @@ The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-readEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L321" >}}">property <b>readEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L321">property <b>readEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of read endpoints available for this CosmosDB account.
@@ -2254,12 +1950,10 @@ A list of read endpoints available for this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L325" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L325">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
@@ -2267,12 +1961,10 @@ The name of the resource group in which the CosmosDB Account is created. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L329" >}}">property <b>secondaryMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L329">property <b>secondaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryMasterKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary master key for the CosmosDB Account.
@@ -2280,12 +1972,10 @@ The Secondary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L333" >}}">property <b>secondaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L333">property <b>secondaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryReadonlyMasterKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary read-only master key for the CosmosDB Account.
@@ -2293,12 +1983,10 @@ The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L337" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L337">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2306,12 +1994,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-virtualNetworkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L341" >}}">property <b>virtualNetworkRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L341">property <b>virtualNetworkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountVirtualNetworkRule'>inputs.cosmosdb.AccountVirtualNetworkRule</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `virtualNetworkRules` resource, used to define which subnets are allowed to access this CosmosDB account.
@@ -2319,12 +2005,10 @@ Specifies a `virtualNetworkRules` resource, used to define which subnets are all
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-writeEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/account.ts#L345" >}}">property <b>writeEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/account.ts#L345">property <b>writeEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of write endpoints available for this CosmosDB account.
@@ -2333,7 +2017,7 @@ A list of write endpoints available for this CosmosDB account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CassandraKeyspaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L130" >}}">interface <b>CassandraKeyspaceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L130">interface <b>CassandraKeyspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2342,12 +2026,10 @@ The set of arguments for constructing a CassandraKeyspace resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspaceArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L134" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L134">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Cassandra KeySpace to create the table within. Changing this forces a new resource to be created.
@@ -2355,12 +2037,10 @@ The name of the Cosmos DB Cassandra KeySpace to create the table within. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a new resource to be created.
@@ -2368,12 +2048,10 @@ Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L142" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L142">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Cassandra KeySpace is created. Changing this forces a new resource to be created.
@@ -2382,7 +2060,7 @@ The name of the resource group in which the Cosmos DB Cassandra KeySpace is crea
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CassandraKeyspaceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L112" >}}">interface <b>CassandraKeyspaceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L112">interface <b>CassandraKeyspaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2391,12 +2069,10 @@ Input properties used for looking up and filtering CassandraKeyspace resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CassandraKeyspaceState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L116" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L116">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Cassandra KeySpace to create the table within. Changing this forces a new resource to be created.
@@ -2404,12 +2080,10 @@ The name of the Cosmos DB Cassandra KeySpace to create the table within. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspaceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L120" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L120">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a new resource to be created.
@@ -2417,12 +2091,10 @@ Specifies the name of the Cosmos DB Cassandra KeySpace. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CassandraKeyspaceState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/cassandraKeyspace.ts#L124" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/cassandraKeyspace.ts#L124">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Cassandra KeySpace is created. Changing this forces a new resource to be created.
@@ -2431,25 +2103,21 @@ The name of the resource group in which the Cosmos DB Cassandra KeySpace is crea
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CosmosChangeFeedContext">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L79" >}}">interface <b>CosmosChangeFeedContext</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L79">interface <b>CosmosChangeFeedContext</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Data that will be passed along in the context object to the CosmosCallback.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-done">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L47" >}}">method <b>done</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L47">method <b>done</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2460,10 +2128,9 @@ is asynchronous, you should not use this callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-bindingData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L87" >}}">property <b>bindingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L87">property <b>bindingData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bindingData: {
     invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     sys: {
@@ -2471,17 +2138,12 @@ is asynchronous, you should not use this callback.
         utcNow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     };
 };</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-bindingDefinitions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L79" >}}">property <b>bindingDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L79">property <b>bindingDefinitions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bindingDefinitions: BindingDefinition[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Bindings your function uses, as defined in function.json.
@@ -2489,48 +2151,34 @@ Bindings your function uses, as defined in function.json.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-bindings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L86" >}}">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L86">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bindings: {
     items: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[];
 };</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-executionContext">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L81" >}}">property <b>executionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L81">property <b>executionContext</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>executionContext: {
     functionDirectory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-invocationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L80" >}}">property <b>invocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L80">property <b>invocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-log">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L79" >}}">property <b>log</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L79">property <b>log</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>log: Logger;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Allows you to write streaming function logs. Calling directly allows you to write streaming function logs
@@ -2539,12 +2187,10 @@ at the default trace level.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-req">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L79" >}}">property <b>req</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L79">property <b>req</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 HTTP request object. Provided to your function when using HTTP Bindings.
@@ -2552,12 +2198,10 @@ HTTP request object. Provided to your function when using HTTP Bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedContext-res">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L79" >}}">property <b>res</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L79">property <b>res</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>res?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 HTTP response object. Provided to your function when using HTTP Bindings.
@@ -2566,19 +2210,15 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CosmosChangeFeedSubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L132" >}}">interface <b>CosmosChangeFeedSubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L132">interface <b>CosmosChangeFeedSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#GetCosmosDBFunctionArgs'>GetCosmosDBFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</pre>
-{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-account">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L102">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The storage account to use where the zip-file blob for the FunctionApp will be located. If
@@ -2588,12 +2228,10 @@ account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L107" >}}">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L107">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A key-value pair of App Settings.
@@ -2601,12 +2239,10 @@ A key-value pair of App Settings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -2615,12 +2251,10 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -2635,12 +2269,10 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L112" >}}">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L112">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
@@ -2648,12 +2280,10 @@ Should the Function App send session affinity cookies, which route client reques
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L117" >}}">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L117">property <b>codePathOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Options to control which files and packages are included with the serialized FunctionApp code.
@@ -2661,12 +2291,10 @@ Options to control which files and packages are included with the serialized Fun
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-collectionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L110" >}}">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L110">property <b>collectionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>collectionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the collection inside the database we are subscribing to.
@@ -2674,16 +2302,14 @@ The name of the collection inside the database we are subscribing to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L122" >}}">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L122">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An `connection_string` block as defined below.
@@ -2691,12 +2317,10 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-container">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L128" >}}">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L128">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The container to use where the zip-file blob for the FunctionApp will be located. If not
@@ -2705,12 +2329,10 @@ provided, the root container of the storage account will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L105" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L105">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the database we are subscribing to.
@@ -2718,12 +2340,10 @@ The name of the database we are subscribing to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L133" >}}">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L133">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Should the built-in logging of this Function App be enabled? Defaults to `true`.
@@ -2731,12 +2351,10 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L138" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L138">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Is the Function App enabled?
@@ -2744,12 +2362,10 @@ Is the Function App enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L143" >}}">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L143">property <b>hostSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Host configuration options.
@@ -2757,12 +2373,10 @@ Host configuration options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L148" >}}">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L148">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
@@ -2770,16 +2384,14 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L153" >}}">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L153">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An `identity` block as defined below.
@@ -2787,12 +2399,10 @@ An `identity` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Input bindings.
@@ -2800,12 +2410,10 @@ Input bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L158" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L158">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -2813,12 +2421,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-maxItemsPerInvocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L115" >}}">property <b>maxItemsPerInvocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L115">property <b>maxItemsPerInvocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxItemsPerInvocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When set, it customizes the maximum amount of items received per Function call.
@@ -2826,12 +2432,10 @@ When set, it customizes the maximum amount of items received per Function call.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L163" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L163">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Function App.
@@ -2839,12 +2443,10 @@ The name of the Function App.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L169" >}}">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L169">property <b>nodeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not provided,
@@ -2853,12 +2455,10 @@ defaults to `8.11.1`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Output bindings.
@@ -2866,12 +2466,10 @@ Output bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L179" >}}">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L179">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The App Service Plan within which to create this Function App. Changing this forces a new
@@ -2884,12 +2482,10 @@ more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L184" >}}">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L184">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
@@ -2897,12 +2493,10 @@ The resource group in which to create the event subscription. [resourceGroup] ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L137" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L137">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
@@ -2911,17 +2505,15 @@ If none of the two is supplied, the resource group of the Cosmos DB Account will
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L195" >}}">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L195">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
     linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
     websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
 }&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `site_config` object as defined below.
@@ -2929,12 +2521,10 @@ A `site_config` object as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-startFromBeginning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L122" >}}">property <b>startFromBeginning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L122">property <b>startFromBeginning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startFromBeginning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When set, it tells the Trigger to start reading changes from the beginning of the history of the collection instead of the current time.
@@ -2944,12 +2534,10 @@ there are leases already created has no effect.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L200" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L200">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2957,12 +2545,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosChangeFeedSubscriptionArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L205" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L205">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The runtime version associated with the Function App. Defaults to `~2`.
@@ -2971,19 +2557,15 @@ The runtime version associated with the Function App. Defaults to `~2`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CosmosDBFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L125" >}}">interface <b>CosmosDBFunctionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L125">interface <b>CosmosDBFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#GetCosmosDBFunctionArgs'>GetCosmosDBFunctionArgs</a></pre>
-{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-account">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L129" >}}">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L129">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>account: Account;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 CosmosDB Account.
@@ -2991,12 +2573,10 @@ CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -3005,12 +2585,10 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -3025,12 +2603,10 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-collectionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L110" >}}">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L110">property <b>collectionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>collectionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the collection inside the database we are subscribing to.
@@ -3038,12 +2614,10 @@ The name of the collection inside the database we are subscribing to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L105" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L105">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the database we are subscribing to.
@@ -3051,12 +2625,10 @@ The name of the database we are subscribing to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Input bindings.
@@ -3064,12 +2636,10 @@ Input bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-maxItemsPerInvocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L115" >}}">property <b>maxItemsPerInvocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L115">property <b>maxItemsPerInvocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxItemsPerInvocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When set, it customizes the maximum amount of items received per Function call.
@@ -3077,12 +2647,10 @@ When set, it customizes the maximum amount of items received per Function call.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Output bindings.
@@ -3090,12 +2658,10 @@ Output bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CosmosDBFunctionArgs-startFromBeginning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L122" >}}">property <b>startFromBeginning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L122">property <b>startFromBeginning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startFromBeginning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When set, it tells the Trigger to start reading changes from the beginning of the history of the collection instead of the current time.
@@ -3106,7 +2672,7 @@ there are leases already created has no effect.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L47" >}}">interface <b>GetAccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L47">interface <b>GetAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3115,12 +2681,10 @@ A collection of arguments for invoking getAccount.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L51" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L51">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the CosmosDB Account.
@@ -3128,12 +2692,10 @@ Specifies the name of the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L55" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L55">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the resource group in which the CosmosDB Account resides.
@@ -3142,7 +2704,7 @@ Specifies the name of the resource group in which the CosmosDB Account resides.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L61" >}}">interface <b>GetAccountResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L61">interface <b>GetAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3151,12 +2713,10 @@ A collection of values returned by getAccount.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountResult-capabilities">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L65" >}}">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L65">property <b>capabilities</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCapability'>outputs.cosmosdb.GetAccountCapability</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Capabilities enabled on this Cosmos DB account.
@@ -3164,22 +2724,16 @@ Capabilities enabled on this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-consistencyPolicies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L66" >}}">property <b>consistencyPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L66">property <b>consistencyPolicies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consistencyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountConsistencyPolicy'>outputs.cosmosdb.GetAccountConsistencyPolicy</a>[];</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-enableAutomaticFailover">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L70" >}}">property <b>enableAutomaticFailover</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L70">property <b>enableAutomaticFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableAutomaticFailover: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 If automatic failover is enabled for this CosmosDB Account.
@@ -3187,12 +2741,10 @@ If automatic failover is enabled for this CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-enableMultipleWriteLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L74" >}}">property <b>enableMultipleWriteLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L74">property <b>enableMultipleWriteLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableMultipleWriteLocations: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 If multi-master is enabled for this Cosmos DB account.
@@ -3200,12 +2752,10 @@ If multi-master is enabled for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L78" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L78">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The endpoint used to connect to the CosmosDB account.
@@ -3213,22 +2763,16 @@ The endpoint used to connect to the CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-geoLocations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L79" >}}">property <b>geoLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L79">property <b>geoLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountGeoLocation'>outputs.cosmosdb.GetAccountGeoLocation</a>[];</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L137" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L137">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -3236,12 +2780,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-ipRangeFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L83" >}}">property <b>ipRangeFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L83">property <b>ipRangeFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipRangeFilter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The current IP Filter for this CosmosDB account
@@ -3249,12 +2791,10 @@ The current IP Filter for this CosmosDB account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-isVirtualNetworkFilterEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L87" >}}">property <b>isVirtualNetworkFilterEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L87">property <b>isVirtualNetworkFilterEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isVirtualNetworkFilterEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 If virtual network filtering is enabled for this Cosmos DB account.
@@ -3262,12 +2802,10 @@ If virtual network filtering is enabled for this Cosmos DB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L91" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L91">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Kind of the CosmosDB account.
@@ -3275,12 +2813,10 @@ The Kind of the CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L95" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L95">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Azure region hosting replicated data.
@@ -3288,22 +2824,16 @@ The name of the Azure region hosting replicated data.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L96" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L96">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-offerType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L100" >}}">property <b>offerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L100">property <b>offerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>offerType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Offer Type to used by this CosmosDB Account.
@@ -3311,12 +2841,10 @@ The Offer Type to used by this CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L104" >}}">property <b>primaryMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L104">property <b>primaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryMasterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary master key for the CosmosDB Account.
@@ -3324,12 +2852,10 @@ The Primary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L108" >}}">property <b>primaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L108">property <b>primaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryReadonlyMasterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary read-only master Key for the CosmosDB Account.
@@ -3337,12 +2863,10 @@ The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-readEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L112" >}}">property <b>readEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L112">property <b>readEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readEndpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of read endpoints available for this CosmosDB account.
@@ -3350,22 +2874,16 @@ A list of read endpoints available for this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L113" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L113">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L117" >}}">property <b>secondaryMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L117">property <b>secondaryMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryMasterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary master key for the CosmosDB Account.
@@ -3373,12 +2891,10 @@ The Secondary master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryReadonlyMasterKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L121" >}}">property <b>secondaryReadonlyMasterKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L121">property <b>secondaryReadonlyMasterKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryReadonlyMasterKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary read-only master key for the CosmosDB Account.
@@ -3386,12 +2902,10 @@ The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L125" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L125">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags assigned to the resource.
@@ -3399,12 +2913,10 @@ A mapping of tags assigned to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-virtualNetworkRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L129" >}}">property <b>virtualNetworkRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L129">property <b>virtualNetworkRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountVirtualNetworkRule'>outputs.cosmosdb.GetAccountVirtualNetworkRule</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Subnets that are allowed to access this CosmosDB account.
@@ -3412,12 +2924,10 @@ Subnets that are allowed to access this CosmosDB account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-writeEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/getAccount.ts#L133" >}}">property <b>writeEndpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/getAccount.ts#L133">property <b>writeEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeEndpoints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of write endpoints available for this CosmosDB account.
@@ -3426,19 +2936,15 @@ A list of write endpoints available for this CosmosDB account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCosmosDBFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L101" >}}">interface <b>GetCosmosDBFunctionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L101">interface <b>GetCosmosDBFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;</pre>
-{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L81">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -3447,12 +2953,10 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L93">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -3467,12 +2971,10 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-collectionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L110" >}}">property <b>collectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L110">property <b>collectionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>collectionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the collection inside the database we are subscribing to.
@@ -3480,12 +2982,10 @@ The name of the collection inside the database we are subscribing to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L105" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L105">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the database we are subscribing to.
@@ -3493,12 +2993,10 @@ The name of the database we are subscribing to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L436">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Input bindings.
@@ -3506,12 +3004,10 @@ Input bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-maxItemsPerInvocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L115" >}}">property <b>maxItemsPerInvocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L115">property <b>maxItemsPerInvocation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxItemsPerInvocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When set, it customizes the maximum amount of items received per Function call.
@@ -3519,12 +3015,10 @@ When set, it customizes the maximum amount of items received per Function call.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/appservice/zMixins.ts#L441">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Output bindings.
@@ -3532,12 +3026,10 @@ Output bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCosmosDBFunctionArgs-startFromBeginning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L122" >}}">property <b>startFromBeginning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L122">property <b>startFromBeginning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startFromBeginning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When set, it tells the Trigger to start reading changes from the beginning of the history of the collection instead of the current time.
@@ -3548,7 +3040,7 @@ there are leases already created has no effect.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoCollectionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L185" >}}">interface <b>MongoCollectionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L185">interface <b>MongoCollectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3557,22 +3049,16 @@ The set of arguments for constructing a MongoCollection resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L186" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L186">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L190" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L190">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.
@@ -3580,12 +3066,10 @@ The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-defaultTtlSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L194" >}}">property <b>defaultTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L194">property <b>defaultTtlSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The default Time To Live in seconds. If the value is `-1` items are not automatically expired.
@@ -3593,12 +3077,10 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-indexes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L198" >}}">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L198">property <b>indexes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex'>inputs.cosmosdb.MongoCollectionIndex</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `indexes` blocks as defined below.
@@ -3606,12 +3088,10 @@ One or more `indexes` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L202" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L202">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new resource to be created.
@@ -3619,12 +3099,10 @@ Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L206" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L206">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.
@@ -3632,12 +3110,10 @@ The name of the resource group in which the Cosmos DB Mongo Collection is create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionArgs-shardKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L210" >}}">property <b>shardKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L210">property <b>shardKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shardKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the key to partition on for sharding. There must not be any other unique index keys.
@@ -3646,7 +3122,7 @@ The name of the key to partition on for sharding. There must not be any other un
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoCollectionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L154" >}}">interface <b>MongoCollectionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L154">interface <b>MongoCollectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3655,22 +3131,16 @@ Input properties used for looking up and filtering MongoCollection resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoCollectionState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L155" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L155">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L159" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L159">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.
@@ -3678,12 +3148,10 @@ The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-defaultTtlSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L163" >}}">property <b>defaultTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L163">property <b>defaultTtlSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The default Time To Live in seconds. If the value is `-1` items are not automatically expired.
@@ -3691,12 +3159,10 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-indexes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L167" >}}">property <b>indexes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L167">property <b>indexes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex'>inputs.cosmosdb.MongoCollectionIndex</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `indexes` blocks as defined below.
@@ -3704,12 +3170,10 @@ One or more `indexes` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L171" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L171">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new resource to be created.
@@ -3717,12 +3181,10 @@ Specifies the name of the Cosmos DB Mongo Collection. Changing this forces a new
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L175" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L175">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created.
@@ -3730,12 +3192,10 @@ The name of the resource group in which the Cosmos DB Mongo Collection is create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoCollectionState-shardKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoCollection.ts#L179" >}}">property <b>shardKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoCollection.ts#L179">property <b>shardKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shardKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the key to partition on for sharding. There must not be any other unique index keys.
@@ -3744,7 +3204,7 @@ The name of the key to partition on for sharding. There must not be any other un
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoDatabaseArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L130" >}}">interface <b>MongoDatabaseArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L130">interface <b>MongoDatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3753,12 +3213,10 @@ The set of arguments for constructing a MongoDatabase resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabaseArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L134" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L134">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Mongo Database to create the table within. Changing this forces a new resource to be created.
@@ -3766,12 +3224,10 @@ The name of the Cosmos DB Mongo Database to create the table within. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabaseArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new resource to be created.
@@ -3779,12 +3235,10 @@ Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabaseArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L142" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L142">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Mongo Database is created. Changing this forces a new resource to be created.
@@ -3793,7 +3247,7 @@ The name of the resource group in which the Cosmos DB Mongo Database is created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MongoDatabaseState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L112" >}}">interface <b>MongoDatabaseState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L112">interface <b>MongoDatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3802,12 +3256,10 @@ Input properties used for looking up and filtering MongoDatabase resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MongoDatabaseState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L116" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L116">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Mongo Database to create the table within. Changing this forces a new resource to be created.
@@ -3815,12 +3267,10 @@ The name of the Cosmos DB Mongo Database to create the table within. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabaseState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L120" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L120">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new resource to be created.
@@ -3828,12 +3278,10 @@ Specifies the name of the Cosmos DB Mongo Database. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MongoDatabaseState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/mongoDatabase.ts#L124" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/mongoDatabase.ts#L124">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Mongo Database is created. Changing this forces a new resource to be created.
@@ -3842,7 +3290,7 @@ The name of the resource group in which the Cosmos DB Mongo Database is created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlContainerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L167" >}}">interface <b>SqlContainerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L167">interface <b>SqlContainerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3851,12 +3299,10 @@ The set of arguments for constructing a SqlContainer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlContainerArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L171" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L171">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
@@ -3864,12 +3310,10 @@ The name of the Cosmos DB Account to create the container within. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerArgs-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L175" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L175">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
@@ -3877,12 +3321,10 @@ The name of the Cosmos DB SQL Database to create the container within. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L179" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L179">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB SQL Database. Changing this forces a new resource to be created.
@@ -3890,12 +3332,10 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerArgs-partitionKeyPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L183" >}}">property <b>partitionKeyPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L183">property <b>partitionKeyPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>partitionKeyPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Define a partition key. Changing this forces a new resource to be created.
@@ -3903,12 +3343,10 @@ Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L187" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L187">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB SQL Database is created. Changing this forces a new resource to be created.
@@ -3916,12 +3354,10 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerArgs-uniqueKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L191" >}}">property <b>uniqueKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L191">property <b>uniqueKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerUniqueKey'>inputs.cosmosdb.SqlContainerUniqueKey</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `uniqueKey` blocks as defined below. Changing this forces a new resource to be created.
@@ -3930,7 +3366,7 @@ One or more `uniqueKey` blocks as defined below. Changing this forces a new reso
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlContainerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L137" >}}">interface <b>SqlContainerState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L137">interface <b>SqlContainerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3939,12 +3375,10 @@ Input properties used for looking up and filtering SqlContainer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlContainerState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L141" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L141">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
@@ -3952,12 +3386,10 @@ The name of the Cosmos DB Account to create the container within. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerState-databaseName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L145" >}}">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L145">property <b>databaseName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
@@ -3965,12 +3397,10 @@ The name of the Cosmos DB SQL Database to create the container within. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L149" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L149">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB SQL Database. Changing this forces a new resource to be created.
@@ -3978,12 +3408,10 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerState-partitionKeyPath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L153" >}}">property <b>partitionKeyPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L153">property <b>partitionKeyPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>partitionKeyPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Define a partition key. Changing this forces a new resource to be created.
@@ -3991,12 +3419,10 @@ Define a partition key. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L157" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L157">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB SQL Database is created. Changing this forces a new resource to be created.
@@ -4004,12 +3430,10 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlContainerState-uniqueKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlContainer.ts#L161" >}}">property <b>uniqueKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlContainer.ts#L161">property <b>uniqueKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerUniqueKey'>inputs.cosmosdb.SqlContainerUniqueKey</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `uniqueKey` blocks as defined below. Changing this forces a new resource to be created.
@@ -4018,7 +3442,7 @@ One or more `uniqueKey` blocks as defined below. Changing this forces a new reso
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlDatabaseArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L130" >}}">interface <b>SqlDatabaseArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L130">interface <b>SqlDatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4027,12 +3451,10 @@ The set of arguments for constructing a SqlDatabase resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabaseArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L134" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L134">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB SQL Database to create the table within. Changing this forces a new resource to be created.
@@ -4040,12 +3462,10 @@ The name of the Cosmos DB SQL Database to create the table within. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabaseArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB SQL Database. Changing this forces a new resource to be created.
@@ -4053,12 +3473,10 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabaseArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L142" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L142">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB SQL Database is created. Changing this forces a new resource to be created.
@@ -4067,7 +3485,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqlDatabaseState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L112" >}}">interface <b>SqlDatabaseState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L112">interface <b>SqlDatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4076,12 +3494,10 @@ Input properties used for looking up and filtering SqlDatabase resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SqlDatabaseState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L116" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L116">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB SQL Database to create the table within. Changing this forces a new resource to be created.
@@ -4089,12 +3505,10 @@ The name of the Cosmos DB SQL Database to create the table within. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabaseState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L120" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L120">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB SQL Database. Changing this forces a new resource to be created.
@@ -4102,12 +3516,10 @@ Specifies the name of the Cosmos DB SQL Database. Changing this forces a new res
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SqlDatabaseState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/sqlDatabase.ts#L124" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/sqlDatabase.ts#L124">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB SQL Database is created. Changing this forces a new resource to be created.
@@ -4116,7 +3528,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L130" >}}">interface <b>TableArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L130">interface <b>TableArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4125,12 +3537,10 @@ The set of arguments for constructing a Table resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TableArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L134" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L134">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Table to create the table within. Changing this forces a new resource to be created.
@@ -4138,12 +3548,10 @@ The name of the Cosmos DB Table to create the table within. Changing this forces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L138">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Table. Changing this forces a new resource to be created.
@@ -4151,12 +3559,10 @@ Specifies the name of the Cosmos DB Table. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L142" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L142">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Table is created. Changing this forces a new resource to be created.
@@ -4165,7 +3571,7 @@ The name of the resource group in which the Cosmos DB Table is created. Changing
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TableState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L112" >}}">interface <b>TableState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L112">interface <b>TableState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4174,12 +3580,10 @@ Input properties used for looking up and filtering Table resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TableState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L116" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L116">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Cosmos DB Table to create the table within. Changing this forces a new resource to be created.
@@ -4187,12 +3591,10 @@ The name of the Cosmos DB Table to create the table within. Changing this forces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L120" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L120">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Cosmos DB Table. Changing this forces a new resource to be created.
@@ -4200,12 +3602,10 @@ Specifies the name of the Cosmos DB Table. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TableState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="cosmosdb/table.ts#L124" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/table.ts#L124">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the Cosmos DB Table is created. Changing this forces a new resource to be created.
@@ -4214,12 +3614,10 @@ The name of the resource group in which the Cosmos DB Table is created. Changing
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CosmosChangeFeedCallback">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="cosmosdb/zMixins.ts#L99" >}}">type <b>CosmosChangeFeedCallback</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/cosmosdb/zMixins.ts#L99">type <b>CosmosChangeFeedCallback</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> CosmosChangeFeedCallback = appservice.Callback&lt;<a href='#CosmosChangeFeedContext'>CosmosChangeFeedContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[], appservice.FunctionDefaultResponse&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Signature of the callback that can receive Cosmos Change Feed notifications.

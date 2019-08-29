@@ -33,32 +33,28 @@ title: Module redis
 <li><a href="#GetCacheResult">interface GetCacheResult</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="redis/cache.ts" >}}">redis/cache.ts</a> <a href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts" >}}">redis/firewallRule.ts</a> <a href="{{< pkg-url pkg="azure" path="redis/getCache.ts" >}}">redis/getCache.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts">redis/cache.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts">redis/firewallRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts">redis/getCache.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Cache">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L12" >}}">class <b>Cache</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L12">class <b>Cache</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/redis_cache.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Cache-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L120" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L120"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Cache(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CacheArgs'>CacheArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -71,13 +67,11 @@ Create a Cache resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CacheState'>CacheState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Cache'>Cache</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -87,25 +81,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -115,12 +105,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L42" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L42">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
@@ -128,12 +116,10 @@ The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Bas
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-enableNonSslPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L46" >}}">property <b>enableNonSslPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L46">property <b>enableNonSslPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableNonSslPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable the non-SSL port (6379) - disabled by default.
@@ -141,12 +127,10 @@ Enable the non-SSL port (6379) - disabled by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-family">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L50" >}}">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L50">property <b>family</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
@@ -154,12 +138,10 @@ The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SK
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L54" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L54">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Hostname of the Redis Instance
@@ -167,12 +149,10 @@ The Hostname of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -181,12 +161,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L58" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L58">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The location of the resource group.
@@ -194,12 +172,10 @@ The location of the resource group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-minimumTlsVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L62" >}}">property <b>minimumTlsVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L62">property <b>minimumTlsVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minimumTlsVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The minimum TLS version.  Defaults to `1.0`.
@@ -207,12 +183,10 @@ The minimum TLS version.  Defaults to `1.0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L67" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L67">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Redis instance. Changing this forces a
@@ -221,12 +195,10 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-patchSchedules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L71" >}}">property <b>patchSchedules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L71">property <b>patchSchedules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CachePatchSchedule'>outputs.redis.CachePatchSchedule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of `patchSchedule` blocks as defined below - only available for Premium SKU's.
@@ -234,12 +206,10 @@ A list of `patchSchedule` blocks as defined below - only available for Premium S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L75" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L75">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The non-SSL Port of the Redis Instance
@@ -247,12 +217,10 @@ The non-SSL Port of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L79" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L79">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary Access Key for the Redis Instance
@@ -260,12 +228,10 @@ The Primary Access Key for the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-privateStaticIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L83" >}}">property <b>privateStaticIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L83">property <b>privateStaticIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privateStaticIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
@@ -273,12 +239,10 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-redisConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L87" >}}">property <b>redisConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L87">property <b>redisConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>redisConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CacheRedisConfiguration'>outputs.redis.CacheRedisConfiguration</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `redisConfiguration` as defined below - with some limitations by SKU - defaults/details are shown below.
@@ -286,12 +250,10 @@ A `redisConfiguration` as defined below - with some limitations by SKU - default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L92" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L92">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -300,12 +262,10 @@ create the Redis instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L96" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L96">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Access Key for the Redis Instance
@@ -313,12 +273,10 @@ The Secondary Access Key for the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-shardCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L100" >}}">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L100">property <b>shardCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shardCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 *Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
@@ -326,12 +284,10 @@ The Secondary Access Key for the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L104" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L104">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
@@ -339,12 +295,10 @@ The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-sslPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L108" >}}">property <b>sslPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L108">property <b>sslPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sslPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SSL Port of the Redis Instance
@@ -352,12 +306,10 @@ The SSL Port of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L112" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L112">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Subnet within which the Redis Cache should be deployed. Changing this forces a new resource to be created.
@@ -365,12 +317,10 @@ The ID of the Subnet within which the Redis Cache should be deployed. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L116" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L116">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -378,12 +328,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -392,12 +340,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cache-zones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L120" >}}">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L120">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
@@ -406,12 +352,10 @@ A list of a single item of the Availability Zone which the Redis Cache should be
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L55" >}}">class <b>FirewallRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L55">class <b>FirewallRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Firewall Rule associated with a Redis Cache.
@@ -461,13 +405,11 @@ const testFirewallRule = new azure.redis.FirewallRule("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L101" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L101"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FirewallRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FirewallRuleArgs'>FirewallRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -480,13 +422,11 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L64" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L64">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FirewallRuleState'>FirewallRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FirewallRule'>FirewallRule</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -496,25 +436,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L55" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L55">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L75" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L75">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -524,12 +460,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-endIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L85" >}}">property <b>endIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L85">property <b>endIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The highest IP address included in the range.
@@ -537,12 +471,10 @@ The highest IP address included in the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L55" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L55">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -551,12 +483,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L89" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L89">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Firewall Rule. Changing this forces a new resource to be created.
@@ -564,12 +494,10 @@ The name of the Firewall Rule. Changing this forces a new resource to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-redisCacheName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L93" >}}">property <b>redisCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L93">property <b>redisCacheName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>redisCacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Redis Cache. Changing this forces a new resource to be created.
@@ -577,12 +505,10 @@ The name of the Redis Cache. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L97" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L97">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which this Redis Cache exists.
@@ -590,12 +516,10 @@ The name of the resource group in which this Redis Cache exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-startIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L101" >}}">property <b>startIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L101">property <b>startIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>startIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The lowest IP address included in the range
@@ -603,12 +527,10 @@ The lowest IP address included in the range
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L55" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L55">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -618,13 +540,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getCache">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L27" >}}">function <b>getCache</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L27">function <b>getCache</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getCache(args: <a href='#GetCacheArgs'>GetCacheArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetCacheResult'>GetCacheResult</a>&gt; &amp; <a href='#GetCacheResult'>GetCacheResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -648,7 +568,7 @@ export const primaryAccessKey = example.primaryAccessKey;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="CacheArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L291" >}}">interface <b>CacheArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L291">interface <b>CacheArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -657,12 +577,10 @@ The set of arguments for constructing a Cache resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CacheArgs-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L295" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L295">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
@@ -670,12 +588,10 @@ The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Bas
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-enableNonSslPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L299" >}}">property <b>enableNonSslPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L299">property <b>enableNonSslPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableNonSslPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable the non-SSL port (6379) - disabled by default.
@@ -683,12 +599,10 @@ Enable the non-SSL port (6379) - disabled by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-family">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L303" >}}">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L303">property <b>family</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
@@ -696,12 +610,10 @@ The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SK
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L307" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L307">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The location of the resource group.
@@ -709,12 +621,10 @@ The location of the resource group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-minimumTlsVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L311" >}}">property <b>minimumTlsVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L311">property <b>minimumTlsVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minimumTlsVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The minimum TLS version.  Defaults to `1.0`.
@@ -722,12 +632,10 @@ The minimum TLS version.  Defaults to `1.0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L316" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L316">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Redis instance. Changing this forces a
@@ -736,12 +644,10 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-patchSchedules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L320" >}}">property <b>patchSchedules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L320">property <b>patchSchedules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CachePatchSchedule'>inputs.redis.CachePatchSchedule</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of `patchSchedule` blocks as defined below - only available for Premium SKU's.
@@ -749,12 +655,10 @@ A list of `patchSchedule` blocks as defined below - only available for Premium S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-privateStaticIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L324" >}}">property <b>privateStaticIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L324">property <b>privateStaticIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateStaticIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
@@ -762,12 +666,10 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-redisConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L328" >}}">property <b>redisConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L328">property <b>redisConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheRedisConfiguration'>inputs.redis.CacheRedisConfiguration</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `redisConfiguration` as defined below - with some limitations by SKU - defaults/details are shown below.
@@ -775,12 +677,10 @@ A `redisConfiguration` as defined below - with some limitations by SKU - default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L333" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L333">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -789,12 +689,10 @@ create the Redis instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-shardCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L337" >}}">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L337">property <b>shardCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 *Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
@@ -802,12 +700,10 @@ create the Redis instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L341" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L341">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
@@ -815,12 +711,10 @@ The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L345" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L345">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Subnet within which the Redis Cache should be deployed. Changing this forces a new resource to be created.
@@ -828,12 +722,10 @@ The ID of the Subnet within which the Redis Cache should be deployed. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L349" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L349">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -841,12 +733,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheArgs-zones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L353" >}}">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L353">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
@@ -855,7 +745,7 @@ A list of a single item of the Availability Zone which the Redis Cache should be
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CacheState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L203" >}}">interface <b>CacheState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L203">interface <b>CacheState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -864,12 +754,10 @@ Input properties used for looking up and filtering Cache resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CacheState-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L207" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L207">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Basic/Standard) are `0, 1, 2, 3, 4, 5, 6`, and for P (Premium) `family` are `1, 2, 3, 4`.
@@ -877,12 +765,10 @@ The size of the Redis cache to deploy. Valid values for a SKU `family` of C (Bas
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-enableNonSslPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L211" >}}">property <b>enableNonSslPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L211">property <b>enableNonSslPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableNonSslPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable the non-SSL port (6379) - disabled by default.
@@ -890,12 +776,10 @@ Enable the non-SSL port (6379) - disabled by default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-family">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L215" >}}">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L215">property <b>family</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
@@ -903,12 +787,10 @@ The SKU family/pricing group to use. Valid values are `C` (for Basic/Standard SK
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L219" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L219">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Hostname of the Redis Instance
@@ -916,12 +798,10 @@ The Hostname of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L223" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L223">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The location of the resource group.
@@ -929,12 +809,10 @@ The location of the resource group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-minimumTlsVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L227" >}}">property <b>minimumTlsVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L227">property <b>minimumTlsVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minimumTlsVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The minimum TLS version.  Defaults to `1.0`.
@@ -942,12 +820,10 @@ The minimum TLS version.  Defaults to `1.0`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L232" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L232">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Redis instance. Changing this forces a
@@ -956,12 +832,10 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-patchSchedules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L236" >}}">property <b>patchSchedules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L236">property <b>patchSchedules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CachePatchSchedule'>inputs.redis.CachePatchSchedule</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of `patchSchedule` blocks as defined below - only available for Premium SKU's.
@@ -969,12 +843,10 @@ A list of `patchSchedule` blocks as defined below - only available for Premium S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L240" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L240">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The non-SSL Port of the Redis Instance
@@ -982,12 +854,10 @@ The non-SSL Port of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L244" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L244">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary Access Key for the Redis Instance
@@ -995,12 +865,10 @@ The Primary Access Key for the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-privateStaticIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L248" >}}">property <b>privateStaticIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L248">property <b>privateStaticIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateStaticIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Static IP Address to assign to the Redis Cache when hosted inside the Virtual Network. Changing this forces a new resource to be created.
@@ -1008,12 +876,10 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-redisConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L252" >}}">property <b>redisConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L252">property <b>redisConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheRedisConfiguration'>inputs.redis.CacheRedisConfiguration</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `redisConfiguration` as defined below - with some limitations by SKU - defaults/details are shown below.
@@ -1021,12 +887,10 @@ A `redisConfiguration` as defined below - with some limitations by SKU - default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L257" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L257">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -1035,12 +899,10 @@ create the Redis instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L261" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L261">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Access Key for the Redis Instance
@@ -1048,12 +910,10 @@ The Secondary Access Key for the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-shardCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L265" >}}">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L265">property <b>shardCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 *Only available when using the Premium SKU* The number of Shards to create on the Redis Cluster.
@@ -1061,12 +921,10 @@ The Secondary Access Key for the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L269" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L269">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
@@ -1074,12 +932,10 @@ The SKU of Redis to use. Possible values are `Basic`, `Standard` and `Premium`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-sslPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L273" >}}">property <b>sslPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L273">property <b>sslPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SSL Port of the Redis Instance
@@ -1087,12 +943,10 @@ The SSL Port of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L277" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L277">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Subnet within which the Redis Cache should be deployed. Changing this forces a new resource to be created.
@@ -1100,12 +954,10 @@ The ID of the Subnet within which the Redis Cache should be deployed. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L281" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L281">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1113,12 +965,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CacheState-zones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/cache.ts#L285" >}}">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/cache.ts#L285">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of a single item of the Availability Zone which the Redis Cache should be allocated in.
@@ -1127,7 +977,7 @@ A list of a single item of the Availability Zone which the Redis Cache should be
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L180" >}}">interface <b>FirewallRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L180">interface <b>FirewallRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1136,12 +986,10 @@ The set of arguments for constructing a FirewallRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-endIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L184" >}}">property <b>endIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L184">property <b>endIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The highest IP address included in the range.
@@ -1149,12 +997,10 @@ The highest IP address included in the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L188" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L188">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Firewall Rule. Changing this forces a new resource to be created.
@@ -1162,12 +1008,10 @@ The name of the Firewall Rule. Changing this forces a new resource to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-redisCacheName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L192" >}}">property <b>redisCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L192">property <b>redisCacheName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisCacheName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Redis Cache. Changing this forces a new resource to be created.
@@ -1175,12 +1019,10 @@ The name of the Redis Cache. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L196" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L196">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which this Redis Cache exists.
@@ -1188,12 +1030,10 @@ The name of the resource group in which this Redis Cache exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleArgs-startIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L200" >}}">property <b>startIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L200">property <b>startIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The lowest IP address included in the range
@@ -1202,7 +1042,7 @@ The lowest IP address included in the range
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L154" >}}">interface <b>FirewallRuleState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L154">interface <b>FirewallRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1211,12 +1051,10 @@ Input properties used for looking up and filtering FirewallRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallRuleState-endIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L158" >}}">property <b>endIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L158">property <b>endIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The highest IP address included in the range.
@@ -1224,12 +1062,10 @@ The highest IP address included in the range.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L162" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L162">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Firewall Rule. Changing this forces a new resource to be created.
@@ -1237,12 +1073,10 @@ The name of the Firewall Rule. Changing this forces a new resource to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-redisCacheName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L166" >}}">property <b>redisCacheName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L166">property <b>redisCacheName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisCacheName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Redis Cache. Changing this forces a new resource to be created.
@@ -1250,12 +1084,10 @@ The name of the Redis Cache. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L170" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L170">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which this Redis Cache exists.
@@ -1263,12 +1095,10 @@ The name of the resource group in which this Redis Cache exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRuleState-startIp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/firewallRule.ts#L174" >}}">property <b>startIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/firewallRule.ts#L174">property <b>startIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The lowest IP address included in the range
@@ -1277,7 +1107,7 @@ The lowest IP address included in the range
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCacheArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L47" >}}">interface <b>GetCacheArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L47">interface <b>GetCacheArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1286,12 +1116,10 @@ A collection of arguments for invoking getCache.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetCacheArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L51" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L51">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Redis cache
@@ -1299,12 +1127,10 @@ The name of the Redis cache
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L55" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L55">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group the Redis cache instance is located in.
@@ -1312,18 +1138,14 @@ The name of the resource group the Redis cache instance is located in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheArgs-zones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L56" >}}">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L56">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCacheResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L62" >}}">interface <b>GetCacheResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L62">interface <b>GetCacheResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1332,12 +1154,10 @@ A collection of values returned by getCache.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetCacheResult-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L66" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L66">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the Redis Cache deployed.
@@ -1345,12 +1165,10 @@ The size of the Redis Cache deployed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-enableNonSslPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L70" >}}">property <b>enableNonSslPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L70">property <b>enableNonSslPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableNonSslPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether the SSL port is enabled.
@@ -1358,12 +1176,10 @@ Whether the SSL port is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-family">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L74" >}}">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L74">property <b>family</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>family: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SKU family/pricing group used. Possible values are `C` (for Basic/Standard SKU family) and `P` (for `Premium`)
@@ -1371,12 +1187,10 @@ The SKU family/pricing group used. Possible values are `C` (for Basic/Standard S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-hostname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L78" >}}">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L78">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Hostname of the Redis Instance
@@ -1384,12 +1198,10 @@ The Hostname of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L125" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L125">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1397,12 +1209,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L82" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L82">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The location of the Redis Cache.
@@ -1410,12 +1220,10 @@ The location of the Redis Cache.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-minimumTlsVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L86" >}}">property <b>minimumTlsVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L86">property <b>minimumTlsVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minimumTlsVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The minimum TLS version.
@@ -1423,22 +1231,16 @@ The minimum TLS version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L87" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L87">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-patchSchedules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L91" >}}">property <b>patchSchedules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L91">property <b>patchSchedules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCachePatchSchedule'>outputs.redis.GetCachePatchSchedule</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of `patchSchedule` blocks as defined below - only available for Premium SKU's.
@@ -1446,12 +1248,10 @@ A list of `patchSchedule` blocks as defined below - only available for Premium S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L95" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L95">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The non-SSL Port of the Redis Instance
@@ -1459,12 +1259,10 @@ The non-SSL Port of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L99" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L99">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Primary Access Key for the Redis Instance
@@ -1472,22 +1270,16 @@ The Primary Access Key for the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-privateStaticIpAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L100" >}}">property <b>privateStaticIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L100">property <b>privateStaticIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateStaticIpAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-redisConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L104" >}}">property <b>redisConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L104">property <b>redisConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redisConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCacheRedisConfiguration'>outputs.redis.GetCacheRedisConfiguration</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `redisConfiguration` block as defined below.
@@ -1495,22 +1287,16 @@ A `redisConfiguration` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L105" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L105">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L109" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L109">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Access Key for the Redis Instance
@@ -1518,22 +1304,16 @@ The Secondary Access Key for the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-shardCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L110" >}}">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L110">property <b>shardCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shardCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L114" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L114">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skuName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SKU of Redis used. Possible values are `Basic`, `Standard` and `Premium`.
@@ -1541,12 +1321,10 @@ The SKU of Redis used. Possible values are `Basic`, `Standard` and `Premium`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-sslPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L118" >}}">property <b>sslPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L118">property <b>sslPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The SSL Port of the Redis Instance
@@ -1554,33 +1332,21 @@ The SSL Port of the Redis Instance
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-subnetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L119" >}}">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L119">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L120" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L120">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCacheResult-zones">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="redis/getCache.ts#L121" >}}">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/redis/getCache.ts#L121">property <b>zones</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zones: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
