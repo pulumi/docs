@@ -16,6 +16,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.devtest.AwaitableGetVirtualNetworkResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">AwaitableGetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">allowed_subnets=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet_overrides=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.AwaitableGetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.devtest.GetLabResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">GetLabResult</code><span class="sig-paren">(</span><em class="sig-param">artifacts_storage_account_id=None</em>, <em class="sig-param">default_premium_storage_account_id=None</em>, <em class="sig-param">default_storage_account_id=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">premium_data_disk_storage_account_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLab.</p>
@@ -76,6 +81,36 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.GetLabResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetLabResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.devtest.GetVirtualNetworkResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">GetVirtualNetworkResult</code><span class="sig-paren">(</span><em class="sig-param">allowed_subnets=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet_overrides=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVirtualNetwork.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.GetVirtualNetworkResult.allowed_subnets">
+<code class="sig-name descname">allowed_subnets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult.allowed_subnets" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of subnets enabled for the virtual network as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.GetVirtualNetworkResult.subnet_overrides">
+<code class="sig-name descname">subnet_overrides</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult.subnet_overrides" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of permission overrides for the subnets as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.GetVirtualNetworkResult.unique_identifier">
+<code class="sig-name descname">unique_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult.unique_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique immutable identifier of the virtual network.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.devtest.GetVirtualNetworkResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.GetVirtualNetworkResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -171,21 +206,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.devtest.Lab.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">artifacts_storage_account_id=None</em>, <em class="sig-param">default_premium_storage_account_id=None</em>, <em class="sig-param">default_storage_account_id=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">premium_data_disk_storage_account_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Lab.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Lab resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] artifacts_storage_account_id: The ID of the Storage Account used for Artifact Storage.
-:param pulumi.Input[str] default_premium_storage_account_id: The ID of the Default Premium Storage Account for this Dev Test Lab.
-:param pulumi.Input[str] default_storage_account_id: The ID of the Default Storage Account for this Dev Test Lab.
-:param pulumi.Input[str] key_vault_id: The ID of the Key used for this Dev Test Lab.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the Dev Test Lab should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Dev Test Lab. Changing this forces a new resource to be created.
-:param pulumi.Input[str] premium_data_disk_storage_account_id: The ID of the Storage Account used for Storage of Premium Data Disk.
-:param pulumi.Input[str] resource_group_name: The name of the resource group under which the Dev Test Lab resource has to be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] storage_type: The type of storage used by the Dev Test Lab. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] unique_identifier: The unique immutable identifier of the Dev Test Lab.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>artifacts_storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Storage Account used for Artifact Storage.</p></li>
+<li><p><strong>default_premium_storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Default Premium Storage Account for this Dev Test Lab.</p></li>
+<li><p><strong>default_storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Default Storage Account for this Dev Test Lab.</p></li>
+<li><p><strong>key_vault_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key used for this Dev Test Lab.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the Dev Test Lab should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Lab. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>premium_data_disk_storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Storage Account used for Storage of Premium Data Disk.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the Dev Test Lab resource has to be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>storage_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of storage used by the Dev Test Lab. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Premium</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique immutable identifier of the Dev Test Lab.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_lab.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_lab.html.markdown</a>.</p>
 </div></blockquote>
@@ -258,6 +299,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>gallery_image_reference</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>inbound_nat_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
@@ -283,12 +337,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.LinuxVirtualMachine.gallery_image_reference">
 <code class="sig-name descname">gallery_image_reference</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.LinuxVirtualMachine.gallery_image_reference" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">gallery_image_reference</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.LinuxVirtualMachine.inbound_nat_rules">
 <code class="sig-name descname">inbound_nat_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.LinuxVirtualMachine.inbound_nat_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">inbound_nat_rule</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -379,29 +444,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.LinuxVirtualMachine.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_claim=None</em>, <em class="sig-param">disallow_public_ip_address=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">gallery_image_reference=None</em>, <em class="sig-param">inbound_nat_rules=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">lab_subnet_name=None</em>, <em class="sig-param">lab_virtual_network_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notes=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">ssh_key=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.LinuxVirtualMachine.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LinuxVirtualMachine resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] allow_claim: Can this Virtual Machine be claimed by users? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[bool] disallow_public_ip_address: Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.
-:param pulumi.Input[str] fqdn: The FQDN of the Virtual Machine.
-:param pulumi.Input[dict] gallery_image_reference: A <code class="docutils literal notranslate"><span class="pre">gallery_image_reference</span></code> block as defined below.
-:param pulumi.Input[list] inbound_nat_rules: One or more <code class="docutils literal notranslate"><span class="pre">inbound_nat_rule</span></code> blocks as defined below. Changing this forces a new resource to be created.
-:param pulumi.Input[str] lab_name: Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] lab_subnet_name: The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[str] lab_virtual_network_id: The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] notes: Any notes about the Virtual Machine.
-:param pulumi.Input[str] password: The Password associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code> used to login to this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] size: The Machine Size to use for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] ssh_key: The SSH Key associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code> used to login to this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] storage_type: The type of Storage to use on this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] unique_identifier: The unique immutable identifier of the Virtual Machine.
-:param pulumi.Input[str] username: The Username associated with the local administrator on this Virtual Machine. Changing this forces a new resource to be created.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allow_claim</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can this Virtual Machine be claimed by users? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>disallow_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the Virtual Machine.</p></li>
+<li><p><strong>gallery_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">gallery_image_reference</span></code> block as defined below.</p></li>
+<li><p><strong>inbound_nat_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">inbound_nat_rule</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>lab_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>lab_subnet_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>lab_virtual_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>notes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Any notes about the Virtual Machine.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code> used to login to this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Machine Size to use for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>ssh_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SSH Key associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code> used to login to this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>storage_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of Storage to use on this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique immutable identifier of the Virtual Machine.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Username associated with the local administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>gallery_image_reference</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>inbound_nat_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_linux_virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
@@ -527,19 +611,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.Policy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">evaluator_type=None</em>, <em class="sig-param">fact_data=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy_set_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Policy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Policy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A description for the Policy.
-:param pulumi.Input[str] evaluator_type: The Evaluation Type used for this Policy. Possible values include: ‘AllowedValuesPolicy’, ‘MaxValuePolicy’. Changing this forces a new resource to be created.
-:param pulumi.Input[str] fact_data: The Fact Data for this Policy.
-:param pulumi.Input[str] lab_name: Specifies the name of the Dev Test Lab in which the Policy should be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Dev Test Policy. Possible values are <code class="docutils literal notranslate"><span class="pre">GalleryImage</span></code>, <code class="docutils literal notranslate"><span class="pre">LabPremiumVmCount</span></code>, <code class="docutils literal notranslate"><span class="pre">LabTargetCost</span></code>, <code class="docutils literal notranslate"><span class="pre">LabVmCount</span></code>, <code class="docutils literal notranslate"><span class="pre">LabVmSize</span></code>, <code class="docutils literal notranslate"><span class="pre">UserOwnedLabPremiumVmCount</span></code>, <code class="docutils literal notranslate"><span class="pre">UserOwnedLabVmCount</span></code> and <code class="docutils literal notranslate"><span class="pre">UserOwnedLabVmCountInSubnet</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] policy_set_name: Specifies the name of the Policy Set within the Dev Test Lab where this policy should be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] threshold: The Threshold for this Policy.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the Policy.</p></li>
+<li><p><strong>evaluator_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Evaluation Type used for this Policy. Possible values include: ‘AllowedValuesPolicy’, ‘MaxValuePolicy’. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>fact_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Fact Data for this Policy.</p></li>
+<li><p><strong>lab_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Lab in which the Policy should be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Policy. Possible values are <code class="docutils literal notranslate"><span class="pre">GalleryImage</span></code>, <code class="docutils literal notranslate"><span class="pre">LabPremiumVmCount</span></code>, <code class="docutils literal notranslate"><span class="pre">LabTargetCost</span></code>, <code class="docutils literal notranslate"><span class="pre">LabVmCount</span></code>, <code class="docutils literal notranslate"><span class="pre">LabVmSize</span></code>, <code class="docutils literal notranslate"><span class="pre">UserOwnedLabPremiumVmCount</span></code>, <code class="docutils literal notranslate"><span class="pre">UserOwnedLabVmCount</span></code> and <code class="docutils literal notranslate"><span class="pre">UserOwnedLabVmCountInSubnet</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>policy_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Policy Set within the Dev Test Lab where this policy should be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Threshold for this Policy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -584,6 +674,110 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.devtest.Schedule">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">Schedule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">daily_recurrence=None</em>, <em class="sig-param">hourly_recurrence=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_settings=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">time_zone_id=None</em>, <em class="sig-param">weekly_recurrence=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Schedule resource with the given unique name, props, and options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>daily_recurrence</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>hourly_recurrence</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">minute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>notification_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>weekly_recurrence</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">week_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+<dl class="method">
+<dt id="pulumi_azure.devtest.Schedule.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">daily_recurrence=None</em>, <em class="sig-param">hourly_recurrence=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_settings=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">time_zone_id=None</em>, <em class="sig-param">weekly_recurrence=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Schedule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Schedule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>daily_recurrence</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>hourly_recurrence</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">minute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>notification_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeInMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>weekly_recurrence</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">week_days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.devtest.Schedule.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Schedule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.devtest.Schedule.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Schedule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.devtest.VirtualNetwork">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">VirtualNetwork</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.VirtualNetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Network within a Dev Test Lab.</p>
@@ -601,6 +795,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>subnet</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useInVirtualMachineCreation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePublicIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown</a>.</p>
 </div></blockquote>
@@ -632,6 +832,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.VirtualNetwork.subnet">
 <code class="sig-name descname">subnet</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.VirtualNetwork.subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">subnet</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useInVirtualMachineCreation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePublicIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -650,17 +855,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.VirtualNetwork.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">subnet=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.VirtualNetwork.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualNetwork resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A description for the Virtual Network.
-:param pulumi.Input[str] lab_name: Specifies the name of the Dev Test Lab in which the Virtual Network should be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] subnet: A <code class="docutils literal notranslate"><span class="pre">subnet</span></code> block as defined below.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] unique_identifier: The unique immutable identifier of the Dev Test Virtual Network.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the Virtual Network.</p></li>
+<li><p><strong>lab_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Lab in which the Virtual Network should be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>subnet</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">subnet</span></code> block as defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique immutable identifier of the Dev Test Virtual Network.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>subnet</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useInVirtualMachineCreation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usePublicIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_virtual_network.html.markdown</a>.</p>
 </div></blockquote>
@@ -732,6 +949,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>gallery_image_reference</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>inbound_nat_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
@@ -757,12 +987,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.WindowsVirtualMachine.gallery_image_reference">
 <code class="sig-name descname">gallery_image_reference</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.WindowsVirtualMachine.gallery_image_reference" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">gallery_image_reference</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.devtest.WindowsVirtualMachine.inbound_nat_rules">
 <code class="sig-name descname">inbound_nat_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devtest.WindowsVirtualMachine.inbound_nat_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">inbound_nat_rule</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -847,28 +1088,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.WindowsVirtualMachine.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_claim=None</em>, <em class="sig-param">disallow_public_ip_address=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">gallery_image_reference=None</em>, <em class="sig-param">inbound_nat_rules=None</em>, <em class="sig-param">lab_name=None</em>, <em class="sig-param">lab_subnet_name=None</em>, <em class="sig-param">lab_virtual_network_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notes=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">storage_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_identifier=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.WindowsVirtualMachine.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing WindowsVirtualMachine resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] allow_claim: Can this Virtual Machine be claimed by users? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[bool] disallow_public_ip_address: Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.
-:param pulumi.Input[str] fqdn: The FQDN of the Virtual Machine.
-:param pulumi.Input[dict] gallery_image_reference: A <code class="docutils literal notranslate"><span class="pre">gallery_image_reference</span></code> block as defined below.
-:param pulumi.Input[list] inbound_nat_rules: One or more <code class="docutils literal notranslate"><span class="pre">inbound_nat_rule</span></code> blocks as defined below. Changing this forces a new resource to be created.
-:param pulumi.Input[str] lab_name: Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] lab_subnet_name: The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[str] lab_virtual_network_id: The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] notes: Any notes about the Virtual Machine.
-:param pulumi.Input[str] password: The Password associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code> used to login to this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] size: The Machine Size to use for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] storage_type: The type of Storage to use on this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] unique_identifier: The unique immutable identifier of the Virtual Machine.
-:param pulumi.Input[str] username: The Username associated with the local administrator on this Virtual Machine. Changing this forces a new resource to be created.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allow_claim</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can this Virtual Machine be claimed by users? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>disallow_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the Virtual Machine.</p></li>
+<li><p><strong>gallery_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">gallery_image_reference</span></code> block as defined below.</p></li>
+<li><p><strong>inbound_nat_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">inbound_nat_rule</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>lab_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Lab in which the Virtual Machine should be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>lab_subnet_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Subnet within the Dev Test Virtual Network where this machine should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>lab_virtual_network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Dev Test Virtual Network where this Virtual Machine should be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the Dev Test Lab exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>notes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Any notes about the Virtual Machine.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code> used to login to this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Dev Test Lab resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Machine Size to use for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>storage_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of Storage to use on this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique immutable identifier of the Virtual Machine.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Username associated with the local administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>gallery_image_reference</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>inbound_nat_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The frontend port associated with this Inbound NAT Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/dev_test_windows_virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
@@ -916,8 +1176,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.devtest.get_lab">
 <code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">get_lab</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.get_lab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Dev Test Lab.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Dev Test Lab.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The Name of the Resource Group where the Dev Test Lab exists.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_lab.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_lab.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.devtest.get_virtual_network">
+<code class="sig-prename descclassname">pulumi_azure.devtest.</code><code class="sig-name descname">get_virtual_network</code><span class="sig-paren">(</span><em class="sig-param">lab_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.get_virtual_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Dev Test Lab Virtual Network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lab_name</strong> (<em>str</em>) – Specifies the name of the Dev Test Lab.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Virtual Network.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group that contains the Virtual Network.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_virtual_network.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dev_test_virtual_network.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

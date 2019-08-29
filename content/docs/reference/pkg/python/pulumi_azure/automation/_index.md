@@ -28,6 +28,10 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>sku</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Automation Account. Changing this forces a new resource to be created.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_account.html.markdown</a>.</p>
 </div></blockquote>
@@ -71,6 +75,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.automation.Account.sku">
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Account.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Automation Account. Changing this forces a new resource to be created.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -89,19 +96,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.automation.Account.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dsc_primary_access_key=None</em>, <em class="sig-param">dsc_secondary_access_key=None</em>, <em class="sig-param">dsc_server_endpoint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.Account.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Account resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] dsc_primary_access_key: The Primary Access Key for the DSC Endpoint associated with this Automation Account.
-:param pulumi.Input[str] dsc_secondary_access_key: The Secondary Access Key for the DSC Endpoint associated with this Automation Account.
-:param pulumi.Input[str] dsc_server_endpoint: The DSC Server Endpoint associated with this Automation Account.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Automation Account. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] sku: ) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.
-:param pulumi.Input[str] sku_name: The SKU name of the account - only <code class="docutils literal notranslate"><span class="pre">Basic</span></code> is supported at this time.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dsc_primary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Primary Access Key for the DSC Endpoint associated with this Automation Account.</p></li>
+<li><p><strong>dsc_secondary_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Secondary Access Key for the DSC Endpoint associated with this Automation Account.</p></li>
+<li><p><strong>dsc_server_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DSC Server Endpoint associated with this Automation Account.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Automation Account. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the account - only <code class="docutils literal notranslate"><span class="pre">Basic</span></code> is supported at this time.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>sku</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Automation Account. Changing this forces a new resource to be created.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_account.html.markdown</a>.</p>
 </div></blockquote>
@@ -226,16 +243,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.BoolVariable.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automation_account_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.BoolVariable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BoolVariable resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] automation_account_name: The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] description: The description of the Automation Variable.
-:param pulumi.Input[bool] encrypted: Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] name: The name of the Automation Variable. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] value: The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">boolean</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Automation Variable.</p></li>
+<li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Automation Variable. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">boolean</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_bool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_bool.html.markdown</a>.</p>
 </div></blockquote>
@@ -340,16 +363,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.Credential.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.Credential.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Credential resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_name: The name of the automation account in which the Credential is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] description: The description associated with this Automation Credential.
-:param pulumi.Input[str] name: Specifies the name of the Credential. Changing this forces a new resource to be created.
-:param pulumi.Input[str] password: The password associated with this Automation Credential.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Credential is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] username: The username associated with this Automation Credential.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Credential is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description associated with this Automation Credential.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Credential. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password associated with this Automation Credential.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Credential is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username associated with this Automation Credential.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_credential.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_credential.html.markdown</a>.</p>
 </div></blockquote>
@@ -454,16 +483,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.DateTimeVariable.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automation_account_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.DateTimeVariable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DateTimeVariable resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] automation_account_name: The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] description: The description of the Automation Variable.
-:param pulumi.Input[bool] encrypted: Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] name: The name of the Automation Variable. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
-:param pulumi.Input[str] value: The value of the Automation Variable in the <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC3339 Section 5.6 Internet Date/Time Format</a>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Automation Variable.</p></li>
+<li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Automation Variable. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The value of the Automation Variable in the <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.6">RFC3339 Section 5.6 Internet Date/Time Format</a>.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_datetime.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_datetime.html.markdown</a>.</p>
 </div></blockquote>
@@ -575,17 +611,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.DscConfiguration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automation_account_name=None</em>, <em class="sig-param">content_embedded=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">log_verbose=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.DscConfiguration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DscConfiguration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] automation_account_name: The name of the automation account in which the DSC Configuration is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] content_embedded: The PowerShell DSC Configuration script.
-:param pulumi.Input[str] description: Description to go with DSC Configuration.
-:param pulumi.Input[str] location: Must be the same location as the Automation Account.
-:param pulumi.Input[bool] log_verbose: Verbose log option.
-:param pulumi.Input[str] name: Specifies the name of the DSC Configuration. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the DSC Configuration is created. Changing this forces a new resource to be created.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the DSC Configuration is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>content_embedded</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PowerShell DSC Configuration script.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description to go with DSC Configuration.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Must be the same location as the Automation Account.</p></li>
+<li><p><strong>log_verbose</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Verbose log option.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the DSC Configuration. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the DSC Configuration is created. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_dsc_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_dsc_configuration.html.markdown</a>.</p>
 </div></blockquote>
@@ -676,14 +718,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.DscNodeConfiguration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automation_account_name=None</em>, <em class="sig-param">configuration_name=None</em>, <em class="sig-param">content_embedded=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.DscNodeConfiguration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DscNodeConfiguration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] automation_account_name: The name of the automation account in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] content_embedded: The PowerShell DSC Node Configuration (mof content).
-:param pulumi.Input[str] name: Specifies the name of the DSC Node Configuration. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the DSC Node Configuration is created. Changing this forces a new resource to be created.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the DSC Node Configuration is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>content_embedded</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PowerShell DSC Node Configuration (mof content).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the DSC Node Configuration. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the DSC Node Configuration is created. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_dsc_nodeconfiguration.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_dsc_nodeconfiguration.html.markdown</a>.</p>
 </div></blockquote>
@@ -908,16 +956,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.IntVariable.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automation_account_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.IntVariable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IntVariable resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] automation_account_name: The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] description: The description of the Automation Variable.
-:param pulumi.Input[bool] encrypted: Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] name: The name of the Automation Variable. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
-:param pulumi.Input[float] value: The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">integer</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Automation Variable.</p></li>
+<li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Automation Variable. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">integer</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_int.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_int.html.markdown</a>.</p>
 </div></blockquote>
@@ -977,6 +1031,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>module_link</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The uri of the module content (zip or nupkg).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_module.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_module.html.markdown</a>.</p>
 </div></blockquote>
@@ -990,6 +1054,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.Module.module_link">
 <code class="sig-name descname">module_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Module.module_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The published Module link.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The uri of the module content (zip or nupkg).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1008,14 +1081,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.Module.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automation_account_name=None</em>, <em class="sig-param">module_link=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.Module.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Module resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] automation_account_name: The name of the automation account in which the Module is created. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] module_link: The published Module link.
-:param pulumi.Input[str] name: Specifies the name of the Module. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Module is created. Changing this forces a new resource to be created.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Module is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>module_link</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The published Module link.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Module. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Module is created. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>module_link</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The uri of the module content (zip or nupkg).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_module.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_module.html.markdown</a>.</p>
 </div></blockquote>
@@ -1082,6 +1171,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>publish_content_link</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The uri of the runbook content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_runbook.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_runbook.html.markdown</a>.</p>
 </div></blockquote>
@@ -1131,6 +1231,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.RunBook.publish_content_link">
 <code class="sig-name descname">publish_content_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.RunBook.publish_content_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>The published runbook content link.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The uri of the runbook content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1155,21 +1265,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.RunBook.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">log_progress=None</em>, <em class="sig-param">log_verbose=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">publish_content_link=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">runbook_type=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.RunBook.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RunBook resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_name: The name of the automation account in which the Runbook is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] content: The desired content of the runbook.
-:param pulumi.Input[str] description: A description for this credential.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] log_progress: Progress log option.
-:param pulumi.Input[bool] log_verbose: Verbose log option.
-:param pulumi.Input[str] name: Specifies the name of the Runbook. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] publish_content_link: The published runbook content link.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Runbook is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] runbook_type: The type of the runbook - can be either <code class="docutils literal notranslate"><span class="pre">Graph</span></code>, <code class="docutils literal notranslate"><span class="pre">GraphPowerShell</span></code>, <code class="docutils literal notranslate"><span class="pre">GraphPowerShellWorkflow</span></code>, <code class="docutils literal notranslate"><span class="pre">PowerShellWorkflow</span></code>, <code class="docutils literal notranslate"><span class="pre">PowerShell</span></code> or <code class="docutils literal notranslate"><span class="pre">Script</span></code>.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Runbook is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The desired content of the runbook.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for this credential.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>log_progress</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Progress log option.</p></li>
+<li><p><strong>log_verbose</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Verbose log option.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Runbook. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>publish_content_link</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The published runbook content link.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Runbook is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>runbook_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the runbook - can be either <code class="docutils literal notranslate"><span class="pre">Graph</span></code>, <code class="docutils literal notranslate"><span class="pre">GraphPowerShell</span></code>, <code class="docutils literal notranslate"><span class="pre">GraphPowerShellWorkflow</span></code>, <code class="docutils literal notranslate"><span class="pre">PowerShellWorkflow</span></code>, <code class="docutils literal notranslate"><span class="pre">PowerShell</span></code> or <code class="docutils literal notranslate"><span class="pre">Script</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>publish_content_link</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The uri of the runbook content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_runbook.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_runbook.html.markdown</a>.</p>
 </div></blockquote>
@@ -1237,6 +1364,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>monthly_occurrences</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_schedule.html.markdown</a>.</p>
 </div></blockquote>
@@ -1280,6 +1412,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.Schedule.monthly_occurrences">
 <code class="sig-name descname">monthly_occurrences</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Schedule.monthly_occurrences" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of occurrences of days within a month. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Month</span></code>. The <code class="docutils literal notranslate"><span class="pre">monthly_occurrence</span></code> block supports fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1316,22 +1452,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.Schedule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">automation_account_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expiry_time=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">month_days=None</em>, <em class="sig-param">monthly_occurrences=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">start_time=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">week_days=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.Schedule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Schedule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] automation_account_name: The name of the automation account in which the Schedule is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] description: A description for this Schedule.
-:param pulumi.Input[str] expiry_time: The end time of the schedule.
-:param pulumi.Input[str] frequency: The frequency of the schedule. - can be either <code class="docutils literal notranslate"><span class="pre">OneTime</span></code>, <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Hour</span></code>, <code class="docutils literal notranslate"><span class="pre">Week</span></code>, or <code class="docutils literal notranslate"><span class="pre">Month</span></code>.
-:param pulumi.Input[float] interval: The number of <code class="docutils literal notranslate"><span class="pre">frequency</span></code>s between runs. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Hour</span></code>, <code class="docutils literal notranslate"><span class="pre">Week</span></code>, or <code class="docutils literal notranslate"><span class="pre">Month</span></code> and defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.
-:param pulumi.Input[list] month_days: List of days of the month that the job should execute on. Must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">31</span></code>. <code class="docutils literal notranslate"><span class="pre">-1</span></code> for last day of the month. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Month</span></code>.
-:param pulumi.Input[list] monthly_occurrences: List of occurrences of days within a month. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Month</span></code>. The <code class="docutils literal notranslate"><span class="pre">monthly_occurrence</span></code> block supports fields documented below.
-:param pulumi.Input[str] name: Specifies the name of the Schedule. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Schedule is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] start_time: Start time of the schedule. Must be at least five minutes in the future. Defaults to seven minutes in the future from the time the resource is created.
-:param pulumi.Input[str] timezone: The timezone of the start time. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code>. For possible values see: <a class="reference external" href="https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx">https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx</a>
-:param pulumi.Input[list] week_days: List of days of the week that the job should execute on. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Week</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Schedule is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for this Schedule.</p></li>
+<li><p><strong>expiry_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The end time of the schedule.</p></li>
+<li><p><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The frequency of the schedule. - can be either <code class="docutils literal notranslate"><span class="pre">OneTime</span></code>, <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Hour</span></code>, <code class="docutils literal notranslate"><span class="pre">Week</span></code>, or <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p></li>
+<li><p><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of <code class="docutils literal notranslate"><span class="pre">frequency</span></code>s between runs. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Day</span></code>, <code class="docutils literal notranslate"><span class="pre">Hour</span></code>, <code class="docutils literal notranslate"><span class="pre">Week</span></code>, or <code class="docutils literal notranslate"><span class="pre">Month</span></code> and defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p><strong>month_days</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of days of the month that the job should execute on. Must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">31</span></code>. <code class="docutils literal notranslate"><span class="pre">-1</span></code> for last day of the month. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Month</span></code>.</p></li>
+<li><p><strong>monthly_occurrences</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of occurrences of days within a month. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Month</span></code>. The <code class="docutils literal notranslate"><span class="pre">monthly_occurrence</span></code> block supports fields documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Schedule. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Schedule is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Start time of the schedule. Must be at least five minutes in the future. Defaults to seven minutes in the future from the time the resource is created.</p></li>
+<li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timezone of the start time. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code>. For possible values see: <a class="reference external" href="https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx">https://msdn.microsoft.com/en-us/library/ms912391(v=winembedded.11).aspx</a></p></li>
+<li><p><strong>week_days</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of days of the week that the job should execute on. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Week</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>monthly_occurrences</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_schedule.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_schedule.html.markdown</a>.</p>
 </div></blockquote>
@@ -1436,16 +1583,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.StringVariable.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">automation_account_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.StringVariable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StringVariable resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] automation_account_name: The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] description: The description of the Automation Variable.
-:param pulumi.Input[bool] encrypted: Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] name: The name of the Automation Variable. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
-:param pulumi.Input[str] value: The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>automation_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Automation Variable.</p></li>
+<li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the Automation Variable is encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Automation Variable. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the Automation Variable as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_string.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/automation_variable_string.html.markdown</a>.</p>
 </div></blockquote>
@@ -1493,6 +1646,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.get_bool_variable">
 <code class="sig-prename descclassname">pulumi_azure.automation.</code><code class="sig-name descname">get_bool_variable</code><span class="sig-paren">(</span><em class="sig-param">automation_account_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_bool_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Automation Bool Variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>automation_account_name</strong> (<em>str</em>) – The name of the automation account in which the Automation Variable exists.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Automation Variable.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The Name of the Resource Group where the automation account exists.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_bool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_bool.html.markdown</a>.</p>
 </div></blockquote>
@@ -1502,6 +1664,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.get_date_time_variable">
 <code class="sig-prename descclassname">pulumi_azure.automation.</code><code class="sig-name descname">get_date_time_variable</code><span class="sig-paren">(</span><em class="sig-param">automation_account_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_date_time_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Automation Datetime Variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>automation_account_name</strong> (<em>str</em>) – The name of the automation account in which the Automation Variable exists.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Automation Variable.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The Name of the Resource Group where the automation account exists.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_datetime.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_datetime.html.markdown</a>.</p>
 </div></blockquote>
@@ -1511,6 +1682,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.get_int_variable">
 <code class="sig-prename descclassname">pulumi_azure.automation.</code><code class="sig-name descname">get_int_variable</code><span class="sig-paren">(</span><em class="sig-param">automation_account_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_int_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Automation Int Variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>automation_account_name</strong> (<em>str</em>) – The name of the automation account in which the Automation Variable exists.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Automation Variable.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The Name of the Resource Group where the automation account exists.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_int.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_int.html.markdown</a>.</p>
 </div></blockquote>
@@ -1520,6 +1700,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.automation.get_string_variable">
 <code class="sig-prename descclassname">pulumi_azure.automation.</code><code class="sig-name descname">get_string_variable</code><span class="sig-paren">(</span><em class="sig-param">automation_account_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.automation.get_string_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Automation String Variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>automation_account_name</strong> (<em>str</em>) – The name of the automation account in which the Automation Variable exists.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Automation Variable.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The Name of the Resource Group where the automation account exists.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_string.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_string.html.markdown</a>.</p>
 </div></blockquote>

@@ -13,9 +13,11 @@ anything, please consult the source <a class="reference external" href="https://
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ad/">ad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysisservices/">analysisservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apimanagement/">apimanagement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appinsights/">appinsights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appservice/">appservice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authorization/">authorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automation/">automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="autoscale/">autoscale</a></li>
 <li class="toctree-l1"><a class="reference internal" href="batch/">batch</a></li>
@@ -32,6 +34,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="devspace/">devspace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devtest/">devtest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eventgrid/">eventgrid</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eventhub/">eventhub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hdinsight/">hdinsight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
@@ -39,8 +42,10 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="lb/">lb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loganalytics/">loganalytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logicapps/">logicapps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="management/">management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementgroups/">managementgroups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementresource/">managementresource</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maps/">maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb/">mariadb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mediaservices/">mediaservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring/">monitoring</a></li>
@@ -60,6 +65,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="scheduler/">scheduler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="search/">search</a></li>
 <li class="toctree-l1"><a class="reference internal" href="securitycenter/">securitycenter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicebus/">servicebus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servicefabric/">servicefabric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signalr/">signalr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sql/">sql</a></li>

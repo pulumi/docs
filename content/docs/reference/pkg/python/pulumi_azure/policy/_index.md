@@ -30,6 +30,12 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>identity</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID of this Policy Assignment if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID of this Policy Assignment if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_assignment.html.markdown</a>.</p>
 </div></blockquote>
@@ -49,6 +55,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.policy.Assignment.identity">
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID of this Policy Assignment if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID of this Policy Assignment if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -85,18 +96,30 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.policy.Assignment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">not_scopes=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definition_id=None</em>, <em class="sig-param">scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Assignment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Assignment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A description to use for this Policy Assignment. Changing this forces a new resource to be created.
-:param pulumi.Input[str] display_name: A friendly display name to use for this Policy Assignment. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] identity: An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block.
-:param pulumi.Input[str] location: The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: The name of the Policy Assignment. Changing this forces a new resource to be created.
-:param pulumi.Input[list] not_scopes: A list of the Policy Assignment’s excluded scopes. The list must contain Resource IDs (such as Subscriptions e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or Resource Groups e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>). 
-:param pulumi.Input[str] parameters: Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.
-:param pulumi.Input[str] policy_definition_id: The ID of the Policy Definition to be applied at the specified Scope.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description to use for this Policy Assignment. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly display name to use for this Policy Assignment. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where this policy assignment should exist. This is required when an Identity is assigned. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Policy Assignment. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>not_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the Policy Assignment’s excluded scopes. The list must contain Resource IDs (such as Subscriptions e.g. <code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000</span></code> or Resource Groups e.g.<code class="docutils literal notranslate"><span class="pre">/subscriptions/00000000-0000-0000-000000000000/resourceGroups/myResourceGroup</span></code>).</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Parameters for the policy definition. This field is a JSON object that maps to the Parameters field from the Policy Definition. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>policy_definition_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Policy Definition to be applied at the specified Scope.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>identity</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID of this Policy Assignment if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID of this Policy Assignment if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_assignment.html.markdown</a>.</p>
 </div></blockquote>
@@ -248,21 +271,19 @@ or “NotSpecified”. Changing this forces a new resource to be created.</p>
 <dt id="pulumi_azure.policy.Definition.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_rule=None</em>, <em class="sig-param">policy_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.Definition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Definition resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The description of the policy definition.
-:param pulumi.Input[str] display_name: The display name of the policy definition.
-:param pulumi.Input[str] management_group_id: The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-:param pulumi.Input[str] metadata: The metadata for the policy definition. This</p>
-<blockquote>
-<div><p>is a json object representing additional metadata that should be stored
-with the policy definition.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the policy definition.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the policy definition.</p></li>
+<li><p><strong>management_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metadata for the policy definition. This
+is a json object representing additional metadata that should be stored
+with the policy definition.</p></li>
 <li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be “All”, “Indexed” or
 “NotSpecified”. Changing this resource forces a new resource to be
@@ -454,18 +475,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.policy.PolicySetDefinition.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_definitions=None</em>, <em class="sig-param">policy_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.PolicySetDefinition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PolicySetDefinition resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The description of the policy set definition.
-:param pulumi.Input[str] display_name: The display name of the policy set definition.
-:param pulumi.Input[str] management_group_id: The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
-:param pulumi.Input[str] metadata: The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-:param pulumi.Input[str] name: The name of the policy set definition. Changing this forces a new resource to be created.
-:param pulumi.Input[str] parameters: Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-:param pulumi.Input[str] policy_definitions: The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions .
-:param pulumi.Input[str] policy_type: The policy set type. Possible values are <code class="docutils literal notranslate"><span class="pre">BuiltIn</span></code> or <code class="docutils literal notranslate"><span class="pre">Custom</span></code>. Changing this forces a new resource to be created.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the policy set definition.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the policy set definition.</p></li>
+<li><p><strong>management_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy set definition. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.</p></li>
+<li><p><strong>policy_definitions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions .</p></li>
+<li><p><strong>policy_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy set type. Possible values are <code class="docutils literal notranslate"><span class="pre">BuiltIn</span></code> or <code class="docutils literal notranslate"><span class="pre">Custom</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_set_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/policy_set_definition.html.markdown</a>.</p>
 </div></blockquote>
@@ -513,6 +540,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.policy.get_policy_defintion">
 <code class="sig-prename descclassname">pulumi_azure.policy.</code><code class="sig-name descname">get_policy_defintion</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">management_group_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_defintion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Policy Definition, both custom and built in. Retrieves Policy Definitions from your current subscription by default.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>display_name</strong> (<em>str</em>) – Specifies the name of the Policy Definition.</p></li>
+<li><p><strong>management_group_id</strong> (<em>str</em>) – Only retrieve Policy Definitions from this Management Group.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/policy_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/policy_definition.html.markdown</a>.</p>
 </div></blockquote>
