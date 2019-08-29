@@ -25,8 +25,8 @@ The [Pulumi Console](https://app.pulumi.com) web application automatically manag
         <ul class="p2">
             <li><a href="{{< relref "editions" >}}">Plans and Editions</a></li>
             <li><a href="{{< relref "accounts" >}}">Accounts</a></li>
-            <li><a href="{{< relref "/docs/guides/saml" >}}">SAML Integrations</a></li>
             <li><a href="{{< relref "organizations" >}}">Organizations</a></li>
+            <li><a href="{{< relref "/docs/guides/saml" >}}">SAML Integrations</a></li>
         </ul>
     </div>
 </div>

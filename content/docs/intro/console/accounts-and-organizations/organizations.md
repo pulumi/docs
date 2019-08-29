@@ -147,7 +147,7 @@ and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management"
+| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "../collaboration/project-and-stack-management"
 >}}) to learn more. |
 | People | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro](https://www.pulumi.com/pricing/) feature that provides a way to assign stack permissions to groups of organization members. |

@@ -4,21 +4,21 @@ title: Organization Roles
 aliases: ["/docs/console/collaboration/organization-roles/"]
 ---
 
-Stacks in the Pulumi Cloud Console are grouped by organizations. And in order to access the
+Stacks in the Pulumi Console are grouped by organizations. In order to access the
 stacks within an organization, a Pulumi user must have a specific _role_ within that
 organization.
 
 ## Organization Membership
 
-> This only applies to newer organizations using the per-member subscription plan.
-> Organizations billed per-stack have slightly different rules regarding membership.
+> This only applies to newer organizations on the per-member subscription plan.
+> Organizations billed per stack have slightly different rules regarding membership.
 
-To become a member of a Pulumi organization, a user must be added by an existing Pulumi
-organization administrator. However, depending on the [organization kind]({{< relref "organizations#organization-kind" >}})
-the user must also be member of a 3rd party organization or group.
+To become a member of a Pulumi organization, you must be added by an existing Pulumi
+organization administrator. However, depending on the [organization type]({{< relref "organizations#organization-kind" >}}), you must also be a member of the third-party organization or group backing the Pulumi
+organization.
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
-a user must have associated a GitLab identity with their Pulumi account, and also
+you must associate a GitLab identity with your Pulumi account, and also
 be a member of that GitLab group.
 
 ## Organization Roles
@@ -32,12 +32,12 @@ depending on organization settings, may be able to create or delete stacks.
 
 `**ADMIN**`
 
-Pulumi organization administrators have `ADMIN` access to _all_ organization stacks,
-the ability to manage organization settings and team memberships.
+Pulumi organization admins have `ADMIN` access to _all_ organization stacks,
+and can manage organization settings and team memberships.
 
 ## Organization Settings{#organization-settings}
 
-Pulumi organizations can be configured by organization administrators to change
+A Pulumi organization administrator can change
 the permissions available to members of the organization.
 
 ![Organization settings](/images/docs/reference/service/org-settings-card.png)
@@ -45,33 +45,36 @@ the permissions available to members of the organization.
 ### Default Stack Permission
 
 Any organization member with the `ADMIN` role automatically has `ADMIN`
-permission for all of the organization's stacks. Regular organization members
-are granted the organization's _default stack permission_ instead.
+permissions for all of the organization's stacks. Regular organization members
+are granted the organization's _base permissions_ instead.
 
-For example, if the organization's default stack permission is `WRITE`, then
+For example, if the organization's base permissions is `WRITE`, then
 any organization member can update any organization stack.
 
 If the default stack permission is `NONE`, then organization members must be
-granted access using teams in order to update, or even view organization
-stacks. (See [Teams]({{< relref "./teams.md" >}}) for more information.)
+granted access using [teams]({{< relref "teams" >}}) in order to update, or even [view the organization
+stacks]({{< relref "project-and-stack-management#viewing-your-organization-stacks" >}}).
 
 ### Stack Creation
 
-Pulumi organization admins can configure whether or not the organization
-allows members to create new stacks.
+Pulumi organization admins can configure whether or not members can create stacks.
 
 If enabled, any organization member can create a new stack. Otherwise, only
 organization admins can.
 
-When a stack is created within an organization, the creating user is given
-the `ADMIN` permission to that stack explicitly. So even if the default
-stack permission is `NONE`, users who create stacks will be able to
-update them.
+When a stack is created within an organization, the creator is given
+`ADMIN` permissions to the stack. So even if the default
+stack permission is `NONE`, the creator will be able to update the stack. Organization admins
+can remove a creator's access to the stack.
 
 ### Stack Deletion
 
 Similar to stack creation, Pulumi organization admins can configure whether
 or not organization members can delete stacks.
 
-If enabled, any organization with `ADMIN` permission on the stack can delete
+If enabled, any organization member with `ADMIN` permission on the stack can delete
 it. Otherwise, only Pulumi  organization admins can.
+
+## Next Steps
+
+* [Teams]({{< relref "teams" >}})

@@ -20,7 +20,7 @@ following:
 * Manage your profile settings, including your account password, access tokens, and subscriptions
 * [Add an organization]({{< relref "organizations" >}}) backed by Atlassian, GitHub, GitLab, or a SAML
   2.0-compatible identity provider, such as Active Directory, Okta, or G Suite
-* [Manage your projects and stacks]({{< relref "/docs/intro/console/collaboration/project-and-stack-management" >}})
+* [Manage your projects and stacks]({{< relref "../collaboration/project-and-stack-management" >}})
 
 ## Profile
 
