@@ -155,7 +155,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>elasticPoolProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ElasticPoolElasticPoolProperties'>ElasticPoolElasticPoolProperties</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>elasticPoolProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolElasticPoolProperties'>outputs.mssql.ElasticPoolElasticPoolProperties</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -231,7 +231,7 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolPerDatabaseSettings'>outputs.mssql.ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -270,7 +270,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ElasticPoolSku'>outputs.mssql.ElasticPoolSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -417,7 +417,7 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolPerDatabaseSettings'>inputs.mssql.ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -456,7 +456,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolSku'>inputs.mssql.ElasticPoolSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -505,7 +505,7 @@ Input properties used for looking up and filtering ElasticPool resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>elasticPoolProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolElasticPoolProperties'>ElasticPoolElasticPoolProperties</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>elasticPoolProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolElasticPoolProperties'>inputs.mssql.ElasticPoolElasticPoolProperties</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -567,7 +567,7 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>perDatabaseSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>perDatabaseSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolPerDatabaseSettings'>inputs.mssql.ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -606,7 +606,7 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ElasticPoolSku'>inputs.mssql.ElasticPoolSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

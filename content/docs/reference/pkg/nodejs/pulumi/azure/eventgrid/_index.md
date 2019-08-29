@@ -178,7 +178,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>inputMappingDefaultValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>inputMappingDefaultValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInputMappingDefaultValues'>outputs.eventgrid.DomainInputMappingDefaultValues</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -191,7 +191,7 @@ A `inputMappingDefaultValues` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>inputMappingFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DomainInputMappingFields'>DomainInputMappingFields</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>inputMappingFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DomainInputMappingFields'>outputs.eventgrid.DomainInputMappingFields</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -298,7 +298,7 @@ an Event Grid Event Subscription with the webhook URL pointing to the Azure Func
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventGridCallbackSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, scope: <a href='#EventGridScope'>EventGridScope</a>, args: <a href='#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;T&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventGridCallbackSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, scope: <a href='#EventGridScope'>EventGridScope</a>, args: <a href='#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;T&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -586,7 +586,7 @@ Specifies the event delivery schema for the event subscription. Possible values 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>eventhubEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>eventhubEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionEventhubEndpoint'>outputs.eventgrid.EventSubscriptionEventhubEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -599,7 +599,7 @@ A `eventhubEndpoint` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>hybridConnectionEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>hybridConnectionEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionHybridConnectionEndpoint'>outputs.eventgrid.EventSubscriptionHybridConnectionEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -665,7 +665,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>retryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>retryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionRetryPolicy'>outputs.eventgrid.EventSubscriptionRetryPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -691,7 +691,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>storageBlobDeadLetterDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageBlobDeadLetterDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionStorageBlobDeadLetterDestination'>outputs.eventgrid.EventSubscriptionStorageBlobDeadLetterDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -704,7 +704,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>storageQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionStorageQueueEndpoint'>outputs.eventgrid.EventSubscriptionStorageQueueEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -717,7 +717,7 @@ A `storageQueueEndpoint` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>subjectFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>subjectFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionSubjectFilter'>outputs.eventgrid.EventSubscriptionSubjectFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -757,7 +757,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>webhookEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>webhookEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventSubscriptionWebhookEndpoint'>outputs.eventgrid.EventSubscriptionWebhookEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -999,7 +999,7 @@ The set of arguments for constructing a Domain resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingDefaultValues'>inputs.eventgrid.DomainInputMappingDefaultValues</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1012,7 +1012,7 @@ A `inputMappingDefaultValues` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DomainInputMappingFields'>DomainInputMappingFields</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingFields'>inputs.eventgrid.DomainInputMappingFields</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1113,7 +1113,7 @@ The Endpoint associated with the EventGrid Domain.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingDefaultValues'>inputs.eventgrid.DomainInputMappingDefaultValues</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1126,7 +1126,7 @@ A `inputMappingDefaultValues` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DomainInputMappingFields'>DomainInputMappingFields</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DomainInputMappingFields'>inputs.eventgrid.DomainInputMappingFields</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1959,7 +1959,7 @@ Specifies the event delivery schema for the event subscription. Possible values 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionEventhubEndpoint'>inputs.eventgrid.EventSubscriptionEventhubEndpoint</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1972,7 +1972,7 @@ A `eventhubEndpoint` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionHybridConnectionEndpoint'>inputs.eventgrid.EventSubscriptionHybridConnectionEndpoint</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2024,7 +2024,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionRetryPolicy'>inputs.eventgrid.EventSubscriptionRetryPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2050,7 +2050,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageBlobDeadLetterDestination'>inputs.eventgrid.EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2063,7 +2063,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageQueueEndpoint'>inputs.eventgrid.EventSubscriptionStorageQueueEndpoint</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2076,7 +2076,7 @@ A `storageQueueEndpoint` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionSubjectFilter'>inputs.eventgrid.EventSubscriptionSubjectFilter</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2102,7 +2102,7 @@ Specifies the name of the topic to associate with the event subscription.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionWebhookEndpoint'>inputs.eventgrid.EventSubscriptionWebhookEndpoint</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2138,7 +2138,7 @@ Specifies the event delivery schema for the event subscription. Possible values 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionEventhubEndpoint'>inputs.eventgrid.EventSubscriptionEventhubEndpoint</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2151,7 +2151,7 @@ A `eventhubEndpoint` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionHybridConnectionEndpoint'>inputs.eventgrid.EventSubscriptionHybridConnectionEndpoint</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2203,7 +2203,7 @@ Specifies the name of the EventGrid Event Subscription resource. Changing this f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionRetryPolicy'>inputs.eventgrid.EventSubscriptionRetryPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2229,7 +2229,7 @@ Specifies the scope at which the EventGrid Event Subscription should be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageBlobDeadLetterDestination'>inputs.eventgrid.EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2242,7 +2242,7 @@ A `storageBlobDeadLetterDestination` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionStorageQueueEndpoint'>inputs.eventgrid.EventSubscriptionStorageQueueEndpoint</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2255,7 +2255,7 @@ A `storageQueueEndpoint` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionSubjectFilter'>inputs.eventgrid.EventSubscriptionSubjectFilter</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2281,7 +2281,7 @@ Specifies the name of the topic to associate with the event subscription.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventSubscriptionWebhookEndpoint'>inputs.eventgrid.EventSubscriptionWebhookEndpoint</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3275,7 +3275,7 @@ Contains hooks to subscribe to different kinds of Event Grid events.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>onGridBlobCreated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;StorageBlobCreatedEventData&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;StorageBlobCreatedEventData&gt;</pre>
+<pre class="highlight"><span class='kd'></span>onGridBlobCreated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;eventgrid.StorageBlobCreatedEventData&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;eventgrid.StorageBlobCreatedEventData&gt;</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -3291,7 +3291,7 @@ a new Blob is created in a container of the Storage Account.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>onGridBlobDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;StorageBlobDeletedEventData&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;StorageBlobDeletedEventData&gt;</pre>
+<pre class="highlight"><span class='kd'></span>onGridBlobDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;eventgrid.StorageBlobDeletedEventData&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;eventgrid.StorageBlobDeletedEventData&gt;</pre>
 {{< /md-disable >}}
 
 {{% md %}}

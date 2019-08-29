@@ -279,7 +279,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApiImport'>ApiImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiImport'>outputs.apimanagement.ApiImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -409,7 +409,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApiSubscriptionKeyParameterNames'>ApiSubscriptionKeyParameterNames</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiSubscriptionKeyParameterNames'>outputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -659,7 +659,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApiOperationRequest'>ApiOperationRequest</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>request: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequest'>outputs.apimanagement.ApiOperationRequest</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -685,7 +685,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>responses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApiOperationResponse'>ApiOperationResponse</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>responses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponse'>outputs.apimanagement.ApiOperationResponse</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -698,7 +698,7 @@ One or more `response` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>templateParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApiOperationTemplateParameter'>ApiOperationTemplateParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>templateParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationTemplateParameter'>outputs.apimanagement.ApiOperationTemplateParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1916,7 +1916,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>tokenBodyParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AuthorizationServerTokenBodyParameter'>AuthorizationServerTokenBodyParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>tokenBodyParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AuthorizationServerTokenBodyParameter'>outputs.apimanagement.AuthorizationServerTokenBodyParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2044,7 +2044,7 @@ The Name of the API Management Service where this backend should be created. Cha
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#BackendCredentials'>BackendCredentials</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendCredentials'>outputs.apimanagement.BackendCredentials</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2110,7 +2110,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>proxy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#BackendProxy'>BackendProxy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>proxy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendProxy'>outputs.apimanagement.BackendProxy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2149,7 +2149,7 @@ The management URI of the backend host in an external system. This URI can be th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>serviceFabricCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#BackendServiceFabricCluster'>BackendServiceFabricCluster</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>serviceFabricCluster: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendServiceFabricCluster'>outputs.apimanagement.BackendServiceFabricCluster</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2175,7 +2175,7 @@ The title of the backend.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>tls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#BackendTls'>BackendTls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>tls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendTls'>outputs.apimanagement.BackendTls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2957,7 +2957,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>applicationInsights: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LoggerApplicationInsights'>LoggerApplicationInsights</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>applicationInsights: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoggerApplicationInsights'>outputs.apimanagement.LoggerApplicationInsights</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2996,7 +2996,7 @@ A description of this Logger.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>eventhub: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LoggerEventhub'>LoggerEventhub</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>eventhub: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoggerEventhub'>outputs.apimanagement.LoggerEventhub</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4468,7 +4468,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>additionalLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceAdditionalLocation'>ServiceAdditionalLocation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>additionalLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAdditionalLocation'>outputs.apimanagement.ServiceAdditionalLocation</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4481,7 +4481,7 @@ One or more `additionalLocation` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceCertificate'>ServiceCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceCertificate'>outputs.apimanagement.ServiceCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4520,7 +4520,7 @@ The URL of the Gateway for the API Management Service.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>hostnameConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceHostnameConfiguration'>ServiceHostnameConfiguration</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>hostnameConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfiguration'>outputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4547,7 +4547,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceIdentity'>ServiceIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceIdentity'>outputs.apimanagement.ServiceIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4612,7 +4612,7 @@ Email address from which the notification will be sent.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServicePolicy'>ServicePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServicePolicy'>outputs.apimanagement.ServicePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4703,7 +4703,7 @@ The URL for the SCM (Source Code Management) Endpoint associated with this API M
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>security: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceSecurity'>ServiceSecurity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>security: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSecurity'>outputs.apimanagement.ServiceSecurity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4716,7 +4716,7 @@ A `security` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>signIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceSignIn'>ServiceSignIn</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>signIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignIn'>outputs.apimanagement.ServiceSignIn</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4729,7 +4729,7 @@ A `signIn` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>signUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceSignUp'>ServiceSignUp</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>signUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignUp'>outputs.apimanagement.ServiceSignUp</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4742,7 +4742,7 @@ A `signUp` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceSku'>ServiceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSku'>outputs.apimanagement.ServiceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5505,7 +5505,7 @@ The display name of the API.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiImport'>ApiImport</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiImport'>inputs.apimanagement.ApiImport</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5609,7 +5609,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiSubscriptionKeyParameterNames'>ApiSubscriptionKeyParameterNames</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiSubscriptionKeyParameterNames'>inputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5710,7 +5710,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiOperationRequest'>ApiOperationRequest</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest'>inputs.apimanagement.ApiOperationRequest</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5736,7 +5736,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiOperationResponse'>ApiOperationResponse</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse'>inputs.apimanagement.ApiOperationResponse</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5749,7 +5749,7 @@ One or more `response` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiOperationTemplateParameter'>ApiOperationTemplateParameter</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter'>inputs.apimanagement.ApiOperationTemplateParameter</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6033,7 +6033,7 @@ A unique identifier for this API Operation. Changing this forces a new resource 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiOperationRequest'>ApiOperationRequest</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>request?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest'>inputs.apimanagement.ApiOperationRequest</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6059,7 +6059,7 @@ The Name of the Resource Group in which the API Management Service exists. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiOperationResponse'>ApiOperationResponse</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>responses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse'>inputs.apimanagement.ApiOperationResponse</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6072,7 +6072,7 @@ One or more `response` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiOperationTemplateParameter'>ApiOperationTemplateParameter</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>templateParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter'>inputs.apimanagement.ApiOperationTemplateParameter</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6467,7 +6467,7 @@ The display name of the API.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiImport'>ApiImport</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiImport'>inputs.apimanagement.ApiImport</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6597,7 +6597,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApiSubscriptionKeyParameterNames'>ApiSubscriptionKeyParameterNames</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>subscriptionKeyParameterNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiSubscriptionKeyParameterNames'>inputs.apimanagement.ApiSubscriptionKeyParameterNames</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7095,7 +7095,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AuthorizationServerTokenBodyParameter'>AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AuthorizationServerTokenBodyParameter'>inputs.apimanagement.AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -7349,7 +7349,7 @@ Does this Authorization Server support State? If this is set to `true` the clien
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AuthorizationServerTokenBodyParameter'>AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>tokenBodyParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AuthorizationServerTokenBodyParameter'>inputs.apimanagement.AuthorizationServerTokenBodyParameter</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -7395,7 +7395,7 @@ The Name of the API Management Service where this backend should be created. Cha
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BackendCredentials'>BackendCredentials</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials'>inputs.apimanagement.BackendCredentials</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7447,7 +7447,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BackendProxy'>BackendProxy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy'>inputs.apimanagement.BackendProxy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7486,7 +7486,7 @@ The management URI of the backend host in an external system. This URI can be th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BackendServiceFabricCluster'>BackendServiceFabricCluster</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster'>inputs.apimanagement.BackendServiceFabricCluster</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7512,7 +7512,7 @@ The title of the backend.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BackendTls'>BackendTls</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls'>inputs.apimanagement.BackendTls</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7561,7 +7561,7 @@ The Name of the API Management Service where this backend should be created. Cha
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BackendCredentials'>BackendCredentials</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials'>inputs.apimanagement.BackendCredentials</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7613,7 +7613,7 @@ The protocol used by the backend host. Possible values are `http` or `soap`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BackendProxy'>BackendProxy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>proxy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy'>inputs.apimanagement.BackendProxy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7652,7 +7652,7 @@ The management URI of the backend host in an external system. This URI can be th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BackendServiceFabricCluster'>BackendServiceFabricCluster</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serviceFabricCluster?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster'>inputs.apimanagement.BackendServiceFabricCluster</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7678,7 +7678,7 @@ The title of the backend.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BackendTls'>BackendTls</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls'>inputs.apimanagement.BackendTls</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8122,7 +8122,7 @@ Should this API expose a SOAP frontend, rather than a HTTP frontend?
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>subscriptionKeyParameterNames: <a href='#GetApiSubscriptionKeyParameterName'>GetApiSubscriptionKeyParameterName</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>subscriptionKeyParameterNames: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetApiSubscriptionKeyParameterName'>outputs.apimanagement.GetApiSubscriptionKeyParameterName</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8554,7 +8554,7 @@ A collection of values returned by getService.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>additionalLocations: <a href='#GetServiceAdditionalLocation'>GetServiceAdditionalLocation</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>additionalLocations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAdditionalLocation'>outputs.apimanagement.GetServiceAdditionalLocation</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8593,7 +8593,7 @@ The URL for the API Management Service's Gateway.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>hostnameConfigurations: <a href='#GetServiceHostnameConfiguration'>GetServiceHostnameConfiguration</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>hostnameConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfiguration'>outputs.apimanagement.GetServiceHostnameConfiguration</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8746,7 +8746,7 @@ The SCM (Source Code Management) endpoint.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='#GetServiceSku'>GetServiceSku</a>;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceSku'>outputs.apimanagement.GetServiceSku</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -9288,7 +9288,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoggerApplicationInsights'>LoggerApplicationInsights</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerApplicationInsights'>inputs.apimanagement.LoggerApplicationInsights</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -9327,7 +9327,7 @@ A description of this Logger.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoggerEventhub'>LoggerEventhub</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerEventhub'>inputs.apimanagement.LoggerEventhub</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -9389,7 +9389,7 @@ The name of the API Management Service. Changing this forces a new resource to b
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoggerApplicationInsights'>LoggerApplicationInsights</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>applicationInsights?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerApplicationInsights'>inputs.apimanagement.LoggerApplicationInsights</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -9428,7 +9428,7 @@ A description of this Logger.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoggerEventhub'>LoggerEventhub</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>eventhub?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoggerEventhub'>inputs.apimanagement.LoggerEventhub</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10585,7 +10585,7 @@ The set of arguments for constructing a Service resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>additionalLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceAdditionalLocation'>ServiceAdditionalLocation</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>additionalLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation'>inputs.apimanagement.ServiceAdditionalLocation</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10598,7 +10598,7 @@ One or more `additionalLocation` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceCertificate'>ServiceCertificate</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate'>inputs.apimanagement.ServiceCertificate</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10611,7 +10611,7 @@ One or more (up to 10) `certificate` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceHostnameConfiguration'>ServiceHostnameConfiguration</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration'>inputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10624,7 +10624,7 @@ A `hostnameConfiguration` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceIdentity'>ServiceIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity'>inputs.apimanagement.ServiceIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10676,7 +10676,7 @@ Email address from which the notification will be sent.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServicePolicy'>ServicePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy'>inputs.apimanagement.ServicePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10728,7 +10728,7 @@ The name of the Resource Group in which the API Management Service should be exi
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSecurity'>ServiceSecurity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity'>inputs.apimanagement.ServiceSecurity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10741,7 +10741,7 @@ A `security` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSignIn'>ServiceSignIn</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn'>inputs.apimanagement.ServiceSignIn</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10754,7 +10754,7 @@ A `signIn` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSignUp'>ServiceSignUp</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp'>inputs.apimanagement.ServiceSignUp</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10767,7 +10767,7 @@ A `signUp` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSku'>ServiceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.apimanagement.ServiceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10803,7 +10803,7 @@ Input properties used for looking up and filtering Service resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>additionalLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceAdditionalLocation'>ServiceAdditionalLocation</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>additionalLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation'>inputs.apimanagement.ServiceAdditionalLocation</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10816,7 +10816,7 @@ One or more `additionalLocation` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceCertificate'>ServiceCertificate</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate'>inputs.apimanagement.ServiceCertificate</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10855,7 +10855,7 @@ The URL of the Gateway for the API Management Service.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceHostnameConfiguration'>ServiceHostnameConfiguration</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>hostnameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration'>inputs.apimanagement.ServiceHostnameConfiguration</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10868,7 +10868,7 @@ A `hostnameConfiguration` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceIdentity'>ServiceIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity'>inputs.apimanagement.ServiceIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -10933,7 +10933,7 @@ Email address from which the notification will be sent.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServicePolicy'>ServicePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy'>inputs.apimanagement.ServicePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -11024,7 +11024,7 @@ The URL for the SCM (Source Code Management) Endpoint associated with this API M
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSecurity'>ServiceSecurity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>security?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity'>inputs.apimanagement.ServiceSecurity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -11037,7 +11037,7 @@ A `security` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSignIn'>ServiceSignIn</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>signIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn'>inputs.apimanagement.ServiceSignIn</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -11050,7 +11050,7 @@ A `signIn` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSignUp'>ServiceSignUp</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>signUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp'>inputs.apimanagement.ServiceSignUp</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -11063,7 +11063,7 @@ A `signUp` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSku'>ServiceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.apimanagement.ServiceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

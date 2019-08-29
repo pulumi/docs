@@ -15,15 +15,19 @@ title: Module runtime/closure
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents">
 <ul>
-<li><a href="#getFunctionLocationAsync">const getFunctionLocationAsync</a></li>
-<li><a href="#lookupCapturedVariableValueAsync">const lookupCapturedVariableValueAsync</a></li>
+<li><a href="#computeCodePaths">function computeCodePaths</a></li>
 <li><a href="#createFunctionInfoAsync">function createFunctionInfoAsync</a></li>
+<li><a href="#getFunctionLocationAsync">function getFunctionLocationAsync</a></li>
+<li><a href="#isLegalFunctionName">function isLegalFunctionName</a></li>
+<li><a href="#isLegalMemberName">function isLegalMemberName</a></li>
+<li><a href="#lookupCapturedVariableValueAsync">function lookupCapturedVariableValueAsync</a></li>
 <li><a href="#parseFunction">function parseFunction</a></li>
 <li><a href="#rewriteSuperReferences">function rewriteSuperReferences</a></li>
 <li><a href="#serializeFunction">function serializeFunction</a></li>
 <li><a href="#CapturedPropertyChain">interface CapturedPropertyChain</a></li>
 <li><a href="#CapturedPropertyInfo">interface CapturedPropertyInfo</a></li>
 <li><a href="#CapturedVariables">interface CapturedVariables</a></li>
+<li><a href="#CodePathOptions">interface CodePathOptions</a></li>
 <li><a href="#Entry">interface Entry</a></li>
 <li><a href="#FunctionInfo">interface FunctionInfo</a></li>
 <li><a href="#ObjectInfo">interface ObjectInfo</a></li>
@@ -37,34 +41,41 @@ title: Module runtime/closure
 <li><a href="#CapturedVariableMap">type CapturedVariableMap</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts" >}}">runtime/closure/createClosure.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts" >}}">runtime/closure/parseFunction.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/rewriteSuper.ts" >}}">runtime/closure/rewriteSuper.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts" >}}">runtime/closure/serializeClosure.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/v8.ts" >}}">runtime/closure/v8.ts</a> 
+<a href="{{< pkg-url pkg="pulumi" path="runtime/closure/codePaths.ts" >}}">runtime/closure/codePaths.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts" >}}">runtime/closure/createClosure.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts" >}}">runtime/closure/parseFunction.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/rewriteSuper.ts" >}}">runtime/closure/rewriteSuper.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts" >}}">runtime/closure/serializeClosure.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/utils.ts" >}}">runtime/closure/utils.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/v8.ts" >}}">runtime/closure/v8.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/v8_v10andLower.ts" >}}">runtime/closure/v8_v10andLower.ts</a> <a href="{{< pkg-url pkg="pulumi" path="runtime/closure/v8_v11andHigher.ts" >}}">runtime/closure/v8_v11andHigher.ts</a> 
 </div>
 </div>
 </div>
 
 
-<h2 class="pdoc-module-header" id="getFunctionLocationAsync">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/v8.ts#L51" >}}">const <b>getFunctionLocationAsync</b></a>
+<h2 class="pdoc-module-header" id="computeCodePaths">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/codePaths.ts#L78" >}}">function <b>computeCodePaths</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>const</span> getFunctionLocationAsync: getFunctionLocationAsync = <span class='s2'> versionSpecificV8Module.getFunctionLocationAsync</span>;</pre>
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>computeCodePaths(options?: <a href='#CodePathOptions'>CodePathOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, asset.Asset | asset.Archive&gt;&gt;</pre>
+{{< /md-disable >}}
+
 {{% md %}}
 
-Given a function, returns the file, line and column number in the file where this function was
-defined. Returns { "", 0, 0 } if the location cannot be found or if the given function has no Script.
+computeCodePaths computes the local node_module paths to include in an uploaded cloud 'Lambda'.
+Specifically, it will examine the package.json for the caller's code, and will transitively walk
+it's 'dependencies' section to determine what packages should be included.
 
-{{% /md %}}
-</div>
-<h2 class="pdoc-module-header" id="lookupCapturedVariableValueAsync">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/v8.ts#L45" >}}">const <b>lookupCapturedVariableValueAsync</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>const</span> lookupCapturedVariableValueAsync: lookupCapturedVariableValueAsync = <span class='s2'> versionSpecificV8Module.lookupCapturedVariableValueAsync</span>;</pre>
-{{% md %}}
+During this walk, if a package is encountered that contains a `"pulumi": { ... }` section then
+the normal `"dependencies": { ... }` section of that package will not be included.  These are
+"pulumi" packages, and those dependencies are only intended for use at deployment time. However,
+a "pulumi" package can also specify package that should be available at cloud-runtime.  These
+packages are found in a `"runtimeDependencies": { ... }` section in the package.json file with
+the same format as the normal "dependencies" section.
 
-Given a function and a free variable name, lookupCapturedVariableValue looks up the value of that free variable
-in the scope chain of the provided function. If the free variable is not found, `throwOnFailure` indicates
-whether or not this function should throw or return `undefined.
+See [CodePathOptions] for information on ways to control and configure the final set of paths
+included in the resultant asset/archive map.
+
+Note: this functionality is specifically intended for use by downstream library code that is
+determining what is needed for a cloud-lambda.  i.e. the aws.serverless.Function or
+azure.serverless.FunctionApp libraries.  In general, other clients should not need to use this
+helper.
 
 {{% /md %}}
 </div>
@@ -72,10 +83,12 @@ whether or not this function should throw or return `undefined.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L219" >}}">function <b>createFunctionInfoAsync</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createFunctionInfoAsync(func: Function, serialize: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, logResource: resource.Resource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#FunctionInfo'>FunctionInfo</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 createFunctionInfo serializes a function and its closure environment into a form that is
 amenable to persistence as simple JSON.  Like toString, it includes the full text of the
@@ -84,34 +97,110 @@ about the captured environment.
 
 {{% /md %}}
 </div>
+<h2 class="pdoc-module-header" id="getFunctionLocationAsync">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/v8_v10andLower.ts#L56" >}}">function <b>getFunctionLocationAsync</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>getFunctionLocationAsync(func: Function): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
+    column: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
+    file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    line: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
+}&gt;</pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>getFunctionLocationAsync(func: Function): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
+    column: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;
+    file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    line: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;
+}&gt;</pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+</div>
+<h2 class="pdoc-module-header" id="isLegalFunctionName">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/utils.ts#L22" >}}">function <b>isLegalFunctionName</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>isLegalFunctionName(n: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+</div>
+<h2 class="pdoc-module-header" id="isLegalMemberName">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/utils.ts#L18" >}}">function <b>isLegalMemberName</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>isLegalMemberName(n: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+</div>
+<h2 class="pdoc-module-header" id="lookupCapturedVariableValueAsync">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/v8_v10andLower.ts#L116" >}}">function <b>lookupCapturedVariableValueAsync</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lookupCapturedVariableValueAsync(func: Function, freeVariable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, throwOnFailure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>lookupCapturedVariableValueAsync(func: Function, freeVariable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, throwOnFailure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+</div>
 <h2 class="pdoc-module-header" id="parseFunction">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L97" >}}">function <b>parseFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parseFunction(funcString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): [, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#ParsedFunction'>ParsedFunction</a>]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="rewriteSuperReferences">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/rewriteSuper.ts#L19" >}}">function <b>rewriteSuperReferences</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rewriteSuperReferences(code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, isStatic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="serializeFunction">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts#L85" >}}">function <b>serializeFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serializeFunction(func: Function, args: <a href='#SerializeFunctionArgs'>SerializeFunctionArgs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#SerializedFunction'>SerializedFunction</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 serializeFunction serializes a JavaScript function into a text form that can be loaded in another execution context,
 for example as part of a function callback associated with an AWS Lambda.  The function serialization captures any
@@ -136,7 +225,9 @@ There are several known limitations:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L58" >}}">property <b>infos</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>infos: <a href='#CapturedPropertyInfo'>CapturedPropertyInfo</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -149,7 +240,9 @@ There are several known limitations:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L51" >}}">property <b>invoked</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invoked: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -157,7 +250,9 @@ There are several known limitations:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L50" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -170,7 +265,9 @@ There are several known limitations:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L77" >}}">property <b>optional</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>optional: <a href='#CapturedVariableMap'>CapturedVariableMap</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -178,8 +275,79 @@ There are several known limitations:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L76" >}}">property <b>required</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>required: <a href='#CapturedVariableMap'>CapturedVariableMap</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="CodePathOptions">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/codePaths.ts#L29" >}}">interface <b>CodePathOptions</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Options for controlling what gets returned by [computeCodePaths].
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="CodePathOptions-extraExcludePackages">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/codePaths.ts#L50" >}}">property <b>extraExcludePackages</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>extraExcludePackages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Packages to explicitly exclude from the Assets for a serialized closure.  This can be used
+when clients want to trim down the size of a closure, and they know that some package won't
+ever actually be needed at runtime, but is still a dependency of some package that is being
+used at runtime.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CodePathOptions-extraIncludePackages">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/codePaths.ts#L42" >}}">property <b>extraIncludePackages</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>extraIncludePackages?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Extra packages to include when producing the Assets for a serialized closure.  This can be
+useful if the packages are acquired in a way that the serialization code does not understand.
+For example, if there was some sort of module that was pulled in based off of a computed
+string.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CodePathOptions-extraIncludePaths">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/codePaths.ts#L34" >}}">property <b>extraIncludePaths</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>extraIncludePaths?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Local file/directory paths that we always want to include when producing the Assets to be
+included for a serialized closure.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="CodePathOptions-logResource">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/codePaths.ts#L55" >}}">property <b>logResource</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>logResource?: <a href='#Resource'>Resource</a>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The resource to log any errors we encounter against.
+
 {{% /md %}}
 </div>
 </div>
@@ -196,7 +364,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L108" >}}">property <b>array</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>array?: <a href='#Entry'>Entry</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -204,7 +374,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L122" >}}">property <b>expr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -212,7 +384,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L101" >}}">property <b>function</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>function?: <a href='#FunctionInfo'>FunctionInfo</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -220,7 +394,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L95" >}}">property <b>json</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>json?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -228,7 +404,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L111" >}}">property <b>module</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>module?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -236,7 +414,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L105" >}}">property <b>object</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>object?: <a href='#ObjectInfo'>ObjectInfo</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -244,7 +424,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L119" >}}">property <b>output</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>output?: <a href='#Entry'>Entry</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -252,7 +434,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L115" >}}">property <b>promise</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>promise?: <a href='#Entry'>Entry</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -260,10 +444,12 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L98" >}}">property <b>regexp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regexp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
     flags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     source: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -272,12 +458,16 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L40" >}}">interface <b>FunctionInfo</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#ObjectInfo'>ObjectInfo</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="FunctionInfo-capturedValues">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L45" >}}">property <b>capturedValues</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capturedValues: <a href='#PropertyMap'>PropertyMap</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -285,7 +475,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L42" >}}">property <b>code</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -293,7 +485,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L35" >}}">property <b>env</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>env: <a href='#PropertyMap'>PropertyMap</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -301,7 +495,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L52" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -309,7 +505,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L58" >}}">property <b>paramCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>paramCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -317,7 +515,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L31" >}}">property <b>proto</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>proto?: <a href='#Entry'>Entry</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -325,7 +525,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L48" >}}">property <b>usesNonLexicalThis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>usesNonLexicalThis: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -338,7 +540,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L35" >}}">property <b>env</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>env: <a href='#PropertyMap'>PropertyMap</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -346,7 +550,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L31" >}}">property <b>proto</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>proto?: <a href='#Entry'>Entry</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -355,12 +561,16 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L39" >}}">interface <b>ParsedFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#ParsedFunctionCode'>ParsedFunctionCode</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="ParsedFunction-capturedVariables">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L41" >}}">property <b>capturedVariables</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capturedVariables: <a href='#CapturedVariables'>CapturedVariables</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -368,7 +578,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L27" >}}">property <b>funcExprWithName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>funcExprWithName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -376,7 +588,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L23" >}}">property <b>funcExprWithoutName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>funcExprWithoutName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -384,7 +598,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L33" >}}">property <b>functionDeclarationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>functionDeclarationName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -392,7 +608,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L36" >}}">property <b>isArrowFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isArrowFunction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -400,7 +618,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L44" >}}">property <b>usesNonLexicalThis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>usesNonLexicalThis: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -413,7 +633,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L27" >}}">property <b>funcExprWithName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>funcExprWithName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -421,7 +643,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L23" >}}">property <b>funcExprWithoutName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>funcExprWithoutName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -429,7 +653,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L33" >}}">property <b>functionDeclarationName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>functionDeclarationName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -437,7 +663,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L36" >}}">property <b>isArrowFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isArrowFunction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -450,7 +678,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L68" >}}">property <b>configurable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>configurable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -458,7 +688,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L69" >}}">property <b>enumerable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enumerable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -466,7 +698,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L74" >}}">property <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>get?: <a href='#Entry'>Entry</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -474,7 +708,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L65" >}}">property <b>hasValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hasValue: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -482,7 +718,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L75" >}}">property <b>set</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>set?: <a href='#Entry'>Entry</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -490,7 +728,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L70" >}}">property <b>writable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -503,7 +743,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L82" >}}">property <b>entry</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>entry: <a href='#Entry'>Entry</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -511,7 +753,9 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L81" >}}">property <b>info</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>info?: <a href='#PropertyInfo'>PropertyInfo</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -520,15 +764,19 @@ Entry is the environment slot for a named lexically captured variable.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">interface <b>PropertyMap</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;</pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="PropertyMap-__@iterator">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>__@iterator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>__@iterator(): IterableIterator&lt;[, <a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>]&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns an iterable of entries in the map.
 
@@ -538,30 +786,36 @@ Returns an iterable of entries in the map.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>clear</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clear(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PropertyMap-delete">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>delete</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>delete(key: <a href='#Entry'>Entry</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PropertyMap-entries">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>entries</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>entries(): IterableIterator&lt;[, <a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>]&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns an iterable of key, value pairs for every entry in the map.
 
@@ -571,40 +825,48 @@ Returns an iterable of key, value pairs for every entry in the map.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>forEach</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forEach(callbackfn: (value: <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>, key: <a href='#Entry'>Entry</a>, map: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PropertyMap-get">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>get(key: <a href='#Entry'>Entry</a>): <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PropertyMap-has">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>has</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>has(key: <a href='#Entry'>Entry</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PropertyMap-keys">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>keys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keys(): IterableIterator&lt;<a href='#Entry'>Entry</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns an iterable of keys in the map
 
@@ -614,20 +876,24 @@ Returns an iterable of keys in the map
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>set</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>set(key: <a href='#Entry'>Entry</a>, value: <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>): <span class='kd'>this</span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PropertyMap-values">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">method <b>values</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>values(): IterableIterator&lt;<a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns an iterable of values in the map
 
@@ -637,7 +903,9 @@ Returns an iterable of values in the map
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">property <b>Map</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>Map: MapConstructor;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -645,7 +913,9 @@ Returns an iterable of values in the map
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">property <b>__@toStringTag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>__@toStringTag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -653,7 +923,9 @@ Returns an iterable of values in the map
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/createClosure.ts#L87" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -671,7 +943,9 @@ SerializeFunctionArgs are arguments used to serialize a JavaScript function
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts#L27" >}}">property <b>exportName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>exportName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name to export from the module defined by the generated module text.  Defaults to 'handler'.
@@ -682,7 +956,9 @@ The name to export from the module defined by the generated module text.  Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts#L44" >}}">property <b>isFactoryFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isFactoryFunction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If this is a function which, when invoked, will produce the actual entrypoint function.
@@ -700,7 +976,9 @@ be what is exported.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts#L49" >}}">property <b>logResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logResource?: <a href='#Resource'>Resource</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource to log any errors we encounter against.
@@ -711,7 +989,9 @@ The resource to log any errors we encounter against.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts#L32" >}}">property <b>serialize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serialize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A function to prevent serialization of certain objects captured during the serialization.  Primarily used to
@@ -733,7 +1013,9 @@ SerializeFunction is a representation of a serialized JavaScript function.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts#L65" >}}">property <b>exportName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>exportName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the exported module member.
@@ -744,7 +1026,9 @@ The name of the exported module member.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/serializeClosure.ts#L61" >}}">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>text: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The text of a JavaScript module which exports a single name bound to an appropriate value.
@@ -758,5 +1042,7 @@ of a factory function this value will be the result of invoking the factory func
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/closure/parseFunction.ts#L69" >}}">type <b>CapturedVariableMap</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> CapturedVariableMap = <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#CapturedPropertyChain'>CapturedPropertyChain</a>[]&gt;;</pre>
+{{< /md-disable >}}
 </div>

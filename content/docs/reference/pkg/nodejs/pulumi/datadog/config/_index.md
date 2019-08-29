@@ -37,17 +37,23 @@ title: Module config
 <a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="config/vars.ts#L9" >}}">let <b>apiKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> apiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiKey&#34;) || utilities.getEnv(&#34;DATADOG_API_KEY&#34;)</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="apiUrl">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="config/vars.ts#L10" >}}">let <b>apiUrl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> apiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiUrl&#34;) || utilities.getEnv(&#34;DATADOG_HOST&#34;)</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="appKey">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="datadog" path="config/vars.ts#L11" >}}">let <b>appKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> appKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;appKey&#34;) || utilities.getEnv(&#34;DATADOG_APP_KEY&#34;)</span>;</pre>
+{{< /md-disable >}}
 </div>

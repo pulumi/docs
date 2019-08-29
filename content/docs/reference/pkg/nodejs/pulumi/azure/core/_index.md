@@ -1047,7 +1047,7 @@ id is the provider-assigned unique ID for this managed resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>subscriptions: <a href='#GetSubscriptionsSubscription'>GetSubscriptionsSubscription</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>subscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSubscriptionsSubscription'>outputs.core.GetSubscriptionsSubscription</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 

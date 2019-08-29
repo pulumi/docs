@@ -37,7 +37,9 @@ title: Module config
 <a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="config/vars.ts#L12" >}}">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;LINODE_TOKEN&#34;, &#34;LINODE_API_TOKEN&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The token that allows you access to your Linode account
@@ -48,7 +50,9 @@ The token that allows you access to your Linode account
 <a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="config/vars.ts#L16" >}}">let <b>uaPrefix</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> uaPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;uaPrefix&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An HTTP User-Agent Prefix to prepend in API requests.
@@ -59,7 +63,9 @@ An HTTP User-Agent Prefix to prepend in API requests.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="linode" path="config/vars.ts#L20" >}}">let <b>url</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;url&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP(S) API address of the Linode API to use.

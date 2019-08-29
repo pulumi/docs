@@ -38,7 +38,9 @@ title: Module config
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gitlab" path="config/vars.ts#L12" >}}">let <b>baseUrl</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> baseUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;baseUrl&#34;) || utilities.getEnv(&#34;GITLAB_BASE_URL&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The GitLab Base API URL
@@ -49,7 +51,9 @@ The GitLab Base API URL
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gitlab" path="config/vars.ts#L16" >}}">let <b>cacertFile</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> cacertFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cacertFile&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A file containing the ca certificate to use in case ssl certificate is not from a standard chain
@@ -60,7 +64,9 @@ A file containing the ca certificate to use in case ssl certificate is not from 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gitlab" path="config/vars.ts#L20" >}}">let <b>insecure</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> insecure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;insecure&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Disable SSL verification of API calls
@@ -71,7 +77,9 @@ Disable SSL verification of API calls
 <a class="pdoc-member-name" href="{{< pkg-url pkg="gitlab" path="config/vars.ts#L24" >}}">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;GITLAB_TOKEN&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The OAuth token used to connect to GitLab.

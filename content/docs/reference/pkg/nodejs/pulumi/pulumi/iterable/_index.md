@@ -29,10 +29,12 @@ title: Module iterable
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="iterable/index.ts#L61" >}}">function <b>groupBy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupBy&lt;T,V&gt;(iter: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;T&gt;[]&gt;, selector: (t: T) => <a href='#Input'>Input</a>&lt;[, <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, <a href='#Input'>Input</a>&lt;V&gt;]&gt;): <a href='#Output'>Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: V[]}&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 groupBy takes an array of T values, and a selector that prduces key/value pairs from those inputs,
 and converts this array into an output object, with those keys, and where each property is an array of values,
@@ -53,10 +55,12 @@ and whose selector is roughly `(e) => [e.s, e.n]`, the resulting object will be
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="iterable/index.ts#L30" >}}">function <b>toObject</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>toObject&lt;T,V&gt;(iter: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;T&gt;[]&gt;, selector: (t: T) => <a href='#Input'>Input</a>&lt;[, <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, <a href='#Input'>Input</a>&lt;V&gt;]&gt;): <a href='#Output'>Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: V}&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 toObject takes an array of T values, and a selector that produces key/value pairs from those inputs,
 and converts this array into an output object with those keys and values.

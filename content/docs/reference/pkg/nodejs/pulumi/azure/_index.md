@@ -130,6 +130,7 @@ import * as azure from "@pulumi/azure";
 <li><a href="storage">storage</a></li>
 <li><a href="streamanalytics">streamanalytics</a></li>
 <li><a href="trafficmanager">trafficmanager</a></li>
+<li><a href="types">types</a></li>
 </ul>
 </div>
 </div>

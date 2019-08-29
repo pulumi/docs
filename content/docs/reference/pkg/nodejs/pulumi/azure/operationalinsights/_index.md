@@ -188,7 +188,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AnalyticsSolutionPlan'>AnalyticsSolutionPlan</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AnalyticsSolutionPlan'>outputs.operationalinsights.AnalyticsSolutionPlan</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -665,7 +665,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AnalyticsWorkspaceLinkedServiceLinkedServiceProperty'>AnalyticsWorkspaceLinkedServiceLinkedServiceProperty</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperty'>outputs.operationalinsights.AnalyticsWorkspaceLinkedServiceLinkedServiceProperty</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -811,7 +811,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AnalyticsSolutionPlan'>AnalyticsSolutionPlan</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsSolutionPlan'>inputs.operationalinsights.AnalyticsSolutionPlan</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -899,7 +899,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AnalyticsSolutionPlan'>AnalyticsSolutionPlan</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsSolutionPlan'>inputs.operationalinsights.AnalyticsSolutionPlan</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1075,7 +1075,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AnalyticsWorkspaceLinkedServiceLinkedServiceProperty'>AnalyticsWorkspaceLinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperty'>inputs.operationalinsights.AnalyticsWorkspaceLinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1163,7 +1163,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AnalyticsWorkspaceLinkedServiceLinkedServiceProperty'>AnalyticsWorkspaceLinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AnalyticsWorkspaceLinkedServiceLinkedServiceProperty'>inputs.operationalinsights.AnalyticsWorkspaceLinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

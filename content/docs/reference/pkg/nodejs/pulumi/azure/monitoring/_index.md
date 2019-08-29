@@ -181,7 +181,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupEmailReceiver'>outputs.monitoring.ActionGroupEmailReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -260,7 +260,7 @@ The short name of the action group. This will be used in SMS messages.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupSmsReceiver'>outputs.monitoring.ActionGroupSmsReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -300,7 +300,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupWebhookReceiver'>outputs.monitoring.ActionGroupWebhookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -436,7 +436,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActivityLogAlertAction'>ActivityLogAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActivityLogAlertAction'>outputs.monitoring.ActivityLogAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -449,7 +449,7 @@ One or more `action` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActivityLogAlertCriteria'>outputs.monitoring.ActivityLogAlertCriteria</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -738,7 +738,7 @@ A verbose description of the alert rule that will be included in the alert email
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AlertRuleEmailAction'>outputs.monitoring.AlertRuleEmailAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -909,7 +909,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AlertRuleWebhookAction'>outputs.monitoring.AlertRuleWebhookAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1285,7 +1285,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AutoscaleSettingNotification'>AutoscaleSettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingNotification'>outputs.monitoring.AutoscaleSettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1298,7 +1298,7 @@ Specifies a `notification` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfile'>outputs.monitoring.AutoscaleSettingProfile</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1546,7 +1546,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DiagnosticSettingLog'>DiagnosticSettingLog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingLog'>outputs.monitoring.DiagnosticSettingLog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1559,7 +1559,7 @@ One or more `log` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingMetric'>outputs.monitoring.DiagnosticSettingMetric</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1803,7 +1803,7 @@ new resource to be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LogProfileRetentionPolicy'>outputs.monitoring.LogProfileRetentionPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1983,7 +1983,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricAlertAction'>MetricAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertAction'>outputs.monitoring.MetricAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2009,7 +2009,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricAlertCriteria'>MetricAlertCriteria</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertCriteria'>outputs.monitoring.MetricAlertCriteria</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2335,7 +2335,7 @@ A verbose description of the alert rule that will be included in the alert email
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertRuleEmailAction'>outputs.monitoring.MetricAlertRuleEmailAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2506,7 +2506,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertRuleWebhookAction'>outputs.monitoring.MetricAlertRuleWebhookAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2622,7 +2622,7 @@ The set of arguments for constructing a ActionGroup resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver'>inputs.monitoring.ActionGroupEmailReceiver</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2687,7 +2687,7 @@ The short name of the action group. This will be used in SMS messages.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver'>inputs.monitoring.ActionGroupSmsReceiver</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2713,7 +2713,7 @@ A mapping of tags to assign to the resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver'>inputs.monitoring.ActionGroupWebhookReceiver</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2736,7 +2736,7 @@ Input properties used for looking up and filtering ActionGroup resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver'>inputs.monitoring.ActionGroupEmailReceiver</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2801,7 +2801,7 @@ The short name of the action group. This will be used in SMS messages.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver'>inputs.monitoring.ActionGroupSmsReceiver</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2827,7 +2827,7 @@ A mapping of tags to assign to the resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver'>inputs.monitoring.ActionGroupWebhookReceiver</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2850,7 +2850,7 @@ The set of arguments for constructing a ActivityLogAlert resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActivityLogAlertAction'>ActivityLogAlertAction</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertAction'>inputs.monitoring.ActivityLogAlertAction</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2863,7 +2863,7 @@ One or more `action` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertCriteria'>inputs.monitoring.ActivityLogAlertCriteria</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2964,7 +2964,7 @@ Input properties used for looking up and filtering ActivityLogAlert resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActivityLogAlertAction'>ActivityLogAlertAction</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertAction'>inputs.monitoring.ActivityLogAlertAction</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2977,7 +2977,7 @@ One or more `action` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>criteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>criteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertCriteria'>inputs.monitoring.ActivityLogAlertCriteria</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3104,7 +3104,7 @@ A verbose description of the alert rule that will be included in the alert email
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleEmailAction'>inputs.monitoring.AlertRuleEmailAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3247,7 +3247,7 @@ The threshold value that activates the alert.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleWebhookAction'>inputs.monitoring.AlertRuleWebhookAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3296,7 +3296,7 @@ A verbose description of the alert rule that will be included in the alert email
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleEmailAction'>inputs.monitoring.AlertRuleEmailAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3439,7 +3439,7 @@ The threshold value that activates the alert.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AlertRuleWebhookAction'>inputs.monitoring.AlertRuleWebhookAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3501,7 +3501,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AutoscaleSettingNotification'>AutoscaleSettingNotification</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingNotification'>inputs.monitoring.AutoscaleSettingNotification</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3514,7 +3514,7 @@ Specifies a `notification` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfile'>inputs.monitoring.AutoscaleSettingProfile</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3615,7 +3615,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AutoscaleSettingNotification'>AutoscaleSettingNotification</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingNotification'>inputs.monitoring.AutoscaleSettingNotification</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3628,7 +3628,7 @@ Specifies a `notification` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfile'>inputs.monitoring.AutoscaleSettingProfile</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3742,7 +3742,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DiagnosticSettingLog'>DiagnosticSettingLog</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingLog'>inputs.monitoring.DiagnosticSettingLog</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3755,7 +3755,7 @@ One or more `log` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingMetric'>inputs.monitoring.DiagnosticSettingMetric</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3869,7 +3869,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DiagnosticSettingLog'>DiagnosticSettingLog</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingLog'>inputs.monitoring.DiagnosticSettingLog</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3882,7 +3882,7 @@ One or more `log` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingMetric'>inputs.monitoring.DiagnosticSettingMetric</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3980,7 +3980,7 @@ A collection of values returned by getActionGroup.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>emailReceivers: <a href='#GetActionGroupEmailReceiver'>GetActionGroupEmailReceiver</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupEmailReceiver'>outputs.monitoring.GetActionGroupEmailReceiver</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4055,7 +4055,7 @@ The short name of the action group.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>smsReceivers: <a href='#GetActionGroupSmsReceiver'>GetActionGroupSmsReceiver</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupSmsReceiver'>outputs.monitoring.GetActionGroupSmsReceiver</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4068,7 +4068,7 @@ One or more `smsReceiver ` blocks as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookReceivers: <a href='#GetActionGroupWebhookReceiver'>GetActionGroupWebhookReceiver</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupWebhookReceiver'>outputs.monitoring.GetActionGroupWebhookReceiver</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4245,7 +4245,7 @@ List of regions for which Activity Log events are stored or streamed.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionPolicy: <a href='#GetLogProfileRetentionPolicy'>GetLogProfileRetentionPolicy</a>;</pre>
+<pre class="highlight"><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLogProfileRetentionPolicy'>outputs.monitoring.GetLogProfileRetentionPolicy</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -4331,7 +4331,7 @@ new resource to be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LogProfileRetentionPolicy'>inputs.monitoring.LogProfileRetentionPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4420,7 +4420,7 @@ new resource to be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LogProfileRetentionPolicy'>inputs.monitoring.LogProfileRetentionPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4469,7 +4469,7 @@ The set of arguments for constructing a MetricAlert resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertAction'>MetricAlertAction</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertAction'>inputs.monitoring.MetricAlertAction</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4495,7 +4495,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertCriteria'>MetricAlertCriteria</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertCriteria'>inputs.monitoring.MetricAlertCriteria</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4661,7 +4661,7 @@ A verbose description of the alert rule that will be included in the alert email
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleEmailAction'>inputs.monitoring.MetricAlertRuleEmailAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4804,7 +4804,7 @@ The threshold value that activates the alert.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleWebhookAction'>inputs.monitoring.MetricAlertRuleWebhookAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4853,7 +4853,7 @@ A verbose description of the alert rule that will be included in the alert email
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleEmailAction'>inputs.monitoring.MetricAlertRuleEmailAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4996,7 +4996,7 @@ The threshold value that activates the alert.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertRuleWebhookAction'>inputs.monitoring.MetricAlertRuleWebhookAction</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5019,7 +5019,7 @@ Input properties used for looking up and filtering MetricAlert resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertAction'>MetricAlertAction</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertAction'>inputs.monitoring.MetricAlertAction</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5045,7 +5045,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertCriteria'>MetricAlertCriteria</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertCriteria'>inputs.monitoring.MetricAlertCriteria</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

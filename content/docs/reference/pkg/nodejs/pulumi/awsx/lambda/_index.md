@@ -32,10 +32,12 @@ title: Module lambda
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L174" >}}">function <b>concurrentExecutions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>concurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Emitted as an aggregate metric for all functions in the account, and for functions that have
 a custom concurrency limit specified. Not applicable for versions or aliases. Measures the
@@ -50,10 +52,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L126" >}}">function <b>deadLetterErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadLetterErrors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Incremented when Lambda is unable to write the failed event payload to your configured Dead
 Letter Queues. This could be due to the following:
@@ -71,10 +75,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L139" >}}">function <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duration(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the elapsed wall clock time from when the function code starts executing as a result
 of an invocation to when it stops executing. The maximum data point value possible is the
@@ -90,10 +96,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L111" >}}">function <b>errors</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>errors(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of invocations that failed due to errors in the function (response code
 4XX). This replaces the deprecated ErrorCount metric. Failed invocations may trigger a retry
@@ -117,10 +125,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L90" >}}">function <b>invocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invocations(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of times a function is invoked in response to an event or invocation API
 call. This replaces the deprecated RequestCount metric. This includes successful and failed
@@ -136,10 +146,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L162" >}}">function <b>iteratorAge</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>iteratorAge(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Emitted for stream-based invocations only (functions triggered by an Amazon DynamoDB stream
 or Kinesis stream). Measures the age of the last record for each batch of records processed.
@@ -154,10 +166,12 @@ Units: Milliseconds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L60" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#LambdaMetricName'>LambdaMetricName</a>, change: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/Lambda metric with the requested [metricName]. See
 https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-metrics.html for list of
@@ -181,10 +195,12 @@ functions:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L150" >}}">function <b>throttles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>throttles(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of Lambda function invocation attempts that were throttled due to
 invocation rates exceeding the customer’s concurrent limits (error code 429). Failed
@@ -198,10 +214,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L186" >}}">function <b>unreservedConcurrentExecutions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unreservedConcurrentExecutions(change?: <a href='#LambdaMetricChange'>LambdaMetricChange</a>): cloudwatch.Metric</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Emitted as an aggregate metric for all functions in the account only. Not applicable for
 functions, versions, or aliases. Represents the sum of the concurrency of the functions that
@@ -222,7 +240,9 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -235,7 +255,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -248,7 +270,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L40" >}}">property <b>executedVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>executedVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by Lambda function versions. This only applies to alias
@@ -260,7 +284,9 @@ invocations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -273,7 +299,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L29" >}}">property <b>function</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>function?: aws.lambda.Function;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional Function this metric should be filtered down to.
@@ -284,7 +312,9 @@ Optional Function this metric should be filtered down to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -299,7 +329,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -312,7 +344,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L34" >}}">property <b>resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by Lambda function resource, such as function version or alias.
@@ -323,7 +357,9 @@ Filters the metric data by Lambda function resource, such as function version or
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -336,7 +372,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -349,7 +387,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -363,7 +403,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -377,7 +419,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lambda/metrics.ts#L21" >}}">type <b>LambdaMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> LambdaMetricName = <span class='s2'>"Invocations"</span> | <span class='s2'>"Errors"</span> | <span class='s2'>"DeadLetterErrors"</span> | <span class='s2'>"Duration"</span> | <span class='s2'>"Throttles"</span> | <span class='s2'>"IteratorAge"</span> | <span class='s2'>"ConcurrentExecutions"</span> | <span class='s2'>"UnreservedConcurrentExecutions"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

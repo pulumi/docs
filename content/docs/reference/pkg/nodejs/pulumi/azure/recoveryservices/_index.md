@@ -1295,7 +1295,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ProtectionPolicyVMBackup'>ProtectionPolicyVMBackup</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMBackup'>outputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1361,7 +1361,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>retentionDaily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ProtectionPolicyVMRetentionDaily'>ProtectionPolicyVMRetentionDaily</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>retentionDaily: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionDaily'>outputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1374,7 +1374,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>retentionMonthly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ProtectionPolicyVMRetentionMonthly'>ProtectionPolicyVMRetentionMonthly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>retentionMonthly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionMonthly'>outputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1387,7 +1387,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>retentionWeekly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ProtectionPolicyVMRetentionWeekly'>ProtectionPolicyVMRetentionWeekly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>retentionWeekly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionWeekly'>outputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1400,7 +1400,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>retentionYearly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ProtectionPolicyVMRetentionYearly'>ProtectionPolicyVMRetentionYearly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>retentionYearly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ProtectionPolicyVMRetentionYearly'>outputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1538,7 +1538,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>managedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ReplicatedVmManagedDisk'>ReplicatedVmManagedDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>managedDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ReplicatedVmManagedDisk'>outputs.recoveryservices.ReplicatedVmManagedDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3161,7 +3161,7 @@ The set of arguments for constructing a ProtectionPolicyVM resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMBackup'>ProtectionPolicyVMBackup</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMBackup'>inputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3213,7 +3213,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMRetentionDaily'>ProtectionPolicyVMRetentionDaily</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionDaily'>inputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3226,7 +3226,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMRetentionMonthly'>ProtectionPolicyVMRetentionMonthly</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionMonthly'>inputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3239,7 +3239,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMRetentionWeekly'>ProtectionPolicyVMRetentionWeekly</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionWeekly'>inputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3252,7 +3252,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMRetentionYearly'>ProtectionPolicyVMRetentionYearly</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionYearly'>inputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3301,7 +3301,7 @@ Input properties used for looking up and filtering ProtectionPolicyVM resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMBackup'>ProtectionPolicyVMBackup</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMBackup'>inputs.recoveryservices.ProtectionPolicyVMBackup</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3353,7 +3353,7 @@ The name of the resource group in which to create the Recovery Services Protecte
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMRetentionDaily'>ProtectionPolicyVMRetentionDaily</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionDaily?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionDaily'>inputs.recoveryservices.ProtectionPolicyVMRetentionDaily</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3366,7 +3366,7 @@ Configures the policy daily retention as documented in the `retentionDaily` bloc
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMRetentionMonthly'>ProtectionPolicyVMRetentionMonthly</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionMonthly'>inputs.recoveryservices.ProtectionPolicyVMRetentionMonthly</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3379,7 +3379,7 @@ Configures the policy monthly retention as documented in the `retentionMonthly` 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMRetentionWeekly'>ProtectionPolicyVMRetentionWeekly</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionWeekly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionWeekly'>inputs.recoveryservices.ProtectionPolicyVMRetentionWeekly</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3392,7 +3392,7 @@ Configures the policy weekly retention as documented in the `retentionWeekly` bl
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProtectionPolicyVMRetentionYearly'>ProtectionPolicyVMRetentionYearly</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retentionYearly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ProtectionPolicyVMRetentionYearly'>inputs.recoveryservices.ProtectionPolicyVMRetentionYearly</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3441,7 +3441,7 @@ The set of arguments for constructing a ReplicatedVm resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ReplicatedVmManagedDisk'>ReplicatedVmManagedDisk</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVmManagedDisk'>inputs.recoveryservices.ReplicatedVmManagedDisk</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3571,7 +3571,7 @@ Input properties used for looking up and filtering ReplicatedVm resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ReplicatedVmManagedDisk'>ReplicatedVmManagedDisk</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>managedDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVmManagedDisk'>inputs.recoveryservices.ReplicatedVmManagedDisk</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}

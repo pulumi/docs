@@ -220,7 +220,7 @@ want to compose multiple Functions into the same App manually.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountCapability'>AccountCapability</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountCapability'>outputs.cosmosdb.AccountCapability</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -246,7 +246,7 @@ A list of connection strings available for this CosmosDB account. If the kind is
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountConsistencyPolicy'>outputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -298,7 +298,7 @@ The endpoint used to connect to the CosmosDB account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>failoverPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountFailoverPolicy'>AccountFailoverPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>failoverPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountFailoverPolicy'>outputs.cosmosdb.AccountFailoverPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -308,7 +308,7 @@ The endpoint used to connect to the CosmosDB account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountGeoLocation'>AccountGeoLocation</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountGeoLocation'>outputs.cosmosdb.AccountGeoLocation</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -518,7 +518,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountVirtualNetworkRule'>outputs.cosmosdb.AccountVirtualNetworkRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -715,7 +715,7 @@ deployments.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CosmosChangeFeedSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, account: Account, args: <a href='#CosmosChangeFeedSubscriptionArgs'>CosmosChangeFeedSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CosmosChangeFeedSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, account: Account, args: <a href='#CosmosChangeFeedSubscriptionArgs'>CosmosChangeFeedSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -1040,7 +1040,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MongoCollectionIndex'>MongoCollectionIndex</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>indexes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MongoCollectionIndex'>outputs.cosmosdb.MongoCollectionIndex</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1446,7 +1446,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>uniqueKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SqlContainerUniqueKey'>SqlContainerUniqueKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>uniqueKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SqlContainerUniqueKey'>outputs.cosmosdb.SqlContainerUniqueKey</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1838,7 +1838,7 @@ The set of arguments for constructing a Account resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountCapability'>AccountCapability</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCapability'>inputs.cosmosdb.AccountCapability</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1851,7 +1851,7 @@ The capabilities which should be enabled for this Cosmos DB account. Possible va
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>consistencyPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountConsistencyPolicy'>inputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1890,7 +1890,7 @@ Enable multi-master support for this Cosmos DB account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountFailoverPolicy'>AccountFailoverPolicy</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountFailoverPolicy'>inputs.cosmosdb.AccountFailoverPolicy</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -1900,7 +1900,7 @@ Enable multi-master support for this Cosmos DB account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountGeoLocation'>AccountGeoLocation</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountGeoLocation'>inputs.cosmosdb.AccountGeoLocation</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2017,7 +2017,7 @@ A mapping of tags to assign to the resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountVirtualNetworkRule'>inputs.cosmosdb.AccountVirtualNetworkRule</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2040,7 +2040,7 @@ Input properties used for looking up and filtering Account resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountCapability'>AccountCapability</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCapability'>inputs.cosmosdb.AccountCapability</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2066,7 +2066,7 @@ A list of connection strings available for this CosmosDB account. If the kind is
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>consistencyPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountConsistencyPolicy'>AccountConsistencyPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>consistencyPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountConsistencyPolicy'>inputs.cosmosdb.AccountConsistencyPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2118,7 +2118,7 @@ The endpoint used to connect to the CosmosDB account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountFailoverPolicy'>AccountFailoverPolicy</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>failoverPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountFailoverPolicy'>inputs.cosmosdb.AccountFailoverPolicy</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2128,7 +2128,7 @@ The endpoint used to connect to the CosmosDB account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountGeoLocation'>AccountGeoLocation</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>geoLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountGeoLocation'>inputs.cosmosdb.AccountGeoLocation</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2310,7 +2310,7 @@ A mapping of tags to assign to the resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountVirtualNetworkRule'>AccountVirtualNetworkRule</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>virtualNetworkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountVirtualNetworkRule'>inputs.cosmosdb.AccountVirtualNetworkRule</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3155,7 +3155,7 @@ A collection of values returned by getAccount.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>capabilities: <a href='#GetAccountCapability'>GetAccountCapability</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCapability'>outputs.cosmosdb.GetAccountCapability</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3168,7 +3168,7 @@ Capabilities enabled on this Cosmos DB account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>consistencyPolicies: <a href='#GetAccountConsistencyPolicy'>GetAccountConsistencyPolicy</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>consistencyPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountConsistencyPolicy'>outputs.cosmosdb.GetAccountConsistencyPolicy</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3217,7 +3217,7 @@ The endpoint used to connect to the CosmosDB account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>geoLocations: <a href='#GetAccountGeoLocation'>GetAccountGeoLocation</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>geoLocations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountGeoLocation'>outputs.cosmosdb.GetAccountGeoLocation</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3403,7 +3403,7 @@ A mapping of tags assigned to the resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>virtualNetworkRules: <a href='#GetAccountVirtualNetworkRule'>GetAccountVirtualNetworkRule</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>virtualNetworkRules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountVirtualNetworkRule'>outputs.cosmosdb.GetAccountVirtualNetworkRule</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3597,7 +3597,7 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MongoCollectionIndex'>MongoCollectionIndex</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex'>inputs.cosmosdb.MongoCollectionIndex</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3695,7 +3695,7 @@ The default Time To Live in seconds. If the value is `-1` items are not automati
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MongoCollectionIndex'>MongoCollectionIndex</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>indexes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MongoCollectionIndex'>inputs.cosmosdb.MongoCollectionIndex</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3920,7 +3920,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SqlContainerUniqueKey'>SqlContainerUniqueKey</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerUniqueKey'>inputs.cosmosdb.SqlContainerUniqueKey</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4008,7 +4008,7 @@ The name of the resource group in which the Cosmos DB SQL Database is created. C
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SqlContainerUniqueKey'>SqlContainerUniqueKey</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>uniqueKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SqlContainerUniqueKey'>inputs.cosmosdb.SqlContainerUniqueKey</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

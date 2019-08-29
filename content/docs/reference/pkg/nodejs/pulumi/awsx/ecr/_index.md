@@ -294,15 +294,19 @@ The logic of this lifecycle policy would be:
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">class <b>LifecyclePolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> LifecyclePolicy</pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="LifecyclePolicy-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LifecyclePolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, repository: aws.ecr.Repository, args?: <a href='#LifecyclePolicyArgs'>LifecyclePolicyArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a new [LifecyclePolicy] for the given [repository].  If [args] is not provided, then
 [getDefaultLifecyclePolicyArgs] will be used to set the default policy for this repo.
@@ -313,10 +317,12 @@ Creates a new [LifecyclePolicy] for the given [repository].  If [args] is not pr
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L41" >}}">method <b>defaultLifecyclePolicyArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>defaultLifecyclePolicyArgs(): <a href='#LifecyclePolicyArgs'>LifecyclePolicyArgs</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a default lifecycle policy such that at most a single untagged image is retained. All
 tagged layers and images will never expire.
@@ -324,13 +330,15 @@ tagged layers and images will never expire.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L83" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: LifecyclePolicyState, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): LifecyclePolicy</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing LifecyclePolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -338,23 +346,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L88" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of LifecyclePolicy.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -362,10 +374,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -374,10 +388,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-policy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L92" >}}">property <b>policy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">property <b>policy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs.
@@ -385,10 +401,12 @@ The policy document. This is a JSON formatted string. See more details about [Po
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-registryId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L96" >}}">property <b>registryId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">property <b>registryId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The registry ID where the repository was created.
@@ -396,10 +414,12 @@ The registry ID where the repository was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-repository">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/ecr/lifecyclePolicy.d.ts#L100" >}}">property <b>repository</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the repository to apply the policy.
@@ -407,10 +427,12 @@ Name of the repository to apply the policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LifecyclePolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L20" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -423,7 +445,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L31" >}}">class <b>Repository</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A [Repository] represents an [aws.ecr.Repository] along with an associated [LifecyclePolicy]
@@ -438,20 +462,24 @@ destination registry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L33" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Repository(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RepositoryArgs'>RepositoryArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-buildAndPushImage">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L51" >}}">method <b>buildAndPushImage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>buildAndPushImage(pathOrBuild: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | docker.DockerBuild&gt;): OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; &amp; { ... }</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Builds the docker container specified by [pathOrBuild] and pushes it to this repository.
 The result is the unique ID pointing to that pushed image in this repo.  This unique ID
@@ -460,23 +488,27 @@ can be passed as the value to `image: repo.buildAndPushImage(...)` in an `ecs.Co
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L31" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L31" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -484,20 +516,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L31" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-lifecyclePolicy">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L33" >}}">property <b>lifecyclePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lifecyclePolicy: aws.ecr.LifecyclePolicy | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -505,15 +541,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L32" >}}">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>repository: aws.ecr.Repository;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Repository-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L31" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -526,7 +566,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ecr/repositoryImage.ts#L24" >}}">class <b>RepositoryImage</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerImageProvider'>ContainerImageProvider</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A simple pair of a [Repository] and a built docker image that was pushed to it.  This can
@@ -537,37 +579,45 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repositoryImage.ts#L26" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RepositoryImage(repository: <a href='#Repository'>Repository</a>, image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryImage-environment">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repositoryImage.ts#L34" >}}">method <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>environment(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#never'>never</a></span>[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryImage-image">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repositoryImage.ts#L33" >}}">method <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>image(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RepositoryImage-imageValue">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repositoryImage.ts#L26" >}}">property <b>imageValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>imageValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -575,7 +625,9 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repositoryImage.ts#L25" >}}">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>repository: <a href='#Repository'>Repository</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -584,10 +636,12 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L65" >}}">function <b>buildAndPushImage</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>buildAndPushImage(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, pathOrBuild: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | docker.DockerBuild&gt;, args?: <a href='#RepositoryArgs'>RepositoryArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#RepositoryImage'>RepositoryImage</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a new [Repository] (optionally configured using [args]), builds the docker container
 specified by [pathOrBuild] and then pushes the built image to the repository.  The result
@@ -611,7 +665,9 @@ more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L145" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LifecyclePolicyRule'>LifecyclePolicyRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the rules to determine how images should be retired from this repository. Rules are
@@ -658,7 +714,9 @@ The following behaviors hold for these rules:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L179" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Describes the purpose of a rule within a lifecycle policy.
@@ -669,7 +727,9 @@ Describes the purpose of a rule within a lifecycle policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L207" >}}">property <b>maximumAgeLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maximumAgeLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum age limit (in days) for your images.  Either [maximumNumberOfImages] or
@@ -681,7 +741,9 @@ The maximum age limit (in days) for your images.  Either [maximumNumberOfImages]
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L201" >}}">property <b>maximumNumberOfImages</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maximumNumberOfImages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of images that you want to retain in your repository.  Either
@@ -693,9 +755,11 @@ The maximum number of images that you want to retain in your repository.  Either
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/lifecyclePolicy.ts#L187" >}}">property <b>selection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"untagged"</span> | <span class='s2'>"any"</span> | {
     tagPrefixList: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Determines whether the lifecycle policy rule that you are adding specifies a tag for an
@@ -714,7 +778,9 @@ image. If you specify `any`, then all images have the rule applied to them. If y
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L88" >}}">property <b>lifeCyclePolicyArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lifeCyclePolicyArgs?: <a href='#LifecyclePolicyArgs'>LifecyclePolicyArgs</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The arguments controlling the [LifecyclePolicy] for this [Repository].  If `undefined`, a default one will be
@@ -726,7 +792,9 @@ created using `LifecyclePolicy.getDefaultLifecyclePolicyArgs`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L77" >}}">property <b>repository</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>repository?: aws.ecr.Repository;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Underlying repository.  If not provided, a new one will be created on your behalf.
@@ -737,7 +805,9 @@ Underlying repository.  If not provided, a new one will be created on your behal
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ecr/repository.ts#L82" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.

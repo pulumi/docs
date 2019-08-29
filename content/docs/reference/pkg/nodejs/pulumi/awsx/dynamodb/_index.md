@@ -32,10 +32,12 @@ title: Module dynamodb
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L129" >}}">function <b>conditionalCheckFailedRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>conditionalCheckFailedRequests(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of failed attempts to perform conditional writes. The PutItem, UpdateItem, and
 DeleteItem operations let you provide a logical condition that must evaluate to true before
@@ -55,10 +57,12 @@ Valid Statistics: Minimum, Maximum, Average, SampleCount, Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L160" >}}">function <b>consumedReadCapacityUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumedReadCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of read capacity units consumed over the specified time period, so you can track
 how much of your provisioned throughput is used. You can retrieve the total consumed read
@@ -92,10 +96,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L192" >}}">function <b>consumedWriteCapacityUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumedWriteCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of write capacity units consumed over the specified time period, so you can track
 how much of your provisioned throughput is used. You can retrieve the total consumed write
@@ -130,10 +136,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L87" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#DynamodbMetricName'>DynamodbMetricName</a>, change: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/DynamoDB metric with the requested [metricName]. See
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/metrics-dimensions.html for list
@@ -165,10 +173,12 @@ along any of the dimensions in the table below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L220" >}}">function <b>onlineIndexConsumedWriteCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onlineIndexConsumedWriteCapacity(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of write capacity units consumed when adding a new global secondary index to a
 table. If the write capacity of the index is too low, incoming write activity during the
@@ -199,10 +209,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L241" >}}">function <b>onlineIndexPercentageProgress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onlineIndexPercentageProgress(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The percentage of completion when a new global secondary index is being added to a table.
 DynamoDB must first allocate resources for the new index, and then backfill attributes from the
@@ -226,10 +238,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L267" >}}">function <b>onlineIndexThrottleEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onlineIndexThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of write throttle events that occur when adding a new global secondary index to a
 table. These events indicate that the index creation will take longer to complete, because
@@ -258,10 +272,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L284" >}}">function <b>pendingReplicationCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pendingReplicationCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 (This metric is for DynamoDB global tables.) The number of item updates that are written to
 one replica table, but that have not yet been written to another replica in the global table.
@@ -281,10 +297,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L309" >}}">function <b>provisionedReadCapacityUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>provisionedReadCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of provisioned read capacity units for a table or a global secondary index. The
 TableName dimension returns the ProvisionedReadCapacityUnits for the table, but not for any
@@ -312,10 +330,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L335" >}}">function <b>provisionedWriteCapacityUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>provisionedWriteCapacityUnits(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of provisioned write capacity units for a table or a global secondary index
 
@@ -344,10 +364,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L360" >}}">function <b>readThrottleEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests to DynamoDB that exceed the provisioned read capacity units for a table or a global
 secondary index.
@@ -375,10 +397,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L378" >}}">function <b>replicationLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>replicationLatency(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 (This metric is for DynamoDB global tables.) The elapsed time between an updated item
 appearing in the DynamoDB stream for one replica table, and that item appearing in another
@@ -399,10 +423,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L397" >}}">function <b>returnedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>returnedBytes(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of bytes returned by GetRecords operations (Amazon DynamoDB Streams) during the
 specified time period.
@@ -424,10 +450,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L421" >}}">function <b>returnedItemCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>returnedItemCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of items returned by Query or Scan operations during the specified time period.
 
@@ -454,10 +482,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L440" >}}">function <b>returnedRecordsCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>returnedRecordsCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of stream records returned by GetRecords operations (Amazon DynamoDB Streams)
 during the specified time period.
@@ -479,10 +509,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L464" >}}">function <b>successfulRequestLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>successfulRequestLatency(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Successful requests to DynamoDB or Amazon DynamoDB Streams during the specified time period.
 SuccessfulRequestLatency can provide two different kinds of information:
@@ -509,10 +541,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L480" >}}">function <b>systemErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>systemErrors(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP 500 status code during
 the specified time period. An HTTP 500 usually indicates an internal service error.
@@ -531,10 +565,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L531" >}}">function <b>throttledRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>throttledRequests(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests to DynamoDB that exceed the provisioned throughput limits on a resource (such as a
 table or an index).
@@ -573,10 +609,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L495" >}}">function <b>timeToLiveDeletedItemCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeToLiveDeletedItemCount(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of items deleted by Time To Live (TTL) during the specified time period. This
 metric helps you monitor the rate of TTL deletions on your table.
@@ -594,10 +632,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L556" >}}">function <b>userErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userErrors(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests to DynamoDB or Amazon DynamoDB Streams that generate an HTTP 400 status code during
 the specified time period. An HTTP 400 usually indicates a client-side error such as an
@@ -625,10 +665,12 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L584" >}}">function <b>writeThrottleEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeThrottleEvents(change?: <a href='#DynamodbMetricChange'>DynamodbMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests to DynamoDB that exceed the provisioned write capacity units for a table or a global
 secondary index.
@@ -665,7 +707,9 @@ Valid Statistics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -678,7 +722,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -691,7 +737,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -704,7 +752,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L40" >}}">property <b>globalSecondaryIndexName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>globalSecondaryIndexName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension limits the data to a global secondary index on a table. If you specify
@@ -716,7 +766,9 @@ this, you must also specify [Table].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -731,7 +783,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L45" >}}">property <b>operation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operation?: <span class='s2'>"PutItem"</span> | <span class='s2'>"DeleteItem"</span> | <span class='s2'>"UpdateItem"</span> | <span class='s2'>"GetItem"</span> | <span class='s2'>"BatchGetItem"</span> | <span class='s2'>"Scan"</span> | <span class='s2'>"Query"</span> | <span class='s2'>"BatchWriteItem"</span> | <span class='s2'>"GetRecords"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension limits the data to one of the specified following DynamoDB operations.
@@ -742,7 +796,9 @@ This dimension limits the data to one of the specified following DynamoDB operat
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -755,7 +811,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L53" >}}">property <b>receivingRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>receivingRegion?: aws.Region;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension limits the data to a particular AWS region. It is used with metrics
@@ -767,7 +825,9 @@ originating from replica tables within a DynamoDB global table.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -780,7 +840,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L59" >}}">property <b>streamLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>streamLabel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension limits the data to a specific stream label. It is used with metrics
@@ -792,7 +854,9 @@ originating from Amazon DynamoDB Streams 'GetRecords' operations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L34" >}}">property <b>table</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>table?: aws.dynamodb.Table;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional [Table] this metric should be filtered down to.
@@ -803,7 +867,9 @@ Optional [Table] this metric should be filtered down to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -816,7 +882,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -830,7 +898,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -844,7 +914,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="dynamodb/metrics.ts#L21" >}}">type <b>DynamodbMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> DynamodbMetricName = <span class='s2'>"ConditionalCheckFailedRequests"</span> | <span class='s2'>"ConsumedReadCapacityUnits"</span> | <span class='s2'>"ConsumedWriteCapacityUnits"</span> | <span class='s2'>"OnlineIndexConsumedWriteCapacity"</span> | <span class='s2'>"OnlineIndexPercentageProgress"</span> | <span class='s2'>"OnlineIndexThrottleEvents"</span> | <span class='s2'>"PendingReplicationCount"</span> | <span class='s2'>"ProvisionedReadCapacityUnits"</span> | <span class='s2'>"ProvisionedWriteCapacityUnits"</span> | <span class='s2'>"ReadThrottleEvents"</span> | <span class='s2'>"ReplicationLatency"</span> | <span class='s2'>"ReturnedBytes"</span> | <span class='s2'>"ReturnedItemCount"</span> | <span class='s2'>"ReturnedRecordsCount"</span> | <span class='s2'>"SuccessfulRequestLatency"</span> | <span class='s2'>"SystemErrors"</span> | <span class='s2'>"TimeToLiveDeletedItemCount"</span> | <span class='s2'>"ThrottledRequests"</span> | <span class='s2'>"UserErrors"</span> | <span class='s2'>"WriteThrottleEvents"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

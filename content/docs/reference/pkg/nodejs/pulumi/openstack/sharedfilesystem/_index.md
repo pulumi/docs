@@ -58,7 +58,9 @@ title: Module sharedfilesystem
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L10" >}}">class <b>SecurityService</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_securityservice_v2.html.markdown.
@@ -68,10 +70,12 @@ title: Module sharedfilesystem
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L89" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SecurityService(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SecurityServiceArgs'>SecurityServiceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SecurityService resource with the given unique name, arguments, and options.
 
@@ -85,10 +89,12 @@ Create a SecurityService resource with the given unique name, arguments, and opt
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L19" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SecurityServiceState'>SecurityServiceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SecurityService'>SecurityService</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SecurityService resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -96,23 +102,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L30" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SecurityService.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -123,7 +133,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L41" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the security service.
@@ -135,7 +147,9 @@ Changing this updates the description of the existing security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L46" >}}">property <b>dnsIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service DNS IP address that is used inside the
@@ -147,7 +161,9 @@ tenant network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L50" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service domain.
@@ -155,10 +171,12 @@ The security service domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -170,7 +188,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L55" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the security service. Changing this updates the name
@@ -182,7 +202,9 @@ of the existing security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L60" >}}">property <b>ou</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ou: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service ou. An organizational unit can be added to
@@ -194,7 +216,9 @@ specify where the share ends up. New in Manila microversion 2.44.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L64" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user password, if you specify a user.
@@ -205,7 +229,9 @@ The user password, if you specify a user.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L68" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Security Service.
@@ -216,7 +242,9 @@ The owner of the Security Service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L75" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -230,7 +258,9 @@ security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L79" >}}">property <b>server</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>server: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service host name or IP address.
@@ -241,7 +271,9 @@ The security service host name or IP address.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L84" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service type - can either be active\_directory,
@@ -250,10 +282,12 @@ kerberos or ldap.  Changing this updates the existing security service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -265,7 +299,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L89" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service user or group name that is used by the
@@ -278,7 +314,9 @@ tenant.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L39" >}}">class <b>Share</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Use this resource to configure a share.
@@ -317,10 +355,12 @@ const share1 = new openstack.sharedfilesystem.Share("share1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L153" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Share(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ShareArgs'>ShareArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Share resource with the given unique name, arguments, and options.
 
@@ -334,10 +374,12 @@ Create a Share resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L48" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ShareState'>ShareState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Share'>Share</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Share resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -345,23 +387,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L39" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L59" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Share.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -372,7 +418,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L70" >}}">property <b>allMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of metadata, assigned on the share, which has been
@@ -384,7 +432,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L75" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share availability zone. Changing this creates a
@@ -396,7 +446,9 @@ new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L80" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the share.
@@ -408,10 +460,12 @@ Changing this updates the description of the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L85" >}}">property <b>exportLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>exportLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     preferred: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of export locations. For example, when a share server
@@ -423,7 +477,9 @@ has more than one network interface, it can have multiple export locations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L89" >}}">property <b>hasReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hasReplicas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether a share has replicas or not.
@@ -434,7 +490,9 @@ Indicates whether a share has replicas or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L93" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share host name.
@@ -442,10 +500,12 @@ The share host name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L39" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -457,7 +517,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L99" >}}">property <b>isPublic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>isPublic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The level of visibility for the share. Set to true to make
@@ -470,7 +532,9 @@ updates the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L104" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more metadata key and value pairs as a dictionary of
@@ -482,7 +546,9 @@ strings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L109" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the share. Changing this updates the name
@@ -494,7 +560,9 @@ of the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L113" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Share.
@@ -505,7 +573,9 @@ The owner of the Share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L119" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -518,7 +588,9 @@ creates a new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L123" >}}">property <b>replicationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>replicationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share replication type.
@@ -529,7 +601,9 @@ The share replication type.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L129" >}}">property <b>shareNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shareNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of a share network where the share server exists
@@ -542,7 +616,9 @@ the shareNetworkId value from the snapshot is used. Changing this creates a new 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L134" >}}">property <b>shareProto</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shareProto: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share protocol - can either be NFS, CIFS,
@@ -554,7 +630,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L138" >}}">property <b>shareServerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shareServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share server.
@@ -565,7 +643,9 @@ The UUID of the share server.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L143" >}}">property <b>shareType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shareType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share type name. If you omit this parameter, the default
@@ -577,7 +657,9 @@ share type is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L148" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share size, in GBs. The requested share size cannot be greater
@@ -589,7 +671,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L153" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>snapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share's base snapshot. Changing this creates
@@ -598,10 +682,12 @@ a new share.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Share-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L39" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -614,7 +700,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L10" >}}">class <b>ShareAccess</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_access_v2.html.markdown.
@@ -624,10 +712,12 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L65" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ShareAccess(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ShareAccessArgs'>ShareAccessArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ShareAccess resource with the given unique name, arguments, and options.
 
@@ -641,10 +731,12 @@ Create a ShareAccess resource with the given unique name, arguments, and options
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L19" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ShareAccessState'>ShareAccessState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ShareAccess'>ShareAccess</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ShareAccess resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -652,23 +744,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareAccess-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareAccess-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L30" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ShareAccess.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -679,7 +775,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L40" >}}">property <b>accessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access credential of the entity granted access.
@@ -690,7 +788,9 @@ The access credential of the entity granted access.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L44" >}}">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access level to the share. Can either be `rw` or `ro`.
@@ -701,7 +801,9 @@ The access level to the share. Can either be `rw` or `ro`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L49" >}}">property <b>accessTo</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accessTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value that defines the access. Can either be an IP
@@ -713,7 +815,9 @@ address or a username verified by configured Security Service of the Share Netwo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L55" >}}">property <b>accessType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accessType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access rule type. Can either be an ip, user,
@@ -723,10 +827,12 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareAccess-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -738,7 +844,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L61" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -751,7 +859,9 @@ creates a new share access.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L65" >}}">property <b>shareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share to which you are granted access.
@@ -759,10 +869,12 @@ The UUID of the share to which you are granted access.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareAccess-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -775,7 +887,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L10" >}}">class <b>ShareNetwork</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_sharenetwork_v2.html.markdown.
@@ -785,10 +899,12 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L90" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ShareNetwork(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ShareNetworkArgs'>ShareNetworkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ShareNetwork resource with the given unique name, arguments, and options.
 
@@ -802,10 +918,12 @@ Create a ShareNetwork resource with the given unique name, arguments, and option
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L19" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ShareNetworkState'>ShareNetworkState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ShareNetwork'>ShareNetwork</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ShareNetwork resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -813,23 +931,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L30" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ShareNetwork.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -840,7 +962,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L40" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share network CIDR.
@@ -851,7 +975,9 @@ The share network CIDR.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L45" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the share network.
@@ -860,10 +986,12 @@ Changing this updates the description of the existing share network.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -875,7 +1003,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L49" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP version of the share network. Can either be 4 or 6.
@@ -886,7 +1016,9 @@ The IP version of the share network. Can either be 4 or 6.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the share network. Changing this updates the name
@@ -898,7 +1030,9 @@ of the existing share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L58" >}}">property <b>networkType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>networkType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share network type. Can either be VLAN, VXLAN, GRE, or flat.
@@ -909,7 +1043,9 @@ The share network type. Can either be VLAN, VXLAN, GRE, or flat.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L64" >}}">property <b>neutronNetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>neutronNetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of a neutron network when setting up or updating
@@ -922,7 +1058,9 @@ shares.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L70" >}}">property <b>neutronSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>neutronSubnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the neutron subnet when setting up or
@@ -935,7 +1073,9 @@ not used by shares.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L74" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Share Network.
@@ -946,7 +1086,9 @@ The owner of the Share Network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L81" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -960,7 +1102,9 @@ share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L86" >}}">property <b>securityServiceIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityServiceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of security service IDs to associate with
@@ -972,7 +1116,9 @@ the share network. The security service must be specified by ID and not name.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L90" >}}">property <b>segmentationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>segmentationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share network segmentation ID.
@@ -980,10 +1126,12 @@ The share network segmentation ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -996,10 +1144,12 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getAvailbilityZones.ts#L22" >}}">function <b>getAvailbilityZones</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getAvailbilityZones(args?: <a href='#GetAvailbilityZonesArgs'>GetAvailbilityZonesArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAvailbilityZonesResult'>GetAvailbilityZonesResult</a>&gt; &amp; <a href='#GetAvailbilityZonesResult'>GetAvailbilityZonesResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get a list of Shared File System availability zones
 from OpenStack
@@ -1021,10 +1171,12 @@ const zones = openstack.sharedfilesystem.getAvailbilityZones({});
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L23" >}}">function <b>getShare</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getShare(args?: <a href='#GetShareArgs'>GetShareArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetShareResult'>GetShareResult</a>&gt; &amp; <a href='#GetShareResult'>GetShareResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available Shared File System share.
 
@@ -1047,10 +1199,12 @@ const share1 = openstack.sharedfilesystem.getShare({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L23" >}}">function <b>getShareNetwork</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getShareNetwork(args?: <a href='#GetShareNetworkArgs'>GetShareNetworkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetShareNetworkResult'>GetShareNetworkResult</a>&gt; &amp; <a href='#GetShareNetworkResult'>GetShareNetworkResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available Shared File System share network.
 
@@ -1073,10 +1227,12 @@ const sharenetwork1 = openstack.sharedfilesystem.getShareNetwork({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L23" >}}">function <b>getSnapshot</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getSnapshot(args?: <a href='#GetSnapshotArgs'>GetSnapshotArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSnapshotResult'>GetSnapshotResult</a>&gt; &amp; <a href='#GetSnapshotResult'>GetSnapshotResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available Shared File System snapshot.
 
@@ -1108,7 +1264,9 @@ A collection of arguments for invoking getAvailbilityZones.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getAvailbilityZones.ts#L46" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System
@@ -1130,7 +1288,9 @@ A collection of values returned by getAvailbilityZones.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getAvailbilityZones.ts#L64" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1141,7 +1301,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getAvailbilityZones.ts#L56" >}}">property <b>names</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The names of the availability zones, ordered alphanumerically.
@@ -1152,7 +1314,9 @@ The names of the availability zones, ordered alphanumerically.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getAvailbilityZones.ts#L60" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1173,7 +1337,9 @@ A collection of arguments for invoking getShare.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L54" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the share.
@@ -1184,7 +1350,9 @@ The human-readable description for the share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L59" >}}">property <b>exportLocationPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>exportLocationPath?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The export location path of the share. Available
@@ -1196,7 +1364,9 @@ since Manila API version 2.35.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L64" >}}">property <b>isPublic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isPublic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The level of visibility for the share.
@@ -1208,7 +1378,9 @@ length.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L69" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more metadata key and value pairs as a dictionary of
@@ -1220,7 +1392,9 @@ strings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the share.
@@ -1231,7 +1405,9 @@ The name of the share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L74" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1239,7 +1415,9 @@ The name of the share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L78" >}}">property <b>shareNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareNetworkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share's share network.
@@ -1250,7 +1428,9 @@ The UUID of the share's share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L82" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share's base snapshot.
@@ -1261,7 +1441,9 @@ The UUID of the share's base snapshot.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L90" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A share status filter. A valid value is `creating`,
@@ -1286,7 +1468,9 @@ A collection of arguments for invoking getShareNetwork.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L54" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description of the share network.
@@ -1297,7 +1481,9 @@ The human-readable description of the share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L58" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP version of the share network. Can either be 4 or 6.
@@ -1308,7 +1494,9 @@ The IP version of the share network. Can either be 4 or 6.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L62" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the share network.
@@ -1319,7 +1507,9 @@ The name of the share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L67" >}}">property <b>networkType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share network type. Can either be VLAN, VXLAN,
@@ -1331,7 +1521,9 @@ GRE, or flat.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L71" >}}">property <b>neutronNetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>neutronNetId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The neutron network UUID of the share network.
@@ -1342,7 +1534,9 @@ The neutron network UUID of the share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L75" >}}">property <b>neutronSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>neutronSubnetId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The neutron subnet UUID of the share network.
@@ -1353,7 +1547,9 @@ The neutron subnet UUID of the share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L81" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -1366,7 +1562,9 @@ A Shared File System client is needed to read a share network. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L86" >}}">property <b>securityServiceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityServiceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service IDs associated with
@@ -1378,7 +1576,9 @@ the share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L90" >}}">property <b>segmentationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>segmentationId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share network segmentation ID.
@@ -1399,7 +1599,9 @@ A collection of values returned by getShareNetwork.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L100" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1410,7 +1612,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L104" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1421,7 +1625,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L149" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1432,7 +1638,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L108" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1443,7 +1651,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L112" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1454,7 +1664,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L116" >}}">property <b>networkType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1465,7 +1677,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L120" >}}">property <b>neutronNetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>neutronNetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1476,7 +1690,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L124" >}}">property <b>neutronSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>neutronSubnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1487,7 +1703,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L128" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Share Network.
@@ -1498,7 +1716,9 @@ The owner of the Share Network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L132" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1509,7 +1729,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L136" >}}">property <b>securityServiceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityServiceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1520,7 +1742,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L141" >}}">property <b>securityServiceIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityServiceIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of security service IDs associated with
@@ -1532,7 +1756,9 @@ the share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShareNetwork.ts#L145" >}}">property <b>segmentationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>segmentationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1553,7 +1779,9 @@ A collection of values returned by getShare.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L100" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share availability zone.
@@ -1564,7 +1792,9 @@ The share availability zone.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L104" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1575,7 +1805,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L108" >}}">property <b>exportLocationPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>exportLocationPath?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1586,10 +1818,12 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L114" >}}">property <b>exportLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>exportLocations: {
     path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     preferred: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of export locations. For example, when a share
@@ -1602,7 +1836,9 @@ locations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L158" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1613,7 +1849,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L118" >}}">property <b>isPublic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isPublic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1624,7 +1862,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L122" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1635,7 +1875,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L126" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1646,7 +1888,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L130" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1657,7 +1901,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L134" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -1668,7 +1914,9 @@ The region in which to obtain the V2 Shared File System client.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L138" >}}">property <b>shareNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareNetworkId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1679,7 +1927,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L142" >}}">property <b>shareProto</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareProto: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share protocol.
@@ -1690,7 +1940,9 @@ The share protocol.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L146" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share size, in GBs.
@@ -1701,7 +1953,9 @@ The share size, in GBs.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L150" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1712,7 +1966,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getShare.ts#L154" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1733,7 +1989,9 @@ A collection of arguments for invoking getSnapshot.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L50" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description of the snapshot.
@@ -1744,7 +2002,9 @@ The human-readable description of the snapshot.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the snapshot.
@@ -1755,7 +2015,9 @@ The name of the snapshot.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L58" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -1766,7 +2028,9 @@ The region in which to obtain the V2 Shared File System client.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L59" >}}">property <b>shareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1774,7 +2038,9 @@ The region in which to obtain the V2 Shared File System client.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L65" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A snapshot status filter. A valid value is `available`, `error`,
@@ -1797,7 +2063,9 @@ A collection of values returned by getSnapshot.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L75" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1808,7 +2076,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L108" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1819,7 +2089,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L79" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1830,7 +2102,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L83" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1841,7 +2115,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L84" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1849,7 +2125,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L88" >}}">property <b>shareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the source share that was used to create the snapshot.
@@ -1860,7 +2138,9 @@ The UUID of the source share that was used to create the snapshot.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L92" >}}">property <b>shareProto</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareProto: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The file system protocol of a share snapshot.
@@ -1871,7 +2151,9 @@ The file system protocol of a share snapshot.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L96" >}}">property <b>shareSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share snapshot size, in GBs.
@@ -1882,7 +2164,9 @@ The share snapshot size, in GBs.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L100" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The snapshot size, in GBs.
@@ -1893,7 +2177,9 @@ The snapshot size, in GBs.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/getSnapshot.ts#L104" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1914,7 +2200,9 @@ The set of arguments for constructing a SecurityService resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L209" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the security service.
@@ -1926,7 +2214,9 @@ Changing this updates the description of the existing security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L214" >}}">property <b>dnsIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service DNS IP address that is used inside the
@@ -1938,7 +2228,9 @@ tenant network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L218" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service domain.
@@ -1949,7 +2241,9 @@ The security service domain.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L223" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the security service. Changing this updates the name
@@ -1961,7 +2255,9 @@ of the existing security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L228" >}}">property <b>ou</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ou?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service ou. An organizational unit can be added to
@@ -1973,7 +2269,9 @@ specify where the share ends up. New in Manila microversion 2.44.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L232" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user password, if you specify a user.
@@ -1984,7 +2282,9 @@ The user password, if you specify a user.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L239" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -1998,7 +2298,9 @@ security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L243" >}}">property <b>server</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>server?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service host name or IP address.
@@ -2009,7 +2311,9 @@ The security service host name or IP address.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L248" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service type - can either be active\_directory,
@@ -2021,7 +2325,9 @@ kerberos or ldap.  Changing this updates the existing security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L253" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service user or group name that is used by the
@@ -2043,7 +2349,9 @@ Input properties used for looking up and filtering SecurityService resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L150" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the security service.
@@ -2055,7 +2363,9 @@ Changing this updates the description of the existing security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L155" >}}">property <b>dnsIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service DNS IP address that is used inside the
@@ -2067,7 +2377,9 @@ tenant network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L159" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service domain.
@@ -2078,7 +2390,9 @@ The security service domain.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L164" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the security service. Changing this updates the name
@@ -2090,7 +2404,9 @@ of the existing security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L169" >}}">property <b>ou</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ou?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service ou. An organizational unit can be added to
@@ -2102,7 +2418,9 @@ specify where the share ends up. New in Manila microversion 2.44.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L173" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user password, if you specify a user.
@@ -2113,7 +2431,9 @@ The user password, if you specify a user.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L177" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Security Service.
@@ -2124,7 +2444,9 @@ The owner of the Security Service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L184" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -2138,7 +2460,9 @@ security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L188" >}}">property <b>server</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>server?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service host name or IP address.
@@ -2149,7 +2473,9 @@ The security service host name or IP address.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L193" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service type - can either be active\_directory,
@@ -2161,7 +2487,9 @@ kerberos or ldap.  Changing this updates the existing security service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/securityService.ts#L198" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security service user or group name that is used by the
@@ -2183,7 +2511,9 @@ The set of arguments for constructing a ShareAccess resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L159" >}}">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access level to the share. Can either be `rw` or `ro`.
@@ -2194,7 +2524,9 @@ The access level to the share. Can either be `rw` or `ro`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L164" >}}">property <b>accessTo</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value that defines the access. Can either be an IP
@@ -2206,7 +2538,9 @@ address or a username verified by configured Security Service of the Share Netwo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L170" >}}">property <b>accessType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access rule type. Can either be an ip, user,
@@ -2219,7 +2553,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L176" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -2232,7 +2568,9 @@ creates a new share access.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L180" >}}">property <b>shareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share to which you are granted access.
@@ -2253,7 +2591,9 @@ Input properties used for looking up and filtering ShareAccess resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L124" >}}">property <b>accessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access credential of the entity granted access.
@@ -2264,7 +2604,9 @@ The access credential of the entity granted access.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L128" >}}">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access level to the share. Can either be `rw` or `ro`.
@@ -2275,7 +2617,9 @@ The access level to the share. Can either be `rw` or `ro`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L133" >}}">property <b>accessTo</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value that defines the access. Can either be an IP
@@ -2287,7 +2631,9 @@ address or a username verified by configured Security Service of the Share Netwo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L139" >}}">property <b>accessType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access rule type. Can either be an ip, user,
@@ -2300,7 +2646,9 @@ Shared Filesystem microversion 2.13 (Mitaka) or later.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L145" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -2313,7 +2661,9 @@ creates a new share access.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareAccess.ts#L149" >}}">property <b>shareId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share to which you are granted access.
@@ -2334,7 +2684,9 @@ The set of arguments for constructing a Share resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L325" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share availability zone. Changing this creates a
@@ -2346,7 +2698,9 @@ new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L330" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the share.
@@ -2358,7 +2712,9 @@ Changing this updates the description of the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L336" >}}">property <b>isPublic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isPublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The level of visibility for the share. Set to true to make
@@ -2371,7 +2727,9 @@ updates the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L341" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more metadata key and value pairs as a dictionary of
@@ -2383,7 +2741,9 @@ strings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L346" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the share. Changing this updates the name
@@ -2395,7 +2755,9 @@ of the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L352" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -2408,7 +2770,9 @@ creates a new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L358" >}}">property <b>shareNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of a share network where the share server exists
@@ -2421,7 +2785,9 @@ the shareNetworkId value from the snapshot is used. Changing this creates a new 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L363" >}}">property <b>shareProto</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareProto: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share protocol - can either be NFS, CIFS,
@@ -2433,7 +2799,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L368" >}}">property <b>shareType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share type name. If you omit this parameter, the default
@@ -2445,7 +2813,9 @@ share type is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L373" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share size, in GBs. The requested share size cannot be greater
@@ -2457,7 +2827,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L378" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share's base snapshot. Changing this creates
@@ -2479,7 +2851,9 @@ The set of arguments for constructing a ShareNetwork resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L214" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the share network.
@@ -2491,7 +2865,9 @@ Changing this updates the description of the existing share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L219" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the share network. Changing this updates the name
@@ -2503,7 +2879,9 @@ of the existing share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L225" >}}">property <b>neutronNetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>neutronNetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of a neutron network when setting up or updating
@@ -2516,7 +2894,9 @@ shares.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L231" >}}">property <b>neutronSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>neutronSubnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the neutron subnet when setting up or
@@ -2529,7 +2909,9 @@ not used by shares.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L238" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -2543,7 +2925,9 @@ share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L243" >}}">property <b>securityServiceIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityServiceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of security service IDs to associate with
@@ -2565,7 +2949,9 @@ Input properties used for looking up and filtering ShareNetwork resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L153" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share network CIDR.
@@ -2576,7 +2962,9 @@ The share network CIDR.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L158" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the share network.
@@ -2588,7 +2976,9 @@ Changing this updates the description of the existing share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L162" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP version of the share network. Can either be 4 or 6.
@@ -2599,7 +2989,9 @@ The IP version of the share network. Can either be 4 or 6.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L167" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for the share network. Changing this updates the name
@@ -2611,7 +3003,9 @@ of the existing share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L171" >}}">property <b>networkType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share network type. Can either be VLAN, VXLAN, GRE, or flat.
@@ -2622,7 +3016,9 @@ The share network type. Can either be VLAN, VXLAN, GRE, or flat.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L177" >}}">property <b>neutronNetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>neutronNetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of a neutron network when setting up or updating
@@ -2635,7 +3031,9 @@ shares.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L183" >}}">property <b>neutronSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>neutronSubnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the neutron subnet when setting up or
@@ -2648,7 +3046,9 @@ not used by shares.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L187" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Share Network.
@@ -2659,7 +3059,9 @@ The owner of the Share Network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L194" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -2673,7 +3075,9 @@ share network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L199" >}}">property <b>securityServiceIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityServiceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of security service IDs to associate with
@@ -2685,7 +3089,9 @@ the share network. The security service must be specified by ID and not name.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/shareNetwork.ts#L203" >}}">property <b>segmentationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>segmentationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share network segmentation ID.
@@ -2706,7 +3112,9 @@ Input properties used for looking up and filtering Share resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L231" >}}">property <b>allMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The map of metadata, assigned on the share, which has been
@@ -2718,7 +3126,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L236" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share availability zone. Changing this creates a
@@ -2730,7 +3140,9 @@ new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L241" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the share.
@@ -2742,10 +3154,12 @@ Changing this updates the description of the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L246" >}}">property <b>exportLocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>exportLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     preferred: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of export locations. For example, when a share server
@@ -2757,7 +3171,9 @@ has more than one network interface, it can have multiple export locations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L250" >}}">property <b>hasReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hasReplicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether a share has replicas or not.
@@ -2768,7 +3184,9 @@ Indicates whether a share has replicas or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L254" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share host name.
@@ -2779,7 +3197,9 @@ The share host name.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L260" >}}">property <b>isPublic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isPublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The level of visibility for the share. Set to true to make
@@ -2792,7 +3212,9 @@ updates the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L265" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more metadata key and value pairs as a dictionary of
@@ -2804,7 +3226,9 @@ strings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L270" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the share. Changing this updates the name
@@ -2816,7 +3240,9 @@ of the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L274" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Share.
@@ -2827,7 +3253,9 @@ The owner of the Share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L280" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Shared File System client.
@@ -2840,7 +3268,9 @@ creates a new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L284" >}}">property <b>replicationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>replicationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share replication type.
@@ -2851,7 +3281,9 @@ The share replication type.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L290" >}}">property <b>shareNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of a share network where the share server exists
@@ -2864,7 +3296,9 @@ the shareNetworkId value from the snapshot is used. Changing this creates a new 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L295" >}}">property <b>shareProto</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareProto?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share protocol - can either be NFS, CIFS,
@@ -2876,7 +3310,9 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L299" >}}">property <b>shareServerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share server.
@@ -2887,7 +3323,9 @@ The UUID of the share server.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L304" >}}">property <b>shareType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shareType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share type name. If you omit this parameter, the default
@@ -2899,7 +3337,9 @@ share type is used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L309" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The share size, in GBs. The requested share size cannot be greater
@@ -2911,7 +3351,9 @@ than the allowed GB quota. Changing this resizes the existing share.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="sharedfilesystem/share.ts#L314" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the share's base snapshot. Changing this creates

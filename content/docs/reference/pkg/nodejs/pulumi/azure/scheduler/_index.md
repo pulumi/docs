@@ -219,7 +219,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>actionStorageQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobActionStorageQueue'>JobActionStorageQueue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>actionStorageQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobActionStorageQueue'>outputs.scheduler.JobActionStorageQueue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -232,7 +232,7 @@ A `actionStorageQueue` block defining a storage queue job action as described be
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>actionWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobActionWeb'>JobActionWeb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>actionWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobActionWeb'>outputs.scheduler.JobActionWeb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -245,7 +245,7 @@ A `actionWeb` block defining the job action as described below. Note this is ide
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>errorActionStorageQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobErrorActionStorageQueue'>JobErrorActionStorageQueue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>errorActionStorageQueue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobErrorActionStorageQueue'>outputs.scheduler.JobErrorActionStorageQueue</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -258,7 +258,7 @@ A `errorActionStorageQueue` block defining the a web action to take on an error 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>errorActionWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobErrorActionWeb'>JobErrorActionWeb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>errorActionWeb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobErrorActionWeb'>outputs.scheduler.JobErrorActionWeb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -311,7 +311,7 @@ The name of the Scheduler Job. Changing this forces a new resource to be created
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobRecurrence'>JobRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobRecurrence'>outputs.scheduler.JobRecurrence</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -337,7 +337,7 @@ The name of the resource group in which to create the Scheduler Job. Changing th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobRetry'>JobRetry</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>retry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobRetry'>outputs.scheduler.JobRetry</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -534,7 +534,7 @@ Specifies the name of the Scheduler Job Collection. Changing this forces a new r
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>quota: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#JobCollectionQuota'>JobCollectionQuota</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>quota: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#JobCollectionQuota'>outputs.scheduler.JobCollectionQuota</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -728,7 +728,7 @@ The Azure location where the resource exists.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>quotas: <a href='#GetJobCollectionQuota'>GetJobCollectionQuota</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>quotas: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetJobCollectionQuota'>outputs.scheduler.GetJobCollectionQuota</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -800,7 +800,7 @@ The set of arguments for constructing a Job resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>actionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobActionStorageQueue'>JobActionStorageQueue</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionStorageQueue'>inputs.scheduler.JobActionStorageQueue</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -813,7 +813,7 @@ A `actionStorageQueue` block defining a storage queue job action as described be
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>actionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobActionWeb'>JobActionWeb</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionWeb'>inputs.scheduler.JobActionWeb</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -826,7 +826,7 @@ A `actionWeb` block defining the job action as described below. Note this is ide
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>errorActionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobErrorActionStorageQueue'>JobErrorActionStorageQueue</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>errorActionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionStorageQueue'>inputs.scheduler.JobErrorActionStorageQueue</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -839,7 +839,7 @@ A `errorActionStorageQueue` block defining the a web action to take on an error 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>errorActionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobErrorActionWeb'>JobErrorActionWeb</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>errorActionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionWeb'>inputs.scheduler.JobErrorActionWeb</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -878,7 +878,7 @@ The name of the Scheduler Job. Changing this forces a new resource to be created
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobRecurrence'>JobRecurrence</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRecurrence'>inputs.scheduler.JobRecurrence</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -904,7 +904,7 @@ The name of the resource group in which to create the Scheduler Job. Changing th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobRetry'>JobRetry</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRetry'>inputs.scheduler.JobRetry</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -979,7 +979,7 @@ Specifies the name of the Scheduler Job Collection. Changing this forces a new r
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobCollectionQuota'>JobCollectionQuota</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobCollectionQuota'>inputs.scheduler.JobCollectionQuota</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1080,7 +1080,7 @@ Specifies the name of the Scheduler Job Collection. Changing this forces a new r
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobCollectionQuota'>JobCollectionQuota</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>quota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobCollectionQuota'>inputs.scheduler.JobCollectionQuota</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1155,7 +1155,7 @@ Input properties used for looking up and filtering Job resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>actionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobActionStorageQueue'>JobActionStorageQueue</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionStorageQueue'>inputs.scheduler.JobActionStorageQueue</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1168,7 +1168,7 @@ A `actionStorageQueue` block defining a storage queue job action as described be
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>actionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobActionWeb'>JobActionWeb</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>actionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobActionWeb'>inputs.scheduler.JobActionWeb</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1181,7 +1181,7 @@ A `actionWeb` block defining the job action as described below. Note this is ide
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>errorActionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobErrorActionStorageQueue'>JobErrorActionStorageQueue</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>errorActionStorageQueue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionStorageQueue'>inputs.scheduler.JobErrorActionStorageQueue</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1194,7 +1194,7 @@ A `errorActionStorageQueue` block defining the a web action to take on an error 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>errorActionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobErrorActionWeb'>JobErrorActionWeb</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>errorActionWeb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobErrorActionWeb'>inputs.scheduler.JobErrorActionWeb</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1233,7 +1233,7 @@ The name of the Scheduler Job. Changing this forces a new resource to be created
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobRecurrence'>JobRecurrence</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>recurrence?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRecurrence'>inputs.scheduler.JobRecurrence</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1259,7 +1259,7 @@ The name of the resource group in which to create the Scheduler Job. Changing th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#JobRetry'>JobRetry</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>retry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#JobRetry'>inputs.scheduler.JobRetry</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

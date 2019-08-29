@@ -46,7 +46,9 @@ title: Module synthetics
 <a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L26" >}}">class <b>AlertCondition</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ## Example Usage
@@ -72,10 +74,12 @@ const fooAlertCondition = new newrelic.synthetics.AlertCondition("foo", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AlertCondition(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AlertConditionArgs'>AlertConditionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a AlertCondition resource with the given unique name, arguments, and options.
 
@@ -89,10 +93,12 @@ Create a AlertCondition resource with the given unique name, arguments, and opti
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L35" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AlertConditionState'>AlertConditionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AlertCondition'>AlertCondition</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing AlertCondition resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -103,20 +109,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertCondition-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L46" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of AlertCondition.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -127,7 +137,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L56" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set whether to enable the alert condition. Defaults to `true`.
@@ -138,7 +150,9 @@ Set whether to enable the alert condition. Defaults to `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -150,7 +164,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L60" >}}">property <b>monitorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Synthetics monitor to be referenced in the alert condition.
@@ -161,7 +177,9 @@ The ID of the Synthetics monitor to be referenced in the alert condition.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L64" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The title of this condition.
@@ -172,7 +190,9 @@ The title of this condition.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L68" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the policy where this condition should be used.
@@ -183,7 +203,9 @@ The ID of the policy where this condition should be used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L72" >}}">property <b>runbookUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>runbookUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Runbook URL to display in notifications.
@@ -194,7 +216,9 @@ Runbook URL to display in notifications.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -207,7 +231,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L26" >}}">class <b>Monitor</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Use this resource to create, update, and delete a synthetics monitor in New Relic.
@@ -233,10 +259,12 @@ const foo = new newrelic.synthetics.Monitor("foo", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L93" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Monitor(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MonitorArgs'>MonitorArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Monitor resource with the given unique name, arguments, and options.
 
@@ -250,10 +278,12 @@ Create a Monitor resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L35" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MonitorState'>MonitorState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Monitor'>Monitor</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Monitor resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -264,20 +294,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Monitor-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L46" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Monitor.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -288,7 +322,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L56" >}}">property <b>bypassHeadRequest</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bypassHeadRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Bypass HEAD request.
@@ -299,7 +335,9 @@ Bypass HEAD request.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L60" >}}">property <b>frequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The interval (in minutes) at which this monitor should run.
@@ -310,7 +348,9 @@ The interval (in minutes) at which this monitor should run.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -322,7 +362,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L64" >}}">property <b>locations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The locations in which this monitor should be run.
@@ -333,7 +375,9 @@ The locations in which this monitor should be run.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The title of this monitor.
@@ -344,7 +388,9 @@ The title of this monitor.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L72" >}}">property <b>slaThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>slaThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The base threshold for the SLA report.
@@ -355,7 +401,9 @@ The base threshold for the SLA report.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L76" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The monitor status (i.e. ENABLED, MUTED, DISABLED)
@@ -366,7 +414,9 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L77" >}}">property <b>treatRedirectAsFailure</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>treatRedirectAsFailure: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -374,7 +424,9 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L81" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The monitor type.
@@ -385,7 +437,9 @@ The monitor type.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L85" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URI for the monitor to hit.
@@ -396,7 +450,9 @@ The URI for the monitor to hit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -408,7 +464,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L89" >}}">property <b>validationString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>validationString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The string to validate against in the response.
@@ -419,7 +477,9 @@ The string to validate against in the response.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L93" >}}">property <b>verifySsl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>verifySsl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Verify SSL.
@@ -431,7 +491,9 @@ Verify SSL.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L10" >}}">class <b>MonitorScript</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/synthetics_monitor_script.html.markdown.
@@ -441,10 +503,12 @@ Verify SSL.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L44" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MonitorScript(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MonitorScriptArgs'>MonitorScriptArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MonitorScript resource with the given unique name, arguments, and options.
 
@@ -458,10 +522,12 @@ Create a MonitorScript resource with the given unique name, arguments, and optio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L19" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MonitorScriptState'>MonitorScriptState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MonitorScript'>MonitorScript</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MonitorScript resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -472,20 +538,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MonitorScript-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L30" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MonitorScript.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -496,7 +566,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -508,7 +580,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L40" >}}">property <b>monitorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the monitor to attach the script to.
@@ -519,7 +593,9 @@ The ID of the monitor to attach the script to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L44" >}}">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>text: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 plaintext of the monitor script.
@@ -530,7 +606,9 @@ plaintext of the monitor script.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -543,10 +621,12 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="synthetics/getMonitor.ts#L28" >}}">function <b>getMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getMonitor(args: <a href='#GetMonitorArgs'>GetMonitorArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetMonitorResult'>GetMonitorResult</a>&gt; &amp; <a href='#GetMonitorResult'>GetMonitorResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get information about a specific synthetics monitor in New Relic. This can then be used to set up a synthetics alert condition.
 
@@ -583,7 +663,9 @@ The set of arguments for constructing a AlertCondition resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L149" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set whether to enable the alert condition. Defaults to `true`.
@@ -594,7 +676,9 @@ Set whether to enable the alert condition. Defaults to `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L153" >}}">property <b>monitorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Synthetics monitor to be referenced in the alert condition.
@@ -605,7 +689,9 @@ The ID of the Synthetics monitor to be referenced in the alert condition.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L157" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The title of this condition.
@@ -616,7 +702,9 @@ The title of this condition.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L161" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the policy where this condition should be used.
@@ -627,7 +715,9 @@ The ID of the policy where this condition should be used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L165" >}}">property <b>runbookUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Runbook URL to display in notifications.
@@ -648,7 +738,9 @@ Input properties used for looking up and filtering AlertCondition resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L123" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set whether to enable the alert condition. Defaults to `true`.
@@ -659,7 +751,9 @@ Set whether to enable the alert condition. Defaults to `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L127" >}}">property <b>monitorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Synthetics monitor to be referenced in the alert condition.
@@ -670,7 +764,9 @@ The ID of the Synthetics monitor to be referenced in the alert condition.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L131" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The title of this condition.
@@ -681,7 +777,9 @@ The title of this condition.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L135" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the policy where this condition should be used.
@@ -692,7 +790,9 @@ The ID of the policy where this condition should be used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/alertCondition.ts#L139" >}}">property <b>runbookUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>runbookUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Runbook URL to display in notifications.
@@ -713,7 +813,9 @@ A collection of arguments for invoking getMonitor.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/getMonitor.ts#L50" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the synthetics monitor in New Relic.
@@ -734,7 +836,9 @@ A collection of values returned by getMonitor.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/getMonitor.ts#L62" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -745,7 +849,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/getMonitor.ts#L57" >}}">property <b>monitorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -753,7 +859,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/getMonitor.ts#L58" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -771,7 +879,9 @@ The set of arguments for constructing a Monitor resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L209" >}}">property <b>bypassHeadRequest</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bypassHeadRequest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Bypass HEAD request.
@@ -782,7 +892,9 @@ Bypass HEAD request.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L213" >}}">property <b>frequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The interval (in minutes) at which this monitor should run.
@@ -793,7 +905,9 @@ The interval (in minutes) at which this monitor should run.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L217" >}}">property <b>locations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The locations in which this monitor should be run.
@@ -804,7 +918,9 @@ The locations in which this monitor should be run.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L221" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The title of this monitor.
@@ -815,7 +931,9 @@ The title of this monitor.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L225" >}}">property <b>slaThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>slaThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The base threshold for the SLA report.
@@ -826,7 +944,9 @@ The base threshold for the SLA report.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L229" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The monitor status (i.e. ENABLED, MUTED, DISABLED)
@@ -837,7 +957,9 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L230" >}}">property <b>treatRedirectAsFailure</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>treatRedirectAsFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -845,7 +967,9 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L234" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The monitor type.
@@ -856,7 +980,9 @@ The monitor type.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L238" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URI for the monitor to hit.
@@ -867,7 +993,9 @@ The URI for the monitor to hit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L242" >}}">property <b>validationString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>validationString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The string to validate against in the response.
@@ -878,7 +1006,9 @@ The string to validate against in the response.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L246" >}}">property <b>verifySsl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>verifySsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Verify SSL.
@@ -899,7 +1029,9 @@ The set of arguments for constructing a MonitorScript resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L103" >}}">property <b>monitorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the monitor to attach the script to.
@@ -910,7 +1042,9 @@ The ID of the monitor to attach the script to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L107" >}}">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>text: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 plaintext of the monitor script.
@@ -931,7 +1065,9 @@ Input properties used for looking up and filtering MonitorScript resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L89" >}}">property <b>monitorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the monitor to attach the script to.
@@ -942,7 +1078,9 @@ The ID of the monitor to attach the script to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitorScript.ts#L93" >}}">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>text?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 plaintext of the monitor script.
@@ -963,7 +1101,9 @@ Input properties used for looking up and filtering Monitor resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L162" >}}">property <b>bypassHeadRequest</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bypassHeadRequest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Bypass HEAD request.
@@ -974,7 +1114,9 @@ Bypass HEAD request.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L166" >}}">property <b>frequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The interval (in minutes) at which this monitor should run.
@@ -985,7 +1127,9 @@ The interval (in minutes) at which this monitor should run.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L170" >}}">property <b>locations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The locations in which this monitor should be run.
@@ -996,7 +1140,9 @@ The locations in which this monitor should be run.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L174" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The title of this monitor.
@@ -1007,7 +1153,9 @@ The title of this monitor.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L178" >}}">property <b>slaThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>slaThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The base threshold for the SLA report.
@@ -1018,7 +1166,9 @@ The base threshold for the SLA report.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L182" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The monitor status (i.e. ENABLED, MUTED, DISABLED)
@@ -1029,7 +1179,9 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L183" >}}">property <b>treatRedirectAsFailure</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>treatRedirectAsFailure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1037,7 +1189,9 @@ The monitor status (i.e. ENABLED, MUTED, DISABLED)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L187" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The monitor type.
@@ -1048,7 +1202,9 @@ The monitor type.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L191" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URI for the monitor to hit.
@@ -1059,7 +1215,9 @@ The URI for the monitor to hit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L195" >}}">property <b>validationString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>validationString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The string to validate against in the response.
@@ -1070,7 +1228,9 @@ The string to validate against in the response.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="synthetics/monitor.ts#L199" >}}">property <b>verifySsl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>verifySsl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Verify SSL.

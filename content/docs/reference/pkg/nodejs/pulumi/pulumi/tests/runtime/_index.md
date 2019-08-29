@@ -28,5 +28,7 @@ title: Module tests/runtime
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="tests/runtime/tsClosureCases.ts#L38" >}}">const <b>exportedValue</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> exportedValue: 42 = <span class='s2'>42</span>;</pre>
+{{< /md-disable >}}
 </div>

@@ -189,7 +189,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>keyVaultReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountKeyVaultReference'>AccountKeyVaultReference</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>keyVaultReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountKeyVaultReference'>outputs.batch.AccountKeyVaultReference</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -846,7 +846,7 @@ Specifies the name of the Batch account in which the pool will be created. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>autoScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PoolAutoScale'>PoolAutoScale</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>autoScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolAutoScale'>outputs.batch.PoolAutoScale</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -859,7 +859,7 @@ A `autoScale` block that describes the scale settings when using auto scale.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PoolCertificate'>PoolCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolCertificate'>outputs.batch.PoolCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -872,7 +872,7 @@ One or more `certificate` blocks that describe the certificates to be installed 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>containerConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PoolContainerConfiguration'>PoolContainerConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>containerConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolContainerConfiguration'>outputs.batch.PoolContainerConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -898,7 +898,7 @@ Specifies the display name of the Batch pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>fixedScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PoolFixedScale'>PoolFixedScale</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>fixedScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolFixedScale'>outputs.batch.PoolFixedScale</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -977,7 +977,7 @@ The name of the resource group in which to create the Batch pool. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>startTask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PoolStartTask'>PoolStartTask</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>startTask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStartTask'>outputs.batch.PoolStartTask</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1000,7 +1000,7 @@ A `startTask` block that describes the start task settings for the Batch pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>storageImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PoolStorageImageReference'>PoolStorageImageReference</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStorageImageReference'>outputs.batch.PoolStorageImageReference</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1143,7 +1143,7 @@ The set of arguments for constructing a Account resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>keyVaultReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountKeyVaultReference'>AccountKeyVaultReference</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keyVaultReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountKeyVaultReference'>inputs.batch.AccountKeyVaultReference</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1257,7 +1257,7 @@ The account endpoint used to interact with the Batch service.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>keyVaultReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountKeyVaultReference'>AccountKeyVaultReference</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>keyVaultReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountKeyVaultReference'>inputs.batch.AccountKeyVaultReference</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1844,7 +1844,7 @@ id is the provider-assigned unique ID for this managed resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>keyVaultReferences: <a href='#GetAccountKeyVaultReference'>GetAccountKeyVaultReference</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>keyVaultReferences: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountKeyVaultReference'>outputs.batch.GetAccountKeyVaultReference</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2132,7 +2132,7 @@ A collection of arguments for invoking getPool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificates?: <a href='#GetPoolCertificate'>GetPoolCertificate</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolCertificate'>inputs.batch.GetPoolCertificate</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2195,7 +2195,7 @@ The name of the Batch account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>autoScales: <a href='#GetPoolAutoScale'>GetPoolAutoScale</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>autoScales: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolAutoScale'>outputs.batch.GetPoolAutoScale</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2208,7 +2208,7 @@ A `autoScale` block that describes the scale settings when using auto scale.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificates?: <a href='#GetPoolCertificate'>GetPoolCertificate</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolCertificate'>outputs.batch.GetPoolCertificate</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2221,7 +2221,7 @@ One or more `certificate` blocks that describe the certificates installed on eac
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>containerConfigurations: <a href='#GetPoolContainerConfiguration'>GetPoolContainerConfiguration</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>containerConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolContainerConfiguration'>outputs.batch.GetPoolContainerConfiguration</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2244,7 +2244,7 @@ The container configuration used in the pool's VMs.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>fixedScales: <a href='#GetPoolFixedScale'>GetPoolFixedScale</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>fixedScales: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolFixedScale'>outputs.batch.GetPoolFixedScale</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2332,7 +2332,7 @@ A `startTask` block that describes the start task settings for the Batch pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageImageReferences: <a href='#GetPoolStorageImageReference'>GetPoolStorageImageReference</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>storageImageReferences: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStorageImageReference'>outputs.batch.GetPoolStorageImageReference</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2381,7 +2381,7 @@ Specifies the name of the Batch account in which the pool will be created. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolAutoScale'>PoolAutoScale</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolAutoScale'>inputs.batch.PoolAutoScale</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2394,7 +2394,7 @@ A `autoScale` block that describes the scale settings when using auto scale.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolCertificate'>PoolCertificate</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolCertificate'>inputs.batch.PoolCertificate</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2407,7 +2407,7 @@ One or more `certificate` blocks that describe the certificates to be installed 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>containerConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolContainerConfiguration'>PoolContainerConfiguration</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>containerConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolContainerConfiguration'>inputs.batch.PoolContainerConfiguration</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2433,7 +2433,7 @@ Specifies the display name of the Batch pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>fixedScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolFixedScale'>PoolFixedScale</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>fixedScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolFixedScale'>inputs.batch.PoolFixedScale</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2498,7 +2498,7 @@ The name of the resource group in which to create the Batch pool. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>startTask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolStartTask'>PoolStartTask</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>startTask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStartTask'>inputs.batch.PoolStartTask</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2521,7 +2521,7 @@ A `startTask` block that describes the start task settings for the Batch pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolStorageImageReference'>PoolStorageImageReference</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStorageImageReference'>inputs.batch.PoolStorageImageReference</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2570,7 +2570,7 @@ Specifies the name of the Batch account in which the pool will be created. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolAutoScale'>PoolAutoScale</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolAutoScale'>inputs.batch.PoolAutoScale</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2583,7 +2583,7 @@ A `autoScale` block that describes the scale settings when using auto scale.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolCertificate'>PoolCertificate</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolCertificate'>inputs.batch.PoolCertificate</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2596,7 +2596,7 @@ One or more `certificate` blocks that describe the certificates to be installed 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>containerConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolContainerConfiguration'>PoolContainerConfiguration</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>containerConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolContainerConfiguration'>inputs.batch.PoolContainerConfiguration</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2622,7 +2622,7 @@ Specifies the display name of the Batch pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>fixedScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolFixedScale'>PoolFixedScale</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>fixedScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolFixedScale'>inputs.batch.PoolFixedScale</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2687,7 +2687,7 @@ The name of the resource group in which to create the Batch pool. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>startTask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolStartTask'>PoolStartTask</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>startTask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStartTask'>inputs.batch.PoolStartTask</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2710,7 +2710,7 @@ A `startTask` block that describes the start task settings for the Batch pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PoolStorageImageReference'>PoolStorageImageReference</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStorageImageReference'>inputs.batch.PoolStorageImageReference</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

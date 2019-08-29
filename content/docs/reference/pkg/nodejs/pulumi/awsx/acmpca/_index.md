@@ -32,10 +32,12 @@ title: Module acmpca
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L42" >}}">function <b>crlGenerated</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>crlGenerated(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 A certificate revocation list (CRL) was generated. This metric applies only to a private CA.
 
@@ -45,10 +47,12 @@ A certificate revocation list (CRL) was generated. This metric applies only to a
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L74" >}}">function <b>failure</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>failure(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Indicates that an operation failed. This metric applies only to the IssueCertificate operation.
 
@@ -58,10 +62,12 @@ Indicates that an operation failed. This metric applies only to the IssueCertifi
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L31" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#AcmpcaMetricName'>AcmpcaMetricName</a>, change: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/ACMPrivateCA metric with the requested [metricName]. See
 https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCloudWatch.html for list of all
@@ -76,10 +82,12 @@ Note, individual metrics can easily be obtained without supplying the name using
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L50" >}}">function <b>misconfiguredCRLBucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>misconfiguredCRLBucket(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The S3 bucket specified for the CRL is not correctly configured. Check the bucket policy. This
 metric applies only to a private CA.
@@ -90,10 +98,12 @@ metric applies only to a private CA.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L67" >}}">function <b>success</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>success(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Specifies whether a certificate was successfully issued. This metric applies only to the
 IssueCertificate operation.
@@ -104,10 +114,12 @@ IssueCertificate operation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L59" >}}">function <b>time</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>time(change?: cloudwatch.MetricChange): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The time at which the certificate was issued. This metric applies only to the
 [IssueCertificate](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html)
@@ -119,7 +131,9 @@ operation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="acmpca/metrics.ts#L20" >}}">type <b>AcmpcaMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> AcmpcaMetricName = <span class='s2'>"CRLGenerated"</span> | <span class='s2'>"MisconfiguredCRLBucket"</span> | <span class='s2'>"Time"</span> | <span class='s2'>"Success"</span> | <span class='s2'>"Failure"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

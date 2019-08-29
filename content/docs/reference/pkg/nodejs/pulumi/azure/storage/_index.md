@@ -308,7 +308,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountCustomDomain'>AccountCustomDomain</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountCustomDomain'>outputs.storage.AccountCustomDomain</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -388,7 +388,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountIdentity'>AccountIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountIdentity'>outputs.storage.AccountIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -440,7 +440,7 @@ Specifies the name of the storage account. Changing this forces a new resource t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>networkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountNetworkRules'>AccountNetworkRules</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>networkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountNetworkRules'>outputs.storage.AccountNetworkRules</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -661,7 +661,7 @@ The hostname with port if applicable for web storage in the primary location.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>queueProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountQueueProperties'>AccountQueueProperties</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>queueProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueueProperties'>outputs.storage.AccountQueueProperties</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1243,7 +1243,7 @@ deployments.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BlobEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, container: Container, args: <a href='#BlobEventSubscriptionArgs'>BlobEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> BlobEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, container: storage.Container, args: <a href='#BlobEventSubscriptionArgs'>BlobEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -1798,7 +1798,7 @@ properties used to qualify the lookup.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueCallback'>QueueCallback</a> | <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#QueueFunction'>QueueFunction</a></pre>
+<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueCallback'>QueueCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#QueueContext'>QueueContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#QueueFunction'>QueueFunction</a></pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -1964,7 +1964,7 @@ deployments.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -2263,7 +2263,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ShareAcl'>ShareAcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ShareAcl'>outputs.storage.ShareAcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2703,7 +2703,7 @@ Creates an output binding linked to the given table to be used for an Azure Func
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TableAcl'>TableAcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TableAcl'>outputs.storage.TableAcl</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3151,7 +3151,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>content: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3503,7 +3503,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountCustomDomain'>AccountCustomDomain</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCustomDomain'>inputs.storage.AccountCustomDomain</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3569,7 +3569,7 @@ for more information.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountIdentity'>AccountIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>inputs.storage.AccountIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3621,7 +3621,7 @@ Specifies the name of the storage account. Changing this forces a new resource t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountNetworkRules'>AccountNetworkRules</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountNetworkRules'>inputs.storage.AccountNetworkRules</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3634,7 +3634,7 @@ A `networkRules` block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>queueProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountQueueProperties'>AccountQueueProperties</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>queueProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueueProperties'>inputs.storage.AccountQueueProperties</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3758,7 +3758,7 @@ Defines the Tier to use for this storage account. Valid options are `Standard` a
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountCustomDomain'>AccountCustomDomain</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCustomDomain'>inputs.storage.AccountCustomDomain</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3824,7 +3824,7 @@ for more information.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountIdentity'>AccountIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>inputs.storage.AccountIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3876,7 +3876,7 @@ Specifies the name of the storage account. Changing this forces a new resource t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountNetworkRules'>AccountNetworkRules</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountNetworkRules'>inputs.storage.AccountNetworkRules</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4097,7 +4097,7 @@ The hostname with port if applicable for web storage in the primary location.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>queueProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountQueueProperties'>AccountQueueProperties</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>queueProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueueProperties'>inputs.storage.AccountQueueProperties</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5750,7 +5750,7 @@ The Tier of this storage account.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>customDomain: <a href='#GetAccountCustomDomain'>GetAccountCustomDomain</a>;</pre>
+<pre class="highlight"><span class='kd'></span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCustomDomain'>outputs.storage.GetAccountCustomDomain</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6345,7 +6345,7 @@ Only permit `https` access. If `false`, both `http` and `https` are permitted. D
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>permissions: <a href='#GetAccountSASPermissions'>GetAccountSASPermissions</a>;</pre>
+<pre class="highlight"><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASPermissions'>inputs.storage.GetAccountSASPermissions</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6358,7 +6358,7 @@ A `permissions` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>resourceTypes: <a href='#GetAccountSASResourceTypes'>GetAccountSASResourceTypes</a>;</pre>
+<pre class="highlight"><span class='kd'></span>resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASResourceTypes'>inputs.storage.GetAccountSASResourceTypes</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6371,7 +6371,7 @@ A `resourceTypes` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>services: <a href='#GetAccountSASServices'>GetAccountSASServices</a>;</pre>
+<pre class="highlight"><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASServices'>inputs.storage.GetAccountSASServices</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6450,7 +6450,7 @@ id is the provider-assigned unique ID for this managed resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>permissions: <a href='#GetAccountSASPermissions'>GetAccountSASPermissions</a>;</pre>
+<pre class="highlight"><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASPermissions'>outputs.storage.GetAccountSASPermissions</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -6460,7 +6460,7 @@ id is the provider-assigned unique ID for this managed resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>resourceTypes: <a href='#GetAccountSASResourceTypes'>GetAccountSASResourceTypes</a>;</pre>
+<pre class="highlight"><span class='kd'></span>resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASResourceTypes'>outputs.storage.GetAccountSASResourceTypes</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -6483,7 +6483,7 @@ The computed Account Shared Access Signature (SAS).
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>services: <a href='#GetAccountSASServices'>GetAccountSASServices</a>;</pre>
+<pre class="highlight"><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASServices'>outputs.storage.GetAccountSASServices</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -7541,7 +7541,7 @@ The set of arguments for constructing a Share resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ShareAcl'>ShareAcl</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareAcl'>inputs.storage.ShareAcl</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7755,7 +7755,7 @@ Input properties used for looking up and filtering Share resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ShareAcl'>ShareAcl</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareAcl'>inputs.storage.ShareAcl</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7858,7 +7858,7 @@ The set of arguments for constructing a Table resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TableAcl'>TableAcl</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TableAcl'>inputs.storage.TableAcl</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8132,7 +8132,7 @@ Input properties used for looking up and filtering Table resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TableAcl'>TableAcl</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>acls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TableAcl'>inputs.storage.TableAcl</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8205,7 +8205,7 @@ The set of arguments for constructing a ZipBlob resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -8335,7 +8335,7 @@ Input properties used for looking up and filtering ZipBlob resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>content?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}

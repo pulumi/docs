@@ -863,7 +863,7 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerSku'>outputs.mariadb.ServerSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -889,7 +889,7 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerStorageProfile'>outputs.mariadb.ServerStorageProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1654,7 +1654,7 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerSku'>inputs.mariadb.ServerSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1680,7 +1680,7 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerStorageProfile'>inputs.mariadb.ServerStorageProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1807,7 +1807,7 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerSku'>inputs.mariadb.ServerSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1833,7 +1833,7 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerStorageProfile'>inputs.mariadb.ServerStorageProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

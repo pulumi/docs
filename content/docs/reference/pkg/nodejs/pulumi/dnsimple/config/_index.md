@@ -37,7 +37,9 @@ title: Module config
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="config/vars.ts#L12" >}}">let <b>account</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> account: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;account&#34;) || (utilities.getEnv(&#34;DNSIMPLE_ACCOUNT&#34;) || &#34;&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The account for API operations.
@@ -48,7 +50,9 @@ The account for API operations.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="config/vars.ts#L16" >}}">let <b>email</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;email&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The DNSimple account email address.
@@ -59,7 +63,9 @@ The DNSimple account email address.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="config/vars.ts#L20" >}}">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || (utilities.getEnv(&#34;DNSIMPLE_TOKEN&#34;) || &#34;&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API v2 token for API operations.

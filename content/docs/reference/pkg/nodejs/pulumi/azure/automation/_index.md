@@ -270,7 +270,7 @@ The name of the resource group in which the Automation Account is created. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AccountSku'>AccountSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountSku'>outputs.automation.AccountSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1754,7 +1754,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ModuleModuleLink'>outputs.automation.ModuleModuleLink</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2023,7 +2023,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RunBookPublishContentLink'>RunBookPublishContentLink</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RunBookPublishContentLink'>outputs.automation.RunBookPublishContentLink</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2300,7 +2300,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>monthlyOccurrences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>monthlyOccurrences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduleMonthlyOccurrence'>outputs.automation.ScheduleMonthlyOccurrence</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2779,7 +2779,7 @@ The name of the resource group in which the Automation Account is created. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountSku'>AccountSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountSku'>inputs.automation.AccountSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2906,7 +2906,7 @@ The name of the resource group in which the Automation Account is created. Chang
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AccountSku'>AccountSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountSku'>inputs.automation.AccountSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4582,7 +4582,7 @@ The name of the automation account in which the Module is created. Changing this
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>moduleLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ModuleModuleLink'>inputs.automation.ModuleModuleLink</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4644,7 +4644,7 @@ The name of the automation account in which the Module is created. Changing this
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>moduleLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ModuleModuleLink'>ModuleModuleLink</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>moduleLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ModuleModuleLink'>inputs.automation.ModuleModuleLink</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4784,7 +4784,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RunBookPublishContentLink'>RunBookPublishContentLink</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>publishContentLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookPublishContentLink'>inputs.automation.RunBookPublishContentLink</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4937,7 +4937,7 @@ Specifies the name of the Runbook. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>publishContentLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RunBookPublishContentLink'>RunBookPublishContentLink</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>publishContentLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RunBookPublishContentLink'>inputs.automation.RunBookPublishContentLink</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5087,7 +5087,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleMonthlyOccurrence'>inputs.automation.ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5263,7 +5263,7 @@ List of days of the month that the job should execute on. Must be between `1` an
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ScheduleMonthlyOccurrence'>ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>monthlyOccurrences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduleMonthlyOccurrence'>inputs.automation.ScheduleMonthlyOccurrence</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
