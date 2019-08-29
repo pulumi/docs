@@ -55,14 +55,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.mediastore.Container.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.Container.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Container resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the container.
-:param pulumi.Input[str] endpoint: The DNS endpoint of the container.
-:param pulumi.Input[str] name: The name of the container. Must contain alphanumeric characters or underscores.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the container.</p></li>
+<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS endpoint of the container.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container. Must contain alphanumeric characters or underscores.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_store_container.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_store_container.html.markdown</a>.</p>
 </div></blockquote>
@@ -139,12 +145,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.mediastore.ContainerPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_name=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mediastore.ContainerPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ContainerPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] container_name: The name of the container.
-:param pulumi.Input[str] policy: The contents of the policy.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the container.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the policy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_store_container_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/media_store_container_policy.html.markdown</a>.</p>
 </div></blockquote>

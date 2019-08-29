@@ -49,13 +49,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.servicediscovery.HttpNamespace.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicediscovery.HttpNamespace.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HttpNamespace resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN that Amazon Route 53 assigns to the namespace when you create it.
-:param pulumi.Input[str] description: The description that you specify for the namespace when you create it.
-:param pulumi.Input[str] name: The name of the http namespace.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN that Amazon Route 53 assigns to the namespace when you create it.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description that you specify for the namespace when you create it.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the http namespace.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_http_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_http_namespace.html.markdown</a>.</p>
 </div></blockquote>
@@ -151,15 +157,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicediscovery.PrivateDnsNamespace.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">hosted_zone=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">vpc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicediscovery.PrivateDnsNamespace.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PrivateDnsNamespace resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN that Amazon Route 53 assigns to the namespace when you create it.
-:param pulumi.Input[str] description: The description that you specify for the namespace when you create it.
-:param pulumi.Input[str] hosted_zone: The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
-:param pulumi.Input[str] name: The name of the namespace.
-:param pulumi.Input[str] vpc: The ID of VPC that you want to associate the namespace with.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN that Amazon Route 53 assigns to the namespace when you create it.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description that you specify for the namespace when you create it.</p></li>
+<li><p><strong>hosted_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the namespace.</p></li>
+<li><p><strong>vpc</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of VPC that you want to associate the namespace with.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_private_dns_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_private_dns_namespace.html.markdown</a>.</p>
 </div></blockquote>
@@ -248,14 +260,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicediscovery.PublicDnsNamespace.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">hosted_zone=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicediscovery.PublicDnsNamespace.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PublicDnsNamespace resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN that Amazon Route 53 assigns to the namespace when you create it.
-:param pulumi.Input[str] description: The description that you specify for the namespace when you create it.
-:param pulumi.Input[str] hosted_zone: The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
-:param pulumi.Input[str] name: The name of the namespace.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN that Amazon Route 53 assigns to the namespace when you create it.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description that you specify for the namespace when you create it.</p></li>
+<li><p><strong>hosted_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the namespace.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_public_dns_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_public_dns_namespace.html.markdown</a>.</p>
 </div></blockquote>
@@ -317,6 +335,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>dns_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An array that contains one DnsRecord object for each resource record set.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time, in seconds, that you want DNS resolvers to cache the settings for this resource record set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the namespace to use for DNS configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The routing policy that you want to apply to all records that Route 53 creates when you register an instance and specify the service. Valid Values: MULTIVALUE, WEIGHTED</p></li>
+</ul>
+<p>The <strong>health_check_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failure_threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that you want Route 53 to request when performing health checks. Route 53 automatically adds the DNS name for the service. If you don’t specify a value, the default value is /.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP</p></li>
+</ul>
+<p>The <strong>health_check_custom_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failure_threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_service.html.markdown</a>.</p>
 </div></blockquote>
@@ -336,18 +375,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicediscovery.Service.dns_config">
 <code class="sig-name descname">dns_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicediscovery.Service.dns_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An array that contains one DnsRecord object for each resource record set.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time, in seconds, that you want DNS resolvers to cache the settings for this resource record set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the namespace to use for DNS configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The routing policy that you want to apply to all records that Route 53 creates when you register an instance and specify the service. Valid Values: MULTIVALUE, WEIGHTED</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.servicediscovery.Service.health_check_config">
 <code class="sig-name descname">health_check_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicediscovery.Service.health_check_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A complex type that contains settings for an optional health check. Only for Public DNS namespaces.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failure_threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path that you want Route 53 to request when performing health checks. Route 53 automatically adds the DNS name for the service. If you don’t specify a value, the default value is /.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.servicediscovery.Service.health_check_custom_config">
 <code class="sig-name descname">health_check_custom_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.servicediscovery.Service.health_check_custom_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A complex type that contains settings for ECS managed health checks.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failure_threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -366,17 +423,44 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicediscovery.Service.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_config=None</em>, <em class="sig-param">health_check_config=None</em>, <em class="sig-param">health_check_custom_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicediscovery.Service.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the service.
-:param pulumi.Input[str] description: The description of the service.
-:param pulumi.Input[dict] dns_config: A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
-:param pulumi.Input[dict] health_check_config: A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
-:param pulumi.Input[dict] health_check_custom_config: A complex type that contains settings for ECS managed health checks.
-:param pulumi.Input[str] name: The name of the service.
-:param pulumi.Input[str] namespace_id: The ID of the namespace to use for DNS configuration.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the service.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the service.</p></li>
+<li><p><strong>dns_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.</p></li>
+<li><p><strong>health_check_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A complex type that contains settings for an optional health check. Only for Public DNS namespaces.</p></li>
+<li><p><strong>health_check_custom_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A complex type that contains settings for ECS managed health checks.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service.</p></li>
+<li><p><strong>namespace_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the namespace to use for DNS configuration.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>dns_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An array that contains one DnsRecord object for each resource record set.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time, in seconds, that you want DNS resolvers to cache the settings for this resource record set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the namespace to use for DNS configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The routing policy that you want to apply to all records that Route 53 creates when you register an instance and specify the service. Valid Values: MULTIVALUE, WEIGHTED</p></li>
+</ul>
+<p>The <strong>health_check_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failure_threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path that you want Route 53 to request when performing health checks. Route 53 automatically adds the DNS name for the service. If you don’t specify a value, the default value is /.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP</p></li>
+</ul>
+<p>The <strong>health_check_custom_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">failure_threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_service.html.markdown</a>.</p>
 </div></blockquote>

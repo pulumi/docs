@@ -161,19 +161,25 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cur.ReportDefinition.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_artifacts=None</em>, <em class="sig-param">additional_schema_elements=None</em>, <em class="sig-param">compression=None</em>, <em class="sig-param">format=None</em>, <em class="sig-param">report_name=None</em>, <em class="sig-param">s3_bucket=None</em>, <em class="sig-param">s3_prefix=None</em>, <em class="sig-param">s3_region=None</em>, <em class="sig-param">time_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cur.ReportDefinition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReportDefinition resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] additional_artifacts: A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
-:param pulumi.Input[list] additional_schema_elements: A list of schema elements. Valid values are: RESOURCES.
-:param pulumi.Input[str] compression: Compression format for report. Valid values are: GZIP, ZIP.
-:param pulumi.Input[str] format: Format for report. Valid values are: textORcsv.
-:param pulumi.Input[str] report_name: Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
-:param pulumi.Input[str] s3_bucket: Name of the existing S3 bucket to hold generated reports.
-:param pulumi.Input[str] s3_prefix: Report path prefix. Limited to 256 characters.
-:param pulumi.Input[str] s3_region: Region of the existing S3 bucket to hold generated reports.
-:param pulumi.Input[str] time_unit: The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>additional_artifacts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.</p></li>
+<li><p><strong>additional_schema_elements</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of schema elements. Valid values are: RESOURCES.</p></li>
+<li><p><strong>compression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Compression format for report. Valid values are: GZIP, ZIP.</p></li>
+<li><p><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Format for report. Valid values are: textORcsv.</p></li>
+<li><p><strong>report_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.</p></li>
+<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the existing S3 bucket to hold generated reports.</p></li>
+<li><p><strong>s3_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Report path prefix. Limited to 256 characters.</p></li>
+<li><p><strong>s3_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region of the existing S3 bucket to hold generated reports.</p></li>
+<li><p><strong>time_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cur_report_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cur_report_definition.html.markdown</a>.</p>
 </div></blockquote>
@@ -224,7 +230,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><em>NOTE:</em> The AWS Cost and Usage Report service is only available in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code> currently.</p>
 <p><em>NOTE:</em> If AWS Organizations is enabled, only the master account can use this resource.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cur_report_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cur_report_definition.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>report_name</strong> (<em>str</em>) – The name of the report definition to match.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cur_report_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cur_report_definition.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

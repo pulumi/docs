@@ -30,6 +30,10 @@ For information about function aliases, see [CreateAlias][2] and [AliasRoutingCo
 </ul>
 </dd>
 </dl>
+<p>The <strong>routing_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalVersionWeights</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map that defines the proportion of events that should be sent to different versions of a lambda function.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown</a>.</p>
 </div></blockquote>
@@ -73,23 +77,36 @@ For information about function aliases, see [CreateAlias][2] and [AliasRoutingCo
 <dt id="pulumi_aws.lambda_.Alias.routing_config">
 <code class="sig-name descname">routing_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Alias.routing_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Lambda alias’ route configuration settings. Fields documented below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalVersionWeights</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map that defines the proportion of events that should be sent to different versions of a lambda function.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.lambda_.Alias.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">function_version=None</em>, <em class="sig-param">invoke_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">routing_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Alias.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Alias resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) identifying your Lambda function alias.
-:param pulumi.Input[str] description: Description of the alias.
-:param pulumi.Input[str] function_name: The function ARN of the Lambda function for which you want to create an alias.
-:param pulumi.Input[str] function_version: Lambda function version for which you are creating the alias. Pattern: <code class="docutils literal notranslate"><span class="pre">(\$LATEST|[0-9]+)</span></code>.
-:param pulumi.Input[str] invoke_arn: The ARN to be used for invoking Lambda Function from API Gateway - to be used in <cite>``apigateway.Integration`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">uri</span></code>
-:param pulumi.Input[str] name: Name for the alias you are creating. Pattern: <code class="docutils literal notranslate"><span class="pre">(?!^[0-9]+$)([a-zA-Z0-9-_]+)</span></code>
-:param pulumi.Input[dict] routing_config: The Lambda alias’ route configuration settings. Fields documented below</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) identifying your Lambda function alias.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the alias.</p></li>
+<li><p><strong>function_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The function ARN of the Lambda function for which you want to create an alias.</p></li>
+<li><p><strong>function_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Lambda function version for which you are creating the alias. Pattern: <code class="docutils literal notranslate"><span class="pre">(\$LATEST|[0-9]+)</span></code>.</p></li>
+<li><p><strong>invoke_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN to be used for invoking Lambda Function from API Gateway - to be used in <cite>``apigateway.Integration`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">uri</span></code></p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the alias you are creating. Pattern: <code class="docutils literal notranslate"><span class="pre">(?!^[0-9]+$)([a-zA-Z0-9-_]+)</span></code></p></li>
+<li><p><strong>routing_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Lambda alias’ route configuration settings. Fields documented below</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>routing_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalVersionWeights</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map that defines the proportion of events that should be sent to different versions of a lambda function.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown</a>.</p>
 </div></blockquote>
@@ -247,22 +264,30 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
 <dt id="pulumi_aws.lambda_.EventSourceMapping.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">batch_size=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">event_source_arn=None</em>, <em class="sig-param">function_arn=None</em>, <em class="sig-param">function_name=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">last_processing_result=None</em>, <em class="sig-param">starting_position=None</em>, <em class="sig-param">starting_position_timestamp=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">state_transition_reason=None</em>, <em class="sig-param">uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventSourceMapping resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] batch_size: The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code> for DynamoDB and Kinesis, <code class="docutils literal notranslate"><span class="pre">10</span></code> for SQS.
-:param pulumi.Input[bool] enabled: Determines if the mapping will be enabled on creation. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] event_source_arn: The event source ARN - can either be a Kinesis or DynamoDB stream.
-:param pulumi.Input[str] function_arn: The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from <code class="docutils literal notranslate"><span class="pre">function_name</span></code> above.)
-:param pulumi.Input[str] function_name: The name or the ARN of the Lambda function that will be subscribing to events.
-:param pulumi.Input[str] last_modified: The date this resource was last modified.
-:param pulumi.Input[str] last_processing_result: The result of the last AWS Lambda invocation of your Lambda function.
-:param pulumi.Input[str] starting_position: The position in the stream where AWS Lambda should start reading. Must be one of <code class="docutils literal notranslate"><span class="pre">AT_TIMESTAMP</span></code> (Kinesis only), <code class="docutils literal notranslate"><span class="pre">LATEST</span></code> or <code class="docutils literal notranslate"><span class="pre">TRIM_HORIZON</span></code> if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html">AWS DynamoDB Streams API Reference</a> and <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType">AWS Kinesis API Reference</a>.
-:param pulumi.Input[str] starting_position_timestamp: A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> of the data record which to start reading when using <code class="docutils literal notranslate"><span class="pre">starting_position</span></code> set to <code class="docutils literal notranslate"><span class="pre">AT_TIMESTAMP</span></code>. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
-:param pulumi.Input[str] state: The state of the event source mapping.
-:param pulumi.Input[str] state_transition_reason: The reason the event source mapping is in its current state.
-:param pulumi.Input[str] uuid: The UUID of the created event source mapping.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>batch_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code> for DynamoDB and Kinesis, <code class="docutils literal notranslate"><span class="pre">10</span></code> for SQS.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the mapping will be enabled on creation. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>event_source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The event source ARN - can either be a Kinesis or DynamoDB stream.</p></li>
+<li><p><strong>function_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from <code class="docutils literal notranslate"><span class="pre">function_name</span></code> above.)</p></li>
+<li><p><strong>function_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or the ARN of the Lambda function that will be subscribing to events.</p></li>
+<li><p><strong>last_modified</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date this resource was last modified.</p></li>
+<li><p><strong>last_processing_result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The result of the last AWS Lambda invocation of your Lambda function.</p></li>
+<li><p><strong>starting_position</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The position in the stream where AWS Lambda should start reading. Must be one of <code class="docutils literal notranslate"><span class="pre">AT_TIMESTAMP</span></code> (Kinesis only), <code class="docutils literal notranslate"><span class="pre">LATEST</span></code> or <code class="docutils literal notranslate"><span class="pre">TRIM_HORIZON</span></code> if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html">AWS DynamoDB Streams API Reference</a> and <a class="reference external" href="https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType">AWS Kinesis API Reference</a>.</p>
+</p></li>
+<li><p><strong>starting_position_timestamp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> of the data record which to start reading when using <code class="docutils literal notranslate"><span class="pre">starting_position</span></code> set to <code class="docutils literal notranslate"><span class="pre">AT_TIMESTAMP</span></code>. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</p>
+</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the event source mapping.</p></li>
+<li><p><strong>state_transition_reason</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The reason the event source mapping is in its current state.</p></li>
+<li><p><strong>uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of the created event source mapping.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown</a>.</p>
 </div></blockquote>
@@ -348,6 +373,31 @@ large files efficiently.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>dead_letter_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">target_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic or SQS queue to notify when an invocation fails. If this
+option is used, the function’s IAM role must be granted suitable access to write to the target object,
+which means allowing either the <code class="docutils literal notranslate"><span class="pre">sns:Publish</span></code> or <code class="docutils literal notranslate"><span class="pre">sqs:SendMessage</span></code> action on this ARN, depending on
+which service is targeted.</p></li>
+</ul>
+<p>The <strong>environment</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">variables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map that defines environment variables for the Lambda function.</p></li>
+</ul>
+<p>The <strong>tracing_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be either <code class="docutils literal notranslate"><span class="pre">PassThrough</span></code> or <code class="docutils literal notranslate"><span class="pre">Active</span></code>. If PassThrough, Lambda will only trace
+the request from an upstream service if it contains a tracing header with
+“sampled=1”. If Active, Lambda will respect any tracing header it receives
+from an upstream service. If no tracing header is received, Lambda will call
+X-Ray for a tracing decision.</p></li>
+</ul>
+<p>The <strong>vpc_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of security group IDs associated with the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of subnet IDs associated with the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function.html.markdown</a>.</p>
 </div></blockquote>
@@ -361,6 +411,12 @@ large files efficiently.</p>
 <dt id="pulumi_aws.lambda_.Function.dead_letter_config">
 <code class="sig-name descname">dead_letter_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Function.dead_letter_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested block to configure the function’s <em>dead letter queue</em>. See details below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">target_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an SNS topic or SQS queue to notify when an invocation fails. If this
+option is used, the function’s IAM role must be granted suitable access to write to the target object,
+which means allowing either the <code class="docutils literal notranslate"><span class="pre">sns:Publish</span></code> or <code class="docutils literal notranslate"><span class="pre">sqs:SendMessage</span></code> action on this ARN, depending on
+which service is targeted.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -373,6 +429,9 @@ large files efficiently.</p>
 <dt id="pulumi_aws.lambda_.Function.environment">
 <code class="sig-name descname">environment</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Function.environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Lambda environment’s configuration settings. Fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">variables</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map that defines environment variables for the Lambda function.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -506,42 +565,46 @@ large files efficiently.</p>
 <dt id="pulumi_aws.lambda_.Function.vpc_config">
 <code class="sig-name descname">vpc_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Function.vpc_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of security group IDs associated with the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of subnet IDs associated with the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.lambda_.Function.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">dead_letter_config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">code=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">handler=None</em>, <em class="sig-param">invoke_arn=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">layers=None</em>, <em class="sig-param">memory_size=None</em>, <em class="sig-param">publish=None</em>, <em class="sig-param">qualified_arn=None</em>, <em class="sig-param">reserved_concurrent_executions=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">s3_bucket=None</em>, <em class="sig-param">s3_key=None</em>, <em class="sig-param">s3_object_version=None</em>, <em class="sig-param">source_code_hash=None</em>, <em class="sig-param">source_code_size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">tracing_config=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Function.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Function resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) identifying your Lambda Function.
-:param pulumi.Input[dict] dead_letter<em>config: Nested block to configure the function’s *dead letter queue</em>. See details below.
-:param pulumi.Input[str] description: Description of what your Lambda Function does.
-:param pulumi.Input[dict] environment: The Lambda environment’s configuration settings. Fields documented below.
-:param pulumi.Input[pulumi.Archive] code: The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3*`</cite>-prefixed options cannot be used.
-:param pulumi.Input[str] name: A unique name for your Lambda Function.
-:param pulumi.Input[str] handler: The function [entrypoint][3] in your code.
-:param pulumi.Input[str] invoke_arn: The ARN to be used for invoking Lambda Function from API Gateway - to be used in [<code class="docutils literal notranslate"><span class="pre">\</span> <span class="pre">apigateway.Integration\</span> <span class="pre">``](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s</span></code>uri<code class="docutils literal notranslate"><span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">kms_key_arn:</span> <span class="pre">The</span> <span class="pre">ARN</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">KMS</span> <span class="pre">encryption</span> <span class="pre">key.</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">last_modified:</span> <span class="pre">The</span> <span class="pre">date</span> <span class="pre">this</span> <span class="pre">resource</span> <span class="pre">was</span> <span class="pre">last</span> <span class="pre">modified.</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[list]</span> <span class="pre">layers:</span> <span class="pre">List</span> <span class="pre">of</span> <span class="pre">Lambda</span> <span class="pre">Layer</span> <span class="pre">Version</span> <span class="pre">ARNs</span> <span class="pre">(maximum</span> <span class="pre">of</span> <span class="pre">5)</span> <span class="pre">to</span> <span class="pre">attach</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">Lambda</span> <span class="pre">Function.</span> <span class="pre">See</span> <span class="pre">[Lambda</span> <span class="pre">Layers][10]</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[float]</span> <span class="pre">memory_size:</span> <span class="pre">Amount</span> <span class="pre">of</span> <span class="pre">memory</span> <span class="pre">in</span> <span class="pre">MB</span> <span class="pre">your</span> <span class="pre">Lambda</span> <span class="pre">Function</span> <span class="pre">can</span> <span class="pre">use</span> <span class="pre">at</span> <span class="pre">runtime.</span> <span class="pre">Defaults</span> <span class="pre">to</span></code>128<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">See</span> <span class="pre">[Limits][5]</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[bool]</span> <span class="pre">publish:</span> <span class="pre">Whether</span> <span class="pre">to</span> <span class="pre">publish</span> <span class="pre">creation/change</span> <span class="pre">as</span> <span class="pre">new</span> <span class="pre">Lambda</span> <span class="pre">Function</span> <span class="pre">Version.</span> <span class="pre">Defaults</span> <span class="pre">to</span></code>false<a href="#id25"><span class="problematic" id="id26">``</span></a>.
-:param pulumi.Input[str] qualified_arn: The Amazon Resource Name (ARN) identifying your Lambda Function Version</p>
-<blockquote>
-<div><p>(if versioning is enabled via``publish = true<a href="#id27"><span class="problematic" id="id28">``</span></a>).</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>reserved_concurrent_executions</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of reserved concurrent executions for this lambda function. A value of``0<code class="docutils literal notranslate"><span class="pre">disables</span> <span class="pre">lambda</span> <span class="pre">from</span> <span class="pre">being</span> <span class="pre">triggered</span> <span class="pre">and</span></code>-1<code class="docutils literal notranslate"><span class="pre">removes</span> <span class="pre">any</span> <span class="pre">concurrency</span> <span class="pre">limitations.</span> <span class="pre">Defaults</span> <span class="pre">to</span> <span class="pre">Unreserved</span> <span class="pre">Concurrency</span> <span class="pre">Limits</span></code>-1<a href="#id29"><span class="problematic" id="id30">``</span></a>. See [Managing Concurrency][9]</p></li>
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) identifying your Lambda Function.</p></li>
+<li><p><strong>dead_letter*config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Nested block to configure the function’s <em>dead letter queue</em>. See details below.</p>
+</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of what your Lambda Function does.</p></li>
+<li><p><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Lambda environment’s configuration settings. Fields documented below.</p></li>
+<li><p><strong>code</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.Archive</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3*`</cite>-prefixed options cannot be used.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your Lambda Function.</p></li>
+<li><p><strong>handler</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The function [entrypoint][3] in your code.</p></li>
+<li><p><strong>invoke_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN to be used for invoking Lambda Function from API Gateway - to be used in [<code class="docutils literal notranslate"><span class="pre">\</span> <span class="pre">apigateway.Integration\</span> <span class="pre">``](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s</span></code>uri<a href="#id27"><span class="problematic" id="id28">``</span></a>:param pulumi.Input[str] kms_key_arn: The ARN for the KMS encryption key.</p></li>
+<li><p><strong>last_modified</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date this resource was last modified.</p></li>
+<li><p><strong>layers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]</p></li>
+<li><p><strong>memory_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of memory in MB your Lambda Function can use at runtime. Defaults to``128<a href="#id29"><span class="problematic" id="id30">``</span></a>. See [Limits][5]</p></li>
+<li><p><strong>publish</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to publish creation/change as new Lambda Function Version. Defaults to``false<a href="#id31"><span class="problematic" id="id32">``</span></a>.</p></li>
+<li><p><strong>qualified_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) identifying your Lambda Function Version
+(if versioning is enabled via``publish = true<a href="#id33"><span class="problematic" id="id34">``</span></a>).</p></li>
+<li><p><strong>reserved_concurrent_executions</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of reserved concurrent executions for this lambda function. A value of``0<code class="docutils literal notranslate"><span class="pre">disables</span> <span class="pre">lambda</span> <span class="pre">from</span> <span class="pre">being</span> <span class="pre">triggered</span> <span class="pre">and</span></code>-1<code class="docutils literal notranslate"><span class="pre">removes</span> <span class="pre">any</span> <span class="pre">concurrency</span> <span class="pre">limitations.</span> <span class="pre">Defaults</span> <span class="pre">to</span> <span class="pre">Unreserved</span> <span class="pre">Concurrency</span> <span class="pre">Limits</span></code>-1<a href="#id35"><span class="problematic" id="id36">``</span></a>. See [Managing Concurrency][9]</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.</p></li>
 <li><p><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See [Runtimes][6] for valid values.</p></li>
-<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id31"><span class="problematic" id="id32">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
-<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id33"><span class="problematic" id="id34">``</span></a>.</p></li>
-<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id35"><span class="problematic" id="id36">``</span></a>.</p></li>
-<li><p><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>filebase64sha256(“file.zip”)<code class="docutils literal notranslate"><span class="pre">(this</span> <span class="pre">provider</span> <span class="pre">0.11.12</span> <span class="pre">and</span> <span class="pre">later)</span> <span class="pre">or</span></code>base64sha256(file(“file.zip”))<a href="#id37"><span class="problematic" id="id38">``</span></a>(this provider 0.11.11 and earlier), where “file.zip” is the local filename of the lambda function source archive.</p></li>
+<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id37"><span class="problematic" id="id38">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
+<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id39"><span class="problematic" id="id40">``</span></a>.</p></li>
+<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id41"><span class="problematic" id="id42">``</span></a>.</p></li>
+<li><p><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>filebase64sha256(“file.zip”)<code class="docutils literal notranslate"><span class="pre">(this</span> <span class="pre">provider</span> <span class="pre">0.11.12</span> <span class="pre">and</span> <span class="pre">later)</span> <span class="pre">or</span></code>base64sha256(file(“file.zip”))<a href="#id43"><span class="problematic" id="id44">``</span></a>(this provider 0.11.11 and earlier), where “file.zip” is the local filename of the lambda function source archive.</p></li>
 <li><p><strong>source_code_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size in bytes of the function .zip file.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time your Lambda Function has to run in seconds. Defaults to``3`. See [Limits][5]</p></li>
@@ -550,6 +613,31 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>dead_letter_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">target_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic or SQS queue to notify when an invocation fails. If this
+option is used, the function’s IAM role must be granted suitable access to write to the target object,
+which means allowing either the <code class="docutils literal notranslate"><span class="pre">sns:Publish</span></code> or <code class="docutils literal notranslate"><span class="pre">sqs:SendMessage</span></code> action on this ARN, depending on
+which service is targeted.</p></li>
+</ul>
+<p>The <strong>environment</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">variables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map that defines environment variables for the Lambda function.</p></li>
+</ul>
+<p>The <strong>tracing_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be either <code class="docutils literal notranslate"><span class="pre">PassThrough</span></code> or <code class="docutils literal notranslate"><span class="pre">Active</span></code>. If PassThrough, Lambda will only trace
+the request from an upstream service if it contains a tracing header with
+“sampled=1”. If Active, Lambda will respect any tracing header it receives
+from an upstream service. If no tracing header is received, Lambda will call
+X-Ray for a tracing decision.</p></li>
+</ul>
+<p>The <strong>vpc_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of security group IDs associated with the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of subnet IDs associated with the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function.html.markdown</a>.</p>
 </div></blockquote>
@@ -838,9 +926,9 @@ large files efficiently.</p>
 <li><p><strong>code</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.Archive</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3*`</cite>-prefixed options cannot be used.</p></li>
 <li><p><strong>layer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your Lambda Layer</p></li>
 <li><p><strong>license_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License info for your Lambda Layer. See [License Info][3].</p></li>
-<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id41"><span class="problematic" id="id42">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
-<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id43"><span class="problematic" id="id44">``</span></a>.</p></li>
-<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id45"><span class="problematic" id="id46">``</span></a>.</p></li>
+<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id47"><span class="problematic" id="id48">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
+<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id49"><span class="problematic" id="id50">``</span></a>.</p></li>
+<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id51"><span class="problematic" id="id52">``</span></a>.</p></li>
 <li><p><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${filebase64sha256(“file.zip”)}<code class="docutils literal notranslate"><span class="pre">(this</span> <span class="pre">provider</span> <span class="pre">0.11.12</span> <span class="pre">or</span> <span class="pre">later)</span> <span class="pre">or</span></code>${base64sha256(file(“file.zip”))}` (this provider 0.11.11 and earlier), where “file.zip” is the local filename of the lambda layer source archive.</p></li>
 </ul>
 </dd>
@@ -936,24 +1024,31 @@ large files efficiently.</p>
 <dt id="pulumi_aws.lambda_.LayerVersion.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">compatible_runtimes=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">code=None</em>, <em class="sig-param">layer_arn=None</em>, <em class="sig-param">layer_name=None</em>, <em class="sig-param">license_info=None</em>, <em class="sig-param">s3_bucket=None</em>, <em class="sig-param">s3_key=None</em>, <em class="sig-param">s3_object_version=None</em>, <em class="sig-param">source_code_hash=None</em>, <em class="sig-param">source_code_size=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LayerVersion resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Amazon Resource Name (ARN) of the Lambda Layer with version.
-:param pulumi.Input[list] compatible_runtimes: A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.
-:param pulumi.Input[str] created<em>date: The date this resource was created.
-:param pulumi.Input[str] description: Description of what your Lambda Layer does.
-:param pulumi.Input[pulumi.Archive] code: The path to the function’s deployment package within the local filesystem. If defined, The `s3</em><code class="docutils literal notranslate"><span class="pre">-prefixed</span> <span class="pre">options</span> <span class="pre">cannot</span> <span class="pre">be</span> <span class="pre">used.</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">layer_arn:</span> <span class="pre">The</span> <span class="pre">Amazon</span> <span class="pre">Resource</span> <span class="pre">Name</span> <span class="pre">(ARN)</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Lambda</span> <span class="pre">Layer</span> <span class="pre">without</span> <span class="pre">version.</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">layer_name:</span> <span class="pre">A</span> <span class="pre">unique</span> <span class="pre">name</span> <span class="pre">for</span> <span class="pre">your</span> <span class="pre">Lambda</span> <span class="pre">Layer</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">license_info:</span> <span class="pre">License</span> <span class="pre">info</span> <span class="pre">for</span> <span class="pre">your</span> <span class="pre">Lambda</span> <span class="pre">Layer.</span> <span class="pre">See</span> <span class="pre">[License</span> <span class="pre">Info][3].</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">s3_bucket:</span> <span class="pre">The</span> <span class="pre">S3</span> <span class="pre">bucket</span> <span class="pre">location</span> <span class="pre">containing</span> <span class="pre">the</span> <span class="pre">function's</span> <span class="pre">deployment</span> <span class="pre">package.</span> <span class="pre">Conflicts</span> <span class="pre">with</span></code>filename<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">This</span> <span class="pre">bucket</span> <span class="pre">must</span> <span class="pre">reside</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">same</span> <span class="pre">AWS</span> <span class="pre">region</span> <span class="pre">where</span> <span class="pre">you</span> <span class="pre">are</span> <span class="pre">creating</span> <span class="pre">the</span> <span class="pre">Lambda</span> <span class="pre">function.</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">s3_key:</span> <span class="pre">The</span> <span class="pre">S3</span> <span class="pre">key</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">containing</span> <span class="pre">the</span> <span class="pre">function's</span> <span class="pre">deployment</span> <span class="pre">package.</span> <span class="pre">Conflicts</span> <span class="pre">with</span></code>filename<code class="docutils literal notranslate"><span class="pre">.</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">s3_object_version:</span> <span class="pre">The</span> <span class="pre">object</span> <span class="pre">version</span> <span class="pre">containing</span> <span class="pre">the</span> <span class="pre">function's</span> <span class="pre">deployment</span> <span class="pre">package.</span> <span class="pre">Conflicts</span> <span class="pre">with</span></code>filename<code class="docutils literal notranslate"><span class="pre">.</span>
-<span class="pre">:param</span> <span class="pre">pulumi.Input[str]</span> <span class="pre">source_code_hash:</span> <span class="pre">Used</span> <span class="pre">to</span> <span class="pre">trigger</span> <span class="pre">updates.</span> <span class="pre">Must</span> <span class="pre">be</span> <span class="pre">set</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">base64-encoded</span> <span class="pre">SHA256</span> <span class="pre">hash</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">package</span> <span class="pre">file</span> <span class="pre">specified</span> <span class="pre">with</span> <span class="pre">either</span></code>filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${filebase64sha256(“file.zip”)}<code class="docutils literal notranslate"><span class="pre">(this</span> <span class="pre">provider</span> <span class="pre">0.11.12</span> <span class="pre">or</span> <span class="pre">later)</span> <span class="pre">or</span></code>${base64sha256(file(“file.zip”))}` (this provider 0.11.11 and earlier), where “file.zip” is the local filename of the lambda layer source archive.
-:param pulumi.Input[float] source_code_size: The size in bytes of the function .zip file.
-:param pulumi.Input[str] version: This Lamba Layer version.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Lambda Layer with version.</p></li>
+<li><p><strong>compatible_runtimes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.</p></li>
+<li><p><strong>created*date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The date this resource was created.</p>
+</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of what your Lambda Layer does.</p></li>
+<li><p><strong>code</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.Archive</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3*`</cite>-prefixed options cannot be used.</p></li>
+<li><p><strong>layer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Lambda Layer without version.</p></li>
+<li><p><strong>layer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your Lambda Layer</p></li>
+<li><p><strong>license_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License info for your Lambda Layer. See [License Info][3].</p></li>
+<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id55"><span class="problematic" id="id56">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</p></li>
+<li><p><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id57"><span class="problematic" id="id58">``</span></a>.</p></li>
+<li><p><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id59"><span class="problematic" id="id60">``</span></a>.</p></li>
+<li><p><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${filebase64sha256(“file.zip”)}<code class="docutils literal notranslate"><span class="pre">(this</span> <span class="pre">provider</span> <span class="pre">0.11.12</span> <span class="pre">or</span> <span class="pre">later)</span> <span class="pre">or</span></code>${base64sha256(file(“file.zip”))}` (this provider 0.11.11 and earlier), where “file.zip” is the local filename of the lambda layer source archive.</p></li>
+<li><p><strong>source_code_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size in bytes of the function .zip file.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This Lamba Layer version.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown</a>.</p>
 </div></blockquote>
@@ -1098,21 +1193,19 @@ API Gateway ARNs have a unique structure described
 <dt id="pulumi_aws.lambda_.Permission.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">event_source_token=None</em>, <em class="sig-param">function=None</em>, <em class="sig-param">principal=None</em>, <em class="sig-param">qualifier=None</em>, <em class="sig-param">source_account=None</em>, <em class="sig-param">source_arn=None</em>, <em class="sig-param">statement_id=None</em>, <em class="sig-param">statement_id_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Permission.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Permission resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] action: The AWS Lambda action you want to allow in this statement. (e.g. <code class="docutils literal notranslate"><span class="pre">lambda:InvokeFunction</span></code>)
-:param pulumi.Input[str] event_source_token: The Event Source Token to validate.  Used with [Alexa Skills][1].
-:param pulumi.Input[str] function: Name of the Lambda function whose resource policy you are updating
-:param pulumi.Input[str] principal: The principal who is getting this permission.</p>
-<blockquote>
-<div><p>e.g. <code class="docutils literal notranslate"><span class="pre">s3.amazonaws.com</span></code>, an AWS account ID, or any valid AWS service principal
-such as <code class="docutils literal notranslate"><span class="pre">events.amazonaws.com</span></code> or <code class="docutils literal notranslate"><span class="pre">sns.amazonaws.com</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Lambda action you want to allow in this statement. (e.g. <code class="docutils literal notranslate"><span class="pre">lambda:InvokeFunction</span></code>)</p></li>
+<li><p><strong>event_source_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Event Source Token to validate.  Used with [Alexa Skills][1].</p></li>
+<li><p><strong>function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Lambda function whose resource policy you are updating</p></li>
+<li><p><strong>principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal who is getting this permission.
+e.g. <code class="docutils literal notranslate"><span class="pre">s3.amazonaws.com</span></code>, an AWS account ID, or any valid AWS service principal
+such as <code class="docutils literal notranslate"><span class="pre">events.amazonaws.com</span></code> or <code class="docutils literal notranslate"><span class="pre">sns.amazonaws.com</span></code>.</p></li>
 <li><p><strong>qualifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:lambda:aws-region:acct-id:function:function-name:2</span></code></p></li>
@@ -1176,6 +1269,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.lambda_.get_function">
 <code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">get_function</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">qualifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Lambda Function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function_name</strong> (<em>str</em>) – Name of the lambda function.</p></li>
+<li><p><strong>qualifier</strong> (<em>str</em>) – Alias name or version number of the lambda function. e.g. <code class="docutils literal notranslate"><span class="pre">$LATEST</span></code>, <code class="docutils literal notranslate"><span class="pre">my-alias</span></code>, or <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_function.html.markdown</a>.</p>
 </div></blockquote>
@@ -1187,6 +1288,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to invoke custom lambda functions as data source.
 The lambda function is invoked with <a class="reference external" href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_RequestSyntax">RequestResponse</a>
 invocation type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function_name</strong> (<em>str</em>) – The name of the lambda function.</p></li>
+<li><p><strong>input</strong> (<em>str</em>) – A string in JSON format that is passed as payload to the lambda function.</p></li>
+<li><p><strong>qualifier</strong> (<em>str</em>) – The qualifier (a.k.a version) of the lambda function. Defaults
+to <code class="docutils literal notranslate"><span class="pre">$LATEST</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_invocation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_invocation.html.markdown</a>.</p>
 </div></blockquote>
@@ -1196,6 +1307,15 @@ invocation type.</p>
 <dt id="pulumi_aws.lambda_.get_layer_version">
 <code class="sig-prename descclassname">pulumi_aws.lambda_.</code><code class="sig-name descname">get_layer_version</code><span class="sig-paren">(</span><em class="sig-param">compatible_runtime=None</em>, <em class="sig-param">layer_name=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_layer_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Lambda Layer Version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compatible_runtime</strong> (<em>str</em>) – Specific runtime the layer version must support. Conflicts with <code class="docutils literal notranslate"><span class="pre">version</span></code>. If specified, the latest available layer version supporting the provided runtime will be used.</p></li>
+<li><p><strong>layer_name</strong> (<em>str</em>) – Name of the lambda layer.</p></li>
+<li><p><strong>version</strong> (<em>float</em>) – Specific layer version. Conflicts with <code class="docutils literal notranslate"><span class="pre">compatible_runtime</span></code>. If omitted, the latest available layer version will be used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_layer_version.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_layer_version.html.markdown</a>.</p>
 </div></blockquote>

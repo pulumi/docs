@@ -56,14 +56,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appsync.ApiKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.ApiKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApiKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_id: The ID of the associated AppSync API
-:param pulumi.Input[str] description: The API key description. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] expires: RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
-:param pulumi.Input[str] key: The API key</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated AppSync API</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API key description. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>expires</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.</p></li>
+<li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API key</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown</a>.</p>
 </div></blockquote>
@@ -128,6 +134,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>dynamodb_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tableName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the DynamoDB table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCallerCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon Cognito credentials with this data source.</p></li>
+</ul>
+<p>The <strong>elasticsearch_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - HTTP URL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
+</ul>
+<p>The <strong>http_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - HTTP URL.</p></li>
+</ul>
+<p>The <strong>lambda_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN for the Lambda function.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown</a>.</p>
 </div></blockquote>
@@ -153,24 +178,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.DataSource.dynamodb_config">
 <code class="sig-name descname">dynamodb_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.DataSource.dynamodb_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>DynamoDB settings. See below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tableName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the DynamoDB table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCallerCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon Cognito credentials with this data source.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.DataSource.elasticsearch_config">
 <code class="sig-name descname">elasticsearch_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.DataSource.elasticsearch_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon Elasticsearch settings. See below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - HTTP URL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.DataSource.http_config">
 <code class="sig-name descname">http_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.DataSource.http_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>HTTP settings. See below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - HTTP URL.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.DataSource.lambda_config">
 <code class="sig-name descname">lambda_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.DataSource.lambda_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>AWS Lambda settings. See below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN for the Lambda function.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -195,20 +235,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.DataSource.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">http_config=None</em>, <em class="sig-param">lambda_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">service_role_arn=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.DataSource.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DataSource resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_id: The API ID for the GraphQL API for the DataSource.
-:param pulumi.Input[str] arn: The ARN
-:param pulumi.Input[str] description: A description of the DataSource.
-:param pulumi.Input[dict] dynamodb_config: DynamoDB settings. See below
-:param pulumi.Input[dict] elasticsearch_config: Amazon Elasticsearch settings. See below
-:param pulumi.Input[dict] http_config: HTTP settings. See below
-:param pulumi.Input[dict] lambda_config: AWS Lambda settings. See below
-:param pulumi.Input[str] name: A user-supplied name for the DataSource.
-:param pulumi.Input[str] service_role_arn: The IAM service role ARN for the data source.
-:param pulumi.Input[str] type: The type of the DataSource. Valid values: <code class="docutils literal notranslate"><span class="pre">AWS_LAMBDA</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_DYNAMODB</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_ELASTICSEARCH</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API ID for the GraphQL API for the DataSource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the DataSource.</p></li>
+<li><p><strong>dynamodb_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – DynamoDB settings. See below</p></li>
+<li><p><strong>elasticsearch_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Amazon Elasticsearch settings. See below</p></li>
+<li><p><strong>http_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – HTTP settings. See below</p></li>
+<li><p><strong>lambda_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – AWS Lambda settings. See below</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-supplied name for the DataSource.</p></li>
+<li><p><strong>service_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM service role ARN for the data source.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the DataSource. Valid values: <code class="docutils literal notranslate"><span class="pre">AWS_LAMBDA</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_DYNAMODB</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_ELASTICSEARCH</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>dynamodb_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tableName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the DynamoDB table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useCallerCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon Cognito credentials with this data source.</p></li>
+</ul>
+<p>The <strong>elasticsearch_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - HTTP URL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS region of Elasticsearch domain. Defaults to current region.</p></li>
+</ul>
+<p>The <strong>http_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - HTTP URL.</p></li>
+</ul>
+<p>The <strong>lambda_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functionArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN for the Lambda function.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown</a>.</p>
 </div></blockquote>
@@ -332,19 +397,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Function.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">data_source=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">function_id=None</em>, <em class="sig-param">function_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">request_mapping_template=None</em>, <em class="sig-param">response_mapping_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Function.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Function resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_id: The ID of the associated AppSync API.
-:param pulumi.Input[str] arn: The ARN of the Function object.
-:param pulumi.Input[str] data_source: The Function DataSource name.
-:param pulumi.Input[str] description: The Function description.
-:param pulumi.Input[str] function_id: A unique ID representing the Function object.
-:param pulumi.Input[str] function_version: The version of the request mapping template. Currently the supported value is <code class="docutils literal notranslate"><span class="pre">2018-05-29</span></code>.
-:param pulumi.Input[str] name: The Function name. The function name does not have to be unique.
-:param pulumi.Input[str] request_mapping_template: The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
-:param pulumi.Input[str] response_mapping_template: The Function response mapping template.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated AppSync API.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Function object.</p></li>
+<li><p><strong>data_source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function DataSource name.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function description.</p></li>
+<li><p><strong>function_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique ID representing the Function object.</p></li>
+<li><p><strong>function_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the request mapping template. Currently the supported value is <code class="docutils literal notranslate"><span class="pre">2018-05-29</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function name. The function name does not have to be unique.</p></li>
+<li><p><strong>request_mapping_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.</p></li>
+<li><p><strong>response_mapping_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Function response mapping template.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown</a>.</p>
 </div></blockquote>
@@ -407,6 +478,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>log_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogsRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLogLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Field logging level. Valid values: <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
+</ul>
+<p>The <strong>openid_connect_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
+</ul>
+<p>The <strong>user_pool_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS region in which the user pool was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown</a>.</p>
 </div></blockquote>
@@ -426,6 +516,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.GraphQLApi.log_config">
 <code class="sig-name descname">log_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.log_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing logging configuration. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogsRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLogLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Field logging level. Valid values: <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -438,6 +532,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.GraphQLApi.openid_connect_config">
 <code class="sig-name descname">openid_connect_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.openid_connect_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument containing OpenID Connect configuration. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -462,25 +562,56 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.GraphQLApi.user_pool_config">
 <code class="sig-name descname">user_pool_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.user_pool_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Amazon Cognito User Pool configuration. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The AWS region in which the user pool was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user pool ID.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.appsync.GraphQLApi.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">authentication_type=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openid_connect_config=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uris=None</em>, <em class="sig-param">user_pool_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GraphQLApi resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN
-:param pulumi.Input[str] authentication_type: The authentication type. Valid values: <code class="docutils literal notranslate"><span class="pre">API_KEY</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_COGNITO_USER_POOLS</span></code>, <code class="docutils literal notranslate"><span class="pre">OPENID_CONNECT</span></code>
-:param pulumi.Input[dict] log_config: Nested argument containing logging configuration. Defined below.
-:param pulumi.Input[str] name: A user-supplied name for the GraphqlApi.
-:param pulumi.Input[dict] openid_connect_config: Nested argument containing OpenID Connect configuration. Defined below.
-:param pulumi.Input[str] schema: The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[dict] uris: Map of URIs associated with the API. e.g. <code class="docutils literal notranslate"><span class="pre">uris[&quot;GRAPHQL&quot;]</span> <span class="pre">=</span> <span class="pre">https://ID.appsync-api.REGION.amazonaws.com/graphql</span></code>
-:param pulumi.Input[dict] user_pool_config: The Amazon Cognito User Pool configuration. Defined below.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN</p></li>
+<li><p><strong>authentication_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication type. Valid values: <code class="docutils literal notranslate"><span class="pre">API_KEY</span></code>, <code class="docutils literal notranslate"><span class="pre">AWS_IAM</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_COGNITO_USER_POOLS</span></code>, <code class="docutils literal notranslate"><span class="pre">OPENID_CONNECT</span></code></p></li>
+<li><p><strong>log_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing logging configuration. Defined below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-supplied name for the GraphqlApi.</p></li>
+<li><p><strong>openid_connect_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing OpenID Connect configuration. Defined below.</p></li>
+<li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>uris</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of URIs associated with the API. e.g. <code class="docutils literal notranslate"><span class="pre">uris[&quot;GRAPHQL&quot;]</span> <span class="pre">=</span> <span class="pre">https://ID.appsync-api.REGION.amazonaws.com/graphql</span></code></p></li>
+<li><p><strong>user_pool_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Amazon Cognito User Pool configuration. Defined below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>log_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogsRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fieldLogLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Field logging level. Valid values: <code class="docutils literal notranslate"><span class="pre">ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
+</ul>
+<p>The <strong>openid_connect_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being authenticated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iatTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of milliseconds a token is valid after being issued to a user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.</p></li>
+</ul>
+<p>The <strong>user_pool_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">appIdClientRegex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A regular expression for validating the incoming Amazon Cognito User Pool app client ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsRegion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The AWS region in which the user pool was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn’t match the Amazon Cognito User Pool configuration. Valid: <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code> and <code class="docutils literal notranslate"><span class="pre">DENY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user pool ID.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown</a>.</p>
 </div></blockquote>
@@ -544,6 +675,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>pipeline_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown</a>.</p>
 </div></blockquote>
@@ -581,6 +716,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Resolver.pipeline_config">
 <code class="sig-name descname">pipeline_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.pipeline_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -605,19 +743,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Resolver.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">data_source=None</em>, <em class="sig-param">field=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">pipeline_config=None</em>, <em class="sig-param">request_template=None</em>, <em class="sig-param">response_template=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Resolver resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_id: The API ID for the GraphQL API.
-:param pulumi.Input[str] arn: The ARN
-:param pulumi.Input[str] data_source: The DataSource name.
-:param pulumi.Input[str] field: The field name from the schema defined in the GraphQL API.
-:param pulumi.Input[str] kind: The resolver type. Valid values are <code class="docutils literal notranslate"><span class="pre">UNIT</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPELINE</span></code>.
-:param pulumi.Input[dict] pipeline_config: The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.
-:param pulumi.Input[str] request_template: The request mapping template for UNIT resolver or ‘before mapping template’ for PIPELINE resolver.
-:param pulumi.Input[str] response_template: The response mapping template for UNIT resolver or ‘after mapping template’ for PIPELINE resolver.
-:param pulumi.Input[str] type: The type name from the schema defined in the GraphQL API.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API ID for the GraphQL API.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN</p></li>
+<li><p><strong>data_source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DataSource name.</p></li>
+<li><p><strong>field</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The field name from the schema defined in the GraphQL API.</p></li>
+<li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resolver type. Valid values are <code class="docutils literal notranslate"><span class="pre">UNIT</span></code> and <code class="docutils literal notranslate"><span class="pre">PIPELINE</span></code>.</p></li>
+<li><p><strong>pipeline_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.</p></li>
+<li><p><strong>request_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The request mapping template for UNIT resolver or ‘before mapping template’ for PIPELINE resolver.</p></li>
+<li><p><strong>response_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The response mapping template for UNIT resolver or ‘after mapping template’ for PIPELINE resolver.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type name from the schema defined in the GraphQL API.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>pipeline_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown</a>.</p>
 </div></blockquote>

@@ -131,24 +131,32 @@ the official documentation for
 <dt id="pulumi_gcp.dataflow.Job.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">machine_type=None</em>, <em class="sig-param">max_workers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">on_delete=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subnetwork=None</em>, <em class="sig-param">temp_gcs_location=None</em>, <em class="sig-param">template_gcs_path=None</em>, <em class="sig-param">zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataflow.Job.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] labels: User labels to be specified for the job. Keys and values should follow the restrictions specified in the <a class="reference external" href="https://cloud.google.com/compute/docs/labeling-resources#restrictions">labeling restrictions</a> page.
-:param pulumi.Input[str] machine_type: The machine type to use for the job.
-:param pulumi.Input[float] max_workers: The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-:param pulumi.Input[str] name: A unique name for the resource, required by Dataflow.
-:param pulumi.Input[str] network: The network to which VMs will be assigned. If it is not provided, “default” will be used.
-:param pulumi.Input[str] on_delete: One of “drain” or “cancel”.  Specifies behavior of deletion during a destroy.  See above note.
-:param pulumi.Input[dict] parameters: Key/Value pairs to be passed to the Dataflow job (as used in the template).
-:param pulumi.Input[str] project: The project in which the resource belongs. If it is not provided, the provider project is used.
-:param pulumi.Input[str] service_account_email: The Service Account email used to create the job.
-:param pulumi.Input[str] state: The current state of the resource, selected from the <a class="reference external" href="https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState">JobState enum</a>
-:param pulumi.Input[str] subnetwork: The subnetwork to which VMs will be assigned. Should be of the form “regions/REGION/subnetworks/SUBNETWORK”.
-:param pulumi.Input[str] temp_gcs_location: A writeable location on GCS for the Dataflow job to dump its temporary data.
-:param pulumi.Input[str] template_gcs_path: The GCS path to the Dataflow job template.
-:param pulumi.Input[str] zone: The zone in which the created job should run. If it is not provided, the provider zone is used.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>User labels to be specified for the job. Keys and values should follow the restrictions specified in the <a class="reference external" href="https://cloud.google.com/compute/docs/labeling-resources#restrictions">labeling restrictions</a> page.</p>
+</p></li>
+<li><p><strong>machine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The machine type to use for the job.</p></li>
+<li><p><strong>max_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource, required by Dataflow.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network to which VMs will be assigned. If it is not provided, “default” will be used.</p></li>
+<li><p><strong>on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of “drain” or “cancel”.  Specifies behavior of deletion during a destroy.  See above note.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key/Value pairs to be passed to the Dataflow job (as used in the template).</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the resource belongs. If it is not provided, the provider project is used.</p></li>
+<li><p><strong>service_account_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Service Account email used to create the job.</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The current state of the resource, selected from the <a class="reference external" href="https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState">JobState enum</a></p>
+</p></li>
+<li><p><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnetwork to which VMs will be assigned. Should be of the form “regions/REGION/subnetworks/SUBNETWORK”.</p></li>
+<li><p><strong>temp_gcs_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A writeable location on GCS for the Dataflow job to dump its temporary data.</p></li>
+<li><p><strong>template_gcs_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCS path to the Dataflow job template.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone in which the created job should run. If it is not provided, the provider zone is used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataflow_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataflow_job.html.markdown</a>.</p>
 </div></blockquote>

@@ -69,15 +69,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.glue.CatalogDatabase.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">location_uri=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogDatabase.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CatalogDatabase resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] catalog_id: ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.
-:param pulumi.Input[str] description: Description of the database.
-:param pulumi.Input[str] location_uri: The location of the database (for example, an HDFS path).
-:param pulumi.Input[str] name: The name of the database.
-:param pulumi.Input[dict] parameters: A list of key-value pairs that define parameters and properties of the database.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the database.</p></li>
+<li><p><strong>location_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the database (for example, an HDFS path).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of key-value pairs that define parameters and properties of the database.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown</a>.</p>
 </div></blockquote>
@@ -146,6 +152,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>partition_keys</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Free-form text comment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datatype of data in the Column.</p></li>
+</ul>
+<p>The <strong>storage_descriptor</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of reducer grouping columns, clustering columns, and bucketing columns in the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the Columns in the table.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Free-form text comment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datatype of data in the Column.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if the data in the table is compressed, or False if not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be specified if the table contains any dimension columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of initialization parameters for the SerDe, in key-value form.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serDeInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Serialization/deserialization (SerDe) information.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of initialization parameters for the SerDe, in key-value form.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serializationLibrary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information about values that appear very frequently in a column (skewed values).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of names of columns that contain skewed values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValueLocationMaps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of values that appear so frequently as to be considered skewed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A mapping of skewed values to the columns that contain them.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Order objects specifying the sort order of each bucket in the table.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">column</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortOrder</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storedAsSubDirectories</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if the table data is stored in subdirectories, or False if not.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -189,6 +239,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.CatalogTable.partition_keys">
 <code class="sig-name descname">partition_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.CatalogTable.partition_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Free-form text comment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The datatype of data in the Column.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -201,6 +256,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.CatalogTable.storage_descriptor">
 <code class="sig-name descname">storage_descriptor</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.CatalogTable.storage_descriptor" title="Permalink to this definition">¶</a></dt>
 <dd><p>A storage descriptor object containing information about the physical storage of this table. You can refer to the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor">Glue Developer Guide</a> for a full explanation of this object.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of reducer grouping columns, clustering columns, and bucketing columns in the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of the Columns in the table.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Free-form text comment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The datatype of data in the Column.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressed</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - True if the data in the table is compressed, or False if not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Must be specified if the table contains any dimension columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of initialization parameters for the SerDe, in key-value form.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serDeInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Serialization/deserialization (SerDe) information.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of initialization parameters for the SerDe, in key-value form.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serializationLibrary</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Information about values that appear very frequently in a column (skewed values).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of names of columns that contain skewed values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValueLocationMaps</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A list of values that appear so frequently as to be considered skewed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A mapping of skewed values to the columns that contain them.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Order objects specifying the sort order of each bucket in the table.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">column</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortOrder</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storedAsSubDirectories</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - True if the table data is stored in subdirectories, or False if not.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -225,22 +317,73 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.CatalogTable.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">partition_keys=None</em>, <em class="sig-param">retention=None</em>, <em class="sig-param">storage_descriptor=None</em>, <em class="sig-param">table_type=None</em>, <em class="sig-param">view_expanded_text=None</em>, <em class="sig-param">view_original_text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogTable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CatalogTable resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] catalog_id: ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-:param pulumi.Input[str] database_name: Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
-:param pulumi.Input[str] description: Description of the table.
-:param pulumi.Input[str] name: Name of the SerDe.
-:param pulumi.Input[str] owner: Owner of the table.
-:param pulumi.Input[dict] parameters: A map of initialization parameters for the SerDe, in key-value form.
-:param pulumi.Input[list] partition_keys: A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
-:param pulumi.Input[float] retention: Retention time for this table.
-:param pulumi.Input[dict] storage_descriptor: A storage descriptor object containing information about the physical storage of this table. You can refer to the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor">Glue Developer Guide</a> for a full explanation of this object.
-:param pulumi.Input[str] table_type: The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
-:param pulumi.Input[str] view_expanded_text: If the table is a view, the expanded text of the view; otherwise null.
-:param pulumi.Input[str] view_original_text: If the table is a view, the original text of the view; otherwise null.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the table.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the SerDe.</p></li>
+<li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Owner of the table.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of initialization parameters for the SerDe, in key-value form.</p></li>
+<li><p><strong>partition_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.</p></li>
+<li><p><strong>retention</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Retention time for this table.</p></li>
+<li><p><strong>storage_descriptor</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A storage descriptor object containing information about the physical storage of this table. You can refer to the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor">Glue Developer Guide</a> for a full explanation of this object.</p>
+</p></li>
+<li><p><strong>table_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).</p></li>
+<li><p><strong>view_expanded_text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If the table is a view, the expanded text of the view; otherwise null.</p></li>
+<li><p><strong>view_original_text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If the table is a view, the original text of the view; otherwise null.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>partition_keys</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Free-form text comment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datatype of data in the Column.</p></li>
+</ul>
+<p>The <strong>storage_descriptor</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of reducer grouping columns, clustering columns, and bucketing columns in the table.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the Columns in the table.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Free-form text comment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datatype of data in the Column.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressed</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if the data in the table is compressed, or False if not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Must be specified if the table contains any dimension columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of initialization parameters for the SerDe, in key-value form.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serDeInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Serialization/deserialization (SerDe) information.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the SerDe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of initialization parameters for the SerDe, in key-value form.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serializationLibrary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information about values that appear very frequently in a column (skewed values).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of names of columns that contain skewed values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValueLocationMaps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of values that appear so frequently as to be considered skewed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skewedColumnValues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A mapping of skewed values to the columns that contain them.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Order objects specifying the sort order of each bucket in the table.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">column</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortOrder</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storedAsSubDirectories</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if the table data is stored in subdirectories, or False if not.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown</a>.</p>
 </div></blockquote>
@@ -303,6 +446,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>grok_classifier</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An identifier of the data format that the classifier matches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customPatterns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Custom grok patterns used by this classifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grokPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The grok pattern used by this classifier.</p></li>
+</ul>
+<p>The <strong>json_classifier</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jsonPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">JsonPath</span></code> string defining the JSON data for the classifier to classify. AWS Glue supports a subset of <code class="docutils literal notranslate"><span class="pre">JsonPath</span></code>, as described in <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json">Writing JsonPath Custom Classifiers</a>.</p></li>
+</ul>
+<p>The <strong>xml_classifier</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An identifier of the data format that the classifier matches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rowTag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;&gt;&lt;/row&gt;</span></code> is okay, but <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;</span> <span class="pre">/&gt;</span></code> is not).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown</a>.</p>
 </div></blockquote>
@@ -310,12 +468,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Classifier.grok_classifier">
 <code class="sig-name descname">grok_classifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Classifier.grok_classifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>A classifier that uses grok patterns. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An identifier of the data format that the classifier matches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customPatterns</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Custom grok patterns used by this classifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grokPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The grok pattern used by this classifier.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Classifier.json_classifier">
 <code class="sig-name descname">json_classifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Classifier.json_classifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>A classifier for JSON content. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jsonPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A <code class="docutils literal notranslate"><span class="pre">JsonPath</span></code> string defining the JSON data for the classifier to classify. AWS Glue supports a subset of <code class="docutils literal notranslate"><span class="pre">JsonPath</span></code>, as described in <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json">Writing JsonPath Custom Classifiers</a>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -328,20 +494,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Classifier.xml_classifier">
 <code class="sig-name descname">xml_classifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Classifier.xml_classifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>A classifier for XML content. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An identifier of the data format that the classifier matches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rowTag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;&gt;&lt;/row&gt;</span></code> is okay, but <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;</span> <span class="pre">/&gt;</span></code> is not).</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.glue.Classifier.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">grok_classifier=None</em>, <em class="sig-param">json_classifier=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">xml_classifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Classifier.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Classifier resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] grok_classifier: A classifier that uses grok patterns. Defined below.
-:param pulumi.Input[dict] json_classifier: A classifier for JSON content. Defined below.
-:param pulumi.Input[str] name: The name of the classifier.
-:param pulumi.Input[dict] xml_classifier: A classifier for XML content. Defined below.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>grok_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier that uses grok patterns. Defined below.</p></li>
+<li><p><strong>json_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier for JSON content. Defined below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the classifier.</p></li>
+<li><p><strong>xml_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier for XML content. Defined below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>grok_classifier</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An identifier of the data format that the classifier matches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customPatterns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Custom grok patterns used by this classifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">grokPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The grok pattern used by this classifier.</p></li>
+</ul>
+<p>The <strong>json_classifier</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jsonPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">JsonPath</span></code> string defining the JSON data for the classifier to classify. AWS Glue supports a subset of <code class="docutils literal notranslate"><span class="pre">JsonPath</span></code>, as described in <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json">Writing JsonPath Custom Classifiers</a>.</p></li>
+</ul>
+<p>The <strong>xml_classifier</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">classification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An identifier of the data format that the classifier matches.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rowTag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by <code class="docutils literal notranslate"><span class="pre">/&gt;</span></code>). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;&gt;&lt;/row&gt;</span></code> is okay, but <code class="docutils literal notranslate"><span class="pre">&lt;row</span> <span class="pre">item_a=&quot;A&quot;</span> <span class="pre">item_b=&quot;B&quot;</span> <span class="pre">/&gt;</span></code> is not).</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown</a>.</p>
 </div></blockquote>
@@ -404,6 +595,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>physical_connection_requirements</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability zone of the connection. This field is redundant and implied by <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>, but is currently an api requirement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIdLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security group ID list used by the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet ID used by the connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown</a>.</p>
 </div></blockquote>
@@ -447,23 +644,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Connection.physical_connection_requirements">
 <code class="sig-name descname">physical_connection_requirements</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Connection.physical_connection_requirements" title="Permalink to this definition">¶</a></dt>
 <dd><p>A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The availability zone of the connection. This field is redundant and implied by <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>, but is currently an api requirement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIdLists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The security group ID list used by the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subnet ID used by the connection.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.glue.Connection.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">connection_properties=None</em>, <em class="sig-param">connection_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">match_criterias=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">physical_connection_requirements=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Connection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Connection resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] catalog_id: The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.
-:param pulumi.Input[dict] connection_properties: A map of key-value pairs used as parameters for this connection.
-:param pulumi.Input[str] connection_type: The type of the connection. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.
-:param pulumi.Input[str] description: Description of the connection.
-:param pulumi.Input[list] match_criterias: A list of criteria that can be used in selecting this connection.
-:param pulumi.Input[str] name: The name of the connection.
-:param pulumi.Input[dict] physical_connection_requirements: A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</p></li>
+<li><p><strong>connection_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key-value pairs used as parameters for this connection.</p></li>
+<li><p><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Defaults to <code class="docutils literal notranslate"><span class="pre">JBDC</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the connection.</p></li>
+<li><p><strong>match_criterias</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of criteria that can be used in selecting this connection.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the connection.</p></li>
+<li><p><strong>physical_connection_requirements</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>physical_connection_requirements</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The availability zone of the connection. This field is redundant and implied by <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>, but is currently an api requirement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupIdLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The security group ID list used by the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet ID used by the connection.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown</a>.</p>
 </div></blockquote>
@@ -532,6 +746,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>catalog_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Glue database to be synchronized.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of catalog tables to be synchronized.</p></li>
+</ul>
+<p>The <strong>dynamodb_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
+<p>The <strong>jdbc_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the connection to use to connect to the JDBC target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
+<p>The <strong>s3_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
+<p>The <strong>schema_change_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The deletion behavior when the crawler finds a deleted object. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE_FROM_DATABASE</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updateBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The update behavior when the crawler finds a changed schema. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code> or <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown</a>.</p>
 </div></blockquote>
@@ -569,12 +808,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Crawler.dynamodb_targets">
 <code class="sig-name descname">dynamodb_targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.dynamodb_targets" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of nested DynamoDB target arguments. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Crawler.jdbc_targets">
 <code class="sig-name descname">jdbc_targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.jdbc_targets" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of nested JBDC target arguments. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the connection to use to connect to the JDBC target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -593,6 +840,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Crawler.s3_targets">
 <code class="sig-name descname">s3_targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.s3_targets" title="Permalink to this definition">¶</a></dt>
 <dd><p>List nested Amazon S3 target arguments. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -605,6 +856,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Crawler.schema_change_policy">
 <code class="sig-name descname">schema_change_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.schema_change_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Policy for the crawler’s update and deletion behavior.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The deletion behavior when the crawler finds a deleted object. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE_FROM_DATABASE</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updateBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The update behavior when the crawler finds a changed schema. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code> or <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -623,24 +878,56 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Crawler.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Crawler resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the crawler 
-:param pulumi.Input[list] classifiers: List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
-:param pulumi.Input[str] configuration: JSON string of configuration information.
-:param pulumi.Input[str] database_name: The name of the Glue database to be synchronized.
-:param pulumi.Input[str] description: Description of the crawler.
-:param pulumi.Input[list] dynamodb_targets: List of nested DynamoDB target arguments. See below.
-:param pulumi.Input[list] jdbc_targets: List of nested JBDC target arguments. See below.
-:param pulumi.Input[str] name: Name of the crawler.
-:param pulumi.Input[str] role: The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
-:param pulumi.Input[list] s3_targets: List nested Amazon S3 target arguments. See below.
-:param pulumi.Input[str] schedule: A cron expression used to specify the schedule. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html">Time-Based Schedules for Jobs and Crawlers</a>. For example, to run something every day at 12:15 UTC, you would specify: <code class="docutils literal notranslate"><span class="pre">cron(15</span> <span class="pre">12</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">*)</span></code>.
-:param pulumi.Input[dict] schema_change_policy: Policy for the crawler’s update and deletion behavior.
-:param pulumi.Input[str] security_configuration: The name of Security Configuration to be used by the crawler
-:param pulumi.Input[str] table_prefix: The table prefix used for catalog tables that are created.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the crawler</p></li>
+<li><p><strong>classifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.</p></li>
+<li><p><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string of configuration information.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Glue database to be synchronized.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the crawler.</p></li>
+<li><p><strong>dynamodb_targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested DynamoDB target arguments. See below.</p></li>
+<li><p><strong>jdbc_targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested JBDC target arguments. See below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the crawler.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.</p></li>
+<li><p><strong>s3_targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List nested Amazon S3 target arguments. See below.</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A cron expression used to specify the schedule. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html">Time-Based Schedules for Jobs and Crawlers</a>. For example, to run something every day at 12:15 UTC, you would specify: <code class="docutils literal notranslate"><span class="pre">cron(15</span> <span class="pre">12</span> <span class="pre">*</span> <span class="pre">*</span> <span class="pre">?</span> <span class="pre">*)</span></code>.</p>
+</p></li>
+<li><p><strong>schema_change_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Policy for the crawler’s update and deletion behavior.</p></li>
+<li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of Security Configuration to be used by the crawler</p></li>
+<li><p><strong>table_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The table prefix used for catalog tables that are created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>catalog_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Glue database to be synchronized.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of catalog tables to be synchronized.</p></li>
+</ul>
+<p>The <strong>dynamodb_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
+<p>The <strong>jdbc_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the connection to use to connect to the JDBC target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
+<p>The <strong>s3_targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+</ul>
+<p>The <strong>schema_change_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The deletion behavior when the crawler finds a deleted object. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE_FROM_DATABASE</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEPRECATE_IN_DATABASE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updateBehavior</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The update behavior when the crawler finds a changed schema. Valid values: <code class="docutils literal notranslate"><span class="pre">LOG</span></code> or <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">UPDATE_IN_DATABASE</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown</a>.</p>
 </div></blockquote>
@@ -732,6 +1019,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>command</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
+</ul>
+<p>The <strong>execution_property</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentRuns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of concurrent runs allowed for a job. The default is 1.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
 </div></blockquote>
@@ -745,6 +1041,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Job.command">
 <code class="sig-name descname">command</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.command" title="Permalink to this definition">¶</a></dt>
 <dd><p>The command of the job. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -769,6 +1069,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Job.execution_property">
 <code class="sig-name descname">execution_property</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.execution_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execution property of the job. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentRuns</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of concurrent runs allowed for a job. The default is 1.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -811,22 +1114,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Job.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_capacity=None</em>, <em class="sig-param">command=None</em>, <em class="sig-param">connections=None</em>, <em class="sig-param">default_arguments=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_property=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">max_retries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Job resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] allocated_capacity: <strong>DEPRECATED</strong> (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-:param pulumi.Input[dict] command: The command of the job. Defined below.
-:param pulumi.Input[list] connections: The list of connections used for this job.
-:param pulumi.Input[dict] default_arguments: The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html">Calling AWS Glue APIs in Python</a> topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the developer guide.
-:param pulumi.Input[str] description: Description of the job.
-:param pulumi.Input[dict] execution_property: Execution property of the job. Defined below.
-:param pulumi.Input[float] max_capacity: The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.
-:param pulumi.Input[float] max_retries: The maximum number of times to retry this job if it fails.
-:param pulumi.Input[str] name: The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>
-:param pulumi.Input[str] role_arn: The ARN of the IAM role associated with this job.
-:param pulumi.Input[str] security_configuration: The name of the Security Configuration to be associated with the job. 
-:param pulumi.Input[float] timeout: The job timeout in minutes. The default is 2880 minutes (48 hours).</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allocated_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <strong>DEPRECATED</strong> (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</p></li>
+<li><p><strong>command</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The command of the job. Defined below.</p></li>
+<li><p><strong>connections</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of connections used for this job.</p></li>
+<li><p><strong>default_arguments</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html">Calling AWS Glue APIs in Python</a> topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the developer guide.</p>
+</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the job.</p></li>
+<li><p><strong>execution_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Execution property of the job. Defined below.</p></li>
+<li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.</p></li>
+<li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
+<li><p><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Security Configuration to be associated with the job.</p></li>
+<li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The job timeout in minutes. The default is 2880 minutes (48 hours).</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>command</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scriptLocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the S3 path to a script that executes a job.</p></li>
+</ul>
+<p>The <strong>execution_property</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConcurrentRuns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of concurrent runs allowed for a job. The default is 1.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
 </div></blockquote>
@@ -884,6 +1203,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>encryption_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchEncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption mode to use for CloudWatch data. Valid values: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-KMS</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobBookmarksEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobBookmarksEncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption mode to use for job bookmarks data. Valid values: <code class="docutils literal notranslate"><span class="pre">CSE-KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3Encryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">s3_encryption</span></code> block as described below, which contains encryption configuration for S3 data.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3EncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption mode to use for S3 data. Valid values: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-S3</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown</a>.</p>
 </div></blockquote>
@@ -891,6 +1231,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.SecurityConfiguration.encryption_configuration">
 <code class="sig-name descname">encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.SecurityConfiguration.encryption_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing encryption configuration. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchEncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Encryption mode to use for CloudWatch data. Valid values: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-KMS</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobBookmarksEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobBookmarksEncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Encryption mode to use for job bookmarks data. Valid values: <code class="docutils literal notranslate"><span class="pre">CSE-KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3Encryption</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">s3_encryption</span></code> block as described below, which contains encryption configuration for S3 data.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3EncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Encryption mode to use for S3 data. Valid values: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-S3</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -903,12 +1263,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.SecurityConfiguration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encryption_configuration=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.SecurityConfiguration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecurityConfiguration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] encryption_configuration: Configuration block containing encryption configuration. Detailed below.
-:param pulumi.Input[str] name: Name of the security configuration.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing encryption configuration. Detailed below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the security configuration.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>encryption_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchEncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption mode to use for CloudWatch data. Valid values: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-KMS</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobBookmarksEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobBookmarksEncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption mode to use for job bookmarks data. Valid values: <code class="docutils literal notranslate"><span class="pre">CSE-KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3Encryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">s3_encryption</span></code> block as described below, which contains encryption configuration for S3 data.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3EncryptionMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Encryption mode to use for S3 data. Valid values: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE-S3</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown</a>.</p>
 </div></blockquote>
@@ -972,6 +1359,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
+</ul>
+<p>The <strong>predicate</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the conditions that determine when the trigger will fire. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logicalOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A logical operator. Defaults to <code class="docutils literal notranslate"><span class="pre">EQUALS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The condition state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logical</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to handle multiple conditions. Defaults to <code class="docutils literal notranslate"><span class="pre">AND</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">AND</span></code> or <code class="docutils literal notranslate"><span class="pre">ANY</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown</a>.</p>
 </div></blockquote>
@@ -979,6 +1383,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Trigger.actions">
 <code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Trigger.actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of actions initiated by this trigger when it fires. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1003,6 +1412,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Trigger.predicate">
 <code class="sig-name descname">predicate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Trigger.predicate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A predicate to specify when the new trigger should fire. Required when trigger type is <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>. Defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of the conditions that determine when the trigger will fire. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logicalOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A logical operator. Defaults to <code class="docutils literal notranslate"><span class="pre">EQUALS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The condition state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logical</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - How to handle multiple conditions. Defaults to <code class="docutils literal notranslate"><span class="pre">AND</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">AND</span></code> or <code class="docutils literal notranslate"><span class="pre">ANY</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1021,17 +1440,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Trigger.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicate=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Trigger resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] actions: List of actions initiated by this trigger when it fires. Defined below.
-:param pulumi.Input[str] description: A description of the new trigger.
-:param pulumi.Input[bool] enabled: Start the trigger. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Not valid to disable for <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> type.
-:param pulumi.Input[str] name: The name of the trigger.
-:param pulumi.Input[dict] predicate: A predicate to specify when the new trigger should fire. Required when trigger type is <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>. Defined below.
-:param pulumi.Input[str] schedule: A cron expression used to specify the schedule. <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html">Time-Based Schedules for Jobs and Crawlers</a>
-:param pulumi.Input[str] type: The type of trigger. Valid values are <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of actions initiated by this trigger when it fires. Defined below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the new trigger.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Start the trigger. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Not valid to disable for <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code> type.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the trigger.</p></li>
+<li><p><strong>predicate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A predicate to specify when the new trigger should fire. Required when trigger type is <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>. Defined below.</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A cron expression used to specify the schedule. <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html">Time-Based Schedules for Jobs and Crawlers</a></p>
+</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of trigger. Valid values are <code class="docutils literal notranslate"><span class="pre">CONDITIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>, and <code class="docutils literal notranslate"><span class="pre">SCHEDULED</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
+</ul>
+<p>The <strong>predicate</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of the conditions that determine when the trigger will fire. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logicalOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A logical operator. Defaults to <code class="docutils literal notranslate"><span class="pre">EQUALS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The condition state. Currently, the values supported are <code class="docutils literal notranslate"><span class="pre">SUCCEEDED</span></code>, <code class="docutils literal notranslate"><span class="pre">STOPPED</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILED</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logical</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - How to handle multiple conditions. Defaults to <code class="docutils literal notranslate"><span class="pre">AND</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">AND</span></code> or <code class="docutils literal notranslate"><span class="pre">ANY</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown</a>.</p>
 </div></blockquote>
@@ -1079,6 +1522,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.get_script">
 <code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">get_script</code><span class="sig-paren">(</span><em class="sig-param">dag_edges=None</em>, <em class="sig-param">dag_nodes=None</em>, <em class="sig-param">language=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.get_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dag_edges</strong> (<em>list</em>) – A list of the edges in the DAG. Defined below.</p></li>
+<li><p><strong>dag_nodes</strong> (<em>list</em>) – A list of the nodes in the DAG. Defined below.</p></li>
+<li><p><strong>language</strong> (<em>str</em>) – The programming language of the resulting code from the DAG. Defaults to <code class="docutils literal notranslate"><span class="pre">PYTHON</span></code>. Valid values are <code class="docutils literal notranslate"><span class="pre">PYTHON</span></code> and <code class="docutils literal notranslate"><span class="pre">SCALA</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>dag_edges</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the node at which the edge starts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the node at which the edge ends.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetParameter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The target of the edge.</p></li>
+</ul>
+<p>The <strong>dag_nodes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Nested configuration an argument or property of a node. Defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the argument or property.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">param</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean if the value is used as a parameter. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the argument or property.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A node identifier that is unique within the node’s graph.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lineNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The line number of the node.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of node this is.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown</a>.</p>
 </div></blockquote>

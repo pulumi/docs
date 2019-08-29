@@ -82,6 +82,56 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>default_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateCognito</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Cognito user pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cognito user pool client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain prefix or fully-qualified domain name of the Cognito user pool.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateOidc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authorization endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The token endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userInfoEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user info endpoint of the IdP.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating an action that returns a custom HTTP response. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The content type. Valid values are <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/css</span></code>, <code class="docutils literal notranslate"><span class="pre">text/html</span></code>, <code class="docutils literal notranslate"><span class="pre">application/javascript</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageBody</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The message body.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating a redirect action. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">redirect</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The hostname. This component is not percent-encoded. The hostname can contain <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The absolute path, starting with the leading “/”. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to <code class="docutils literal notranslate"><span class="pre">/#{path}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading “?”. Defaults to <code class="docutils literal notranslate"><span class="pre">#{query}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Target Group to which to route traffic. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">forward</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of routing action. Valid values are <code class="docutils literal notranslate"><span class="pre">forward</span></code>, <code class="docutils literal notranslate"><span class="pre">redirect</span></code>, <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>, <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener.html.markdown</a>.</p>
 </div></blockquote>
@@ -101,6 +151,55 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.alb.Listener.default_actions">
 <code class="sig-name descname">default_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.alb.Listener.default_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>An Action block. Action blocks are documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateCognito</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Cognito user pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Cognito user pool client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The domain prefix or fully-qualified domain name of the Cognito user pool.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateOidc</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authorization endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The token endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userInfoEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user info endpoint of the IdP.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Information for creating an action that returns a custom HTTP response. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The content type. Valid values are <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/css</span></code>, <code class="docutils literal notranslate"><span class="pre">text/html</span></code>, <code class="docutils literal notranslate"><span class="pre">application/javascript</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageBody</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The message body.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Information for creating a redirect action. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">redirect</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The hostname. This component is not percent-encoded. The hostname can contain <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The absolute path, starting with the leading “/”. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to <code class="docutils literal notranslate"><span class="pre">/#{path}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading “?”. Defaults to <code class="docutils literal notranslate"><span class="pre">#{query}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Target Group to which to route traffic. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">forward</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of routing action. Valid values are <code class="docutils literal notranslate"><span class="pre">forward</span></code>, <code class="docutils literal notranslate"><span class="pre">redirect</span></code>, <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>, <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -131,17 +230,73 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.alb.Listener.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">default_actions=None</em>, <em class="sig-param">load_balancer_arn=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">ssl_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.alb.Listener.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Listener resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the listener (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>)
-:param pulumi.Input[str] certificate_arn: The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the <cite>``lb.ListenerCertificate`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html">https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html</a>&gt;`_.
-:param pulumi.Input[list] default_actions: An Action block. Action blocks are documented below.
-:param pulumi.Input[str] load_balancer_arn: The ARN of the load balancer.
-:param pulumi.Input[float] port: The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.
-:param pulumi.Input[str] protocol: The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.
-:param pulumi.Input[str] ssl_policy: The name of the SSL Policy for the listener. Required if <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the listener (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>)</p></li>
+<li><p><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the <cite>``lb.ListenerCertificate`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html">https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html</a>&gt;`_.</p></li>
+<li><p><strong>default_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An Action block. Action blocks are documented below.</p></li>
+<li><p><strong>load_balancer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the load balancer.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.</p></li>
+<li><p><strong>ssl_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSL Policy for the listener. Required if <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> or <code class="docutils literal notranslate"><span class="pre">TLS</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>default_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateCognito</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Cognito user pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cognito user pool client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain prefix or fully-qualified domain name of the Cognito user pool.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateOidc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authorization endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The token endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userInfoEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user info endpoint of the IdP.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating an action that returns a custom HTTP response. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The content type. Valid values are <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/css</span></code>, <code class="docutils literal notranslate"><span class="pre">text/html</span></code>, <code class="docutils literal notranslate"><span class="pre">application/javascript</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageBody</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The message body.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating a redirect action. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">redirect</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The hostname. This component is not percent-encoded. The hostname can contain <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The absolute path, starting with the leading “/”. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to <code class="docutils literal notranslate"><span class="pre">/#{path}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading “?”. Defaults to <code class="docutils literal notranslate"><span class="pre">#{query}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Target Group to which to route traffic. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">forward</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of routing action. Valid values are <code class="docutils literal notranslate"><span class="pre">forward</span></code>, <code class="docutils literal notranslate"><span class="pre">redirect</span></code>, <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>, <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener.html.markdown</a>.</p>
 </div></blockquote>
@@ -222,12 +377,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.alb.ListenerCertificate.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">listener_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.alb.ListenerCertificate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ListenerCertificate resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] certificate_arn: The ARN of the certificate to attach to the listener.
-:param pulumi.Input[str] listener_arn: The ARN of the listener to which to attach the certificate.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the certificate to attach to the listener.</p></li>
+<li><p><strong>listener_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the listener to which to attach the certificate.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_certificate.html.markdown</a>.</p>
 </div></blockquote>
@@ -290,6 +451,61 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateCognito</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating an authenticate action using Cognito. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Cognito user pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cognito user pool client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain prefix or fully-qualified domain name of the Cognito user pool.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateOidc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating an authenticate action using OIDC. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authorization endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The token endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userInfoEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user info endpoint of the IdP.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating an action that returns a custom HTTP response. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The content type. Valid values are <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/css</span></code>, <code class="docutils literal notranslate"><span class="pre">text/html</span></code>, <code class="docutils literal notranslate"><span class="pre">application/javascript</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageBody</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The message body.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating a redirect action. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">redirect</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The hostname. This component is not percent-encoded. The hostname can contain <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The absolute path, starting with the leading “/”. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to <code class="docutils literal notranslate"><span class="pre">/#{path}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading “?”. Defaults to <code class="docutils literal notranslate"><span class="pre">#{query}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Target Group to which to route traffic. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">forward</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of routing action. Valid values are <code class="docutils literal notranslate"><span class="pre">forward</span></code>, <code class="docutils literal notranslate"><span class="pre">redirect</span></code>, <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>, <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p></li>
+</ul>
+<p>The <strong>conditions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the field. Must be one of <code class="docutils literal notranslate"><span class="pre">path-pattern</span></code> for path based routing or <code class="docutils literal notranslate"><span class="pre">host-header</span></code> for host based routing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path patterns to match. A maximum of 1 can be defined.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -297,6 +513,55 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.alb.ListenerRule.actions">
 <code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.alb.ListenerRule.actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>An Action block. Action blocks are documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateCognito</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Information for creating an authenticate action using Cognito. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Cognito user pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Cognito user pool client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The domain prefix or fully-qualified domain name of the Cognito user pool.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateOidc</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Information for creating an authenticate action using OIDC. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authorization endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The token endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userInfoEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user info endpoint of the IdP.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Information for creating an action that returns a custom HTTP response. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The content type. Valid values are <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/css</span></code>, <code class="docutils literal notranslate"><span class="pre">text/html</span></code>, <code class="docutils literal notranslate"><span class="pre">application/javascript</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageBody</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The message body.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Information for creating a redirect action. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">redirect</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The hostname. This component is not percent-encoded. The hostname can contain <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The absolute path, starting with the leading “/”. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to <code class="docutils literal notranslate"><span class="pre">/#{path}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading “?”. Defaults to <code class="docutils literal notranslate"><span class="pre">#{query}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Target Group to which to route traffic. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">forward</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of routing action. Valid values are <code class="docutils literal notranslate"><span class="pre">forward</span></code>, <code class="docutils literal notranslate"><span class="pre">redirect</span></code>, <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>, <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -309,6 +574,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.alb.ListenerRule.conditions">
 <code class="sig-name descname">conditions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.alb.ListenerRule.conditions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Condition block. Condition blocks are documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the field. Must be one of <code class="docutils literal notranslate"><span class="pre">path-pattern</span></code> for path based routing or <code class="docutils literal notranslate"><span class="pre">host-header</span></code> for host based routing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path patterns to match. A maximum of 1 can be defined.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -327,15 +596,76 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.alb.ListenerRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">conditions=None</em>, <em class="sig-param">listener_arn=None</em>, <em class="sig-param">priority=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.alb.ListenerRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ListenerRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] actions: An Action block. Action blocks are documented below.
-:param pulumi.Input[str] arn: The ARN of the rule (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>)
-:param pulumi.Input[list] conditions: A Condition block. Condition blocks are documented below.
-:param pulumi.Input[str] listener_arn: The ARN of the listener to which to attach the rule.
-:param pulumi.Input[float] priority: The priority for the rule between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">50000</span></code>. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can’t have multiple rules with the same priority.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An Action block. Action blocks are documented below.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the rule (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>)</p></li>
+<li><p><strong>conditions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A Condition block. Condition blocks are documented below.</p></li>
+<li><p><strong>listener_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the listener to which to attach the rule.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority for the rule between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">50000</span></code>. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can’t have multiple rules with the same priority.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateCognito</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating an authenticate action using Cognito. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Cognito user pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolClientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cognito user pool client.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userPoolDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain prefix or fully-qualified domain name of the Cognito user pool.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticateOidc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating an authenticate action using OIDC. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticationRequestExtraParams</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The query parameters to include in the redirect request to the authorization endpoint. Max: 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizationEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authorization endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OAuth 2.0 client secret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The OIDC issuer identifier of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onUnauthenticatedRequest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The behavior if the user is not authenticated. Valid values: <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">allow</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The set of user claims to be requested from the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the cookie used to maintain session information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum duration of the authentication session, in seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The token endpoint of the IdP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userInfoEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user info endpoint of the IdP.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating an action that returns a custom HTTP response. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The content type. Valid values are <code class="docutils literal notranslate"><span class="pre">text/plain</span></code>, <code class="docutils literal notranslate"><span class="pre">text/css</span></code>, <code class="docutils literal notranslate"><span class="pre">text/html</span></code>, <code class="docutils literal notranslate"><span class="pre">application/javascript</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageBody</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The message body.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">order</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information for creating a redirect action. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">redirect</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The hostname. This component is not percent-encoded. The hostname can contain <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{host}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The absolute path, starting with the leading “/”. This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to <code class="docutils literal notranslate"><span class="pre">/#{path}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port. Specify a value from <code class="docutils literal notranslate"><span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{port}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, or <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">#{protocol}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading “?”. Defaults to <code class="docutils literal notranslate"><span class="pre">#{query}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTP response code. Valid values are <code class="docutils literal notranslate"><span class="pre">2XX</span></code>, <code class="docutils literal notranslate"><span class="pre">4XX</span></code>, or <code class="docutils literal notranslate"><span class="pre">5XX</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Target Group to which to route traffic. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">forward</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of routing action. Valid values are <code class="docutils literal notranslate"><span class="pre">forward</span></code>, <code class="docutils literal notranslate"><span class="pre">redirect</span></code>, <code class="docutils literal notranslate"><span class="pre">fixed-response</span></code>, <code class="docutils literal notranslate"><span class="pre">authenticate-cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">authenticate-oidc</span></code>.</p></li>
+</ul>
+<p>The <strong>conditions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">field</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the field. Must be one of <code class="docutils literal notranslate"><span class="pre">path-pattern</span></code> for path based routing or <code class="docutils literal notranslate"><span class="pre">host-header</span></code> for host based routing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path patterns to match. A maximum of 1 can be defined.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_listener_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -414,6 +744,17 @@ for load balancers of type <code class="docutils literal notranslate"><span clas
 </ul>
 </dd>
 </dl>
+<p>The <strong>access_logs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket name to store the logs in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">access_logs</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, even when <code class="docutils literal notranslate"><span class="pre">bucket</span></code> is specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket prefix. Logs are stored in the root if not configured.</p></li>
+</ul>
+<p>The <strong>subnet_mappings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation ID of the Elastic IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb.html.markdown</a>.</p>
 </div></blockquote>
@@ -421,6 +762,11 @@ for load balancers of type <code class="docutils literal notranslate"><span clas
 <dt id="pulumi_aws.alb.LoadBalancer.access_logs">
 <code class="sig-name descname">access_logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.alb.LoadBalancer.access_logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>An Access Logs block. Access Logs documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The S3 bucket name to store the logs in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">access_logs</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, even when <code class="docutils literal notranslate"><span class="pre">bucket</span></code> is specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The S3 bucket prefix. Logs are stored in the root if not configured.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -509,6 +855,10 @@ this provider will autogenerate a name beginning with <code class="docutils lite
 <dt id="pulumi_aws.alb.LoadBalancer.subnet_mappings">
 <code class="sig-name descname">subnet_mappings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.alb.LoadBalancer.subnet_mappings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A subnet mapping block as documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The allocation ID of the Elastic IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -535,21 +885,19 @@ for load balancers of type <code class="docutils literal notranslate"><span clas
 <dt id="pulumi_aws.alb.LoadBalancer.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_logs=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enable_cross_zone_load_balancing=None</em>, <em class="sig-param">enable_deletion_protection=None</em>, <em class="sig-param">enable_http2=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">internal=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">load_balancer_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_mappings=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.alb.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] access_logs: An Access Logs block. Access Logs documented below.
-:param pulumi.Input[str] arn: The ARN of the load balancer (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>).
-:param pulumi.Input[str] arn_suffix: The ARN suffix for use with CloudWatch Metrics.
-:param pulumi.Input[str] dns_name: The DNS name of the load balancer.
-:param pulumi.Input[bool] enable_cross_zone_load_balancing: If true, cross-zone load balancing of the load balancer will be enabled.</p>
-<blockquote>
-<div><p>This is a <code class="docutils literal notranslate"><span class="pre">network</span></code> load balancer feature. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Access Logs block. Access Logs documented below.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the load balancer (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>).</p></li>
+<li><p><strong>arn_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN suffix for use with CloudWatch Metrics.</p></li>
+<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of the load balancer.</p></li>
+<li><p><strong>enable_cross_zone_load_balancing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, cross-zone load balancing of the load balancer will be enabled.
+This is a <code class="docutils literal notranslate"><span class="pre">network</span></code> load balancer feature. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>enable_deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>enable_http2</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether HTTP/2 is enabled in <code class="docutils literal notranslate"><span class="pre">application</span></code> load balancers. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -571,6 +919,17 @@ for load balancers of type <code class="docutils literal notranslate"><span clas
 </ul>
 </dd>
 </dl>
+<p>The <strong>access_logs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket name to store the logs in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">access_logs</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>, even when <code class="docutils literal notranslate"><span class="pre">bucket</span></code> is specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket prefix. Logs are stored in the root if not configured.</p></li>
+</ul>
+<p>The <strong>subnet_mappings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allocationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation ID of the Elastic IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb.html.markdown</a>.</p>
 </div></blockquote>
@@ -647,6 +1006,28 @@ You can’t specify publicly routable IP addresses.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>health_check</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether  health checks are enabled. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target groups, it needs to be greater as the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> of the underlying <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. Default 30 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination for the health check request. Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port to use to connect with the target. Valid values are either ports 1-65536, or <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to use to connect with the target. Defaults to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>. Not applicable when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the <code class="docutils literal notranslate"><span class="pre">instance</span></code> target type and 30 seconds for the <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>stickiness</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether  health checks are enabled. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of sticky sessions. The only current possible value is <code class="docutils literal notranslate"><span class="pre">lb_cookie</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -672,6 +1053,21 @@ You can’t specify publicly routable IP addresses.</p></li>
 <dt id="pulumi_aws.alb.TargetGroup.health_check">
 <code class="sig-name descname">health_check</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.alb.TargetGroup.health_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Health Check block. Health Check blocks are documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether  health checks are enabled. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target groups, it needs to be greater as the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> of the underlying <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. Default 30 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination for the health check request. Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The port to use to connect with the target. Valid values are either ports 1-65536, or <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to use to connect with the target. Defaults to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>. Not applicable when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the <code class="docutils literal notranslate"><span class="pre">instance</span></code> target type and 30 seconds for the <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -720,6 +1116,11 @@ You can’t specify publicly routable IP addresses.</p></li>
 <dt id="pulumi_aws.alb.TargetGroup.stickiness">
 <code class="sig-name descname">stickiness</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.alb.TargetGroup.stickiness" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Stickiness block. Stickiness blocks are documented below. <code class="docutils literal notranslate"><span class="pre">stickiness</span></code> is only valid if used with Load Balancers of type <code class="docutils literal notranslate"><span class="pre">Application</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether  health checks are enabled. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of sticky sessions. The only current possible value is <code class="docutils literal notranslate"><span class="pre">lb_cookie</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -749,36 +1150,59 @@ You can’t specify publicly routable IP addresses.</p>
 <dt id="pulumi_aws.alb.TargetGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">arn_suffix=None</em>, <em class="sig-param">deregistration_delay=None</em>, <em class="sig-param">health_check=None</em>, <em class="sig-param">lambda_multi_value_headers_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol_v2=None</em>, <em class="sig-param">slow_start=None</em>, <em class="sig-param">stickiness=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_type=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.alb.TargetGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TargetGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the Target Group (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>)
-:param pulumi.Input[str] arn_suffix: The ARN suffix for use with CloudWatch Metrics.
-:param pulumi.Input[float] deregistration_delay: The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
-:param pulumi.Input[dict] health_check: A Health Check block. Health Check blocks are documented below.
-:param pulumi.Input[bool] lambda_multi_value_headers_enabled: Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.
-:param pulumi.Input[str] name: The name of the target group. If omitted, this provider will assign a random, unique name.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Cannot be longer than 6 characters.
-:param pulumi.Input[float] port: The port to use to connect with the target. Valid values are either ports 1-65536, or <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>.
-:param pulumi.Input[str] protocol: The protocol to use to connect with the target. Defaults to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>. Not applicable when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.
-:param pulumi.Input[bool] proxy_protocol_v2: Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See <a class="reference external" href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol">doc</a> for more information.
-:param pulumi.Input[float] slow_start: The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
-:param pulumi.Input[dict] stickiness: A Stickiness block. Stickiness blocks are documented below. <code class="docutils literal notranslate"><span class="pre">stickiness</span></code> is only valid if used with Load Balancers of type <code class="docutils literal notranslate"><span class="pre">Application</span></code>
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] target_type: The type of target that you must specify when registering targets with this target group.</p>
-<blockquote>
-<div><p>The possible values are <code class="docutils literal notranslate"><span class="pre">instance</span></code> (targets are specified by instance ID) or <code class="docutils literal notranslate"><span class="pre">ip</span></code> (targets are specified by IP address) or <code class="docutils literal notranslate"><span class="pre">lambda</span></code> (targets are specified by lambda arn).
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Target Group (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>)</p></li>
+<li><p><strong>arn_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN suffix for use with CloudWatch Metrics.</p></li>
+<li><p><strong>deregistration_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.</p></li>
+<li><p><strong>health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Health Check block. Health Check blocks are documented below.</p></li>
+<li><p><strong>lambda_multi_value_headers_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the target group. If omitted, this provider will assign a random, unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Cannot be longer than 6 characters.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port to use to connect with the target. Valid values are either ports 1-65536, or <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>.</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use to connect with the target. Defaults to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>. Not applicable when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
+<li><p><strong>proxy_protocol_v2</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See <a class="reference external" href="https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol">doc</a> for more information.</p>
+</p></li>
+<li><p><strong>slow_start</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.</p></li>
+<li><p><strong>stickiness</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Stickiness block. Stickiness blocks are documented below. <code class="docutils literal notranslate"><span class="pre">stickiness</span></code> is only valid if used with Load Balancers of type <code class="docutils literal notranslate"><span class="pre">Application</span></code></p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>target_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of target that you must specify when registering targets with this target group.
+The possible values are <code class="docutils literal notranslate"><span class="pre">instance</span></code> (targets are specified by instance ID) or <code class="docutils literal notranslate"><span class="pre">ip</span></code> (targets are specified by IP address) or <code class="docutils literal notranslate"><span class="pre">lambda</span></code> (targets are specified by lambda arn).
 The default is <code class="docutils literal notranslate"><span class="pre">instance</span></code>. Note that you can’t specify targets for a target group using both instance IDs and IP addresses.
 If the target type is <code class="docutils literal notranslate"><span class="pre">ip</span></code>, specify IP addresses from the subnets of the virtual private cloud (VPC) for the target group,
 the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10).
-You can’t specify publicly routable IP addresses.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the VPC in which to create the target group. Required when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">instance</span></code> or <code class="docutils literal notranslate"><span class="pre">ip</span></code>. Does not apply when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p>
+You can’t specify publicly routable IP addresses.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the VPC in which to create the target group. Required when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">instance</span></code> or <code class="docutils literal notranslate"><span class="pre">ip</span></code>. Does not apply when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
+</ul>
 </dd>
 </dl>
+<p>The <strong>health_check</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether  health checks are enabled. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target groups, it needs to be greater as the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> of the underlying <code class="docutils literal notranslate"><span class="pre">lambda</span></code>. Default 30 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination for the health check request. Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port to use to connect with the target. Valid values are either ports 1-65536, or <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">traffic-port</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to use to connect with the target. Defaults to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>. Not applicable when <code class="docutils literal notranslate"><span class="pre">target_type</span></code> is <code class="docutils literal notranslate"><span class="pre">lambda</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the <code class="docutils literal notranslate"><span class="pre">instance</span></code> target type and 30 seconds for the <code class="docutils literal notranslate"><span class="pre">lambda</span></code> target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive health check failures required before considering the target unhealthy . For Network Load Balancers, this value must be the same as the <code class="docutils literal notranslate"><span class="pre">healthy_threshold</span></code>. Defaults to 3.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">matcher</span></code> (Required for HTTP/HTTPS ALB) The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, “200,202”) or a range of values (for example, “200-299”). Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>stickiness</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether  health checks are enabled. Defaults to true.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of sticky sessions. The only current possible value is <code class="docutils literal notranslate"><span class="pre">lb_cookie</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -872,14 +1296,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.alb.TargetGroupAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">target_group_arn=None</em>, <em class="sig-param">target_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.alb.TargetGroupAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TargetGroupAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] availability_zone: The Availability Zone where the IP address of the target is to be registered.
-:param pulumi.Input[float] port: The port on which targets receive traffic.
-:param pulumi.Input[str] target_group_arn: The ARN of the target group with which to register targets
-:param pulumi.Input[str] target_id: The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone where the IP address of the target is to be registered.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which targets receive traffic.</p></li>
+<li><p><strong>target_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the target group with which to register targets</p></li>
+<li><p><strong>target_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb_target_group_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -933,6 +1363,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arn</strong> (<em>str</em>) – The arn of the listener. Required if <code class="docutils literal notranslate"><span class="pre">load_balancer_arn</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code> is not set.</p></li>
+<li><p><strong>load_balancer_arn</strong> (<em>str</em>) – The arn of the load balancer. Required if <code class="docutils literal notranslate"><span class="pre">arn</span></code> is not set.</p></li>
+<li><p><strong>port</strong> (<em>float</em>) – The port of the listener. Required if <code class="docutils literal notranslate"><span class="pre">arn</span></code> is not set.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_listener.html.markdown</a>.</p>
 </div></blockquote>
@@ -948,6 +1387,14 @@ information specific to the listener in question.</p>
 <p>This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arn</strong> (<em>str</em>) – The full ARN of the load balancer.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The unique name of the load balancer.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb.html.markdown</a>.</p>
 </div></blockquote>
@@ -963,6 +1410,14 @@ with it, etc.</p>
 <p>This data source can prove useful when a module accepts an LB Target Group as an
 input variable and needs to know its attributes. It can also be used to get the ARN of
 an LB Target Group for use in other resources, given LB Target Group name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arn</strong> (<em>str</em>) – The full ARN of the target group.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The unique name of the target group.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_target_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_target_group.html.markdown</a>.</p>
 </div></blockquote>

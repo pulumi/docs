@@ -52,7 +52,15 @@ To initialize cluster, you have to add an hsm instance to the cluster then sign 
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.cluster_csr</span></code> - The certificate signing request (CSR). Available only in UNINITIALIZED state after an hsm instance is added to the cluster.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.aws_hardware_certificate</span></code> - The HSM hardware certificate issued (signed) by AWS CloudHSM.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.hsm_certificate</span></code> - The HSM certificate issued (signed) by the HSM hardware.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.manufacturer_hardware_certificate</span></code> - The HSM hardware certificate issued (signed) by the hardware manufacturer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.manufacturer_hardware_certificate</span></code> - The HSM hardware certificate issued (signed) by the hardware manufacturer.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">awsHardwareCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterCsr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hsmCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manufacturerHardwareCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -108,11 +116,17 @@ To initialize cluster, you have to add an hsm instance to the cluster then sign 
 <dt id="pulumi_aws.cloudhsmv2.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_certificates=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">cluster_state=None</em>, <em class="sig-param">hsm_type=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">source_backup_identifier=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] cluster_certificates: The list of cluster certificates.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The list of cluster certificates.</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster&#39;s owner.
 * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in UNINITIALIZED state after an hsm instance is added to the cluster.
 * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
@@ -134,6 +148,14 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>cluster_certificates</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">awsHardwareCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterCsr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hsmCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">manufacturerHardwareCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -286,17 +308,23 @@ The number of available cluster certificates may vary depending on state of the 
 <dt id="pulumi_aws.cloudhsmv2.Hsm.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">hsm_eni_id=None</em>, <em class="sig-param">hsm_id=None</em>, <em class="sig-param">hsm_state=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Hsm.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Hsm resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] availability_zone: The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.
-:param pulumi.Input[str] cluster_id: The ID of Cloud HSM v2 cluster to which HSM will be added.
-:param pulumi.Input[str] hsm_eni_id: The id of the ENI interface allocated for HSM module.
-:param pulumi.Input[str] hsm_id: The id of the HSM module.
-:param pulumi.Input[str] hsm_state: The state of the HSM module.
-:param pulumi.Input[str] ip_address: The IP address of HSM module. Must be within the CIDR of selected subnet.
-:param pulumi.Input[str] subnet_id: The ID of subnet in which HSM module will be located.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of Cloud HSM v2 cluster to which HSM will be added.</p></li>
+<li><p><strong>hsm_eni_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the ENI interface allocated for HSM module.</p></li>
+<li><p><strong>hsm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the HSM module.</p></li>
+<li><p><strong>hsm_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the HSM module.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of HSM module. Must be within the CIDR of selected subnet.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of subnet in which HSM module will be located.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_hsm.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_hsm.html.markdown</a>.</p>
 </div></blockquote>
@@ -344,6 +372,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudhsmv2.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.cloudhsmv2.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">cluster_state=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a CloudHSM v2 cluster</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_id</strong> (<em>str</em>) – The id of Cloud HSM v2 cluster.</p></li>
+<li><p><strong>cluster_state</strong> (<em>str</em>) – The state of the cluster to be found.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudhsm_v2_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudhsm_v2_cluster.html.markdown</a>.</p>
 </div></blockquote>

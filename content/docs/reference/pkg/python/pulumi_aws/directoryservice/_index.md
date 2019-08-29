@@ -50,13 +50,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.directoryservice.ConditionalForwader.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ips=None</em>, <em class="sig-param">remote_domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ConditionalForwader resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] directory_id: The id of directory.
-:param pulumi.Input[list] dns_ips: A list of forwarder IP addresses.
-:param pulumi.Input[str] remote_domain_name: The fully qualified domain name of the remote domain for which forwarders will be used.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of directory.</p></li>
+<li><p><strong>dns_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of forwarder IP addresses.</p></li>
+<li><p><strong>remote_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name of the remote domain for which forwarders will be used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown</a>.</p>
 </div></blockquote>
@@ -128,6 +134,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>connect_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customerDnsIps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The DNS IP addresses of the domain to connect to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customerUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username corresponding to the password provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier of the VPC that the directory is in.</p></li>
+</ul>
+<p>The <strong>vpc_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier of the VPC that the directory is in.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown</a>.</p>
 </div></blockquote>
@@ -147,6 +165,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.Directory.connect_settings">
 <code class="sig-name descname">connect_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.connect_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connector related information about the directory. Fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customerDnsIps</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The DNS IP addresses of the domain to connect to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customerUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username corresponding to the password provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier of the VPC that the directory is in.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -219,31 +243,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.Directory.vpc_settings">
 <code class="sig-name descname">vpc_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.vpc_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>VPC related information about the directory. Fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The identifier of the VPC that the directory is in.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.directoryservice.Directory.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_url=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">connect_settings=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_ip_addresses=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">enable_sso=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vpc_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Directory resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] access_url: The access URL for the directory, such as <code class="docutils literal notranslate"><span class="pre">http://alias.awsapps.com</span></code>.
-:param pulumi.Input[str] alias: The alias for the directory (must be unique amongst all aliases in AWS). Required for <code class="docutils literal notranslate"><span class="pre">enable_sso</span></code>.
-:param pulumi.Input[dict] connect_settings: Connector related information about the directory. Fields documented below.
-:param pulumi.Input[str] description: A textual description for the directory.
-:param pulumi.Input[list] dns_ip_addresses: A list of IP addresses of the DNS servers for the directory or connector.
-:param pulumi.Input[str] edition: The MicrosoftAD edition (<code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>). Defaults to <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code> (applies to MicrosoftAD type only).
-:param pulumi.Input[bool] enable_sso: Whether to enable single-sign on for the directory. Requires <code class="docutils literal notranslate"><span class="pre">alias</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] name: The fully qualified name for the directory, such as <code class="docutils literal notranslate"><span class="pre">corp.example.com</span></code>
-:param pulumi.Input[str] password: The password for the directory administrator or connector user.
-:param pulumi.Input[str] security_group_id: The ID of the security group created by the directory.
-:param pulumi.Input[str] short_name: The short name of the directory, such as <code class="docutils literal notranslate"><span class="pre">CORP</span></code>.
-:param pulumi.Input[str] size: The size of the directory (<code class="docutils literal notranslate"><span class="pre">Small</span></code> or <code class="docutils literal notranslate"><span class="pre">Large</span></code> are accepted values).
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] type: The directory type (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>, <code class="docutils literal notranslate"><span class="pre">ADConnector</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code> are accepted values). Defaults to <code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>.
-:param pulumi.Input[dict] vpc_settings: VPC related information about the directory. Fields documented below.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access URL for the directory, such as <code class="docutils literal notranslate"><span class="pre">http://alias.awsapps.com</span></code>.</p></li>
+<li><p><strong>alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alias for the directory (must be unique amongst all aliases in AWS). Required for <code class="docutils literal notranslate"><span class="pre">enable_sso</span></code>.</p></li>
+<li><p><strong>connect_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Connector related information about the directory. Fields documented below.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description for the directory.</p></li>
+<li><p><strong>dns_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IP addresses of the DNS servers for the directory or connector.</p></li>
+<li><p><strong>edition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MicrosoftAD edition (<code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>). Defaults to <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code> (applies to MicrosoftAD type only).</p></li>
+<li><p><strong>enable_sso</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable single-sign on for the directory. Requires <code class="docutils literal notranslate"><span class="pre">alias</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name for the directory, such as <code class="docutils literal notranslate"><span class="pre">corp.example.com</span></code></p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password for the directory administrator or connector user.</p></li>
+<li><p><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the security group created by the directory.</p></li>
+<li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The short name of the directory, such as <code class="docutils literal notranslate"><span class="pre">CORP</span></code>.</p></li>
+<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of the directory (<code class="docutils literal notranslate"><span class="pre">Small</span></code> or <code class="docutils literal notranslate"><span class="pre">Large</span></code> are accepted values).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory type (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>, <code class="docutils literal notranslate"><span class="pre">ADConnector</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code> are accepted values). Defaults to <code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>.</p></li>
+<li><p><strong>vpc_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – VPC related information about the directory. Fields documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>connect_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customerDnsIps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The DNS IP addresses of the domain to connect to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customerUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username corresponding to the password provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier of the VPC that the directory is in.</p></li>
+</ul>
+<p>The <strong>vpc_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The identifier of the VPC that the directory is in.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown</a>.</p>
 </div></blockquote>
@@ -320,12 +366,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.LogService.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">log_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.LogService.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogService resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] directory_id: The id of directory.
-:param pulumi.Input[str] log_group_name: Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of directory.</p></li>
+<li><p><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown</a>.</p>
 </div></blockquote>

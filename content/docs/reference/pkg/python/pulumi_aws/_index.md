@@ -65,6 +65,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="elb/">elb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="emr/">emr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fms/">fms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fsx/">fsx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gamelift/">gamelift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glacier/">glacier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="globalaccelerator/">globalaccelerator</a></li>

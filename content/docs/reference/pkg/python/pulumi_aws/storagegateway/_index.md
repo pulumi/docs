@@ -51,12 +51,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.storagegateway.Cache.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disk_id=None</em>, <em class="sig-param">gateway_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.Cache.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cache resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] disk_id: Local disk identifier. For example, <code class="docutils literal notranslate"><span class="pre">pci-0000:03:00.0-scsi-0:0:0:0</span></code>.
-:param pulumi.Input[str] gateway_arn: The Amazon Resource Name (ARN) of the gateway.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>disk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Local disk identifier. For example, <code class="docutils literal notranslate"><span class="pre">pci-0000:03:00.0-scsi-0:0:0:0</span></code>.</p></li>
+<li><p><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the gateway.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown</a>.</p>
 </div></blockquote>
@@ -210,23 +216,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.CachesIscsiVolume.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">chap_enabled=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">lun_number=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">network_interface_port=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">source_volume_arn=None</em>, <em class="sig-param">target_arn=None</em>, <em class="sig-param">target_name=None</em>, <em class="sig-param">volume_arn=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">volume_size_in_bytes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.CachesIscsiVolume.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CachesIscsiVolume resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Volume Amazon Resource Name (ARN), e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/volume/vol-12345678</span></code>.
-:param pulumi.Input[bool] chap_enabled: Whether mutual CHAP is enabled for the iSCSI target.
-:param pulumi.Input[str] gateway_arn: The Amazon Resource Name (ARN) of the gateway.
-:param pulumi.Input[float] lun_number: Logical disk number.
-:param pulumi.Input[str] network_interface_id: The network interface of the gateway on which to expose the iSCSI target. Only IPv4 addresses are accepted.
-:param pulumi.Input[float] network_interface_port: The port used to communicate with iSCSI targets.
-:param pulumi.Input[str] snapshot_id: The snapshot ID of the snapshot to restore as the new cached volume. e.g. <code class="docutils literal notranslate"><span class="pre">snap-1122aabb</span></code>.
-:param pulumi.Input[str] source_volume_arn: The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume’s latest recovery point. The <code class="docutils literal notranslate"><span class="pre">volume_size_in_bytes</span></code> value for this new volume must be equal to or larger than the size of the existing volume, in bytes.
-:param pulumi.Input[str] target_arn: Target Amazon Resource Name (ARN), e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/target/iqn.1997-05.com.amazon:TargetName</span></code>.
-:param pulumi.Input[str] target_name: The name of the iSCSI target used by initiators to connect to the target and as a suffix for the target ARN. The target name must be unique across all volumes of a gateway.
-:param pulumi.Input[str] volume_arn: Volume Amazon Resource Name (ARN), e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/volume/vol-12345678</span></code>.
-:param pulumi.Input[str] volume_id: Volume ID, e.g. <code class="docutils literal notranslate"><span class="pre">vol-12345678</span></code>.
-:param pulumi.Input[float] volume_size_in_bytes: The size of the volume in bytes.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Volume Amazon Resource Name (ARN), e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/volume/vol-12345678</span></code>.</p></li>
+<li><p><strong>chap_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether mutual CHAP is enabled for the iSCSI target.</p></li>
+<li><p><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the gateway.</p></li>
+<li><p><strong>lun_number</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Logical disk number.</p></li>
+<li><p><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network interface of the gateway on which to expose the iSCSI target. Only IPv4 addresses are accepted.</p></li>
+<li><p><strong>network_interface_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port used to communicate with iSCSI targets.</p></li>
+<li><p><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID of the snapshot to restore as the new cached volume. e.g. <code class="docutils literal notranslate"><span class="pre">snap-1122aabb</span></code>.</p></li>
+<li><p><strong>source_volume_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume’s latest recovery point. The <code class="docutils literal notranslate"><span class="pre">volume_size_in_bytes</span></code> value for this new volume must be equal to or larger than the size of the existing volume, in bytes.</p></li>
+<li><p><strong>target_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target Amazon Resource Name (ARN), e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/target/iqn.1997-05.com.amazon:TargetName</span></code>.</p></li>
+<li><p><strong>target_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the iSCSI target used by initiators to connect to the target and as a suffix for the target ARN. The target name must be unique across all volumes of a gateway.</p></li>
+<li><p><strong>volume_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Volume Amazon Resource Name (ARN), e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/volume/vol-12345678</span></code>.</p></li>
+<li><p><strong>volume_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Volume ID, e.g. <code class="docutils literal notranslate"><span class="pre">vol-12345678</span></code>.</p></li>
+<li><p><strong>volume_size_in_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size of the volume in bytes.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown</a>.</p>
 </div></blockquote>
@@ -294,6 +306,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>smb_active_directory_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the domain that you want the gateway to join.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the user who has permission to add the gateway to the Active Directory domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name of user who has permission to add the gateway to the Active Directory domain.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -343,6 +361,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.Gateway.smb_active_directory_settings">
 <code class="sig-name descname">smb_active_directory_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.smb_active_directory_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code> authentication SMB file shares. More details below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the domain that you want the gateway to join.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password of the user who has permission to add the gateway to the Active Directory domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user name of user who has permission to add the gateway to the Active Directory domain.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -361,20 +384,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.Gateway.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activation_key=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">gateway_id=None</em>, <em class="sig-param">gateway_ip_address=None</em>, <em class="sig-param">gateway_name=None</em>, <em class="sig-param">gateway_timezone=None</em>, <em class="sig-param">gateway_type=None</em>, <em class="sig-param">medium_changer_type=None</em>, <em class="sig-param">smb_active_directory_settings=None</em>, <em class="sig-param">smb_guest_password=None</em>, <em class="sig-param">tape_drive_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Gateway resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] activation_key: Gateway activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">gateway_ip_address</span></code>. Additional information is available in the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">Storage Gateway User Guide</a>.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the gateway.
-:param pulumi.Input[str] gateway_id: Identifier of the gateway.
-:param pulumi.Input[str] gateway_ip_address: Gateway IP address to retrieve activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">activation_key</span></code>. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">Storage Gateway User Guide</a>.
-:param pulumi.Input[str] gateway_name: Name of the gateway.
-:param pulumi.Input[str] gateway_timezone: Time zone for the gateway. The time zone is of the format “GMT”, “GMT-hr:mm”, or “GMT+hr:mm”. For example, <code class="docutils literal notranslate"><span class="pre">GMT-4:00</span></code> indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway’s maintenance schedule.
-:param pulumi.Input[str] gateway_type: Type of the gateway. The default value is <code class="docutils literal notranslate"><span class="pre">STORED</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">CACHED</span></code>, <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code>, <code class="docutils literal notranslate"><span class="pre">STORED</span></code>, <code class="docutils literal notranslate"><span class="pre">VTL</span></code>.
-:param pulumi.Input[dict] smb_active_directory_settings: Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code> authentication SMB file shares. More details below.
-:param pulumi.Input[str] smb_guest_password: Guest password for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">GuestAccess</span></code> authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
-:param pulumi.Input[str] tape_drive_type: Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: <code class="docutils literal notranslate"><span class="pre">IBM-ULT3580-TD5</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>activation_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Gateway activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">gateway_ip_address</span></code>. Additional information is available in the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">Storage Gateway User Guide</a>.</p>
+</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the gateway.</p></li>
+<li><p><strong>gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the gateway.</p></li>
+<li><p><strong>gateway_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Gateway IP address to retrieve activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">activation_key</span></code>. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">Storage Gateway User Guide</a>.</p>
+</p></li>
+<li><p><strong>gateway_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the gateway.</p></li>
+<li><p><strong>gateway_timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time zone for the gateway. The time zone is of the format “GMT”, “GMT-hr:mm”, or “GMT+hr:mm”. For example, <code class="docutils literal notranslate"><span class="pre">GMT-4:00</span></code> indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway’s maintenance schedule.</p></li>
+<li><p><strong>gateway_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the gateway. The default value is <code class="docutils literal notranslate"><span class="pre">STORED</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">CACHED</span></code>, <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code>, <code class="docutils literal notranslate"><span class="pre">STORED</span></code>, <code class="docutils literal notranslate"><span class="pre">VTL</span></code>.</p></li>
+<li><p><strong>smb_active_directory_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code> authentication SMB file shares. More details below.</p></li>
+<li><p><strong>smb_guest_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Guest password for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">GuestAccess</span></code> authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.</p></li>
+<li><p><strong>tape_drive_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: <code class="docutils literal notranslate"><span class="pre">IBM-ULT3580-TD5</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>smb_active_directory_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the domain that you want the gateway to join.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password of the user who has permission to add the gateway to the Active Directory domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user name of user who has permission to add the gateway to the Active Directory domain.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown</a>.</p>
 </div></blockquote>
@@ -461,6 +498,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>nfs_file_share_defaults</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">directoryMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Unix directory mode in the string form “nnnn”. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;0777&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Unix file mode in the string form “nnnn”. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;0666&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default group ID for the file share (unless the files have another group ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default owner ID for the file share (unless the files have another owner ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</p>
 </div></blockquote>
@@ -522,6 +566,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.NfsFileShare.nfs_file_share_defaults">
 <code class="sig-name descname">nfs_file_share_defaults</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare.nfs_file_share_defaults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Nested argument with file share default values. More information below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">directoryMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Unix directory mode in the string form “nnnn”. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;0777&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Unix file mode in the string form “nnnn”. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;0666&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The default group ID for the file share (unless the files have another group ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner_id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The default owner ID for the file share (unless the files have another owner ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -558,25 +608,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.NfsFileShare.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">client_lists=None</em>, <em class="sig-param">default_storage_class=None</em>, <em class="sig-param">fileshare_id=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">guess_mime_type_enabled=None</em>, <em class="sig-param">kms_encrypted=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">location_arn=None</em>, <em class="sig-param">nfs_file_share_defaults=None</em>, <em class="sig-param">object_acl=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">squash=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NfsFileShare resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the NFS File Share.
-:param pulumi.Input[list] client_lists: The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to <code class="docutils literal notranslate"><span class="pre">[&quot;0.0.0.0/0&quot;]</span></code> to not limit access. Minimum 1 item. Maximum 100 items.
-:param pulumi.Input[str] default_storage_class: The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">S3_STANDARD</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">S3_STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">S3_STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">S3_ONEZONE_IA</span></code>.
-:param pulumi.Input[str] fileshare_id: ID of the NFS File Share.
-:param pulumi.Input[str] gateway_arn: Amazon Resource Name (ARN) of the file gateway.
-:param pulumi.Input[bool] guess_mime_type_enabled: Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[bool] kms_encrypted: Boolean value if <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon S3 server side encryption with your own AWS KMS key, or <code class="docutils literal notranslate"><span class="pre">false</span></code> to use a key managed by Amazon S3. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] kms_key_arn: Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when <code class="docutils literal notranslate"><span class="pre">kms_encrypted</span></code> is true.
-:param pulumi.Input[str] location_arn: The ARN of the backed storage used for storing file data.
-:param pulumi.Input[dict] nfs_file_share_defaults: Nested argument with file share default values. More information below.
-:param pulumi.Input[str] object_acl: Access Control List permission for S3 bucket objects. Defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>.
-:param pulumi.Input[bool] read_only: Boolean to indicate write status of file share. File share does not accept writes if <code class="docutils literal notranslate"><span class="pre">true</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[bool] requester_pays: Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want the requester to pay instead of the bucket owner. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] role_arn: The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
-:param pulumi.Input[str] squash: Maps a user to anonymous user. Defaults to <code class="docutils literal notranslate"><span class="pre">RootSquash</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">RootSquash</span></code> (only root is mapped to anonymous user), <code class="docutils literal notranslate"><span class="pre">NoSquash</span></code> (no one is mapped to anonymous user), <code class="docutils literal notranslate"><span class="pre">AllSquash</span></code> (everyone is mapped to anonymous user)</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the NFS File Share.</p></li>
+<li><p><strong>client_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to <code class="docutils literal notranslate"><span class="pre">[&quot;0.0.0.0/0&quot;]</span></code> to not limit access. Minimum 1 item. Maximum 100 items.</p></li>
+<li><p><strong>default_storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">S3_STANDARD</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">S3_STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">S3_STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">S3_ONEZONE_IA</span></code>.</p></li>
+<li><p><strong>fileshare_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the NFS File Share.</p></li>
+<li><p><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the file gateway.</p></li>
+<li><p><strong>guess_mime_type_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>kms_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value if <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon S3 server side encryption with your own AWS KMS key, or <code class="docutils literal notranslate"><span class="pre">false</span></code> to use a key managed by Amazon S3. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when <code class="docutils literal notranslate"><span class="pre">kms_encrypted</span></code> is true.</p></li>
+<li><p><strong>location_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the backed storage used for storing file data.</p></li>
+<li><p><strong>nfs_file_share_defaults</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument with file share default values. More information below.</p></li>
+<li><p><strong>object_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Access Control List permission for S3 bucket objects. Defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
+<li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean to indicate write status of file share. File share does not accept writes if <code class="docutils literal notranslate"><span class="pre">true</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>requester_pays</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want the requester to pay instead of the bucket owner. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.</p></li>
+<li><p><strong>squash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Maps a user to anonymous user. Defaults to <code class="docutils literal notranslate"><span class="pre">RootSquash</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">RootSquash</span></code> (only root is mapped to anonymous user), <code class="docutils literal notranslate"><span class="pre">NoSquash</span></code> (no one is mapped to anonymous user), <code class="docutils literal notranslate"><span class="pre">AllSquash</span></code> (everyone is mapped to anonymous user)</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>nfs_file_share_defaults</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">directoryMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Unix directory mode in the string form “nnnn”. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;0777&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Unix file mode in the string form “nnnn”. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;0666&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default group ID for the file share (unless the files have another group ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The default owner ID for the file share (unless the files have another owner ID specified). Defaults to <code class="docutils literal notranslate"><span class="pre">65534</span></code> (<code class="docutils literal notranslate"><span class="pre">nfsnobody</span></code>). Valid values: <code class="docutils literal notranslate"><span class="pre">0</span></code> through <code class="docutils literal notranslate"><span class="pre">4294967294</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</p>
 </div></blockquote>
@@ -742,25 +805,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.SmbFileShare.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">authentication=None</em>, <em class="sig-param">default_storage_class=None</em>, <em class="sig-param">fileshare_id=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">guess_mime_type_enabled=None</em>, <em class="sig-param">invalid_user_lists=None</em>, <em class="sig-param">kms_encrypted=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">location_arn=None</em>, <em class="sig-param">object_acl=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">valid_user_lists=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.SmbFileShare.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SmbFileShare resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the SMB File Share.
-:param pulumi.Input[str] authentication: The authentication method that users use to access the file share. Defaults to <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code>, <code class="docutils literal notranslate"><span class="pre">GuestAccess</span></code>.
-:param pulumi.Input[str] default_storage_class: The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">S3_STANDARD</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">S3_STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">S3_STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">S3_ONEZONE_IA</span></code>.
-:param pulumi.Input[str] fileshare_id: ID of the SMB File Share.
-:param pulumi.Input[str] gateway_arn: Amazon Resource Name (ARN) of the file gateway.
-:param pulumi.Input[bool] guess_mime_type_enabled: Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[list] invalid_user_lists: A list of users in the Active Directory that are not allowed to access the file share. Only valid if <code class="docutils literal notranslate"><span class="pre">authentication</span></code> is set to <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code>.
-:param pulumi.Input[bool] kms_encrypted: Boolean value if <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon S3 server side encryption with your own AWS KMS key, or <code class="docutils literal notranslate"><span class="pre">false</span></code> to use a key managed by Amazon S3. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] kms_key_arn: Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when <code class="docutils literal notranslate"><span class="pre">kms_encrypted</span></code> is true.
-:param pulumi.Input[str] location_arn: The ARN of the backed storage used for storing file data.
-:param pulumi.Input[str] object_acl: Access Control List permission for S3 bucket objects. Defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>.
-:param pulumi.Input[bool] read_only: Boolean to indicate write status of file share. File share does not accept writes if <code class="docutils literal notranslate"><span class="pre">true</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[bool] requester_pays: Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want the requester to pay instead of the bucket owner. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] role_arn: The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
-:param pulumi.Input[list] valid_user_lists: A list of users in the Active Directory that are allowed to access the file share. Only valid if <code class="docutils literal notranslate"><span class="pre">authentication</span></code> is set to <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the SMB File Share.</p></li>
+<li><p><strong>authentication</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication method that users use to access the file share. Defaults to <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code>, <code class="docutils literal notranslate"><span class="pre">GuestAccess</span></code>.</p></li>
+<li><p><strong>default_storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">S3_STANDARD</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">S3_STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">S3_STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">S3_ONEZONE_IA</span></code>.</p></li>
+<li><p><strong>fileshare_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the SMB File Share.</p></li>
+<li><p><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the file gateway.</p></li>
+<li><p><strong>guess_mime_type_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>invalid_user_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of users in the Active Directory that are not allowed to access the file share. Only valid if <code class="docutils literal notranslate"><span class="pre">authentication</span></code> is set to <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code>.</p></li>
+<li><p><strong>kms_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value if <code class="docutils literal notranslate"><span class="pre">true</span></code> to use Amazon S3 server side encryption with your own AWS KMS key, or <code class="docutils literal notranslate"><span class="pre">false</span></code> to use a key managed by Amazon S3. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when <code class="docutils literal notranslate"><span class="pre">kms_encrypted</span></code> is true.</p></li>
+<li><p><strong>location_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the backed storage used for storing file data.</p></li>
+<li><p><strong>object_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Access Control List permission for S3 bucket objects. Defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
+<li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean to indicate write status of file share. File share does not accept writes if <code class="docutils literal notranslate"><span class="pre">true</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>requester_pays</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want the requester to pay instead of the bucket owner. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.</p></li>
+<li><p><strong>valid_user_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of users in the Active Directory that are allowed to access the file share. Only valid if <code class="docutils literal notranslate"><span class="pre">authentication</span></code> is set to <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown</a>.</p>
 </div></blockquote>
@@ -840,12 +909,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.UploadBuffer.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disk_id=None</em>, <em class="sig-param">gateway_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.UploadBuffer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UploadBuffer resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] disk_id: Local disk identifier. For example, <code class="docutils literal notranslate"><span class="pre">pci-0000:03:00.0-scsi-0:0:0:0</span></code>.
-:param pulumi.Input[str] gateway_arn: The Amazon Resource Name (ARN) of the gateway.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>disk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Local disk identifier. For example, <code class="docutils literal notranslate"><span class="pre">pci-0000:03:00.0-scsi-0:0:0:0</span></code>.</p></li>
+<li><p><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the gateway.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown</a>.</p>
 </div></blockquote>
@@ -925,12 +1000,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.WorkingStorage.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disk_id=None</em>, <em class="sig-param">gateway_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.WorkingStorage.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing WorkingStorage resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] disk_id: Local disk identifier. For example, <code class="docutils literal notranslate"><span class="pre">pci-0000:03:00.0-scsi-0:0:0:0</span></code>.
-:param pulumi.Input[str] gateway_arn: The Amazon Resource Name (ARN) of the gateway.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>disk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Local disk identifier. For example, <code class="docutils literal notranslate"><span class="pre">pci-0000:03:00.0-scsi-0:0:0:0</span></code>.</p></li>
+<li><p><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the gateway.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown</a>.</p>
 </div></blockquote>
@@ -978,6 +1059,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.get_local_disk">
 <code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">get_local_disk</code><span class="sig-paren">(</span><em class="sig-param">disk_node=None</em>, <em class="sig-param">disk_path=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.get_local_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>disk_node</strong> (<em>str</em>) – The device node of the local disk to retrieve. For example, <code class="docutils literal notranslate"><span class="pre">/dev/sdb</span></code>.</p></li>
+<li><p><strong>disk_path</strong> (<em>str</em>) – The device path of the local disk to retrieve. For example, <code class="docutils literal notranslate"><span class="pre">/dev/xvdb</span></code> or <code class="docutils literal notranslate"><span class="pre">/dev/nvme1n1</span></code>.</p></li>
+<li><p><strong>gateway_arn</strong> (<em>str</em>) – The Amazon Resource Name (ARN) of the gateway.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown</a>.</p>
 </div></blockquote>

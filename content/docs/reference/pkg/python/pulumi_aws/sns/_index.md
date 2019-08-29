@@ -135,22 +135,28 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.sns.PlatformApplication.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">event_delivery_failure_topic_arn=None</em>, <em class="sig-param">event_endpoint_created_topic_arn=None</em>, <em class="sig-param">event_endpoint_deleted_topic_arn=None</em>, <em class="sig-param">event_endpoint_updated_topic_arn=None</em>, <em class="sig-param">failure_feedback_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform=None</em>, <em class="sig-param">platform_credential=None</em>, <em class="sig-param">platform_principal=None</em>, <em class="sig-param">success_feedback_role_arn=None</em>, <em class="sig-param">success_feedback_sample_rate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.PlatformApplication.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PlatformApplication resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the SNS platform application
-:param pulumi.Input[str] event_delivery_failure_topic_arn: SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
-:param pulumi.Input[str] event_endpoint_created_topic_arn: SNS Topic triggered when a new platform endpoint is added to your platform application.
-:param pulumi.Input[str] event_endpoint_deleted_topic_arn: SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
-:param pulumi.Input[str] event_endpoint_updated_topic_arn: SNS Topic triggered when an existing platform endpoint is changed from your platform application.
-:param pulumi.Input[str] failure_feedback_role_arn: The IAM role permitted to receive failure feedback for this application.
-:param pulumi.Input[str] name: The friendly name for the SNS platform application
-:param pulumi.Input[str] platform: The platform that the app is registered with. See [Platform][1] for supported platforms.
-:param pulumi.Input[str] platform_credential: Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-:param pulumi.Input[str] platform_principal: Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
-:param pulumi.Input[str] success_feedback_role_arn: The IAM role permitted to receive success feedback for this application.
-:param pulumi.Input[str] success_feedback_sample_rate: The percentage of success to sample (0-100)</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS platform application</p></li>
+<li><p><strong>event_delivery_failure_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.</p></li>
+<li><p><strong>event_endpoint_created_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SNS Topic triggered when a new platform endpoint is added to your platform application.</p></li>
+<li><p><strong>event_endpoint_deleted_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SNS Topic triggered when an existing platform endpoint is deleted from your platform application.</p></li>
+<li><p><strong>event_endpoint_updated_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SNS Topic triggered when an existing platform endpoint is changed from your platform application.</p></li>
+<li><p><strong>failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive failure feedback for this application.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS platform application</p></li>
+<li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The platform that the app is registered with. See [Platform][1] for supported platforms.</p></li>
+<li><p><strong>platform_credential</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p></li>
+<li><p><strong>platform_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.</p></li>
+<li><p><strong>success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this application.</p></li>
+<li><p><strong>success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The percentage of success to sample (0-100)</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_platform_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_platform_application.html.markdown</a>.</p>
 </div></blockquote>
@@ -255,16 +261,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sns.SmsPreferences.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_sender_id=None</em>, <em class="sig-param">default_sms_type=None</em>, <em class="sig-param">delivery_status_iam_role_arn=None</em>, <em class="sig-param">delivery_status_success_sampling_rate=None</em>, <em class="sig-param">monthly_spend_limit=None</em>, <em class="sig-param">usage_report_s3_bucket=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.SmsPreferences.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SmsPreferences resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] default_sender_id: A string, such as your business brand, that is displayed as the sender on the receiving device.
-:param pulumi.Input[str] default_sms_type: The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
-:param pulumi.Input[str] delivery_status_iam_role_arn: The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
-:param pulumi.Input[str] delivery_status_success_sampling_rate: The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
-:param pulumi.Input[str] monthly_spend_limit: The maximum amount in USD that you are willing to spend each month to send SMS messages.
-:param pulumi.Input[str] usage_report_s3_bucket: The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_sender_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string, such as your business brand, that is displayed as the sender on the receiving device.</p></li>
+<li><p><strong>default_sms_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of SMS message that you will send by default. Possible values are: Promotional, Transactional</p></li>
+<li><p><strong>delivery_status_iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.</p></li>
+<li><p><strong>delivery_status_success_sampling_rate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.</p></li>
+<li><p><strong>monthly_spend_limit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum amount in USD that you are willing to spend each month to send SMS messages.</p></li>
+<li><p><strong>usage_report_s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_sms_preferences.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_sms_preferences.html.markdown</a>.</p>
 </div></blockquote>
@@ -467,30 +479,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sns.Topic.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_failure_feedback_role_arn=None</em>, <em class="sig-param">application_success_feedback_role_arn=None</em>, <em class="sig-param">application_success_feedback_sample_rate=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">delivery_policy=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">http_failure_feedback_role_arn=None</em>, <em class="sig-param">http_success_feedback_role_arn=None</em>, <em class="sig-param">http_success_feedback_sample_rate=None</em>, <em class="sig-param">kms_master_key_id=None</em>, <em class="sig-param">lambda_failure_feedback_role_arn=None</em>, <em class="sig-param">lambda_success_feedback_role_arn=None</em>, <em class="sig-param">lambda_success_feedback_sample_rate=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">sqs_failure_feedback_role_arn=None</em>, <em class="sig-param">sqs_success_feedback_role_arn=None</em>, <em class="sig-param">sqs_success_feedback_sample_rate=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.Topic.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Topic resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_failure_feedback_role_arn: IAM role for failure feedback
-:param pulumi.Input[str] application_success_feedback_role_arn: The IAM role permitted to receive success feedback for this topic
-:param pulumi.Input[float] application_success_feedback_sample_rate: Percentage of success to sample
-:param pulumi.Input[str] arn: The ARN of the SNS topic, as a more obvious property (clone of id)
-:param pulumi.Input[str] delivery_policy: The SNS delivery policy. More on <a class="reference external" href="https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html">AWS documentation</a>
-:param pulumi.Input[str] display_name: The display name for the SNS topic
-:param pulumi.Input[str] http_failure_feedback_role_arn: IAM role for failure feedback
-:param pulumi.Input[str] http_success_feedback_role_arn: The IAM role permitted to receive success feedback for this topic
-:param pulumi.Input[float] http_success_feedback_sample_rate: Percentage of success to sample
-:param pulumi.Input[str] kms_master_key_id: The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms">Key Terms</a>
-:param pulumi.Input[str] lambda_failure_feedback_role_arn: IAM role for failure feedback
-:param pulumi.Input[str] lambda_success_feedback_role_arn: The IAM role permitted to receive success feedback for this topic
-:param pulumi.Input[float] lambda_success_feedback_sample_rate: Percentage of success to sample
-:param pulumi.Input[str] name: The friendly name for the SNS topic. By default generated by this provider.
-:param pulumi.Input[str] name_prefix: The friendly name for the SNS topic. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[str] policy: The fully-formed AWS policy as JSON.
-:param pulumi.Input[str] sqs_failure_feedback_role_arn: IAM role for failure feedback
-:param pulumi.Input[str] sqs_success_feedback_role_arn: The IAM role permitted to receive success feedback for this topic
-:param pulumi.Input[float] sqs_success_feedback_sample_rate: Percentage of success to sample
-:param pulumi.Input[dict] tags: Key-value mapping of resource tags</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role for failure feedback</p></li>
+<li><p><strong>application_success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this topic</p></li>
+<li><p><strong>application_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic, as a more obvious property (clone of id)</p></li>
+<li><p><strong>delivery_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The SNS delivery policy. More on <a class="reference external" href="https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html">AWS documentation</a></p>
+</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the SNS topic</p></li>
+<li><p><strong>http_failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role for failure feedback</p></li>
+<li><p><strong>http_success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this topic</p></li>
+<li><p><strong>http_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</p></li>
+<li><p><strong>kms_master_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms">Key Terms</a></p>
+</p></li>
+<li><p><strong>lambda_failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role for failure feedback</p></li>
+<li><p><strong>lambda_success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this topic</p></li>
+<li><p><strong>lambda_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS topic. By default generated by this provider.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS topic. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-formed AWS policy as JSON.</p></li>
+<li><p><strong>sqs_failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role for failure feedback</p></li>
+<li><p><strong>sqs_success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this topic</p></li>
+<li><p><strong>sqs_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown</a>.</p>
 </div></blockquote>
@@ -570,12 +590,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sns.TopicPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.TopicPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TopicPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the SNS topic
-:param pulumi.Input[str] policy: The fully-formed AWS policy as JSON.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-formed AWS policy as JSON.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -712,19 +738,28 @@ probably be SQS queues.</p>
 <dt id="pulumi_aws.sns.TopicSubscription.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">confirmation_timeout_in_minutes=None</em>, <em class="sig-param">delivery_policy=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">endpoint_auto_confirms=None</em>, <em class="sig-param">filter_policy=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">raw_message_delivery=None</em>, <em class="sig-param">topic=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.TopicSubscription.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TopicSubscription resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the subscription stored as a more user-friendly property
-:param pulumi.Input[float] confirmation_timeout_in_minutes: Integer indicating number of minutes to wait in retying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols (default is 1 minute).
-:param pulumi.Input[str] delivery_policy: JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html">SNS docs</a> for more details.
-:param pulumi.Input[str] endpoint: The endpoint to send data to, the contents will vary with the protocol. (see below for more information)
-:param pulumi.Input[bool] endpoint_auto_confirms: Boolean indicating whether the end point is capable of <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare">auto confirming subscription</a> e.g., PagerDuty (default is false)
-:param pulumi.Input[str] filter_policy: JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html">SNS docs</a> for more details.
-:param pulumi.Input[str] protocol: The protocol to use. The possible values for this are: <code class="docutils literal notranslate"><span class="pre">sqs</span></code>, <code class="docutils literal notranslate"><span class="pre">sms</span></code>, <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, <code class="docutils literal notranslate"><span class="pre">application</span></code>. (<code class="docutils literal notranslate"><span class="pre">http</span></code> or <code class="docutils literal notranslate"><span class="pre">https</span></code> are partially supported, see below) (<code class="docutils literal notranslate"><span class="pre">email</span></code> is option but unsupported, see below).
-:param pulumi.Input[bool] raw_message_delivery: Boolean indicating whether or not to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property) (default is false).
-:param pulumi.Input[str] topic: The ARN of the SNS topic to subscribe to</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the subscription stored as a more user-friendly property</p></li>
+<li><p><strong>confirmation_timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Integer indicating number of minutes to wait in retying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols (default is 1 minute).</p></li>
+<li><p><strong>delivery_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html">SNS docs</a> for more details.</p>
+</p></li>
+<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint to send data to, the contents will vary with the protocol. (see below for more information)</p></li>
+<li><p><strong>endpoint_auto_confirms</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Boolean indicating whether the end point is capable of <a class="reference external" href="http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare">auto confirming subscription</a> e.g., PagerDuty (default is false)</p>
+</p></li>
+<li><p><strong>filter_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the <a class="reference external" href="https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html">SNS docs</a> for more details.</p>
+</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol to use. The possible values for this are: <code class="docutils literal notranslate"><span class="pre">sqs</span></code>, <code class="docutils literal notranslate"><span class="pre">sms</span></code>, <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, <code class="docutils literal notranslate"><span class="pre">application</span></code>. (<code class="docutils literal notranslate"><span class="pre">http</span></code> or <code class="docutils literal notranslate"><span class="pre">https</span></code> are partially supported, see below) (<code class="docutils literal notranslate"><span class="pre">email</span></code> is option but unsupported, see below).</p></li>
+<li><p><strong>raw_message_delivery</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean indicating whether or not to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property) (default is false).</p></li>
+<li><p><strong>topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic to subscribe to</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown</a>.</p>
 </div></blockquote>
@@ -774,6 +809,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a topic in AWS Simple Notification
 Service (SNS). By using this data source, you can reference SNS topics
 without having to hard code the ARNs as input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly name of the topic to match.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sns_topic.html.markdown</a>.</p>
 </div></blockquote>

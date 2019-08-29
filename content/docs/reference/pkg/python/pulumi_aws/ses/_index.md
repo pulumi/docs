@@ -36,11 +36,17 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ses.ActiveReceiptRuleSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">rule_set_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ActiveReceiptRuleSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ActiveReceiptRuleSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] rule_set_name: The name of the rule set</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>rule_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the rule set</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_active_receipt_rule_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_active_receipt_rule_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -100,10 +106,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ConfgurationSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ConfgurationSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ConfgurationSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -170,11 +182,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ConfigurationSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ConfigurationSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ConfigurationSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the configuration set</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the configuration set</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_configuration_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_configuration_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -256,21 +274,22 @@ in the <a class="reference external" href="http://docs.aws.amazon.com/ses/latest
 <dt id="pulumi_aws.ses.DomainDkim.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dkim_tokens=None</em>, <em class="sig-param">domain=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.DomainDkim.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DomainDkim resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] dkim_tokens: DKIM tokens generated by SES.</p>
-<blockquote>
-<div><p>These tokens should be used to create CNAME records used to verify SES Easy DKIM.
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dkim_tokens</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>DKIM tokens generated by SES.
+These tokens should be used to create CNAME records used to verify SES Easy DKIM.
 See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.
 Find out more about verifying domains in Amazon SES
 in the <a class="reference external" href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html">AWS SES docs</a>.</p>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Verified domain name to generate DKIM tokens for.</p>
+</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Verified domain name to generate DKIM tokens for.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -360,21 +379,26 @@ docs</a>.</p>
 <dt id="pulumi_aws.ses.DomainIdentity.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">verification_token=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.DomainIdentity.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DomainIdentity resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the domain identity.
-:param pulumi.Input[str] domain: The domain name to assign to SES
-:param pulumi.Input[str] verification_token: A code which when added to the domain as a TXT record</p>
-<blockquote>
-<div><p>will signal to SES that the owner of the domain has authorised SES to act on
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the domain identity.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain name to assign to SES</p></li>
+<li><p><strong>verification_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A code which when added to the domain as a TXT record
+will signal to SES that the owner of the domain has authorised SES to act on
 their behalf. The domain identity will be in state “verification pending”
 until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the <a class="reference external" href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html">AWS SES
 docs</a>.</p>
-</div></blockquote>
+</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_domain_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_domain_identity.html.markdown</a>.</p>
 </div></blockquote>
@@ -456,12 +480,18 @@ deploy the required DNS verification records, and wait for verification to compl
 <dt id="pulumi_aws.ses.DomainIdentityVerification.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">domain=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.DomainIdentityVerification.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DomainIdentityVerification resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the domain identity.
-:param pulumi.Input[str] domain: The domain name of the SES domain identity to verify.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the domain identity.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain name of the SES domain identity to verify.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_domain_identity_verification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_domain_identity_verification.html.markdown</a>.</p>
 </div></blockquote>
@@ -537,12 +567,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.EmailIdentity.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">email=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.EmailIdentity.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EmailIdentity resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the email identity.
-:param pulumi.Input[str] email: The email address to assign to SES</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the email identity.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address to assign to SES</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_email_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_email_identity.html.markdown</a>.</p>
 </div></blockquote>
@@ -605,6 +641,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>cloudwatch_destinations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for the event</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for the dimension</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source for the value. It can be either <code class="docutils literal notranslate"><span class="pre">&quot;messageTag&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;emailHeader&quot;</span></code></p></li>
+</ul>
+<p>The <strong>kinesis_destination</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the role that has permissions to access the Kinesis Stream</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stream_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Stream</p></li>
+</ul>
+<p>The <strong>sns_destination</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the SNS topic</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_event_destination.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_event_destination.html.markdown</a>.</p>
 </div></blockquote>
@@ -612,6 +663,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.EventDestination.cloudwatch_destinations">
 <code class="sig-name descname">cloudwatch_destinations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.EventDestination.cloudwatch_destinations" title="Permalink to this definition">¶</a></dt>
 <dd><p>CloudWatch destination for the events</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default value for the event</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name for the dimension</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueSource</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The source for the value. It can be either <code class="docutils literal notranslate"><span class="pre">&quot;messageTag&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;emailHeader&quot;</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -630,6 +686,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.EventDestination.kinesis_destination">
 <code class="sig-name descname">kinesis_destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.EventDestination.kinesis_destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send the events to a kinesis firehose destination</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the role that has permissions to access the Kinesis Stream</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stream_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Stream</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -648,23 +708,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.EventDestination.sns_destination">
 <code class="sig-name descname">sns_destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.EventDestination.sns_destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send the events to an SNS Topic destination</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the SNS topic</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.ses.EventDestination.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloudwatch_destinations=None</em>, <em class="sig-param">configuration_set_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">kinesis_destination=None</em>, <em class="sig-param">matching_types=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sns_destination=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.EventDestination.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventDestination resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] cloudwatch_destinations: CloudWatch destination for the events
-:param pulumi.Input[str] configuration_set_name: The name of the configuration set
-:param pulumi.Input[bool] enabled: If true, the event destination will be enabled
-:param pulumi.Input[dict] kinesis_destination: Send the events to a kinesis firehose destination
-:param pulumi.Input[list] matching_types: A list of matching types. May be any of <code class="docutils literal notranslate"><span class="pre">&quot;send&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;reject&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;bounce&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;complaint&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;delivery&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;open&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;click&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;renderingFailure&quot;</span></code>.
-:param pulumi.Input[str] name: The name of the event destination
-:param pulumi.Input[dict] sns_destination: Send the events to an SNS Topic destination</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloudwatch_destinations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – CloudWatch destination for the events</p></li>
+<li><p><strong>configuration_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the configuration set</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the event destination will be enabled</p></li>
+<li><p><strong>kinesis_destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Send the events to a kinesis firehose destination</p></li>
+<li><p><strong>matching_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of matching types. May be any of <code class="docutils literal notranslate"><span class="pre">&quot;send&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;reject&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;bounce&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;complaint&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;delivery&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;open&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;click&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;renderingFailure&quot;</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the event destination</p></li>
+<li><p><strong>sns_destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Send the events to an SNS Topic destination</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>cloudwatch_destinations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for the event</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for the dimension</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">valueSource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The source for the value. It can be either <code class="docutils literal notranslate"><span class="pre">&quot;messageTag&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;emailHeader&quot;</span></code></p></li>
+</ul>
+<p>The <strong>kinesis_destination</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the role that has permissions to access the Kinesis Stream</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stream_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Stream</p></li>
+</ul>
+<p>The <strong>sns_destination</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the SNS topic</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_event_destination.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_event_destination.html.markdown</a>.</p>
 </div></blockquote>
@@ -755,14 +839,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.IdentityNotificationTopic.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">include_original_headers=None</em>, <em class="sig-param">notification_type=None</em>, <em class="sig-param">topic_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityNotificationTopic.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IdentityNotificationTopic resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] identity: The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
-:param pulumi.Input[bool] include_original_headers: Whether SES should include original email headers in SNS notifications of this type. <em>false</em> by default.
-:param pulumi.Input[str] notification_type: The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: <em>Bounce</em>, <em>Complaint</em> or <em>Delivery</em>.
-:param pulumi.Input[str] topic_arn: The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to “” (an empty string) to disable publishing.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).</p></li>
+<li><p><strong>include_original_headers</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether SES should include original email headers in SNS notifications of this type. <em>false</em> by default.</p></li>
+<li><p><strong>notification_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: <em>Bounce</em>, <em>Complaint</em> or <em>Delivery</em>.</p></li>
+<li><p><strong>topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to “” (an empty string) to disable publishing.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_identity_notification_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_identity_notification_topic.html.markdown</a>.</p>
 </div></blockquote>
@@ -846,13 +936,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.IdentityPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.IdentityPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IdentityPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] identity: Name or Amazon Resource Name (ARN) of the SES Identity.
-:param pulumi.Input[str] name: Name of the policy.
-:param pulumi.Input[str] policy: JSON string of the policy.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or Amazon Resource Name (ARN) of the SES Identity.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the policy.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string of the policy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_identity_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_identity_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -939,13 +1035,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.MailFrom.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">behavior_on_mx_failure=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">mail_from_domain=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.MailFrom.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MailFrom resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] behavior_on_mx_failure: The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to <code class="docutils literal notranslate"><span class="pre">UseDefaultValue</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/APIReference/API_SetIdentityMailFromDomain.html">SES API documentation</a> for more information.
-:param pulumi.Input[str] domain: Verified domain name to generate DKIM tokens for.
-:param pulumi.Input[str] mail_from_domain: Subdomain (of above domain) which is to be used as MAIL FROM address (Required for DMARC validation)</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>behavior_on_mx_failure</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to <code class="docutils literal notranslate"><span class="pre">UseDefaultValue</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/APIReference/API_SetIdentityMailFromDomain.html">SES API documentation</a> for more information.</p>
+</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Verified domain name to generate DKIM tokens for.</p></li>
+<li><p><strong>mail_from_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subdomain (of above domain) which is to be used as MAIL FROM address (Required for DMARC validation)</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_domain_mail_from.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_domain_mail_from.html.markdown</a>.</p>
 </div></blockquote>
@@ -1029,13 +1132,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptFilter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ReceiptFilter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReceiptFilter resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cidr: The IP address or address range to filter, in CIDR notation
-:param pulumi.Input[str] name: The name of the filter
-:param pulumi.Input[str] policy: Block or Allow</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address or address range to filter, in CIDR notation</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the filter</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Block or Allow</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_receipt_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_receipt_filter.html.markdown</a>.</p>
 </div></blockquote>
@@ -1105,6 +1214,53 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>add_header_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+</ul>
+<p>The <strong>bounce_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The message to send</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sender</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of the sender</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smtpReplyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RFC 5321 SMTP reply code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RFC 3463 SMTP enhanced status code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>lambda_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">function_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Lambda function to invoke</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invocationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Event or RequestResponse</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>s3_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the S3 bucket</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the KMS key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">objectKeyPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key prefix of the S3 bucket</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>sns_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>stop_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope to apply</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>workmail_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the WorkMail organization</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_receipt_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_receipt_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -1112,6 +1268,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRule.add_header_actions">
 <code class="sig-name descname">add_header_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule.add_header_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Add Header Action blocks. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the header to add</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the header to add</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The position of the action in the receipt rule</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1124,6 +1285,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRule.bounce_actions">
 <code class="sig-name descname">bounce_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule.bounce_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Bounce Action blocks. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The message to send</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sender</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address of the sender</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smtpReplyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RFC 5321 SMTP reply code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_code</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RFC 3463 SMTP enhanced status code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1136,6 +1305,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRule.lambda_actions">
 <code class="sig-name descname">lambda_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule.lambda_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Lambda Action blocks. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">function_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Lambda function to invoke</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invocationType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Event or RequestResponse</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1160,6 +1335,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRule.s3_actions">
 <code class="sig-name descname">s3_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule.s3_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of S3 Action blocks. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the S3 bucket</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the KMS key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">objectKeyPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The key prefix of the S3 bucket</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1172,12 +1354,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRule.sns_actions">
 <code class="sig-name descname">sns_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule.sns_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of SNS Action blocks. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ses.ReceiptRule.stop_actions">
 <code class="sig-name descname">stop_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule.stop_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Stop Action blocks. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The scope to apply</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1190,30 +1381,88 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRule.workmail_actions">
 <code class="sig-name descname">workmail_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule.workmail_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of WorkMail Action blocks. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the WorkMail organization</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.ses.ReceiptRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_header_actions=None</em>, <em class="sig-param">after=None</em>, <em class="sig-param">bounce_actions=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">lambda_actions=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">rule_set_name=None</em>, <em class="sig-param">s3_actions=None</em>, <em class="sig-param">scan_enabled=None</em>, <em class="sig-param">sns_actions=None</em>, <em class="sig-param">stop_actions=None</em>, <em class="sig-param">tls_policy=None</em>, <em class="sig-param">workmail_actions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ReceiptRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReceiptRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] add_header_actions: A list of Add Header Action blocks. Documented below.
-:param pulumi.Input[str] after: The name of the rule to place this rule after
-:param pulumi.Input[list] bounce_actions: A list of Bounce Action blocks. Documented below.
-:param pulumi.Input[bool] enabled: If true, the rule will be enabled
-:param pulumi.Input[list] lambda_actions: A list of Lambda Action blocks. Documented below.
-:param pulumi.Input[str] name: The name of the rule
-:param pulumi.Input[list] recipients: A list of email addresses
-:param pulumi.Input[str] rule_set_name: The name of the rule set
-:param pulumi.Input[list] s3_actions: A list of S3 Action blocks. Documented below.
-:param pulumi.Input[bool] scan_enabled: If true, incoming emails will be scanned for spam and viruses
-:param pulumi.Input[list] sns_actions: A list of SNS Action blocks. Documented below.
-:param pulumi.Input[list] stop_actions: A list of Stop Action blocks. Documented below.
-:param pulumi.Input[str] tls_policy: Require or Optional
-:param pulumi.Input[list] workmail_actions: A list of WorkMail Action blocks. Documented below.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>add_header_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Add Header Action blocks. Documented below.</p></li>
+<li><p><strong>after</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the rule to place this rule after</p></li>
+<li><p><strong>bounce_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Bounce Action blocks. Documented below.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the rule will be enabled</p></li>
+<li><p><strong>lambda_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Lambda Action blocks. Documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the rule</p></li>
+<li><p><strong>recipients</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of email addresses</p></li>
+<li><p><strong>rule_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the rule set</p></li>
+<li><p><strong>s3_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of S3 Action blocks. Documented below.</p></li>
+<li><p><strong>scan_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, incoming emails will be scanned for spam and viruses</p></li>
+<li><p><strong>sns_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of SNS Action blocks. Documented below.</p></li>
+<li><p><strong>stop_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Stop Action blocks. Documented below.</p></li>
+<li><p><strong>tls_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Require or Optional</p></li>
+<li><p><strong>workmail_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of WorkMail Action blocks. Documented below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>add_header_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header to add</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the header to add</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+</ul>
+<p>The <strong>bounce_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The message to send</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sender</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of the sender</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smtpReplyCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RFC 5321 SMTP reply code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_code</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RFC 3463 SMTP enhanced status code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>lambda_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">function_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Lambda function to invoke</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invocationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Event or RequestResponse</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>s3_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the S3 bucket</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the KMS key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">objectKeyPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key prefix of the S3 bucket</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>sns_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>stop_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope to apply</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
+<p>The <strong>workmail_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the WorkMail organization</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The position of the action in the receipt rule</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topic_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SNS topic to notify</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_receipt_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_receipt_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -1283,11 +1532,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.ReceiptRuleSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">rule_set_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.ReceiptRuleSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReceiptRuleSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] rule_set_name: The name of the rule set</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>rule_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the rule set</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_receipt_rule_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_receipt_rule_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -1378,14 +1633,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ses.Template.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">html=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">subject=None</em>, <em class="sig-param">text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ses.Template.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Template resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] html: The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
-:param pulumi.Input[str] name: The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
-:param pulumi.Input[str] subject: The subject line of the email.
-:param pulumi.Input[str] text: The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>html</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.</p></li>
+<li><p><strong>subject</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subject line of the email.</p></li>
+<li><p><strong>text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_template.html.markdown</a>.</p>
 </div></blockquote>

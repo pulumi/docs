@@ -80,15 +80,15 @@ Create a storage.v1beta1.CSIDriver resource with the given unique name, argument
 {{% md %}}
 
 Get the state of an existing `CSIDriver` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriver-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriver.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -127,12 +127,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriver-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriver.ts#L19" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -157,16 +157,16 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriver-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriver.ts#L43" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriver.ts#L44" >}}">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -174,16 +174,17 @@ Standard object metadata. metadata.Name indicates the name of the CSI driver tha
 object refers to; it MUST be the same name returned by the CSI GetPluginName() call for
 that driver. The driver name must be 63 characters or less, beginning and ending with an
 alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between.
-More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+More info:
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriver-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriver.ts#L48" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriver.ts#L49" >}}">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CSIDriverSpec'>outputs.storage.v1beta1.CSIDriverSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CSIDriverSpec'>CSIDriverSpec</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -192,7 +193,7 @@ Specification of the CSI Driver.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriver-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriver.ts#L19" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -219,7 +220,7 @@ CSIDriverList is a collection of CSIDriver objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSIDriverList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -238,7 +239,7 @@ Create a storage.v1beta1.CSIDriverList resource with the given unique name, argu
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -249,15 +250,15 @@ Create a storage.v1beta1.CSIDriverList resource with the given unique name, argu
 {{% md %}}
 
 Get the state of an existing `CSIDriverList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverList-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L13" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -269,7 +270,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -296,12 +297,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverList-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L13" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -319,7 +320,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CSIDriver'>outputs.storage.v1beta1.CSIDriver</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CSIDriver'>CSIDriver</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -339,7 +340,7 @@ items is the list of CSIDriver
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -348,17 +349,17 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
 Standard list metadata More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSIDriverList-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSIDriverList.ts#L13" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -391,7 +392,7 @@ points to the corresponding node object.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSINode-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L75" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L74" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -410,7 +411,7 @@ Create a storage.v1beta1.CSINode resource with the given unique name, arguments,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINode-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L58" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -421,15 +422,15 @@ Create a storage.v1beta1.CSINode resource with the given unique name, arguments,
 {{% md %}}
 
 Get the state of an existing `CSINode` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINode-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L19" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -441,7 +442,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINode-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L69" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L68" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -468,12 +469,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINode-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L19" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -498,7 +499,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -507,7 +508,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -520,7 +521,7 @@ metadata.name must be the Kubernetes node name.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CSINodeSpec'>outputs.storage.v1beta1.CSINodeSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CSINodeSpec'>CSINodeSpec</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -529,7 +530,7 @@ spec is the specification of CSINode
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINode-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINode.ts#L19" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -556,7 +557,7 @@ CSINodeList is a collection of CSINode objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CSINodeList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -575,7 +576,7 @@ Create a storage.v1beta1.CSINodeList resource with the given unique name, argume
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -586,15 +587,15 @@ Create a storage.v1beta1.CSINodeList resource with the given unique name, argume
 {{% md %}}
 
 Get the state of an existing `CSINodeList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeList-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L13" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -606,7 +607,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -633,12 +634,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeList-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L13" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -656,7 +657,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CSINode'>outputs.storage.v1beta1.CSINode</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CSINode'>CSINode</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -676,7 +677,7 @@ items is the list of CSINode
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -685,17 +686,17 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
 Standard list metadata More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CSINodeList-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/CSINodeList.ts#L13" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -726,7 +727,7 @@ ObjectMeta.Name.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClass-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L113" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L112" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -745,7 +746,7 @@ Create a storage.v1beta1.StorageClass resource with the given unique name, argum
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L96" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L95" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -756,15 +757,15 @@ Create a storage.v1beta1.StorageClass resource with the given unique name, argum
 {{% md %}}
 
 Get the state of an existing `StorageClass` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L17" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -776,7 +777,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L107" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L106" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -809,7 +810,7 @@ AllowVolumeExpansion shows whether the storage class allow volume expand
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>allowedTopologies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TopologySelectorTerm'>outputs.core.v1.TopologySelectorTerm</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>allowedTopologies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TopologySelectorTerm'>TopologySelectorTerm</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -832,12 +833,12 @@ enable the VolumeScheduling feature.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L17" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -862,7 +863,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -871,12 +872,12 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
 Standard object's metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
@@ -937,7 +938,7 @@ reclaimPolicy. Defaults to Delete.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClass-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClass.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -979,7 +980,7 @@ StorageClassList is a collection of storage classes.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StorageClassList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -998,7 +999,7 @@ Create a storage.v1beta1.StorageClassList resource with the given unique name, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1009,15 +1010,15 @@ Create a storage.v1beta1.StorageClassList resource with the given unique name, a
 {{% md %}}
 
 Get the state of an existing `StorageClassList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L13" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1029,7 +1030,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1056,12 +1057,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L13" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -1079,7 +1080,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#StorageClass'>outputs.storage.v1beta1.StorageClass</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#StorageClass'>StorageClass</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1099,7 +1100,7 @@ Items is the list of StorageClasses
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -1108,17 +1109,17 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
 Standard list metadata More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StorageClassList-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/StorageClassList.ts#L13" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -1148,7 +1149,7 @@ VolumeAttachment objects are non-namespaced.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L80" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L79" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1167,7 +1168,7 @@ Create a storage.v1beta1.VolumeAttachment resource with the given unique name, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L63" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L62" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1178,15 +1179,15 @@ Create a storage.v1beta1.VolumeAttachment resource with the given unique name, a
 {{% md %}}
 
 Get the state of an existing `VolumeAttachment` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L16" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1198,7 +1199,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L74" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L73" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1225,12 +1226,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L16" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -1255,7 +1256,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -1264,12 +1265,12 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
 Standard object metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
@@ -1278,7 +1279,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachmentSpec'>outputs.storage.v1beta1.VolumeAttachmentSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VolumeAttachmentSpec'>VolumeAttachmentSpec</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1292,7 +1293,7 @@ system.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachmentStatus'>outputs.storage.v1beta1.VolumeAttachmentStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VolumeAttachmentStatus'>VolumeAttachmentStatus</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1302,7 +1303,7 @@ detach operation, i.e. the external-attacher.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachment.ts#L16" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -1329,7 +1330,7 @@ VolumeAttachmentList is a collection of VolumeAttachment objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L69" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1348,7 +1349,7 @@ Create a storage.v1beta1.VolumeAttachmentList resource with the given unique nam
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1359,15 +1360,15 @@ Create a storage.v1beta1.VolumeAttachmentList resource with the given unique nam
 {{% md %}}
 
 Get the state of an existing `VolumeAttachmentList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L13" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1379,7 +1380,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1406,12 +1407,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L13" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -1429,7 +1430,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeAttachment'>outputs.storage.v1beta1.VolumeAttachment</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#VolumeAttachment'>VolumeAttachment</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1449,7 +1450,7 @@ Items is the list of VolumeAttachments
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -1458,17 +1459,17 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
 Standard list metadata More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentList-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="storage/v1beta1/VolumeAttachmentList.ts#L13" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}

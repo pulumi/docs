@@ -61,14 +61,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.pinpoint.AdmChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.AdmChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AdmChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[str] client_id: Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
-:param pulumi.Input[str] client_secret: Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
-:param pulumi.Input[bool] enabled: Specifies whether to enable the channel. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.</p></li>
+<li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to enable the channel. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_adm_channel.html.markdown</a>.</p>
 </div></blockquote>
@@ -204,22 +210,20 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 <dt id="pulumi_aws.pinpoint.ApnsChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">bundle_id=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">default_authentication_method=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">token_key=None</em>, <em class="sig-param">token_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.ApnsChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApnsChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[str] bundle_id: The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.
-:param pulumi.Input[str] certificate: The pem encoded TLS Certificate from Apple.
-:param pulumi.Input[str] default_authentication_method: The default authentication method used for APNs.</p>
-<blockquote>
-<div><p><strong>NOTE</strong>: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
-You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
-If your default authentication type fails, Amazon Pinpoint doesn’t attempt to use the other authentication type.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.</p></li>
+<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The pem encoded TLS Certificate from Apple.</p></li>
+<li><p><strong>default_authentication_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default authentication method used for APNs. 
+<strong>NOTE</strong>: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
+You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
+If your default authentication type fails, Amazon Pinpoint doesn’t attempt to use the other authentication type.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Certificate Private Key file (ie. <code class="docutils literal notranslate"><span class="pre">.key</span></code> file).</p></li>
 <li><p><strong>team_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID assigned to your Apple developer account team. This value is provided on the Membership page.</p></li>
@@ -363,22 +367,20 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 <dt id="pulumi_aws.pinpoint.ApnsSandboxChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">bundle_id=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">default_authentication_method=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">token_key=None</em>, <em class="sig-param">token_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.ApnsSandboxChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApnsSandboxChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[str] bundle_id: The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.
-:param pulumi.Input[str] certificate: The pem encoded TLS Certificate from Apple.
-:param pulumi.Input[str] default_authentication_method: The default authentication method used for APNs Sandbox.</p>
-<blockquote>
-<div><p><strong>NOTE</strong>: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
-You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
-If your default authentication type fails, Amazon Pinpoint doesn’t attempt to use the other authentication type.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.</p></li>
+<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The pem encoded TLS Certificate from Apple.</p></li>
+<li><p><strong>default_authentication_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default authentication method used for APNs Sandbox. 
+<strong>NOTE</strong>: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
+You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
+If your default authentication type fails, Amazon Pinpoint doesn’t attempt to use the other authentication type.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Certificate Private Key file (ie. <code class="docutils literal notranslate"><span class="pre">.key</span></code> file).</p></li>
 <li><p><strong>team_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID assigned to your Apple developer account team. This value is provided on the Membership page.</p></li>
@@ -522,22 +524,20 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 <dt id="pulumi_aws.pinpoint.ApnsVoipChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">bundle_id=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">default_authentication_method=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">token_key=None</em>, <em class="sig-param">token_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.ApnsVoipChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApnsVoipChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[str] bundle_id: The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.
-:param pulumi.Input[str] certificate: The pem encoded TLS Certificate from Apple.
-:param pulumi.Input[str] default_authentication_method: The default authentication method used for APNs.</p>
-<blockquote>
-<div><p><strong>NOTE</strong>: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
-You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
-If your default authentication type fails, Amazon Pinpoint doesn’t attempt to use the other authentication type.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.</p></li>
+<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The pem encoded TLS Certificate from Apple.</p></li>
+<li><p><strong>default_authentication_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default authentication method used for APNs. 
+<strong>NOTE</strong>: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
+You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
+If your default authentication type fails, Amazon Pinpoint doesn’t attempt to use the other authentication type.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Certificate Private Key file (ie. <code class="docutils literal notranslate"><span class="pre">.key</span></code> file).</p></li>
 <li><p><strong>team_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID assigned to your Apple developer account team. This value is provided on the Membership page.</p></li>
@@ -681,22 +681,20 @@ If your default authentication type fails, Amazon Pinpoint doesn’t attempt to 
 <dt id="pulumi_aws.pinpoint.ApnsVoipSandboxChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">bundle_id=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">default_authentication_method=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">team_id=None</em>, <em class="sig-param">token_key=None</em>, <em class="sig-param">token_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.ApnsVoipSandboxChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApnsVoipSandboxChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[str] bundle_id: The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.
-:param pulumi.Input[str] certificate: The pem encoded TLS Certificate from Apple.
-:param pulumi.Input[str] default_authentication_method: The default authentication method used for APNs.</p>
-<blockquote>
-<div><p><strong>NOTE</strong>: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
-You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
-If your default authentication type fails, Amazon Pinpoint doesn’t attempt to use the other authentication type.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID assigned to your iOS app. To find this value, choose Certificates, IDs &amp; Profiles, choose App IDs in the Identifiers section, and choose your app.</p></li>
+<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The pem encoded TLS Certificate from Apple.</p></li>
+<li><p><strong>default_authentication_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default authentication method used for APNs. 
+<strong>NOTE</strong>: Amazon Pinpoint uses this default for every APNs push notification that you send using the console.
+You can override the default when you send a message programmatically using the Amazon Pinpoint API, the AWS CLI, or an AWS SDK.
+If your default authentication type fails, Amazon Pinpoint doesn’t attempt to use the other authentication type.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Certificate Private Key file (ie. <code class="docutils literal notranslate"><span class="pre">.key</span></code> file).</p></li>
 <li><p><strong>team_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID assigned to your Apple developer account team. This value is provided on the Membership page.</p></li>
@@ -766,6 +764,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>campaign_hook</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Lambda function name or ARN to be called for delivery. Conflicts with <code class="docutils literal notranslate"><span class="pre">web_url</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - What mode Lambda should be invoked in. Valid values for this parameter are <code class="docutils literal notranslate"><span class="pre">DELIVERY</span></code>, <code class="docutils literal notranslate"><span class="pre">FILTER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with <code class="docutils literal notranslate"><span class="pre">lambda_function_name</span></code></p></li>
+</ul>
+<p>The <strong>limits</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">daily</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of messages that the campaign can send daily.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The length of time (in seconds) that the campaign can run before it ends and message deliveries stop. This duration begins at the scheduled start time for the campaign. The minimum value is 60.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messages_per_second</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of messages that the campaign can send per second. The minimum value is 50, and the maximum is 20000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">total</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum total number of messages that the campaign can send.</p></li>
+</ul>
+<p>The <strong>quiet_time</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default end time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">start</span></code> is set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default start time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">end</span></code> is set</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown</a>.</p>
 </div></blockquote>
@@ -785,12 +801,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.App.campaign_hook">
 <code class="sig-name descname">campaign_hook</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.App.campaign_hook" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Lambda function name or ARN to be called for delivery. Conflicts with <code class="docutils literal notranslate"><span class="pre">web_url</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - What mode Lambda should be invoked in. Valid values for this parameter are <code class="docutils literal notranslate"><span class="pre">DELIVERY</span></code>, <code class="docutils literal notranslate"><span class="pre">FILTER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with <code class="docutils literal notranslate"><span class="pre">lambda_function_name</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.pinpoint.App.limits">
 <code class="sig-name descname">limits</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.App.limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">daily</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of messages that the campaign can send daily.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The length of time (in seconds) that the campaign can run before it ends and message deliveries stop. This duration begins at the scheduled start time for the campaign. The minimum value is 60.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messages_per_second</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of messages that the campaign can send per second. The minimum value is 50, and the maximum is 20000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">total</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum total number of messages that the campaign can send.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -809,6 +836,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.App.quiet_time">
 <code class="sig-name descname">quiet_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.pinpoint.App.quiet_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default end time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">start</span></code> is set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default start time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">end</span></code> is set</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -821,18 +852,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.App.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">campaign_hook=None</em>, <em class="sig-param">limits=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">quiet_time=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.App.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing App resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The Application ID of the Pinpoint App.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the PinPoint Application
-:param pulumi.Input[dict] campaign_hook: The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-:param pulumi.Input[dict] limits: The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-:param pulumi.Input[str] name: The application name. By default generated by this provider
-:param pulumi.Input[str] name_prefix: The name of the Pinpoint application. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>
-:param pulumi.Input[dict] quiet_time: The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
-:param pulumi.Input[dict] tags: Key-value mapping of resource tags</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Application ID of the Pinpoint App.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the PinPoint Application</p></li>
+<li><p><strong>campaign_hook</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own</p></li>
+<li><p><strong>limits</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application name. By default generated by this provider</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Pinpoint application. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code></p></li>
+<li><p><strong>quiet_time</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>campaign_hook</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaFunctionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Lambda function name or ARN to be called for delivery. Conflicts with <code class="docutils literal notranslate"><span class="pre">web_url</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - What mode Lambda should be invoked in. Valid values for this parameter are <code class="docutils literal notranslate"><span class="pre">DELIVERY</span></code>, <code class="docutils literal notranslate"><span class="pre">FILTER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with <code class="docutils literal notranslate"><span class="pre">lambda_function_name</span></code></p></li>
+</ul>
+<p>The <strong>limits</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">daily</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of messages that the campaign can send daily.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximumDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The length of time (in seconds) that the campaign can run before it ends and message deliveries stop. This duration begins at the scheduled start time for the campaign. The minimum value is 60.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messages_per_second</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of messages that the campaign can send per second. The minimum value is 50, and the maximum is 20000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">total</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum total number of messages that the campaign can send.</p></li>
+</ul>
+<p>The <strong>quiet_time</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default end time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">start</span></code> is set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default start time for quiet time in ISO 8601 format. Required if <code class="docutils literal notranslate"><span class="pre">end</span></code> is set</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_app.html.markdown</a>.</p>
 </div></blockquote>
@@ -927,14 +982,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.BaiduChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">secret_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.BaiduChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BaiduChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_key: Platform credential API key from Baidu.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[bool] enabled: Specifies whether to enable the channel. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] secret_key: Platform credential Secret key from Baidu.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Platform credential API key from Baidu.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to enable the channel. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Platform credential Secret key from Baidu.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_baidu_channel.html.markdown</a>.</p>
 </div></blockquote>
@@ -1038,16 +1099,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.EmailChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">from_address=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">messages_per_second=None</em>, <em class="sig-param">role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.EmailChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EmailChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[bool] enabled: Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] from_address: The email address used to send emails from.
-:param pulumi.Input[str] identity: The ARN of an identity verified with SES.
-:param pulumi.Input[float] messages_per_second: Messages per second that can be sent.
-:param pulumi.Input[str] role_arn: The ARN of an IAM Role used to submit events to Mobile Analytics’ event ingestion service.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>from_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address used to send emails from.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an identity verified with SES.</p></li>
+<li><p><strong>messages_per_second</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Messages per second that can be sent.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM Role used to submit events to Mobile Analytics’ event ingestion service.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_email_channel.html.markdown</a>.</p>
 </div></blockquote>
@@ -1131,13 +1198,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.EventStream.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">destination_stream_arn=None</em>, <em class="sig-param">role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.EventStream.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventStream resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[str] destination_stream_arn: The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
-:param pulumi.Input[str] role_arn: The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>destination_stream_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_event_stream.html.markdown</a>.</p>
 </div></blockquote>
@@ -1225,13 +1298,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.GcmChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.GcmChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GcmChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_key: Platform credential API key from Google.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[bool] enabled: Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Platform credential API key from Google.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_gcm_channel.html.markdown</a>.</p>
 </div></blockquote>
@@ -1334,16 +1413,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.pinpoint.SmsChannel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">promotional_messages_per_second=None</em>, <em class="sig-param">sender_id=None</em>, <em class="sig-param">short_code=None</em>, <em class="sig-param">transactional_messages_per_second=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.SmsChannel.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SmsChannel resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The application ID.
-:param pulumi.Input[bool] enabled: Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[float] promotional_messages_per_second: Promotional messages per second that can be sent.
-:param pulumi.Input[str] sender_id: Sender identifier of your messages.
-:param pulumi.Input[str] short_code: The Short Code registered with the phone provider.
-:param pulumi.Input[float] transactional_messages_per_second: Transactional messages per second that can be sent.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application ID.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the channel is enabled or disabled. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>promotional_messages_per_second</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Promotional messages per second that can be sent.</p></li>
+<li><p><strong>sender_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sender identifier of your messages.</p></li>
+<li><p><strong>short_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Short Code registered with the phone provider.</p></li>
+<li><p><strong>transactional_messages_per_second</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Transactional messages per second that can be sent.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/pinpoint_sms_channel.html.markdown</a>.</p>
 </div></blockquote>

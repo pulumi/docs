@@ -31,6 +31,11 @@ The heredoc syntax or <code class="docutils literal notranslate"><span class="pr
 </ul>
 </dd>
 </dl>
+<p>The <strong>notifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">events</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - You can configure a vault to publish a notification for <code class="docutils literal notranslate"><span class="pre">ArchiveRetrievalCompleted</span></code> and <code class="docutils literal notranslate"><span class="pre">InventoryRetrievalCompleted</span></code> events.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snsTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SNS Topic ARN.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault.html.markdown</a>.</p>
 </div></blockquote>
@@ -63,6 +68,10 @@ The heredoc syntax or <code class="docutils literal notranslate"><span class="pr
 <dt id="pulumi_aws.glacier.Vault.notifications">
 <code class="sig-name descname">notifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glacier.Vault.notifications" title="Permalink to this definition">¶</a></dt>
 <dd><p>The notifications for the Vault. Fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">events</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - You can configure a vault to publish a notification for <code class="docutils literal notranslate"><span class="pre">ArchiveRetrievalCompleted</span></code> and <code class="docutils literal notranslate"><span class="pre">InventoryRetrievalCompleted</span></code> events.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snsTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SNS Topic ARN.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -75,17 +84,16 @@ The heredoc syntax or <code class="docutils literal notranslate"><span class="pr
 <dt id="pulumi_aws.glacier.Vault.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policy=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notifications=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glacier.Vault.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Vault resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] access<a href="#id7"><span class="problematic" id="id8">*</span></a>policy: The policy document. This is a JSON formatted string.</p>
-<blockquote>
-<div><p>The heredoc syntax or <code class="docutils literal notranslate"><span class="pre">file</span></code> function is helpful here. Use the <a class="reference external" href="https://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html">Glacier Developer Guide</a> for more information on Glacier Vault Policy</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access*policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy document. This is a JSON formatted string.
+The heredoc syntax or <code class="docutils literal notranslate"><span class="pre">file</span></code> function is helpful here. Use the <a class="reference external" href="https://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html">Glacier Developer Guide</a> for more information on Glacier Vault Policy</p>
+</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the vault.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the vault that was created.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, ‘<a href="#id10"><span class="problematic" id="id11">*</span></a>’ (underscore), ‘-‘ (hyphen), and ‘.’ (period).</p></li>
@@ -94,6 +102,11 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>notifications</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">events</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - You can configure a vault to publish a notification for <code class="docutils literal notranslate"><span class="pre">ArchiveRetrievalCompleted</span></code> and <code class="docutils literal notranslate"><span class="pre">InventoryRetrievalCompleted</span></code> events.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snsTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SNS Topic ARN.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault.html.markdown</a>.</p>
 </div></blockquote>
@@ -188,14 +201,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glacier.VaultLock.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">complete_lock=None</em>, <em class="sig-param">ignore_deletion_error=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">vault_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glacier.VaultLock.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VaultLock resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] complete_lock: Boolean whether to permanently apply this Glacier Lock Policy. Once completed, this cannot be undone. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the Glacier Lock Policy remains in a testing mode for 24 hours. After that time, the Glacier Lock Policy is automatically removed by Glacier and the this provider resource will show as needing recreation. Changing this from <code class="docutils literal notranslate"><span class="pre">false</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code> will show as resource recreation, which is expected. Changing this from <code class="docutils literal notranslate"><span class="pre">true</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code> is not possible unless the Glacier Vault is recreated at the same time.
-:param pulumi.Input[bool] ignore_deletion_error: Allow this provider to ignore the error returned when attempting to delete the Glacier Lock Policy. This can be used to delete or recreate the Glacier Vault via this provider, for example, if the Glacier Vault Lock policy permits that action. This should only be used in conjunction with <code class="docutils literal notranslate"><span class="pre">complete_lock</span></code> being set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] policy: JSON string containing the IAM policy to apply as the Glacier Vault Lock policy.
-:param pulumi.Input[str] vault_name: The name of the Glacier Vault.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>complete_lock</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether to permanently apply this Glacier Lock Policy. Once completed, this cannot be undone. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the Glacier Lock Policy remains in a testing mode for 24 hours. After that time, the Glacier Lock Policy is automatically removed by Glacier and the this provider resource will show as needing recreation. Changing this from <code class="docutils literal notranslate"><span class="pre">false</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code> will show as resource recreation, which is expected. Changing this from <code class="docutils literal notranslate"><span class="pre">true</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code> is not possible unless the Glacier Vault is recreated at the same time.</p></li>
+<li><p><strong>ignore_deletion_error</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow this provider to ignore the error returned when attempting to delete the Glacier Lock Policy. This can be used to delete or recreate the Glacier Vault via this provider, for example, if the Glacier Vault Lock policy permits that action. This should only be used in conjunction with <code class="docutils literal notranslate"><span class="pre">complete_lock</span></code> being set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string containing the IAM policy to apply as the Glacier Vault Lock policy.</p></li>
+<li><p><strong>vault_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Glacier Vault.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault_lock.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault_lock.html.markdown</a>.</p>
 </div></blockquote>

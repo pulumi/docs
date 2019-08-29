@@ -37,6 +37,63 @@ domain on every apply.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>cluster_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of dedicated master nodes in the cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether dedicated master nodes are enabled for the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instance type of the dedicated master nodes in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of instances in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instance type of data nodes in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block containing zone awareness settings. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityZoneCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of Availability Zones for the domain to use with <code class="docutils literal notranslate"><span class="pre">zone_awareness_enabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether zone awareness is enabled. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+</ul>
+<p>The <strong>cognito_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identity_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the Cognito Identity Pool to use</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the IAM role that has the AmazonESCognitoAccess policy attached</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the Cognito User Pool to use</p></li>
+</ul>
+<p>The <strong>ebs_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether EBS volumes are attached to data nodes in the domain</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The baseline input/output (I/O) performance of EBS volumes
+attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of EBS volumes attached to data nodes (in GB).
+<strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">ebs_enabled</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of EBS volumes attached to data nodes.</p></li>
+</ul>
+<p>The <strong>encrypt_at_rest</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the <code class="docutils literal notranslate"><span class="pre">aws/es</span></code> service KMS key.</p></li>
+</ul>
+<p>The <strong>log_publishing_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_log_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the Cloudwatch log group to which log needs to be published.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS</p></li>
+</ul>
+<p>The <strong>node_to_node_encryption</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+</ul>
+<p>The <strong>snapshot_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automatedSnapshotStartHour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Hour during which the service takes an automated daily
+snapshot of the indices in the domain.</p></li>
+</ul>
+<p>The <strong>vpc_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown</a>.</p>
 </div></blockquote>
@@ -65,6 +122,19 @@ domain on every apply.</p>
 <dt id="pulumi_aws.elasticsearch.Domain.cluster_config">
 <code class="sig-name descname">cluster_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.cluster_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cluster configuration of the domain, see below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of dedicated master nodes in the cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether dedicated master nodes are enabled for the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Instance type of the dedicated master nodes in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of instances in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Instance type of data nodes in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block containing zone awareness settings. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityZoneCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of Availability Zones for the domain to use with <code class="docutils literal notranslate"><span class="pre">zone_awareness_enabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether zone awareness is enabled. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -83,6 +153,14 @@ domain on every apply.</p>
 <dt id="pulumi_aws.elasticsearch.Domain.ebs_options">
 <code class="sig-name descname">ebs_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.ebs_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>EBS related options, may be required based on chosen <a class="reference external" href="https://aws.amazon.com/elasticsearch-service/pricing/">instance size</a>. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether EBS volumes are attached to data nodes in the domain</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The baseline input/output (I/O) performance of EBS volumes
+attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of EBS volumes attached to data nodes (in GB).
+<strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">ebs_enabled</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of EBS volumes attached to data nodes.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -95,6 +173,10 @@ domain on every apply.</p>
 <dt id="pulumi_aws.elasticsearch.Domain.encrypt_at_rest">
 <code class="sig-name descname">encrypt_at_rest</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.encrypt_at_rest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Encrypt at rest options. Only available for <a class="reference external" href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html">certain instance types</a>. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the <code class="docutils literal notranslate"><span class="pre">aws/es</span></code> service KMS key.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -117,18 +199,30 @@ domain on every apply.</p>
 <dt id="pulumi_aws.elasticsearch.Domain.log_publishing_options">
 <code class="sig-name descname">log_publishing_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.log_publishing_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Options for publishing slow logs to CloudWatch Logs.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_log_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ARN of the Cloudwatch log group to which log needs to be published.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.Domain.node_to_node_encryption">
 <code class="sig-name descname">node_to_node_encryption</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.node_to_node_encryption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Node-to-node encryption options. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.Domain.snapshot_options">
 <code class="sig-name descname">snapshot_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.snapshot_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Snapshot related options, see below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automatedSnapshotStartHour</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Hour during which the service takes an automated daily
+snapshot of the indices in the domain.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -141,26 +235,30 @@ domain on every apply.</p>
 <dt id="pulumi_aws.elasticsearch.Domain.vpc_options">
 <code class="sig-name descname">vpc_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.vpc_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>VPC related options, see below. Adding or removing this configuration forces a new resource (<a class="reference external" href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations">documentation</a>).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.elasticsearch.Domain.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_config=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encrypt_at_rest=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">kibana_endpoint=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryption=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Domain resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] access_policies: IAM policy document specifying the access policies for the domain
-:param pulumi.Input[dict] advanced_options: Key-value string pairs to specify advanced configuration options.</p>
-<blockquote>
-<div><p>Note that the values for these configuration options must be strings (wrapped in quotes) or they
-may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
-domain on every apply.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
+<li><p><strong>advanced_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value string pairs to specify advanced configuration options.
+Note that the values for these configuration options must be strings (wrapped in quotes) or they
+may be wrong and cause a perpetual diff, causing this provider to want to recreate your Elasticsearch
+domain on every apply.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the domain.</p></li>
 <li><p><strong>cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cluster configuration of the domain, see below.</p></li>
 <li><p><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier for the domain.</p></li>
@@ -191,6 +289,63 @@ domain on every apply.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>cluster_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of dedicated master nodes in the cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether dedicated master nodes are enabled for the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dedicatedMasterType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instance type of the dedicated master nodes in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of instances in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instance type of data nodes in the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block containing zone awareness settings. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityZoneCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of Availability Zones for the domain to use with <code class="docutils literal notranslate"><span class="pre">zone_awareness_enabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether zone awareness is enabled. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+</ul>
+<p>The <strong>cognito_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identity_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the Cognito Identity Pool to use</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the IAM role that has the AmazonESCognitoAccess policy attached</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the Cognito User Pool to use</p></li>
+</ul>
+<p>The <strong>ebs_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether EBS volumes are attached to data nodes in the domain</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The baseline input/output (I/O) performance of EBS volumes
+attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of EBS volumes attached to data nodes (in GB).
+<strong>Required</strong> if <code class="docutils literal notranslate"><span class="pre">ebs_enabled</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumeType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of EBS volumes attached to data nodes.</p></li>
+</ul>
+<p>The <strong>encrypt_at_rest</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the <code class="docutils literal notranslate"><span class="pre">aws/es</span></code> service KMS key.</p></li>
+</ul>
+<p>The <strong>log_publishing_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_log_group_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ARN of the Cloudwatch log group to which log needs to be published.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS</p></li>
+</ul>
+<p>The <strong>node_to_node_encryption</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether Amazon Cognito authentication with Kibana is enabled or not</p></li>
+</ul>
+<p>The <strong>snapshot_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automatedSnapshotStartHour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Hour during which the service takes an automated daily
+snapshot of the indices in the domain.</p></li>
+</ul>
+<p>The <strong>vpc_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown</a>.</p>
 </div></blockquote>
@@ -267,12 +422,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticsearch.DomainPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policies=None</em>, <em class="sig-param">domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.DomainPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DomainPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] access_policies: IAM policy document specifying the access policies for the domain
-:param pulumi.Input[str] domain_name: Name of the domain.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown</a>.</p>
 </div></blockquote>

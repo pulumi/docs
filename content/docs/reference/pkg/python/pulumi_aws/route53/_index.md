@@ -55,18 +55,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.route53.DelegationSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">reference_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.DelegationSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DelegationSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] name_servers: A list of authoritative name servers for the hosted zone</p>
-<blockquote>
-<div><p>(effectively a list of NS records).</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>reference_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is a reference name used in Caller Reference
-(helpful for identifying single delegation set amongst others)</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of authoritative name servers for the hosted zone
+(effectively a list of NS records).</p></li>
+<li><p><strong>reference_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is a reference name used in Caller Reference
+(helpful for identifying single delegation set amongst others)</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -320,29 +320,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.HealthCheck.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">child_health_threshold=None</em>, <em class="sig-param">child_healthchecks=None</em>, <em class="sig-param">cloudwatch_alarm_name=None</em>, <em class="sig-param">cloudwatch_alarm_region=None</em>, <em class="sig-param">enable_sni=None</em>, <em class="sig-param">failure_threshold=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">insufficient_data_health_status=None</em>, <em class="sig-param">invert_healthcheck=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">measure_latency=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">reference_name=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">request_interval=None</em>, <em class="sig-param">resource_path=None</em>, <em class="sig-param">search_string=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.HealthCheck.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HealthCheck resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] child_health_threshold: The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-:param pulumi.Input[list] child_healthchecks: For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-:param pulumi.Input[str] cloudwatch_alarm_name: The name of the CloudWatch alarm.
-:param pulumi.Input[str] cloudwatch_alarm_region: The CloudWatchRegion that the CloudWatch alarm was created in.
-:param pulumi.Input[bool] enable_sni: A boolean value that indicates whether Route53 should send the <code class="docutils literal notranslate"><span class="pre">fqdn</span></code> to the endpoint when performing the health check. This defaults to AWS’ defaults: when the <code class="docutils literal notranslate"><span class="pre">type</span></code> is “HTTPS” <code class="docutils literal notranslate"><span class="pre">enable_sni</span></code> defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>, when <code class="docutils literal notranslate"><span class="pre">type</span></code> is anything else <code class="docutils literal notranslate"><span class="pre">enable_sni</span></code> defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[float] failure_threshold: The number of consecutive health checks that an endpoint must pass or fail.
-:param pulumi.Input[str] fqdn: The fully qualified domain name of the endpoint to be checked.
-:param pulumi.Input[str] insufficient_data_health_status: The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are <code class="docutils literal notranslate"><span class="pre">Healthy</span></code> , <code class="docutils literal notranslate"><span class="pre">Unhealthy</span></code> and <code class="docutils literal notranslate"><span class="pre">LastKnownStatus</span></code>.
-:param pulumi.Input[bool] invert_healthcheck: A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-:param pulumi.Input[str] ip_address: The IP address of the endpoint to be checked.
-:param pulumi.Input[bool] measure_latency: A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-:param pulumi.Input[float] port: The port of the endpoint to be checked.
-:param pulumi.Input[str] reference_name: This is a reference name used in Caller Reference</p>
-<blockquote>
-<div><p>(helpful for identifying single health_check set amongst others)</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>child_health_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive</p></li>
+<li><p><strong>child_healthchecks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – For a specified parent health check, a list of HealthCheckId values for the associated child health checks.</p></li>
+<li><p><strong>cloudwatch_alarm_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the CloudWatch alarm.</p></li>
+<li><p><strong>cloudwatch_alarm_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CloudWatchRegion that the CloudWatch alarm was created in.</p></li>
+<li><p><strong>enable_sni</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean value that indicates whether Route53 should send the <code class="docutils literal notranslate"><span class="pre">fqdn</span></code> to the endpoint when performing the health check. This defaults to AWS’ defaults: when the <code class="docutils literal notranslate"><span class="pre">type</span></code> is “HTTPS” <code class="docutils literal notranslate"><span class="pre">enable_sni</span></code> defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>, when <code class="docutils literal notranslate"><span class="pre">type</span></code> is anything else <code class="docutils literal notranslate"><span class="pre">enable_sni</span></code> defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>failure_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of consecutive health checks that an endpoint must pass or fail.</p></li>
+<li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name of the endpoint to be checked.</p></li>
+<li><p><strong>insufficient_data_health_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are <code class="docutils literal notranslate"><span class="pre">Healthy</span></code> , <code class="docutils literal notranslate"><span class="pre">Unhealthy</span></code> and <code class="docutils literal notranslate"><span class="pre">LastKnownStatus</span></code>.</p></li>
+<li><p><strong>invert_healthcheck</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the endpoint to be checked.</p></li>
+<li><p><strong>measure_latency</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the endpoint to be checked.</p></li>
+<li><p><strong>reference_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is a reference name used in Caller Reference
+(helpful for identifying single health_check set amongst others)</p></li>
 <li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.</p></li>
 <li><p><strong>request_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.</p></li>
 <li><p><strong>resource_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path that you want Amazon Route 53 to request when performing health checks.</p></li>
@@ -435,12 +433,18 @@ See <a class="reference external" href="https://docs.aws.amazon.com/Route53/late
 <dt id="pulumi_aws.route53.QueryLog.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloudwatch_log_group_arn=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.QueryLog.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing QueryLog resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cloudwatch_log_group_arn: CloudWatch log group ARN to send query logs.
-:param pulumi.Input[str] zone_id: Route53 hosted zone ID to enable query logs.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloudwatch_log_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CloudWatch log group ARN to send query logs.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Route53 hosted zone ID to enable query logs.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown</a>.</p>
 </div></blockquote>
@@ -511,6 +515,30 @@ Alias record documented below.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>aliases</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluateTargetHealth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health">related part of documentation</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See <cite>``resource_elb.zone_id`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id">https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id</a>&gt;`_ for example.</p></li>
+</ul>
+<p>The <strong>failover_routing_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>. A <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> record will be served if its healthcheck is passing, otherwise the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> will be served. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></p></li>
+</ul>
+<p>The <strong>geolocation_routing_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">continent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A two-letter continent code. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html">http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html</a> for code details. Either <code class="docutils literal notranslate"><span class="pre">continent</span></code> or <code class="docutils literal notranslate"><span class="pre">country</span></code> must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">country</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A two-character country code or <code class="docutils literal notranslate"><span class="pre">*</span></code> to indicate a default resource record set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subdivision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A subdivision code for a country.</p></li>
+</ul>
+<p>The <strong>latency_routing_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An AWS region from which to measure latency. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency</a></p></li>
+</ul>
+<p>The <strong>weighted_routing_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A numeric value indicating the relative weight of the record. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted</a>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown</a>.</p>
 </div></blockquote>
@@ -519,6 +547,11 @@ Alias record documented below.</p></li>
 <code class="sig-name descname">aliases</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.aliases" title="Permalink to this definition">¶</a></dt>
 <dd><p>An alias block. Conflicts with <code class="docutils literal notranslate"><span class="pre">ttl</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">records</span></code>.
 Alias record documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluateTargetHealth</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health">related part of documentation</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See <cite>``resource_elb.zone_id`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id">https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id</a>&gt;`_ for example.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -531,6 +564,9 @@ Alias record documented below.</p>
 <dt id="pulumi_aws.route53.Record.failover_routing_policies">
 <code class="sig-name descname">failover_routing_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.failover_routing_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>. A <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> record will be served if its healthcheck is passing, otherwise the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> will be served. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -543,6 +579,11 @@ Alias record documented below.</p>
 <dt id="pulumi_aws.route53.Record.geolocation_routing_policies">
 <code class="sig-name descname">geolocation_routing_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.geolocation_routing_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">continent</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A two-letter continent code. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html">http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html</a> for code details. Either <code class="docutils literal notranslate"><span class="pre">continent</span></code> or <code class="docutils literal notranslate"><span class="pre">country</span></code> must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">country</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A two-character country code or <code class="docutils literal notranslate"><span class="pre">*</span></code> to indicate a default resource record set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subdivision</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A subdivision code for a country.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -555,6 +596,9 @@ Alias record documented below.</p>
 <dt id="pulumi_aws.route53.Record.latency_routing_policies">
 <code class="sig-name descname">latency_routing_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.latency_routing_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An AWS region from which to measure latency. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency</a></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -597,6 +641,9 @@ Alias record documented below.</p>
 <dt id="pulumi_aws.route53.Record.weighted_routing_policies">
 <code class="sig-name descname">weighted_routing_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Record.weighted_routing_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - A numeric value indicating the relative weight of the record. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted</a>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -609,17 +656,15 @@ Alias record documented below.</p>
 <dt id="pulumi_aws.route53.Record.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">allow_overwrite=None</em>, <em class="sig-param">failover_routing_policies=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">geolocation_routing_policies=None</em>, <em class="sig-param">health_check_id=None</em>, <em class="sig-param">latency_routing_policies=None</em>, <em class="sig-param">multivalue_answer_routing_policy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">set_identifier=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">weighted_routing_policies=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Record.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Record resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] aliases: An alias block. Conflicts with <code class="docutils literal notranslate"><span class="pre">ttl</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">records</span></code>.</p>
-<blockquote>
-<div><p>Alias record documented below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An alias block. Conflicts with <code class="docutils literal notranslate"><span class="pre">ttl</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">records</span></code>.
+Alias record documented below.</p></li>
 <li><p><strong>allow_overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. This configuration is not recommended for most environments.</p></li>
 <li><p><strong>failover_routing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.</p></li>
 <li><p><strong>fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p><a class="reference external" href="https://en.wikipedia.org/wiki/Fully_qualified_domain_name">FQDN</a> built using the zone domain and <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
@@ -638,6 +683,30 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>aliases</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">evaluateTargetHealth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health">related part of documentation</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See <cite>``resource_elb.zone_id`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id">https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id</a>&gt;`_ for example.</p></li>
+</ul>
+<p>The <strong>failover_routing_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>. A <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> record will be served if its healthcheck is passing, otherwise the <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code> will be served. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets</a></p></li>
+</ul>
+<p>The <strong>geolocation_routing_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">continent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A two-letter continent code. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html">http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html</a> for code details. Either <code class="docutils literal notranslate"><span class="pre">continent</span></code> or <code class="docutils literal notranslate"><span class="pre">country</span></code> must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">country</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A two-character country code or <code class="docutils literal notranslate"><span class="pre">*</span></code> to indicate a default resource record set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subdivision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A subdivision code for a country.</p></li>
+</ul>
+<p>The <strong>latency_routing_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An AWS region from which to measure latency. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency</a></p></li>
+</ul>
+<p>The <strong>weighted_routing_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A numeric value indicating the relative weight of the record. See <a class="reference external" href="http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted">http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted</a>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown</a>.</p>
 </div></blockquote>
@@ -701,6 +770,12 @@ to your network (for outbound endpoints) or on the way from your network to your
 </ul>
 </dd>
 </dl>
+<p>The <strong>ip_addresses</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address in the subnet that you want to use for DNS queries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the subnet that contains the IP address.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -729,6 +804,11 @@ or <code class="docutils literal notranslate"><span class="pre">OUTBOUND</span><
 <code class="sig-name descname">ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverEndpoint.ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP address in the subnet that you want to use for DNS queries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the subnet that contains the IP address.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -753,19 +833,17 @@ to your network (for outbound endpoints) or on the way from your network to your
 <dt id="pulumi_aws.route53.ResolverEndpoint.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">direction=None</em>, <em class="sig-param">host_vpc_id=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverEndpoint.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResolverEndpoint resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the Route 53 Resolver endpoint.
-:param pulumi.Input[str] direction: The direction of DNS queries to or from the Route 53 Resolver endpoint.</p>
-<blockquote>
-<div><p>Valid values are <code class="docutils literal notranslate"><span class="pre">INBOUND</span></code> (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
-or <code class="docutils literal notranslate"><span class="pre">OUTBOUND</span></code> (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Route 53 Resolver endpoint.</p></li>
+<li><p><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction of DNS queries to or from the Route 53 Resolver endpoint.
+Valid values are <code class="docutils literal notranslate"><span class="pre">INBOUND</span></code> (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
+or <code class="docutils literal notranslate"><span class="pre">OUTBOUND</span></code> (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).</p></li>
 <li><p><strong>host_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC that you want to create the resolver endpoint in.</p></li>
 <li><p><strong>ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.</p></li>
@@ -775,6 +853,12 @@ to your network (for outbound endpoints) or on the way from your network to your
 </ul>
 </dd>
 </dl>
+<p>The <strong>ip_addresses</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address in the subnet that you want to use for DNS queries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the subnet that contains the IP address.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_endpoint.html.markdown</a>.</p>
 </div></blockquote>
@@ -838,6 +922,11 @@ This argument should only be specified for <code class="docutils literal notrans
 </ul>
 </dd>
 </dl>
+<p>The <strong>target_ips</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port at <code class="docutils literal notranslate"><span class="pre">ip</span></code> that you want to forward DNS queries to. Default value is <code class="docutils literal notranslate"><span class="pre">53</span></code></p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -896,27 +985,29 @@ Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHAR
 <code class="sig-name descname">target_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.ResolverRule.target_ips" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below).
 This argument should only be specified for <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code> type rules.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port at <code class="docutils literal notranslate"><span class="pre">ip</span></code> that you want to forward DNS queries to. Default value is <code class="docutils literal notranslate"><span class="pre">53</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.route53.ResolverRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_ips=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResolverRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN (Amazon Resource Name) for the resolver rule.
-:param pulumi.Input[str] domain_name: DNS queries for this domain name are forwarded to the IP addresses that are specified using <code class="docutils literal notranslate"><span class="pre">target_ip</span></code>.
-:param pulumi.Input[str] name: A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.
-:param pulumi.Input[str] owner_id: When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
-:param pulumi.Input[str] resolver_endpoint_id: The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using <code class="docutils literal notranslate"><span class="pre">target_ip</span></code>.</p>
-<blockquote>
-<div><p>This argument should only be specified for <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code> type rules.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN (Amazon Resource Name) for the resolver rule.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS queries for this domain name are forwarded to the IP addresses that are specified using <code class="docutils literal notranslate"><span class="pre">target_ip</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.</p></li>
+<li><p><strong>owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.</p></li>
+<li><p><strong>resolver_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using <code class="docutils literal notranslate"><span class="pre">target_ip</span></code>.
+This argument should only be specified for <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code> type rules.</p></li>
 <li><p><strong>rule_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rule type. Valid values are <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> and <code class="docutils literal notranslate"><span class="pre">RECURSIVE</span></code>.</p></li>
 <li><p><strong>share_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.
 Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHARED</span></code>, <code class="docutils literal notranslate"><span class="pre">SHARED_BY_ME</span></code> or <code class="docutils literal notranslate"><span class="pre">SHARED_WITH_ME</span></code></p></li>
@@ -926,6 +1017,11 @@ This argument should only be specified for <code class="docutils literal notrans
 </ul>
 </dd>
 </dl>
+<p>The <strong>target_ips</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port at <code class="docutils literal notranslate"><span class="pre">ip</span></code> that you want to forward DNS queries to. Default value is <code class="docutils literal notranslate"><span class="pre">53</span></code></p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown</a>.</p>
 </div></blockquote>
@@ -1009,13 +1105,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.ResolverRuleAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ResolverRuleAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResolverRuleAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: A name for the association that you’re creating between a resolver rule and a VPC.
-:param pulumi.Input[str] resolver_rule_id: The ID of the resolver rule that you want to associate with the VPC.
-:param pulumi.Input[str] vpc_id: The ID of the VPC that you want to associate the resolver rule with.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the association that you’re creating between a resolver rule and a VPC.</p></li>
+<li><p><strong>resolver_rule_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the resolver rule that you want to associate with the VPC.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC that you want to associate the resolver rule with.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -1077,6 +1179,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>vpcs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the VPC to associate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Region of the VPC to associate. Defaults to AWS provider region.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown</a>.</p>
 </div></blockquote>
@@ -1121,6 +1228,10 @@ Find more about delegation sets in <a class="reference external" href="https://d
 <dt id="pulumi_aws.route53.Zone.vpcs">
 <code class="sig-name descname">vpcs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.Zone.vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the <code class="docutils literal notranslate"><span class="pre">delegation_set_id</span></code> argument in this resource and any <cite>``route53.ZoneAssociation`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html">https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html</a>&gt;`_ specifying the same zone ID. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the VPC to associate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Region of the VPC to associate. Defaults to AWS provider region.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1133,27 +1244,31 @@ Find more about delegation sets in <a class="reference external" href="https://d
 <dt id="pulumi_aws.route53.Zone.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">delegation_set_id=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpcs=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Zone.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Zone resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] comment: A comment for the hosted zone. Defaults to ‘Managed by Pulumi’.
-:param pulumi.Input[str] delegation_set_id: The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with <code class="docutils literal notranslate"><span class="pre">vpc</span></code> as delegation sets can only be used for public zones.
-:param pulumi.Input[bool] force_destroy: Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
-:param pulumi.Input[str] name: This is the name of the hosted zone.
-:param pulumi.Input[list] name_servers: A list of name servers in associated (or default) delegation set.</p>
-<blockquote>
-<div><p>Find more about delegation sets in <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html">AWS docs</a>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comment for the hosted zone. Defaults to ‘Managed by Pulumi’.</p></li>
+<li><p><strong>delegation_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with <code class="docutils literal notranslate"><span class="pre">vpc</span></code> as delegation sets can only be used for public zones.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the name of the hosted zone.</p></li>
+<li><p><strong>name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of name servers in associated (or default) delegation set.
+Find more about delegation sets in <a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html">AWS docs</a>.</p>
+</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the zone.</p></li>
 <li><p><strong>vpcs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the <code class="docutils literal notranslate"><span class="pre">delegation_set_id</span></code> argument in this resource and any <cite>``route53.ZoneAssociation`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html">https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html</a>&gt;`_ specifying the same zone ID. Detailed below.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Hosted Zone ID. This can be referenced by zone records.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>vpcs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the VPC to associate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Region of the VPC to associate. Defaults to AWS provider region.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown</a>.</p>
 </div></blockquote>
@@ -1241,13 +1356,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.ZoneAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vpc_region=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ZoneAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ZoneAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] vpc_id: The VPC to associate with the private hosted zone.
-:param pulumi.Input[str] vpc_region: The VPC’s region. Defaults to the region of the AWS provider.
-:param pulumi.Input[str] zone_id: The private hosted zone to associate.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC to associate with the private hosted zone.</p></li>
+<li><p><strong>vpc_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC’s region. Defaults to the region of the AWS provider.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private hosted zone to associate.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -1296,6 +1417,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_delegation_set</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_delegation_set" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.DelegationSet</span></code> provides details about a specific Route 53 Delegation Set.</p>
 <p>This data source allows to find a list of name servers associated with a specific delegation set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The Hosted Zone id of the desired delegation set.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown</a>.</p>
 </div></blockquote>
@@ -1306,6 +1432,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_zone</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">private_zone=None</em>, <em class="sig-param">resource_record_set_count=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">route53.Zone</span></code> provides details about a specific Route 53 Hosted Zone.</p>
 <p>This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The Hosted Zone name of the desired Hosted Zone.</p></li>
+<li><p><strong>private_zone</strong> (<em>bool</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field to get a private Hosted Zone.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field. A mapping of tags, each pair of which must exactly match
+a pair on the desired Hosted Zone.</p></li>
+<li><p><strong>vpc_id</strong> (<em>str</em>) – Used with <code class="docutils literal notranslate"><span class="pre">name</span></code> field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).</p></li>
+<li><p><strong>zone_id</strong> (<em>str</em>) – The Hosted Zone id of the desired Hosted Zone.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown</a>.</p>
 </div></blockquote>

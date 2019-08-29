@@ -190,7 +190,7 @@ resource.</p></li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">ResourceOptions</code><span class="sig-paren">(</span><em class="sig-param">parent: Optional[Resource] = None</em>, <em class="sig-param">depends_on: Optional[List[Resource]] = None</em>, <em class="sig-param">protect: Optional[bool] = None</em>, <em class="sig-param">provider: Optional[ProviderResource] = None</em>, <em class="sig-param">providers: Optional[Mapping[str</em>, <em class="sig-param">ProviderResource]] = None</em>, <em class="sig-param">delete_before_replace: Optional[bool] = None</em>, <em class="sig-param">ignore_changes: Optional[List[str]] = None</em>, <em class="sig-param">version: Optional[str] = None</em>, <em class="sig-param">aliases: Optional[List[Input[Union[str</em>, <em class="sig-param">Alias]]]] = None</em>, <em class="sig-param">additional_secret_outputs: Optional[List[str]] = None</em>, <em class="sig-param">id: Optional[str] = None</em>, <em class="sig-param">import_: Optional[str] = None</em>, <em class="sig-param">custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">ResourceOptions</code><span class="sig-paren">(</span><em class="sig-param">parent: Optional[Resource] = None</em>, <em class="sig-param">depends_on: Optional[List[Resource]] = None</em>, <em class="sig-param">protect: Optional[bool] = None</em>, <em class="sig-param">provider: Optional[ProviderResource] = None</em>, <em class="sig-param">providers: Optional[Mapping[str</em>, <em class="sig-param">ProviderResource]] = None</em>, <em class="sig-param">delete_before_replace: Optional[bool] = None</em>, <em class="sig-param">ignore_changes: Optional[List[str]] = None</em>, <em class="sig-param">version: Optional[str] = None</em>, <em class="sig-param">aliases: Optional[List[Input[Union[str</em>, <em class="sig-param">Alias]]]] = None</em>, <em class="sig-param">additional_secret_outputs: Optional[List[str]] = None</em>, <em class="sig-param">id: Optional[Input[str]] = None</em>, <em class="sig-param">import_: Optional[str] = None</em>, <em class="sig-param">custom_timeouts: Optional[CustomTimeouts] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -312,21 +312,34 @@ property must be removed from the resource’s options.</p>
 
 <dl class="method">
 <dt id="pulumi.ResourceOptions.merge">
-<code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">other: pulumi.resource.ResourceOptions</em><span class="sig-paren">)</span> &#x2192; pulumi.resource.ResourceOptions<a class="headerlink" href="#pulumi.ResourceOptions.merge" title="Permalink to this definition">¶</a></dt>
-<dd><p>merge produces a new ResourceOptions object with the respective attributes of this
-instance in it with the attributes of <code class="docutils literal notranslate"><span class="pre">other</span></code> merged over them.</p>
-<p>Both this options instance and the <code class="docutils literal notranslate"><span class="pre">other</span></code> options instance will be unchanged.</p>
+<em class="property">static </em><code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">opts1: pulumi.resource.ResourceOptions</em>, <em class="sig-param">opts2: pulumi.resource.ResourceOptions</em><span class="sig-paren">)</span> &#x2192; pulumi.resource.ResourceOptions<a class="headerlink" href="#pulumi.ResourceOptions.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>merge produces a new ResourceOptions object with the respective attributes of the <code class="docutils literal notranslate"><span class="pre">opts1</span></code>
+instance in it with the attributes of <code class="docutils literal notranslate"><span class="pre">opts2</span></code> merged over them.</p>
+<p>Both the <code class="docutils literal notranslate"><span class="pre">opts1</span></code> instance and the <code class="docutils literal notranslate"><span class="pre">opts2</span></code> instance will be unchanged.  Both of <code class="docutils literal notranslate"><span class="pre">opts1</span></code> and
+<code class="docutils literal notranslate"><span class="pre">opts2</span></code> can be <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case its attributes are ignored.</p>
 <p>Conceptually attributes merging follows these basic rules:</p>
 <ol class="arabic simple">
-<li><p>if the attributes is a collection, the final value will be a collection containing the
-values from each options object. Both original collections in each options object will
-be unchanged.</p></li>
-<li><p>Simple scaler values from <code class="docutils literal notranslate"><span class="pre">other</span></code> (i.e. strings, numbers, bools) will replace the values
-from this.</p></li>
-<li><p>For the purposes of merging <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>, <code class="docutils literal notranslate"><span class="pre">provider</span></code> and <code class="docutils literal notranslate"><span class="pre">providers</span></code> are always treated
-as collections, even if only a single value was provided.</p></li>
+<li><dl class="simple">
+<dt>if the attributes is a collection, the final value will be a collection containing the</dt><dd><p>values from each options object. Both original collections in each options object will
+be unchanged.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Simple scaler values from <code class="docutils literal notranslate"><span class="pre">opts2</span></code> (i.e. strings, numbers, bools) will replace the values</dt><dd><p>from <code class="docutils literal notranslate"><span class="pre">opts1</span></code>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>For the purposes of merging <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>, <code class="docutils literal notranslate"><span class="pre">provider</span></code> and <code class="docutils literal notranslate"><span class="pre">providers</span></code> are always treated</dt><dd><p>as collections, even if only a single value was provided.</p>
+</dd>
+</dl>
+</li>
 <li><p>Attributes with value ‘None’ will not be copied over.</p></li>
 </ol>
+<p>This method can be called either as static-method like <code class="docutils literal notranslate"><span class="pre">ResourceOptions.merge(opts1,</span> <span class="pre">opts2)</span></code>
+or as an instance-method like <code class="docutils literal notranslate"><span class="pre">opts1.merge(opts2)</span></code>.  The former is useful for cases where
+<code class="docutils literal notranslate"><span class="pre">opts1</span></code> may be <code class="docutils literal notranslate"><span class="pre">None</span></code> so the caller does not need to check for this case.</p>
 </dd></dl>
 
 </dd></dl>

@@ -32,10 +32,16 @@ construction to achieve fine-grained programmatic control over provider settings
 <dt id="pulumi_random.Provider.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.Provider.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown</a>.</p>
 </div></blockquote>
@@ -162,19 +168,18 @@ base64 encoded.</p>
 <dt id="pulumi_random.RandomId.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">b64=None</em>, <em class="sig-param">b64_std=None</em>, <em class="sig-param">b64_url=None</em>, <em class="sig-param">byte_length=None</em>, <em class="sig-param">dec=None</em>, <em class="sig-param">hex=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomId.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RandomId resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] b64_std: The generated id presented in base64 without additional transformations.
-:param pulumi.Input[str] b64<em>url: The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `</em><code class="docutils literal notranslate"><span class="pre">and</span></code>-<a href="#id1"><span class="problematic" id="id2">`</span></a>.
-:param pulumi.Input[float] byte_length: The number of random bytes to produce. The</p>
-<blockquote>
-<div><p>minimum value is 1, which produces eight bits of randomness.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>b64_std</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated id presented in base64 without additional transformations.</p></li>
+<li><p><strong>b64*url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters <cite>*``and`</cite>-<a href="#id3"><span class="problematic" id="id4">`</span></a>.</p>
+</p></li>
+<li><p><strong>byte_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of random bytes to produce. The
+minimum value is 1, which produces eight bits of randomness.</p></li>
 <li><p><strong>dec</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated id presented in non-padded decimal digits.</p></li>
 <li><p><strong>hex</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.</p></li>
 <li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
@@ -290,18 +295,16 @@ the main provider documentation for more information.</p>
 <dt id="pulumi_random.RandomInteger.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">max=None</em>, <em class="sig-param">min=None</em>, <em class="sig-param">result=None</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomInteger.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RandomInteger resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] keepers: Arbitrary map of values that, when changed, will</p>
-<blockquote>
-<div><p>trigger a new id to be generated. See
-the main provider documentation for more information.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
+trigger a new id to be generated. See
+the main provider documentation for more information.</p></li>
 <li><p><strong>max</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum inclusive value of the range.</p></li>
 <li><p><strong>min</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum inclusive value of the range.</p></li>
 <li><p><strong>result</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (int) The random Integer result.</p></li>
@@ -335,6 +338,80 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_random.RandomInteger.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomInteger.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_random.RandomPassword">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomPassword</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">length=None</em>, <em class="sig-param">lower=None</em>, <em class="sig-param">min_lower=None</em>, <em class="sig-param">min_numeric=None</em>, <em class="sig-param">min_special=None</em>, <em class="sig-param">min_upper=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">override_special=None</em>, <em class="sig-param">special=None</em>, <em class="sig-param">upper=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPassword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identical to .RandomString with the exception that the
+result is treated as sensitive and, thus, not displayed in console output.</p>
+<p>This resource <em>does</em> use a cryptographic random number generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pulumi_random.RandomPassword.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">length=None</em>, <em class="sig-param">lower=None</em>, <em class="sig-param">min_lower=None</em>, <em class="sig-param">min_numeric=None</em>, <em class="sig-param">min_special=None</em>, <em class="sig-param">min_upper=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">override_special=None</em>, <em class="sig-param">result=None</em>, <em class="sig-param">special=None</em>, <em class="sig-param">upper=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPassword.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RandomPassword resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_random.RandomPassword.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPassword.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_random.RandomPassword.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPassword.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -408,18 +485,16 @@ the main provider documentation for more information.</p>
 <dt id="pulumi_random.RandomPet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">length=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">separator=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RandomPet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] keepers: Arbitrary map of values that, when changed, will</p>
-<blockquote>
-<div><p>trigger a new id to be generated. See
-the main provider documentation for more information.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
+trigger a new id to be generated. See
+the main provider documentation for more information.</p></li>
 <li><p><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length (in words) of the pet name.</p></li>
 <li><p><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string to prefix the name with.</p></li>
 <li><p><strong>separator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The character to separate words in the pet name.</p></li>
@@ -528,19 +603,17 @@ of items in the input list.</p>
 <dt id="pulumi_random.RandomShuffle.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">results=None</em>, <em class="sig-param">result_count=None</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RandomShuffle resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] inputs: The list of strings to shuffle.
-:param pulumi.Input[dict] keepers: Arbitrary map of values that, when changed, will</p>
-<blockquote>
-<div><p>trigger a new id to be generated. See
-the main provider documentation for more information.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>inputs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of strings to shuffle.</p></li>
+<li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
+trigger a new id to be generated. See
+the main provider documentation for more information.</p></li>
 <li><p><strong>results</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Random permutation of the list of strings given in <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p></li>
 <li><p><strong>result_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of results to return. Defaults to
 the number of items in the <code class="docutils literal notranslate"><span class="pre">input</span></code> list. If fewer items are requested,
@@ -630,7 +703,7 @@ argument.  The special argument must still be set to true for any overwritten
 characters to be used in generation.</p>
 </p></li>
 <li><p><strong>special</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include special characters in random
-string. These are ‘!&#64;#$%&amp;*()-<a href="#id5"><span class="problematic" id="id6">*</span></a>=+[]{}&lt;&gt;:?’</p></li>
+string. These are ‘!&#64;#$%&amp;*()-<a href="#id7"><span class="problematic" id="id8">*</span></a>=+[]{}&lt;&gt;:?’</p></li>
 <li><p><strong>upper</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include uppercase alphabet characters
 in random string.</p></li>
 </ul>
@@ -728,18 +801,16 @@ in random string.</p>
 <dt id="pulumi_random.RandomString.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">length=None</em>, <em class="sig-param">lower=None</em>, <em class="sig-param">min_lower=None</em>, <em class="sig-param">min_numeric=None</em>, <em class="sig-param">min_special=None</em>, <em class="sig-param">min_upper=None</em>, <em class="sig-param">number=None</em>, <em class="sig-param">override_special=None</em>, <em class="sig-param">result=None</em>, <em class="sig-param">special=None</em>, <em class="sig-param">upper=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomString.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RandomString resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] keepers: Arbitrary map of values that, when changed, will</p>
-<blockquote>
-<div><p>trigger a new id to be generated. See
-the main provider documentation for more information.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
+trigger a new id to be generated. See
+the main provider documentation for more information.</p></li>
 <li><p><strong>length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of the string desired</p></li>
 <li><p><strong>lower</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include lowercase alphabet characters
 in random string.</p></li>
@@ -760,7 +831,7 @@ characters to be used in generation.</p>
 </p></li>
 <li><p><strong>result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Random string generated.</p></li>
 <li><p><strong>special</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include special characters in random
-string. These are ‘!&#64;#$%&amp;*()-<a href="#id9"><span class="problematic" id="id10">*</span></a>=+[]{}&lt;&gt;:?’</p></li>
+string. These are ‘!&#64;#$%&amp;*()-<a href="#id11"><span class="problematic" id="id12">*</span></a>=+[]{}&lt;&gt;:?’</p></li>
 <li><p><strong>upper</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include uppercase alphabet characters
 in random string.</p></li>
 </ul>
@@ -848,18 +919,18 @@ the main provider documentation for more information.</p>
 <dt id="pulumi_random.RandomUuid.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">result=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomUuid.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RandomUuid resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] keepers: Arbitrary map of values that, when changed, will</p>
-<blockquote>
-<div><p>trigger a new uuid to be generated. See
-the main provider documentation for more information.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated uuid presented in string format.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
+trigger a new uuid to be generated. See
+the main provider documentation for more information.</p></li>
+<li><p><strong>result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The generated uuid presented in string format.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>

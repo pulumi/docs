@@ -89,19 +89,26 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ssm.Activation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activation_code=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expiration_date=None</em>, <em class="sig-param">expired=None</em>, <em class="sig-param">iam_role=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registration_count=None</em>, <em class="sig-param">registration_limit=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Activation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Activation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] activation_code: The code the system generates when it processes the activation.
-:param pulumi.Input[str] description: The description of the resource that you want to register.
-:param pulumi.Input[str] expiration_date: A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> by which this activation request should expire. The default value is 24 hours from resource creation time.
-:param pulumi.Input[str] expired: If the current activation has expired.
-:param pulumi.Input[str] iam_role: The IAM Role to attach to the managed instance.
-:param pulumi.Input[str] name: The default name of the registered managed instance.
-:param pulumi.Input[float] registration_count: The number of managed instances that are currently registered using this activation.
-:param pulumi.Input[float] registration_limit: The maximum number of managed instances you want to register. The default value is 1 instance.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the object.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>activation_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The code the system generates when it processes the activation.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the resource that you want to register.</p></li>
+<li><p><strong>expiration_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> by which this activation request should expire. The default value is 24 hours from resource creation time.</p>
+</p></li>
+<li><p><strong>expired</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If the current activation has expired.</p></li>
+<li><p><strong>iam_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Role to attach to the managed instance.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default name of the registered managed instance.</p></li>
+<li><p><strong>registration_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of managed instances that are currently registered using this activation.</p></li>
+<li><p><strong>registration_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of managed instances you want to register. The default value is 1 instance.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_activation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_activation.html.markdown</a>.</p>
 </div></blockquote>
@@ -168,6 +175,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>output_location</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_key_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket prefix. Results stored in the root if not configured.</p></li>
+</ul>
+<p>The <strong>targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Either <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> or <code class="docutils literal notranslate"><span class="pre">tag:Tag</span> <span class="pre">Name</span></code> to specify an EC2 tag.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance IDs or tag values. AWS currently limits this list size to one value.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -217,6 +234,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Association.output_location">
 <code class="sig-name descname">output_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.output_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>An output location block. Output Location is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The S3 bucket name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_key_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The S3 bucket prefix. Results stored in the root if not configured.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -235,27 +256,47 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Association.targets">
 <code class="sig-name descname">targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.targets" title="Permalink to this definition">¶</a></dt>
 <dd><p>A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Either <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> or <code class="docutils literal notranslate"><span class="pre">tag:Tag</span> <span class="pre">Name</span></code> to specify an EC2 tag.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of instance IDs or tag values. AWS currently limits this list size to one value.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.ssm.Association.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">association_id=None</em>, <em class="sig-param">association_name=None</em>, <em class="sig-param">compliance_severity=None</em>, <em class="sig-param">document_version=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">max_concurrency=None</em>, <em class="sig-param">max_errors=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_location=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">schedule_expression=None</em>, <em class="sig-param">targets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Association resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] association_name: The descriptive name for the association.
-:param pulumi.Input[str] compliance_severity: The compliance severity for the association. Can be one of the following: <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> or <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code>
-:param pulumi.Input[str] document_version: The document version you want to associate with the target(s). Can be a specific version or the default version.
-:param pulumi.Input[str] instance_id: The instance ID to apply an SSM document to. Use <code class="docutils literal notranslate"><span class="pre">targets</span></code> with key <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> for document schema versions 2.0 and above.
-:param pulumi.Input[str] max_concurrency: The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-:param pulumi.Input[str] max_errors: The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
-:param pulumi.Input[str] name: The name of the SSM document to apply.
-:param pulumi.Input[dict] output_location: An output location block. Output Location is documented below.
-:param pulumi.Input[dict] parameters: A block of arbitrary string parameters to pass to the SSM document.
-:param pulumi.Input[str] schedule_expression: A cron expression when the association will be applied to the target(s).
-:param pulumi.Input[list] targets: A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>association_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the association.</p></li>
+<li><p><strong>compliance_severity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compliance severity for the association. Can be one of the following: <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> or <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code></p></li>
+<li><p><strong>document_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The document version you want to associate with the target(s). Can be a specific version or the default version.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance ID to apply an SSM document to. Use <code class="docutils literal notranslate"><span class="pre">targets</span></code> with key <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> for document schema versions 2.0 and above.</p></li>
+<li><p><strong>max_concurrency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</p></li>
+<li><p><strong>max_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSM document to apply.</p></li>
+<li><p><strong>output_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An output location block. Output Location is documented below.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block of arbitrary string parameters to pass to the SSM document.</p></li>
+<li><p><strong>schedule_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A cron expression when the association will be applied to the target(s).</p></li>
+<li><p><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>output_location</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_key_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket prefix. Results stored in the root if not configured.</p></li>
+</ul>
+<p>The <strong>targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Either <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> or <code class="docutils literal notranslate"><span class="pre">tag:Tag</span> <span class="pre">Name</span></code> to specify an EC2 tag.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of instance IDs or tag values. AWS currently limits this list size to one value.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -340,6 +381,11 @@ publicly, you must specify All as the account ID.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>permissions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown</a>.</p>
 </div></blockquote>
@@ -413,12 +459,22 @@ publicly, you must specify All as the account ID.</p>
 <dt id="pulumi_aws.ssm.Document.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parameters that are available to this document.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the document.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the document.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Document.permissions">
 <code class="sig-name descname">permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Additional Permissions to attach to the document. See Permissions below for details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -449,27 +505,45 @@ publicly, you must specify All as the account ID.</p>
 <dt id="pulumi_aws.ssm.Document.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">created_date=None</em>, <em class="sig-param">default_version=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document_format=None</em>, <em class="sig-param">document_type=None</em>, <em class="sig-param">hash=None</em>, <em class="sig-param">hash_type=None</em>, <em class="sig-param">latest_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">platform_types=None</em>, <em class="sig-param">schema_version=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Document resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] content: The JSON or YAML content of the document.
-:param pulumi.Input[str] created_date: The date the document was created.
-:param pulumi.Input[str] default_version: The default version of the document.
-:param pulumi.Input[str] description: The description of the document.
-:param pulumi.Input[str] document_format: The format of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">JSON</span></code> and <code class="docutils literal notranslate"><span class="pre">YAML</span></code>
-:param pulumi.Input[str] document_type: The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Automation</span></code> and <code class="docutils literal notranslate"><span class="pre">Session</span></code>
-:param pulumi.Input[str] hash: The sha1 or sha256 of the document content
-:param pulumi.Input[str] hash_type: “Sha1” “Sha256”. The hashing algorithm used when hashing the content.
-:param pulumi.Input[str] latest_version: The latest version of the document.
-:param pulumi.Input[str] name: The name of the document.
-:param pulumi.Input[str] owner: The AWS user account of the person who created the document.
-:param pulumi.Input[list] parameters: The parameters that are available to this document.
-:param pulumi.Input[dict] permissions: Additional Permissions to attach to the document. See Permissions below for details.
-:param pulumi.Input[list] platform_types: A list of OS platforms compatible with this SSM document, either “Windows” or “Linux”.
-:param pulumi.Input[str] schema_version: The schema version of the document.
-:param pulumi.Input[str] status: “Creating”, “Active” or “Deleting”. The current status of the document.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the object.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON or YAML content of the document.</p></li>
+<li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the document was created.</p></li>
+<li><p><strong>default_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default version of the document.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the document.</p></li>
+<li><p><strong>document_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">JSON</span></code> and <code class="docutils literal notranslate"><span class="pre">YAML</span></code></p></li>
+<li><p><strong>document_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Automation</span></code> and <code class="docutils literal notranslate"><span class="pre">Session</span></code></p></li>
+<li><p><strong>hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sha1 or sha256 of the document content</p></li>
+<li><p><strong>hash_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – “Sha1” “Sha256”. The hashing algorithm used when hashing the content.</p></li>
+<li><p><strong>latest_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The latest version of the document.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the document.</p></li>
+<li><p><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS user account of the person who created the document.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The parameters that are available to this document.</p></li>
+<li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Additional Permissions to attach to the document. See Permissions below for details.</p></li>
+<li><p><strong>platform_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of OS platforms compatible with this SSM document, either “Windows” or “Linux”.</p></li>
+<li><p><strong>schema_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema version of the document.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – “Creating”, “Active” or “Deleting”. The current status of the document.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the document.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the document.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>permissions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown</a>.</p>
 </div></blockquote>
@@ -645,20 +719,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindow.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_unassociated_targets=None</em>, <em class="sig-param">cutoff=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">end_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schedule_timezone=None</em>, <em class="sig-param">start_date=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MaintenanceWindow resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] allow_unassociated_targets: Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
-:param pulumi.Input[float] cutoff: The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
-:param pulumi.Input[float] duration: The duration of the Maintenance Window in hours.
-:param pulumi.Input[bool] enabled: Whether the maintenance window is enabled. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] end_date: Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to no longer run the maintenance window.
-:param pulumi.Input[str] name: The name of the maintenance window.
-:param pulumi.Input[str] schedule: The schedule of the Maintenance Window in the form of a <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html">cron</a> or rate expression.
-:param pulumi.Input[str] schedule_timezone: Timezone for schedule in <a class="reference external" href="https://www.iana.org/time-zones">Internet Assigned Numbers Authority (IANA) Time Zone Database format</a>. For example: <code class="docutils literal notranslate"><span class="pre">America/Los_Angeles</span></code>, <code class="docutils literal notranslate"><span class="pre">etc/UTC</span></code>, or <code class="docutils literal notranslate"><span class="pre">Asia/Seoul</span></code>.
-:param pulumi.Input[str] start_date: Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to begin the maintenance window.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allow_unassociated_targets</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.</p></li>
+<li><p><strong>cutoff</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.</p></li>
+<li><p><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration of the Maintenance Window in hours.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the maintenance window is enabled. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to no longer run the maintenance window.</p>
+</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the maintenance window.</p></li>
+<li><p><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The schedule of the Maintenance Window in the form of a <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html">cron</a> or rate expression.</p>
+</p></li>
+<li><p><strong>schedule_timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Timezone for schedule in <a class="reference external" href="https://www.iana.org/time-zones">Internet Assigned Numbers Authority (IANA) Time Zone Database format</a>. For example: <code class="docutils literal notranslate"><span class="pre">America/Los_Angeles</span></code>, <code class="docutils literal notranslate"><span class="pre">etc/UTC</span></code>, or <code class="docutils literal notranslate"><span class="pre">Asia/Seoul</span></code>.</p>
+</p></li>
+<li><p><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to begin the maintenance window.</p>
+</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window.html.markdown</a>.</p>
 </div></blockquote>
@@ -720,6 +804,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_target.html.markdown</a>.</p>
 </div></blockquote>
@@ -751,6 +840,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindowTarget.targets">
 <code class="sig-name descname">targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget.targets" title="Permalink to this definition">¶</a></dt>
 <dd><p>The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -763,16 +856,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindowTarget.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_information=None</em>, <em class="sig-param">resource_type=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">window_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MaintenanceWindowTarget resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The description of the maintenance window target.
-:param pulumi.Input[str] name: The name of the maintenance window target.
-:param pulumi.Input[str] owner_information: User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
-:param pulumi.Input[str] resource_type: The type of target being registered with the Maintenance Window. Possible values <code class="docutils literal notranslate"><span class="pre">INSTANCE</span></code>.
-:param pulumi.Input[list] targets: The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.
-:param pulumi.Input[str] window_id: The Id of the maintenance window to register the target with.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the maintenance window target.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the maintenance window target.</p></li>
+<li><p><strong>owner_information</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.</p></li>
+<li><p><strong>resource_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of target being registered with the Maintenance Window. Possible values <code class="docutils literal notranslate"><span class="pre">INSTANCE</span></code>.</p></li>
+<li><p><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The targets (either instances or tags). Instances are specified using Key=InstanceIds,Values=InstanceId1,InstanceId2. Tags are specified using Key=tag name,Values=tag value.</p></li>
+<li><p><strong>window_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of the maintenance window to register the target with.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_target.html.markdown</a>.</p>
 </div></blockquote>
@@ -841,6 +945,73 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>logging_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of strings.</p></li>
+</ul>
+<p>The <strong>task_invocation_parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automationParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The parameters for an AUTOMATION task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">document_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of an Automation document to use during task execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The parameters for the RUN_COMMAND task execution. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of strings.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The parameters for a LAMBDA task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientContext</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Pass client-specific information to the Lambda function that you are invoking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - JSON to provide to your Lambda function as input.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qualifier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify a Lambda function version or alias name.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runCommandParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The parameters for a RUN_COMMAND task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Information about the command(s) to execute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">documentHash</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">documentHashType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: <code class="docutils literal notranslate"><span class="pre">Sha256</span></code> and <code class="docutils literal notranslate"><span class="pre">Sha1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configurations for sending notifications about command status changes on a per-instance basis. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The different events for which you can receive notifications. Valid values: <code class="docutils literal notranslate"><span class="pre">All</span></code>, <code class="docutils literal notranslate"><span class="pre">InProgress</span></code>, <code class="docutils literal notranslate"><span class="pre">Success</span></code>, <code class="docutils literal notranslate"><span class="pre">TimedOut</span></code>, <code class="docutils literal notranslate"><span class="pre">Cancelled</span></code>, and <code class="docutils literal notranslate"><span class="pre">Failed</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notification_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When specified with <code class="docutils literal notranslate"><span class="pre">Command</span></code>, receive notification when the status of a command changes. When specified with <code class="docutils literal notranslate"><span class="pre">Invocation</span></code>, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: <code class="docutils literal notranslate"><span class="pre">Command</span></code> and <code class="docutils literal notranslate"><span class="pre">Invocation</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputS3Bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputS3KeyPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 bucket subfolder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The parameters for the RUN_COMMAND task execution. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of strings.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IAM service role to assume during task execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - If this time is reached and the command has not already started executing, it doesn’t run.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stepFunctionsParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The parameters for a STEP_FUNCTIONS task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">input</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The inputs for the STEP_FUNCTION task.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The parameter name.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>task_parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of strings.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_task.html.markdown</a>.</p>
 </div></blockquote>
@@ -854,6 +1025,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.logging_info">
 <code class="sig-name descname">logging_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.logging_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">run_command_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">output_s3_*</span></code> arguments instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -890,6 +1066,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.targets">
 <code class="sig-name descname">targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.targets" title="Permalink to this definition">¶</a></dt>
 <dd><p>The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The array of strings.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -902,12 +1082,66 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.task_invocation_parameters">
 <code class="sig-name descname">task_invocation_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.task_invocation_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>The parameters for task execution. This argument is conflict with <code class="docutils literal notranslate"><span class="pre">task_parameters</span></code> and <code class="docutils literal notranslate"><span class="pre">logging_info</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automationParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The parameters for an AUTOMATION task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">document_version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version of an Automation document to use during task execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The parameters for the RUN_COMMAND task execution. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The array of strings.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The parameters for a LAMBDA task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientContext</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Pass client-specific information to the Lambda function that you are invoking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - JSON to provide to your Lambda function as input.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qualifier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specify a Lambda function version or alias name.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runCommandParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The parameters for a RUN_COMMAND task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Information about the command(s) to execute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">documentHash</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">documentHashType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: <code class="docutils literal notranslate"><span class="pre">Sha256</span></code> and <code class="docutils literal notranslate"><span class="pre">Sha1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configurations for sending notifications about command status changes on a per-instance basis. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The different events for which you can receive notifications. Valid values: <code class="docutils literal notranslate"><span class="pre">All</span></code>, <code class="docutils literal notranslate"><span class="pre">InProgress</span></code>, <code class="docutils literal notranslate"><span class="pre">Success</span></code>, <code class="docutils literal notranslate"><span class="pre">TimedOut</span></code>, <code class="docutils literal notranslate"><span class="pre">Cancelled</span></code>, and <code class="docutils literal notranslate"><span class="pre">Failed</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notification_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - When specified with <code class="docutils literal notranslate"><span class="pre">Command</span></code>, receive notification when the status of a command changes. When specified with <code class="docutils literal notranslate"><span class="pre">Invocation</span></code>, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: <code class="docutils literal notranslate"><span class="pre">Command</span></code> and <code class="docutils literal notranslate"><span class="pre">Invocation</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputS3Bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputS3KeyPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 bucket subfolder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The parameters for the RUN_COMMAND task execution. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The array of strings.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IAM service role to assume during task execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - If this time is reached and the command has not already started executing, it doesn’t run.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stepFunctionsParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The parameters for a STEP_FUNCTIONS task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">input</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The inputs for the STEP_FUNCTION task.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The parameter name.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.task_parameters">
 <code class="sig-name descname">task_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.task_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Use <code class="docutils literal notranslate"><span class="pre">parameter</span></code> configuration blocks under the <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The array of strings.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -926,23 +1160,96 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logging_info=None</em>, <em class="sig-param">max_concurrency=None</em>, <em class="sig-param">max_errors=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">service_role_arn=None</em>, <em class="sig-param">targets=None</em>, <em class="sig-param">task_arn=None</em>, <em class="sig-param">task_invocation_parameters=None</em>, <em class="sig-param">task_parameters=None</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">window_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MaintenanceWindowTask resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The description of the maintenance window task.
-:param pulumi.Input[dict] logging_info: A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">run_command_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">output_s3_*</span></code> arguments instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.
-:param pulumi.Input[str] max_concurrency: The maximum number of targets this task can be run for in parallel.
-:param pulumi.Input[str] max_errors: The maximum number of errors allowed before this task stops being scheduled.
-:param pulumi.Input[str] name: The parameter name.
-:param pulumi.Input[float] priority: The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
-:param pulumi.Input[str] service_role_arn: The IAM service role to assume during task execution.
-:param pulumi.Input[list] targets: The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
-:param pulumi.Input[str] task_arn: The ARN of the task to execute.
-:param pulumi.Input[dict] task_invocation_parameters: The parameters for task execution. This argument is conflict with <code class="docutils literal notranslate"><span class="pre">task_parameters</span></code> and <code class="docutils literal notranslate"><span class="pre">logging_info</span></code>.
-:param pulumi.Input[list] task_parameters: A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Use <code class="docutils literal notranslate"><span class="pre">parameter</span></code> configuration blocks under the <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.
-:param pulumi.Input[str] task_type: The type of task being registered. The only allowed value is <code class="docutils literal notranslate"><span class="pre">RUN_COMMAND</span></code>.
-:param pulumi.Input[str] window_id: The Id of the maintenance window to register the task with.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the maintenance window task.</p></li>
+<li><p><strong>logging_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">run_command_parameters</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">output_s3_*</span></code> arguments instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.</p></li>
+<li><p><strong>max_concurrency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of targets this task can be run for in parallel.</p></li>
+<li><p><strong>max_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of errors allowed before this task stops being scheduled.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parameter name.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.</p></li>
+<li><p><strong>service_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM service role to assume during task execution.</p></li>
+<li><p><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.</p></li>
+<li><p><strong>task_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the task to execute.</p></li>
+<li><p><strong>task_invocation_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The parameters for task execution. This argument is conflict with <code class="docutils literal notranslate"><span class="pre">task_parameters</span></code> and <code class="docutils literal notranslate"><span class="pre">logging_info</span></code>.</p></li>
+<li><p><strong>task_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Use <code class="docutils literal notranslate"><span class="pre">parameter</span></code> configuration blocks under the <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code> configuration block instead. Conflicts with <code class="docutils literal notranslate"><span class="pre">task_invocation_parameters</span></code>. Documented below.</p></li>
+<li><p><strong>task_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of task being registered. The only allowed value is <code class="docutils literal notranslate"><span class="pre">RUN_COMMAND</span></code>.</p></li>
+<li><p><strong>window_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of the maintenance window to register the task with.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>logging_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3_region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>targets</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of strings.</p></li>
+</ul>
+<p>The <strong>task_invocation_parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">automationParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The parameters for an AUTOMATION task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">document_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of an Automation document to use during task execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The parameters for the RUN_COMMAND task execution. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of strings.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambdaParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The parameters for a LAMBDA task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientContext</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Pass client-specific information to the Lambda function that you are invoking.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - JSON to provide to your Lambda function as input.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qualifier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify a Lambda function version or alias name.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runCommandParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The parameters for a RUN_COMMAND task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Information about the command(s) to execute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">documentHash</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">documentHashType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: <code class="docutils literal notranslate"><span class="pre">Sha256</span></code> and <code class="docutils literal notranslate"><span class="pre">Sha1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configurations for sending notifications about command status changes on a per-instance basis. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notificationEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The different events for which you can receive notifications. Valid values: <code class="docutils literal notranslate"><span class="pre">All</span></code>, <code class="docutils literal notranslate"><span class="pre">InProgress</span></code>, <code class="docutils literal notranslate"><span class="pre">Success</span></code>, <code class="docutils literal notranslate"><span class="pre">TimedOut</span></code>, <code class="docutils literal notranslate"><span class="pre">Cancelled</span></code>, and <code class="docutils literal notranslate"><span class="pre">Failed</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notification_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - When specified with <code class="docutils literal notranslate"><span class="pre">Command</span></code>, receive notification when the status of a command changes. When specified with <code class="docutils literal notranslate"><span class="pre">Invocation</span></code>, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: <code class="docutils literal notranslate"><span class="pre">Command</span></code> and <code class="docutils literal notranslate"><span class="pre">Invocation</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputS3Bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Amazon S3 bucket.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputS3KeyPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 bucket subfolder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The parameters for the RUN_COMMAND task execution. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of strings.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IAM service role to assume during task execution.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - If this time is reached and the command has not already started executing, it doesn’t run.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stepFunctionsParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The parameters for a STEP_FUNCTIONS task type. Documented below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">input</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The inputs for the STEP_FUNCTION task.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The parameter name.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>task_parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The parameter name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The array of strings.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_task.html.markdown</a>.</p>
 </div></blockquote>
@@ -1081,21 +1388,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.Parameter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_pattern=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">overwrite=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Parameter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Parameter resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] allowed_pattern: A regular expression used to validate the parameter value.
-:param pulumi.Input[str] arn: The ARN of the parameter.
-:param pulumi.Input[str] description: The description of the parameter.
-:param pulumi.Input[str] key_id: The KMS key id or arn for encrypting a SecureString.
-:param pulumi.Input[str] name: The name of the parameter. If the name contains a path (e.g. any forward slashes (<code class="docutils literal notranslate"><span class="pre">/</span></code>)), it must be fully qualified with a leading forward slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>). For additional requirements and constraints, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html">AWS SSM User Guide</a>.
-:param pulumi.Input[bool] overwrite: Overwrite an existing parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">false</span></code> if the resource has not been created by this provider to avoid overwrite of existing resource and will default to <code class="docutils literal notranslate"><span class="pre">true</span></code> otherwise (lifecycle rules should then be used to manage the update behavior).
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the object.
-:param pulumi.Input[str] tier: The tier of the parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Valid tiers are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Advanced</span></code>. For more information on parameter tiers, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html">AWS SSM Parameter tier comparison and guide</a>.
-:param pulumi.Input[str] type: The type of the parameter. Valid types are <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">StringList</span></code> and <code class="docutils literal notranslate"><span class="pre">SecureString</span></code>.
-:param pulumi.Input[str] value: The value of the parameter.
-:param pulumi.Input[float] version: The version of the parameter.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allowed_pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A regular expression used to validate the parameter value.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the parameter.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the parameter.</p></li>
+<li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KMS key id or arn for encrypting a SecureString.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the parameter. If the name contains a path (e.g. any forward slashes (<code class="docutils literal notranslate"><span class="pre">/</span></code>)), it must be fully qualified with a leading forward slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>). For additional requirements and constraints, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html">AWS SSM User Guide</a>.</p>
+</p></li>
+<li><p><strong>overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Overwrite an existing parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">false</span></code> if the resource has not been created by this provider to avoid overwrite of existing resource and will default to <code class="docutils literal notranslate"><span class="pre">true</span></code> otherwise (lifecycle rules should then be used to manage the update behavior).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
+<li><p><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The tier of the parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Valid tiers are <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Advanced</span></code>. For more information on parameter tiers, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html">AWS SSM Parameter tier comparison and guide</a>.</p>
+</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the parameter. Valid types are <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">StringList</span></code> and <code class="docutils literal notranslate"><span class="pre">SecureString</span></code>.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the parameter.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The version of the parameter.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_parameter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_parameter.html.markdown</a>.</p>
 </div></blockquote>
@@ -1164,6 +1479,23 @@ of them is specified.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>approval_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">approveAfterDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complianceLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableNonSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">patchFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>global_filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_baseline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_baseline.html.markdown</a>.</p>
 </div></blockquote>
@@ -1171,6 +1503,17 @@ of them is specified.</p>
 <dt id="pulumi_aws.ssm.PatchBaseline.approval_rules">
 <code class="sig-name descname">approval_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline.approval_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">approveAfterDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complianceLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableNonSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">patchFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1195,6 +1538,10 @@ of them is specified.</p>
 <dt id="pulumi_aws.ssm.PatchBaseline.global_filters">
 <code class="sig-name descname">global_filters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline.global_filters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <code class="docutils literal notranslate"><span class="pre">PRODUCT</span> <span class="pre">|</span> <span class="pre">CLASSIFICATION</span> <span class="pre">|</span> <span class="pre">MSRC_SEVERITY</span> <span class="pre">|</span> <span class="pre">PATCH_ID</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1219,18 +1566,41 @@ of them is specified.</p>
 <dt id="pulumi_aws.ssm.PatchBaseline.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">approval_rules=None</em>, <em class="sig-param">approved_patches=None</em>, <em class="sig-param">approved_patches_compliance_level=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">global_filters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">rejected_patches=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PatchBaseline resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] approval_rules: A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-:param pulumi.Input[list] approved_patches: A list of explicitly approved patches for the baseline.
-:param pulumi.Input[str] approved_patches_compliance_level: Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">INFORMATIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>.
-:param pulumi.Input[str] description: The description of the patch baseline.
-:param pulumi.Input[list] global_filters: A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <code class="docutils literal notranslate"><span class="pre">PRODUCT</span> <span class="pre">|</span> <span class="pre">CLASSIFICATION</span> <span class="pre">|</span> <span class="pre">MSRC_SEVERITY</span> <span class="pre">|</span> <span class="pre">PATCH_ID</span></code>.
-:param pulumi.Input[str] name: The name of the patch baseline.
-:param pulumi.Input[str] operating_system: Defines the operating system the patch baseline applies to. Supported operating systems include <code class="docutils literal notranslate"><span class="pre">WINDOWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX_2</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span></code>, <code class="docutils literal notranslate"><span class="pre">UBUNTU</span></code>, <code class="docutils literal notranslate"><span class="pre">CENTOS</span></code>, and <code class="docutils literal notranslate"><span class="pre">REDHAT_ENTERPRISE_LINUX</span></code>. The Default value is <code class="docutils literal notranslate"><span class="pre">WINDOWS</span></code>.
-:param pulumi.Input[list] rejected_patches: A list of rejected patches.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>approval_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.</p></li>
+<li><p><strong>approved_patches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of explicitly approved patches for the baseline.</p></li>
+<li><p><strong>approved_patches_compliance_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">INFORMATIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the patch baseline.</p></li>
+<li><p><strong>global_filters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <code class="docutils literal notranslate"><span class="pre">PRODUCT</span> <span class="pre">|</span> <span class="pre">CLASSIFICATION</span> <span class="pre">|</span> <span class="pre">MSRC_SEVERITY</span> <span class="pre">|</span> <span class="pre">PATCH_ID</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the patch baseline.</p></li>
+<li><p><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the operating system the patch baseline applies to. Supported operating systems include <code class="docutils literal notranslate"><span class="pre">WINDOWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX_2</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span></code>, <code class="docutils literal notranslate"><span class="pre">UBUNTU</span></code>, <code class="docutils literal notranslate"><span class="pre">CENTOS</span></code>, and <code class="docutils literal notranslate"><span class="pre">REDHAT_ENTERPRISE_LINUX</span></code>. The Default value is <code class="docutils literal notranslate"><span class="pre">WINDOWS</span></code>.</p></li>
+<li><p><strong>rejected_patches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of rejected patches.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>approval_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">approveAfterDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complianceLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableNonSecurity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">patchFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>global_filters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_baseline.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_baseline.html.markdown</a>.</p>
 </div></blockquote>
@@ -1307,12 +1677,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.PatchGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">baseline_id=None</em>, <em class="sig-param">patch_group=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.PatchGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PatchGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] baseline_id: The ID of the patch baseline to register the patch group with.
-:param pulumi.Input[str] patch_group: The name of the patch group that should be registered with the patch baseline.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>baseline_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the patch baseline to register the patch group with.</p></li>
+<li><p><strong>patch_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the patch group that should be registered with the patch baseline.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_patch_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1378,6 +1754,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>s3_destination</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_resource_data_sync.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_resource_data_sync.html.markdown</a>.</p>
 </div></blockquote>
@@ -1391,18 +1775,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.ResourceDataSync.s3_destination">
 <code class="sig-name descname">s3_destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.ResourceDataSync.s3_destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amazon S3 configuration details for the sync.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.ssm.ResourceDataSync.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">s3_destination=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.ResourceDataSync.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResourceDataSync resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: Name for the configuration.
-:param pulumi.Input[dict] s3_destination: Amazon S3 configuration details for the sync.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the configuration.</p></li>
+<li><p><strong>s3_destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Amazon S3 configuration details for the sync.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>s3_destination</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">syncFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_resource_data_sync.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_resource_data_sync.html.markdown</a>.</p>
 </div></blockquote>
@@ -1450,6 +1855,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.get_document">
 <code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">get_document</code><span class="sig-paren">(</span><em class="sig-param">document_format=None</em>, <em class="sig-param">document_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the contents of the specified Systems Manager document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document_format</strong> (<em>str</em>) – Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.</p></li>
+<li><p><strong>document_version</strong> (<em>str</em>) – The document version for which you want information.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Systems Manager document.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_document.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_document.html.markdown</a>.</p>
 </div></blockquote>
@@ -1459,6 +1873,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ssm.get_parameter">
 <code class="sig-prename descclassname">pulumi_aws.ssm.</code><code class="sig-name descname">get_parameter</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">with_decryption=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Parameter data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the parameter.</p></li>
+<li><p><strong>with_decryption</strong> (<em>bool</em>) – Whether to return decrypted <code class="docutils literal notranslate"><span class="pre">SecureString</span></code> value. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_parameter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_parameter.html.markdown</a>.</p>
 </div></blockquote>

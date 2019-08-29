@@ -108,16 +108,20 @@ Each entry can have one of the following values:</p>
 <dt id="pulumi_gcp.folder.IAMBinding.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.folder.IAMBinding.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMBinding resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] etag: (Computed) The etag of the folder’s IAM policy.
-:param pulumi.Input[str] folder: The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
-:param pulumi.Input[list] members: An array of identites that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.</p>
-<blockquote>
-<div><p>Each entry can have one of the following values:</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the folder’s IAM policy.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.</p></li>
+<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of identites that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>.
+Each entry can have one of the following values:</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="o">**</span><span class="n">user</span><span class="p">:{</span><span class="n">emailid</span><span class="p">}</span><span class="o">**</span><span class="p">:</span> <span class="n">An</span> <span class="n">email</span> <span class="n">address</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">Google</span> <span class="n">account</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">alice</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
 <span class="o">*</span> <span class="o">**</span><span class="n">serviceAccount</span><span class="p">:{</span><span class="n">emailid</span><span class="p">}</span><span class="o">**</span><span class="p">:</span> <span class="n">An</span> <span class="n">email</span> <span class="n">address</span> <span class="n">that</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">service</span> <span class="n">account</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">my</span><span class="o">-</span><span class="n">other</span><span class="o">-</span><span class="n">app</span><span class="nd">@appspot</span><span class="o">.</span><span class="n">gserviceaccount</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
 <span class="o">*</span> <span class="o">**</span><span class="n">group</span><span class="p">:{</span><span class="n">emailid</span><span class="p">}</span><span class="o">**</span><span class="p">:</span> <span class="n">An</span> <span class="n">email</span> <span class="n">address</span> <span class="n">that</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">Google</span> <span class="n">group</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">admins</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
@@ -250,16 +254,20 @@ This field can have one of the following values:</p>
 <dt id="pulumi_gcp.folder.IAMMember.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.folder.IAMMember.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMMember resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] etag: (Computed) The etag of the folder’s IAM policy.
-:param pulumi.Input[str] folder: The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
-:param pulumi.Input[str] member: The identity that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a></p>
-<blockquote>
-<div><p>This field can have one of the following values:</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the folder’s IAM policy.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.</p></li>
+<li><p><strong>member</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identity that will be granted the privilege in the <code class="docutils literal notranslate"><span class="pre">role</span></code>. For more details on format and restrictions see <a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/Policy#Binding">https://cloud.google.com/billing/reference/rest/v1/Policy#Binding</a>
+This field can have one of the following values:</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="o">**</span><span class="n">user</span><span class="p">:{</span><span class="n">emailid</span><span class="p">}</span><span class="o">**</span><span class="p">:</span> <span class="n">An</span> <span class="n">email</span> <span class="n">address</span> <span class="n">that</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">Google</span> <span class="n">account</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">alice</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span> <span class="ow">or</span> <span class="n">joe</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
 <span class="o">*</span> <span class="o">**</span><span class="n">serviceAccount</span><span class="p">:{</span><span class="n">emailid</span><span class="p">}</span><span class="o">**</span><span class="p">:</span> <span class="n">An</span> <span class="n">email</span> <span class="n">address</span> <span class="n">that</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">service</span> <span class="n">account</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">my</span><span class="o">-</span><span class="n">other</span><span class="o">-</span><span class="n">app</span><span class="nd">@appspot</span><span class="o">.</span><span class="n">gserviceaccount</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
 <span class="o">*</span> <span class="o">**</span><span class="n">group</span><span class="p">:{</span><span class="n">emailid</span><span class="p">}</span><span class="o">**</span><span class="p">:</span> <span class="n">An</span> <span class="n">email</span> <span class="n">address</span> <span class="n">that</span> <span class="n">represents</span> <span class="n">a</span> <span class="n">Google</span> <span class="n">group</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">admins</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span><span class="o">.</span>
@@ -359,17 +367,21 @@ policy applied to the folder.</p>
 <dt id="pulumi_gcp.folder.IAMPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">policy_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.folder.IAMPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] etag: (Computed) The etag of the folder’s IAM policy. <code class="docutils literal notranslate"><span class="pre">etag</span></code> is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-:param pulumi.Input[str] folder: The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
-:param pulumi.Input[str] policy_data: The <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source that represents</p>
-<blockquote>
-<div><p>the IAM policy that will be applied to the folder. This policy overrides any existing
-policy applied to the folder.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the folder’s IAM policy. <code class="docutils literal notranslate"><span class="pre">etag</span></code> is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source that represents
+the IAM policy that will be applied to the folder. This policy overrides any existing
+policy applied to the folder.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder_iam_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder_iam_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -435,6 +447,31 @@ can also be used to allow or deny all values. Structure is documented below.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>boolean_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+<p>The <strong>list_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deny</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>restore_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder_organization_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -442,6 +479,9 @@ can also be used to allow or deny all values. Structure is documented below.</p>
 <dt id="pulumi_gcp.folder.OrganizationPolicy.boolean_policy">
 <code class="sig-name descname">boolean_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.folder.OrganizationPolicy.boolean_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A boolean policy is a constraint that is either enforced or not. Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -467,12 +507,31 @@ can also be used to allow or deny all values. Structure is documented below.</p>
 <code class="sig-name descname">list_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.folder.OrganizationPolicy.list_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deny</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.folder.OrganizationPolicy.restore_policy">
 <code class="sig-name descname">restore_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.folder.OrganizationPolicy.restore_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A restore policy is a constraint to restore the default policy. Structure is documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -491,27 +550,51 @@ can also be used to allow or deny all values. Structure is documented below.</p>
 <dt id="pulumi_gcp.folder.OrganizationPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">boolean_policy=None</em>, <em class="sig-param">constraint=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">list_policy=None</em>, <em class="sig-param">restore_policy=None</em>, <em class="sig-param">update_time=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.folder.OrganizationPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OrganizationPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] boolean_policy: A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-:param pulumi.Input[str] constraint: The name of the Constraint the Policy is configuring, for example, <code class="docutils literal notranslate"><span class="pre">serviceuser.services</span></code>. Check out the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints">complete list of available constraints</a>.
-:param pulumi.Input[str] etag: (Computed) The etag of the organization policy. <code class="docutils literal notranslate"><span class="pre">etag</span></code> is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-:param pulumi.Input[str] folder: The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
-:param pulumi.Input[dict] list_policy: A policy that can define specific values that are allowed or denied for the given constraint. It</p>
-<blockquote>
-<div><p>can also be used to allow or deny all values. Structure is documented below.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>boolean_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A boolean policy is a constraint that is either enforced or not. Structure is documented below.</p></li>
+<li><p><strong>constraint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the Constraint the Policy is configuring, for example, <code class="docutils literal notranslate"><span class="pre">serviceuser.services</span></code>. Check out the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints">complete list of available constraints</a>.</p>
+</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the organization policy. <code class="docutils literal notranslate"><span class="pre">etag</span></code> is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.</p></li>
+<li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource name of the folder to set the policy for. Its format is folders/{folder_id}.</p></li>
+<li><p><strong>list_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that can define specific values that are allowed or denied for the given constraint. It
+can also be used to allow or deny all values. Structure is documented below.</p></li>
 <li><p><strong>restore_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A restore policy is a constraint to restore the default policy. Structure is documented below.</p></li>
 <li><p><strong>update_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The timestamp in RFC3339 UTC “Zulu” format, accurate to nanoseconds, representing when the variable was last updated. Example: “2016-10-09T12:33:37.578138407Z”.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Version of the Policy. Default version is 0.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>boolean_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enforced</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
+<p>The <strong>list_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deny</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inheritFromParent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suggestedValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>restore_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/folder_organization_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -561,6 +644,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Allows management of Organization policies for a Google Folder. For more information see
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>constraint</strong> (<em>str</em>) – <p>(Required) The name of the Constraint the Policy is configuring, for example, <code class="docutils literal notranslate"><span class="pre">serviceuser.services</span></code>. Check out the <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints">complete list of available constraints</a>.</p>
+</p></li>
+<li><p><strong>folder</strong> (<em>str</em>) – The resource name of the folder to set the policy for. Its format is folders/{folder_id}.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/folder_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/folder_organization_policy.html.markdown</a>.</p>
 </div></blockquote>

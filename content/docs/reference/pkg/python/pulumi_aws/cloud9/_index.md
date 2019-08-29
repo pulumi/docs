@@ -83,18 +83,24 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cloud9.EnvironmentEC2.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">automatic_stop_time_minutes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_arn=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloud9.EnvironmentEC2.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EnvironmentEC2 resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the environment.
-:param pulumi.Input[float] automatic_stop_time_minutes: The number of minutes until the running instance is shut down after the environment has last been used.
-:param pulumi.Input[str] description: The description of the environment.
-:param pulumi.Input[str] instance_type: The type of instance to connect to the environment, e.g. <code class="docutils literal notranslate"><span class="pre">t2.micro</span></code>.
-:param pulumi.Input[str] name: The name of the environment.
-:param pulumi.Input[str] owner_arn: The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment’s creator.
-:param pulumi.Input[str] subnet_id: The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
-:param pulumi.Input[str] type: The type of the environment (e.g. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> or <code class="docutils literal notranslate"><span class="pre">ec2</span></code>)</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the environment.</p></li>
+<li><p><strong>automatic_stop_time_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of minutes until the running instance is shut down after the environment has last been used.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the environment.</p></li>
+<li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to connect to the environment, e.g. <code class="docutils literal notranslate"><span class="pre">t2.micro</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the environment.</p></li>
+<li><p><strong>owner_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment’s creator.</p></li>
+<li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the environment (e.g. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> or <code class="docutils literal notranslate"><span class="pre">ec2</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloud9_environment_ec2.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloud9_environment_ec2.html.markdown</a>.</p>
 </div></blockquote>

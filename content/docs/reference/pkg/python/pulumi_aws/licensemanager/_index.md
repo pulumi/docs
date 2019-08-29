@@ -46,12 +46,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.licensemanager.Association.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">license_configuration_arn=None</em>, <em class="sig-param">resource_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.licensemanager.Association.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Association resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] license_configuration_arn: ARN of the license configuration.
-:param pulumi.Input[str] resource_arn: ARN of the resource associated with the license configuration.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>license_configuration_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of the license configuration.</p></li>
+<li><p><strong>resource_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of the resource associated with the license configuration.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -176,17 +182,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.licensemanager.LicenseConfiguration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">license_count=None</em>, <em class="sig-param">license_count_hard_limit=None</em>, <em class="sig-param">license_counting_type=None</em>, <em class="sig-param">license_rules=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.licensemanager.LicenseConfiguration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LicenseConfiguration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: Description of the license configuration.
-:param pulumi.Input[float] license_count: Number of licenses managed by the license configuration.
-:param pulumi.Input[bool] license_count_hard_limit: Sets the number of available licenses as a hard limit.
-:param pulumi.Input[str] license_counting_type: Dimension to use to track license inventory. Specify either <code class="docutils literal notranslate"><span class="pre">vCPU</span></code>, <code class="docutils literal notranslate"><span class="pre">Instance</span></code>, <code class="docutils literal notranslate"><span class="pre">Core</span></code> or <code class="docutils literal notranslate"><span class="pre">Socket</span></code>.
-:param pulumi.Input[list] license_rules: Array of configured License Manager rules.
-:param pulumi.Input[str] name: Name of the license configuration.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the license configuration.</p></li>
+<li><p><strong>license_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of licenses managed by the license configuration.</p></li>
+<li><p><strong>license_count_hard_limit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Sets the number of available licenses as a hard limit.</p></li>
+<li><p><strong>license_counting_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Dimension to use to track license inventory. Specify either <code class="docutils literal notranslate"><span class="pre">vCPU</span></code>, <code class="docutils literal notranslate"><span class="pre">Instance</span></code>, <code class="docutils literal notranslate"><span class="pre">Core</span></code> or <code class="docutils literal notranslate"><span class="pre">Socket</span></code>.</p></li>
+<li><p><strong>license_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of configured License Manager rules.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the license configuration.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.html.markdown</a>.</p>
 </div></blockquote>

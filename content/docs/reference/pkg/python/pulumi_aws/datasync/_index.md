@@ -66,15 +66,21 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.datasync.Agent.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activation_key=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.Agent.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Agent resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] activation_key: DataSync Agent activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>. If an <code class="docutils literal notranslate"><span class="pre">ip_address</span></code> is provided instead, the provider will retrieve the <code class="docutils literal notranslate"><span class="pre">activation_key</span></code> as part of the resource creation.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the DataSync Agent.
-:param pulumi.Input[str] ip_address: DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">activation_key</span></code>. DataSync Agent must be accessible on port 80 from where the provider is running.
-:param pulumi.Input[str] name: Name of the DataSync Agent.
-:param pulumi.Input[dict] tags: Key-value pairs of resource tags to assign to the DataSync Agent.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>activation_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DataSync Agent activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>. If an <code class="docutils literal notranslate"><span class="pre">ip_address</span></code> is provided instead, the provider will retrieve the <code class="docutils literal notranslate"><span class="pre">activation_key</span></code> as part of the resource creation.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the DataSync Agent.</p></li>
+<li><p><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">activation_key</span></code>. DataSync Agent must be accessible on port 80 from where the provider is running.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the DataSync Agent.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Agent.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown</a>.</p>
 </div></blockquote>
@@ -137,6 +143,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>ec2_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown</a>.</p>
 </div></blockquote>
@@ -150,6 +161,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.EfsLocation.ec2_config">
 <code class="sig-name descname">ec2_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.EfsLocation.ec2_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing EC2 configurations for connecting to the EFS File System.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupArns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -174,15 +189,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.EfsLocation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">ec2_config=None</em>, <em class="sig-param">efs_file_system_arn=None</em>, <em class="sig-param">subdirectory=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.EfsLocation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EfsLocation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the DataSync Location.
-:param pulumi.Input[dict] ec2_config: Configuration block containing EC2 configurations for connecting to the EFS File System.
-:param pulumi.Input[str] efs_file_system_arn: Amazon Resource Name (ARN) of EFS File System.
-:param pulumi.Input[str] subdirectory: Subdirectory to perform actions as source or destination. Default <code class="docutils literal notranslate"><span class="pre">/</span></code>.
-:param pulumi.Input[dict] tags: Key-value pairs of resource tags to assign to the DataSync Location.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the DataSync Location.</p></li>
+<li><p><strong>ec2_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing EC2 configurations for connecting to the EFS File System.</p></li>
+<li><p><strong>efs_file_system_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of EFS File System.</p></li>
+<li><p><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subdirectory to perform actions as source or destination. Default <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Location.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ec2_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroupArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown</a>.</p>
 </div></blockquote>
@@ -245,6 +271,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>on_prem_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">agentArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown</a>.</p>
 </div></blockquote>
@@ -258,6 +288,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.NfsLocation.on_prem_config">
 <code class="sig-name descname">on_prem_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.NfsLocation.on_prem_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing information for connecting to the NFS File System.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">agentArns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -282,15 +315,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.NfsLocation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">on_prem_config=None</em>, <em class="sig-param">server_hostname=None</em>, <em class="sig-param">subdirectory=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.NfsLocation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NfsLocation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the DataSync Location.
-:param pulumi.Input[dict] on_prem_config: Configuration block containing information for connecting to the NFS File System.
-:param pulumi.Input[str] server_hostname: Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) use this to mount the NFS server.
-:param pulumi.Input[str] subdirectory: Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
-:param pulumi.Input[dict] tags: Key-value pairs of resource tags to assign to the DataSync Location.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the DataSync Location.</p></li>
+<li><p><strong>on_prem_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing information for connecting to the NFS File System.</p></li>
+<li><p><strong>server_hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) use this to mount the NFS server.</p></li>
+<li><p><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subdirectory to perform actions as source or destination. Should be exported by the NFS server.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Location.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>on_prem_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">agentArns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown</a>.</p>
 </div></blockquote>
@@ -350,6 +393,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>s3_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketAccessRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Names (ARN) of the IAM Role used to connect to the S3 Bucket.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown</a>.</p>
 </div></blockquote>
@@ -369,6 +416,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.S3Location.s3_config">
 <code class="sig-name descname">s3_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.S3Location.s3_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing information for connecting to S3.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketAccessRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Amazon Resource Names (ARN) of the IAM Role used to connect to the S3 Bucket.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -387,15 +437,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.S3Location.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">s3_bucket_arn=None</em>, <em class="sig-param">s3_config=None</em>, <em class="sig-param">subdirectory=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.S3Location.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing S3Location resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the DataSync Location.
-:param pulumi.Input[str] s3_bucket_arn: Amazon Resource Name (ARN) of the S3 Bucket.
-:param pulumi.Input[dict] s3_config: Configuration block containing information for connecting to S3.
-:param pulumi.Input[str] subdirectory: Prefix to perform actions as source or destination.
-:param pulumi.Input[dict] tags: Key-value pairs of resource tags to assign to the DataSync Location.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the DataSync Location.</p></li>
+<li><p><strong>s3_bucket_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the S3 Bucket.</p></li>
+<li><p><strong>s3_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing information for connecting to S3.</p></li>
+<li><p><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix to perform actions as source or destination.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Location.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>s3_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketAccessRoleArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Amazon Resource Names (ARN) of the IAM Role used to connect to the S3 Bucket.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown</a>.</p>
 </div></blockquote>
@@ -457,6 +517,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">atime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, the DataSync Task attempts to preserve the original (that is, the version before sync <code class="docutils literal notranslate"><span class="pre">PREPARING</span></code> phase) <code class="docutils literal notranslate"><span class="pre">atime</span></code> attribute on all source files. Valid values: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bytesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Limits the bandwidth utilized. For example, to set a maximum of 1 MB, set this value to <code class="docutils literal notranslate"><span class="pre">1048576</span></code>. Value values: <code class="docutils literal notranslate"><span class="pre">-1</span></code> or greater. Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code> (unlimited).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Group identifier of the file’s owners. Valid values: <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>, <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code> (preserve integer value of the ID).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mtime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A file metadata that indicates the last time a file was modified (written to) before the sync <code class="docutils literal notranslate"><span class="pre">PREPARING</span></code> phase. Value values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">posixPermissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file. Valid values: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preserveDeletedFiles</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether files deleted in the source should be removed or preserved in the destination file system. Valid values: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>, <code class="docutils literal notranslate"><span class="pre">REMOVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preserveDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code> (ignore special devices).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User identifier of the file’s owners. Valid values: <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>, <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code> (preserve integer value of the ID).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown</a>.</p>
 </div></blockquote>
@@ -488,6 +560,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.Task.options">
 <code class="sig-name descname">options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.Task.options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">atime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, the DataSync Task attempts to preserve the original (that is, the version before sync <code class="docutils literal notranslate"><span class="pre">PREPARING</span></code> phase) <code class="docutils literal notranslate"><span class="pre">atime</span></code> attribute on all source files. Valid values: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bytesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Limits the bandwidth utilized. For example, to set a maximum of 1 MB, set this value to <code class="docutils literal notranslate"><span class="pre">1048576</span></code>. Value values: <code class="docutils literal notranslate"><span class="pre">-1</span></code> or greater. Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code> (unlimited).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Group identifier of the file’s owners. Valid values: <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>, <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code> (preserve integer value of the ID).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mtime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A file metadata that indicates the last time a file was modified (written to) before the sync <code class="docutils literal notranslate"><span class="pre">PREPARING</span></code> phase. Value values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">posixPermissions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file. Valid values: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preserveDeletedFiles</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether files deleted in the source should be removed or preserved in the destination file system. Valid values: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>, <code class="docutils literal notranslate"><span class="pre">REMOVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preserveDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code> (ignore special devices).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - User identifier of the file’s owners. Valid values: <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>, <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code> (preserve integer value of the ID).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -506,17 +589,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.Task.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cloudwatch_log_group_arn=None</em>, <em class="sig-param">destination_location_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">source_location_arn=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.Task.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Task resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of the DataSync Task.
-:param pulumi.Input[str] cloudwatch_log_group_arn: Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
-:param pulumi.Input[str] destination_location_arn: Amazon Resource Name (ARN) of destination DataSync Location.
-:param pulumi.Input[str] name: Name of the DataSync Task.
-:param pulumi.Input[dict] options: Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
-:param pulumi.Input[str] source_location_arn: Amazon Resource Name (ARN) of source DataSync Location.
-:param pulumi.Input[dict] tags: Key-value pairs of resource tags to assign to the DataSync Task.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the DataSync Task.</p></li>
+<li><p><strong>cloudwatch_log_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.</p></li>
+<li><p><strong>destination_location_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of destination DataSync Location.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the DataSync Task.</p></li>
+<li><p><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.</p></li>
+<li><p><strong>source_location_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of source DataSync Location.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Task.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">atime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, the DataSync Task attempts to preserve the original (that is, the version before sync <code class="docutils literal notranslate"><span class="pre">PREPARING</span></code> phase) <code class="docutils literal notranslate"><span class="pre">atime</span></code> attribute on all source files. Valid values: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bytesPerSecond</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Limits the bandwidth utilized. For example, to set a maximum of 1 MB, set this value to <code class="docutils literal notranslate"><span class="pre">1048576</span></code>. Value values: <code class="docutils literal notranslate"><span class="pre">-1</span></code> or greater. Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code> (unlimited).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Group identifier of the file’s owners. Valid values: <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>, <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code> (preserve integer value of the ID).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mtime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A file metadata that indicates the last time a file was modified (written to) before the sync <code class="docutils literal notranslate"><span class="pre">PREPARING</span></code> phase. Value values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">posixPermissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file. Valid values: <code class="docutils literal notranslate"><span class="pre">BEST_EFFORT</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preserveDeletedFiles</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether files deleted in the source should be removed or preserved in the destination file system. Valid values: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>, <code class="docutils literal notranslate"><span class="pre">REMOVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preserveDevices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">PRESERVE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code> (ignore special devices).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - User identifier of the file’s owners. Valid values: <code class="docutils literal notranslate"><span class="pre">BOTH</span></code>, <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">NONE</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">INT_VALUE</span></code> (preserve integer value of the ID).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">POINT_IN_TIME_CONSISTENT</span></code>.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown</a>.</p>
 </div></blockquote>

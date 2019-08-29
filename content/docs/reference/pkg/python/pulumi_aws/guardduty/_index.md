@@ -52,13 +52,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.guardduty.Detector.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">enable=None</em>, <em class="sig-param">finding_publishing_frequency=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.Detector.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Detector resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_id: The AWS account ID of the GuardDuty detector
-:param pulumi.Input[bool] enable: Enable monitoring and feedback reporting. Setting to <code class="docutils literal notranslate"><span class="pre">false</span></code> is equivalent to “suspending” GuardDuty. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] finding_publishing_frequency: Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty master account and cannot be modified, otherwise defaults to <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. For standalone and GuardDuty master accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and master accounts: <code class="docutils literal notranslate"><span class="pre">FIFTEEN_MINUTES</span></code>, <code class="docutils literal notranslate"><span class="pre">ONE_HOUR</span></code>, <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency">AWS Documentation</a> for more information.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the GuardDuty detector</p></li>
+<li><p><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable monitoring and feedback reporting. Setting to <code class="docutils literal notranslate"><span class="pre">false</span></code> is equivalent to “suspending” GuardDuty. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>finding_publishing_frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty master account and cannot be modified, otherwise defaults to <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. For standalone and GuardDuty master accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and master accounts: <code class="docutils literal notranslate"><span class="pre">FIFTEEN_MINUTES</span></code>, <code class="docutils literal notranslate"><span class="pre">ONE_HOUR</span></code>, <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency">AWS Documentation</a> for more information.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_detector.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_detector.html.markdown</a>.</p>
 </div></blockquote>
@@ -159,15 +166,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.guardduty.IPSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activate=None</em>, <em class="sig-param">detector_id=None</em>, <em class="sig-param">format=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.IPSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IPSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] activate: Specifies whether GuardDuty is to start using the uploaded IPSet.
-:param pulumi.Input[str] detector_id: The detector ID of the GuardDuty.
-:param pulumi.Input[str] format: The format of the file that contains the IPSet. Valid values: <code class="docutils literal notranslate"><span class="pre">TXT</span></code> | <code class="docutils literal notranslate"><span class="pre">STIX</span></code> | <code class="docutils literal notranslate"><span class="pre">OTX_CSV</span></code> | <code class="docutils literal notranslate"><span class="pre">ALIEN_VAULT</span></code> | <code class="docutils literal notranslate"><span class="pre">PROOF_POINT</span></code> | <code class="docutils literal notranslate"><span class="pre">FIRE_EYE</span></code>
-:param pulumi.Input[str] location: The URI of the file that contains the IPSet.
-:param pulumi.Input[str] name: The friendly name to identify the IPSet.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>activate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether GuardDuty is to start using the uploaded IPSet.</p></li>
+<li><p><strong>detector_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detector ID of the GuardDuty.</p></li>
+<li><p><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the file that contains the IPSet. Valid values: <code class="docutils literal notranslate"><span class="pre">TXT</span></code> | <code class="docutils literal notranslate"><span class="pre">STIX</span></code> | <code class="docutils literal notranslate"><span class="pre">OTX_CSV</span></code> | <code class="docutils literal notranslate"><span class="pre">ALIEN_VAULT</span></code> | <code class="docutils literal notranslate"><span class="pre">PROOF_POINT</span></code> | <code class="docutils literal notranslate"><span class="pre">FIRE_EYE</span></code></p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the file that contains the IPSet.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name to identify the IPSet.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_ipset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_ipset.html.markdown</a>.</p>
 </div></blockquote>
@@ -244,12 +257,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.guardduty.InviteAccepter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">detector_id=None</em>, <em class="sig-param">master_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.InviteAccepter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InviteAccepter resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] detector_id: The detector ID of the member GuardDuty account.
-:param pulumi.Input[str] master_account_id: AWS account ID for master account.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>detector_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detector ID of the member GuardDuty account.</p></li>
+<li><p><strong>master_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID for master account.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_invite_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_invite_accepter.html.markdown</a>.</p>
 </div></blockquote>
@@ -360,17 +379,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.guardduty.Member.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">detector_id=None</em>, <em class="sig-param">disable_email_notification=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">invitation_message=None</em>, <em class="sig-param">invite=None</em>, <em class="sig-param">relationship_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.Member.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Member resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_id: AWS account ID for member account.
-:param pulumi.Input[str] detector_id: The detector ID of the GuardDuty account where you want to create member accounts.
-:param pulumi.Input[bool] disable_email_notification: Boolean whether an email notification is sent to the accounts. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] email: Email address for member account.
-:param pulumi.Input[str] invitation_message: Message for invitation.
-:param pulumi.Input[bool] invite: Boolean whether to invite the account to GuardDuty as a member. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. To detect if an invitation needs to be (re-)sent, the this provider state value is <code class="docutils literal notranslate"><span class="pre">true</span></code> based on a <code class="docutils literal notranslate"><span class="pre">relationship_status</span></code> of <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Invited</span></code>, or <code class="docutils literal notranslate"><span class="pre">EmailVerificationInProgress</span></code>.
-:param pulumi.Input[str] relationship_status: The status of the relationship between the member account and its master account. More information can be found in <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html">Amazon GuardDuty API Reference</a>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID for member account.</p></li>
+<li><p><strong>detector_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detector ID of the GuardDuty account where you want to create member accounts.</p></li>
+<li><p><strong>disable_email_notification</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether an email notification is sent to the accounts. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Email address for member account.</p></li>
+<li><p><strong>invitation_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Message for invitation.</p></li>
+<li><p><strong>invite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether to invite the account to GuardDuty as a member. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. To detect if an invitation needs to be (re-)sent, the this provider state value is <code class="docutils literal notranslate"><span class="pre">true</span></code> based on a <code class="docutils literal notranslate"><span class="pre">relationship_status</span></code> of <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Invited</span></code>, or <code class="docutils literal notranslate"><span class="pre">EmailVerificationInProgress</span></code>.</p></li>
+<li><p><strong>relationship_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The status of the relationship between the member account and its master account. More information can be found in <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html">Amazon GuardDuty API Reference</a>.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_member.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_member.html.markdown</a>.</p>
 </div></blockquote>
@@ -471,15 +497,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.guardduty.ThreatIntelSet.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activate=None</em>, <em class="sig-param">detector_id=None</em>, <em class="sig-param">format=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.ThreatIntelSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ThreatIntelSet resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] activate: Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
-:param pulumi.Input[str] detector_id: The detector ID of the GuardDuty.
-:param pulumi.Input[str] format: The format of the file that contains the ThreatIntelSet. Valid values: <code class="docutils literal notranslate"><span class="pre">TXT</span></code> | <code class="docutils literal notranslate"><span class="pre">STIX</span></code> | <code class="docutils literal notranslate"><span class="pre">OTX_CSV</span></code> | <code class="docutils literal notranslate"><span class="pre">ALIEN_VAULT</span></code> | <code class="docutils literal notranslate"><span class="pre">PROOF_POINT</span></code> | <code class="docutils literal notranslate"><span class="pre">FIRE_EYE</span></code>
-:param pulumi.Input[str] location: The URI of the file that contains the ThreatIntelSet.
-:param pulumi.Input[str] name: The friendly name to identify the ThreatIntelSet.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>activate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.</p></li>
+<li><p><strong>detector_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detector ID of the GuardDuty.</p></li>
+<li><p><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the file that contains the ThreatIntelSet. Valid values: <code class="docutils literal notranslate"><span class="pre">TXT</span></code> | <code class="docutils literal notranslate"><span class="pre">STIX</span></code> | <code class="docutils literal notranslate"><span class="pre">OTX_CSV</span></code> | <code class="docutils literal notranslate"><span class="pre">ALIEN_VAULT</span></code> | <code class="docutils literal notranslate"><span class="pre">PROOF_POINT</span></code> | <code class="docutils literal notranslate"><span class="pre">FIRE_EYE</span></code></p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the file that contains the ThreatIntelSet.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name to identify the ThreatIntelSet.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_threatintelset.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/guardduty_threatintelset.html.markdown</a>.</p>
 </div></blockquote>

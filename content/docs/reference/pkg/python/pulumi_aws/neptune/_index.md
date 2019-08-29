@@ -226,38 +226,44 @@ phase because a modification has not yet taken place. You can use the
 <dt id="pulumi_aws.neptune.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">backup_retention_period=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">cluster_identifier_prefix=None</em>, <em class="sig-param">cluster_members=None</em>, <em class="sig-param">cluster_resource_id=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">final_snapshot_identifier=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">iam_database_authentication_enabled=None</em>, <em class="sig-param">iam_roles=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">neptune_cluster_parameter_group_name=None</em>, <em class="sig-param">neptune_subnet_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">preferred_backup_window=None</em>, <em class="sig-param">preferred_maintenance_window=None</em>, <em class="sig-param">reader_endpoint=None</em>, <em class="sig-param">replication_source_identifier=None</em>, <em class="sig-param">skip_final_snapshot=None</em>, <em class="sig-param">snapshot_identifier=None</em>, <em class="sig-param">storage_encrypted=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] apply_immediately: Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] arn: The Neptune Cluster Amazon Resource Name (ARN)
-:param pulumi.Input[list] availability_zones: A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.
-:param pulumi.Input[float] backup_retention_period: The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code>
-:param pulumi.Input[str] cluster_identifier: The cluster identifier. If omitted, this provider will assign a random, unique identifier.
-:param pulumi.Input[str] cluster_identifier_prefix: Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.
-:param pulumi.Input[list] cluster_members: List of Neptune Instances that are a part of this cluster
-:param pulumi.Input[str] cluster_resource_id: The Neptune Cluster Resource ID
-:param pulumi.Input[str] endpoint: The DNS address of the Neptune instance
-:param pulumi.Input[str] engine: The name of the database engine to be used for this Neptune cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.
-:param pulumi.Input[str] engine_version: The database engine version.
-:param pulumi.Input[str] final_snapshot_identifier: The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.
-:param pulumi.Input[str] hosted_zone_id: The Route53 Hosted Zone ID of the endpoint
-:param pulumi.Input[bool] iam_database_authentication_enabled: Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
-:param pulumi.Input[list] iam_roles: A List of ARNs for the IAM roles to associate to the Neptune Cluster.
-:param pulumi.Input[str] kms_key_arn: The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">storage_encrypted</span></code> needs to be set to true.
-:param pulumi.Input[str] neptune_cluster_parameter_group_name: A cluster parameter group to associate with the cluster.
-:param pulumi.Input[str] neptune_subnet_group_name: A Neptune subnet group to associate with this Neptune instance.
-:param pulumi.Input[float] port: The port on which the Neptune accepts connections. Default is <code class="docutils literal notranslate"><span class="pre">8182</span></code>.
-:param pulumi.Input[str] preferred_backup_window: The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
-:param pulumi.Input[str] preferred_maintenance_window: The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
-:param pulumi.Input[str] reader_endpoint: A read-only endpoint for the Neptune cluster, automatically load-balanced across replicas
-:param pulumi.Input[str] replication_source_identifier: ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.
-:param pulumi.Input[bool] skip_final_snapshot: Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] snapshot_identifier: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the Neptune cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> if not specified.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the Neptune cluster.
-:param pulumi.Input[list] vpc_security_group_ids: List of VPC security groups to associate with the Cluster</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Neptune Cluster Amazon Resource Name (ARN)</p></li>
+<li><p><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.</p></li>
+<li><p><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier. If omitted, this provider will assign a random, unique identifier.</p></li>
+<li><p><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</p></li>
+<li><p><strong>cluster_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Neptune Instances that are a part of this cluster</p></li>
+<li><p><strong>cluster_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Neptune Cluster Resource ID</p></li>
+<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS address of the Neptune instance</p></li>
+<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this Neptune cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</p></li>
+<li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version.</p></li>
+<li><p><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.</p></li>
+<li><p><strong>hosted_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Route53 Hosted Zone ID of the endpoint</p></li>
+<li><p><strong>iam_database_authentication_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.</p></li>
+<li><p><strong>iam_roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A List of ARNs for the IAM roles to associate to the Neptune Cluster.</p></li>
+<li><p><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">storage_encrypted</span></code> needs to be set to true.</p></li>
+<li><p><strong>neptune_cluster_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A cluster parameter group to associate with the cluster.</p></li>
+<li><p><strong>neptune_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Neptune subnet group to associate with this Neptune instance.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which the Neptune accepts connections. Default is <code class="docutils literal notranslate"><span class="pre">8182</span></code>.</p></li>
+<li><p><strong>preferred_backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00</p></li>
+<li><p><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30</p></li>
+<li><p><strong>reader_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A read-only endpoint for the Neptune cluster, automatically load-balanced across replicas</p></li>
+<li><p><strong>replication_source_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.</p></li>
+<li><p><strong>skip_final_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.</p></li>
+<li><p><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the Neptune cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> if not specified.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Neptune cluster.</p></li>
+<li><p><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC security groups to associate with the Cluster</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -487,18 +493,16 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p>
 <dt id="pulumi_aws.neptune.ClusterInstance.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">dbi_resource_id=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">identifier_prefix=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">neptune_parameter_group_name=None</em>, <em class="sig-param">neptune_subnet_group_name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">preferred_backup_window=None</em>, <em class="sig-param">preferred_maintenance_window=None</em>, <em class="sig-param">promotion_tier=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">storage_encrypted=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">writer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterInstance resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] address: The hostname of the instance. See also <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code>.
-:param pulumi.Input[bool] apply_immediately: Specifies whether any instance modifications</p>
-<blockquote>
-<div><p>are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The hostname of the instance. See also <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code>.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any instance modifications
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of neptune instance</p></li>
 <li><p><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the neptune instance is created in.</p></li>
@@ -586,6 +590,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Valid values are <code class="docutils literal notranslate"><span class="pre">immediate</span></code> and <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the neptune parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the neptune parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -623,6 +633,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.ClusterParameterGroup.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of neptune parameters to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Valid values are <code class="docutils literal notranslate"><span class="pre">immediate</span></code> and <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the neptune parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the neptune parameter.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -635,17 +650,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.ClusterParameterGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterParameterGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterParameterGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the neptune cluster parameter group.
-:param pulumi.Input[str] description: The description of the neptune cluster parameter group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] family: The family of the neptune cluster parameter group.
-:param pulumi.Input[str] name: The name of the neptune parameter.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[list] parameters: A list of neptune parameters to apply.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the neptune cluster parameter group.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the neptune cluster parameter group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the neptune cluster parameter group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the neptune parameter.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of neptune parameters to apply.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Valid values are <code class="docutils literal notranslate"><span class="pre">immediate</span></code> and <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the neptune parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the neptune parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -788,23 +815,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.ClusterSnapshot.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_storage=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">db_cluster_identifier=None</em>, <em class="sig-param">db_cluster_snapshot_arn=None</em>, <em class="sig-param">db_cluster_snapshot_identifier=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">license_model=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">snapshot_type=None</em>, <em class="sig-param">source_db_cluster_snapshot_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">storage_encrypted=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterSnapshot.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterSnapshot resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] allocated_storage: Specifies the allocated storage size in gigabytes (GB).
-:param pulumi.Input[list] availability_zones: List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
-:param pulumi.Input[str] db_cluster_identifier: The DB Cluster Identifier from which to take the snapshot.
-:param pulumi.Input[str] db_cluster_snapshot_arn: The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
-:param pulumi.Input[str] db_cluster_snapshot_identifier: The Identifier for the snapshot.
-:param pulumi.Input[str] engine: Specifies the name of the database engine.
-:param pulumi.Input[str] engine_version: Version of the database engine for this DB cluster snapshot.
-:param pulumi.Input[str] kms_key_id: If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
-:param pulumi.Input[str] license_model: License model information for the restored DB cluster.
-:param pulumi.Input[float] port: Port that the DB cluster was listening on at the time of the snapshot.
-:param pulumi.Input[str] status: The status of this DB Cluster Snapshot.
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster snapshot is encrypted.
-:param pulumi.Input[str] vpc_id: The VPC ID associated with the DB cluster snapshot.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the allocated storage size in gigabytes (GB).</p></li>
+<li><p><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.</p></li>
+<li><p><strong>db_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB Cluster Identifier from which to take the snapshot.</p></li>
+<li><p><strong>db_cluster_snapshot_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the DB Cluster Snapshot.</p></li>
+<li><p><strong>db_cluster_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Identifier for the snapshot.</p></li>
+<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the database engine.</p></li>
+<li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of the database engine for this DB cluster snapshot.</p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.</p></li>
+<li><p><strong>license_model</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License model information for the restored DB cluster.</p></li>
+<li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port that the DB cluster was listening on at the time of the snapshot.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of this DB Cluster Snapshot.</p></li>
+<li><p><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster snapshot is encrypted.</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID associated with the DB cluster snapshot.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_cluster_snapshot.html.markdown</a>.</p>
 </div></blockquote>
@@ -928,18 +961,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.EventSubscription.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">customer_aws_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">event_categories=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">sns_topic_arn=None</em>, <em class="sig-param">source_ids=None</em>, <em class="sig-param">source_type=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EventSubscription resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] enabled: A boolean flag to enable/disable the subscription. Defaults to true.
-:param pulumi.Input[list] event_categories: A list of event categories for a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> that you want to subscribe to. Run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">neptune</span> <span class="pre">describe-event-categories</span></code> to find all the event categories.
-:param pulumi.Input[str] name: The name of the Neptune event subscription. By default generated by this provider.
-:param pulumi.Input[str] name_prefix: The name of the Neptune event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[str] sns_topic_arn: The ARN of the SNS topic to send events to.
-:param pulumi.Input[list] source_ids: A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> must also be specified.
-:param pulumi.Input[str] source_type: The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable the subscription. Defaults to true.</p></li>
+<li><p><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> that you want to subscribe to. Run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">neptune</span> <span class="pre">describe-event-categories</span></code> to find all the event categories.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune event subscription. By default generated by this provider.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>sns_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic to send events to.</p></li>
+<li><p><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> must also be specified.</p></li>
+<li><p><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_event_subscription.html.markdown</a>.</p>
 </div></blockquote>
@@ -1000,6 +1039,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The apply method of the Neptune parameter. Valid values are <code class="docutils literal notranslate"><span class="pre">immediate</span></code> and <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Neptune parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the Neptune parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1031,6 +1076,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.ParameterGroup.parameters">
 <code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Neptune parameters to apply.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The apply method of the Neptune parameter. Valid values are <code class="docutils literal notranslate"><span class="pre">immediate</span></code> and <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Neptune parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the Neptune parameter.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1043,16 +1093,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.ParameterGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ParameterGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ParameterGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The Neptune parameter group Amazon Resource Name (ARN).
-:param pulumi.Input[str] description: The description of the Neptune parameter group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] family: The family of the Neptune parameter group.
-:param pulumi.Input[str] name: The name of the Neptune parameter.
-:param pulumi.Input[list] parameters: A list of Neptune parameters to apply.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Neptune parameter group Amazon Resource Name (ARN).</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Neptune parameter group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the Neptune parameter group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune parameter.</p></li>
+<li><p><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Neptune parameters to apply.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">applyMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The apply method of the Neptune parameter. Valid values are <code class="docutils literal notranslate"><span class="pre">immediate</span></code> and <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">pending-reboot</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Neptune parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the Neptune parameter.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -1156,16 +1218,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.neptune.SubnetGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.SubnetGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SubnetGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: The ARN of the neptune subnet group.
-:param pulumi.Input[str] description: The description of the neptune subnet group. Defaults to “Managed by Pulumi”.
-:param pulumi.Input[str] name: The name of the neptune subnet group. If omitted, this provider will assign a random, unique name.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[list] subnet_ids: A list of VPC subnet IDs.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the neptune subnet group.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the neptune subnet group. Defaults to “Managed by Pulumi”.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the neptune subnet group. If omitted, this provider will assign a random, unique name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC subnet IDs.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/neptune_subnet_group.html.markdown</a>.</p>
 </div></blockquote>

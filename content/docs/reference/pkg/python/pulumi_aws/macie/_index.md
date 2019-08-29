@@ -39,11 +39,17 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.macie.MemberAccountAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">member_account_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.MemberAccountAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MemberAccountAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] member_account_id: The ID of the AWS account that you want to associate with Amazon Macie as a member account.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>member_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS account that you want to associate with Amazon Macie as a member account.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -106,6 +112,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>classification_type</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">continuous</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
+The only valid value is the default value, <code class="docutils literal notranslate"><span class="pre">FULL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oneTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
+Valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> and <code class="docutils literal notranslate"><span class="pre">FULL</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code> indicating that Macie only classifies objects that are added after the association was created.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown</a>.</p>
 </div></blockquote>
@@ -119,6 +132,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.macie.S3BucketAssociation.classification_type">
 <code class="sig-name descname">classification_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.classification_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration of how Amazon Macie classifies the S3 objects.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">continuous</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
+The only valid value is the default value, <code class="docutils literal notranslate"><span class="pre">FULL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oneTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
+Valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> and <code class="docutils literal notranslate"><span class="pre">FULL</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code> indicating that Macie only classifies objects that are added after the association was created.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -137,14 +156,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.macie.S3BucketAssociation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_name=None</em>, <em class="sig-param">classification_type=None</em>, <em class="sig-param">member_account_id=None</em>, <em class="sig-param">prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.macie.S3BucketAssociation.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing S3BucketAssociation resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] bucket_name: The name of the S3 bucket that you want to associate with Amazon Macie.
-:param pulumi.Input[dict] classification_type: The configuration of how Amazon Macie classifies the S3 objects.
-:param pulumi.Input[str] member_account_id: The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If <code class="docutils literal notranslate"><span class="pre">member_account_id</span></code> isn’t specified, the action associates specified S3 resources with Macie for the current master account.
-:param pulumi.Input[str] prefix: Object key prefix identifying one or more S3 objects to which the association applies.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the S3 bucket that you want to associate with Amazon Macie.</p></li>
+<li><p><strong>classification_type</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration of how Amazon Macie classifies the S3 objects.</p></li>
+<li><p><strong>member_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If <code class="docutils literal notranslate"><span class="pre">member_account_id</span></code> isn’t specified, the action associates specified S3 resources with Macie for the current master account.</p></li>
+<li><p><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Object key prefix identifying one or more S3 objects to which the association applies.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>classification_type</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">continuous</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
+The only valid value is the default value, <code class="docutils literal notranslate"><span class="pre">FULL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oneTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
+Valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> and <code class="docutils literal notranslate"><span class="pre">FULL</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code> indicating that Macie only classifies objects that are added after the association was created.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown</a>.</p>
 </div></blockquote>

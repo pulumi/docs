@@ -44,12 +44,18 @@ The resource can be an Amazon CloudFront distribution, Elastic Load Balancing lo
 <dt id="pulumi_aws.shield.Protection.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.shield.Protection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Protection resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: A friendly name for the Protection you are creating.
-:param pulumi.Input[str] resource_arn: The ARN (Amazon Resource Name) of the resource to be protected.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for the Protection you are creating.</p></li>
+<li><p><strong>resource_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN (Amazon Resource Name) of the resource to be protected.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/shield_protection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/shield_protection.html.markdown</a>.</p>
 </div></blockquote>

@@ -143,6 +143,95 @@ for more information about the EMR-managed security group rules.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>bootstrap_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>core_instance_group</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaling_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+</ul>
+<p>The <strong>ec2_attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalMasterSecurityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalSlaveSecurityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emrManagedMasterSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emrManagedSlaveSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccessSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>instance_groups</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaling_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+</ul>
+<p>The <strong>kerberos_attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adDomainJoinPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adDomainJoinUser</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crossRealmTrustPrincipalPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kdcAdminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>master_instance_group</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+</ul>
+<p>The <strong>steps</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actionOnFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hadoopJarStep</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jar</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -168,6 +257,11 @@ for more information about the EMR-managed security group rules.</p>
 <dt id="pulumi_aws.emr.Cluster.bootstrap_actions">
 <code class="sig-name descname">bootstrap_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.bootstrap_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job flow</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -192,6 +286,22 @@ for more information about the EMR-managed security group rules.</p>
 <dt id="pulumi_aws.emr.Cluster.core_instance_group">
 <code class="sig-name descname">core_instance_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.core_instance_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block to use an <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Group</a> for the <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core">core node type</a>. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">core_instance_count</span></code> argument, <code class="docutils literal notranslate"><span class="pre">core_instance_type</span></code> argument, or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaling_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job flow</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -216,12 +326,39 @@ for more information about the EMR-managed security group rules.</p>
 <dt id="pulumi_aws.emr.Cluster.ec2_attributes">
 <code class="sig-name descname">ec2_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.ec2_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attributes for the EC2 instances running the job flow. Defined below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalMasterSecurityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalSlaveSecurityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emrManagedMasterSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emrManagedSlaveSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccessSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.emr.Cluster.instance_groups">
 <code class="sig-name descname">instance_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.instance_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use the <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> configuration block, <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration block and <cite>``emr.InstanceGroup`</cite> resource(s) &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html</a>&gt;`_ instead. A list of <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> objects for each instance group in the cluster. Exactly one of <code class="docutils literal notranslate"><span class="pre">master_instance_type</span></code> and <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> must be specified. If <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> is set, then it must contain a configuration block for at least the <code class="docutils literal notranslate"><span class="pre">MASTER</span></code> instance group type (as well as any additional instance groups). Cannot be specified if <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration blocks are set. Defined below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaling_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceRole</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job flow</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -234,6 +371,13 @@ for more information about the EMR-managed security group rules.</p>
 <dt id="pulumi_aws.emr.Cluster.kerberos_attributes">
 <code class="sig-name descname">kerberos_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.kerberos_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Kerberos configuration for the cluster. Defined below</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adDomainJoinPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adDomainJoinUser</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crossRealmTrustPrincipalPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kdcAdminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realm</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -246,6 +390,21 @@ for more information about the EMR-managed security group rules.</p>
 <dt id="pulumi_aws.emr.Cluster.master_instance_group">
 <code class="sig-name descname">master_instance_group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.master_instance_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block to use an <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Group</a> for the <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master">master node type</a>. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">master_instance_type</span></code> argument or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job flow</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -297,6 +456,18 @@ for more information about the EMR-managed security group rules.</p>
 <dt id="pulumi_aws.emr.Cluster.steps">
 <code class="sig-name descname">steps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.Cluster.steps" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize the <a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html">lifecycle configuration block</a> with <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> if other steps are being managed outside of this provider. This argument is processed in <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">attribute-as-blocks mode</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actionOnFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hadoopJarStep</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jar</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job flow</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -321,29 +492,37 @@ for more information about the EMR-managed security group rules.</p>
 <dt id="pulumi_aws.emr.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_info=None</em>, <em class="sig-param">applications=None</em>, <em class="sig-param">autoscaling_role=None</em>, <em class="sig-param">bootstrap_actions=None</em>, <em class="sig-param">cluster_state=None</em>, <em class="sig-param">configurations=None</em>, <em class="sig-param">configurations_json=None</em>, <em class="sig-param">core_instance_count=None</em>, <em class="sig-param">core_instance_group=None</em>, <em class="sig-param">core_instance_type=None</em>, <em class="sig-param">custom_ami_id=None</em>, <em class="sig-param">ebs_root_volume_size=None</em>, <em class="sig-param">ec2_attributes=None</em>, <em class="sig-param">instance_groups=None</em>, <em class="sig-param">keep_job_flow_alive_when_no_steps=None</em>, <em class="sig-param">kerberos_attributes=None</em>, <em class="sig-param">log_uri=None</em>, <em class="sig-param">master_instance_group=None</em>, <em class="sig-param">master_instance_type=None</em>, <em class="sig-param">master_public_dns=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">release_label=None</em>, <em class="sig-param">scale_down_behavior=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">service_role=None</em>, <em class="sig-param">steps=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">termination_protection=None</em>, <em class="sig-param">visible_to_all_users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] additional_info: A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-:param pulumi.Input[list] applications: A list of applications for the cluster. Valid values are: <code class="docutils literal notranslate"><span class="pre">Flink</span></code>, <code class="docutils literal notranslate"><span class="pre">Hadoop</span></code>, <code class="docutils literal notranslate"><span class="pre">Hive</span></code>, <code class="docutils literal notranslate"><span class="pre">Mahout</span></code>, <code class="docutils literal notranslate"><span class="pre">Pig</span></code>, <code class="docutils literal notranslate"><span class="pre">Spark</span></code>, and <code class="docutils literal notranslate"><span class="pre">JupyterHub</span></code> (as of EMR 5.14.0). Case insensitive
-:param pulumi.Input[str] autoscaling_role: An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
-:param pulumi.Input[list] bootstrap_actions: List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
-:param pulumi.Input[str] configurations: List of configurations supplied for the EMR cluster you are creating
-:param pulumi.Input[str] configurations_json: A JSON string for supplying list of configurations for the EMR cluster.
-:param pulumi.Input[float] core_instance_count: Use the <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">instance_count</span></code> argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster’s master node and use the remainder of the nodes (<code class="docutils literal notranslate"><span class="pre">core_instance_count</span></code>-1) as core nodes. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set. Default <code class="docutils literal notranslate"><span class="pre">1</span></code>
-:param pulumi.Input[dict] core_instance_group: Configuration block to use an <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Group</a> for the <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core">core node type</a>. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">core_instance_count</span></code> argument, <code class="docutils literal notranslate"><span class="pre">core_instance_type</span></code> argument, or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set. Detailed below.
-:param pulumi.Input[str] core_instance_type: Use the <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">instance_type</span></code> argument instead. The EC2 instance type of the slave nodes. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set.
-:param pulumi.Input[str] custom_ami_id: A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
-:param pulumi.Input[float] ebs_root_volume_size: Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
-:param pulumi.Input[dict] ec2_attributes: Attributes for the EC2 instances running the job flow. Defined below
-:param pulumi.Input[list] instance_groups: Use the <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> configuration block, <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration block and <cite>``emr.InstanceGroup`</cite> resource(s) &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html</a>&gt;`_ instead. A list of <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> objects for each instance group in the cluster. Exactly one of <code class="docutils literal notranslate"><span class="pre">master_instance_type</span></code> and <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> must be specified. If <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> is set, then it must contain a configuration block for at least the <code class="docutils literal notranslate"><span class="pre">MASTER</span></code> instance group type (as well as any additional instance groups). Cannot be specified if <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration blocks are set. Defined below
-:param pulumi.Input[bool] keep_job_flow_alive_when_no_steps: Switch on/off run cluster with no steps or when all steps are complete (default is on)
-:param pulumi.Input[dict] kerberos_attributes: Kerberos configuration for the cluster. Defined below
-:param pulumi.Input[str] log_uri: S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
-:param pulumi.Input[dict] master_instance_group: Configuration block to use an <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Group</a> for the <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master">master node type</a>. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">master_instance_type</span></code> argument or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set. Detailed below.
-:param pulumi.Input[str] master_instance_type: Use the <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">instance_type</span></code> argument instead. The EC2 instance type of the master node. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set.
-:param pulumi.Input[str] master_public_dns: The public DNS name of the master EC2 instance.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>additional_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.</p></li>
+<li><p><strong>applications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of applications for the cluster. Valid values are: <code class="docutils literal notranslate"><span class="pre">Flink</span></code>, <code class="docutils literal notranslate"><span class="pre">Hadoop</span></code>, <code class="docutils literal notranslate"><span class="pre">Hive</span></code>, <code class="docutils literal notranslate"><span class="pre">Mahout</span></code>, <code class="docutils literal notranslate"><span class="pre">Pig</span></code>, <code class="docutils literal notranslate"><span class="pre">Spark</span></code>, and <code class="docutils literal notranslate"><span class="pre">JupyterHub</span></code> (as of EMR 5.14.0). Case insensitive</p></li>
+<li><p><strong>autoscaling_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.</p></li>
+<li><p><strong>bootstrap_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below</p></li>
+<li><p><strong>configurations</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – List of configurations supplied for the EMR cluster you are creating</p></li>
+<li><p><strong>configurations_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON string for supplying list of configurations for the EMR cluster.</p></li>
+<li><p><strong>core_instance_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Use the <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">instance_count</span></code> argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster’s master node and use the remainder of the nodes (<code class="docutils literal notranslate"><span class="pre">core_instance_count</span></code>-1) as core nodes. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p><strong>core_instance_group</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration block to use an <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Group</a> for the <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core">core node type</a>. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">core_instance_count</span></code> argument, <code class="docutils literal notranslate"><span class="pre">core_instance_type</span></code> argument, or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set. Detailed below.</p>
+</p></li>
+<li><p><strong>core_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Use the <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">instance_type</span></code> argument instead. The EC2 instance type of the slave nodes. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set.</p></li>
+<li><p><strong>custom_ami_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.</p></li>
+<li><p><strong>ebs_root_volume_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.</p></li>
+<li><p><strong>ec2_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Attributes for the EC2 instances running the job flow. Defined below</p></li>
+<li><p><strong>instance_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Use the <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> configuration block, <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration block and <cite>``emr.InstanceGroup`</cite> resource(s) &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html">https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html</a>&gt;`_ instead. A list of <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> objects for each instance group in the cluster. Exactly one of <code class="docutils literal notranslate"><span class="pre">master_instance_type</span></code> and <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> must be specified. If <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> is set, then it must contain a configuration block for at least the <code class="docutils literal notranslate"><span class="pre">MASTER</span></code> instance group type (as well as any additional instance groups). Cannot be specified if <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">core_instance_group</span></code> configuration blocks are set. Defined below</p></li>
+<li><p><strong>keep_job_flow_alive_when_no_steps</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Switch on/off run cluster with no steps or when all steps are complete (default is on)</p></li>
+<li><p><strong>kerberos_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Kerberos configuration for the cluster. Defined below</p></li>
+<li><p><strong>log_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created</p></li>
+<li><p><strong>master_instance_group</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Configuration block to use an <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups">Instance Group</a> for the <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master">master node type</a>. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">master_instance_type</span></code> argument or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set. Detailed below.</p>
+</p></li>
+<li><p><strong>master_instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Use the <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">instance_type</span></code> argument instead. The EC2 instance type of the master node. Cannot be specified if <code class="docutils literal notranslate"><span class="pre">master_instance_group</span></code> or <code class="docutils literal notranslate"><span class="pre">instance_group</span></code> configuration blocks are set.</p></li>
+<li><p><strong>master_public_dns</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public DNS name of the master EC2 instance.</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
 </pre></div>
 </div>
@@ -363,6 +542,95 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>bootstrap_actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>core_instance_group</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaling_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+</ul>
+<p>The <strong>ec2_attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalMasterSecurityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalSlaveSecurityGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emrManagedMasterSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emrManagedSlaveSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceAccessSecurityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>instance_groups</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoscaling_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+</ul>
+<p>The <strong>kerberos_attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adDomainJoinPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adDomainJoinUser</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crossRealmTrustPrincipalPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kdcAdminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realm</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>master_instance_group</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bid_price</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebs_configs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the EMR Cluster</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+</ul>
+<p>The <strong>steps</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">actionOnFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hadoopJarStep</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jar</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mainClass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job flow</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -433,6 +701,13 @@ this provider will resize any Instance Group to zero when destroying the resourc
 </ul>
 </dd>
 </dl>
+<p>The <strong>ebs_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of I/O operations per second (IOPS) that the volume supports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The volume type. Valid options are ‘gp2’, ‘io1’ and ‘standard’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of EBS Volumes to attach per instance.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -458,6 +733,12 @@ this provider will resize any Instance Group to zero when destroying the resourc
 <dt id="pulumi_aws.emr.InstanceGroup.ebs_configs">
 <code class="sig-name descname">ebs_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup.ebs_configs" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">ebs_config</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of I/O operations per second (IOPS) that the volume supports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The volume type. Valid options are ‘gp2’, ‘io1’ and ‘standard’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of EBS Volumes to attach per instance.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -488,18 +769,32 @@ this provider will resize any Instance Group to zero when destroying the resourc
 <dt id="pulumi_aws.emr.InstanceGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscaling_policy=None</em>, <em class="sig-param">bid_price=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">ebs_configs=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">instance_count=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">running_instance_count=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing InstanceGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] autoscaling_policy: The autoscaling policy document. This is a JSON formatted string. See <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html">EMR Auto Scaling</a>
-:param pulumi.Input[str] bid_price: If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
-:param pulumi.Input[str] cluster_id: ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
-:param pulumi.Input[list] ebs_configs: One or more <code class="docutils literal notranslate"><span class="pre">ebs_config</span></code> blocks as defined below. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] ebs_optimized: Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
-:param pulumi.Input[float] instance_count: target number of instances for the instance group. defaults to 0.
-:param pulumi.Input[str] instance_type: The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Human friendly name given to the instance group. Changing this forces a new resource to be created.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>autoscaling_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The autoscaling policy document. This is a JSON formatted string. See <a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html">EMR Auto Scaling</a></p>
+</p></li>
+<li><p><strong>bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>ebs_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">ebs_config</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>instance_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – target number of instances for the instance group. defaults to 0.</p></li>
+<li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly name given to the instance group. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>ebs_configs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of I/O operations per second (IOPS) that the volume supports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The volume type. Valid options are ‘gp2’, ‘io1’ and ‘standard’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumesPerInstance</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of EBS Volumes to attach per instance.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_instance_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -591,17 +886,21 @@ prefix. Conflicts with <code class="docutils literal notranslate"><span class="p
 <dt id="pulumi_aws.emr.SecurityConfiguration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.SecurityConfiguration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecurityConfiguration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] configuration: A JSON formatted Security Configuration
-:param pulumi.Input[str] creation_date: Date the Security Configuration was created
-:param pulumi.Input[str] name: The name of the EMR Security Configuration. By default generated by this provider.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified</p>
-<blockquote>
-<div><p>prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON formatted Security Configuration</p></li>
+<li><p><strong>creation_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Date the Security Configuration was created</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the EMR Security Configuration. By default generated by this provider.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown</a>.</p>
 </div></blockquote>

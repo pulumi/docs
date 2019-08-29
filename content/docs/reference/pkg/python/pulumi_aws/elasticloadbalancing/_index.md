@@ -63,19 +63,17 @@ should be attached.</p>
 <dt id="pulumi_aws.elasticloadbalancing.AppCookieStickinessPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cookie_name=None</em>, <em class="sig-param">lb_port=None</em>, <em class="sig-param">load_balancer=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.AppCookieStickinessPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AppCookieStickinessPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cookie_name: The application cookie whose lifetime the ELB’s cookie should follow.
-:param pulumi.Input[float] lb_port: The load balancer port to which the policy</p>
-<blockquote>
-<div><p>should be applied. This must be an active listener on the load
-balancer.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cookie_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The application cookie whose lifetime the ELB’s cookie should follow.</p></li>
+<li><p><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancer port to which the policy
+should be applied. This must be an active listener on the load
+balancer.</p></li>
 <li><p><strong>load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of load balancer to which the policy
 should be attached.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stickiness policy.</p></li>
@@ -166,12 +164,18 @@ conflict and will overwrite attachments.</p>
 <dt id="pulumi_aws.elasticloadbalancing.Attachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">elb=None</em>, <em class="sig-param">instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.Attachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Attachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] elb: The name of the ELB.
-:param pulumi.Input[str] instance: Instance ID to place in the ELB pool.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>elb</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ELB.</p></li>
+<li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance ID to place in the ELB pool.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_attachment_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_attachment_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -312,13 +316,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticloadbalancing.ListenerPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">load_balancer_name=None</em>, <em class="sig-param">load_balancer_port=None</em>, <em class="sig-param">policy_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.ListenerPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ListenerPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] load_balancer_name: The load balancer to attach the policy to.
-:param pulumi.Input[float] load_balancer_port: The load balancer listener port to apply the policy to.
-:param pulumi.Input[list] policy_names: List of Policy Names to apply to the backend server.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>load_balancer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to attach the policy to.</p></li>
+<li><p><strong>load_balancer_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancer listener port to apply the policy to.</p></li>
+<li><p><strong>policy_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Policy Names to apply to the backend server.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_listener_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_listener_policy_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -409,6 +419,38 @@ instances. Use this for Classic or Default VPC only.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>access_logs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket name to store the logs in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket prefix. Logs are stored in the root if not configured.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">access_logs</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The interval between checks.</p></li>
+</ul>
+<p>The <strong>health_check</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of checks before the instance is declared healthy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The interval between checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The target of the check. Valid pattern is “${PROTOCOL}:${PORT}${PATH}”, where PROTOCOL
+values are:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> - PORT and PATH are required</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TCP</span></code>, <code class="docutils literal notranslate"><span class="pre">SSL</span></code> - PORT is required, PATH is not supported</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The length of time before the check times out.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of checks before the instance is declared unhealthy.</p></li>
+</ul>
+<p>The <strong>listeners</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on the instance to route to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to use to the instance. Valid
+values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, or <code class="docutils literal notranslate"><span class="pre">SSL</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lb_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port to listen on for the load balancer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lbProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to listen on. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>,
+<code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, or <code class="docutils literal notranslate"><span class="pre">SSL</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SSL certificate you have
+uploaded to AWS IAM. <strong>Note ECDSA-specific restrictions below.  Only valid when ``lb_protocol`` is either HTTPS or SSL</strong></p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -416,6 +458,12 @@ instances. Use this for Classic or Default VPC only.</p></li>
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.access_logs">
 <code class="sig-name descname">access_logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.access_logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>An Access Logs block. Access Logs documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The S3 bucket name to store the logs in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The S3 bucket prefix. Logs are stored in the root if not configured.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">access_logs</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The interval between checks.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -458,6 +506,19 @@ instances. Use this for Classic or Default VPC only.</p></li>
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.health_check">
 <code class="sig-name descname">health_check</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.health_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>A health_check block. Health Check documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of checks before the instance is declared healthy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The interval between checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The target of the check. Valid pattern is “${PROTOCOL}:${PORT}${PATH}”, where PROTOCOL
+values are:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> - PORT and PATH are required</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TCP</span></code>, <code class="docutils literal notranslate"><span class="pre">SSL</span></code> - PORT is required, PATH is not supported</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The length of time before the check times out.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of checks before the instance is declared unhealthy.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -482,6 +543,16 @@ instances. Use this for Classic or Default VPC only.</p></li>
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.listeners">
 <code class="sig-name descname">listeners</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.listeners" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of listener blocks. Listeners documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port on the instance to route to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to use to the instance. Valid
+values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, or <code class="docutils literal notranslate"><span class="pre">SSL</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lb_port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port to listen on for the load balancer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lbProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to listen on. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>,
+<code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, or <code class="docutils literal notranslate"><span class="pre">SSL</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an SSL certificate you have
+uploaded to AWS IAM. <strong>Note ECDSA-specific restrictions below.  Only valid when ``lb_protocol`` is either HTTPS or SSL</strong></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -542,30 +613,28 @@ instances. Only available on ELBs launched in a VPC.</p>
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancer.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_logs=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">connection_draining=None</em>, <em class="sig-param">connection_draining_timeout=None</em>, <em class="sig-param">cross_zone_load_balancing=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">health_check=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">internal=None</em>, <em class="sig-param">listeners=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">source_security_group=None</em>, <em class="sig-param">source_security_group_id=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] access_logs: An Access Logs block. Access Logs documented below.
-:param pulumi.Input[str] arn: The ARN of the ELB
-:param pulumi.Input[list] availability_zones: The AZ’s to serve traffic in.
-:param pulumi.Input[bool] connection_draining: Boolean to enable connection draining. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>
-:param pulumi.Input[float] connection_draining_timeout: The time in seconds to allow for connections to drain. Default: <code class="docutils literal notranslate"><span class="pre">300</span></code>
-:param pulumi.Input[bool] cross_zone_load_balancing: Enable cross-zone load balancing. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>
-:param pulumi.Input[str] dns_name: The DNS name of the ELB
-:param pulumi.Input[dict] health_check: A health_check block. Health Check documented below.
-:param pulumi.Input[float] idle_timeout: The time in seconds that the connection is allowed to be idle. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code>
-:param pulumi.Input[list] instances: A list of instance ids to place in the ELB pool.
-:param pulumi.Input[bool] internal: If true, ELB will be an internal ELB.
-:param pulumi.Input[list] listeners: A list of listener blocks. Listeners documented below.
-:param pulumi.Input[str] name: The name of the ELB. By default generated by this provider.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified</p>
-<blockquote>
-<div><p>prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Access Logs block. Access Logs documented below.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the ELB</p></li>
+<li><p><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The AZ’s to serve traffic in.</p></li>
+<li><p><strong>connection_draining</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean to enable connection draining. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><strong>connection_draining_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds to allow for connections to drain. Default: <code class="docutils literal notranslate"><span class="pre">300</span></code></p></li>
+<li><p><strong>cross_zone_load_balancing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable cross-zone load balancing. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p><strong>dns_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS name of the ELB</p></li>
+<li><p><strong>health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A health_check block. Health Check documented below.</p></li>
+<li><p><strong>idle_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds that the connection is allowed to be idle. Default: <code class="docutils literal notranslate"><span class="pre">60</span></code></p></li>
+<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of instance ids to place in the ELB pool.</p></li>
+<li><p><strong>internal</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, ELB will be an internal ELB.</p></li>
+<li><p><strong>listeners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of listener blocks. Listeners documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ELB. By default generated by this provider.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC</p></li>
 <li><p><strong>source_security_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group that you can use as
@@ -580,6 +649,38 @@ instances. Only available on ELBs launched in a VPC.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>access_logs</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket name to store the logs in.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 bucket prefix. Logs are stored in the root if not configured.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to enable / disable <code class="docutils literal notranslate"><span class="pre">access_logs</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The interval between checks.</p></li>
+</ul>
+<p>The <strong>health_check</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">healthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of checks before the instance is declared healthy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The interval between checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The target of the check. Valid pattern is “${PROTOCOL}:${PORT}${PATH}”, where PROTOCOL
+values are:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> - PORT and PATH are required</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TCP</span></code>, <code class="docutils literal notranslate"><span class="pre">SSL</span></code> - PORT is required, PATH is not supported</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The length of time before the check times out.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of checks before the instance is declared unhealthy.</p></li>
+</ul>
+<p>The <strong>listeners</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on the instance to route to</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to use to the instance. Valid
+values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, or <code class="docutils literal notranslate"><span class="pre">SSL</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lb_port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port to listen on for the load balancer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lbProtocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to listen on. Valid values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>,
+<code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code>, or <code class="docutils literal notranslate"><span class="pre">SSL</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an SSL certificate you have
+uploaded to AWS IAM. <strong>Note ECDSA-specific restrictions below.  Only valid when ``lb_protocol`` is either HTTPS or SSL</strong></p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -663,13 +764,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerBackendServerPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_port=None</em>, <em class="sig-param">load_balancer_name=None</em>, <em class="sig-param">policy_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerBackendServerPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancerBackendServerPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] instance_port: The instance port to apply the policy to.
-:param pulumi.Input[str] load_balancer_name: The load balancer to attach the policy to.
-:param pulumi.Input[list] policy_names: List of Policy Names to apply to the backend server.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>instance_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The instance port to apply the policy to.</p></li>
+<li><p><strong>load_balancer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to attach the policy to.</p></li>
+<li><p><strong>policy_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Policy Names to apply to the backend server.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_backend_server_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_backend_server_policy_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -768,17 +875,15 @@ should be attached.</p>
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cookie_expiration_period=None</em>, <em class="sig-param">lb_port=None</em>, <em class="sig-param">load_balancer=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancerCookieStickinessPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] cookie_expiration_period: The time period after which</p>
-<blockquote>
-<div><p>the session cookie should be considered stale, expressed in seconds.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cookie_expiration_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time period after which
+the session cookie should be considered stale, expressed in seconds.</p></li>
 <li><p><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.</p></li>
@@ -847,6 +952,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>policy_attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -860,6 +970,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerPolicy.policy_attributes">
 <code class="sig-name descname">policy_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerPolicy.policy_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Policy attribute to apply to the policy.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -878,14 +992,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticloadbalancing.LoadBalancerPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">load_balancer_name=None</em>, <em class="sig-param">policy_attributes=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">policy_type_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.LoadBalancerPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancerPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] load_balancer_name: The load balancer on which the policy is defined.
-:param pulumi.Input[list] policy_attributes: Policy attribute to apply to the policy.
-:param pulumi.Input[str] policy_name: The name of the load balancer policy.
-:param pulumi.Input[str] policy_type_name: The policy type.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>load_balancer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer on which the policy is defined.</p></li>
+<li><p><strong>policy_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Policy attribute to apply to the policy.</p></li>
+<li><p><strong>policy_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the load balancer policy.</p></li>
+<li><p><strong>policy_type_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy type.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>policy_attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/load_balancer_policy_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -948,6 +1073,11 @@ should be attached.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the attribute</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the attribute</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -955,6 +1085,10 @@ should be attached.</p></li>
 <dt id="pulumi_aws.elasticloadbalancing.SslNegotiationPolicy.attributes">
 <code class="sig-name descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.SslNegotiationPolicy.attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>An SSL Negotiation policy attribute. Each has two properties:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the attribute</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of the attribute</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -982,25 +1116,28 @@ should be attached.</p>
 <dt id="pulumi_aws.elasticloadbalancing.SslNegotiationPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">lb_port=None</em>, <em class="sig-param">load_balancer=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.SslNegotiationPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SslNegotiationPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] attributes: An SSL Negotiation policy attribute. Each has two properties:
-:param pulumi.Input[float] lb_port: The load balancer port to which the policy</p>
-<blockquote>
-<div><p>should be applied. This must be an active listener on the load
-balancer.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An SSL Negotiation policy attribute. Each has two properties:</p></li>
+<li><p><strong>lb_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The load balancer port to which the policy
+should be applied. This must be an active listener on the load
+balancer.</p></li>
 <li><p><strong>load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to which the policy
 should be attached.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the attribute</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the attribute</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of the attribute</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_ssl_negotiation_policy_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -1049,6 +1186,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.elasticloadbalancing.</code><code class="sig-name descname">get_hosted_zone_id</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_hosted_zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
 in a given region for the purpose of using in an AWS Route53 Alias.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS ELB HostedZoneId is desired.
+Defaults to the region from the AWS provider configuration.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -1063,6 +1206,11 @@ Application Load Balancer (ALB) or Network Load Balancer (NLB).</p>
 <p>This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The unique name of the load balancer.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_legacy.html.markdown</a>.</p>
 </div></blockquote>
@@ -1073,6 +1221,12 @@ with it, etc.</p>
 <code class="sig-prename descclassname">pulumi_aws.elasticloadbalancing.</code><code class="sig-name descname">get_service_account</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy">AWS Elastic Load Balancing Service Account</a>
 in a given region for the purpose of whitelisting in S3 bucket policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS ELB account ID is desired.
+Defaults to the region from the AWS provider configuration.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_service_account_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_service_account_legacy.html.markdown</a>.</p>
 </div></blockquote>

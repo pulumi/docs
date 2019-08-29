@@ -146,13 +146,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.ecr.LifecyclePolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.LifecyclePolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LifecyclePolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy: The policy document. This is a JSON formatted string. See more details about <a class="reference external" href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters">Policy Parameters</a> in the official AWS docs.
-:param pulumi.Input[str] registry_id: The registry ID where the repository was created.
-:param pulumi.Input[str] repository: Name of the repository to apply the policy.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy document. This is a JSON formatted string. See more details about <a class="reference external" href="http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters">Policy Parameters</a> in the official AWS docs.</p>
+</p></li>
+<li><p><strong>registry_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The registry ID where the repository was created.</p></li>
+<li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository to apply the policy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_lifecycle_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -254,16 +261,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.Repository.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">image_tag_mutability=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_url=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.Repository.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Repository resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Full ARN of the repository.
-:param pulumi.Input[str] image_tag_mutability: The tag mutability setting for the repository. Must be one of: <code class="docutils literal notranslate"><span class="pre">MUTABLE</span></code> or <code class="docutils literal notranslate"><span class="pre">IMMUTABLE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">MUTABLE</span></code>.
-:param pulumi.Input[str] name: Name of the repository.
-:param pulumi.Input[str] registry_id: The registry ID where the repository was created.
-:param pulumi.Input[str] repository_url: The URL of the repository (in the form <code class="docutils literal notranslate"><span class="pre">aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName</span></code>
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Full ARN of the repository.</p></li>
+<li><p><strong>image_tag_mutability</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tag mutability setting for the repository. Must be one of: <code class="docutils literal notranslate"><span class="pre">MUTABLE</span></code> or <code class="docutils literal notranslate"><span class="pre">IMMUTABLE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">MUTABLE</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository.</p></li>
+<li><p><strong>registry_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The registry ID where the repository was created.</p></li>
+<li><p><strong>repository_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the repository (in the form <code class="docutils literal notranslate"><span class="pre">aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName</span></code></p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown</a>.</p>
 </div></blockquote>
@@ -347,13 +360,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.RepositoryPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.RepositoryPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RepositoryPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy: The policy document. This is a JSON formatted string.
-:param pulumi.Input[str] registry_id: The registry ID where the repository was created.
-:param pulumi.Input[str] repository: Name of the repository to apply the policy.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</p></li>
+<li><p><strong>registry_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The registry ID where the repository was created.</p></li>
+<li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository to apply the policy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -398,9 +417,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_aws.ecr.get_credentials">
+<code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">get_credentials</code><span class="sig-paren">(</span><em class="sig-param">registry_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_aws.ecr.get_image">
 <code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">image_digest=None</em>, <em class="sig-param">image_tag=None</em>, <em class="sig-param">registry_id=None</em>, <em class="sig-param">repository_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_digest</strong> (<em>str</em>) – The sha256 digest of the image manifest. At least one of <code class="docutils literal notranslate"><span class="pre">image_digest</span></code> or <code class="docutils literal notranslate"><span class="pre">image_tag</span></code> must be specified.</p></li>
+<li><p><strong>image_tag</strong> (<em>str</em>) – The tag associated with this image. At least one of <code class="docutils literal notranslate"><span class="pre">image_digest</span></code> or <code class="docutils literal notranslate"><span class="pre">image_tag</span></code> must be specified.</p></li>
+<li><p><strong>registry_id</strong> (<em>str</em>) – The ID of the Registry where the repository resides.</p></li>
+<li><p><strong>repository_name</strong> (<em>str</em>) – The name of the ECR Repository.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_image.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_image.html.markdown</a>.</p>
 </div></blockquote>
@@ -410,6 +445,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ecr.get_repository">
 <code class="sig-prename descclassname">pulumi_aws.ecr.</code><code class="sig-name descname">get_repository</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecr.get_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the ECR Repository.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecr_repository.html.markdown</a>.</p>
 </div></blockquote>

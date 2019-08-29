@@ -38,7 +38,7 @@ configuration of a horizontal pod autoscaler.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L76" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L75" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -57,7 +57,7 @@ Create a autoscaling.v1.HorizontalPodAutoscaler resource with the given unique n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L59" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -68,15 +68,15 @@ Create a autoscaling.v1.HorizontalPodAutoscaler resource with the given unique n
 {{% md %}}
 
 Get the state of an existing `HorizontalPodAutoscaler` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L13" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -88,7 +88,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L70" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -115,12 +115,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L13" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -154,12 +154,12 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
 Standard object metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 {{% /md %}}
 </div>
@@ -168,12 +168,12 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerSpec'>outputs.autoscaling.v1.HorizontalPodAutoscalerSpec</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#HorizontalPodAutoscalerSpec'>HorizontalPodAutoscalerSpec</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
 behaviour of autoscaler. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status.
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
 
 {{% /md %}}
 </div>
@@ -182,7 +182,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerStatus'>outputs.autoscaling.v1.HorizontalPodAutoscalerStatus</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#HorizontalPodAutoscalerStatus'>HorizontalPodAutoscalerStatus</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -191,7 +191,7 @@ current information about the autoscaler.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscaler-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscaler.ts#L13" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -218,7 +218,7 @@ list of horizontal pod autoscaler objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L69" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L68" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -237,7 +237,7 @@ Create a autoscaling.v1.HorizontalPodAutoscalerList resource with the given uniq
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L51" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -248,15 +248,15 @@ Create a autoscaling.v1.HorizontalPodAutoscalerList resource with the given uniq
 {{% md %}}
 
 Get the state of an existing `HorizontalPodAutoscalerList` resource, as identified by `id`.
-Typically this ID  is of the form [namespace]/[name]; if [namespace] is omitted, then (per
-Kubernetes convention) the ID becomes default/[name].
+The ID is of the form `[namespace]/&lt;name&gt;`; if `namespace` is omitted, then (per
+Kubernetes convention) the ID becomes `default/&lt;name&gt;`.
 
 Pulumi will keep track of this resource using `name` as the Pulumi ID.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L13" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -268,7 +268,7 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L62" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -295,12 +295,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should
 convert recognized schemas to the latest internal value, and may reject unrecognized
 values. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L13" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
@@ -318,7 +318,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscaler'>outputs.autoscaling.v1.HorizontalPodAutoscaler</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#HorizontalPodAutoscaler'>HorizontalPodAutoscaler</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -338,7 +338,7 @@ list of horizontal pod autoscaler objects.
 Kind is a string value representing the REST resource this object represents. Servers may
 infer this from the endpoint the client submits requests to. Cannot be updated. In
 CamelCase. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
+https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 {{% /md %}}
 </div>
@@ -347,7 +347,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -356,7 +356,7 @@ Standard list metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalPodAutoscalerList-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="autoscaling/v1/HorizontalPodAutoscalerList.ts#L13" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}

@@ -54,6 +54,12 @@ backend and the Cognito service to communicate about the developer provider.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>cognito_identity_providers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client ID for the Amazon Cognito Identity User Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The provider name for an Amazon Cognito Identity User Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverSideTokenCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether server-side token validation is enabled for the identity provider’s token or not.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool.html.markdown</a>.</p>
 </div></blockquote>
@@ -73,6 +79,11 @@ backend and the Cognito service to communicate about the developer provider.</p>
 <dt id="pulumi_aws.cognito.IdentityPool.cognito_identity_providers">
 <code class="sig-name descname">cognito_identity_providers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.IdentityPool.cognito_identity_providers" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of Amazon Cognito Identity user pools and their client IDs.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The client ID for the Amazon Cognito Identity User Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The provider name for an Amazon Cognito Identity User Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverSideTokenCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether server-side token validation is enabled for the identity provider’s token or not.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -116,20 +127,18 @@ backend and the Cognito service to communicate about the developer provider.</p>
 <dt id="pulumi_aws.cognito.IdentityPool.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_unauthenticated_identities=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cognito_identity_providers=None</em>, <em class="sig-param">developer_provider_name=None</em>, <em class="sig-param">identity_pool_name=None</em>, <em class="sig-param">openid_connect_provider_arns=None</em>, <em class="sig-param">saml_provider_arns=None</em>, <em class="sig-param">supported_login_providers=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IdentityPool resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] allow_unauthenticated_identities: Whether the identity pool supports unauthenticated logins or not.
-:param pulumi.Input[str] arn: The ARN of the identity pool.
-:param pulumi.Input[list] cognito_identity_providers: An array of Amazon Cognito Identity user pools and their client IDs.
-:param pulumi.Input[str] developer_provider_name: The “domain” by which Cognito will refer to your users. This name acts as a placeholder that allows your</p>
-<blockquote>
-<div><p>backend and the Cognito service to communicate about the developer provider.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allow_unauthenticated_identities</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the identity pool supports unauthenticated logins or not.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the identity pool.</p></li>
+<li><p><strong>cognito_identity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of Amazon Cognito Identity user pools and their client IDs.</p></li>
+<li><p><strong>developer_provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The “domain” by which Cognito will refer to your users. This name acts as a placeholder that allows your
+backend and the Cognito service to communicate about the developer provider.</p></li>
 <li><p><strong>identity_pool_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cognito Identity Pool name.</p></li>
 <li><p><strong>openid_connect_provider_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of OpendID Connect provider ARNs.</p></li>
 <li><p><strong>saml_provider_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.</p></li>
@@ -138,6 +147,12 @@ properties used to qualify the lookup.
 </ul>
 </dd>
 </dl>
+<p>The <strong>cognito_identity_providers</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client ID for the Amazon Cognito Identity User Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The provider name for an Amazon Cognito Identity User Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverSideTokenCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether server-side token validation is enabled for the identity provider’s token or not.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool.html.markdown</a>.</p>
 </div></blockquote>
@@ -196,6 +211,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>role_mappings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ambiguousRoleResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. <code class="docutils literal notranslate"><span class="pre">Required</span></code> if you specify Token or Rules as the Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string identifying the identity provider, for example, “graph.facebook.com” or “cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">claim</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The claim name that must be present in the token, for example, “isAdmin” or “paid”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The match condition that specifies how closely the claim value in the IdP token must match Value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A brief string that the claim must match, for example, “paid” or “yes”.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role mapping type.</p></li>
+</ul>
+<p>The <strong>roles</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool_roles_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool_roles_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -209,25 +243,67 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.IdentityPoolRoleAttachment.role_mappings">
 <code class="sig-name descname">role_mappings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.IdentityPoolRoleAttachment.role_mappings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A List of Role Mapping.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ambiguousRoleResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. <code class="docutils literal notranslate"><span class="pre">Required</span></code> if you specify Token or Rules as the Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A string identifying the identity provider, for example, “graph.facebook.com” or “cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">claim</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The claim name that must be present in the token, for example, “isAdmin” or “paid”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The match condition that specifies how closely the claim value in the IdP token must match Value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The role ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A brief string that the claim must match, for example, “paid” or “yes”.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The role mapping type.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.IdentityPoolRoleAttachment.roles">
 <code class="sig-name descname">roles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.IdentityPoolRoleAttachment.roles" title="Permalink to this definition">¶</a></dt>
 <dd><p>The map of roles associated with this pool. For a given role, the key will be either “authenticated” or “unauthenticated” and the value will be the Role ARN.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.cognito.IdentityPoolRoleAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identity_pool_id=None</em>, <em class="sig-param">role_mappings=None</em>, <em class="sig-param">roles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPoolRoleAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IdentityPoolRoleAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] identity_pool_id: An identity pool ID in the format REGION:GUID.
-:param pulumi.Input[list] role_mappings: A List of Role Mapping.
-:param pulumi.Input[dict] roles: The map of roles associated with this pool. For a given role, the key will be either “authenticated” or “unauthenticated” and the value will be the Role ARN.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>identity_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An identity pool ID in the format REGION:GUID.</p></li>
+<li><p><strong>role_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A List of Role Mapping.</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of roles associated with this pool. For a given role, the key will be either “authenticated” or “unauthenticated” and the value will be the Role ARN.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>role_mappings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ambiguousRoleResolution</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. <code class="docutils literal notranslate"><span class="pre">Required</span></code> if you specify Token or Rules as the Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A string identifying the identity provider, for example, “graph.facebook.com” or “cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">claim</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The claim name that must be present in the token, for example, “isAdmin” or “paid”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The match condition that specifies how closely the claim value in the IdP token must match Value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A brief string that the claim must match, for example, “paid” or “yes”.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role mapping type.</p></li>
+</ul>
+<p>The <strong>roles</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">authenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unauthenticated</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool_roles_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool_roles_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -332,16 +408,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.IdentityProvider.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attribute_mapping=None</em>, <em class="sig-param">idp_identifiers=None</em>, <em class="sig-param">provider_details=None</em>, <em class="sig-param">provider_name=None</em>, <em class="sig-param">provider_type=None</em>, <em class="sig-param">user_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityProvider.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IdentityProvider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] attribute_mapping: The map of attribute mapping of user pool attributes. <a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping">AttributeMapping in AWS API documentation</a>
-:param pulumi.Input[list] idp_identifiers: The list of identity providers.
-:param pulumi.Input[dict] provider_details: The map of identity details, such as access token
-:param pulumi.Input[str] provider_name: The provider name
-:param pulumi.Input[str] provider_type: The provider type.  <a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType">See AWS API for valid values</a>
-:param pulumi.Input[str] user_pool_id: The user pool id</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attribute_mapping</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The map of attribute mapping of user pool attributes. <a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping">AttributeMapping in AWS API documentation</a></p>
+</p></li>
+<li><p><strong>idp_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of identity providers.</p></li>
+<li><p><strong>provider_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of identity details, such as access token</p></li>
+<li><p><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The provider name</p></li>
+<li><p><strong>provider_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The provider type.  <a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType">See AWS API for valid values</a></p>
+</p></li>
+<li><p><strong>user_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user pool id</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_provider.html.markdown</a>.</p>
 </div></blockquote>
@@ -400,6 +484,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>scopes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scopeDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope description.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope name.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_resource_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_resource_server.html.markdown</a>.</p>
 </div></blockquote>
@@ -419,6 +508,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.ResourceServer.scopes">
 <code class="sig-name descname">scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.ResourceServer.scopes" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of Authorization Scope.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scopeDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The scope description.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The scope name.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -431,14 +524,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.ResourceServer.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">scope_identifiers=None</em>, <em class="sig-param">user_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.ResourceServer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResourceServer resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] identifier: An identifier for the resource server.
-:param pulumi.Input[str] name: A name for the resource server.
-:param pulumi.Input[list] scopes: A list of Authorization Scope.
-:param pulumi.Input[list] scope_identifiers: A list of all scopes configured for this resource server in the format identifier/scope_name.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An identifier for the resource server.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the resource server.</p></li>
+<li><p><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Authorization Scope.</p></li>
+<li><p><strong>scope_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of all scopes configured for this resource server in the format identifier/scope_name.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>scopes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">scopeDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope description.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scope name.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_resource_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_resource_server.html.markdown</a>.</p>
 </div></blockquote>
@@ -536,15 +640,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">precedence=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">user_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The description of the user group.
-:param pulumi.Input[str] name: The name of the user group.
-:param pulumi.Input[float] precedence: The precedence of the user group.
-:param pulumi.Input[str] role_arn: The ARN of the IAM role to be associated with the user group.
-:param pulumi.Input[str] user_pool_id: The user pool ID.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the user group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the user group.</p></li>
+<li><p><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The precedence of the user group.</p></li>
+<li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role to be associated with the user group.</p></li>
+<li><p><strong>user_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user pool ID.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -619,6 +729,88 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>admin_create_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowAdminCreateUserOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inviteMessageTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The invite message template structure.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_message</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subject line for the email message template. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_subject</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
+</ul>
+<p>The <strong>device_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">challengeRequiredOnNewDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a challenge is required on a new device. Only applicable to a new device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceOnlyRememberedOnUserPrompt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, a device is only remembered on user prompt.</p></li>
+</ul>
+<p>The <strong>email_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The REPLY-TO email address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the email source.</p></li>
+</ul>
+<p>The <strong>lambda_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">createAuthChallenge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the lambda creating an authentication challenge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A custom Message AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defineAuthChallenge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines the authentication challenge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">postAuthentication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A post-authentication AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">postConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A post-confirmation AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preAuthentication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A pre-authentication AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A pre-registration AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preTokenGeneration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Allow to customize identity token claims before token generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userMigration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user migration Lambda config type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyAuthChallengeResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Verifies the authentication challenge response.</p></li>
+</ul>
+<p>The <strong>password_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum length of the password policy that you have set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireLowercase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one lowercase letter in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireNumbers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one number in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSymbols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one symbol in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireUppercase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one uppercase letter in their password.</p></li>
+</ul>
+<p>The <strong>schemas</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeDataType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The attribute data type. Must be one of <code class="docutils literal notranslate"><span class="pre">Boolean</span></code>, <code class="docutils literal notranslate"><span class="pre">Number</span></code>, <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">DateTime</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">developerOnlyAttribute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the attribute type is developer only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mutable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the attribute can be changed once it has been created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the attribute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberAttributeConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the constraints for an attribute of the number type.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum value of an attribute that is of the number data type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum value of an attribute that is of the number data type.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stringAttributeConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - -Specifies the constraints for an attribute of the string type.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum length of an attribute value of the string type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum length of an attribute value of the string type.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>sms_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external ID used in IAM role trust relationships. For more information about using external IDs, see <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">How to Use an External ID When Granting Access to Your AWS Resources to a Third Party</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snsCallerArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Amazon SNS caller. This is usually the IAM role that you’ve given Cognito permission to assume.</p></li>
+</ul>
+<p>The <strong>user_pool_add_ons</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">advancedSecurityMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode for advanced security, must be one of <code class="docutils literal notranslate"><span class="pre">OFF</span></code>, <code class="docutils literal notranslate"><span class="pre">AUDIT</span></code> or <code class="docutils literal notranslate"><span class="pre">ENFORCED</span></code>.</p></li>
+</ul>
+<p>The <strong>verification_message_template</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultEmailOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default email option. Must be either <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_CODE</span></code> or <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_LINK</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_CODE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_message</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessageByLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email message template for sending a confirmation link to the user, it must contain the <code class="docutils literal notranslate"><span class="pre">{##Click</span> <span class="pre">Here##}</span></code> placeholder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subject line for the email message template. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_subject</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubjectByLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subject line for the email message template for sending a confirmation link to the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool.html.markdown</a>.</p>
 </div></blockquote>
@@ -626,6 +818,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool.admin_create_user_config">
 <code class="sig-name descname">admin_create_user_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.admin_create_user_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration for AdminCreateUser requests.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowAdminCreateUserOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inviteMessageTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The invite message template structure.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_message</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subject line for the email message template. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_subject</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -656,12 +859,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool.device_configuration">
 <code class="sig-name descname">device_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.device_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration for the user pool’s device tracking.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">challengeRequiredOnNewDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a challenge is required on a new device. Only applicable to a new device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceOnlyRememberedOnUserPrompt</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, a device is only remembered on user prompt.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.email_configuration">
 <code class="sig-name descname">email_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.email_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Email Configuration.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The REPLY-TO email address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the email source.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -686,6 +898,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool.lambda_config">
 <code class="sig-name descname">lambda_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.lambda_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A container for the AWS Lambda triggers associated with the user pool.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">createAuthChallenge</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the lambda creating an authentication challenge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A custom Message AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defineAuthChallenge</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines the authentication challenge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">postAuthentication</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A post-authentication AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">postConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A post-confirmation AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preAuthentication</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A pre-authentication AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A pre-registration AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preTokenGeneration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Allow to customize identity token claims before token generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userMigration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The user migration Lambda config type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyAuthChallengeResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Verifies the authentication challenge response.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -710,12 +934,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool.password_policy">
 <code class="sig-name descname">password_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.password_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A container for information about the user pool password policy.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumLength</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum length of the password policy that you have set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireLowercase</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you have required users to use at least one lowercase letter in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireNumbers</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you have required users to use at least one number in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSymbols</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you have required users to use at least one symbol in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireUppercase</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether you have required users to use at least one uppercase letter in their password.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.schemas">
 <code class="sig-name descname">schemas</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.schemas" title="Permalink to this definition">¶</a></dt>
 <dd><p>A container with the schema attributes of a user pool. Maximum of 50 attributes.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeDataType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The attribute data type. Must be one of <code class="docutils literal notranslate"><span class="pre">Boolean</span></code>, <code class="docutils literal notranslate"><span class="pre">Number</span></code>, <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">DateTime</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">developerOnlyAttribute</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether the attribute type is developer only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mutable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether the attribute can be changed once it has been created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the attribute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberAttributeConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies the constraints for an attribute of the number type.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The maximum value of an attribute that is of the number data type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The minimum value of an attribute that is of the number data type.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stringAttributeConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - -Specifies the constraints for an attribute of the string type.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLength</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The maximum length of an attribute value of the string type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minLength</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The minimum length of an attribute value of the string type.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -728,6 +978,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool.sms_configuration">
 <code class="sig-name descname">sms_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.sms_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SMS Configuration.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external ID used in IAM role trust relationships. For more information about using external IDs, see <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">How to Use an External ID When Granting Access to Your AWS Resources to a Third Party</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snsCallerArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Amazon SNS caller. This is usually the IAM role that you’ve given Cognito permission to assume.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -746,6 +1000,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool.user_pool_add_ons">
 <code class="sig-name descname">user_pool_add_ons</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.user_pool_add_ons" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration block for user pool add-ons to enable user pool advanced security mode features.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">advancedSecurityMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The mode for advanced security, must be one of <code class="docutils literal notranslate"><span class="pre">OFF</span></code>, <code class="docutils literal notranslate"><span class="pre">AUDIT</span></code> or <code class="docutils literal notranslate"><span class="pre">ENFORCED</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -758,39 +1015,135 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool.verification_message_template">
 <code class="sig-name descname">verification_message_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.verification_message_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>The verification message templates configuration.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultEmailOption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default email option. Must be either <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_CODE</span></code> or <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_LINK</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_CODE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_message</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessageByLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email message template for sending a confirmation link to the user, it must contain the <code class="docutils literal notranslate"><span class="pre">{##Click</span> <span class="pre">Here##}</span></code> placeholder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subject line for the email message template. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_subject</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubjectByLink</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subject line for the email message template for sending a confirmation link to the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_aws.cognito.UserPool.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_create_user_config=None</em>, <em class="sig-param">alias_attributes=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_verified_attributes=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">device_configuration=None</em>, <em class="sig-param">email_configuration=None</em>, <em class="sig-param">email_verification_message=None</em>, <em class="sig-param">email_verification_subject=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">lambda_config=None</em>, <em class="sig-param">last_modified_date=None</em>, <em class="sig-param">mfa_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_policy=None</em>, <em class="sig-param">schemas=None</em>, <em class="sig-param">sms_authentication_message=None</em>, <em class="sig-param">sms_configuration=None</em>, <em class="sig-param">sms_verification_message=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_pool_add_ons=None</em>, <em class="sig-param">username_attributes=None</em>, <em class="sig-param">verification_message_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserPool resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] admin_create_user_config: The configuration for AdminCreateUser requests.
-:param pulumi.Input[list] alias_attributes: Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with <code class="docutils literal notranslate"><span class="pre">username_attributes</span></code>.
-:param pulumi.Input[str] arn: The ARN of the user pool.
-:param pulumi.Input[list] auto_verified_attributes: The attributes to be auto-verified. Possible values: email, phone_number.
-:param pulumi.Input[str] creation_date: The date the user pool was created.
-:param pulumi.Input[dict] device_configuration: The configuration for the user pool’s device tracking.
-:param pulumi.Input[dict] email_configuration: The Email Configuration.
-:param pulumi.Input[str] email_verification_message: A string representing the email verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">email_message</span></code> argument.
-:param pulumi.Input[str] email_verification_subject: A string representing the email verification subject. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">email_subject</span></code> argument.
-:param pulumi.Input[str] endpoint: The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-:param pulumi.Input[dict] lambda_config: A container for the AWS Lambda triggers associated with the user pool.
-:param pulumi.Input[str] last_modified_date: The date the user pool was last modified.
-:param pulumi.Input[str] mfa_configuration: Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)
-:param pulumi.Input[str] name: The name of the attribute.
-:param pulumi.Input[dict] password_policy: A container for information about the user pool password policy.
-:param pulumi.Input[list] schemas: A container with the schema attributes of a user pool. Maximum of 50 attributes.
-:param pulumi.Input[str] sms_authentication_message: A string representing the SMS authentication message.
-:param pulumi.Input[dict] sms_configuration: The SMS Configuration.
-:param pulumi.Input[str] sms_verification_message: A string representing the SMS verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">sms_message</span></code> argument.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the User Pool.
-:param pulumi.Input[dict] user_pool_add_ons: Configuration block for user pool add-ons to enable user pool advanced security mode features.
-:param pulumi.Input[list] username_attributes: Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.
-:param pulumi.Input[dict] verification_message_template: The verification message templates configuration.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>admin_create_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for AdminCreateUser requests.</p></li>
+<li><p><strong>alias_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with <code class="docutils literal notranslate"><span class="pre">username_attributes</span></code>.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the user pool.</p></li>
+<li><p><strong>auto_verified_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The attributes to be auto-verified. Possible values: email, phone_number.</p></li>
+<li><p><strong>creation_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the user pool was created.</p></li>
+<li><p><strong>device_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for the user pool’s device tracking.</p></li>
+<li><p><strong>email_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Email Configuration.</p></li>
+<li><p><strong>email_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the email verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">email_message</span></code> argument.</p></li>
+<li><p><strong>email_verification_subject</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the email verification subject. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">email_subject</span></code> argument.</p></li>
+<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy</p></li>
+<li><p><strong>lambda_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A container for the AWS Lambda triggers associated with the user pool.</p></li>
+<li><p><strong>last_modified_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the user pool was last modified.</p></li>
+<li><p><strong>mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the attribute.</p></li>
+<li><p><strong>password_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A container for information about the user pool password policy.</p></li>
+<li><p><strong>schemas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A container with the schema attributes of a user pool. Maximum of 50 attributes.</p></li>
+<li><p><strong>sms_authentication_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS authentication message.</p></li>
+<li><p><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SMS Configuration.</p></li>
+<li><p><strong>sms_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">sms_message</span></code> argument.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the User Pool.</p></li>
+<li><p><strong>user_pool_add_ons</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for user pool add-ons to enable user pool advanced security mode features.</p></li>
+<li><p><strong>username_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</p></li>
+<li><p><strong>verification_message_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The verification message templates configuration.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>admin_create_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">allowAdminCreateUserOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inviteMessageTemplate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The invite message template structure.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_message</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subject line for the email message template. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_subject</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unusedAccountValidityDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The user account expiration limit, in days, after which the account is no longer usable.</p></li>
+</ul>
+<p>The <strong>device_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">challengeRequiredOnNewDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a challenge is required on a new device. Only applicable to a new device.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceOnlyRememberedOnUserPrompt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, a device is only remembered on user prompt.</p></li>
+</ul>
+<p>The <strong>email_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The REPLY-TO email address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the email source.</p></li>
+</ul>
+<p>The <strong>lambda_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">createAuthChallenge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the lambda creating an authentication challenge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A custom Message AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defineAuthChallenge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines the authentication challenge.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">postAuthentication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A post-authentication AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">postConfirmation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A post-confirmation AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preAuthentication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A pre-authentication AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A pre-registration AWS Lambda trigger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preTokenGeneration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Allow to customize identity token claims before token generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userMigration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The user migration Lambda config type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyAuthChallengeResponse</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Verifies the authentication challenge response.</p></li>
+</ul>
+<p>The <strong>password_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum length of the password policy that you have set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireLowercase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one lowercase letter in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireNumbers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one number in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSymbols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one symbol in their password.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireUppercase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether you have required users to use at least one uppercase letter in their password.</p></li>
+</ul>
+<p>The <strong>schemas</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeDataType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The attribute data type. Must be one of <code class="docutils literal notranslate"><span class="pre">Boolean</span></code>, <code class="docutils literal notranslate"><span class="pre">Number</span></code>, <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">DateTime</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">developerOnlyAttribute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the attribute type is developer only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mutable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the attribute can be changed once it has been created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the attribute.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberAttributeConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies the constraints for an attribute of the number type.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum value of an attribute that is of the number data type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum value of an attribute that is of the number data type.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stringAttributeConstraints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - -Specifies the constraints for an attribute of the string type.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The maximum length of an attribute value of the string type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimum length of an attribute value of the string type.</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>sms_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external ID used in IAM role trust relationships. For more information about using external IDs, see <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">How to Use an External ID When Granting Access to Your AWS Resources to a Third Party</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snsCallerArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Amazon SNS caller. This is usually the IAM role that you’ve given Cognito permission to assume.</p></li>
+</ul>
+<p>The <strong>user_pool_add_ons</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">advancedSecurityMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode for advanced security, must be one of <code class="docutils literal notranslate"><span class="pre">OFF</span></code>, <code class="docutils literal notranslate"><span class="pre">AUDIT</span></code> or <code class="docutils literal notranslate"><span class="pre">ENFORCED</span></code>.</p></li>
+</ul>
+<p>The <strong>verification_message_template</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultEmailOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default email option. Must be either <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_CODE</span></code> or <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_LINK</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">CONFIRM_WITH_CODE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_message</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailMessageByLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email message template for sending a confirmation link to the user, it must contain the <code class="docutils literal notranslate"><span class="pre">{##Click</span> <span class="pre">Here##}</span></code> placeholder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subject line for the email message template. Conflicts with <code class="docutils literal notranslate"><span class="pre">email_verification_subject</span></code> argument.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailSubjectByLink</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subject line for the email message template for sending a confirmation link to the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smsMessage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SMS message template. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. Conflicts with <code class="docutils literal notranslate"><span class="pre">sms_verification_message</span></code> argument.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool.html.markdown</a>.</p>
 </div></blockquote>
@@ -957,25 +1310,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPoolClient.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_oauth_flows=None</em>, <em class="sig-param">allowed_oauth_flows_user_pool_client=None</em>, <em class="sig-param">allowed_oauth_scopes=None</em>, <em class="sig-param">callback_urls=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">default_redirect_uri=None</em>, <em class="sig-param">explicit_auth_flows=None</em>, <em class="sig-param">generate_secret=None</em>, <em class="sig-param">logout_urls=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_attributes=None</em>, <em class="sig-param">refresh_token_validity=None</em>, <em class="sig-param">supported_identity_providers=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">write_attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserPoolClient resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] allowed_oauth_flows: List of allowed OAuth flows (code, implicit, client_credentials).
-:param pulumi.Input[bool] allowed_oauth_flows_user_pool_client: Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
-:param pulumi.Input[list] allowed_oauth_scopes: List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
-:param pulumi.Input[list] callback_urls: List of allowed callback URLs for the identity providers.
-:param pulumi.Input[str] client_secret: The client secret of the user pool client.
-:param pulumi.Input[str] default_redirect_uri: The default redirect URI. Must be in the list of callback URLs.
-:param pulumi.Input[list] explicit_auth_flows: List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).
-:param pulumi.Input[bool] generate_secret: Should an application secret be generated.
-:param pulumi.Input[list] logout_urls: List of allowed logout URLs for the identity providers.
-:param pulumi.Input[str] name: The name of the application client.
-:param pulumi.Input[list] read_attributes: List of user pool attributes the application client can read from.
-:param pulumi.Input[float] refresh_token_validity: The time limit in days refresh tokens are valid for.
-:param pulumi.Input[list] supported_identity_providers: List of provider names for the identity providers that are supported on this client.
-:param pulumi.Input[str] user_pool_id: The user pool the client belongs to.
-:param pulumi.Input[list] write_attributes: List of user pool attributes the application client can write to.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allowed_oauth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth flows (code, implicit, client_credentials).</p></li>
+<li><p><strong>allowed_oauth_flows_user_pool_client</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.</p></li>
+<li><p><strong>allowed_oauth_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</p></li>
+<li><p><strong>callback_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed callback URLs for the identity providers.</p></li>
+<li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client secret of the user pool client.</p></li>
+<li><p><strong>default_redirect_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default redirect URI. Must be in the list of callback URLs.</p></li>
+<li><p><strong>explicit_auth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).</p></li>
+<li><p><strong>generate_secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should an application secret be generated.</p></li>
+<li><p><strong>logout_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed logout URLs for the identity providers.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application client.</p></li>
+<li><p><strong>read_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of user pool attributes the application client can read from.</p></li>
+<li><p><strong>refresh_token_validity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time limit in days refresh tokens are valid for.</p></li>
+<li><p><strong>supported_identity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of provider names for the identity providers that are supported on this client.</p></li>
+<li><p><strong>user_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user pool the client belongs to.</p></li>
+<li><p><strong>write_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of user pool attributes the application client can write to.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_client.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_client.html.markdown</a>.</p>
 </div></blockquote>
@@ -1083,17 +1442,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPoolDomain.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aws_account_id=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">cloudfront_distribution_arn=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">s3_bucket=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolDomain.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserPoolDomain resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] aws_account_id: The AWS account ID for the user pool owner.
-:param pulumi.Input[str] certificate_arn: The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-:param pulumi.Input[str] cloudfront_distribution_arn: The ARN of the CloudFront distribution.
-:param pulumi.Input[str] domain: The domain string.
-:param pulumi.Input[str] s3_bucket: The S3 bucket where the static files for this domain are stored.
-:param pulumi.Input[str] user_pool_id: The user pool ID.
-:param pulumi.Input[str] version: The app version.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>aws_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID for the user pool owner.</p></li>
+<li><p><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.</p></li>
+<li><p><strong>cloudfront_distribution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the CloudFront distribution.</p></li>
+<li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain string.</p></li>
+<li><p><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket where the static files for this domain are stored.</p></li>
+<li><p><strong>user_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user pool ID.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The app version.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_domain.html.markdown</a>.</p>
 </div></blockquote>
@@ -1141,6 +1506,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.get_user_pools">
 <code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">get_user_pools</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.get_user_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of cognito user pools.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the cognito user pools. Name is not a unique attribute for cognito user pool, so multiple pools might be returned with given name.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cognito_user_pools.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cognito_user_pools.html.markdown</a>.</p>
 </div></blockquote>

@@ -86,6 +86,10 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>endpoint_details</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_endpoint_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the VPC endpoint.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown</a>.</p>
 </div></blockquote>
@@ -105,6 +109,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.transfer.Server.endpoint_details">
 <code class="sig-name descname">endpoint_details</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.transfer.Server.endpoint_details" title="Permalink to this definition">¶</a></dt>
 <dd><p>The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_endpoint_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the VPC endpoint.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -155,20 +162,33 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.transfer.Server.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">endpoint_details=None</em>, <em class="sig-param">endpoint_type=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">identity_provider_type=None</em>, <em class="sig-param">invocation_role=None</em>, <em class="sig-param">logging_role=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Server resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of Transfer Server
-:param pulumi.Input[str] endpoint: The endpoint of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678.server.transfer.REGION.amazonaws.com</span></code>)
-:param pulumi.Input[dict] endpoint_details: The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
-:param pulumi.Input[str] endpoint_type: The type of endpoint that you want your SFTP server connect to. If you connect to a <code class="docutils literal notranslate"><span class="pre">VPC_ENDPOINT</span></code>, your SFTP server isn’t accessible over the public internet. If you want to connect your SFTP server via public internet, set <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code>.
-:param pulumi.Input[bool] force_destroy: A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] identity_provider_type: The mode of authentication enabled for this service. The default value is <code class="docutils literal notranslate"><span class="pre">SERVICE_MANAGED</span></code>, which allows you to store and access SFTP user credentials within the service. <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code> indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
-:param pulumi.Input[str] invocation_role: Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.
-:param pulumi.Input[str] logging_role: Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] url: - URL of the service endpoint used to authenticate users with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of Transfer Server</p></li>
+<li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678.server.transfer.REGION.amazonaws.com</span></code>)</p></li>
+<li><p><strong>endpoint_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.</p></li>
+<li><p><strong>endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of endpoint that you want your SFTP server connect to. If you connect to a <code class="docutils literal notranslate"><span class="pre">VPC_ENDPOINT</span></code>, your SFTP server isn’t accessible over the public internet. If you want to connect your SFTP server via public internet, set <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code>.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>identity_provider_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The mode of authentication enabled for this service. The default value is <code class="docutils literal notranslate"><span class="pre">SERVICE_MANAGED</span></code>, which allows you to store and access SFTP user credentials within the service. <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code> indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.</p></li>
+<li><p><strong>invocation_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p></li>
+<li><p><strong>logging_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <ul>
+<li><p>URL of the service endpoint used to authenticate users with an <code class="docutils literal notranslate"><span class="pre">identity_provider_type</span></code> of <code class="docutils literal notranslate"><span class="pre">API_GATEWAY</span></code>.</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>endpoint_details</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vpc_endpoint_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the VPC endpoint.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown</a>.</p>
 </div></blockquote>
@@ -252,13 +272,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.SshKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">server_id=None</em>, <em class="sig-param">user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.SshKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SshKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] body: The public key portion of an SSH key pair.
-:param pulumi.Input[str] server_id: The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)
-:param pulumi.Input[str] user_name: The name of the user account that is assigned to one or more servers.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key portion of an SSH key pair.</p></li>
+<li><p><strong>server_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)</p></li>
+<li><p><strong>user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the user account that is assigned to one or more servers.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown</a>.</p>
 </div></blockquote>
@@ -369,17 +395,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.User.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">home_directory=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">server_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] arn: Amazon Resource Name (ARN) of Transfer User
-:param pulumi.Input[str] home_directory: The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a <code class="docutils literal notranslate"><span class="pre">/</span></code>.  The first item in the path is the name of the home bucket (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code> in the policy) and the rest is the home directory (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code> in the policy). For example, <code class="docutils literal notranslate"><span class="pre">/example-bucket-1234/username</span></code> would set the home bucket to <code class="docutils literal notranslate"><span class="pre">example-bucket-1234</span></code> and the home directory to <code class="docutils literal notranslate"><span class="pre">username</span></code>.
-:param pulumi.Input[str] policy: An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. These are evaluated on-the-fly when navigating the bucket.
-:param pulumi.Input[str] role: Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
-:param pulumi.Input[str] server_id: The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] user_name: The name used for log in to your SFTP server.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of Transfer User</p></li>
+<li><p><strong>home_directory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a <code class="docutils literal notranslate"><span class="pre">/</span></code>.  The first item in the path is the name of the home bucket (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code> in the policy) and the rest is the home directory (accessible as <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code> in the policy). For example, <code class="docutils literal notranslate"><span class="pre">/example-bucket-1234/username</span></code> would set the home bucket to <code class="docutils literal notranslate"><span class="pre">example-bucket-1234</span></code> and the home directory to <code class="docutils literal notranslate"><span class="pre">username</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include <code class="docutils literal notranslate"><span class="pre">${Transfer:UserName}</span></code>, <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeDirectory}</span></code>, and <code class="docutils literal notranslate"><span class="pre">${Transfer:HomeBucket}</span></code>. These are evaluated on-the-fly when navigating the bucket.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.</p></li>
+<li><p><strong>server_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Server ID of the Transfer Server (e.g. <code class="docutils literal notranslate"><span class="pre">s-12345678</span></code>)</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>user_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name used for log in to your SFTP server.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown</a>.</p>
 </div></blockquote>
@@ -428,6 +460,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">get_server</code><span class="sig-paren">(</span><em class="sig-param">server_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.get_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ARN of an AWS Transfer Server for use in other
 resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>server_id</strong> (<em>str</em>) – ID for an SFTP server.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/transfer_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/transfer_server.html.markdown</a>.</p>
 </div></blockquote>
