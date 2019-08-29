@@ -1,34 +1,26 @@
 ---
-title: "'Deploy with Pulumi' Button"
-
-menu:
-    console:
-        parent: extensions
-        weight: 2
-
+title: "Deploy with Pulumi Button"
 aliases:
  - /docs/reference/service/pulumi-button/
  - /docs/console/extensions/pulumi-button/
 ---
 
-The 'Deploy with Pulumi' button provides a way to easily create new Pulumi projects within a web browser. The button can be embedded in README files in GitHub repositories/Gists, blog posts, or other web pages.
+The "Deploy with Pulumi" button lets you easily create new Pulumi projects from the browser. You can embed the button in README files within GitHub repositories or gists, blog posts, or other web pages.
 
-For example, the following button can be clicked to configure and create a new empty JavaScript project:
+For example, you can click the following button to configure and create a new empty JavaScript project:
 
 [![Deploy](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
 
-This document describes how you can create Pulumi buttons for your own Pulumi templates, examples, and apps.
-
-There are two steps to create a button:
+To create a "Deploy with Pulumi" button:
 
  1. Include optional template metadata in your `Pulumi.yaml`.
  2. Create a button in Markdown or HTML.
 
-## Templates
+## Preparing your Template
 
-The Pulumi button works with template projects hosted in public GitHub repositories or Gists. A template is a Pulumi project that has the required `Pulumi.yaml` file, which describes the project. The template project can be in the root of the GitHub repository or within a subdirectory. Multiple projects can be hosted within subdirectories of a single repository.
+The Pulumi button works with project templates hosted in public GitHub repositories or gists. A template is a Pulumi project that has the required `Pulumi.yaml` file describing the project. The project template can be in the root of the GitHub repository, or within a subdirectory. Multiple projects can be hosted within subdirectories of a single repository.
 
-The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section used to specify any required config values for the project. Each config value can have a `description` and `default` value. Config values can also have a `secret` property, which can be set to `true` to indicate the config value is a
+The `Pulumi.yaml` file can optionally contain a `template` section, which typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can also have a `secret` property, which can be set to `true` to indicate that it is a
 [secret]({{< ref "/docs/intro/concepts/config.md#secrets" >}}).
 
 ```yaml
@@ -49,15 +41,15 @@ The above snippet includes an `aws:region` config value with a default value of 
 
 ### Testing
 
-You can test your template project with the [Pulumi CLI]({{< relref "/docs/get-started/install" >}}) or a web browser.
+You can test your template via the [Pulumi CLI]({{< relref "/docs/get-started/install" >}}) or a web browser.
 
-CLI:
+#### CLI
 
 ```bash
 $ pulumi new https://github.com/pulumi/examples/aws-js-s3-folder
 ```
 
-Browser:
+#### Browser
 
 ```
 https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder
@@ -67,19 +59,19 @@ https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3
 
 ## Creating a Pulumi Button
 
-After you've verified your template project works as expected, you can add a button to the README in your repository or Gist.
+After you've verified your project template works as expected, you can add a button to the README in your repository or gist.
 
-There are two ways of referencing the template project:
+There are two ways to reference the project template:
 
- - Implicitly without a `template` parameter. For public GitHub repositories or Gists, if you don't specify a `template` parameter, Pulumi will infer the URL to the template using the HTTP `referer` header that is sent when the button is clicked. This makes the button stable under forks and branches of the repository.
+ - Implicitly without a `template` parameter. For public GitHub repositories or gists, if you don't specify a `template` parameter, Pulumi will infer the URL to the template using the HTTP `referer` header that is sent when the button is clicked. This makes the button stable under forks and branches of the repository.
 
- - Explicitly specifying a `template` parameter that points to the project. This is useful for buttons that aren't inside a repository, such as in blog posts or other web pages, or when the README isn't in the same directory as the template project.
+ - Explicitly specifying a `template` parameter that points to the project. This is useful for buttons that aren't inside a repository, such as in blog posts or other web pages, or when the README isn't in the same directory as the project template.
 
-### Implicit templates
+### Implicit Templates
 
-If you're embedding the button in the README of a public GitHub repo or Gist, Pulumi will automatically infer the URL to the template from the `referer` header that is sent when the button is clicked.
+If you're embedding the button in the README of a public GitHub repo or gist, Pulumi will automatically infer the URL to the template from the `referer` header that is sent when the button is clicked.
 
-> This is convenient because it avoids hard-coding the specific repository URL into the button, allowing forks and branches of the repository to work without needing to change the button's `template` parameter.
+This is convenient because it eliminates the need for hard-coding the specific repository URL into the button, allowing forks and branches of the repository to work without needing to change the button's `template` parameter.
 
 Here's an example in Markdown:
 
@@ -97,9 +89,9 @@ Or, the equivalent HTML:
 
 A `button.png` is also available.
 
-### Explicit templates
+### Explicit Templates
 
-Alternatively, the `template` parameter can be specified explicitly.
+Alternatively, you can explicitly specify the `template` parameter.
 
 Here's an example in Markdown:
 
@@ -115,17 +107,21 @@ Or, the equivalent HTML:
 </a>
 ```
 
-### Button image
+### Button Image
 
 Pulumi provides both SVG and PNG versions of the button image at the following URLs:
 
  - `https://get.pulumi.com/new/button.svg`
  - `https://get.pulumi.com/new/button.png`
 
-## Custom Git branches
+## Custom Git Branches
 
 You can use a fully qualified GitHub URL with the `template` parameter to reference the template at a specific Git branch, tag, or commit:
 
 ```
 https://github.com/pulumi/examples/tree/master/aws-js-s3-folder
 ```
+
+## Next Steps
+
+* [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}})
