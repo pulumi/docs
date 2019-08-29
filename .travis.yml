@@ -33,3 +33,5 @@ after_script:
 - if [ ! -z ${TRAVIS_TOKEN} ]; then travisqueue finish; fi
 notifications:
   webhooks: https://zlmgkhmhjc.execute-api.us-west-2.amazonaws.com/stage/travis
+env:
+- GOGC=20
