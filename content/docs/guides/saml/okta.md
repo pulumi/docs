@@ -7,7 +7,7 @@ aliases:
 ---
 
 This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for use with
-the Pulumi Cloud Console.
+the Pulumi Console.
 
 > **NOTE:** The screen shots below are using the Okta _Classic UI_. You can switch to it by clicking the gear
 > icon in the top right of the screen.
@@ -22,7 +22,7 @@ available, choose **SAML 2.0**.
 ### Configuring the Application
 
 Next you will be guided through a wizard to configure the Okta application. The first step is to
-give it a name, e.g. _Pulumi Cloud Console_, and an icon.
+give it a name, e.g. _Pulumi Console_, and an icon.
 
 ![Configuring a SAML Integration](/images/docs/reference/service/saml-okta/create-saml-integration.png)
 
@@ -81,7 +81,7 @@ page.
 
 ## Configuring Your Pulumi Organization
 
-The final step is to configure the Pulumi Cloud Console with the details about your new Okta-based
+The final step is to configure the Pulumi Console with the details about your new Okta-based
 SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
 it to Pulumi.
 
@@ -97,7 +97,7 @@ a user's identity.
 
 ![SAML Application Metadata](/images/docs/reference/service/saml-okta/okta-xml-descriptor.png)
 
-With the block of XML text in your clipboard, open the Pulumi Cloud Console and navigate to your SAML
+With the block of XML text in your clipboard, open the Pulumi Console and navigate to your SAML
 organization. Click the **Settings** tab, and then select **SAML SSO**.
 
 Paste the IDP metadata descriptor into the bottom card

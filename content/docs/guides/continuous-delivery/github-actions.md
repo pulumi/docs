@@ -184,7 +184,7 @@ went as planned:
 ![Action Checks](/images/docs/reference/gh-actions-checks.png)
 
 Click the Logs pane to see the full output of the Pulumi CLI, along with the URL of your
-deployment on the Pulumi Cloud Console with more details:
+deployment on the Pulumi Console with more details:
 
 ![Action Logs](/images/docs/reference/gh-actions-logs.png)
 
@@ -297,7 +297,7 @@ stack, and then use Pull Requests to promote code between the two. This mappings
 intentionally flexible.
 
 Note that you'll need to create these stacks [in the usual
-way]({{< relref "/docs/intro/concepts/stack" >}}) using the Pulumi Cloud Console or CLI.
+way]({{< relref "/docs/intro/concepts/stack" >}}) using the Pulumi Console or CLI.
 After setting this up, everything will be on autopilot.
 
 # Demos and Examples

@@ -2,7 +2,7 @@
 title: Project and Stack Management
 ---
 
-> This guide assumes you are a member of an organization and have sufficient [stack permissions]({{< relref "stack-permissions" >}}).
+> While you can create projects within the individual organization created for your account, instructions in this document apply to members of an organization with sufficient [stack permissions]({{< relref "stack-permissions" >}}).
 
 The Pulumi Console automatically manages deployment state and gives you a comprehensive view of your projects and stacks. In your browser, navigate to [app.pulumi.com](https://app.pulumi.com). Once signed in, you can:
 
@@ -18,7 +18,7 @@ If you have been added to a Pulumi organization with no existing projects, the C
 
 <img class="lg:max-w-xl pb-4" src="/images/docs/reference/service/new-project.png" alt="Create a new Pulumi project">
 
-Click **Create Project** to get started with your project. The confirmation page gives you installation, setup, and deployment instructions for your project.
+Click **Create Project** to get started with your project. The confirmation page gives you installation, setup, and stack deployment instructions.
 
 To create a new project via the CLI, see [pulumi new]({{< relref "/docs/reference/cli/pulumi_new" >}}).
 
@@ -30,7 +30,7 @@ Every Pulumi program is deployed to a [stack]({{< relref "/docs/intro/concepts/s
 
 ### Viewing your organization stacks
 
-1. Once signed in, select your organization from the drop-down list on the upper left corner of the screen. The **Stacks** tab is displayed by default.
+Once signed in, select your organization from the drop-down list on the upper left corner of the screen. The **Stacks** tab is displayed by default.
 
 <img class="lg:max-w-xl" src="/images/docs/reference/service/organization-stacks.png" alt="Stack Outputs and Configuration">
 

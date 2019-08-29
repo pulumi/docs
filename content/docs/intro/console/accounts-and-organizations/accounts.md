@@ -48,7 +48,7 @@ You can associate your Pulumi account with multiple identities. In addition to t
 
 Connecting these additional identities will enable
 you to join Pulumi organizations that are backed by those systems. Note that only
-administrators can add members to a Pulumi organization.
+admins can add members to a Pulumi organization.
 
 In order to be invited as a member of a Pulumi organization, you must connect
 your account with the organization's backing identity provider. Once your
@@ -63,7 +63,7 @@ This tab lets you change your password. Note that your password must be at least
 
 This tab lets you manage the [access tokens](https://en.wikipedia.org/wiki/Access_token) used for logging into the Pulumi service. It provides a list of all the access tokens associated with your account, including a description and last used information for each token.
 
-When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}}) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into `app.pulumi.com` and lets you interact with the Pulumi service and manage your stacks.
+When you run [`pulumi login`]({{< relref "/docs/reference/cli/pulumi_login" >}}) from the command line, you will be prompted for an access token. Once obtained, the access token logs you into the Pulumi Console and lets you interact with the Pulumi service and manage your stacks.
 
 <img class="shadow-2xl lg:max-w-xl" src="/images/docs/reference/service/access-tokens.png" alt="Pulumi GitHub App">
 
@@ -71,7 +71,7 @@ You can create additional access tokens on this tab by clicking **New Access Tok
 
 ## Subscription
 
-This tab  details on your subscription information, which is the Pulumi Community Edition by default. It also provides ways to contact Pulumi for additional support.
+This tab provides details on your subscription information, which is the Pulumi Community Edition by default. It also provides ways to contact Pulumi for additional support.
 
 ## Integrations
 

@@ -12,7 +12,7 @@ aliases:
 ---
 
 This document walks through the important aspects of configuring any SAML 2.0 identity provider to be used
-with the [Pulumi Cloud Console](https://app.pulumi.com).
+with the [Pulumi Console](https://app.pulumi.com).
 
 > For a specific example, you can refer to one of our integration guides:
 >

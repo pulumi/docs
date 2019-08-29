@@ -7,7 +7,7 @@ aliases:
 ---
 
 This guide explains how to configure your G Suite service as a SAML SSO identity provider
-(IDP) for use with the Pulumi Cloud Console.
+(IDP) for use with the Pulumi Console.
 
 ## Creating the SAML Application
 
@@ -31,7 +31,7 @@ the downloaded file, then click **Next** to continue.
 
     ![Step 2: Download IDP metadata](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-2.png)
 
-1. Give your SAML application a name such as _Pulumi Cloud Console_ and an optional description
+1. Give your SAML application a name such as _Pulumi Console_ and an optional description
 and logo, then click **Next**.
 
     ![Step 3: Name the application](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-3.png)
@@ -67,14 +67,14 @@ domain users:
    Click **Save** to complete.
 
    At this point, you're done configuring G Suite, and can move on to completing SAML SSO setup in
-   the Pulumi Cloud Console.
+   the Pulumi Console.
 
 ## Configuring Your Pulumi Organization
 
 The final step in the process consists of associating your Pulumi organization with your SSO identity
 provider.
 
-1. Sign into the Pulumi Cloud Console where your SAML organization resides (e.g.,
+1. Sign into the Pulumi Console where your SAML organization resides (e.g.,
 [https://app.pulumi.com](https://app.pulumi.com)), then navigate to the **Settings** tab for that
 organization.
 
